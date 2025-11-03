@@ -1,0 +1,405 @@
+# Demand Forecasting System - Nova Corrente
+
+A comprehensive, production-ready Python-based demand forecasting system using ARIMA, Prophet, and LSTM models for daily demand prediction. This system integrates with Nova Corrente's telecom maintenance data to calculate Reorder Points (PP) and trigger alerts, aiming to reduce stockouts by up to 50%.
+
+## Features
+
+- **Multiple Forecasting Models**: Ensemble of ARIMA/SARIMA, Prophet, and LSTM models
+- **Automatic Order Selection**: Uses `pmdarima` for optimal ARIMA parameters
+- **Inventory Management**: Automatic reorder point calculation with safety stock
+- **Alert System**: Email alerts for low stock situations
+- **Comprehensive Reports**: CSV and PDF reports with visualizations
+- **External Features**: Support for weather, holidays, and economic indicators
+- **Robust Validation**: Walk-forward validation with MAPE, RMSE, MAE metrics
+
+## Project Structure
+
+```
+gran_prix/
+├── demand_forecasting/
+│   ├── __init__.py
+│   ├── data/
+│   │   ├── __init__.py
+│   │   └── loader.py          # Data ingestion & preprocessing
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── arima_model.py     # ARIMA/SARIMA implementation
+│   │   ├── prophet_model.py   # Prophet implementation
+│   │   ├── lstm_model.py      # LSTM implementation
+│   │   └── ensemble.py       # Ensemble combination
+│   ├── inventory/
+│   │   ├── __init__.py
+│   │   ├── reorder_point.py   # PP calculation logic
+│   │   └── alerts.py          # Alert generation system
+│   ├── validation/
+│   │   ├── __init__.py
+│   │   └── metrics.py         # MAPE, RMSE calculations
+│   ├── reporting/
+│   │   ├── __init__.py
+│   │   ├── report_generator.py # CSV/PDF report generation
+│   │   └── visualization.py   # Charts and plots
+│   └── utils/
+│       ├── __init__.py
+│       └── config.py          # Configuration management
+├── scripts/
+│   └── generate_forecast.py   # Main execution script
+├── tests/
+│   └── (test files)
+├── data/
+│   └── nova_corrente_demand.csv  # Input data file
+├── config.yaml                # Configuration file
+├── requirements.txt           # Python dependencies
+└── README.md                  # This file
+```
+
+## Installation
+
+1. **Clone the repository** (if applicable)
+
+2. **Install dependencies**:
+```bash
+pip install -r requirements.txt
+```
+
+3. **Verify installation**:
+```bash
+python -c "import demand_forecasting; print('Installation successful!')"
+```
+
+## Data Format
+
+Your CSV/Excel file should have the following columns:
+
+- **date** (or **Date**): Date column in YYYY-MM-DD format
+- **Item_ID** (or **item_id**, **ItemId**): Item identifier
+- **Quantity_Consumed** (or **quantity**, **demand**, **sales**): Demand quantity
+- **Site_ID**: Optional site identifier
+- **Lead_Time**: Optional lead time in days
+
+Optional external features:
+- **temperature**: Temperature data
+- **holiday**: Holiday indicator (0/1)
+
+Example:
+```csv
+date,Item_ID,Quantity_Consumed,Site_ID,Lead_Time
+2022-01-01,CONN-001,15,SITE-001,14
+2022-01-02,CONN-001,18,SITE-001,14
+...
+```
+
+## Usage
+
+### Basic Usage
+
+1. **Place your data file** in the `data/` directory (or update `config.yaml`)
+
+2. **Run the forecasting script**:
+```bash
+python scripts/generate_forecast.py
+```
+
+The script will:
+- Load and preprocess your data
+- Fit ARIMA, Prophet, and LSTM models
+- Generate ensemble forecasts
+- Calculate reorder points
+- Check for alerts
+- Generate CSV and PDF reports
+- Create visualization plots
+
+### Configuration
+
+Edit `config.yaml` to customize:
+- Forecast period (default: 30 days)
+- Service level (default: 95%)
+- Lead time (default: 14 days)
+- Model parameters
+- Alert thresholds
+- Output directory
+
+### Current Stock Levels
+
+Update current stock levels in `scripts/generate_forecast.py`:
+
+```python
+current_stocks = {
+    'CONN-001': 100,
+    'CABO-001': 150,
+    # Add your items here
+}
+```
+
+Or integrate with your inventory management system.
+
+## Model Details
+
+### ARIMA/SARIMA
+- Automatic order selection using `pmdarima`
+- Supports external regressors
+- Seasonal ARIMA (SARIMA) for weekly patterns
+
+### Prophet
+- Handles seasonality and holidays automatically
+- Supports external regressors (temperature, holidays)
+- Provides confidence intervals
+
+### LSTM
+- Deep learning approach for complex patterns
+- Configurable architecture (units, epochs, batch size)
+- Automatic early stopping
+
+### Ensemble
+- Weighted average of all models (default: ARIMA 40%, Prophet 30%, LSTM 30%)
+- Robust to individual model failures
+- Can disable LSTM if TensorFlow not available
+
+## Performance Targets
+
+- **MAPE**: Target <15%
+- **RMSE**: Aligned with dataset mean
+- **Backtesting**: Walk-forward validation on historical data
+
+## Outputs
+
+### Reports
+
+1. **CSV Report**: `reports/forecast_report_YYYYMMDD.csv`
+   - Summary metrics per item
+   - Daily forecasts
+
+2. **PDF Report**: `reports/forecast_report_YYYYMMDD.pdf`
+   - Summary table
+   - Detailed metrics per item
+   - Forecast tables
+
+### Visualizations
+
+- `reports/forecast_{item_id}_YYYYMMDD.png`: Forecast plots
+- `reports/inventory_{item_id}_YYYYMMDD.png`: Inventory metrics
+
+### Alerts
+
+If enabled, email alerts are sent when:
+- Current stock ≤ Reorder Point
+- Days to rupture < threshold
+
+## Advanced Usage
+
+### Python API
+
+```python
+from demand_forecasting.data.loader import DataLoader
+from demand_forecasting.models.ensemble import EnsembleForecaster
+from demand_forecasting.inventory.reorder_point import ReorderPointCalculator
+
+# Load data
+loader = DataLoader('data/demand_data.csv')
+data_dict = loader.preprocess()
+
+# Fit models
+ensemble = EnsembleForecaster()
+train = data_dict['CONN-001'].iloc[:int(len(data_dict['CONN-001']) * 0.8)]
+ensemble.fit(train, 'Quantity_Consumed')
+
+# Generate forecast
+forecast = ensemble.forecast(steps=30, df=train)
+
+# Calculate reorder point
+pp_calc = ReorderPointCalculator(service_level=0.95)
+pp_metrics = pp_calc.compute_all(forecast, lead_time=14, current_stock=100)
+
+print(f"Reorder Point: {pp_metrics['reorder_point']:.0f}")
+```
+
+### Custom Model Weights
+
+```python
+custom_weights = {'ARIMA': 0.5, 'Prophet': 0.5}
+ensemble = EnsembleForecaster(weights=custom_weights, use_lstm=False)
+```
+
+### Model Training with Persistence
+
+```bash
+# Train models for all items
+python scripts/train_models.py --data data/demand_data.csv
+
+# Train specific item
+python scripts/train_models.py --data data/demand_data.csv --item CONN-001
+
+# Train without saving models
+python scripts/train_models.py --data data/demand_data.csv --no-save
+```
+
+### Backtesting and Validation
+
+```bash
+# Backtest ensemble model
+python scripts/backtest_models.py --data data/demand_data.csv --item CONN-001
+
+# Compare all models
+python scripts/backtest_models.py --data data/demand_data.csv --compare
+
+# Custom step size
+python scripts/backtest_models.py --data data/demand_data.csv --step 7 --periods 10
+```
+
+### REST API Server
+
+```bash
+# Start API server
+python scripts/api_server.py --host 0.0.0.0 --port 5000
+
+# With debug mode
+python scripts/api_server.py --debug
+```
+
+API Endpoints:
+- `GET /health` - Health check
+- `POST /forecast` - Generate forecast
+- `POST /train` - Train model
+- `GET /items` - List all items with models
+- `DELETE /models/<item_id>` - Delete model
+
+Example API request:
+```bash
+curl -X POST http://localhost:5000/forecast \
+  -H "Content-Type: application/json" \
+  -d '{
+    "item_id": "CONN-001",
+    "data": [...],
+    "forecast_days": 30,
+    "lead_time": 14,
+    "current_stock": 100
+  }'
+```
+
+### Scheduled Forecasting
+
+```bash
+# Run daily forecasting task
+python scripts/scheduled_forecast.py
+
+# With custom data file
+python scripts/scheduled_forecast.py --data data/demand_data.csv
+
+# With custom stocks file
+python scripts/scheduled_forecast.py --stocks data/current_stocks.json
+```
+
+For cron job (daily at 6 AM):
+```bash
+0 6 * * * cd /path/to/project && python scripts/scheduled_forecast.py >> logs/cron.log 2>&1
+```
+
+### Model Persistence
+
+```python
+from demand_forecasting.utils.model_persistence import ModelPersistence
+
+persistence = ModelPersistence()
+
+# Save model
+metadata = {
+    'item_id': 'CONN-001',
+    'training_date': '2024-01-01T00:00:00',
+    'data_points': 730
+}
+persistence.save_model(ensemble, 'CONN-001', 'ensemble', metadata)
+
+# Load model
+ensemble = persistence.load_model('CONN-001', 'ensemble')
+
+# List models
+models = persistence.list_models(item_id='CONN-001')
+```
+
+## Testing
+
+Run tests (when available):
+```bash
+pytest tests/
+```
+
+## Troubleshooting
+
+### Common Issues
+
+1. **"pmdarima not available"**
+   - Install: `pip install pmdarima`
+   - Falls back to default ARIMA parameters
+
+2. **"TensorFlow not available"**
+   - Install: `pip install tensorflow`
+   - Or set `use_lstm: false` in `config.yaml`
+
+3. **"reportlab not available"**
+   - Install: `pip install reportlab`
+   - PDF reports will not be generated
+
+4. **Insufficient data**
+   - Ensure at least 2 years of historical data
+   - Adjust `min_years` in config if needed
+
+5. **Memory issues with LSTM**
+   - Reduce `look_back` or `epochs` in config
+   - Use smaller batch size
+
+## Advanced Features
+
+### ✅ Implemented Features
+
+- ✅ Model Training Script with Persistence
+- ✅ Backtesting Framework with Walk-Forward Validation
+- ✅ Model Comparison Tools
+- ✅ REST API Server for Forecast Generation
+- ✅ Scheduled Forecasting Tasks (Cron/Airflow ready)
+- ✅ Model Persistence and Management
+- ✅ Comprehensive Reporting (CSV, PDF)
+- ✅ Interactive Streamlit Dashboard
+- ✅ Alert System with Email Notifications
+
+### Future Enhancements
+
+- [ ] Integration with OpenWeather API for temperature data
+- [ ] Integration with IBGE API for economic indicators
+- [ ] Real-time inventory system integration
+- [ ] Automated retraining pipeline
+- [ ] Database persistence for forecasts
+- [ ] Docker containerization
+- [ ] Kubernetes deployment
+- [ ] MLflow integration for experiment tracking
+
+## Contributing
+
+Contributions are welcome! Please:
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
+
+## License
+
+This project is proprietary software for Nova Corrente.
+
+## References
+
+- ARIMA: https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/
+- Prophet: https://facebook.github.io/prophet/
+- LSTM: https://www.datacamp.com/tutorial/lstm-python-stock-market
+- Inventory Management: Standard reorder point formulas
+
+## Support
+
+For issues and questions:
+- Check the troubleshooting section
+- Review configuration options
+- Check data format requirements
+
+---
+
+**Nova Corrente Demand Forecasting System v1.0.0**
+
+*Built with Python, powered by ARIMA, Prophet, and LSTM*

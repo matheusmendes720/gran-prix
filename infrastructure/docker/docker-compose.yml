@@ -1,0 +1,83 @@
+# Docker Compose for Production-Ready Stack
+version: '3.8'
+
+services:
+  # Backend API
+  backend:
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile.backend
+    container_name: nova-corrente-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=5000
+      - DATABASE_URL=sqlite:///./data/nova_corrente.db
+      - MODELS_DIR=./models
+      - DATA_DIR=./data
+      - LOG_DIR=./logs
+    volumes:
+      - ../../data:/app/data
+      - ../../models:/app/models
+      - ../../reports:/app/reports
+      - ../../logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - nova-corrente-network
+
+  # Frontend
+  frontend:
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile.frontend
+    container_name: nova-corrente-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:5000
+      - NODE_ENV=production
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - nova-corrente-network
+
+  # Scheduled Forecast Service
+  scheduler:
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile.backend
+    container_name: nova-corrente-scheduler
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DATA_DIR=./data
+      - MODELS_DIR=./models
+    volumes:
+      - ../../data:/app/data
+      - ../../models:/app/models
+      - ../../reports:/app/reports
+      - ../../logs:/app/logs
+      - ../../backend/ml/config.yaml:/app/config.yaml
+    command: python -m backend.scripts.scheduled_forecast
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - nova-corrente-network
+
+networks:
+  nova-corrente-network:
+    driver: bridge
+
+volumes:
+  data:
+  models:
+  reports:
+  logs:
+

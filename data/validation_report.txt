@@ -1,0 +1,112 @@
+2025-10-31 14:01:16,036 - INFO - 
+======================================================================
+2025-10-31 14:01:16,036 - INFO - VALIDATING DATASET
+2025-10-31 14:01:16,036 - INFO - ======================================================================
+2025-10-31 14:01:16,036 - INFO - Dataset: data\processed\unified_dataset_with_factors.csv
+2025-10-31 14:01:16,055 - INFO - Dataset shape: (730, 31)
+2025-10-31 14:01:16,055 - INFO - 
+======================================================================
+2025-10-31 14:01:16,055 - INFO - SCHEMA VALIDATION
+2025-10-31 14:01:16,055 - INFO - ======================================================================
+2025-10-31 14:01:16,057 - WARNING - Data type mismatches: ['item_id: expected string, got object', 'item_name: expected string, got object', 'site_id: expected string, got object', 'category: expected string, got object']
+2025-10-31 14:01:16,058 - INFO - Available optional columns: 4/9
+2025-10-31 14:01:16,058 - INFO -   ['temperature', 'precipitation', 'humidity', 'is_holiday']
+2025-10-31 14:01:16,058 - INFO - 
+======================================================================
+2025-10-31 14:01:16,058 - INFO - DATA QUALITY VALIDATION
+2025-10-31 14:01:16,058 - INFO - ======================================================================
+2025-10-31 14:01:16,059 - WARNING - Columns with >10% missing values:
+2025-10-31 14:01:16,059 - WARNING -   regulatory_compliance_date: 100.0%
+2025-10-31 14:01:16,063 - INFO - 
+======================================================================
+2025-10-31 14:01:16,063 - INFO - COMPLETENESS VALIDATION
+2025-10-31 14:01:16,063 - INFO - ======================================================================
+2025-10-31 14:01:16,064 - INFO - Date range: 2023-01-01 00:00:00 to 2024-12-30 00:00:00
+2025-10-31 14:01:16,064 - INFO - Total days: 729
+2025-10-31 14:01:16,064 - INFO - Unique dates: 730
+2025-10-31 14:01:49,148 - INFO - 
+======================================================================
+2025-10-31 14:01:49,149 - INFO - VALIDATING DATASET
+2025-10-31 14:01:49,149 - INFO - ======================================================================
+2025-10-31 14:01:49,149 - INFO - Dataset: data\processed\unified_dataset_with_factors.csv
+2025-10-31 14:01:49,156 - INFO - Dataset shape: (730, 31)
+2025-10-31 14:01:49,156 - INFO - 
+======================================================================
+2025-10-31 14:01:49,156 - INFO - SCHEMA VALIDATION
+2025-10-31 14:01:49,156 - INFO - ======================================================================
+2025-10-31 14:01:49,156 - INFO - All required columns present: ['date', 'item_id', 'item_name', 'quantity', 'site_id', 'category', 'cost', 'lead_time']
+2025-10-31 14:01:49,157 - WARNING - Data type mismatches: ['item_id: expected string, got object', 'item_name: expected string, got object', 'site_id: expected string, got object', 'category: expected string, got object']
+2025-10-31 14:01:49,157 - INFO - Available optional columns: 4/9
+2025-10-31 14:01:49,157 - INFO -   ['temperature', 'precipitation', 'humidity', 'is_holiday']
+2025-10-31 14:01:49,157 - INFO - 
+======================================================================
+2025-10-31 14:01:49,157 - INFO - DATA QUALITY VALIDATION
+2025-10-31 14:01:49,157 - INFO - ======================================================================
+2025-10-31 14:01:49,158 - WARNING - Columns with >10% missing values:
+2025-10-31 14:01:49,158 - WARNING -   regulatory_compliance_date: 100.0%
+2025-10-31 14:01:49,158 - INFO - No duplicate records found
+2025-10-31 14:01:49,159 - INFO - Outliers in quantity: 0 (0.0%)
+2025-10-31 14:01:49,159 - INFO - No negative values in quantity/cost columns
+2025-10-31 14:01:49,160 - INFO - 
+======================================================================
+2025-10-31 14:01:49,160 - INFO - COMPLETENESS VALIDATION
+2025-10-31 14:01:49,160 - INFO - ======================================================================
+2025-10-31 14:01:49,160 - INFO - Date range: 2023-01-01 00:00:00 to 2024-12-30 00:00:00
+2025-10-31 14:01:49,160 - INFO - Total days: 729
+2025-10-31 14:01:49,160 - INFO - Unique dates: 730
+2025-10-31 14:01:49,160 - INFO - Date coverage: 100.0%
+2025-10-31 14:01:49,161 - INFO - Unique items: 1
+2025-10-31 14:01:49,161 - INFO - Items with consumption data: 1
+2025-10-31 14:01:49,163 - WARNING - Only 23.9 months of data (minimum: 24)
+2025-10-31 14:01:49,163 - INFO - 
+======================================================================
+2025-10-31 14:01:49,163 - INFO - CONSISTENCY VALIDATION
+2025-10-31 14:01:49,163 - INFO - ======================================================================
+2025-10-31 14:01:49,167 - INFO - Check validation_report.txt for details
+2025-10-31 14:03:41,767 - INFO - 
+======================================================================
+2025-10-31 14:03:41,767 - INFO - VALIDATING DATASET
+2025-10-31 14:03:41,767 - INFO - ======================================================================
+2025-10-31 14:03:41,767 - INFO - Dataset: data\processed\unified_dataset_with_factors.csv
+2025-10-31 14:03:41,786 - INFO - Dataset shape: (730, 31)
+2025-10-31 14:03:41,786 - INFO - 
+======================================================================
+2025-10-31 14:03:41,786 - INFO - SCHEMA VALIDATION
+2025-10-31 14:03:41,786 - INFO - ======================================================================
+2025-10-31 14:03:41,786 - INFO - All required columns present: ['date', 'item_id', 'item_name', 'quantity', 'site_id', 'category', 'cost', 'lead_time']
+2025-10-31 14:03:41,786 - WARNING - Data type mismatches: ['item_id: expected string, got object', 'item_name: expected string, got object', 'site_id: expected string, got object', 'category: expected string, got object']
+2025-10-31 14:03:41,786 - INFO - Available optional columns: 4/9
+2025-10-31 14:03:41,786 - INFO -   ['temperature', 'precipitation', 'humidity', 'is_holiday']
+2025-10-31 14:03:41,786 - INFO - 
+======================================================================
+2025-10-31 14:03:41,786 - INFO - DATA QUALITY VALIDATION
+2025-10-31 14:03:41,786 - INFO - ======================================================================
+2025-10-31 14:03:41,788 - WARNING - Columns with >10% missing values:
+2025-10-31 14:03:41,788 - WARNING -   regulatory_compliance_date: 100.0%
+2025-10-31 14:03:41,788 - INFO - No duplicate records found
+2025-10-31 14:03:41,790 - INFO - Outliers in quantity: 0 (0.0%)
+2025-10-31 14:03:41,790 - INFO - No negative values in quantity/cost columns
+2025-10-31 14:03:41,790 - INFO - 
+======================================================================
+2025-10-31 14:03:41,790 - INFO - COMPLETENESS VALIDATION
+2025-10-31 14:03:41,790 - INFO - ======================================================================
+2025-10-31 14:03:41,791 - INFO - Date range: 2023-01-01 00:00:00 to 2024-12-30 00:00:00
+2025-10-31 14:03:41,791 - INFO - Total days: 729
+2025-10-31 14:03:41,791 - INFO - Unique dates: 730
+2025-10-31 14:03:41,791 - INFO - Date coverage: 100.0%
+2025-10-31 14:03:41,792 - INFO - Unique items: 1
+2025-10-31 14:03:41,792 - INFO - Items with consumption data: 1
+2025-10-31 14:03:41,792 - INFO - OK 1/1 items have consumption data
+2025-10-31 14:03:41,792 - WARNING - Only 23.9 months of data (minimum: 24)
+2025-10-31 14:03:41,792 - INFO - 
+======================================================================
+2025-10-31 14:03:41,792 - INFO - CONSISTENCY VALIDATION
+2025-10-31 14:03:41,792 - INFO - ======================================================================
+2025-10-31 14:03:41,792 - INFO - OK No future dates found
+2025-10-31 14:03:41,792 - INFO - OK Zero quantities: 0.0%
+2025-10-31 14:03:41,793 - INFO - OK Total cost: R$ 1,517,400.00
+2025-10-31 14:03:41,793 - INFO - 
+OK Validation report saved to: data\processed\validation_report.txt
+2025-10-31 14:03:41,793 - WARNING - 
+WARN Dataset validation completed with warnings
+2025-10-31 14:03:41,793 - INFO - Check validation_report.txt for details
