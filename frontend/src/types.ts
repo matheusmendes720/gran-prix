@@ -159,6 +159,17 @@ export interface ToastMessage {
     type: ToastType;
 }
 
+export type NotificationSeverity = 'critical' | 'warning' | 'info';
+
+export interface NotificationItem {
+    id: string;
+    type: NotificationSeverity;
+    title: string;
+    description: string;
+    timestamp: string;
+    isRead?: boolean;
+}
+
 export interface AuditLog {
     id: string;
     user: string;
