@@ -1,0 +1,14 @@
+{
+  "username": "YOUR_KAGGLE_USERNAME",
+  "key": "YOUR_KAGGLE_API_KEY",
+  "_instructions": [
+    "1. Go to https://www.kaggle.com/settings",
+    "2. Scroll to 'API' section",
+    "3. Click 'Create New Token'",
+    "4. Copy the downloaded kaggle.json file contents",
+    "5. Replace username and key values above",
+    "6. Save this file as 'kaggle_config.json' (without .template)"
+  ]
+}
+
+

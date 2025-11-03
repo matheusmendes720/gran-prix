@@ -1,0 +1,35 @@
+# Nova Corrente Data Services Requirements
+# Core dependencies for all services
+
+# Database
+SQLAlchemy>=2.0.0
+pymysql>=1.1.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# ML Models
+prophet>=1.1.0
+statsmodels>=0.14.0
+tensorflow>=2.13.0
+scikit-learn>=1.3.0
+
+# Feature Engineering
+python-dateutil>=2.8.0
+
+# External APIs
+requests>=2.31.0
+
+# Scheduling (optional)
+schedule>=1.2.0
+
+# Caching (optional)
+redis>=5.0.0
+
+# Web Framework
+Flask>=2.3.0
+flask-cors>=4.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+
+

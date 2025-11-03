@@ -1,0 +1,37 @@
+# Nova Corrente Demand Forecasting System - Requirements
+# Python 3.8+
+
+# Core Data Science
+pandas>=1.5.0
+numpy>=1.23.0
+scipy>=1.9.0
+
+# Time Series Models
+statsmodels>=0.13.0
+pmdarima>=2.0.0  # Auto ARIMA
+prophet>=1.1.0
+
+# Machine Learning
+scikit-learn>=1.1.0
+
+# Deep Learning (Optional - for LSTM)
+tensorflow>=2.10.0  # Optional: install only if using LSTM
+keras>=2.10.0  # Optional: comes with TensorFlow
+
+# Feature Engineering
+holidays>=0.23  # For Brazil holidays
+
+# Visualization (Optional)
+matplotlib>=3.5.0
+plotly>=5.10.0
+
+# Reporting (Optional)
+reportlab>=3.6.0  # For PDF reports
+
+# Testing
+pytest>=7.1.0
+
+# Development
+jupyter>=1.0.0
+ipython>=8.0.0
+

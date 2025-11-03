@@ -1,0 +1,22 @@
+======================================================================
+DATA VALIDATION REPORT
+======================================================================
+
+Generated: 2025-10-31 14:03:41.793231
+
+======================================================================
+
+SCHEMA VALIDATION:
+  required_columns: OK PASS
+  data_types: FAIL FAIL
+  optional_columns_count: 4
+
+QUALITY VALIDATION:
+  High missing values detected
+
+COMPLETENESS VALIDATION:
+  Date coverage: 100.0%
+  Item coverage: 100.0%
+
+CONSISTENCY VALIDATION:
+  Zero quantities: 0.0%
