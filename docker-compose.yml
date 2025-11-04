@@ -2,11 +2,48 @@
 version: '3.8'
 
 services:
-  # Backend API (FastAPI)
+  # MinIO (Object Storage)
+  minio:
+    image: minio/minio:latest
+    container_name: nova-corrente-minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - nova-corrente-network
+
+  # Redis (Caching)
+  redis:
+    image: redis:7-alpine
+    container_name: nova-corrente-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - nova-corrente-network
+
+  # Backend API (FastAPI) - NO ML Dependencies
   backend:
     build:
       context: .
-      dockerfile: infrastructure/docker/Dockerfile.backend
+      dockerfile: infrastructure/docker/Dockerfile.backend.deployment
     container_name: nova-corrente-backend
     ports:
       - "5000:5000"
@@ -14,17 +51,19 @@ services:
       - API_HOST=0.0.0.0
       - API_PORT=5000
       - DATABASE_URL=sqlite:///./data/nova_corrente.db
-      - MODELS_DIR=./models
       - DATA_DIR=./data
       - LOG_DIR=./logs
       - CORS_ORIGINS=http://localhost:3000,http://localhost:3001
+      - MINIO_ENDPOINT=http://minio:9000
+      - REDIS_URL=redis://redis:6379
+      - ML_RESULTS_PATH=/app/data/ml_results  # Read-only path to precomputed ML results
+      # NO ML-related environment variables (no MODELS_DIR, no MODEL_CACHE_ENABLED)
     volumes:
       - ./data:/app/data
-      - ./models:/app/models
-      - ./reports:/app/reports
       - ./logs:/app/logs
       - ./backend:/app/backend
       - ./shared:/app/shared
+      - ml_results:/app/data/ml_results  # Read-only mount for precomputed ML results
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
       interval: 30s
@@ -51,29 +90,8 @@ services:
     networks:
       - nova-corrente-network
 
-  # Scheduled Forecast Service
-  scheduler:
-    build:
-      context: .
-      dockerfile: infrastructure/docker/Dockerfile.backend
-    container_name: nova-corrente-scheduler
-    environment:
-      - PYTHONUNBUFFERED=1
-      - DATA_DIR=./data
-      - MODELS_DIR=./models
-    volumes:
-      - ./data:/app/data
-      - ./models:/app/models
-      - ./reports:/app/reports
-      - ./logs:/app/logs
-      - ./backend:/app/backend
-      - ./backend/ml/config.yaml:/app/config.yaml
-    command: python -m backend.scripts.scheduled_forecast
-    depends_on:
-      - backend
-    restart: unless-stopped
-    networks:
-      - nova-corrente-network
+  # NOTE: Scheduler service REMOVED - ML processing runs in separate environment
+  # ML processing outputs results to shared storage, deployment reads them (read-only)
 
 networks:
   nova-corrente-network:
@@ -81,6 +99,7 @@ networks:
 
 volumes:
   data:
-  models:
-  reports:
   logs:
+  minio_data:
+  redis_data:
+  ml_results:  # Read-only volume for precomputed ML results

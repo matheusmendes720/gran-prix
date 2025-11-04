@@ -1,0 +1,67 @@
+# ML Processing Requirements - Separate ML Environment
+# Nova Corrente Demand Forecasting System - ML Processing Only
+# 
+# This file contains ML dependencies for LOCAL ML PROCESSING ONLY.
+# These dependencies are NOT included in deployment containers.
+# 
+# ML processing runs in a separate environment and outputs results
+# as Parquet files to shared storage. Deployment reads these results.
+# 
+# DO NOT use this file in deployment Dockerfiles or requirements_deployment.txt
+
+# ============================================
+# Core Data Processing (shared with deployment)
+# ============================================
+pandas>=2.0.0
+numpy>=1.24.0
+pyarrow>=14.0.0
+
+# ============================================
+# Time Series & ML Models
+# ============================================
+statsmodels>=0.14.0
+prophet>=1.1.5
+pmdarima>=2.0.0
+scikit-learn>=1.3.0
+scipy>=1.11.0
+
+# ============================================
+# Deep Learning
+# ============================================
+tensorflow>=2.13.0
+
+# ============================================
+# ML Ops (Optional - for ML environment only)
+# ============================================
+# mlflow>=2.7.0  # Uncomment if using MLflow in ML environment
+
+# ============================================
+# Model Persistence
+# ============================================
+joblib>=1.3.0
+
+# ============================================
+# Reporting & Visualization (for ML analysis)
+# ============================================
+reportlab>=4.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# ============================================
+# Utilities
+# ============================================
+python-dateutil>=2.8.0
+pytz>=2023.3
+tqdm>=4.66.0
+holidays>=0.41
+
+# ============================================
+# Logging and Configuration
+# ============================================
+pyyaml>=6.0
+
+# ============================================
+# NOTE: This file is for ML processing environment only.
+# Deployment uses requirements_deployment.txt (NO ML dependencies).
+# ============================================
+

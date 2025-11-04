@@ -137,6 +137,37 @@ async def health_check() -> Dict[str, Any]:
             "error": str(e),
         }
     
+    # Check ML Dependencies (NO ML allowed in deployment)
+    try:
+        ml_packages_to_check = ['torch', 'tensorflow', 'sklearn', 'mlflow', 'xgboost', 'lightgbm', 'prophet', 'pmdarima']
+        ml_violations = []
+        
+        # Try to import and check each ML package
+        for package in ml_packages_to_check:
+            try:
+                __import__(package)
+                ml_violations.append(package)
+            except ImportError:
+                pass  # Good - ML package not installed
+        
+        health_status["ml_dependencies"] = {
+            "status": "compliant" if len(ml_violations) == 0 else "non_compliant",
+            "message": "No ML dependencies detected" if len(ml_violations) == 0 else f"ML dependencies detected: {ml_violations}",
+            "checked_packages": ml_packages_to_check,
+            "violations": ml_violations
+        }
+        
+        # If ML dependencies found, mark as degraded
+        if len(ml_violations) > 0:
+            health_status["status"] = "degraded"
+    except Exception as e:
+        health_status["ml_dependencies"] = {
+            "status": "error",
+            "message": f"Error checking ML dependencies: {str(e)}",
+            "checked_packages": [],
+            "violations": []
+        }
+    
     # Determine overall status
     if health_status["services"].get("database", {}).get("status") == "error":
         health_status["status"] = "unhealthy"
@@ -144,6 +175,8 @@ async def health_check() -> Dict[str, Any]:
         svc.get("status") == "error" 
         for svc in health_status["services"].values()
     ):
+        health_status["status"] = "degraded"
+    elif health_status.get("ml_dependencies", {}).get("status") == "non_compliant":
         health_status["status"] = "degraded"
     
     return health_status

@@ -589,26 +589,26 @@ Notifica via email/WebSocket se algo falhou
 **Tempo estimado:** 2-3 horas
 
 #### Etapa 1: Visão Geral (30 min)
-1. ✅ **Este documento** (NAVEGACAO_COMPLETA_SISTEMA_PT_BR.md)
+1. ✅ **[Este documento](./NAVEGACAO_COMPLETA_SISTEMA_PT_BR.md)**
    - Leia seções: "O Grande Quadro" e "Arquitetura do Sistema"
-2. ✅ **README_ROADMAPS.md**
+2. ✅ **[README_ROADMAPS.md](./README_ROADMAPS.md)**
    - Visão geral de todos os documentos
 
 #### Etapa 2: Conceitos Fundamentais (45 min)
-3. ✅ **ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md**
+3. ✅ **[ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md)**
    - Seção 1: "Visão Geral de Analytics Engineering"
    - Seção 2: "Arquitetura de Dados Moderna"
    - Seção 3: "Modelagem de Dados"
 
 #### Etapa 3: Como Funciona na Prática (45 min)
-4. ✅ **DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md**
+4. ✅ **[DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md)**
    - Seção 1: "Arquitetura de Pipelines"
    - Seção 2: "Pipeline ETL/ELT Completo"
 
 #### Etapa 4: Estado Atual e Próximos Passos (30 min)
-5. ✅ **CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md**
+5. ✅ **[CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md](./CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md)**
    - Veja o que já foi feito
-6. ✅ **NEXT_STEPS_OPTIMIZATION_PT_BR.md**
+6. ✅ **[NEXT_STEPS_OPTIMIZATION_PT_BR.md](./NEXT_STEPS_OPTIMIZATION_PT_BR.md)**
    - Veja o que vem a seguir
 
 ---
@@ -619,45 +619,45 @@ Notifica via email/WebSocket se algo falhou
 
 **Foco:** Pipelines de dados e infraestrutura
 
-1. ✅ **QUICK_START_GUIDE_PT_BR.md** - Seção Data Engineer
-2. ✅ **PHASE_0_FOUNDATION_DETAILED_PT_BR.md** - Setup inicial
-3. ✅ **DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md** - Pipelines completos
-4. ✅ **ETL_DESIGN_PATTERNS_PT_BR.md** - Padrões de implementação
-5. ✅ **IMPLEMENTATION_TEMPLATES_PT_BR.md** - Templates prontos
+1. ✅ **[QUICK_START_GUIDE_PT_BR.md](./QUICK_START_GUIDE_PT_BR.md)** - Seção Data Engineer
+2. ✅ **[PHASE_0_FOUNDATION_DETAILED_PT_BR.md](./PHASE_0_FOUNDATION_DETAILED_PT_BR.md)** - Setup inicial
+3. ✅ **[DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md)** - Pipelines completos
+4. ✅ **[ETL_DESIGN_PATTERNS_PT_BR.md](./ETL_DESIGN_PATTERNS_PT_BR.md)** - Padrões de implementação
+5. ✅ **[IMPLEMENTATION_TEMPLATES_PT_BR.md](./IMPLEMENTATION_TEMPLATES_PT_BR.md)** - Templates prontos
 
 #### 👨‍🔬 Data Scientist
 
 **Foco:** Modelos ML e features
 
-1. ✅ **CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md** - Estado atual
-2. ✅ **NEXT_STEPS_OPTIMIZATION_PT_BR.md** - Otimização de modelos
-3. ✅ **ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md** - Seção ML Ops
-4. ✅ **TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md** - Seção ML Layer
+1. ✅ **[CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md](./CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md)** - Estado atual
+2. ✅ **[NEXT_STEPS_OPTIMIZATION_PT_BR.md](./NEXT_STEPS_OPTIMIZATION_PT_BR.md)** - Otimização de modelos
+3. ✅ **[ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md)** - Seção ML Ops
+4. ✅ **[TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md](./TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md)** - Seção ML Layer
 
 #### 👨‍💼 Analyst / BI
 
 **Foco:** Dashboards e analytics
 
-1. ✅ **PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md** - Gold layer
-2. ✅ **ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md** - Seção Analytics e BI
-3. ✅ **QUICK_START_GUIDE_PT_BR.md** - Seção Analyst
+1. ✅ **[PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md](./PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md)** - Gold layer
+2. ✅ **[ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md)** - Seção Analytics e BI
+3. ✅ **[QUICK_START_GUIDE_PT_BR.md](./QUICK_START_GUIDE_PT_BR.md)** - Seção Analyst
 
 #### 👨‍💻 Fullstack Developer
 
 **Foco:** App web (Frontend + Backend)
 
-1. ✅ **FULLSTACK_INTEGRATION_PATTERNS_PT_BR.md** - Integração completa
-2. ✅ **DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md** - Seção Serving
-3. ✅ **PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md** - Deploy
+1. ✅ **[FULLSTACK_INTEGRATION_PATTERNS_PT_BR.md](./FULLSTACK_INTEGRATION_PATTERNS_PT_BR.md)** - Integração completa
+2. ✅ **[DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md)** - Seção Serving
+3. ✅ **[PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md](./PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md)** - Deploy
 
 #### 🛠️ DevOps / SRE
 
 **Foco:** Infraestrutura e produção
 
-1. ✅ **PHASE_0_FOUNDATION_DETAILED_PT_BR.md** - Terraform e infra
-2. ✅ **PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md** - Deploy produção
-3. ✅ **TROUBLESHOOTING_GUIDE_PT_BR.md** - Problemas comuns
-4. ✅ **REFERENCE_TECHNICAL_STACK_PT_BR.md** - Stack técnico
+1. ✅ **[PHASE_0_FOUNDATION_DETAILED_PT_BR.md](./PHASE_0_FOUNDATION_DETAILED_PT_BR.md)** - Terraform e infra
+2. ✅ **[PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md](./PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md)** - Deploy produção
+3. ✅ **[TROUBLESHOOTING_GUIDE_PT_BR.md](./TROUBLESHOOTING_GUIDE_PT_BR.md)** - Problemas comuns
+4. ✅ **[REFERENCE_TECHNICAL_STACK_PT_BR.md](./REFERENCE_TECHNICAL_STACK_PT_BR.md)** - Stack técnico
 
 ---
 
@@ -665,10 +665,10 @@ Notifica via email/WebSocket se algo falhou
 
 **Tempo estimado:** 8-12 horas
 
-1. ✅ **TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md** - Tudo detalhado
-2. ✅ **ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md** - Roadmap completo
-3. ✅ **DATA_PIPELINE_IMPLEMENTATION_EXAMPLES_PT_BR.md** - Código produção
-4. ✅ **ETL_DESIGN_PATTERNS_PT_BR.md** - Padrões avançados
+1. ✅ **[TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md](./TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md)** - Tudo detalhado
+2. ✅ **[ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md)** - Roadmap completo
+3. ✅ **[DATA_PIPELINE_IMPLEMENTATION_EXAMPLES_PT_BR.md](./DATA_PIPELINE_IMPLEMENTATION_EXAMPLES_PT_BR.md)** - Código produção
+4. ✅ **[ETL_DESIGN_PATTERNS_PT_BR.md](./ETL_DESIGN_PATTERNS_PT_BR.md)** - Padrões avançados
 5. ✅ Todos os guias detalhados por fase
 
 ---
@@ -965,10 +965,10 @@ Notifica via email/WebSocket se algo falhou
 #### 📥 **Ingestão de Dados**
 
 **Documentos relacionados:**
-- `DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md` → Seção "Pipeline ETL/ELT Completo"
-- `ETL_DESIGN_PATTERNS_PT_BR.md` → Seção "Incremental Loading" e "Change Data Capture"
-- `PHASE_0_FOUNDATION_DETAILED_PT_BR.md` → Setup Airbyte/Fivetran
-- `IMPLEMENTATION_TEMPLATES_PT_BR.md` → Templates de ingestão
+- [DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md) → Seção "Pipeline ETL/ELT Completo"
+- [ETL_DESIGN_PATTERNS_PT_BR.md](./ETL_DESIGN_PATTERNS_PT_BR.md) → Seção "Incremental Loading" e "Change Data Capture"
+- [PHASE_0_FOUNDATION_DETAILED_PT_BR.md](./PHASE_0_FOUNDATION_DETAILED_PT_BR.md) → Setup Airbyte/Fivetran
+- [IMPLEMENTATION_TEMPLATES_PT_BR.md](./IMPLEMENTATION_TEMPLATES_PT_BR.md) → Templates de ingestão
 
 **Conceitos chave:**
 - Bronze Layer (primeira camada)
@@ -980,10 +980,10 @@ Notifica via email/WebSocket se algo falhou
 #### 🥉 **Bronze Layer (Dados Brutos)**
 
 **Documentos relacionados:**
-- `ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md` → Seção "Arquitetura Medallion"
-- `TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md` → Seção "Storage Layer"
-- `DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md` → Pipeline Bronze
-- `PHASE_0_FOUNDATION_DETAILED_PT_BR.md` → Setup Bronze
+- [ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md) → Seção "Arquitetura Medallion"
+- [TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md](./TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md) → Seção "Storage Layer"
+- [DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md) → Pipeline Bronze
+- [PHASE_0_FOUNDATION_DETAILED_PT_BR.md](./PHASE_0_FOUNDATION_DETAILED_PT_BR.md) → Setup Bronze
 
 **Conceitos chave:**
 - Delta Lake no S3
@@ -996,10 +996,10 @@ Notifica via email/WebSocket se algo falhou
 #### 🥈 **Silver Layer (Dados Limpos)**
 
 **Documentos relacionados:**
-- `PHASE_1_DATA_FOUNDATION_DETAILED_PT_BR.md` → Guia completo Silver
-- `ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md` → Seção "Great Expectations"
-- `DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md` → Transformação Silver
-- `ETL_DESIGN_PATTERNS_PT_BR.md` → Padrões de limpeza
+- [PHASE_1_DATA_FOUNDATION_DETAILED_PT_BR.md](./PHASE_1_DATA_FOUNDATION_DETAILED_PT_BR.md) → Guia completo Silver
+- [ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md) → Seção "Great Expectations"
+- [DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md) → Transformação Silver
+- [ETL_DESIGN_PATTERNS_PT_BR.md](./ETL_DESIGN_PATTERNS_PT_BR.md) → Padrões de limpeza
 
 **Conceitos chave:**
 - dbt transformations
@@ -1012,10 +1012,10 @@ Notifica via email/WebSocket se algo falhou
 #### 🥇 **Gold Layer (Analytics)**
 
 **Documentos relacionados:**
-- `PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md` → Guia completo Gold
-- `ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md` → Seção "Modelagem de Dados"
-- `TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md` → Star Schema
-- `DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md` → Gold layer serving
+- [PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md](./PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md) → Guia completo Gold
+- [ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md) → Seção "Modelagem de Dados"
+- [TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md](./TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md) → Star Schema
+- [DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md) → Gold layer serving
 
 **Conceitos chave:**
 - Star Schema
@@ -1028,10 +1028,10 @@ Notifica via email/WebSocket se algo falhou
 #### 🤖 **Machine Learning**
 
 **Documentos relacionados:**
-- `NEXT_STEPS_OPTIMIZATION_PT_BR.md` → Otimização de modelos
-- `ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md` → Seção "ML Ops"
-- `CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md` → Features criadas
-- `TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md` → ML Layer
+- [NEXT_STEPS_OPTIMIZATION_PT_BR.md](./NEXT_STEPS_OPTIMIZATION_PT_BR.md) → Otimização de modelos
+- [ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md) → Seção "ML Ops"
+- [CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md](./CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md) → Features criadas
+- [TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md](./TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md) → ML Layer
 
 **Conceitos chave:**
 - Feature Engineering
@@ -1044,10 +1044,10 @@ Notifica via email/WebSocket se algo falhou
 #### 🔧 **Backend (FastAPI)**
 
 **Documentos relacionados:**
-- `FULLSTACK_INTEGRATION_PATTERNS_PT_BR.md` → Integração backend
-- `DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md` → Seção "Serving"
-- `PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md` → Deploy backend
-- `IMPLEMENTATION_TEMPLATES_PT_BR.md` → Templates API
+- [FULLSTACK_INTEGRATION_PATTERNS_PT_BR.md](./FULLSTACK_INTEGRATION_PATTERNS_PT_BR.md) → Integração backend
+- [DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md) → Seção "Serving"
+- [PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md](./PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md) → Deploy backend
+- [IMPLEMENTATION_TEMPLATES_PT_BR.md](./IMPLEMENTATION_TEMPLATES_PT_BR.md) → Templates API
 
 **Conceitos chave:**
 - REST APIs
@@ -1060,10 +1060,10 @@ Notifica via email/WebSocket se algo falhou
 #### 🎨 **Frontend (Next.js)**
 
 **Documentos relacionados:**
-- `FULLSTACK_INTEGRATION_PATTERNS_PT_BR.md` → Integração frontend
-- `DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md` → Seção "Application Layer"
-- `PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md` → Deploy frontend
-- `QUICK_START_GUIDE_PT_BR.md` → Quick start
+- [FULLSTACK_INTEGRATION_PATTERNS_PT_BR.md](./FULLSTACK_INTEGRATION_PATTERNS_PT_BR.md) → Integração frontend
+- [DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md) → Seção "Application Layer"
+- [PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md](./PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md) → Deploy frontend
+- [QUICK_START_GUIDE_PT_BR.md](./QUICK_START_GUIDE_PT_BR.md) → Quick start
 
 **Conceitos chave:**
 - React/Next.js
@@ -1076,10 +1076,10 @@ Notifica via email/WebSocket se algo falhou
 #### 🎼 **Orquestração (Airflow)**
 
 **Documentos relacionados:**
-- `DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md` → Monitoramento
-- `PHASE_0_FOUNDATION_DETAILED_PT_BR.md` → Setup Airflow
-- `ETL_DESIGN_PATTERNS_PT_BR.md` → Padrões de pipeline
-- `TROUBLESHOOTING_GUIDE_PT_BR.md` → Problemas Airflow
+- [DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md) → Monitoramento
+- [PHASE_0_FOUNDATION_DETAILED_PT_BR.md](./PHASE_0_FOUNDATION_DETAILED_PT_BR.md) → Setup Airflow
+- [ETL_DESIGN_PATTERNS_PT_BR.md](./ETL_DESIGN_PATTERNS_PT_BR.md) → Padrões de pipeline
+- [TROUBLESHOOTING_GUIDE_PT_BR.md](./TROUBLESHOOTING_GUIDE_PT_BR.md) → Problemas Airflow
 
 **Conceitos chave:**
 - DAGs (Directed Acyclic Graphs)
@@ -1092,9 +1092,9 @@ Notifica via email/WebSocket se algo falhou
 #### 🛡️ **Governança (DataHub, Great Expectations)**
 
 **Documentos relacionados:**
-- `ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md` → Seção "Governança"
-- `TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md` → Unity Catalog
-- `PHASE_1_DATA_FOUNDATION_DETAILED_PT_BR.md` → Great Expectations
+- [ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md) → Seção "Governança"
+- [TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md](./TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md) → Unity Catalog
+- [PHASE_1_DATA_FOUNDATION_DETAILED_PT_BR.md](./PHASE_1_DATA_FOUNDATION_DETAILED_PT_BR.md) → Great Expectations
 
 **Conceitos chave:**
 - Data Lineage (linhagem de dados)
@@ -1107,9 +1107,9 @@ Notifica via email/WebSocket se algo falhou
 #### 📊 **BI Tools (Metabase, Superset)**
 
 **Documentos relacionados:**
-- `PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md` → Setup BI tools
-- `ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md` → Seção "Analytics e BI"
-- `QUICK_START_GUIDE_PT_BR.md` → Quick start Analyst
+- [PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md](./PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md) → Setup BI tools
+- [ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md) → Seção "Analytics e BI"
+- [QUICK_START_GUIDE_PT_BR.md](./QUICK_START_GUIDE_PT_BR.md) → Quick start Analyst
 
 **Conceitos chave:**
 - Self-service analytics
@@ -1124,9 +1124,9 @@ Notifica via email/WebSocket se algo falhou
 #### **Fase 0: Foundation (Semanas 1-2)**
 
 **Documentos principais:**
-- `PHASE_0_FOUNDATION_DETAILED_PT_BR.md` ⭐ Guia detalhado
-- `QUICK_START_GUIDE_PT_BR.md` → Seção DevOps
-- `IMPLEMENTATION_TEMPLATES_PT_BR.md` → Templates Terraform
+- [PHASE_0_FOUNDATION_DETAILED_PT_BR.md](./PHASE_0_FOUNDATION_DETAILED_PT_BR.md) ⭐ Guia detalhado
+- [QUICK_START_GUIDE_PT_BR.md](./QUICK_START_GUIDE_PT_BR.md) → Seção DevOps
+- [IMPLEMENTATION_TEMPLATES_PT_BR.md](./IMPLEMENTATION_TEMPLATES_PT_BR.md) → Templates Terraform
 
 **Entregas:**
 - Terraform setup
@@ -1139,9 +1139,9 @@ Notifica via email/WebSocket se algo falhou
 #### **Fase 1: Data Foundation (Semanas 3-4)**
 
 **Documentos principais:**
-- `PHASE_1_DATA_FOUNDATION_DETAILED_PT_BR.md` ⭐ Guia detalhado
-- `CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md` → Estado atual
-- `NEXT_STEPS_OPTIMIZATION_PT_BR.md` → Próximos passos
+- [PHASE_1_DATA_FOUNDATION_DETAILED_PT_BR.md](./PHASE_1_DATA_FOUNDATION_DETAILED_PT_BR.md) ⭐ Guia detalhado
+- [CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md](./CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md) → Estado atual
+- [NEXT_STEPS_OPTIMIZATION_PT_BR.md](./NEXT_STEPS_OPTIMIZATION_PT_BR.md) → Próximos passos
 
 **Entregas:**
 - Silver layer completo
@@ -1154,8 +1154,8 @@ Notifica via email/WebSocket se algo falhou
 #### **Fase 2: Analytics Layer (Semanas 5-8)**
 
 **Documentos principais:**
-- `PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md` ⭐ Guia detalhado
-- `ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md` → Star Schema
+- [PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md](./PHASE_2_ANALYTICS_LAYER_DETAILED_PT_BR.md) ⭐ Guia detalhado
+- [ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md) → Star Schema
 
 **Entregas:**
 - Gold layer (Star Schema)
@@ -1168,26 +1168,26 @@ Notifica via email/WebSocket se algo falhou
 ### Por Problema ou Objetivo
 
 #### **Quer entender o sistema inteiro?**
-1. Este documento (NAVEGACAO_COMPLETA_SISTEMA_PT_BR.md)
-2. `ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md` → Seções 1-3
+1. Este documento ([NAVEGACAO_COMPLETA_SISTEMA_PT_BR.md](./NAVEGACAO_COMPLETA_SISTEMA_PT_BR.md))
+2. [ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md](./ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md) → Seções 1-3
 
 #### **Quer implementar algo específico?**
-1. `QUICK_START_GUIDE_PT_BR.md` → Escolha seu perfil
-2. `IMPLEMENTATION_TEMPLATES_PT_BR.md` → Templates prontos
+1. [QUICK_START_GUIDE_PT_BR.md](./QUICK_START_GUIDE_PT_BR.md) → Escolha seu perfil
+2. [IMPLEMENTATION_TEMPLATES_PT_BR.md](./IMPLEMENTATION_TEMPLATES_PT_BR.md) → Templates prontos
 3. Guia detalhado da fase correspondente
 
 #### **Algo não está funcionando?**
-1. `TROUBLESHOOTING_GUIDE_PT_BR.md` → Procure seu problema
-2. `REFERENCE_TECHNICAL_STACK_PT_BR.md` → Verifique configurações
+1. [TROUBLESHOOTING_GUIDE_PT_BR.md](./TROUBLESHOOTING_GUIDE_PT_BR.md) → Procure seu problema
+2. [REFERENCE_TECHNICAL_STACK_PT_BR.md](./REFERENCE_TECHNICAL_STACK_PT_BR.md) → Verifique configurações
 
 #### **Precisa fazer deploy?**
-1. `PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md` → Guia completo
-2. `DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md` → Design produção
+1. [PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md](./PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md) → Guia completo
+2. [DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md) → Design produção
 
 #### **Quer entender arquitetura profunda?**
-1. `TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md` ⭐ Tudo detalhado
-2. `DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md` → Pipelines
-3. `ETL_DESIGN_PATTERNS_PT_BR.md` → Padrões avançados
+1. [TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md](./TECHNICAL_ARCHITECTURE_DEEP_DIVE_PT_BR.md) ⭐ Tudo detalhado
+2. [DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md](./DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md) → Pipelines
+3. [ETL_DESIGN_PATTERNS_PT_BR.md](./ETL_DESIGN_PATTERNS_PT_BR.md) → Padrões avançados
 
 ---
 
@@ -1279,7 +1279,7 @@ Agora que você entendeu a navegação:
 3. **Se tem dúvidas:**
    - Consulte "Glossário" para termos
    - Use "Referências Cruzadas" para contexto
-   - Veja "TROUBLESHOOTING_GUIDE_PT_BR.md" para problemas
+   - Veja [TROUBLESHOOTING_GUIDE_PT_BR.md](./TROUBLESHOOTING_GUIDE_PT_BR.md) para problemas
 
 ---
 

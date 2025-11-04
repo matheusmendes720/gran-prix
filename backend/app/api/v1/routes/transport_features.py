@@ -241,3 +241,6 @@ async def get_highway_data(
         raise HTTPException(status_code=500, detail=f"Error fetching highway data: {str(e)}")
 
 
+
+
+

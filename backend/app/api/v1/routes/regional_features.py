@@ -180,3 +180,6 @@ async def get_regional_ipea(
         raise HTTPException(status_code=500, detail=f"Error fetching regional IPEA data: {str(e)}")
 
 
+
+
+

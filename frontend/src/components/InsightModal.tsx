@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import { Alert } from '../types';
 import Card from './Card';
 import { SparklesIcon } from './icons';
@@ -36,10 +36,12 @@ const InsightModal: React.FC<InsightModalProps> = ({ alert, onClose }) => {
             setError(null);
             
             try {
-                if (!process.env.API_KEY) {
-                    throw new Error("API_KEY environment variable not set");
+                if (!process.env.NEXT_PUBLIC_GEMINI_API_KEY) {
+                    throw new Error("NEXT_PUBLIC_GEMINI_API_KEY environment variable not set");
                 }
-                const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+                
+                const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
+                const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
                 const prompt = `
                     Analise o seguinte alerta de inventário e forneça um insight rápido e acionável em um parágrafo conciso (2-3 sentenças).
@@ -57,16 +59,16 @@ const InsightModal: React.FC<InsightModalProps> = ({ alert, onClose }) => {
                     - Estado: ${alert.stateId}
                 `;
 
-                const response = await ai.models.generateContent({
-                    model: 'gemini-2.5-flash',
-                    contents: prompt,
-                });
+                const result = await model.generateContent(prompt);
+                const response = await result.response;
+                const text = response.text();
                 
-                setInsight(response.text || '');
+                setInsight(text || '');
 
-            } catch (err) {
+            } catch (err: any) {
                 console.error("Error generating AI insight:", err);
-                setError('Falha ao gerar o insight. Tente novamente.');
+                const errorMessage = err?.message || 'Erro desconhecido';
+                setError(`Falha ao gerar o insight: ${errorMessage}. Verifique o console para mais detalhes.`);
             } finally {
                 setLoading(false);
             }

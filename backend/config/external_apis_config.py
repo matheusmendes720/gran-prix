@@ -53,6 +53,17 @@ OPENWEATHER_CONFIG: Dict[str, Any] = {
     'cache_duration': 3600,  # 1 hour cache
 }
 
+# Gemini AI (Google GenAI) Configuration
+GEMINI_CONFIG: Dict[str, Any] = {
+    'api_key': os.getenv('GEMINI_API_KEY', ''),
+    'model': 'gemini-1.5-flash',  # Using Gemini 1.5 Flash
+    'timeout': 30,
+    'retry_attempts': 3,
+    'retry_delay': 5,
+    'max_tokens': 8192,
+    'temperature': 0.7,
+}
+
 # Rate Limiting
 RATE_LIMIT_CONFIG: Dict[str, Any] = {
     'requests_per_minute': 60,
