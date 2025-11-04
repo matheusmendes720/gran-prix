@@ -247,3 +247,6 @@ async def get_fuel_prices(
         raise HTTPException(status_code=500, detail=f"Error fetching fuel prices: {str(e)}")
 
 
+
+
+

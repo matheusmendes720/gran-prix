@@ -244,3 +244,6 @@ async def get_ibge_extended(
         raise HTTPException(status_code=500, detail=f"Error fetching IBGE extended data: {str(e)}")
 
 
+
+
+

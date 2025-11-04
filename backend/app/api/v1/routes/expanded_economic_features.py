@@ -148,3 +148,6 @@ async def get_ipea_data(
         raise HTTPException(status_code=500, detail=f"Error fetching IPEA data: {str(e)}")
 
 
+
+
+

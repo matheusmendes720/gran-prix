@@ -178,3 +178,6 @@ async def get_comex_statistics(
         raise HTTPException(status_code=500, detail=f"Error fetching COMEX statistics: {str(e)}")
 
 
+
+
+

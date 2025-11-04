@@ -1,5 +1,12 @@
 # Dataset Download and Preprocessing Requirements
 # Nova Corrente Demand Forecasting System
+#
+# IMPORTANT: This file contains ALL dependencies (including ML).
+# 
+# For deployment, use: requirements_deployment.txt (NO ML dependencies)
+# For ML processing, use: requirements_ml.txt (ML dependencies only)
+#
+# This file is kept for reference and local development that includes ML.
 
 # Core Data Processing
 pandas>=2.0.0
@@ -63,4 +70,3 @@ joblib>=1.3.0
 
 # Database (Optional)
 psycopg2-binary>=2.9.0  # PostgreSQL support
-

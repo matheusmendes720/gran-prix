@@ -181,3 +181,6 @@ async def get_supplier_encodings():
         raise HTTPException(status_code=500, detail=f"Error fetching supplier encodings: {str(e)}")
 
 
+
+
+

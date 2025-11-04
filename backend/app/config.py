@@ -19,10 +19,10 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./data/nova_corrente.db")
     
-    # ML Models
-    MODELS_DIR: str = os.getenv("MODELS_DIR", "./models")
-    MODEL_CACHE_ENABLED: bool = os.getenv("MODEL_CACHE_ENABLED", "true").lower() == "true"
-    MODEL_CACHE_TTL: int = int(os.getenv("MODEL_CACHE_TTL", "3600"))
+    # Data Refresh & ML Results (Read-Only)
+    # NOTE: ML processing runs in separate environment, deployment only reads precomputed results
+    ML_RESULTS_PATH: str = os.getenv("ML_RESULTS_PATH", "./data/ml_results")
+    DATA_REFRESH_ENABPOINT_ENABLED: bool = os.getenv("DATA_REFRESH_ENABPOINT_ENABLED", "true").lower() == "true"
     
     # Data
     DATA_DIR: str = os.getenv("DATA_DIR", "./data")
@@ -56,6 +56,9 @@ class Settings(BaseSettings):
     # Frontend
     FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:3000")
     
+    # AI/GenAI Configuration
+    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+    
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
@@ -78,9 +81,8 @@ except Exception as e:
         API_PORT: int = int(os.getenv("API_PORT", "5000"))
         API_RELOAD: bool = os.getenv("API_RELOAD", "false").lower() == "true"
         DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./data/nova_corrente.db")
-        MODELS_DIR: str = os.getenv("MODELS_DIR", "./models")
-        MODEL_CACHE_ENABLED: bool = os.getenv("MODEL_CACHE_ENABLED", "true").lower() == "true"
-        MODEL_CACHE_TTL: int = int(os.getenv("MODEL_CACHE_TTL", "3600"))
+        ML_RESULTS_PATH: str = os.getenv("ML_RESULTS_PATH", "./data/ml_results")
+        DATA_REFRESH_ENABPOINT_ENABLED: bool = os.getenv("DATA_REFRESH_ENABPOINT_ENABLED", "true").lower() == "true"
         DATA_DIR: str = os.getenv("DATA_DIR", "./data")
         RAW_DATA_DIR: str = os.getenv("RAW_DATA_DIR", "./data/raw")
         PROCESSED_DATA_DIR: str = os.getenv("PROCESSED_DATA_DIR", "./data/processed")
@@ -91,6 +93,7 @@ except Exception as e:
         ACCESS_TOKEN_EXPIRE_MINUTES: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30"))
         CORS_ORIGINS: List[str] = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:3001").split(",") if os.getenv("CORS_ORIGINS") else ["http://localhost:3000", "http://localhost:3001"]
         FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:3000")
+        GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
     
     settings = FallbackSettings()
 

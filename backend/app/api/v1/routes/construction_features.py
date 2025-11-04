@@ -169,3 +169,6 @@ async def get_cbic_indices(
         raise HTTPException(status_code=500, detail=f"Error fetching CBIC indices: {str(e)}")
 
 
+
+
+
