@@ -2,17 +2,266 @@
 ## Histórico Completo de Mudanças com Referências Git
 
 **Projeto:** Nova Corrente - Demand Forecasting & Analytics System  
-**Versão Atual:** 2.0.0  
+**Versão Atual:** 2.1.0  
 **Última Atualização:** 04 de Novembro de 2025
 
 ---
 
 ## 🎯 ÍNDICE
 
-1. [Versão 2.0.0 - ML Ops Constraint Enforcement (04/11/2025)](#versão-200---ml-ops-constraint-enforcement)
-2. [Versão 1.0.0 - Initial Commit (03/11/2025)](#versão-100---initial-commit)
-3. [Referências Git](#referências-git)
-4. [Estatísticas de Mudanças](#estatísticas-de-mudanças)
+1. [Versão 2.1.0 - Contributor Merge & Workspace Reorganization (04/11/2025)](#versão-210---contributor-merge--workspace-reorganization)
+2. [Versão 2.0.0 - ML Ops Constraint Enforcement (04/11/2025)](#versão-200---ml-ops-constraint-enforcement)
+3. [Versão 1.0.0 - Initial Commit (03/11/2025)](#versão-100---initial-commit)
+4. [Referências Git](#referências-git)
+5. [Estatísticas de Mudanças](#estatísticas-de-mudanças)
+
+---
+
+## 📦 VERSÃO 2.1.0 - Contributor Merge & Workspace Reorganization
+**Data:** 04 de Novembro de 2025  
+**Commits:** [`323a2dc`](https://github.com/YOUR_USERNAME/gran_prix/commit/323a2dc), [`ec79f85`](https://github.com/YOUR_USERNAME/gran_prix/commit/ec79f85), [`962afa5`](https://github.com/YOUR_USERNAME/gran_prix/commit/962afa5)  
+**Autor:** matheusmendes720 <datamaster720@gmail.com> + samscerq74-cloud <samarascerqueira74@gmail.com>  
+**Tipo:** 🔄 Merge + 🧹 Reorganization
+
+### 🎯 Resumo Executivo
+
+Esta versão inclui:
+1. **Merge da branch de contribuidor** - Timeout Isolation Suite documentation and tools
+2. **Reorganização completa do root workspace** - Limpeza e organização de arquivos em subpastas temáticas
+
+---
+
+### ✨ 1. Merge da Branch de Contribuidor
+
+#### 📋 Informações do Merge
+- **Branch:** `feature/timeout-suite-docs`
+- **Contribuidor:** samscerq74-cloud <samarascerqueira74@gmail.com>
+- **Pull Request:** #1
+- **Merge Commit:** `04a23d7` - "Merge pull request #1 from matheusmendes720/feature/timeout-suite-docs"
+- **Commit Original:** `d02ddb8` - "docs: expand timeout isolation playbooks and observability tooling"
+- **Merge Local:** `323a2dc` - "Merge remote-tracking branch 'origin/master'"
+
+#### 📚 Documentação de Timeout Isolation Adicionada
+
+**6 arquivos adicionados (1,117 linhas):**
+
+1. **`tests_api_isolation/changelog.md`** (757 linhas)
+   - Changelog completo do sistema de timeout isolation
+   - Histórico de mudanças e melhorias
+
+2. **`tests_api_isolation/timeout/docs/README.md`** (21 linhas)
+   - README principal do sistema de timeout isolation
+   - Visão geral e introdução ao sistema
+
+3. **`tests_api_isolation/timeout/docs/ci_pipeline_plan.md`** (84 linhas)
+   - Plano de pipeline CI/CD para timeout isolation
+   - Estratégia de integração contínua
+   - Configuração GitHub Actions
+
+4. **`tests_api_isolation/timeout/docs/live_execution_runbook.md`** (70 linhas)
+   - Runbook para execução ao vivo do sistema
+   - Guia de execução e troubleshooting
+   - Instruções para execução com `RUN_LIVE=1`
+
+5. **`tests_api_isolation/timeout/docs/observability_guidelines.md`** (52 linhas)
+   - Diretrizes de observabilidade
+   - Melhores práticas de monitoramento
+   - Métricas, dashboards e alertas recomendados
+
+6. **`tests_api_isolation/timeout/tools/reporting/push_metrics.py`** (133 linhas)
+   - Script Python para push de métricas
+   - Ferramenta de reporting e métricas
+   - Integração com Prometheus Pushgateway
+
+#### 🎯 Conteúdo da Contribuição
+
+**Timeout Isolation Suite:**
+- ✅ Documentação completa de timeout isolation
+- ✅ Playbooks de isolamento
+- ✅ Diretrizes de observabilidade
+- ✅ Runbook de execução ao vivo
+- ✅ Plano de pipeline CI/CD
+- ✅ Ferramentas de reporting e métricas
+
+---
+
+### ✨ 2. Reorganização do Root Workspace
+
+#### 📋 Informações da Reorganização
+- **Commits:** `ec79f85`, `509eb0a`, `c850f52`, `962afa5`
+- **Arquivos processados:** 110 arquivos
+- **Arquivos removidos/movidos da raiz:** 40 arquivos
+- **Resultado:** Root directory limpo com apenas arquivos essenciais
+
+#### 🧹 Arquivos Reorganizados
+
+**43 arquivos movidos para subpastas temáticas:**
+
+1. **Fix Reports → `docs/reports/fixes/`** (12 arquivos)
+   - ALL_ERRORS_FIXED.md
+   - ALL_FIXES_AND_TESTING.md
+   - ALL_FIXES_COMPLETE.md
+   - ALL_FIXES_SUMMARY.md
+   - BACKEND_FIXES_COMPLETE.md
+   - ENV_AND_PORT_FIXED.md
+   - ERRORS_FIXED_SUMMARY.md
+   - EXTERNAL_FEATURES_FIX.md
+   - FEATURES_FIX_SUMMARY.md
+   - FRONTEND_ERRORS_FIXED.md
+   - KEEPING_IT_UP.md
+   - STARTUP_FIX_APPLIED.md
+
+2. **Monitoring Reports → `docs/reports/monitoring/`** (13 arquivos)
+   - APP_BEHAVIOR_MONITORING.md
+   - AUTO_MONITORING_SETUP.md
+   - CONTINUOUS_MONITORING.md
+   - CONTINUOUS_TESTING.md
+   - LIVE_LOGS_MONITORING.md
+   - LIVE_MONITORING_ACTIVE.md
+   - LIVE_MONITORING_RUNNING.md
+   - LIVE_TESTING_STATUS.md
+   - MONITORING_LIVE.md
+   - MONITORING_LOG.md
+   - MONITORING_LOG_CONTINUED.md
+   - MONITORING_SETUP.md
+   - MONITORING_STATUS.md
+
+3. **Screenshot Reports → `docs/reports/screenshots/`** (4 arquivos)
+   - RESTART_AND_SCREENSHOTS.md
+   - SCREENSHOTS_CAPTURED.md
+   - SCREENSHOTS_READY.md
+   - SCREENSHOTS_STATUS.md
+
+4. **System Status → `docs/reports/system-status/`** (5 arquivos)
+   - BACKEND_RUNNING.md
+   - SYSTEM_LAUNCH_STATUS.md
+   - SYSTEM_LAUNCHED.md
+   - SYSTEM_RESTARTED.md
+   - SYSTEM_STATUS_FINAL.md
+
+5. **Quick Guides → `docs/guides/`** (6 arquivos)
+   - QUICK_START_GUIDE.md
+   - NEXT_STEPS.md
+   - README_BACKEND_FIXED.md
+   - README_BACKEND_START.md
+   - README_FINAL_BACKEND_START.md
+   - README_STARTUP.md
+
+6. **Git Docs → `docs/development/`** (3 arquivos)
+   - COMMIT_MESSAGE.md
+   - GIT_TAGS_REFERENCE.md
+   - CLAUDE.md
+
+#### 🛠️ Scripts Criados
+
+**2 scripts de reorganização:**
+
+1. **`scripts/reorganize_root_workspace.py`** (212 linhas)
+   - Script principal de reorganização
+   - Usa `git mv` para preservar histórico
+   - Fallback para `shutil.move` se git não disponível
+
+2. **`scripts/cleanup_duplicates_root.py`** (134 linhas)
+   - Remove arquivos duplicados da raiz
+   - Verifica se arquivo existe no destino antes de remover
+   - Move arquivos se não existem no destino
+
+#### 📚 Documentação Criada
+
+**4 documentos de reorganização:**
+
+1. **`docs/reports/ROOT_WORKSPACE_REORGANIZATION_COMPLETE.md`** (278 linhas)
+   - Resumo completo da reorganização
+   - Detalhes de todos os arquivos movidos
+
+2. **`docs/reports/ROOT_CLEANUP_SUCCESS.md`** (178 linhas)
+   - Resumo de sucesso da limpeza
+
+3. **`docs/reports/NEXT_STEPS_AFTER_REORGANIZATION.md`** (232 linhas)
+   - Próximos passos após reorganização
+
+4. **`docs/reports/CONTRIBUTOR_MERGE_COMPLETE.md`** (249 linhas)
+   - Documentação do merge de contribuidor
+
+#### 📁 Estrutura Final da Raiz
+
+```
+gran_prix/
+├── README.md                    ✅ Main project readme
+├── CHANGELOG.md                  ✅ Complete change log
+├── docker-compose.yml            ✅ Docker orchestration
+├── docker-compose.prod.yml       ✅ Production Docker config
+├── .gitignore                     ✅ Git ignore rules
+├── .dockerignore                  ✅ Docker ignore rules
+├── .github/                       ✅ GitHub workflows & templates
+│   └── pull_request_template.md  ✅ PR template
+└── scripts/                       ✅ Utility scripts
+    ├── reorganize_root_workspace.py
+    └── cleanup_duplicates_root.py
+```
+
+**Resultado:** ✅ **Apenas arquivos essenciais na raiz!**
+
+---
+
+### 📊 Estatísticas da Versão 2.1.0
+
+#### Merge de Contribuidor
+- **Arquivos adicionados:** 6 arquivos
+- **Linhas adicionadas:** 1,117 linhas
+- **Documentação:** 5 arquivos (984 linhas)
+- **Código Python:** 1 arquivo (133 linhas)
+
+#### Reorganização do Workspace
+- **Arquivos processados:** 110 arquivos
+- **Arquivos removidos/movidos:** 40 arquivos
+- **Scripts criados:** 2 scripts
+- **Documentação criada:** 4 documentos
+- **Commits criados:** 4 commits
+
+#### Estatísticas Gerais
+```
+110 files changed
+4,325 insertions(+)
+3,062 deletions(-)
+```
+
+---
+
+### 🔄 Commits da Versão 2.1.0
+
+1. **`ec79f85`** - `chore: Reorganize root workspace - move files to thematic subfolders`
+   - 110 arquivos processados
+   - Reorganização principal
+
+2. **`509eb0a`** - `docs: Add next steps documentation after reorganization`
+   - Documentação de próximos passos
+
+3. **`c850f52`** - `docs: Add final reorganization summary`
+   - Resumo final da reorganização
+
+4. **`323a2dc`** - `Merge remote-tracking branch 'origin/master'`
+   - Merge da branch de contribuidor (via origin/master)
+
+5. **`962afa5`** - `docs: Add contributor merge documentation`
+   - Documentação do merge de contribuidor
+
+---
+
+### 📈 Impacto e Benefícios
+
+#### Merge de Contribuidor
+- ✅ **Documentação completa** de timeout isolation
+- ✅ **Ferramentas de reporting** adicionadas
+- ✅ **Integração com observabilidade** melhorada
+- ✅ **CI/CD pipeline** documentado
+
+#### Reorganização do Workspace
+- ✅ **Root directory limpo** - apenas arquivos essenciais
+- ✅ **Arquivos organizados** por categoria/tema
+- ✅ **Estrutura profissional** e intuitiva
+- ✅ **Fácil navegação** e manutenção
+- ✅ **Histórico Git preservado** - usando `git mv`
 
 ---
 
@@ -298,6 +547,36 @@ Commit inicial do sistema completo de forecast de demanda Nova Corrente, incluin
 
 ### Commits Principais
 
+#### Commit 2.1.0 - Contributor Merge & Workspace Reorganization
+```bash
+# Merge da branch de contribuidor
+Commit: 323a2dc
+Author: matheusmendes720 <datamaster720@gmail.com>
+Date:   Tue Nov 4 [time] 2025 -0300
+Message: Merge remote-tracking branch 'origin/master'
+
+# Reorganização do workspace
+Commit: ec79f85
+Author: matheusmendes720 <datamaster720@gmail.com>
+Date:   Tue Nov 4 [time] 2025 -0300
+Message: chore: Reorganize root workspace - move files to thematic subfolders
+
+# Commit original do contribuidor
+Commit: d02ddb8
+Author: samscerq74-cloud <samarascerqueira74@gmail.com>
+Date:   Tue Nov 4 18:52:07 2025 -0300
+Message: docs: expand timeout isolation playbooks and observability tooling
+```
+
+**Ver commits:**
+```bash
+git show 323a2dc
+git show ec79f85
+git show d02ddb8
+git log --oneline 323a2dc
+git diff 7c440c5..323a2dc
+```
+
 #### Commit 2.0.0 - ML Ops Constraint Enforcement
 ```bash
 Commit: 7c440c5
@@ -360,7 +639,11 @@ git push origin --tags
 master
 
 # Status
-Your branch is ahead of 'origin/master' by 1 commit.
+Your branch is ahead of 'origin/master' by 6 commits.
+
+# Branches merged
+- feature/timeout-suite-docs (merged via PR #1)
+- merge-contributor-feature (branch temporária de merge)
 ```
 
 ### Arquivos Modificados (Não Committed)
@@ -380,6 +663,12 @@ git status
 
 ### Por Versão
 
+#### Versão 2.1.0
+- **Arquivos:** 110 changed
+- **Inserções:** 4,325 lines
+- **Deleções:** 3,062 lines
+- **Líquido:** +1,263 lines
+
 #### Versão 2.0.0
 - **Arquivos:** 147 changed
 - **Inserções:** 12,482 lines
@@ -392,8 +681,18 @@ git status
 - **Deleções:** 0 lines
 - **Líquido:** +288,317 lines
 
-### Por Categoria (Versão 2.0.0)
+### Por Categoria
 
+#### Versão 2.1.0
+| Categoria | Arquivos | Linhas Adicionadas | Linhas Removidas |
+|-----------|----------|-------------------|------------------|
+| **Documentação** | ~10 | ~1,500 | ~40 |
+| **Código Python** | ~1 | ~133 | ~0 |
+| **Scripts** | ~2 | ~346 | ~0 |
+| **Reorganização** | ~40 | ~0 | ~3,062 |
+| **Outros** | ~57 | ~2,346 | ~0 |
+
+#### Versão 2.0.0
 | Categoria | Arquivos | Linhas Adicionadas | Linhas Removidas |
 |-----------|----------|-------------------|------------------|
 | **Documentação** | ~50 | ~8,000 | ~50 |
@@ -429,7 +728,7 @@ git status
 
 ## 🎯 PRÓXIMAS VERSÕES (Roadmap)
 
-### Versão 2.1.0 - 4-Day Sprint Implementation
+### Versão 2.2.0 - 4-Day Sprint Implementation
 **Planejado:** Novembro 2025  
 **Foco:** Implementação do sprint de 4 dias
 - Data Cluster: Storage, ingestion, transformations
@@ -437,7 +736,7 @@ git status
 - Frontend Cluster: Dashboard minimal, visuals
 - Deploy Cluster: Docker Compose, CI/CD
 
-### Versão 2.2.0 - Git Workflow & Collaboration
+### Versão 2.3.0 - Git Workflow & Collaboration
 **Planejado:** Novembro 2025  
 **Foco:** Sistema de colaboração Git
 - Git workflow documentation
