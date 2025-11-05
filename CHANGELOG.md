@@ -2,19 +2,108 @@
 ## Histórico Completo de Mudanças com Referências Git
 
 **Projeto:** Nova Corrente - Demand Forecasting & Analytics System  
-**Versão Atual:** 2.2.0  
-**Última Atualização:** 04 de Novembro de 2025
+**Versão Atual:** 2.3.0  
+**Última Atualização:** 05 de Novembro de 2025
 
 ---
 
 ## 🎯 ÍNDICE
 
-1. [Versão 2.2.0 - Git Workflow & AI Insights Integration (04/11/2025)](#versão-220---git-workflow--ai-insights-integration)
-2. [Versão 2.1.0 - Contributor Merge & Workspace Reorganization (04/11/2025)](#versão-210---contributor-merge--workspace-reorganization)
-3. [Versão 2.0.0 - ML Ops Constraint Enforcement (04/11/2025)](#versão-200---ml-ops-constraint-enforcement)
-4. [Versão 1.0.0 - Initial Commit (03/11/2025)](#versão-100---initial-commit)
-5. [Referências Git](#referências-git)
-6. [Estatísticas de Mudanças](#estatísticas-de-mudanças)
+1. [Versão 2.3.0 - Data Modeling Strategy & Star Schema Implementation (05/11/2025)](#versão-230---data-modeling-strategy--star-schema-implementation)
+2. [Versão 2.2.0 - Git Workflow & AI Insights Integration (04/11/2025)](#versão-220---git-workflow--ai-insights-integration)
+3. [Versão 2.1.0 - Contributor Merge & Workspace Reorganization (04/11/2025)](#versão-210---contributor-merge--workspace-reorganization)
+4. [Versão 2.0.0 - ML Ops Constraint Enforcement (04/11/2025)](#versão-200---ml-ops-constraint-enforcement)
+5. [Versão 1.0.0 - Initial Commit (03/11/2025)](#versão-100---initial-commit)
+6. [Referências Git](#referências-git)
+7. [Estatísticas de Mudanças](#estatísticas-de-mudanças)
+
+---
+
+## 📦 VERSÃO 2.3.0 - Data Modeling Strategy & Star Schema Implementation
+**Data:** 05 de Novembro de 2025  
+**Commits:** [`ea331df`](https://github.com/matheusmendes720/gran-prix/commit/ea331df), [`1d5a63b`](https://github.com/matheusmendes720/gran-prix/commit/1d5a63b)  
+**Autor:** matheusmendes720 <datamaster720@gmail.com> + Haniel <filipecouto33@gmail.com>  
+**Tipo:** 🔄 Merge + 📊 Data Modeling + 🗄️ Database Schema
+
+### 🎯 Resumo Executivo
+
+Esta versão inclui:
+1. **Merge da branch de contribuidor** - Estratégia completa de modelagem de dados e implementação de Star Schema
+2. **Documentação de modelagem de dados** - Estratégias, análises e guias completos
+3. **Script de criação de Star Schema** - Script Python para criação de dimensões
+4. **Identificação de causa raiz** - 96.3% de dados externos faltando identificado como causa do MAPE de 87%
+
+---
+
+### ✨ 1. Merge da Branch de Contribuidor
+
+#### 📋 Informações do Merge
+- **Branch:** `master` (remote)
+- **Contribuidor:** Haniel <filipecouto33@gmail.com>
+- **Merge Commit:** `ea331df` - "Merge branch 'master' of https://github.com/matheusmendes720/gran-prix"
+- **Commit Original:** `1d5a63b` - "feat: Add comprehensive data modeling strategy and star schema implementation"
+
+#### 📚 Documentação de Modelagem de Dados Adicionada
+
+**6 arquivos adicionados/modificados (3,559 linhas):**
+
+1. **`docs/proj/roadmaps/COMPREHENSIVE_DATA_MODELING_STRATEGY.md`** (1,378 linhas)
+   - Design completo de Star Schema com 12 tabelas (6 core + 6 externas)
+   - Schemas SQL para tabelas de fato e dimensões
+   - Query master de feature engineering para ML
+   - Avaliação de qualidade de dados (96.3% de dados externos faltando identificado)
+   - Estratégia de integração de APIs externas (INMET, BACEN, ANATEL)
+
+2. **`docs/proj/roadmaps/EXECUTIVE_ENRICHMENT_SUMMARY.md`** (403 linhas)
+   - Resumo executivo de oportunidades de enriquecimento de dados
+   - Adições de tabelas priorizadas em 3 níveis (CRITICAL/HIGH/MEDIUM)
+   - Roadmap de redução de MAPE: 87% → <15% em 4 semanas
+   - Métricas de impacto de negócio e análise de ROI
+
+3. **`docs/proj/roadmaps/COMPLETE_CHAT_HISTORY_ANALYSIS.md`** (569 linhas)
+   - Cronologia completa de todas as sessões de chat e decisões
+   - Resumo de avaliação de fit do dataset MIT Telecom
+   - Racionalização da seleção de melhores tabelas
+   - Lições aprendidas e melhores práticas
+
+4. **`docs/proj/roadmaps/QUICK_START_GUIDE.md`** (432 linhas)
+   - TLDR de 60 segundos e plano de ação
+   - Roadmap de implementação semana a semana
+   - Guia de troubleshooting
+   - Métricas de sucesso e impacto de negócio
+
+5. **`docs/proj/roadmaps/README_ROADMAPS.md`** (703 linhas modificadas)
+   - Índice completo de documentação
+   - Caminhos de leitura para diferentes audiências
+   - Guia de referência rápida
+
+6. **`scripts/01_create_star_schema_dimensions.py`** (454 linhas)
+   - Script Python pronto para produção
+   - Cria 5 tabelas de dimensões a partir de dadosSuprimentos.xlsx
+   - Inclui classificação ABC, features cíclicas, estatísticas de lead time
+   - Tratamento completo de erros e relatório de resumo
+
+#### 🎯 Descobertas e Impacto
+
+**Causa Raiz Identificada:**
+- ✅ **96.3% de dados externos faltando** identificado como causa raiz do MAPE de 87%
+- ✅ Caminho claro para reduzir MAPE de 87% para <15% através de enriquecimento externo
+- ✅ Scripts prontos para execução
+- ✅ Blueprint estratégico completo para o time
+
+**Impacto no Negócio:**
+- 📊 Redução de MAPE de 87% para <15% em 4 semanas (roadmap)
+- 📈 Melhoria significativa na precisão de previsões
+- 💰 Análise de ROI incluída
+- 🎯 Tabelas priorizadas para enriquecimento (CRITICAL/HIGH/MEDIUM)
+
+#### 📊 Estatísticas do Merge
+
+- **Arquivos modificados:** 6
+- **Linhas adicionadas:** +3,559
+- **Linhas removidas:** -376
+- **Novos arquivos:** 5
+- **Arquivos modificados:** 1
 
 ---
 
