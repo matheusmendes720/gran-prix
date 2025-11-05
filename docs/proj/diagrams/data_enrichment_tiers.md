@@ -1,0 +1,110 @@
+# Data Enrichment Priority Tiers
+
+## 3-Tier Strategy: Current State to Target (<15% MAPE)
+
+```mermaid
+%%{init: {'theme':'dark', 'themeVariables': {
+    'primaryColor':'#1e1e1e',
+    'primaryTextColor':'#fff',
+    'primaryBorderColor':'#444',
+    'lineColor':'#888',
+    'secondaryColor':'#2d2d2d',
+    'tertiaryColor':'#1a1a1a'
+}}}%%
+
+flowchart TB
+    subgraph Current["📊 CURRENT STATE"]
+        CS1[Nova Corrente<br/>4,207 records]
+        CS2[73 Features<br/>Engineered]
+        CS3[3.7% External<br/>Coverage]
+        CS4[MAPE: 87.27%<br/>EPI Family]
+        
+        CS1 --> CS2 --> CS3 --> CS4
+    end
+    
+    subgraph Tier1["🔥 TIER 1: CRITICAL (Week 1-2)"]
+        T1H[Expected Impact:<br/>-35 to -60% MAPE]
+        
+        T1A[Fact_Climate_Daily]
+        T1A1[Zenodo Milan<br/>116,257 records]
+        T1A2[INMET API<br/>Real-time]
+        T1A3[Impact: -15 to -25%]
+        
+        T1B[Fact_Economic_Daily]
+        T1B1[Demand Factors<br/>2,190 records]
+        T1B2[BACEN API<br/>Daily updates]
+        T1B3[Impact: -10 to -15%]
+        
+        T1C[Fact_Regulatory_Daily]
+        T1C1[Operators<br/>290 B2B contracts]
+        T1C2[ANATEL<br/>Spectrum data]
+        T1C3[Impact: -10 to -20%]
+        
+        T1H --> T1A & T1B & T1C
+        T1A --> T1A1 & T1A2 --> T1A3
+        T1B --> T1B1 & T1B2 --> T1B3
+        T1C --> T1C1 & T1C2 --> T1C3
+    end
+    
+    subgraph Tier2["⚡ TIER 2: HIGH (Week 3-4)"]
+        T2H[Expected Impact:<br/>-15 to -25% MAPE]
+        
+        T2A[Fact_Fault_Events]
+        T2A1[Network Fault<br/>7,389 records]
+        T2A2[Equipment Failure<br/>10,000 records]
+        T2A3[Impact: -10 to -15%]
+        
+        T2B[Fact_Supply_Chain]
+        T2B1[Logistics<br/>3,204 records]
+        T2B2[Supply Chain<br/>91,000 records]
+        T2B3[Impact: -5 to -10%]
+        
+        T2H --> T2A & T2B
+        T2A --> T2A1 & T2A2 --> T2A3
+        T2B --> T2B1 & T2B2 --> T2B3
+    end
+    
+    subgraph Tier3["📋 TIER 3: MEDIUM (Week 5-6)"]
+        T3H[Expected Impact:<br/>-8 to -18% MAPE]
+        
+        T3A[ABC Classification]
+        T3A1[Pareto Analysis<br/>872 parts]
+        T3A2[Model Selection<br/>A/B/C strategies]
+        T3A3[Impact: -3 to -8%]
+        
+        T3B[Fact_SLA_Daily]
+        T3B1[Derived from<br/>Operators]
+        T3B2[Criticality<br/>Scoring]
+        T3B3[Impact: -5 to -10%]
+        
+        T3H --> T3A & T3B
+        T3A --> T3A1 & T3A2 --> T3A3
+        T3B --> T3B1 & T3B2 --> T3B3
+    end
+    
+    subgraph Target["🎯 TARGET STATE"]
+        TS1[External Coverage:<br/>100%]
+        TS2[90+ Features<br/>Complete]
+        TS3[MAPE: <15%<br/>✅ ACHIEVED]
+        TS4[Forecast Accuracy:<br/>>85%]
+        
+        TS1 --> TS2 --> TS3 --> TS4
+    end
+    
+    Current --> Tier1
+    Tier1 --> Tier2
+    Tier2 --> Tier3
+    Tier3 --> Target
+    
+    classDef currentStyle fill:#FB8072,stroke:#E06660,stroke-width:2px,color:#000
+    classDef tier1Style fill:#E74C3C,stroke:#C0392B,stroke-width:3px,color:#fff
+    classDef tier2Style fill:#F39C12,stroke:#D68910,stroke-width:2px,color:#000
+    classDef tier3Style fill:#3498DB,stroke:#2874A6,stroke-width:2px,color:#fff
+    classDef targetStyle fill:#2ECC71,stroke:#27AE60,stroke-width:3px,color:#000
+    
+    class Current,CS1,CS2,CS3,CS4 currentStyle
+    class Tier1,T1H,T1A,T1A1,T1A2,T1A3,T1B,T1B1,T1B2,T1B3,T1C,T1C1,T1C2,T1C3 tier1Style
+    class Tier2,T2H,T2A,T2A1,T2A2,T2A3,T2B,T2B1,T2B2,T2B3 tier2Style
+    class Tier3,T3H,T3A,T3A1,T3A2,T3A3,T3B,T3B1,T3B2,T3B3 tier3Style
+    class Target,TS1,TS2,TS3,TS4 targetStyle
+```

@@ -1,0 +1,64 @@
+# Implementation Roadmap
+
+## 4-Week Timeline to <15% MAPE
+
+```mermaid
+%%{init: {'theme':'dark', 'themeVariables': {
+    'primaryColor':'#1e1e1e',
+    'primaryTextColor':'#fff',
+    'primaryBorderColor':'#444',
+    'lineColor':'#888',
+    'secondaryColor':'#2d2d2d',
+    'tertiaryColor':'#1a1a1a'
+}}}%%
+
+timeline
+    title 🚀 4-Week Implementation Roadmap to <15% MAPE
+    
+    section Week 1: Foundation + Climate
+        Day 1-2 : Create Dimensions
+                : Run 01_create_star_schema_dimensions.py
+                : Validate 5 dimension tables
+        Day 3-5 : Climate Integration
+                : Load Zenodo Milan Telecom (116K)
+                : Create Fact_Climate_Daily
+                : Fill 96.3% missing data
+        Impact  : MAPE 87% → 62-72%
+                : -15 to -25% reduction
+    
+    section Week 2: Economic + Regulatory
+        Day 1-2 : Economic Data
+                : Load Brazilian Demand Factors (2,190)
+                : Setup BACEN API
+                : Create Fact_Economic_Daily
+        Day 3-5 : Regulatory Data
+                : Load Brazilian Operators (290)
+                : Parse ANATEL datasets
+                : Create Fact_Regulatory_Daily
+        Impact  : MAPE 62-72% → 27-42%
+                : -35 to -45% cumulative
+    
+    section Week 3: Faults + Retraining
+        Day 1-3 : Fault Events
+                : Load GitHub Network Fault (7,389)
+                : Train predictive maintenance model
+                : Create Fact_Fault_Events
+        Day 4-5 : Model Retraining
+                : Regenerate ML dataset (100% coverage)
+                : Train XGBoost, RF, LSTM
+                : Validate improvements
+        Impact  : MAPE 27-42% → 17-27%
+                : -50 to -60% cumulative
+    
+    section Week 4: Optimization
+        Day 1-3 : Fine-tuning
+                : ABC-based model selection
+                : Hyperparameter optimization (Optuna)
+                : Ensemble optimization
+        Day 4-5 : Validation
+                : Test set evaluation
+                : Performance report
+                : Documentation
+        Impact  : MAPE <15% ✅
+                : -72+ point total reduction
+```
