@@ -1,10 +1,10 @@
-# 🔄 DATA PIPELINES - DESIGN DE PRODUÇÃO
+****# 🔄 DATA PIPELINES - DESIGN DE PRODUÇÃO
 ## Nova Corrente - Data Engineering para Fullstack App
 
 **Versão:** 1.0  
 **Data:** Novembro 2025  
 **Status:** ✅ Design Completo para Produção
-
+**
 ---
 
 ## 📋 ÍNDICE
