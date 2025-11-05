@@ -1,3 +1,8 @@
+# Implementation Roadmap
+
+## 4-Week Timeline to <15% MAPE
+
+```mermaid
 %%{init: {'theme':'dark', 'themeVariables': {
     'primaryColor':'#1e1e1e',
     'primaryTextColor':'#fff',
@@ -56,3 +61,4 @@ timeline
                 : Documentation
         Impact  : MAPE <15% ✅
                 : -72+ point total reduction
+```

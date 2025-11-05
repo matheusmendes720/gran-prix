@@ -1,3 +1,8 @@
+# Star Schema Architecture
+
+## 12-Table Relational Design with ML Feature Engineering
+
+```mermaid
 %%{init: {'theme':'dark', 'themeVariables': {
     'primaryColor':'#1e1e1e',
     'primaryTextColor':'#fff',
@@ -104,3 +109,4 @@ flowchart TD
     class ExternalFacts,E1,E2,E3,E4,E5,E6 extStyle
     class APIs,A1,A2,A3 apiStyle
     class MLFeatures,ML1,MLF1,MLF2,MLF3,MLF4,MLF5,MLF6 mlStyle
+```

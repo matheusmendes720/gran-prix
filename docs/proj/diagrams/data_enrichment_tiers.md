@@ -1,3 +1,8 @@
+# Data Enrichment Priority Tiers
+
+## 3-Tier Strategy: Current State to Target (<15% MAPE)
+
+```mermaid
 %%{init: {'theme':'dark', 'themeVariables': {
     'primaryColor':'#1e1e1e',
     'primaryTextColor':'#fff',
@@ -102,3 +107,4 @@ flowchart TB
     class Tier2,T2H,T2A,T2A1,T2A2,T2A3,T2B,T2B1,T2B2,T2B3 tier2Style
     class Tier3,T3H,T3A,T3A1,T3A2,T3A3,T3B,T3B1,T3B2,T3B3 tier3Style
     class Target,TS1,TS2,TS3,TS4 targetStyle
+```
