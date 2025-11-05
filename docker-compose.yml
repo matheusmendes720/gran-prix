@@ -1,29 +1,26 @@
-# Docker Compose for Production-Ready Full-Stack Application
 version: '3.8'
 
 services:
-  # MinIO (Object Storage)
-  minio:
-    image: minio/minio:latest
-    container_name: nova-corrente-minio
-    ports:
-      - "9000:9000"
-      - "9001:9001"
+  postgres:
+    image: postgres:14-alpine
+    container_name: nova-corrente-db
     environment:
-      MINIO_ROOT_USER: minioadmin
-      MINIO_ROOT_PASSWORD: minioadmin
+      POSTGRES_USER: ${DB_USER:-nova_corrente}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-strong_password}
+      POSTGRES_DB: ${DB_NAME:-nova_corrente}
     volumes:
-      - minio_data:/data
-    command: server /data --console-address ":9001"
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/db/schema.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
     networks:
       - nova-corrente-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-nova_corrente}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-  # Redis (Caching)
   redis:
     image: redis:7-alpine
     container_name: nova-corrente-redis
@@ -31,78 +28,54 @@ services:
       - "6379:6379"
     volumes:
       - redis_data:/data
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
     networks:
       - nova-corrente-network
+    restart: unless-stopped
+    command: redis-server --appendonly yes
 
-  # Backend API (FastAPI) - NO ML Dependencies
   backend:
     build:
-      context: .
-      dockerfile: infrastructure/docker/Dockerfile.backend.deployment
-    container_name: nova-corrente-backend
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: nova-corrente-api
+    environment:
+      - DATABASE_URL=postgresql://${DB_USER:-nova_corrente}:${DB_PASSWORD:-strong_password}@postgres:5432/${DB_NAME:-nova_corrente}
+      - REDIS_URL=redis://redis:6379/0
+      - USE_REDIS_CACHE=true
+      - SECRET_KEY=${SECRET_KEY:-change-this-in-production}
+      - CORS_ORIGINS=${CORS_ORIGINS:-http://localhost:3000}
+      - EXTERNAL_APIS_ENABLED=false
+      - ENABLE_ML_PROCESSING=false
     ports:
       - "5000:5000"
-    environment:
-      - API_HOST=0.0.0.0
-      - API_PORT=5000
-      - DATABASE_URL=sqlite:///./data/nova_corrente.db
-      - DATA_DIR=./data
-      - LOG_DIR=./logs
-      - CORS_ORIGINS=http://localhost:3000,http://localhost:3001
-      - MINIO_ENDPOINT=http://minio:9000
-      - REDIS_URL=redis://redis:6379
-      - ML_RESULTS_PATH=/app/data/ml_results  # Read-only path to precomputed ML results
-      # Deployment constraints - NO ML, NO External APIs
-      - ENABLE_EXTERNAL_APIS=false
-      - ENABLE_ML_PROCESSING=false
-      # NO ML-related environment variables (no MODELS_DIR, no MODEL_CACHE_ENABLED)
-    volumes:
-      - ./data:/app/data
-      - ./logs:/app/logs
-      - ./backend:/app/backend
-      - ./shared:/app/shared
-      - ml_results:/app/data/ml_results  # Read-only mount for precomputed ML results
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
     networks:
       - nova-corrente-network
+    restart: unless-stopped
 
-  # Frontend (Next.js)
   frontend:
     build:
-      context: .
-      dockerfile: infrastructure/docker/Dockerfile.frontend
-    container_name: nova-corrente-frontend
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: nova-corrente-web
+    environment:
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:5000}
     ports:
       - "3000:3000"
-    environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:5000
-      - NODE_ENV=production
     depends_on:
       - backend
-    restart: unless-stopped
     networks:
       - nova-corrente-network
+    restart: unless-stopped
 
-  # NOTE: Scheduler service REMOVED - ML processing runs in separate environment
-  # ML processing outputs results to shared storage, deployment reads them (read-only)
+volumes:
+  postgres_data:
+  redis_data:
 
 networks:
   nova-corrente-network:
     driver: bridge
-
-volumes:
-  data:
-  logs:
-  minio_data:
-  redis_data:
-  ml_results:  # Read-only volume for precomputed ML results

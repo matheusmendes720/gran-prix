@@ -1,35 +1,45 @@
+// frontend/src/components/KPICard.tsx
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowUpIcon, ArrowDownIcon } from 'lucide-react';
 
-import React from 'react';
-import Card from './Card';
-import { KpiData } from '../types';
-import { UpArrowIcon, DownArrowIcon } from './icons';
-
-interface KpiCardProps {
-  data: KpiData;
+interface KPICardProps {
+  title: string;
+  value: string;
+  change: number; // Positive for increase, negative for decrease
+  format?: 'percentage' | 'currency' | 'number';
 }
 
-const KpiCard: React.FC<KpiCardProps> = ({ data }) => {
-  const { title, value, change, changeType, icon } = data;
-  const isIncrease = changeType === 'increase';
+export function KPICard({ title, value, change, format = 'number' }: KPICardProps) {
+  const formatValue = (val: string, fmt: string) => {
+    switch (fmt) {
+      case 'percentage':
+        return val;
+      case 'currency':
+        return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(Number(val));
+      default:
+        return val;
+    }
+  };
 
   return (
-    <Card className="flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2">
-      <div className="flex justify-between items-start">
-        <h3 className="font-semibold text-brand-slate">{title}</h3>
-        {icon}
-      </div>
-      <div>
-        <p className="text-4xl font-bold text-brand-lightest-slate mt-4">{value}</p>
-        <div className="flex items-center space-x-1 mt-1">
-          <span className={`flex items-center text-sm font-semibold ${isIncrease ? 'text-green-400' : 'text-red-400'}`}>
-            {isIncrease ? <UpArrowIcon className="w-4 h-4" /> : <DownArrowIcon className="w-4 h-4" />}
-            {change}
-          </span>
-          <span className="text-sm text-brand-slate">vs. mês passado</span>
+    <Card>
+      <CardHeader className="pb-2">
+        <CardDescription>{title}</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="text-2xl font-bold">{formatValue(value, format)}</div>
+      </CardContent>
+      <CardFooter className="flex items-center justify-between">
+        <div className={`flex items-center text-sm ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+          {change >= 0 ? (
+            <ArrowUpIcon className="h-4 w-4 mr-1" />
+          ) : (
+            <ArrowDownIcon className="h-4 w-4 mr-1" />
+          )}
+          <span>{Math.abs(change)}%</span>
         </div>
-      </div>
+        <div className="text-xs text-gray-500">vs previous</div>
+      </CardFooter>
     </Card>
   );
-};
-
-export default KpiCard;
+}
