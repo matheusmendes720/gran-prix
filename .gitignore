@@ -6,6 +6,10 @@ data/processed/
 *.xls
 *.parquet
 *.json
+!frontend/package.json
+!frontend/package-lock.json
+!frontend/tsconfig.json
+!frontend/tsconfig.*
 *.pdf
 
 # Environment variables and secrets
