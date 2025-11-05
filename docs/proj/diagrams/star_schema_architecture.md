@@ -1,0 +1,112 @@
+# Star Schema Architecture
+
+## 12-Table Relational Design with ML Feature Engineering
+
+```mermaid
+%%{init: {'theme':'dark', 'themeVariables': {
+    'primaryColor':'#1e1e1e',
+    'primaryTextColor':'#fff',
+    'primaryBorderColor':'#444',
+    'lineColor':'#888',
+    'secondaryColor':'#2d2d2d',
+    'tertiaryColor':'#1a1a1a'
+}}}%%
+
+flowchart TD
+    subgraph CoreFact["⭐ CORE FACT TABLE"]
+        F[Fact_Demand_Daily<br/>4,207+ records<br/>Grain: site-part-day-order]
+        
+        FM1[quantidade TARGET]
+        FM2[unit_cost]
+        FM3[total_cost]
+        FM4[lead_time_days]
+        
+        F --> FM1
+        F --> FM2
+        F --> FM3
+        F --> FM4
+    end
+    
+    subgraph Dimensions["🔷 DIMENSION TABLES"]
+        D1[Dim_Calendar<br/>4,400 days<br/>2013-2025]
+        D2[Dim_Part<br/>872 parts<br/>ABC classified]
+        D3[Dim_Site<br/>191 sites<br/>268 mappings]
+        D4[Dim_Supplier<br/>468 suppliers<br/>Lead time stats]
+        D5[Dim_Maintenance<br/>2 types<br/>Prev/Corr]
+        D6[Dim_Region<br/>Brazilian<br/>IBGE codes]
+    end
+    
+    subgraph ExternalFacts["🌐 EXTERNAL ENRICHMENT TABLES"]
+        E1[Fact_Climate_Daily<br/>Zenodo Milan 116K<br/>Weather/Precipitation]
+        E2[Fact_Economic_Daily<br/>Demand Factors 2,190<br/>Inflation/FX/GDP]
+        E3[Fact_Regulatory_Daily<br/>Operators 290<br/>5G/Spectrum/B2B]
+        E4[Fact_Fault_Events<br/>Network Fault 7,389<br/>Predictive signals]
+        E5[Fact_SLA_Daily<br/>Derived<br/>Downtime/Penalties]
+        E6[Fact_Supply_Chain<br/>Logistics 3,204<br/>Lead time events]
+    end
+    
+    subgraph APIs["🔌 EXTERNAL APIS"]
+        A1[INMET API<br/>Climate Brazil]
+        A2[BACEN API<br/>Economic Brazil]
+        A3[ANATEL API<br/>Regulatory Brazil]
+    end
+    
+    F -.date_id.-> D1
+    F -.part_id.-> D2
+    F -.site_id.-> D3
+    F -.supplier_id.-> D4
+    F -.maint_type_id.-> D5
+    D3 -.region_id.-> D6
+    
+    D1 -.join.-> E1
+    D3 -.join.-> E1
+    D1 -.join.-> E2
+    D1 -.join.-> E3
+    D3 -.join.-> E3
+    D6 -.join.-> E3
+    D1 -.join.-> E4
+    D3 -.join.-> E4
+    D1 -.join.-> E5
+    D3 -.join.-> E5
+    D1 -.join.-> E6
+    D2 -.join.-> E6
+    D4 -.join.-> E6
+    
+    A1 -.feeds.-> E1
+    A2 -.feeds.-> E2
+    A3 -.feeds.-> E3
+    
+    subgraph MLFeatures["🤖 ML FEATURE ENGINEERING"]
+        ML1[90+ Features<br/>100% Coverage]
+        
+        MLF1[Temporal: 25<br/>Calendar features]
+        MLF2[Climate: 14<br/>Weather signals]
+        MLF3[Economic: 6<br/>Market indicators]
+        MLF4[Regulatory: 10<br/>5G/Spectrum]
+        MLF5[Lag: 16<br/>Moving averages]
+        MLF6[Derived: 19<br/>Risk scores]
+        
+        ML1 --> MLF1
+        ML1 --> MLF2
+        ML1 --> MLF3
+        ML1 --> MLF4
+        ML1 --> MLF5
+        ML1 --> MLF6
+    end
+    
+    CoreFact --> MLFeatures
+    Dimensions --> MLFeatures
+    ExternalFacts --> MLFeatures
+    
+    classDef factStyle fill:#FDB462,stroke:#E89D4F,stroke-width:3px,color:#000
+    classDef dimStyle fill:#4A90E2,stroke:#357ABD,stroke-width:2px,color:#fff
+    classDef extStyle fill:#7FBC7F,stroke:#6FA56F,stroke-width:2px,color:#000
+    classDef apiStyle fill:#B3B3B3,stroke:#999,stroke-width:2px,color:#000
+    classDef mlStyle fill:#BC80BD,stroke:#A366A4,stroke-width:2px,color:#fff
+    
+    class CoreFact,F,FM1,FM2,FM3,FM4 factStyle
+    class Dimensions,D1,D2,D3,D4,D5,D6 dimStyle
+    class ExternalFacts,E1,E2,E3,E4,E5,E6 extStyle
+    class APIs,A1,A2,A3 apiStyle
+    class MLFeatures,ML1,MLF1,MLF2,MLF3,MLF4,MLF5,MLF6 mlStyle
+```
