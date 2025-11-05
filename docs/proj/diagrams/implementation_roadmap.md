@@ -1,6 +1,14 @@
-# Implementation Roadmap
+# Implementation Roadmap - 4-Day Sprint
 
-## 4-Week Timeline to <15% MAPE
+## 🚨 ATUALIZAÇÃO DE ESCOPO - 4-DAY SPRINT
+
+**Última Atualização:** Novembro 2025  
+**Escopo Atual:** 4-Day Sprint (Reduzido)  
+**Referência:** [docs/diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md](../../diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
+
+---
+
+## 4-Day Sprint Timeline (D0-D4)
 
 ```mermaid
 %%{init: {'theme':'dark', 'themeVariables': {
@@ -13,7 +21,77 @@
 }}}%%
 
 timeline
-    title 🚀 4-Week Implementation Roadmap to <15% MAPE
+    title 🚀 4-Day Sprint Implementation Roadmap - MVP Functional
+    
+    section D0: Freeze & Planning
+        Hours 4-6 : All Clusters Freeze
+                  : Data: Freeze inputs & sample data
+                  : Backend: Freeze endpoints & contract
+                  : Frontend: Freeze UX & component list
+                  : Deploy: Prepare Dockerfiles & compose
+        Checkpoint : All teams aligned
+                  : Contracts defined
+                  : Ready to build
+    
+    section D1: Storage + Data Access
+        Hours 6-8 : Parallel Work
+                  : Data: Storage + Ingestion (MinIO)
+                  : Backend: Data Access (DuckDB)
+                  : Frontend: Scaffold + Components
+                  : Deploy: Infra & Secrets
+        Checkpoint : Data flowing into storage
+                  : Backend can query
+                  : Frontend scaffolded
+    
+    section D2: API + Frontend Minimal
+        Hours 6-8 : Parallel Work
+                  : Data: Transformations (silver layer)
+                  : Backend: API Endpoints (FastAPI)
+                  : Frontend: Charts + Interactions
+                  : Deploy: CI Pipeline
+        Checkpoint : API endpoints working
+                  : Frontend charts rendering
+                  : CI pipeline running
+    
+    section D3: Integration
+        Hours 6-8 : Parallel Work
+                  : Data: Gold Models (Star Schema)
+                  : Backend: Auth + Tests
+                  : Frontend: Responsiveness + Polish
+                  : Deploy: Smoke Tests + Domain
+        Checkpoint : End-to-end integration working
+                  : Tests passing
+                  : Ready for deployment
+    
+    section D4: Deploy & Demo
+        Hours 4-6 : Final Work
+                  : Data: Test & Deliver
+                  : Backend: Finalize Docs
+                  : Frontend: Bundle + Integration
+                  : Deploy: Handover + Rollback Plan
+        Checkpoint : All services deployed
+                  : Stakeholder demo ready
+                  : Documentation complete
+```
+
+---
+
+## 4-Week Timeline (Original - Referência Futura)
+
+**Nota:** O roadmap original de 4 semanas foi planejado para implementação completa. Mantido para referência futura.
+
+```mermaid
+%%{init: {'theme':'dark', 'themeVariables': {
+    'primaryColor':'#1e1e1e',
+    'primaryTextColor':'#fff',
+    'primaryBorderColor':'#444',
+    'lineColor':'#888',
+    'secondaryColor':'#2d2d2d',
+    'tertiaryColor':'#1a1a1a'
+}}}%%
+
+timeline
+    title 🚀 4-Week Implementation Roadmap to <15% MAPE (Original)
     
     section Week 1: Foundation + Climate
         Day 1-2 : Create Dimensions

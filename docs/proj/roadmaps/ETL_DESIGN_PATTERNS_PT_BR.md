@@ -1,9 +1,35 @@
-# 🔄 ETL DESIGN PATTERNS - PRODUÇÃO
+# 🔄 ETL DESIGN PATTERNS - PRODUÇÃO (4-DAY SPRINT)
 ## Nova Corrente - Data Engineering Patterns
 
-**Versão:** 1.0  
+**Versão:** 2.0 (Atualizado para 4-Day Sprint)  
 **Data:** Novembro 2025  
-**Status:** ✅ Patterns Completos
+**Status:** ✅ Patterns Atualizados - Escopo Reduzido para 4-Day Sprint
+
+---
+
+## 🚨 ATUALIZAÇÃO DE ESCOPO - 4-DAY SPRINT
+
+**Última Atualização:** Novembro 2025  
+**Escopo Atual:** 4-Day Sprint (Reduzido)  
+**Referência:** [docs/diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md](../../diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
+
+### 🔄 Mudanças de Escopo:
+
+**Timeline:**
+- ❌ **Anterior:** 16 semanas (4 meses)
+- ✅ **Atual:** 4 dias (D0-D4) - Sprint intensivo
+
+**Stack Tecnológico:**
+- ❌ **Anterior:** Delta Lake + S3 + Spark + dbt
+- ✅ **Atual:** Parquet + MinIO + DuckDB + Python Scripts
+
+**Transformações:**
+- ❌ **Anterior:** dbt models (SQL transformations)
+- ✅ **Atual:** Python scripts + SQL queries (DuckDB)
+
+### 📋 Escopo Anterior (Arquivado):
+
+Os patterns originais foram planejados para implementação de 16 semanas. O escopo foi reduzido para um sprint de 4 dias com foco em MVP funcional. Os patterns originais foram mantidos para referência futura nas seções marcadas como "Futuro - Referência Original".
 
 ---
 
@@ -34,7 +60,60 @@
 - Escalabilidade (compute separado de storage)
 - Velocidade (load rápido, transform depois)
 
-**Implementação:**
+**Implementação (4-Day Sprint - Simplificado):**
+
+```python
+# Step 1: Extract & Load (raw to Bronze)
+def extract_and_load():
+    """Extract from source and load raw to Bronze"""
+    # Extract from ERP
+    data = extract_from_erp()
+    
+    # Load raw to MinIO (Bronze) - Parquet format
+    load_to_minio(data, path="bronze/erp/year=2025/month=11/day=01/data.parquet")
+    
+    # No transformation here - just raw data
+
+# Step 2: Transform (Bronze → Silver → Gold)
+def transform_with_duckdb():
+    """Transform using DuckDB + Python"""
+    import duckdb
+    
+    # Connect to Parquet files
+    conn = duckdb.connect()
+    
+    # Bronze → Silver (cleaned)
+    conn.execute("""
+        CREATE TABLE silver_cleaned AS
+        SELECT 
+            item_id,
+            TRIM(item_name) AS item_name,
+            CAST(cost AS DECIMAL(10,2)) AS cost,
+            created_at
+        FROM read_parquet('bronze/erp/year=2025/month=11/day=01/data.parquet')
+        WHERE item_id IS NOT NULL
+    """)
+    
+    # Silver → Gold (curated)
+    conn.execute("""
+        CREATE TABLE gold_marts AS
+        SELECT 
+            item_id,
+            item_name,
+            cost,
+            created_at
+        FROM silver_cleaned
+    """)
+    
+    # Export to Parquet
+    conn.execute("COPY gold_marts TO 'gold/marts/items.parquet' (FORMAT PARQUET)")
+```
+
+### 1.1.1 ELT Pattern Expandido (Futuro - Referência Original)
+
+**Nota:** O pattern original com dbt foi planejado para 16 semanas. Mantido para referência futura.
+
+**Implementação (Original):**
 
 ```python
 # Step 1: Extract & Load (raw to Bronze)
@@ -92,12 +171,14 @@ load_to_s3(transformed_data)
 
 <a name="medallion"></a>
 
-## 2. 🥇 MEDALLION ARCHITECTURE PATTERN
+## 2. 🥇 PARQUET LAYERS ARCHITECTURE PATTERN (4-DAY SPRINT)
 
-### 2.1 Bronze Layer (Raw)
+### 2.1 Bronze Layer (Raw) - Parquet + MinIO
 
 **Princípios:**
 - Dados brutos como chegam
+- Formato: Parquet (lightweight, columnar)
+- Storage: MinIO (local/Docker, S3-compatible)
 - Sem transformações
 - Schema evolução permitida
 - Particionamento por data
@@ -105,7 +186,37 @@ load_to_s3(transformed_data)
 **Implementação:**
 
 ```python
-# Load to Bronze
+# Load to Bronze (MinIO - 4-Day Sprint)
+def load_to_bronze(df, source, date):
+    """Load raw data to Bronze layer (MinIO)"""
+    import pandas as pd
+    from minio import Minio
+    
+    year = date.year
+    month = f"{date.month:02d}"
+    day = f"{date.day:02d}"
+    
+    # MinIO path (S3-compatible)
+    minio_path = f"bronze/{source}/year={year}/month={month}/day={day}/data.parquet"
+    
+    # Save to Parquet
+    df.to_parquet(
+        minio_path,
+        partition_cols=['year', 'month', 'day'],
+        compression='snappy'
+    )
+    
+    # Upload to MinIO (if needed)
+    # minio_client = Minio(...)
+    # minio_client.fput_object('data-lake', minio_path, minio_path)
+```
+
+### 2.1.1 Bronze Layer Expandido (Futuro - Referência Original)
+
+**Nota:** O pattern original com S3 foi planejado para 16 semanas. Mantido para referência futura.
+
+```python
+# Load to Bronze (S3 - Original)
 def load_to_bronze(df, source, date):
     """Load raw data to Bronze layer"""
     year = date.year
@@ -123,15 +234,64 @@ def load_to_bronze(df, source, date):
 
 ---
 
-### 2.2 Silver Layer (Cleaned)
+### 2.2 Silver Layer (Cleaned) - DuckDB + Pandas
 
 **Princípios:**
 - Dados limpos e validados
 - Schema aplicado
 - Duplicatas removidas
 - Tipos corrigidos
+- Processamento: DuckDB + Pandas
 
-**Implementação:**
+**Implementação (4-Day Sprint - DuckDB):**
+
+```python
+import duckdb
+import pandas as pd
+
+# Silver Layer (Cleaned) - DuckDB
+def create_silver_layer():
+    """Create Silver layer using DuckDB"""
+    conn = duckdb.connect()
+    
+    # Bronze → Silver (cleaned)
+    conn.execute("""
+        CREATE TABLE silver_cleaned AS
+        WITH source AS (
+            SELECT * 
+            FROM read_parquet('bronze/erp/year=2025/month=11/day=01/data.parquet')
+        ),
+        cleaned AS (
+            SELECT
+                CAST(item_id AS VARCHAR) AS item_id,
+                TRIM(item_name) AS item_name,
+                CAST(cost AS DECIMAL(10, 2)) AS cost,
+                CASE WHEN cost > 0 THEN cost ELSE NULL END AS cost_validated
+            FROM source
+            WHERE item_id IS NOT NULL
+        ),
+        deduplicated AS (
+            SELECT *
+            FROM (
+                SELECT *,
+                    ROW_NUMBER() OVER (
+                        PARTITION BY item_id, date
+                        ORDER BY loaded_at DESC
+                    ) AS rn
+                FROM cleaned
+            )
+            WHERE rn = 1
+        )
+        SELECT * FROM deduplicated
+    """)
+    
+    # Export to Parquet
+    conn.execute("COPY silver_cleaned TO 'silver/cleaned/items.parquet' (FORMAT PARQUET)")
+```
+
+### 2.2.1 Silver Layer Expandido (Futuro - Referência Original)
+
+**Nota:** O pattern original com dbt foi planejado para 16 semanas. Mantido para referência futura.
 
 ```sql
 -- dbt model: Bronze → Silver
@@ -168,15 +328,56 @@ SELECT * FROM deduplicated
 
 ---
 
-### 2.3 Gold Layer (Curated)
+### 2.3 Gold Layer (Curated) - DuckDB + Parquet
 
 **Princípios:**
 - Modelos de negócio (star schema)
 - Métricas pré-calculadas
 - Performance otimizado
-- Ready for BI
+- Ready for API consumption
+- Formato: Parquet files
 
-**Implementação:**
+**Implementação (4-Day Sprint - DuckDB):**
+
+```python
+import duckdb
+
+# Gold Layer (Curated) - DuckDB
+def create_gold_layer():
+    """Create Gold layer using DuckDB"""
+    conn = duckdb.connect()
+    
+    # Silver → Gold (curated)
+    conn.execute("""
+        CREATE TABLE gold_marts AS
+        WITH staging AS (
+            SELECT * FROM read_parquet('silver/cleaned/items.parquet')
+        ),
+        dim_items AS (
+            SELECT * FROM read_parquet('dimensions/dim_items.parquet')
+        ),
+        fact_forecasts AS (
+            SELECT
+                s.item_id,
+                s.date,
+                s.forecasted_demand,
+                s.actual_demand,
+                d.item_name,
+                d.category,
+                ABS(s.forecasted_demand - s.actual_demand) / NULLIF(s.actual_demand, 0) AS mape
+            FROM staging s
+            LEFT JOIN dim_items d ON s.item_id = d.item_id
+        )
+        SELECT * FROM fact_forecasts
+    """)
+    
+    # Export to Parquet
+    conn.execute("COPY gold_marts TO 'gold/marts/fact_forecasts.parquet' (FORMAT PARQUET)")
+```
+
+### 2.3.1 Gold Layer Expandido (Futuro - Referência Original)
+
+**Nota:** O pattern original com dbt foi planejado para 16 semanas. Mantido para referência futura.
 
 ```sql
 -- dbt model: Silver → Gold

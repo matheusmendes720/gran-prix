@@ -1,10 +1,59 @@
 # 🚀 ROADMAP ANALYTICS ENGINEERING COMPLETO
 ## Nova Corrente - Previsibilidade de Demandas com IA
 
-**Versão:** 1.0  
+**Versão:** 2.0 (Atualizado para 4-Day Sprint)  
 **Data:** Novembro 2025  
-**Status:** ✅ Roadmap Completo para Implementação  
-**Duração Estimada:** 16 semanas (4 meses)
+**Status:** ✅ Roadmap Atualizado - Escopo Reduzido para Sprint de 4 Dias  
+**Duração Estimada:** 4 dias (D0-D4) - Sprint Intensivo
+
+---
+
+## 🚨 ATUALIZAÇÃO DE ESCOPO - 4-DAY SPRINT
+
+**Última Atualização:** Novembro 2025  
+**Escopo Atual:** 4-Day Sprint (Reduzido)  
+**Referência:** [docs/diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md](../../diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
+
+### 🔄 Mudanças de Escopo:
+
+**Timeline:**
+- ❌ **Anterior:** 16 semanas (4 meses)
+- ✅ **Atual:** 4 dias (sprint intensivo)
+
+**Stack Tecnológico:**
+- ❌ **Anterior:** Delta Lake + S3 + Spark + Databricks + Airflow + dbt + MLflow
+- ✅ **Atual:** Parquet + MinIO + DuckDB + Pandas + Simple Orchestrator + Python Scripts
+
+**ML Strategy:**
+- ❌ **Anterior:** ML Ops completo em deployment (MLflow, model serving, feature store)
+- ✅ **Atual:** **NO ML OPS IN DEPLOYMENT** - ML processing separado, apenas resultados pré-computados
+
+**Storage:**
+- ❌ **Anterior:** S3 (cloud) + Delta Lake (ACID transactions)
+- ✅ **Atual:** MinIO (local/Docker) + Parquet (lightweight format)
+
+**Compute:**
+- ❌ **Anterior:** Spark + Databricks (cloud compute)
+- ✅ **Atual:** DuckDB (in-process SQL) + Pandas (Python processing)
+
+**Orquestração:**
+- ❌ **Anterior:** Airflow/Prefect (complex orchestration)
+- ✅ **Atual:** Simple scheduler/orchestrator (Python scripts)
+
+**Transformações:**
+- ❌ **Anterior:** dbt models (SQL transformations)
+- ✅ **Atual:** Python scripts + SQL queries (DuckDB)
+
+### 📋 Escopo Anterior (Arquivado):
+
+Este documento foi originalmente planejado para implementação de 16 semanas com stack completo de Analytics Engineering. O escopo foi reduzido para um sprint de 4 dias com foco em:
+- ✅ MVP funcional
+- ✅ Deployment simplificado
+- ✅ Zero dependências de cloud ML
+- ✅ Self-hosted deployment
+- ✅ Offline deployable
+
+**Referência ao Escopo Original:** As seções originais foram mantidas para referência futura, mas marcadas como "escopo expandido (futuro)".
 
 ---
 
@@ -48,29 +97,58 @@ Analytics Engineering é a disciplina que transforma dados brutos em insights ac
 5. **Repetibilidade:** Pipelines idempotentes
 6. **Colaboração:** Equipes trabalham juntas com código
 
-### 1.2 Stack Moderno de Analytics Engineering
+### 1.2 Stack Simplificado para 4-Day Sprint
 
 **Camada de Transformação:**
+- ✅ **Python Scripts:** Transformações ETL em Python
+- ✅ **SQL (DuckDB):** Queries SQL diretas sobre Parquet
+- ✅ **Pandas:** Transformações complexas de dados
+
+**Camada de Armazenamento:**
+- ✅ **Parquet:** Formato de arquivo colunar otimizado
+- ✅ **MinIO:** Storage S3-compatible (local/Docker)
+- ✅ **Parquet Layers:** Bronze (raw) → Silver (cleaned) → Gold (curated)
+
+**Camada de Compute:**
+- ✅ **DuckDB:** In-process SQL engine sobre Parquet
+- ✅ **Pandas:** Processamento Python de dados
+- ✅ **No Spark/Databricks:** Removido para simplificação
+
+**Camada de Orquestração:**
+- ✅ **Simple Scheduler:** Python scripts com cron/schedule
+- ✅ **Docker Compose:** Orquestração de serviços
+- ✅ **GitHub Actions:** CI/CD básico (opcional)
+
+**Camada de BI:**
+- ✅ **FastAPI Backend:** API REST para dados
+- ✅ **React Frontend:** Dashboard interativo
+- ✅ **Recharts:** Visualização de dados
+
+### 1.2.1 Stack Expandido (Futuro - Referência Original)
+
+**Nota:** O stack original abaixo foi planejado para implementação de 16 semanas. Mantido para referência futura.
+
+**Camada de Transformação (Original):**
 - **dbt (data build tool):** Framework SQL para transformações
 - **SQL:** Linguagem padrão de transformação
 - **Python:** Para transformações complexas (UDFs)
 
-**Camada de Armazenamento:**
+**Camada de Armazenamento (Original):**
 - **Data Lakehouse:** Delta Lake ou Iceberg
 - **Medallion Architecture:** Bronze → Silver → Gold
 - **Cloud Data Warehouses:** Snowflake, BigQuery, Redshift
 
-**Camada de Orquestração:**
+**Camada de Orquestração (Original):**
 - **Airflow/Prefect:** Orquestração de pipelines
 - **dbt Cloud:** CI/CD para dbt
 - **GitHub Actions:** CI/CD para código
 
-**Camada de BI:**
+**Camada de BI (Original):**
 - **Metabase/Superset:** Self-service analytics
 - **dbt Semantic Layer:** Métricas unificadas
 - **Embed Analytics:** Integração em apps
 
-### 1.3 Arquitetura Medallion (Bronze/Silver/Gold)
+### 1.3 Arquitetura Parquet Layers (Bronze/Silver/Gold)
 
 **Camada Bronze (Raw):**
 ```
@@ -78,7 +156,8 @@ Analytics Engineering é a disciplina que transforma dados brutos em insights ac
 - Sem transformações, apenas ingestão
 - Schema evolução permitida
 - Particionamento por data/hora
-- Formato: Parquet/Delta/Iceberg
+- Formato: Parquet (lightweight, no Delta)
+- Storage: MinIO (local/Docker)
 ```
 
 **Camada Silver (Cleaned):**
@@ -88,6 +167,7 @@ Analytics Engineering é a disciplina que transforma dados brutos em insights ac
 - Duplicatas removidas
 - Tipos corrigidos
 - Ready for analytics
+- Processamento: DuckDB + Pandas
 ```
 
 **Camada Gold (Curated):**
@@ -95,8 +175,31 @@ Analytics Engineering é a disciplina que transforma dados brutos em insights ac
 - Modelos de negócio (star schema)
 - Métricas pré-calculadas
 - Agregações por dimensões
-- Ready for BI tools
-- Performance otimizado
+- Ready for API consumption
+- Performance otimizado (Parquet)
+- ML Results: Precomputed forecasts only
+```
+
+### 1.3.1 Arquitetura Expandida (Futuro - Referência Original)
+
+**Nota:** A arquitetura Medallion original com Delta Lake foi planejada para 16 semanas. Mantida para referência futura.
+
+**Camada Bronze (Original):**
+```
+- Formato: Parquet/Delta/Iceberg
+- Storage: S3 (cloud)
+```
+
+**Camada Silver (Original):**
+```
+- Formato: Delta Lake (ACID transactions)
+- Compute: Spark + Databricks
+```
+
+**Camada Gold (Original):**
+```
+- Formato: Delta Lake
+- BI Tools: Metabase/Superset
 ```
 
 ### 1.4 Data Vault 2.0 para Escalabilidade
@@ -130,20 +233,54 @@ Analytics Engineering é a disciplina que transforma dados brutos em insights ac
 
 ## 2. 🏗️ ARQUITETURA DE DADOS MODERNA
 
-### 2.1 Data Lakehouse
+### 2.1 Arquitetura Parquet Simplificada (4-Day Sprint)
 
 **Definição:**
+Arquitetura simplificada para sprint de 4 dias:
+- ✅ **Storage:** MinIO (S3-compatible, local/Docker)
+- ✅ **Format:** Parquet (lightweight, columnar)
+- ✅ **Compute:** DuckDB (in-process SQL)
+- ✅ **Processing:** Pandas (Python)
+
+**Implementação:**
+- ✅ **Parquet:** Formato de arquivo colunar otimizado
+- ✅ **MinIO:** Storage local compatível com S3
+- ✅ **DuckDB:** SQL engine sobre Parquet (sem Spark)
+- ✅ **No Delta Lake:** Removido para simplificação
+
+**Para Nova Corrente (4-Day Sprint):**
+```
+Parquet Stack Simplificado:
+├── Storage: MinIO (local/Docker, S3-compatible)
+├── Format: Parquet (lightweight, no ACID overhead)
+├── Compute: DuckDB (in-process SQL engine)
+├── Processing: Pandas (Python data processing)
+└── Access: SQL (DuckDB SQL) + Python API
+```
+
+**Benefícios:**
+- ✅ Zero dependências de cloud
+- ✅ Self-hosted deployment
+- ✅ Offline deployable
+- ✅ Setup rápido (< 1 hora)
+- ✅ Custo zero (open source)
+
+### 2.1.1 Data Lakehouse Expandido (Futuro - Referência Original)
+
+**Nota:** A arquitetura Data Lakehouse original foi planejada para 16 semanas. Mantida para referência futura.
+
+**Definição (Original):**
 Arquitetura que combina:
 - **Data Lake:** Armazenamento barato e escalável
 - **Data Warehouse:** Performance e ACID transactions
 - **Benefícios:** Melhor dos dois mundos
 
-**Implementação:**
+**Implementação (Original):**
 - **Delta Lake:** ACID transactions sobre Parquet
 - **Apache Iceberg:** Tabelas versionadas
 - **Apache Hudi:** Upserts e deletes incrementais
 
-**Para Nova Corrente:**
+**Para Nova Corrente (Original):**
 ```
 Data Lakehouse Stack:
 ├── Storage: S3/MinIO (objeto)
@@ -222,7 +359,84 @@ Arquitetura distribuída onde:
 - Reutilização de produtos
 - Governança descentralizada
 
-### 2.4 Diagrama Arquitetural Completo
+### 2.4 Diagrama Arquitetural Simplificado (4-Day Sprint)
+
+```mermaid
+graph TB
+    subgraph "Data Sources"
+        ERP[ERP System]
+        WEATHER[Weather APIs]
+        ANATEL[Anatel APIs]
+        SUPPLIER[Supplier APIs]
+    end
+    
+    subgraph "Ingestion Layer"
+        BRONZE[Bronze Layer<br/>Parquet Files<br/>MinIO Storage]
+    end
+    
+    subgraph "Processing Layer"
+        SILVER[Silver Layer<br/>Cleaned Parquet]
+        DUCKDB[DuckDB<br/>SQL Engine]
+        PANDAS[Pandas<br/>Python Processing]
+    end
+    
+    subgraph "Storage Layer"
+        MINIO[MinIO<br/>S3-Compatible<br/>Local/Docker]
+        GOLD[Gold Layer<br/>Star Schema<br/>Parquet Files]
+    end
+    
+    subgraph "ML Environment (Separate)"
+        ML_TRAIN[ML Training<br/>Prophet/ARIMA/LSTM<br/>Separate Environment]
+        ML_OUTPUT[Precomputed Results<br/>Parquet Files<br/>model_version metadata]
+    end
+    
+    subgraph "Analytics Layer"
+        FASTAPI[FastAPI Backend<br/>REST API<br/>Read-Only]
+        REACT[React Frontend<br/>Dashboard<br/>Recharts]
+        DUCKDB_QUERY[DuckDB Queries<br/>SQL over Parquet]
+    end
+    
+    subgraph "Deployment"
+        DOCKER[Docker Compose<br/>Local Deployment]
+        REDIS[Redis Cache<br/>Optional]
+    end
+    
+    ERP & WEATHER & ANATEL & SUPPLIER --> BRONZE
+    BRONZE --> SILVER
+    SILVER --> DUCKDB
+    SILVER --> PANDAS
+    DUCKDB --> GOLD
+    PANDAS --> GOLD
+    GOLD --> MINIO
+    
+    ML_TRAIN --> ML_OUTPUT
+    ML_OUTPUT -.->|Read Only| GOLD
+    
+    GOLD --> DUCKDB_QUERY
+    DUCKDB_QUERY --> FASTAPI
+    FASTAPI --> REACT
+    FASTAPI --> REDIS
+    
+    GOLD --> FASTAPI
+    FASTAPI --> DOCKER
+    
+    style ML_TRAIN fill:#ff9999,stroke:#ff0000,stroke-width:2px
+    style ML_OUTPUT fill:#ffcccc,stroke:#ff0000,stroke-width:2px
+    style GOLD fill:#99ff99,stroke:#00ff00,stroke-width:2px
+    style FASTAPI fill:#99ccff,stroke:#0066ff,stroke-width:2px
+    style REACT fill:#99ccff,stroke:#0066ff,stroke-width:2px
+    style DOCKER fill:#ffcc99,stroke:#ff6600,stroke-width:2px
+```
+
+**Legenda:**
+- 🔴 **ML Environment (Separate):** ML processing separado, NÃO em deployment
+- 🟢 **Gold Layer:** Resultados pré-computados (read-only)
+- 🔵 **Analytics Layer:** FastAPI + React (read-only)
+- 🟠 **Deployment:** Docker Compose (self-hosted)
+
+### 2.4.1 Diagrama Arquitetural Expandido (Futuro - Referência Original)
+
+**Nota:** O diagrama original com Delta Lake, Spark, MLflow foi planejado para 16 semanas. Mantido para referência futura.
 
 ```mermaid
 graph TB
@@ -652,21 +866,58 @@ test_dbt = BashOperator(
 extract_task >> load_bronze >> run_dbt >> test_dbt
 ```
 
-### 4.4 Orquestração (Airflow, Prefect)
+### 4.4 Orquestração Simplificada (4-Day Sprint)
 
-**Airflow:**
+**Simple Scheduler:**
+- ✅ Python scripts com cron/schedule
+- ✅ Docker Compose para orquestração de serviços
+- ✅ GitHub Actions para CI/CD básico (opcional)
+
+**Para Nova Corrente (4-Day Sprint):**
+- ✅ **Simple Scheduler:** Python scripts com schedule
+- ✅ **Docker Compose:** Orquestração de serviços locais
+- ✅ **No Airflow/Prefect:** Removido para simplificação
+
+**Exemplo:**
+```python
+# scripts/scheduler.py
+import schedule
+import time
+
+def run_data_pipeline():
+    """Run data pipeline daily"""
+    # Extract
+    extract_data()
+    # Transform
+    transform_data()
+    # Load
+    load_to_gold()
+
+# Schedule daily at 2 AM
+schedule.every().day.at("02:00").do(run_data_pipeline)
+
+while True:
+    schedule.run_pending()
+    time.sleep(60)
+```
+
+### 4.4.1 Orquestração Expandida (Futuro - Referência Original)
+
+**Nota:** Airflow/Prefect foi planejado para implementação de 16 semanas. Mantido para referência futura.
+
+**Airflow (Original):**
 - Padrão da indústria
 - UI robusta
 - Muitos operators
 - Escalável
 
-**Prefect:**
+**Prefect (Original):**
 - Moderno (Python-first)
 - UI elegante
 - Fácil de usar
 - Boa documentação
 
-**Para Nova Corrente:**
+**Para Nova Corrente (Original):**
 - **Recomendação:** Airflow (mais maduro, mais comunidade)
 - **Alternativa:** Prefect (se time prefere Python)
 
@@ -674,9 +925,54 @@ extract_task >> load_bronze >> run_dbt >> test_dbt
 
 <a name="ml-ops"></a>
 
-## 5. 🤖 ML OPS PIPELINE
+## 5. 🤖 ML STRATEGY - NO ML OPS IN DEPLOYMENT
 
-### 5.1 MLflow
+### 🔒 GLOBAL CONSTRAINT: NO ML OPS LOGIC IN DEPLOYMENT
+
+**Policy:** All Machine Learning (ML) processing, training, and predictive computations remain strictly **off the production deployment path**. Only **precomputed analytical results** (forecasts, KPIs, timeseries insights) are published as datasets to be consumed by the deployed app.
+
+**Reference:** [Global Constraints Document](../../diagnostics/clusters/GLOBAL_CONSTRAINTS_NO_ML_OPS_PT_BR.md)
+
+**Strategic Rationale:**
+- ✅ **Self-hosted compute efficiency:** System runs entirely on commodity servers or local HPC resources—no need for Databricks, Vertex, or SageMaker orchestration
+- ✅ **Zero cloud dependency:** Infrastructure fully containerized (Docker/Compose), deployable on-premises or in private networks
+- ✅ **Performance optimization:** No model inference or feature pipelines on request path = predictable, low-latency responses (< 500ms cached, < 2s cold)
+- ✅ **Security & compliance:** Sensitive training data stays local. Production only exposes derived, sanitized analytics
+- ✅ **Cost reduction:** Zero ongoing cloud compute or storage costs post-deploy
+
+**Implementation:**
+- ❌ **NO ML dependencies** in deployment containers (PyTorch, TensorFlow, scikit-learn, MLflow)
+- ❌ **NO live inference endpoints** or model serving
+- ❌ **NO feature pipelines** or real-time ML processing
+- ✅ **ONLY precomputed results** stored as Parquet tables (gold layer)
+- ✅ **ONLY read operations** for analytical data consumption
+- ✅ **Deployment runs offline** (air-gapped or private network)
+
+**ML Processing Environment (Separate):**
+- ML processing runs in a separate environment (local/cloud)
+- ML outputs Parquet files to shared storage (`/exports/ml_results/`)
+- Deployment only needs read-access to that folder
+- No ML dependencies in deployment containers
+
+### 5.1 ML Processing (Separate Environment)
+
+**NOTA:** ML processing é realizado em ambiente separado, NÃO em deployment.
+
+**Componentes (Separate ML Environment):**
+1. **ML Training:** Prophet, ARIMA, LSTM models
+2. **ML Output:** Precomputed forecasts saved as Parquet
+3. **ML Metadata:** model_version, generated_at, source, dataset_id
+4. **Storage:** Parquet files in `/exports/ml_results/`
+
+**Deployment (Read-Only):**
+- Backend reads precomputed Parquet files
+- API endpoints return precomputed results
+- Frontend displays precomputed insights
+- "Last updated" timestamps from metadata
+
+### 5.1.1 MLflow Expandido (Futuro - Referência Original)
+
+**Nota:** MLflow foi planejado para implementação de 16 semanas. Mantido para referência futura (ML environment separado).
 
 **Componentes:**
 
@@ -1209,9 +1505,94 @@ FROM dim_items
 
 <a name="roadmap-implementacao"></a>
 
-## 10. 🗓️ ROADMAP DE IMPLEMENTAÇÃO
+## 10. 🗓️ ROADMAP DE IMPLEMENTAÇÃO - 4-DAY SPRINT
 
-### Fase 0: Foundation (Semanas 1-2)
+### 📅 Sprint Overview (4 Days: D0-D4)
+
+**Goal:** Deploy a minimal, functional analytics dashboard with time series data, forecast insights, and supply chain inventory management in **4 days**.
+
+**Key Constraint:** No heavy ML processing in production. ML runs locally, results exported to analytics layer. Focus on BI dashboard and supply chain management.
+
+**Reference:** [4-Day Sprint Overview](../../diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
+
+### D0: Freeze & Planning (4-6 hours)
+
+**All Clusters:**
+- [ ] **Data:** Freeze inputs & sample data
+- [ ] **Backend:** Freeze endpoints & contract (OpenAPI spec)
+- [ ] **Frontend:** Freeze UX & component list (mockups)
+- [ ] **Deploy:** Prepare Dockerfiles & compose
+
+**Checkpoint:** All teams aligned, contracts defined, ready to build
+
+### D1: Storage + Data Access (6-8 hours)
+
+**Parallel Work:**
+- [ ] **Data:** Storage + Ingestion (MinIO, extractors)
+- [ ] **Backend:** Data Access & Queries (DuckDB layer)
+- [ ] **Frontend:** Project Scaffold + Components (React + Vite)
+- [ ] **Deploy:** Infra & Secrets (local deployment)
+
+**Checkpoint:** Data flowing into storage, backend can query, frontend scaffolded
+
+### D2: API + Frontend Minimal (6-8 hours)
+
+**Parallel Work:**
+- [ ] **Data:** Lightweight Transformations (silver layer)
+- [ ] **Backend:** API Endpoints & BFF Logic (FastAPI routes)
+- [ ] **Frontend:** Charts + Interactions (Recharts, date picker)
+- [ ] **Deploy:** CI Pipeline + Automated Builds (GitHub Actions)
+
+**Checkpoint:** API endpoints working, frontend charts rendering, CI pipeline running
+
+### D3: Integration (6-8 hours)
+
+**Parallel Work:**
+- [ ] **Data:** Gold Models (Star Schema: dim_item, dim_time, fact_forecast)
+- [ ] **Backend:** Auth, Tests & Integration (JWT/API key, pytest)
+- [ ] **Frontend:** Responsiveness & Polish (loading states, error handling)
+- [ ] **Deploy:** Smoke Tests + Domain (E2E tests, Cloudflare Tunnel/ngrok)
+
+**Checkpoint:** End-to-end integration working, tests passing, ready for deployment
+
+### D4: Deploy & Demo (4-6 hours)
+
+**Final Work:**
+- [ ] **Data:** Test & Deliver (end-to-end pipeline, documentation)
+- [ ] **Backend:** Finalize Docs & Deploy Readiness (documentation, health check)
+- [ ] **Frontend:** Bundle & Integration Test (production build)
+- [ ] **Deploy:** Handover & Rollback Plan (documentation, runbook)
+
+**Checkpoint:** All services deployed, stakeholder demo ready, documentation complete
+
+### ✅ Core Acceptance Criteria (All Clusters)
+
+**End-to-End Path:**
+- [ ] ✅ Data ingestion → bronze → silver → gold → Parquet queries validated
+- [ ] ✅ Backend API endpoints return expected JSON
+- [ ] ✅ Frontend dashboard renders with correct data
+- [ ] ✅ All services deployed and accessible
+
+**Performance Requirements:**
+- [ ] ✅ Data queries: < 2s for 30-day time series
+- [ ] ✅ API endpoints: < 500ms cached, < 2s cold
+- [ ] ✅ Frontend load: < 2.5s on reasonable dev VM
+- [ ] ✅ Services start: < 2 minutes
+
+**ML Ops Validation (MANDATORY):**
+- [ ] ✅ No ML dependencies in deployment containers (check all Dockerfiles)
+- [ ] ✅ Only precomputed ML results ingested (no ML processing)
+- [ ] ✅ ML results include metadata (`model_version`, `generated_at`, `source`, `dataset_id`)
+- [ ] ✅ Deployment can run offline (no ML API calls)
+- [ ] ✅ Image sizes < 600 MB per container
+- [ ] ✅ CPU-only deployment (no GPU required)
+- [ ] ✅ Zero cloud compute costs (fully self-hosted)
+
+### 10.1 Roadmap Expandido (Futuro - Referência Original)
+
+**Nota:** O roadmap original de 16 semanas foi planejado para implementação completa. Mantido para referência futura.
+
+### Fase 0: Foundation (Semanas 1-2) - Original
 
 **Objetivos:**
 - Setup infraestrutura básica
@@ -1225,11 +1606,7 @@ FROM dim_items
 - [ ] Airflow DAG básico
 - [ ] Documentação inicial
 
-**Checkpoint:**
-- Dados raw sendo ingeridos diariamente
-- dbt models básicos funcionando
-
-### Fase 1: Data Foundation (Semanas 3-4)
+### Fase 1: Data Foundation (Semanas 3-4) - Original
 
 **Objetivos:**
 - Implementar Silver layer
@@ -1242,11 +1619,7 @@ FROM dim_items
 - [ ] Great Expectations suite
 - [ ] Data profiling reports
 
-**Checkpoint:**
-- Dados limpos na Silver layer
-- Data quality passando (95%+)
-
-### Fase 2: Analytics Layer (Semanas 5-8)
+### Fase 2: Analytics Layer (Semanas 5-8) - Original
 
 **Objetivos:**
 - Implementar Gold layer (star schema)
@@ -1260,11 +1633,7 @@ FROM dim_items
 - [ ] Metabase/Superset configurado
 - [ ] Dashboards básicos
 
-**Checkpoint:**
-- Dashboards funcionando
-- Usuários de negócio acessando dados
-
-### Fase 3: ML Ops (Semanas 9-12)
+### Fase 3: ML Ops (Semanas 9-12) - Original
 
 **Objetivos:**
 - Setup MLflow
@@ -1278,11 +1647,7 @@ FROM dim_items
 - [ ] Model serving (MLflow ou Seldon)
 - [ ] A/B testing setup
 
-**Checkpoint:**
-- Modelos versionados e servidos
-- Predictions em produção
-
-### Fase 4: Advanced Features (Semanas 13-16)
+### Fase 4: Advanced Features (Semanas 13-16) - Original
 
 **Objetivos:**
 - Governança completa
@@ -1296,39 +1661,76 @@ FROM dim_items
 - [ ] Advanced dashboards
 - [ ] Self-service analytics
 
-**Checkpoint:**
-- Sistema completo em produção
-- Todas métricas sendo coletadas
-
 ---
 
 <a name="tecnologias-ferramentas"></a>
 
 ## 11. 🛠️ TECNOLOGIAS E FERRAMENTAS
 
-### 11.1 Stack Recomendado
+### 11.1 Stack Simplificado (4-Day Sprint)
 
 **Camada de Armazenamento:**
+- ✅ **MinIO:** S3-compatible storage (local/Docker)
+- ✅ **Format:** Parquet (lightweight, columnar)
+- ✅ **No Delta Lake:** Removido para simplificação
+
+**Camada de Compute:**
+- ✅ **DuckDB:** In-process SQL engine sobre Parquet
+- ✅ **Pandas:** Python data processing
+- ✅ **No Spark/Databricks:** Removido para simplificação
+
+**Camada de Transformação:**
+- ✅ **Python Scripts:** ETL transformations
+- ✅ **SQL (DuckDB):** Queries SQL diretas
+- ✅ **No dbt:** Removido para simplificação
+
+**Camada de Orquestração:**
+- ✅ **Simple Scheduler:** Python scripts com schedule
+- ✅ **Docker Compose:** Service orchestration
+- ✅ **No Airflow/Prefect:** Removido para simplificação
+
+**Camada de ML:**
+- ✅ **Separate ML Environment:** ML processing separado
+- ✅ **Precomputed Results:** Parquet files com metadata
+- ✅ **NO ML in Deployment:** Constraint obrigatório
+- ✅ **No MLflow/Feature Store:** Removido de deployment
+
+**Camada de BI:**
+- ✅ **FastAPI:** REST API backend
+- ✅ **React:** Frontend dashboard
+- ✅ **Recharts:** Data visualization
+- ✅ **No Metabase/Superset:** Removido para simplificação
+
+**Camada de Deployment:**
+- ✅ **Docker Compose:** Local deployment
+- ✅ **Redis:** Optional caching
+- ✅ **No K8s:** Removido para simplificação
+
+### 11.1.1 Stack Expandido (Futuro - Referência Original)
+
+**Nota:** O stack original foi planejado para 16 semanas. Mantido para referência futura.
+
+**Camada de Armazenamento (Original):**
 - **Cloud:** AWS S3 / GCP Cloud Storage
 - **Format:** Delta Lake
 - **Compute:** Databricks / Spark on K8s
 
-**Camada de Transformação:**
+**Camada de Transformação (Original):**
 - **dbt:** Transformações SQL
 - **Python:** UDFs complexas
 - **Airflow:** Orquestração
 
-**Camada de ML:**
+**Camada de ML (Original):**
 - **MLflow:** Experiment tracking + Registry
 - **Feast:** Feature store
 - **Seldon Core:** Model serving
 
-**Camada de BI:**
+**Camada de BI (Original):**
 - **Metabase:** Self-service BI
 - **Superset:** Advanced dashboards
 - **dbt Semantic Layer:** Metrics API
 
-**Camada de Governança:**
+**Camada de Governança (Original):**
 - **DataHub:** Catalog
 - **Great Expectations:** Data quality
 - **dbt Tests:** Validation
@@ -1446,28 +1848,49 @@ Total: ~$780/mês
 
 ## 🎯 CONCLUSÃO
 
-Este roadmap fornece uma base sólida para implementar Analytics Engineering moderno na Nova Corrente:
+Este roadmap foi atualizado para o **4-Day Sprint** com escopo reduzido e foco em MVP funcional:
 
-✅ **Arquitetura Medallion** (Bronze/Silver/Gold)  
-✅ **dbt para transformações** (código versionado)  
-✅ **ML Ops completo** (MLflow, feature store)  
-✅ **Data Quality** (Great Expectations, dbt tests)  
-✅ **Self-Service BI** (Metabase/Superset)  
-✅ **Governança** (DataHub, lineage)  
-✅ **Roadmap de 16 semanas** (implementação incremental)
+✅ **Arquitetura Parquet Layers** (Bronze/Silver/Gold)  
+✅ **Python Scripts + DuckDB** para transformações  
+✅ **NO ML OPS IN DEPLOYMENT** (ML processing separado)  
+✅ **FastAPI + React** para analytics  
+✅ **Docker Compose** para deployment self-hosted  
+✅ **Roadmap de 4 dias** (sprint intensivo)
 
-**Próximos Passos:**
-1. Revisar roadmap com stakeholders
+### 📋 Escopo Atual (4-Day Sprint)
+
+**Timeline:** 4 dias (D0-D4)  
+**Stack:** Parquet + MinIO + DuckDB + Pandas + FastAPI + React  
+**ML Strategy:** NO ML in deployment, apenas resultados pré-computados  
+**Deployment:** Docker Compose (self-hosted, offline deployable)
+
+### 📚 Escopo Expandido (Futuro)
+
+O roadmap original de 16 semanas com stack completo (Delta Lake, Spark, dbt, Airflow, MLflow) foi mantido para referência futura nas seções marcadas como "Futuro - Referência Original".
+
+**Próximos Passos (4-Day Sprint):**
+1. Revisar cluster documents (Data, Backend, Frontend, Deploy)
+2. Alinhar equipes (4 clusters, 1-2 engenheiros cada)
+3. Iniciar D0 (Freeze & Planning)
+4. Executar sprint D0-D4
+
+**Próximos Passos (Futuro - Escopo Expandido):**
+1. Revisar roadmap expandido com stakeholders
 2. Priorizar fases (start with Fase 0)
 3. Alocar recursos (1-2 engenheiros)
-4. Iniciar implementação
+4. Iniciar implementação de 16 semanas
 
 ---
 
 **Documento criado:** Novembro 2025  
-**Versão:** 1.0  
+**Versão:** 2.0 (Atualizado para 4-Day Sprint)  
+**Última Atualização:** Novembro 2025  
 **Autor:** Equipe Grand Prix SENAI  
-**Status:** ✅ Roadmap Completo - Pronto para Implementação
+**Status:** ✅ Roadmap Atualizado - Escopo Reduzido para 4-Day Sprint
+
+**Referências:**
+- [4-Day Sprint Overview](../../diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
+- [Global Constraints](../../diagnostics/clusters/GLOBAL_CONSTRAINTS_NO_ML_OPS_PT_BR.md)
 
 **CENTRALIZED REPORTS & CHANGELOG SYSTEM COMPLETE!**
 

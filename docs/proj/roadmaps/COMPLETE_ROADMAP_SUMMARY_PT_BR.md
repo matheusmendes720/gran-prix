@@ -1,18 +1,44 @@
 # 📊 RESUMO CONSOLIDADO DO ROADMAP
 ## Nova Corrente - Analytics Engineering + Fullstack App
 
-**Versão:** 1.0  
+**Versão:** 2.0 (Atualizado para 4-Day Sprint)  
 **Data:** Novembro 2025  
-**Status:** ✅ Roadmap Completo Documentado
+**Status:** ✅ Roadmap Atualizado - Escopo Reduzido para 4-Day Sprint
+
+---
+
+## 🚨 ATUALIZAÇÃO DE ESCOPO - 4-DAY SPRINT
+
+**Última Atualização:** Novembro 2025  
+**Escopo Atual:** 4-Day Sprint (Reduzido)  
+**Referência:** [docs/diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md](../../diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
+
+### 🔄 Mudanças de Escopo:
+
+**Timeline:**
+- ❌ **Anterior:** 16 semanas (4 meses)
+- ✅ **Atual:** 4 dias (D0-D4) - Sprint Intensivo
+
+**Stack Tecnológico:**
+- ❌ **Anterior:** Delta Lake + S3 + Spark + Databricks + Airflow + dbt + MLflow
+- ✅ **Atual:** Parquet + MinIO + DuckDB + Pandas + Simple Orchestrator + Python Scripts
+
+**ML Strategy:**
+- ❌ **Anterior:** ML Ops completo em deployment
+- ✅ **Atual:** **NO ML OPS IN DEPLOYMENT** - ML processing separado
 
 ---
 
 ## 🎯 VISÃO GERAL
 
-**Objetivo:** Implementar sistema completo de Analytics Engineering com fullstack app em produção para Nova Corrente.
+**Objetivo:** Implementar MVP funcional de analytics dashboard com time series data, forecast insights, e supply chain inventory management em **4 dias**.
 
-**Duração Total:** 16 semanas (4 meses)  
-**Progresso Atual:** 25% (Fase 1-2 completa)
+**Duração Total:** 4 dias (D0-D4) - Sprint Intensivo  
+**Progresso Atual:** Sprint em planejamento
+
+### 📋 Escopo Anterior (Arquivado):
+
+O escopo original de 16 semanas com stack completo foi mantido para referência futura nas seções marcadas como "Futuro - Referência Original".
 
 ---
 
@@ -75,9 +101,63 @@
 
 ---
 
-## 🗓️ ROADMAP DE IMPLEMENTAÇÃO
+## 🗓️ ROADMAP DE IMPLEMENTAÇÃO - 4-DAY SPRINT
 
-### Fase 0: Foundation (Semanas 1-2)
+### D0: Freeze & Planning (4-6 hours)
+
+**All Clusters:**
+- [ ] **Data:** Freeze inputs & sample data
+- [ ] **Backend:** Freeze endpoints & contract (OpenAPI spec)
+- [ ] **Frontend:** Freeze UX & component list (mockups)
+- [ ] **Deploy:** Prepare Dockerfiles & compose
+
+**Checkpoint:** All teams aligned, contracts defined, ready to build
+
+### D1: Storage + Data Access (6-8 hours)
+
+**Parallel Work:**
+- [ ] **Data:** Storage + Ingestion (MinIO, extractors)
+- [ ] **Backend:** Data Access & Queries (DuckDB layer)
+- [ ] **Frontend:** Project Scaffold + Components (React + Vite)
+- [ ] **Deploy:** Infra & Secrets (local deployment)
+
+**Checkpoint:** Data flowing into storage, backend can query, frontend scaffolded
+
+### D2: API + Frontend Minimal (6-8 hours)
+
+**Parallel Work:**
+- [ ] **Data:** Lightweight Transformations (silver layer)
+- [ ] **Backend:** API Endpoints & BFF Logic (FastAPI routes)
+- [ ] **Frontend:** Charts + Interactions (Recharts, date picker)
+- [ ] **Deploy:** CI Pipeline + Automated Builds (GitHub Actions)
+
+**Checkpoint:** API endpoints working, frontend charts rendering, CI pipeline running
+
+### D3: Integration (6-8 hours)
+
+**Parallel Work:**
+- [ ] **Data:** Gold Models (Star Schema: dim_item, dim_time, fact_forecast)
+- [ ] **Backend:** Auth, Tests & Integration (JWT/API key, pytest)
+- [ ] **Frontend:** Responsiveness & Polish (loading states, error handling)
+- [ ] **Deploy:** Smoke Tests + Domain (E2E tests, Cloudflare Tunnel/ngrok)
+
+**Checkpoint:** End-to-end integration working, tests passing, ready for deployment
+
+### D4: Deploy & Demo (4-6 hours)
+
+**Final Work:**
+- [ ] **Data:** Test & Deliver (end-to-end pipeline, documentation)
+- [ ] **Backend:** Finalize Docs & Deploy Readiness (documentation, health check)
+- [ ] **Frontend:** Bundle & Integration Test (production build)
+- [ ] **Deploy:** Handover & Rollback Plan (documentation, runbook)
+
+**Checkpoint:** All services deployed, stakeholder demo ready, documentation complete
+
+### 10.1 Roadmap Expandido (Futuro - Referência Original)
+
+**Nota:** O roadmap original de 16 semanas foi planejado para implementação completa. Mantido para referência futura.
+
+### Fase 0: Foundation (Semanas 1-2) - Original
 
 **Status:** ⏳ 60% completo
 
