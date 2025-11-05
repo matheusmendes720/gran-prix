@@ -56,6 +56,11 @@ Thumbs.db
 
 # Allow structured API isolation artifacts
 !tests_api_isolation/**
+tests_api_isolation/**/__pycache__/
+tests_api_isolation/**/.pytest_cache/
+
+# Windows packages
+*.nupkg
 
 # Jupyter
 .ipynb_checkpoints/
