@@ -1,3 +1,4 @@
+*.csv filter=lfs diff=lfs merge=lfs -text lockable
 data/processed/github_5g3e_preprocessed.csv filter=lfs diff=lfs merge=lfs -text
 data/processed/ml_ready/github_5g3e_server_3_structured.csv filter=lfs diff=lfs merge=lfs -text
 *.csv filter=lfs diff=lfs merge=lfs -text
