@@ -242,3 +242,4 @@ onde $\mathbf{X} = [\hat{y}_1, ..., \hat{y}_M]$ são previsões dos modelos base
 
 
 
+

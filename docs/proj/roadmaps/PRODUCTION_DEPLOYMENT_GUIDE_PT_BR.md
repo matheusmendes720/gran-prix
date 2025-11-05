@@ -1,9 +1,35 @@
-# 🚀 GUIA DE DEPLOYMENT EM PRODUÇÃO
+# 🚀 GUIA DE DEPLOYMENT EM PRODUÇÃO (4-DAY SPRINT)
 ## Nova Corrente - Analytics Engineering + Fullstack App
 
-**Versão:** 1.0  
+**Versão:** 2.0 (Atualizado para 4-Day Sprint)  
 **Data:** Novembro 2025  
-**Status:** ✅ Guia Completo de Produção
+**Status:** ✅ Guia Atualizado - Escopo Reduzido para 4-Day Sprint
+
+---
+
+## 🚨 ATUALIZAÇÃO DE ESCOPO - 4-DAY SPRINT
+
+**Última Atualização:** Novembro 2025  
+**Escopo Atual:** 4-Day Sprint (Reduzido)  
+**Referência:** [docs/diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md](../../diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
+
+### 🔄 Mudanças de Escopo:
+
+**Timeline:**
+- ❌ **Anterior:** 16 semanas (4 meses)
+- ✅ **Atual:** 4 dias (D0-D4) - Sprint intensivo
+
+**Stack Tecnológico:**
+- ❌ **Anterior:** Terraform + S3 + Databricks + Airflow + dbt + MLflow
+- ✅ **Atual:** Docker Compose + MinIO + DuckDB + Simple Scheduler + Python Scripts
+
+**ML Strategy:**
+- ❌ **Anterior:** ML Ops completo em deployment
+- ✅ **Atual:** **NO ML OPS IN DEPLOYMENT** - ML processing separado
+
+### 📋 Escopo Anterior (Arquivado):
+
+O guia original de deployment foi planejado para 16 semanas com stack completo. O escopo foi reduzido para um sprint de 4 dias com foco em MVP funcional. O guia original foi mantido para referência futura nas seções marcadas como "Futuro - Referência Original".
 
 ---
 
@@ -24,22 +50,45 @@
 
 ## 1. ✅ PRÉ-REQUISITOS DE PRODUÇÃO
 
-### 1.1 Infraestrutura Base
+### 1.1 Infraestrutura Base (4-Day Sprint - Simplificada)
 
-**Cloud Provider (AWS/GCP/Azure):**
+**Local/Docker Deployment:**
+- [ ] Docker Compose configurado
+- [ ] MinIO setup (local/Docker)
+- [ ] PostgreSQL (opcional, para pequenos datasets)
+- [ ] Redis (opcional, para cache)
+- [ ] No Terraform (removido para simplificação)
+- [ ] No Cloud Provider (removido para simplificação)
+
+**Storage:**
+- [ ] MinIO buckets criados (bronze/silver/gold)
+- [ ] Parquet storage structure configurada
+- [ ] No Databricks (removido para simplificação)
+- [ ] No S3 (removido para simplificação)
+
+**Orquestração:**
+- [ ] Simple scheduler (Python scripts)
+- [ ] Docker Compose for services
+- [ ] No Airflow (removido para simplificação)
+
+### 1.1.1 Infraestrutura Expandida (Futuro - Referência Original)
+
+**Nota:** A infraestrutura original foi planejada para 16 semanas. Mantida para referência futura.
+
+**Cloud Provider (Original):**
 - [ ] Conta cloud configurada
 - [ ] Terraform configurado
 - [ ] S3/Cloud Storage buckets criados
 - [ ] IAM roles e policies configurados
 - [ ] VPC e networking configurados
 
-**Databricks:**
+**Databricks (Original):**
 - [ ] Workspace criado
 - [ ] Clusters configurados (dev/staging/prod)
 - [ ] Unity Catalog configurado
 - [ ] SQL warehouses criados
 
-**Airflow:**
+**Airflow (Original):**
 - [ ] Airflow instalado (Managed ou self-hosted)
 - [ ] DAGs configurados
 - [ ] Connections configuradas
@@ -47,19 +96,37 @@
 
 ---
 
-### 1.2 Serviços Adicionais
+### 1.2 Serviços Adicionais (4-Day Sprint - Simplificados)
 
-**Redis:**
+**Redis (Optional):**
+- [ ] Redis instalado (Docker/local)
+- [ ] Configurado para cache
+- [ ] No backup necessário (opcional)
+
+**No Message Queue:**
+- [ ] No Kafka (removido para simplificação)
+- [ ] No Message Queue (removido para simplificação)
+
+**Monitoring (Simplificado):**
+- [ ] Health checks configurados
+- [ ] Basic logging (FastAPI/Python)
+- [ ] No Datadog/Prometheus/Grafana (removido para simplificação)
+
+### 1.2.1 Serviços Expandidos (Futuro - Referência Original)
+
+**Nota:** Os serviços originais foram planejados para 16 semanas. Mantidos para referência futura.
+
+**Redis (Original):**
 - [ ] Redis instalado (AWS ElastiCache ou self-hosted)
 - [ ] Configurado para cache
 - [ ] Backup configurado
 
-**Message Queue:**
+**Message Queue (Original):**
 - [ ] Kafka instalado (Confluent Cloud ou self-hosted)
 - [ ] Topics criados
 - [ ] Consumers/Producers configurados
 
-**Monitoring:**
+**Monitoring (Original):**
 - [ ] Datadog/Prometheus configurado
 - [ ] Grafana dashboards criados
 - [ ] Alerting configurado
@@ -68,9 +135,80 @@
 
 <a name="infraestrutura"></a>
 
-## 2. 🏗️ INFRAESTRUTURA DE PRODUÇÃO
+## 2. 🏗️ INFRAESTRUTURA DE PRODUÇÃO - 4-DAY SPRINT
 
-### 2.1 Terraform Production Setup
+### 2.1 Docker Compose Production Setup
+
+```yaml
+# docker-compose.yml
+version: '3.8'
+
+services:
+  minio:
+    image: minio/minio:latest
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+      DUCKDB_PATH: /data/duckdb
+    volumes:
+      - ./data:/data
+    depends_on:
+      - minio
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_API_URL: http://localhost:8000
+    depends_on:
+      - backend
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  minio_data:
+  redis_data:
+```
+
+### 2.1.1 Terraform Production Setup (Futuro - Referência Original)
+
+**Nota:** O setup original com Terraform foi planejado para 16 semanas. Mantido para referência futura.
 
 ```hcl
 # infrastructure/terraform/environments/prod/main.tf
@@ -205,9 +343,68 @@ spec:
 
 <a name="deployment-pipelines"></a>
 
-## 3. 🔄 DEPLOYMENT DE PIPELINES
+## 3. 🔄 DEPLOYMENT DE PIPELINES - 4-DAY SPRINT
 
-### 3.1 dbt Deployment
+### 3.1 Python Scripts Deployment (Simplificado)
+
+**NOTA:** No dbt deployment. Python scripts + DuckDB são usados para transformações.
+
+**Deployment (4-Day Sprint):**
+
+```bash
+# Deploy Python ETL scripts
+cd scripts/etl
+python extract_and_load.py
+python transform_with_duckdb.py
+python load_to_gold.py
+```
+
+**GitHub Actions (Optional):**
+
+```yaml
+# .github/workflows/data-pipeline.yml
+name: Data Pipeline (4-Day Sprint)
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install duckdb pandas minio
+      
+      - name: Run ETL Pipeline
+        env:
+          MINIO_ENDPOINT: ${{ secrets.MINIO_ENDPOINT }}
+          MINIO_ACCESS_KEY: ${{ secrets.MINIO_ACCESS_KEY }}
+          MINIO_SECRET_KEY: ${{ secrets.MINIO_SECRET_KEY }}
+        run: |
+          python scripts/etl/extract_and_load.py
+          python scripts/etl/transform_with_duckdb.py
+          python scripts/etl/load_to_gold.py
+      
+      - name: Validate Pipeline
+        run: |
+          python scripts/etl/validate_pipeline.py
+```
+
+### 3.1.1 dbt Deployment (Futuro - Referência Original)
+
+**Nota:** O deployment original com dbt foi planejado para 16 semanas. Mantido para referência futura.
+
+### 3.1 dbt Deployment (Original)
 
 **CI/CD Pipeline (GitHub Actions):**
 
@@ -261,9 +458,70 @@ jobs:
 
 ---
 
-### 3.2 Airflow DAGs Deployment
+### 3.2 Simple Scheduler Deployment (4-Day Sprint)
 
-**Deployment automático:**
+**NOTA:** No Airflow deployment. Simple scheduler (Python scripts) é usado para orquestração.
+
+**Deployment (4-Day Sprint):**
+
+```python
+# scripts/scheduler.py
+import schedule
+import time
+from scripts.etl.extract_and_load import extract_and_load
+from scripts.etl.transform_with_duckdb import transform_with_duckdb
+from scripts.etl.load_to_gold import load_to_gold
+
+def run_data_pipeline():
+    """Run complete data pipeline"""
+    try:
+        # Extract & Load
+        extract_and_load()
+        
+        # Transform
+        transform_with_duckdb()
+        
+        # Load to Gold
+        load_to_gold()
+        
+        print("✅ Pipeline completed successfully")
+    except Exception as e:
+        print(f"❌ Pipeline failed: {e}")
+        # Send alert (email/Slack)
+
+# Schedule daily at 2 AM
+schedule.every().day.at("02:00").do(run_data_pipeline)
+
+if __name__ == "__main__":
+    print("🚀 Scheduler started...")
+    while True:
+        schedule.run_pending()
+        time.sleep(60)
+```
+
+**Docker Deployment:**
+
+```yaml
+# docker-compose.yml (add scheduler service)
+  scheduler:
+    build: ./scripts
+    command: python scheduler.py
+    environment:
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+    volumes:
+      - ./data:/data
+    depends_on:
+      - minio
+    restart: unless-stopped
+```
+
+### 3.2.1 Airflow DAGs Deployment (Futuro - Referência Original)
+
+**Nota:** O deployment original com Airflow foi planejado para 16 semanas. Mantido para referência futura.
+
+**Deployment automático (Original):**
 
 ```bash
 # Deploy DAGs to Airflow
@@ -273,7 +531,7 @@ scp dags/nova_corrente/*.py airflow@airflow-server:/opt/airflow/dags/nova_corren
 # Airflow pode sincronizar DAGs de um repositório Git automaticamente
 ```
 
-**Airflow Config:**
+**Airflow Config (Original):**
 
 ```python
 # airflow.cfg
@@ -291,18 +549,18 @@ enable_proxy_fix = True
 
 <a name="deployment-api"></a>
 
-## 4. 🚀 DEPLOYMENT DA API (FASTAPI)
+## 4. 🚀 DEPLOYMENT DA API (FASTAPI) - 4-DAY SPRINT
 
-### 4.1 Docker Production Image
+### 4.1 Docker Production Image (Simplificado)
 
 ```dockerfile
-# infrastructure/docker/Dockerfile.backend
+# backend/Dockerfile
 FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install dependencies
-COPY backend/requirements.txt .
+# Install dependencies (NO ML dependencies)
+COPY backend/requirements_deployment.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application
@@ -311,40 +569,79 @@ COPY backend/ /app/
 # Environment variables
 ENV PYTHONUNBUFFERED=1
 ENV API_HOST=0.0.0.0
-ENV API_PORT=5000
+ENV API_PORT=8000
+ENV MINIO_ENDPOINT=minio:9000
+ENV DUCKDB_PATH=/data/duckdb
 
 # Expose port
-EXPOSE 5000
+EXPOSE 8000
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-  CMD curl -f http://localhost:5000/health || exit 1
+  CMD curl -f http://localhost:8000/health || exit 1
 
 # Run application
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "5000", "--workers", "4"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
-**Build & Deploy:**
+**NOTA:** `requirements_deployment.txt` deve conter apenas dependências não-ML:
+- FastAPI, uvicorn, pydantic
+- DuckDB, pandas
+- MinIO client
+- Redis client
+- **NO PyTorch, TensorFlow, scikit-learn, MLflow**
+
+**Build & Deploy (Docker Compose):**
 ```bash
-# Build image
-docker build -f infrastructure/docker/Dockerfile.backend -t nova-corrente/backend:latest .
+# Build and start all services
+docker-compose up -d --build
 
-# Tag for registry
-docker tag nova-corrente/backend:latest registry.novacorrente.com/backend:v1.0.0
-
-# Push to registry
-docker push registry.novacorrente.com/backend:v1.0.0
-
-# Deploy to production
-kubectl apply -f infrastructure/kubernetes/production/fastapi-deployment.yaml
+# Check health
+docker-compose ps
+curl http://localhost:8000/health
 ```
 
 ---
 
-### 4.2 Environment Variables
+### 4.2 Environment Variables (4-Day Sprint)
 
 ```bash
 # backend/.env.production
+# API
+API_HOST=0.0.0.0
+API_PORT=8000
+API_RELOAD=false
+
+# MinIO
+MINIO_ENDPOINT=minio:9000
+MINIO_ACCESS_KEY=minioadmin
+MINIO_SECRET_KEY=minioadmin
+MINIO_BUCKET_BRONZE=bronze
+MINIO_BUCKET_SILVER=silver
+MINIO_BUCKET_GOLD=gold
+
+# DuckDB
+DUCKDB_PATH=/data/duckdb
+DUCKDB_READ_ONLY=true
+
+# Redis (Optional)
+REDIS_HOST=redis
+REDIS_PORT=6379
+
+# Security
+SECRET_KEY=<secret-key>
+ALGORITHM=HS256
+
+# CORS
+CORS_ORIGINS=http://localhost:3000,http://localhost:8000
+```
+
+### 4.2.1 Environment Variables Expandidos (Futuro - Referência Original)
+
+**Nota:** As variáveis originais foram planejadas para 16 semanas. Mantidas para referência futura.
+
+```bash
+# backend/.env.production (Original)
 # API
 API_HOST=0.0.0.0
 API_PORT=5000
@@ -375,12 +672,12 @@ CORS_ORIGINS=https://dashboard.novacorrente.com,https://app.novacorrente.com
 
 <a name="deployment-frontend"></a>
 
-## 5. 💻 DEPLOYMENT DO FRONTEND (NEXT.JS)
+## 5. 💻 DEPLOYMENT DO FRONTEND (REACT) - 4-DAY SPRINT
 
-### 5.1 Docker Production Image
+### 5.1 Docker Production Image (Simplificado)
 
 ```dockerfile
-# infrastructure/docker/Dockerfile.frontend
+# frontend/Dockerfile
 FROM node:18-alpine AS builder
 
 WORKDIR /app
@@ -392,43 +689,61 @@ RUN npm ci
 # Copy source
 COPY frontend/ ./
 
-# Build
+# Build (React + Vite)
 RUN npm run build
 
-# Production image
-FROM node:18-alpine AS runner
+# Production image (Nginx)
+FROM nginx:alpine
 
 WORKDIR /app
 
-ENV NODE_ENV=production
-
 # Copy built files
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Install production dependencies
-RUN npm ci --only=production
+# Copy nginx config
+COPY frontend/nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["nginx", "-g", "daemon off;"]
 ```
+
+**NOTA:** Frontend é React + Vite, não Next.js. Build produz arquivos estáticos servidos por Nginx.
 
 ---
 
-### 5.2 Environment Variables
+### 5.2 Environment Variables (4-Day Sprint)
 
 ```bash
 # frontend/.env.production
-NEXT_PUBLIC_API_URL=https://api.novacorrente.com
-NEXT_PUBLIC_WS_URL=wss://api.novacorrente.com/ws
+REACT_APP_API_URL=http://localhost:8000
+REACT_APP_MINIO_ENDPOINT=http://localhost:9000
 NODE_ENV=production
 ```
 
 ---
 
-### 5.3 Vercel Deployment (Recomendado)
+### 5.3 Docker Compose Deployment (4-Day Sprint)
+
+**NOTA:** No Vercel deployment. Docker Compose é usado para deployment local/self-hosted.
+
+**docker-compose.yml (frontend service):**
+
+```yaml
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    environment:
+      REACT_APP_API_URL: http://localhost:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
+```
+
+### 5.3.1 Vercel Deployment (Futuro - Referência Original)
+
+**Nota:** O deployment original com Vercel foi planejado para 16 semanas. Mantido para referência futura.
 
 **vercel.json:**
 ```json

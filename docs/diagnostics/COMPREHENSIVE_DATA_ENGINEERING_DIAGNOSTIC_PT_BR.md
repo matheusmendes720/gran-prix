@@ -1,10 +1,36 @@
 # 🔍 DIAGNÓSTICO COMPLETO: ENGENHARIA DE DADOS E STORAGE
 ## Nova Corrente - Análise Roadmap vs Implementação Atual
 
-**Versão:** 1.0  
+**Versão:** 2.0 (Atualizado para 4-Day Sprint)  
 **Data:** Novembro 2025  
-**Status:** ⚠️ Análise Crítica Completa  
-**Progresso do Roadmap:** ~15% Implementado (Fase 0 parcial)
+**Status:** ⚠️ Análise Crítica Completa - Escopo Atualizado para 4-Day Sprint  
+**Progresso do Roadmap:** Sprint em planejamento (D0-D4)
+
+---
+
+## 🚨 ATUALIZAÇÃO DE ESCOPO - 4-DAY SPRINT
+
+**Última Atualização:** Novembro 2025  
+**Escopo Atual:** 4-Day Sprint (Reduzido)  
+**Referência:** [docs/diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md](./clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
+
+### 🔄 Mudanças de Escopo:
+
+**Timeline:**
+- ❌ **Anterior:** 16 semanas (4 meses) - ~15% implementado
+- ✅ **Atual:** 4 dias (D0-D4) - Sprint intensivo
+
+**Stack Tecnológico:**
+- ❌ **Anterior:** Delta Lake + S3 + Spark + Databricks + Airflow + dbt + MLflow
+- ✅ **Atual:** Parquet + MinIO + DuckDB + Pandas + Simple Orchestrator + Python Scripts
+
+**ML Strategy:**
+- ❌ **Anterior:** ML Ops completo em deployment
+- ✅ **Atual:** **NO ML OPS IN DEPLOYMENT** - ML processing separado
+
+### 📋 Escopo Anterior (Arquivado):
+
+A análise original foi baseada no roadmap de 16 semanas. O escopo foi reduzido para um sprint de 4 dias com foco em MVP funcional. A análise original foi mantida para referência futura nas seções marcadas como "Futuro - Referência Original".
 
 ---
 
@@ -12,12 +38,31 @@
 
 ### 🚨 Status Geral: **CRÍTICO - FUNDAÇÃO INCOMPLETA**
 
-**Progresso Real vs Planejado:**
-- **Roadmap Planejado:** 16 semanas (4 meses) - 100%
-- **Implementado:** ~2.5 semanas equivalentes - **15%**
-- **Gap Crítico:** **85% das funcionalidades planejadas NÃO implementadas**
+**Progresso Real vs Planejado (4-Day Sprint):**
+- **Roadmap Planejado:** 4 dias (D0-D4) - Sprint intensivo
+- **Status Atual:** Sprint em planejamento
+- **Foco:** MVP funcional com escopo reduzido
 
-**Principais Descobertas:**
+**Progresso Real vs Planejado (Original - 16 Semanas):**
+- **Roadmap Planejado (Original):** 16 semanas (4 meses) - 100%
+- **Implementado (Original):** ~2.5 semanas equivalentes - **15%**
+- **Gap Crítico (Original):** **85% das funcionalidades planejadas NÃO implementadas**
+
+**Nota:** A análise original foi baseada no roadmap de 16 semanas. Com o escopo reduzido para 4 dias, o foco mudou para MVP funcional com stack simplificado.
+
+**Principais Descobertas (4-Day Sprint - Escopo Reduzido):**
+1. ✅ **Arquitetura Parquet Layers (Bronze/Silver/Gold): PLANEJADA** (MinIO + Parquet)
+2. ✅ **Python Scripts + DuckDB: PLANEJADO** (simplificado, sem dbt)
+3. ✅ **Parquet + MinIO: PLANEJADO** (sem Delta Lake)
+4. ✅ **Simple Scheduler: PLANEJADO** (sem Airflow)
+5. ✅ **Separate ML Environment: PLANEJADO** (NO ML OPS IN DEPLOYMENT)
+6. ✅ **Basic Python Validation: PLANEJADO** (sem Great Expectations)
+7. ✅ **Local/Docker Deployment: PLANEJADO** (sem DataHub)
+8. ✅ **MinIO (Local/Docker): PLANEJADO** (sem cloud infrastructure)
+9. ✅ **No Streaming Pipeline: PLANEJADO** (removido para simplificação)
+10. ✅ **Storage: Parquet + MinIO** (escala para MVP)
+
+**Principais Descobertas (Original - 16 Semanas):**
 1. ❌ **Arquitetura Medallion (Bronze/Silver/Gold): NÃO EXISTE**
 2. ❌ **dbt (data build tool): NÃO IMPLEMENTADO**
 3. ❌ **Delta Lake / Data Lakehouse: NÃO EXISTE**

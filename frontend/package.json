@@ -7,7 +7,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "lint:fix": "next lint --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage --maxWorkers=2",
+    "test:validation": "jest --testPathPattern=validation",
+    "test:validation:watch": "jest --testPathPattern=validation --watch",
+    "type-check": "tsc --noEmit",
+    "validate": "node scripts/validate.js",
+    "validate:quick": "npm run type-check && npm run lint && npm test -- --passWithNoTests",
+    "validate:full": "npm run validate",
+    "pre-push": "npm run validate:full",
+    "prepare": "npm run validate:quick || true"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

@@ -2,20 +2,169 @@
 ## Histórico Completo de Mudanças com Referências Git
 
 **Projeto:** Nova Corrente - Demand Forecasting & Analytics System  
-**Versão Atual:** 2.3.0  
+**Versão Atual:** 2.4.0  
 **Última Atualização:** 05 de Novembro de 2025
 
 ---
 
 ## 🎯 ÍNDICE
 
-1. [Versão 2.3.0 - Complete Data Engineering Refactoring (05/11/2025)](#versão-230---complete-data-engineering-refactoring)
-2. [Versão 2.2.0 - Git Workflow & AI Insights Integration (04/11/2025)](#versão-220---git-workflow--ai-insights-integration)
-3. [Versão 2.1.0 - Contributor Merge & Workspace Reorganization (04/11/2025)](#versão-210---contributor-merge--workspace-reorganization)
-4. [Versão 2.0.0 - ML Ops Constraint Enforcement (04/11/2025)](#versão-200---ml-ops-constraint-enforcement)
-5. [Versão 1.0.0 - Initial Commit (03/11/2025)](#versão-100---initial-commit)
-6. [Referências Git](#referências-git)
-7. [Estatísticas de Mudanças](#estatísticas-de-mudanças)
+1. [Versão 2.4.0 - Collaborative Data Engineering & Git LFS Integration (05/11/2025)](#versão-240---collaborative-data-engineering--git-lfs-integration)
+2. [Versão 2.3.0 - Complete Data Engineering Refactoring (05/11/2025)](#versão-230---complete-data-engineering-refactoring)
+3. [Versão 2.2.0 - Git Workflow & AI Insights Integration (04/11/2025)](#versão-220---git-workflow--ai-insights-integration)
+4. [Versão 2.1.0 - Contributor Merge & Workspace Reorganization (04/11/2025)](#versão-210---contributor-merge--workspace-reorganization)
+5. [Versão 2.0.0 - ML Ops Constraint Enforcement (04/11/2025)](#versão-200---ml-ops-constraint-enforcement)
+6. [Versão 1.0.0 - Initial Commit (03/11/2025)](#versão-100---initial-commit)
+7. [Referências Git](#referências-git)
+8. [Estatísticas de Mudanças](#estatísticas-de-mudanças)
+
+---
+
+## 📦 VERSÃO 2.4.0 - Collaborative Data Engineering & Git LFS Integration
+**Data:** 05 de Novembro de 2025  
+**Commits:** [`1d93ba1`](https://github.com/matheusmendes720/gran-prix/commit/1d93ba1), [`4622c62`](https://github.com/matheusmendes720/gran-prix/commit/4622c62), [`ca94699`](https://github.com/matheusmendes720/gran-prix/commit/ca94699), [`368cad6`](https://github.com/matheusmendes720/gran-prix/commit/368cad6), [`1d5a63b`](https://github.com/matheusmendes720/gran-prix/commit/1d5a63b), [`a180d6e`](https://github.com/matheusmendes720/gran-prix/commit/a180d6e), [`a7ad987`](https://github.com/matheusmendes720/gran-prix/commit/a7ad987)  
+**Autores:** Jonatas1421 <jonpmm14@gmail.com> + Haniel <filipecouto33@gmail.com> + matheusmendes720 <datamaster720@gmail.com>  
+**Tipo:** 🤝 Collaboration + 📊 Data Engineering + 🔧 Infrastructure
+
+### 🎯 Resumo Executivo
+
+Esta versão consolida **contribuições de múltiplos colaboradores** focadas em:
+1. **Refatoração completa dos diagnósticos** de engenharia de dados (Jonatas1421)
+2. **Documentação visual completa** com diagramas MMD e scripts de conversão (Haniel + matheusmendes720)
+3. **Integração Git LFS** para gerenciamento eficiente de arquivos grandes (CSV, datasets)
+4. **Guia completo de atualização** para repositórios existentes com Git LFS
+5. **Resolução de conflitos** e merges de múltiplas branches
+
+### ✨ 1. Contribuições de Jonatas1421
+
+#### 📊 Refatoração Completa dos Diagnósticos
+**Commit:** [`1d93ba1`](https://github.com/matheusmendes720/gran-prix/commit/1d93ba1)  
+**Autor:** Jonatas1421 <jonpmm14@gmail.com>  
+**Mensagem:** "docs: Refatoração completa dos diagnósticos de engenharia de dados"
+
+**Principais Melhorias:**
+- ✅ Refatoração completa dos documentos de diagnóstico
+- ✅ Melhoria na estrutura e organização dos diagnósticos
+- ✅ Otimização da documentação de engenharia de dados
+
+### ✨ 2. Contribuições de Haniel
+
+#### 🎨 Documentação Visual Completa
+**Commits:** [`368cad6`](https://github.com/matheusmendes720/gran-prix/commit/368cad6), [`06d1619`](https://github.com/matheusmendes720/gran-prix/commit/06d1619), [`5b456f3`](https://github.com/matheusmendes720/gran-prix/commit/5b456f3), [`1d5a63b`](https://github.com/matheusmendes720/gran-prix/commit/1d5a63b)  
+**Autor:** Haniel <filipecouto33@gmail.com>
+
+**Documentação Criada:**
+1. **Changelog Abrangente** (`368cad6`)
+   - Changelog completo para versão 2.3.0
+   - Documentação de refatoração de engenharia de dados
+
+2. **Refatoração Completa com Documentação Visual** (`06d1619`)
+   - Documentação visual completa de refatoração
+   - Diagramas e visualizações profissionais
+
+3. **Visual Breakdown de Modelagem de Dados** (`5b456f3`)
+   - Breakdown visual abrangente da estratégia de modelagem
+   - Diagramas de arquitetura e fluxos
+
+4. **Estratégia de Modelagem e Star Schema** (`1d5a63b`)
+   - Estratégia completa de modelagem de dados
+   - Implementação de star schema
+   - Documentação técnica detalhada
+
+### ✨ 3. Integração Git LFS
+
+#### 🔧 Setup e Configuração
+**Commits:** [`a7ad987`](https://github.com/matheusmendes720/gran-prix/commit/a7ad987), [`609e883`](https://github.com/matheusmendes720/gran-prix/commit/609e883), [`5562b3e`](https://github.com/matheusmendes720/gran-prix/commit/5562b3e), [`16cb63f`](https://github.com/matheusmendes720/gran-prix/commit/16cb63f), [`a180d6e`](https://github.com/matheusmendes720/gran-prix/commit/a180d6e)  
+**Autor:** matheusmendes720 <datamaster720@gmail.com>
+
+**Funcionalidades Implementadas:**
+
+1. **Setup Git LFS para Arquivos CSV** (`a7ad987`)
+   - Configuração Git LFS para arquivos grandes
+   - Otimização de repositório para datasets CSV
+   - Redução de tamanho do repositório
+
+2. **Guia Completo PT-BR para Clonar com Git LFS** (`609e883`)
+   - Documentação completa em português
+   - Instruções passo a passo para clonar repositório
+   - Troubleshooting e soluções comuns
+
+3. **README de Início Rápido PT-BR** (`5562b3e`)
+   - Guia de início rápido em português
+   - Instruções para novos colaboradores
+   - Quick start para desenvolvimento
+
+4. **Guia para Atualizar Repositório para Git LFS** (`16cb63f`)
+   - Instruções para atualizar repositórios existentes
+   - Migração de arquivos grandes para Git LFS
+   - Preservação de histórico Git
+
+5. **Atualização README com Link para Guia** (`a180d6e`)
+   - README atualizado com links para guias
+   - Navegação melhorada para documentação
+
+### ✨ 4. Diagramas MMD e Scripts de Conversão
+
+#### 📊 Arquivos de Diagrama e Ferramentas
+**Commit:** [`4622c62`](https://github.com/matheusmendes720/gran-prix/commit/4622c62)  
+**Autor:** matheusmendes720 <datamaster720@gmail.com>  
+**Mensagem:** "docs: Add MMD diagram files and conversion scripts"
+
+**Arquivos Adicionados:**
+- ✅ Arquivos de diagrama MMD (Mermaid.js)
+- ✅ Scripts de conversão de diagramas
+- ✅ Ferramentas para gerar visualizações
+
+### ✨ 5. Resolução de Conflitos e Merges
+
+#### 🔄 Merge de Branches e Resolução
+**Commits:** [`ca94699`](https://github.com/matheusmendes720/gran-prix/commit/ca94699), [`ea331df`](https://github.com/matheusmendes720/gran-prix/commit/ea331df), [`a6c339e`](https://github.com/matheusmendes720/gran-prix/commit/a6c339e)
+
+**Merges Realizados:**
+1. **Merge Master com Resolução de Conflito CHANGELOG** (`ca94699`)
+   - Resolução de conflito no CHANGELOG.md
+   - Merge bem-sucedido de múltiplas branches
+
+2. **Merge Master** (`ea331df`)
+   - Sincronização com origin/master
+   - Integração de contribuições remotas
+
+3. **Merge Completo com Annotation_Sugestion.md** (`a6c339e`)
+   - Merge de feature/data branch
+   - Integração de sugestões de anotação
+
+### 📊 Estatísticas da Versão 2.4.0
+
+#### Contribuições por Autor
+
+| Autor | Commits | Tipo de Contribuição |
+|-------|---------|---------------------|
+| **Jonatas1421** | 1 | Refatoração de diagnósticos |
+| **Haniel** | 4 | Documentação visual completa |
+| **matheusmendes720** | 10+ | Git LFS, merges, documentação |
+
+#### Arquivos Modificados
+- **Documentação:** 15+ arquivos
+- **Configuração:** `.gitattributes`, `.gitignore`
+- **Scripts:** Scripts de conversão e ferramentas
+- **Guias:** READMEs e guias de atualização
+
+### 🎯 Impacto e Benefícios
+
+#### Performance
+- ✅ **Repositório Otimizado:** Git LFS reduz tamanho do repositório
+- ✅ **Clonagem Mais Rápida:** Arquivos grandes não são baixados automaticamente
+- ✅ **Melhor Gestão de Arquivos:** Separação de código e dados
+
+#### Documentação
+- ✅ **Documentação Visual Completa:** Diagramas profissionais MMD
+- ✅ **Guias em Português:** Documentação acessível para equipe brasileira
+- ✅ **Navegação Melhorada:** Links e índices atualizados
+
+#### Colaboração
+- ✅ **Múltiplos Contribuidores:** Integração bem-sucedida de contribuições
+- ✅ **Resolução de Conflitos:** Processo de merge otimizado
+- ✅ **Workflow Melhorado:** Git LFS facilita colaboração com arquivos grandes
 
 ---
 

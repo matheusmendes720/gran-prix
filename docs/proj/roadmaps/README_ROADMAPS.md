@@ -1,9 +1,25 @@
 # 📚 ROADMAPS & STRATEGIC DOCUMENTATION INDEX
 ## Nova Corrente Demand Forecasting - Complete Guide
 
-**Last Updated:** 2025-11-05  
-**Version:** 2.0 (Complete Chat History Integration)  
-**Status:** ✅ **ALL DOCUMENTATION COMPLETE**
+**Last Updated:** Novembro 2025  
+**Version:** 3.0 (Updated for 4-Day Sprint Scope)  
+**Status:** ✅ **DOCUMENTATION UPDATED - 4-DAY SPRINT SCOPE**
+
+---
+
+## 🚨 ATUALIZAÇÃO DE ESCOPO - 4-DAY SPRINT
+
+**Escopo Atual:** 4-Day Sprint (Reduzido)  
+**Timeline:** 4 dias (D0-D4) em vez de 16 semanas  
+**Stack:** Parquet + MinIO + DuckDB + Pandas + FastAPI + React  
+**ML Strategy:** NO ML OPS IN DEPLOYMENT (ML processing separado)
+
+**Referências:**
+- [4-Day Sprint Overview](../../diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
+- [Global Constraints](../../diagnostics/clusters/GLOBAL_CONSTRAINTS_NO_ML_OPS_PT_BR.md)
+- [Scope Update Summary](../../diagnostics/SCOPE_UPDATE_4DAY_SPRINT_SUMMARY_PT_BR.md)
+
+**Nota:** Muitos documentos foram atualizados para refletir o escopo reduzido de 4 dias. O escopo original de 16 semanas foi mantido para referência futura nas seções marcadas como "Futuro - Referência Original".
 
 ---
 

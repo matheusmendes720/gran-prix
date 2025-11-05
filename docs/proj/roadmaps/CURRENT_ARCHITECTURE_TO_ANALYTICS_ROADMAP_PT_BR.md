@@ -1,9 +1,35 @@
-# 🔄 MIGRAÇÃO: ARQUITETURA ATUAL → ANALYTICS ENGINEERING
+# 🔄 MIGRAÇÃO: ARQUITETURA ATUAL → ANALYTICS ENGINEERING (4-DAY SPRINT)
 ## Nova Corrente - Evolução da Arquitetura
 
-**Versão:** 1.0  
+**Versão:** 2.0 (Atualizado para 4-Day Sprint)  
 **Data:** Novembro 2025  
-**Status:** ✅ Plano de Migração Completo
+**Status:** ✅ Plano de Migração Atualizado - Escopo Reduzido para 4-Day Sprint
+
+---
+
+## 🚨 ATUALIZAÇÃO DE ESCOPO - 4-DAY SPRINT
+
+**Última Atualização:** Novembro 2025  
+**Escopo Atual:** 4-Day Sprint (Reduzido)  
+**Referência:** [docs/diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md](../../diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
+
+### 🔄 Mudanças de Escopo:
+
+**Timeline:**
+- ❌ **Anterior:** 16 semanas (4 meses)
+- ✅ **Atual:** 4 dias (D0-D4) - Sprint Intensivo
+
+**Stack Tecnológico:**
+- ❌ **Anterior:** Delta Lake + S3 + Spark + Databricks + Airflow + dbt
+- ✅ **Atual:** Parquet + MinIO + DuckDB + Pandas + Simple Orchestrator + Python Scripts
+
+**ML Strategy:**
+- ❌ **Anterior:** ML Ops completo em deployment
+- ✅ **Atual:** **NO ML OPS IN DEPLOYMENT** - ML processing separado
+
+### 📋 Escopo Anterior (Arquivado):
+
+O plano original de migração de 16 semanas foi mantido para referência futura nas seções marcadas como "Futuro - Referência Original".
 
 ---
 
@@ -65,7 +91,57 @@
 
 ---
 
-### 1.2 Arquitetura Target (Analytics Engineering)
+### 1.2 Arquitetura Target (4-Day Sprint - Simplificada)
+
+```
+┌─────────────────────────────────────────────┐
+│         DATA SOURCES                         │
+│  ERP | Weather | Anatel | Supplier APIs     │
+└─────────────────┬───────────────────────────┘
+                   │
+┌──────────────────▼───────────────────────────┐
+│      INGESTION (Python Scripts)               │
+│      Extract & Load → Bronze (Parquet/MinIO) │
+└──────────────────┬───────────────────────────┘
+                   │
+┌──────────────────▼───────────────────────────┐
+│      BRONZE LAYER (Raw Data)                  │
+│      Parquet Files | MinIO Storage            │
+└──────────────────┬───────────────────────────┘
+                   │
+┌──────────────────▼───────────────────────────┐
+│      SILVER LAYER (Cleaned)                   │
+│      DuckDB + Pandas Processing               │
+└──────────────────┬───────────────────────────┘
+                   │
+┌──────────────────▼───────────────────────────┐
+│      GOLD LAYER (Star Schema)                 │
+│      Parquet Files | Precomputed Results      │
+└──────────────────┬───────────────────────────┘
+                   │
+┌──────────────────▼───────────────────────────┐
+│      SERVING LAYER                             │
+│      FastAPI Backend | Read-Only API          │
+└──────────────────┬───────────────────────────┘
+                   │
+┌──────────────────▼───────────────────────────┐
+│      APPLICATION LAYER                        │
+│      React Frontend | FastAPI Backend         │
+└───────────────────────────────────────────────┘
+```
+
+**Características (4-Day Sprint):**
+- ✅ Arquitetura Parquet Layers (Bronze/Silver/Gold)
+- ✅ Storage: MinIO (local/Docker, S3-compatible)
+- ✅ Compute: DuckDB (in-process SQL) + Pandas
+- ✅ Orquestração: Simple scheduler (Python scripts)
+- ✅ Transformações: Python scripts + SQL (DuckDB)
+- ✅ BI: React Dashboard + FastAPI Backend
+- ✅ NO ML OPS IN DEPLOYMENT (ML processing separado)
+
+### 1.2.1 Arquitetura Target Expandida (Futuro - Referência Original)
+
+**Nota:** A arquitetura original com Delta Lake, Spark, dbt, Airflow foi planejada para 16 semanas. Mantida para referência futura.
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -104,7 +180,7 @@
 └───────────────────────────────────────────────┘
 ```
 
-**Características:**
+**Características (Original):**
 - Arquitetura Medallion (Bronze/Silver/Gold)
 - Data Lakehouse (Delta Lake)
 - Orquestração (Airflow)
@@ -131,69 +207,135 @@
 
 ---
 
-### 2.2 Componentes a Adicionar
+### 2.2 Componentes a Adicionar (4-Day Sprint)
 
-**⏳ Para Adicionar:**
+**⏳ Para Adicionar (Simplificado):**
 
 **Infraestrutura:**
+- [ ] MinIO setup (local/Docker)
+- [ ] Parquet storage structure (Bronze/Silver/Gold)
+- [ ] Docker Compose configuration
+- [ ] No Terraform/Databricks/Delta Lake (removido para simplificação)
+
+**Orquestração:**
+- [ ] Simple scheduler (Python scripts)
+- [ ] Docker Compose for services
+- [ ] No Airflow (removido para simplificação)
+
+**Transformações:**
+- [ ] Python ETL scripts
+- [ ] DuckDB queries
+- [ ] Pandas processing
+- [ ] No dbt (removido para simplificação)
+
+**Data Quality:**
+- [ ] Basic Python validation
+- [ ] Simple data profiling
+- [ ] No Great Expectations (removido para simplificação)
+
+**Serving:**
+- [ ] FastAPI backend (read-only)
+- [ ] Redis cache (optional)
+- [ ] No Message queue (removido para simplificação)
+
+**BI & Analytics:**
+- [ ] React frontend dashboard
+- [ ] Recharts visualization
+- [ ] FastAPI backend
+- [ ] No Metabase/Superset (removido para simplificação)
+
+**ML Strategy:**
+- [ ] Separate ML environment (NOT in deployment)
+- [ ] Precomputed results as Parquet
+- [ ] NO ML OPS IN DEPLOYMENT (constraint obrigatório)
+
+### 2.2.1 Componentes Expandidos (Futuro - Referência Original)
+
+**Nota:** Os componentes originais foram planejados para 16 semanas. Mantidos para referência futura.
+
+**Infraestrutura (Original):**
 - [ ] Terraform para IaC
 - [ ] S3 buckets (Bronze/Silver/Gold)
 - [ ] Databricks workspace
 - [ ] Delta Lake format
 
-**Orquestração:**
+**Orquestração (Original):**
 - [ ] Airflow instalado
 - [ ] DAGs criados
 - [ ] Scheduling configurado
 
-**Transformações:**
+**Transformações (Original):**
 - [ ] dbt project
 - [ ] Staging models
 - [ ] Mart models (star schema)
 - [ ] dbt metrics
 
-**Data Quality:**
+**Data Quality (Original):**
 - [ ] Great Expectations suite
 - [ ] Data profiling automatizado
 - [ ] Quality gates
 
-**Serving:**
+**Serving (Original):**
 - [ ] Redis cache layer
 - [ ] Message queue (Kafka)
 - [ ] API optimization
 
-**BI & Analytics:**
+**BI & Analytics (Original):**
 - [ ] Metabase/Superset
 - [ ] Dashboards
 - [ ] Self-service analytics
 
-**Governança:**
+**Governança (Original):**
 - [ ] DataHub catalog
 - [ ] Data lineage
 - [ ] Access control
 
 ---
 
-### 2.3 Componentes a Evoluir
+### 2.3 Componentes a Evoluir (4-Day Sprint)
 
-**🔄 Para Evoluir:**
+**🔄 Para Evoluir (Simplificado):**
 
 **Pipeline:**
+- **Atual:** Python monolítico
+- **Target:** ETL (Python scripts → Parquet → DuckDB → Gold)
+- **Evolução:** Manter Python para ETL, usar DuckDB para queries SQL
+
+**Storage:**
+- **Atual:** CSV/PostgreSQL
+- **Target:** Parquet (MinIO)
+- **Evolução:** Migrar dados para Parquet no MinIO
+
+**Orquestração:**
+- **Atual:** Cron jobs/Python scripts
+- **Target:** Simple scheduler (Python scripts)
+- **Evolução:** Organizar scripts em scheduler simples
+
+**ML Strategy:**
+- **Atual:** Modelos carregados em memória
+- **Target:** Separate ML environment → Precomputed Parquet
+- **Evolução:** ML processing separado, resultados pré-computados em Parquet
+
+### 2.3.1 Componentes Expandidos (Futuro - Referência Original)
+
+**Nota:** A evolução original foi planejada para 16 semanas. Mantida para referência futura.
+
+**Pipeline (Original):**
 - **Atual:** Python monolítico
 - **Target:** ELT (Airbyte → dbt → Gold)
 - **Evolução:** Manter Python para ML, usar dbt para transformações
 
-**Storage:**
+**Storage (Original):**
 - **Atual:** CSV/PostgreSQL
 - **Target:** Delta Lake (S3)
 - **Evolução:** Migrar dados para Delta Lake
 
-**Orquestração:**
+**Orquestração (Original):**
 - **Atual:** Cron jobs/Python scripts
 - **Target:** Airflow DAGs
 - **Evolução:** Transformar scripts em DAGs
 
-**ML Serving:**
+**ML Serving (Original):**
 - **Atual:** Modelos carregados em memória
 - **Target:** MLflow serving
 - **Evolução:** Registrar modelos no MLflow
@@ -202,9 +344,69 @@
 
 <a name="migracao"></a>
 
-## 3. 🔄 PLANO DE MIGRAÇÃO
+## 3. 🔄 PLANO DE MIGRAÇÃO - 4-DAY SPRINT
 
-### 3.1 Fase de Migração (Semana 1-2)
+### 3.1 Sprint Overview (4 Days: D0-D4)
+
+**Objetivo:** Implementar MVP funcional em 4 dias com escopo reduzido
+
+**Reference:** [4-Day Sprint Overview](../../diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
+
+### D0: Freeze & Planning (4-6 hours)
+
+**All Clusters:**
+- [ ] **Data:** Freeze inputs & sample data
+- [ ] **Backend:** Freeze endpoints & contract (OpenAPI spec)
+- [ ] **Frontend:** Freeze UX & component list (mockups)
+- [ ] **Deploy:** Prepare Dockerfiles & compose
+
+**Checkpoint:** All teams aligned, contracts defined, ready to build
+
+### D1: Storage + Data Access (6-8 hours)
+
+**Parallel Work:**
+- [ ] **Data:** Storage + Ingestion (MinIO, extractors)
+- [ ] **Backend:** Data Access & Queries (DuckDB layer)
+- [ ] **Frontend:** Project Scaffold + Components (React + Vite)
+- [ ] **Deploy:** Infra & Secrets (local deployment)
+
+**Checkpoint:** Data flowing into storage, backend can query, frontend scaffolded
+
+### D2: API + Frontend Minimal (6-8 hours)
+
+**Parallel Work:**
+- [ ] **Data:** Lightweight Transformations (silver layer)
+- [ ] **Backend:** API Endpoints & BFF Logic (FastAPI routes)
+- [ ] **Frontend:** Charts + Interactions (Recharts, date picker)
+- [ ] **Deploy:** CI Pipeline + Automated Builds (GitHub Actions)
+
+**Checkpoint:** API endpoints working, frontend charts rendering, CI pipeline running
+
+### D3: Integration (6-8 hours)
+
+**Parallel Work:**
+- [ ] **Data:** Gold Models (Star Schema: dim_item, dim_time, fact_forecast)
+- [ ] **Backend:** Auth, Tests & Integration (JWT/API key, pytest)
+- [ ] **Frontend:** Responsiveness & Polish (loading states, error handling)
+- [ ] **Deploy:** Smoke Tests + Domain (E2E tests, Cloudflare Tunnel/ngrok)
+
+**Checkpoint:** End-to-end integration working, tests passing, ready for deployment
+
+### D4: Deploy & Demo (4-6 hours)
+
+**Final Work:**
+- [ ] **Data:** Test & Deliver (end-to-end pipeline, documentation)
+- [ ] **Backend:** Finalize Docs & Deploy Readiness (documentation, health check)
+- [ ] **Frontend:** Bundle & Integration Test (production build)
+- [ ] **Deploy:** Handover & Rollback Plan (documentation, runbook)
+
+**Checkpoint:** All services deployed, stakeholder demo ready, documentation complete
+
+### 3.1.1 Plano de Migração Expandido (Futuro - Referência Original)
+
+**Nota:** O plano original de migração de 16 semanas foi planejado para implementação completa. Mantido para referência futura.
+
+### Fase de Migração (Semana 1-2) - Original
 
 **Objetivo:** Estabelecer nova infraestrutura sem quebrar sistema atual
 
