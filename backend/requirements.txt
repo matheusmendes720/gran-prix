@@ -1,72 +1,19 @@
-# Dataset Download and Preprocessing Requirements
-# Nova Corrente Demand Forecasting System
-#
-# IMPORTANT: This file contains ALL dependencies (including ML).
-# 
-# For deployment, use: requirements_deployment.txt (NO ML dependencies)
-# For ML processing, use: requirements_ml.txt (ML dependencies only)
-#
-# This file is kept for reference and local development that includes ML.
-
-# Core Data Processing
-pandas>=2.0.0
-numpy>=1.24.0
-
-# Kaggle API
-kaggle>=1.5.0
-
-# Web Scraping
-scrapy>=2.11.0
-requests>=2.31.0
-beautifulsoup4>=4.12.0
-
-# PDF Processing
-pdfplumber>=0.10.0
-PyPDF2>=3.0.0
-tabula-py>=2.5.0
-camelot-py[cv]>=0.11.0
-
-# Data Validation
-pyarrow>=14.0.0
-openpyxl>=3.1.0
-
-# Time Series & ML Models (for preprocessing integration)
-statsmodels>=0.14.0
-prophet>=1.1.5
-pmdarima>=2.0.0
-scikit-learn>=1.3.0
-scipy>=1.11.0
-
-# Deep Learning (for LSTM model)
-tensorflow>=2.13.0
-
-# Reporting
-reportlab>=4.0.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-
-# Utilities
-python-dateutil>=2.8.0
-pytz>=2023.3
-tqdm>=4.66.0
-holidays>=0.41
-
-# Logging and Configuration
-pyyaml>=6.0
-
-# Visualization
-dash>=2.14.0
-plotly>=5.17.0
-dash-bootstrap-components>=1.5.0
-streamlit>=1.28.0  # For interactive dashboard
-
-# API Server & Web Dashboard
-flask>=2.3.0
-flask-cors>=4.0.0
-jinja2>=3.1.0
-
-# Model Persistence
-joblib>=1.3.0
-
-# Database (Optional)
-psycopg2-binary>=2.9.0  # PostgreSQL support
+flask==2.3.3
+flask-cors==4.0.0
+flask-caching==2.1.0
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+alembic==1.12.1
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+gunicorn==21.2.0
+pandas==2.1.4
+numpy==1.25.2
+requests==2.31.0
+python-dateutil==2.8.2
+pytz==2023.3
+cachetools==5.3.2
+cryptography==41.0.7
+redis==5.0.1
