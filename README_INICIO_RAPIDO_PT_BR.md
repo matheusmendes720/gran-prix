@@ -34,10 +34,10 @@ cd gran-prix
 git lfs pull
 ```
 
-## 📖 Guia Completo
+## 📖 Guias Disponíveis
 
-Para instruções detalhadas, consulte:
-**[Guia Completo PT-BR](docs/development/GUIA_COMPLETO_CLONAR_REPOSITORIO_GIT_LFS_PT_BR.md)**
+- **[🔄 Atualizar Repositório Existente](docs/development/GUIA_ATUALIZAR_REPOSITORIO_EXISTENTE_GIT_LFS_PT_BR.md)** - Para quem já tem o repositório clonado
+- **[📚 Guia Completo de Clonagem](docs/development/GUIA_COMPLETO_CLONAR_REPOSITORIO_GIT_LFS_PT_BR.md)** - Para novos membros ou clonagem completa
 
 ## ✅ Verificar se Funcionou
 
