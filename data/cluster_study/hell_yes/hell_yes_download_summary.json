@@ -1,0 +1,17 @@
+{
+  "tier": "hell_yes",
+  "download_date": "2025-11-02T22:37:16.722850",
+  "total_datasets": 4,
+  "downloaded": 0,
+  "failed": 3,
+  "skipped": 1,
+  "downloaded_datasets": [],
+  "failed_datasets": [
+    "zenodo_wind_turbine_failures",
+    "mit_telecom_parts",
+    "mit_telecom_spare_parts"
+  ],
+  "skipped_datasets": [
+    "zenodo_broadband_brazil"
+  ]
+}

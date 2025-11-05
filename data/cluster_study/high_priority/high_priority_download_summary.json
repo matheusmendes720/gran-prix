@@ -1,0 +1,36 @@
+{
+  "tier": "high_priority",
+  "download_date": "2025-11-02T22:37:38.979625",
+  "total_datasets": 23,
+  "downloaded": 0,
+  "failed": 7,
+  "skipped": 16,
+  "downloaded_datasets": [],
+  "failed_datasets": [
+    "ieee_wind_turbine_failures",
+    "zenodo_bgsmt_mobility",
+    "gsma_mobile_connectivity_brazil",
+    "gsma_mobile_economy_brazil",
+    "zenodo_ai_decarbonization",
+    "internet_aberta_roi_brazil",
+    "bacen_exchange_rate_usd"
+  ],
+  "skipped_datasets": [
+    "github_network_fault",
+    "kaggle_smart_logistics",
+    "kaggle_cloud_supply_chain",
+    "test_dataset",
+    "springer_digital_divide",
+    "brazilian_fiber_structured",
+    "brazilian_operators_structured",
+    "anatel_spectrum",
+    "kaggle_supply_chain",
+    "kaggle_telecom_network",
+    "anatel_mobile_brazil",
+    "internet_aberta_forecast",
+    "brazilian_demand_factors",
+    "anatel_broadband",
+    "github_5g3e",
+    "kaggle_equipment_failure"
+  ]
+}

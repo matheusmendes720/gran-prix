@@ -1,0 +1,119 @@
+{
+  "creation_date": "2025-11-02T22:13:34.743566",
+  "total_records": 2539,
+  "total_features": 73,
+  "splits": {
+    "train": {
+      "records": 1624,
+      "percentage": 63.9621898385191,
+      "date_range": {
+        "min": "2024-10-09 00:00:00",
+        "max": "2025-06-26 00:00:00"
+      }
+    },
+    "validation": {
+      "records": 407,
+      "percentage": 16.02993304450571,
+      "date_range": {
+        "min": "2025-06-26 00:00:00",
+        "max": "2025-08-11 00:00:00"
+      }
+    },
+    "test": {
+      "records": 508,
+      "percentage": 20.007877116975187,
+      "date_range": {
+        "min": "2025-08-11 00:00:00",
+        "max": "2025-10-21 00:00:00"
+      }
+    }
+  },
+  "families": {
+    "MATERIAL ELETRICO": 821,
+    "EPI": 484,
+    "FERRO E AÇO": 483,
+    "MATERIAL CIVIL": 420,
+    "FERRAMENTAS E EQUIPAMENTOS": 331
+  },
+  "items_count": 540,
+  "date_range": {
+    "min": "2024-10-09 00:00:00",
+    "max": "2025-10-21 00:00:00",
+    "span_days": 377
+  },
+  "features_list": [
+    "date",
+    "item_id",
+    "material",
+    "familia",
+    "category",
+    "quantidade",
+    "unidade_medida",
+    "deposito",
+    "site_id",
+    "fornecedor",
+    "solicitacao",
+    "lead_time_days",
+    "data_requisitada",
+    "data_solicitado",
+    "data_compra",
+    "year",
+    "month",
+    "day",
+    "temperature_avg_c",
+    "precipitation_mm",
+    "humidity_percent",
+    "is_intense_rain",
+    "is_high_humidity",
+    "corrosion_risk",
+    "inflation_rate",
+    "exchange_rate_brl_usd",
+    "gdp_growth_rate",
+    "5g_coverage_pct",
+    "5g_investment_brl_billions",
+    "is_5g_milestone",
+    "is_holiday",
+    "is_weekend",
+    "is_drought",
+    "is_flood_risk",
+    "sla_penalty_brl",
+    "availability_target",
+    "downtime_hours_monthly",
+    "sla_violation_risk",
+    "base_lead_time_days",
+    "total_lead_time_days",
+    "customs_delay_days",
+    "strike_risk",
+    "is_critical_lead_time",
+    "weekday",
+    "quarter",
+    "day_of_year",
+    "month_sin",
+    "month_cos",
+    "day_of_year_sin",
+    "day_of_year_cos",
+    "extreme_heat",
+    "cold_weather",
+    "heavy_rain",
+    "no_rain",
+    "high_inflation",
+    "currency_devaluation",
+    "5g_active",
+    "5g_expansion_rate",
+    "lead_time_category",
+    "is_critical_lead_time_nc",
+    "family_frequency",
+    "site_frequency",
+    "supplier_frequency",
+    "family_demand_ma_7",
+    "family_demand_std_7",
+    "family_demand_ma_30",
+    "family_demand_std_30",
+    "site_demand_ma_7",
+    "site_demand_ma_30",
+    "supplier_lead_time_mean",
+    "supplier_lead_time_std",
+    "familia_encoded",
+    "target"
+  ]
+}

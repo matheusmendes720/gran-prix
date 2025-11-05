@@ -1,0 +1,136 @@
+{
+  "dataset_id": "kaggle_cloud_supply_chain",
+  "validation_date": "2025-11-02T20:25:37.104723",
+  "total_rows": 3197,
+  "total_columns": 33,
+  "checks": {
+    "completeness": {
+      "total_cells": 105501,
+      "missing_cells": 0,
+      "missing_percentage": 0.0,
+      "missing_by_column": {
+        "date": 0,
+        "item_id": 0,
+        "product_category": 0,
+        "warehouse_location": 0,
+        "inventory_level": 0,
+        "quantity": 0,
+        "cost": 0,
+        "lead_time": 0,
+        "restock_quantity": 0,
+        "promotion_flag": 0,
+        "temperature_celsius": 0,
+        "humidity_percent": 0,
+        "truck_arrival_delay_mins": 0,
+        "demand_forecast": 0,
+        "day_of_year_sin": 0,
+        "day_of_year_cos": 0,
+        "week_of_year_sin": 0,
+        "week_of_year_cos": 0,
+        "day_of_month_sin": 0,
+        "day_of_month_cos": 0,
+        "month": 0,
+        "weekday": 0,
+        "quarter": 0,
+        "year": 0,
+        "is_weekend": 0,
+        "is_month_start": 0,
+        "is_month_end": 0,
+        "is_holiday": 0,
+        "is_carnival": 0,
+        "dataset_source": 0,
+        "climate_impact": 0,
+        "economic_impact": 0,
+        "demand_adjustment_factor": 0
+      },
+      "missing_percentage_by_column": {
+        "date": 0.0,
+        "item_id": 0.0,
+        "product_category": 0.0,
+        "warehouse_location": 0.0,
+        "inventory_level": 0.0,
+        "quantity": 0.0,
+        "cost": 0.0,
+        "lead_time": 0.0,
+        "restock_quantity": 0.0,
+        "promotion_flag": 0.0,
+        "temperature_celsius": 0.0,
+        "humidity_percent": 0.0,
+        "truck_arrival_delay_mins": 0.0,
+        "demand_forecast": 0.0,
+        "day_of_year_sin": 0.0,
+        "day_of_year_cos": 0.0,
+        "week_of_year_sin": 0.0,
+        "week_of_year_cos": 0.0,
+        "day_of_month_sin": 0.0,
+        "day_of_month_cos": 0.0,
+        "month": 0.0,
+        "weekday": 0.0,
+        "quarter": 0.0,
+        "year": 0.0,
+        "is_weekend": 0.0,
+        "is_month_start": 0.0,
+        "is_month_end": 0.0,
+        "is_holiday": 0.0,
+        "is_carnival": 0.0,
+        "dataset_source": 0.0,
+        "climate_impact": 0.0,
+        "economic_impact": 0.0,
+        "demand_adjustment_factor": 0.0
+      },
+      "severity": "low",
+      "status": "pass"
+    },
+    "type_integrity": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "value_consistency": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "outliers": {
+      "outliers_by_column": {
+        "demand_forecast": {
+          "count": 2,
+          "percentage": 0.06,
+          "lower_bound": 11.5,
+          "upper_bound": 47.5
+        }
+      },
+      "total_outliers": 2,
+      "total_outlier_percentage": 0.0,
+      "severity": "low",
+      "status": "pass"
+    },
+    "duplicates": {
+      "total_duplicates": 0,
+      "duplicate_percentage": 0.0,
+      "key_duplicates": 1667,
+      "severity": "high",
+      "status": "warning"
+    },
+    "date_validation": {
+      "date_ranges": {
+        "date": {
+          "min": "2024-01-01T00:00:00",
+          "max": "2024-06-28T00:00:00",
+          "range_days": 179,
+          "valid_dates": 3197,
+          "total_rows": 3197
+        }
+      },
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "business_rules": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    }
+  },
+  "quality_score": 0.955
+}

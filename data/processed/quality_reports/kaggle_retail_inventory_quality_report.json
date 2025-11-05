@@ -1,0 +1,154 @@
+{
+  "dataset_id": "kaggle_retail_inventory",
+  "validation_date": "2025-11-02T20:25:17.052862",
+  "total_rows": 73100,
+  "total_columns": 36,
+  "checks": {
+    "completeness": {
+      "total_cells": 2631600,
+      "missing_cells": 0,
+      "missing_percentage": 0.0,
+      "missing_by_column": {
+        "date": 0,
+        "Store ID": 0,
+        "Product ID": 0,
+        "category": 0,
+        "Region": 0,
+        "Inventory Level": 0,
+        "Units Sold": 0,
+        "Units Ordered": 0,
+        "Demand Forecast": 0,
+        "Price": 0,
+        "Discount": 0,
+        "Weather Condition": 0,
+        "Holiday/Promotion": 0,
+        "Competitor Pricing": 0,
+        "Seasonality": 0,
+        "item_id": 0,
+        "quantity": 0,
+        "day_of_year_sin": 0,
+        "day_of_year_cos": 0,
+        "week_of_year_sin": 0,
+        "week_of_year_cos": 0,
+        "day_of_month_sin": 0,
+        "day_of_month_cos": 0,
+        "month": 0,
+        "weekday": 0,
+        "quarter": 0,
+        "year": 0,
+        "is_weekend": 0,
+        "is_month_start": 0,
+        "is_month_end": 0,
+        "is_holiday": 0,
+        "is_carnival": 0,
+        "dataset_source": 0,
+        "climate_impact": 0,
+        "economic_impact": 0,
+        "demand_adjustment_factor": 0
+      },
+      "missing_percentage_by_column": {
+        "date": 0.0,
+        "Store ID": 0.0,
+        "Product ID": 0.0,
+        "category": 0.0,
+        "Region": 0.0,
+        "Inventory Level": 0.0,
+        "Units Sold": 0.0,
+        "Units Ordered": 0.0,
+        "Demand Forecast": 0.0,
+        "Price": 0.0,
+        "Discount": 0.0,
+        "Weather Condition": 0.0,
+        "Holiday/Promotion": 0.0,
+        "Competitor Pricing": 0.0,
+        "Seasonality": 0.0,
+        "item_id": 0.0,
+        "quantity": 0.0,
+        "day_of_year_sin": 0.0,
+        "day_of_year_cos": 0.0,
+        "week_of_year_sin": 0.0,
+        "week_of_year_cos": 0.0,
+        "day_of_month_sin": 0.0,
+        "day_of_month_cos": 0.0,
+        "month": 0.0,
+        "weekday": 0.0,
+        "quarter": 0.0,
+        "year": 0.0,
+        "is_weekend": 0.0,
+        "is_month_start": 0.0,
+        "is_month_end": 0.0,
+        "is_holiday": 0.0,
+        "is_carnival": 0.0,
+        "dataset_source": 0.0,
+        "climate_impact": 0.0,
+        "economic_impact": 0.0,
+        "demand_adjustment_factor": 0.0
+      },
+      "severity": "low",
+      "status": "pass"
+    },
+    "type_integrity": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "value_consistency": {
+      "issues": [
+        {
+          "column": "Demand Forecast",
+          "issue": "673 negative values found",
+          "severity": "medium"
+        }
+      ],
+      "issue_count": 1,
+      "status": "warning"
+    },
+    "outliers": {
+      "outliers_by_column": {
+        "Units Sold": {
+          "count": 715,
+          "percentage": 0.98,
+          "lower_bound": -182.0,
+          "upper_bound": 434.0
+        },
+        "Demand Forecast": {
+          "count": 732,
+          "percentage": 1.0,
+          "lower_bound": -177.9,
+          "upper_bound": 439.63
+        }
+      },
+      "total_outliers": 1447,
+      "total_outlier_percentage": 0.07,
+      "severity": "low",
+      "status": "pass"
+    },
+    "duplicates": {
+      "total_duplicates": 0,
+      "duplicate_percentage": 0.0,
+      "key_duplicates": 0,
+      "severity": "low",
+      "status": "pass"
+    },
+    "date_validation": {
+      "date_ranges": {
+        "date": {
+          "min": "2022-01-01T00:00:00",
+          "max": "2024-01-01T00:00:00",
+          "range_days": 730,
+          "valid_dates": 73100,
+          "total_rows": 73100
+        }
+      },
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "business_rules": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    }
+  },
+  "quality_score": 0.955
+}

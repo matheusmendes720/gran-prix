@@ -1,0 +1,98 @@
+{
+  "dataset_name": "Brazilian IoT Market Summary",
+  "source": "Industry Research (MVNO Index, Mordor Intelligence)",
+  "description": "IoT connection growth in Brazil",
+  "created_at": "2025-10-31T22:50:18.468067",
+  "data_points": [
+    {
+      "date": "2020-10",
+      "month": 10,
+      "year": 2020,
+      "iot_connections_millions": 28.0,
+      "growth_rate_annual": 0.0
+    },
+    {
+      "date": "2021-10",
+      "month": 10,
+      "year": 2021,
+      "iot_connections_millions": 33.0,
+      "growth_rate_annual": 0.18
+    },
+    {
+      "date": "2022-10",
+      "month": 10,
+      "year": 2022,
+      "iot_connections_millions": 38.5,
+      "growth_rate_annual": 0.17
+    },
+    {
+      "date": "2023-10",
+      "month": 10,
+      "year": 2023,
+      "iot_connections_millions": 42.0,
+      "growth_rate_annual": 0.09
+    },
+    {
+      "date": "2024-10",
+      "month": 10,
+      "year": 2024,
+      "iot_connections_millions": 46.2,
+      "growth_rate_annual": 0.1
+    }
+  ],
+  "sectors": {
+    "agriculture": {
+      "connections_2024_millions": 12.0,
+      "growth_rate": 0.15,
+      "use_cases": [
+        "Precision agriculture",
+        "Livestock monitoring",
+        "Irrigation control"
+      ]
+    },
+    "logistics": {
+      "connections_2024_millions": 18.5,
+      "growth_rate": 0.12,
+      "use_cases": [
+        "Fleet tracking",
+        "Package monitoring",
+        "Warehouse management"
+      ]
+    },
+    "smart_cities": {
+      "connections_2024_millions": 8.0,
+      "growth_rate": 0.2,
+      "use_cases": [
+        "Street lighting",
+        "Traffic management",
+        "Environmental monitoring"
+      ]
+    },
+    "utilities": {
+      "connections_2024_millions": 4.5,
+      "growth_rate": 0.25,
+      "use_cases": [
+        "Smart meters",
+        "Grid monitoring",
+        "Water management"
+      ]
+    },
+    "retail": {
+      "connections_2024_millions": 3.2,
+      "growth_rate": 0.08,
+      "use_cases": [
+        "POS systems",
+        "Inventory tracking",
+        "Customer analytics"
+      ]
+    }
+  },
+  "forecast": {
+    "method": "Linear trend + sector growth",
+    "2025_estimate": 52.0,
+    "2026_estimate": 58.0,
+    "2027_estimate": 64.0,
+    "2028_estimate": 71.0,
+    "cagr": 0.14
+  }
+}

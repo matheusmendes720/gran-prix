@@ -1,0 +1,76 @@
+2025-11-01 07:04:08,444 - __main__ - INFO - ================================================================================
+2025-11-01 07:04:08,444 - __main__ - INFO - COMPREHENSIVE DATASET FETCHING PIPELINE
+2025-11-01 07:04:08,444 - __main__ - INFO - ================================================================================
+2025-11-01 07:04:08,444 - __main__ - INFO - 
+================================================================================
+2025-11-01 07:04:08,445 - __main__ - INFO - PHASE 1: DOWNLOADING ANATEL DATASETS
+2025-11-01 07:04:08,445 - __main__ - INFO - ================================================================================
+2025-11-01 07:04:08,445 - __main__ - INFO - ================================================================================
+2025-11-01 07:04:08,445 - __main__ - INFO - DOWNLOADING ANATEL DATASETS
+2025-11-01 07:04:08,445 - __main__ - INFO - ================================================================================
+2025-11-01 07:04:08,445 - __main__ - INFO - 
+Downloading: mobile_phone_accesses
+2025-11-01 07:04:09,491 - __main__ - WARNING - Saved HTML for processing: D:\codex\datamaster\senai\gran_prix\data\raw\anatel_comprehensive\mobile_accesses\mobile_phone_accesses.html
+2025-11-01 07:04:09,491 - __main__ - INFO - 
+Downloading: broadband_accesses
+2025-11-01 07:04:10,523 - __main__ - WARNING - Saved HTML for processing: D:\codex\datamaster\senai\gran_prix\data\raw\anatel_comprehensive\broadband\broadband_accesses.html
+2025-11-01 07:04:10,523 - __main__ - INFO - 
+Downloading: tower_stations
+2025-11-01 07:04:11,281 - __main__ - INFO - Downloading: https://www.anatel.gov.br/dadosabertos/paineis_de_dados/qualidade/mapa_download_...
+2025-11-01 07:04:12,287 - __main__ - INFO - [OK] Downloaded: D:\codex\datamaster\senai\gran_prix\data\raw\anatel_comprehensive\towers\tower_stations.csv
+2025-11-01 07:04:12,289 - __main__ - INFO - 
+Downloading: spectrum_allocation
+2025-11-01 07:04:12,884 - __main__ - INFO - Downloading: https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/b18cd6e405bb47...
+2025-11-01 07:04:14,096 - __main__ - INFO - [OK] Downloaded: D:\codex\datamaster\senai\gran_prix\data\raw\anatel_comprehensive\spectrum\spectrum_allocation.csv
+2025-11-01 07:04:14,098 - __main__ - INFO - Anatel downloads: 4/4 successful
+2025-11-01 07:04:14,098 - __main__ - INFO - 
+================================================================================
+2025-11-01 07:04:14,098 - __main__ - INFO - PHASE 2: CREATING STRUCTURED DATASETS
+2025-11-01 07:04:14,098 - __main__ - INFO - ================================================================================
+2025-11-01 07:04:14,098 - __main__ - INFO - Creating GSMA regional Latin American data...
+2025-11-01 07:04:14,121 - __main__ - INFO - [OK] Created GSMA regional data: D:\codex\datamaster\senai\gran_prix\data\raw\gsma_regional\gsma_latin_america_regional.csv
+2025-11-01 07:04:14,122 - __main__ - INFO -    Records: 308
+2025-11-01 07:04:14,122 - __main__ - INFO - Creating ITU Big Data indicators...
+2025-11-01 07:04:14,127 - __main__ - INFO - [OK] Created ITU indicators: D:\codex\datamaster\senai\gran_prix\data\raw\itu_indicators\itu_brazil_indicators.csv
+2025-11-01 07:04:14,127 - __main__ - INFO -    Records: 72
+2025-11-01 07:04:14,127 - __main__ - INFO - Creating OECD regulatory indicators...
+2025-11-01 07:04:14,130 - __main__ - INFO - [OK] Created OECD indicators: D:\codex\datamaster\senai\gran_prix\data\raw\oecd_indicators\oecd_brazil_regulatory.csv
+2025-11-01 07:04:14,130 - __main__ - INFO -    Records: 24
+2025-11-01 07:04:14,130 - __main__ - INFO - Creating subscriber forecasting data...
+2025-11-01 07:04:14,153 - __main__ - INFO - [OK] Created subscriber forecasting data: D:\codex\datamaster\senai\gran_prix\data\raw\subscriber_forecasting\subscriber_forecasting_detailed.csv
+2025-11-01 07:04:14,153 - __main__ - INFO -    Records: 1,152
+2025-11-01 07:04:14,154 - __main__ - INFO - Creating infrastructure planning data...
+2025-11-01 07:04:14,159 - __main__ - INFO - [OK] Created infrastructure planning data: D:\codex\datamaster\senai\gran_prix\data\raw\infrastructure_planning\infrastructure_planning_regional.csv
+2025-11-01 07:04:14,159 - __main__ - INFO -    Records: 120
+2025-11-01 07:04:14,159 - __main__ - INFO - 
+================================================================================
+2025-11-01 07:04:14,159 - __main__ - INFO - PHASE 3: CREATING UNIFIED DATASET
+2025-11-01 07:04:14,159 - __main__ - INFO - ================================================================================
+2025-11-01 07:04:14,159 - __main__ - INFO - ================================================================================
+2025-11-01 07:04:14,159 - __main__ - INFO - CREATING UNIFIED COMPREHENSIVE DATASET
+2025-11-01 07:04:14,159 - __main__ - INFO - ================================================================================
+2025-11-01 07:04:14,159 - __main__ - INFO - Loading: gsma_latin_america_regional.csv
+2025-11-01 07:04:14,175 - __main__ - INFO -   [OK] Loaded 308 records
+2025-11-01 07:04:14,175 - __main__ - INFO - Loading: itu_brazil_indicators.csv
+2025-11-01 07:04:14,189 - __main__ - INFO -   [OK] Loaded 72 records
+2025-11-01 07:04:14,189 - __main__ - INFO - Loading: oecd_brazil_regulatory.csv
+2025-11-01 07:04:14,202 - __main__ - INFO -   [OK] Loaded 24 records
+2025-11-01 07:04:14,203 - __main__ - INFO - Loading: subscriber_forecasting_detailed.csv
+2025-11-01 07:04:14,217 - __main__ - INFO -   [OK] Loaded 1,152 records
+2025-11-01 07:04:14,217 - __main__ - INFO - Loading: infrastructure_planning_regional.csv
+2025-11-01 07:04:14,231 - __main__ - INFO -   [OK] Loaded 120 records
+2025-11-01 07:04:14,256 - __main__ - INFO - 
+[OK] Created unified comprehensive dataset
+2025-11-01 07:04:14,257 - __main__ - INFO -    File: D:\codex\datamaster\senai\gran_prix\data\processed\unified_comprehensive_ml_ready.csv
+2025-11-01 07:04:14,257 - __main__ - INFO -    Records: 1,676
+2025-11-01 07:04:14,257 - __main__ - INFO -    Columns: 36
+2025-11-01 07:04:14,257 - __main__ - INFO - 
+================================================================================
+2025-11-01 07:04:14,257 - __main__ - INFO - PIPELINE COMPLETE!
+2025-11-01 07:04:14,257 - __main__ - INFO - ================================================================================
+2025-11-01 07:04:14,257 - __main__ - INFO - [OK] Unified comprehensive dataset: D:\codex\datamaster\senai\gran_prix\data\processed\unified_comprehensive_ml_ready.csv
+2025-11-01 07:04:14,257 - __main__ - INFO - 
+Next steps:
+2025-11-01 07:04:14,257 - __main__ - INFO - 1. Review comprehensive dataset
+2025-11-01 07:04:14,257 - __main__ - INFO - 2. Integrate with existing unified dataset
+2025-11-01 07:04:14,257 - __main__ - INFO - 3. Train ML/DL models with comprehensive features

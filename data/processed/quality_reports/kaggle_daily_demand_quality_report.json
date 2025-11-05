@@ -1,0 +1,174 @@
+{
+  "dataset_id": "kaggle_daily_demand",
+  "validation_date": "2025-11-02T20:25:16.648626",
+  "total_rows": 56,
+  "total_columns": 34,
+  "checks": {
+    "completeness": {
+      "total_cells": 1904,
+      "missing_cells": 0,
+      "missing_percentage": 0.0,
+      "missing_by_column": {
+        "Unnamed: 0": 0,
+        "category": 0,
+        "item_id": 0,
+        "Non-urgent order": 0,
+        "Urgent order": 0,
+        "Order type A": 0,
+        "Order type B": 0,
+        "Order type C": 0,
+        "Fiscal sector orders": 0,
+        "Orders from the traffic controller sector": 0,
+        "Banking orders (1)": 0,
+        "Banking orders (2)": 0,
+        "Banking orders (3)": 0,
+        "quantity": 0,
+        "date": 0,
+        "day_of_year_sin": 0,
+        "day_of_year_cos": 0,
+        "week_of_year_sin": 0,
+        "week_of_year_cos": 0,
+        "day_of_month_sin": 0,
+        "day_of_month_cos": 0,
+        "month": 0,
+        "weekday": 0,
+        "quarter": 0,
+        "year": 0,
+        "is_weekend": 0,
+        "is_month_start": 0,
+        "is_month_end": 0,
+        "is_holiday": 0,
+        "is_carnival": 0,
+        "dataset_source": 0,
+        "climate_impact": 0,
+        "economic_impact": 0,
+        "demand_adjustment_factor": 0
+      },
+      "missing_percentage_by_column": {
+        "Unnamed: 0": 0.0,
+        "category": 0.0,
+        "item_id": 0.0,
+        "Non-urgent order": 0.0,
+        "Urgent order": 0.0,
+        "Order type A": 0.0,
+        "Order type B": 0.0,
+        "Order type C": 0.0,
+        "Fiscal sector orders": 0.0,
+        "Orders from the traffic controller sector": 0.0,
+        "Banking orders (1)": 0.0,
+        "Banking orders (2)": 0.0,
+        "Banking orders (3)": 0.0,
+        "quantity": 0.0,
+        "date": 0.0,
+        "day_of_year_sin": 0.0,
+        "day_of_year_cos": 0.0,
+        "week_of_year_sin": 0.0,
+        "week_of_year_cos": 0.0,
+        "day_of_month_sin": 0.0,
+        "day_of_month_cos": 0.0,
+        "month": 0.0,
+        "weekday": 0.0,
+        "quarter": 0.0,
+        "year": 0.0,
+        "is_weekend": 0.0,
+        "is_month_start": 0.0,
+        "is_month_end": 0.0,
+        "is_holiday": 0.0,
+        "is_carnival": 0.0,
+        "dataset_source": 0.0,
+        "climate_impact": 0.0,
+        "economic_impact": 0.0,
+        "demand_adjustment_factor": 0.0
+      },
+      "severity": "low",
+      "status": "pass"
+    },
+    "type_integrity": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "value_consistency": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "outliers": {
+      "outliers_by_column": {
+        "Urgent order": {
+          "count": 2,
+          "percentage": 3.57,
+          "lower_bound": 62.0,
+          "upper_bound": 164.01
+        },
+        "Order type A": {
+          "count": 3,
+          "percentage": 5.36,
+          "lower_bound": 12.15,
+          "upper_bound": 83.52
+        },
+        "Order type B": {
+          "count": 1,
+          "percentage": 1.79,
+          "lower_bound": -6.18,
+          "upper_bound": 204.24
+        },
+        "Fiscal sector orders": {
+          "count": 12,
+          "percentage": 21.43,
+          "lower_bound": -27.16,
+          "upper_bound": 48.87
+        },
+        "Banking orders (1)": {
+          "count": 9,
+          "percentage": 16.07,
+          "lower_bound": -14764.75,
+          "upper_bound": 77269.25
+        },
+        "Banking orders (2)": {
+          "count": 3,
+          "percentage": 5.36,
+          "lower_bound": -9297.75,
+          "upper_bound": 149770.25
+        },
+        "Banking orders (3)": {
+          "count": 1,
+          "percentage": 1.79,
+          "lower_bound": -15231.0,
+          "upper_bound": 58815.0
+        }
+      },
+      "total_outliers": 31,
+      "total_outlier_percentage": 1.73,
+      "severity": "high",
+      "status": "fail"
+    },
+    "duplicates": {
+      "total_duplicates": 0,
+      "duplicate_percentage": 0.0,
+      "key_duplicates": 0,
+      "severity": "low",
+      "status": "pass"
+    },
+    "date_validation": {
+      "date_ranges": {
+        "date": {
+          "min": "2020-01-02T00:00:00",
+          "max": "2020-02-29T00:00:00",
+          "range_days": 58,
+          "valid_dates": 56,
+          "total_rows": 56
+        }
+      },
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "business_rules": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    }
+  },
+  "quality_score": 0.895
+}

@@ -1,0 +1,154 @@
+{
+  "dataset_id": "kaggle_logistics_warehouse",
+  "validation_date": "2025-11-02T20:25:16.711336",
+  "total_rows": 3204,
+  "total_columns": 42,
+  "checks": {
+    "completeness": {
+      "total_cells": 134568,
+      "missing_cells": 0,
+      "missing_percentage": 0.0,
+      "missing_by_column": {
+        "item_id": 0,
+        "category": 0,
+        "stock_level": 0,
+        "reorder_point": 0,
+        "reorder_frequency_days": 0,
+        "lead_time": 0,
+        "quantity": 0,
+        "demand_std_dev": 0,
+        "item_popularity_score": 0,
+        "storage_location_id": 0,
+        "zone": 0,
+        "picking_time_seconds": 0,
+        "handling_cost_per_unit": 0,
+        "cost": 0,
+        "holding_cost_per_unit_day": 0,
+        "stockout_count_last_month": 0,
+        "order_fulfillment_rate": 0,
+        "total_orders_last_month": 0,
+        "turnover_ratio": 0,
+        "layout_efficiency_score": 0,
+        "date": 0,
+        "forecasted_demand_next_7d": 0,
+        "KPI_score": 0,
+        "day_of_year_sin": 0,
+        "day_of_year_cos": 0,
+        "week_of_year_sin": 0,
+        "week_of_year_cos": 0,
+        "day_of_month_sin": 0,
+        "day_of_month_cos": 0,
+        "month": 0,
+        "weekday": 0,
+        "quarter": 0,
+        "year": 0,
+        "is_weekend": 0,
+        "is_month_start": 0,
+        "is_month_end": 0,
+        "is_holiday": 0,
+        "is_carnival": 0,
+        "dataset_source": 0,
+        "climate_impact": 0,
+        "economic_impact": 0,
+        "demand_adjustment_factor": 0
+      },
+      "missing_percentage_by_column": {
+        "item_id": 0.0,
+        "category": 0.0,
+        "stock_level": 0.0,
+        "reorder_point": 0.0,
+        "reorder_frequency_days": 0.0,
+        "lead_time": 0.0,
+        "quantity": 0.0,
+        "demand_std_dev": 0.0,
+        "item_popularity_score": 0.0,
+        "storage_location_id": 0.0,
+        "zone": 0.0,
+        "picking_time_seconds": 0.0,
+        "handling_cost_per_unit": 0.0,
+        "cost": 0.0,
+        "holding_cost_per_unit_day": 0.0,
+        "stockout_count_last_month": 0.0,
+        "order_fulfillment_rate": 0.0,
+        "total_orders_last_month": 0.0,
+        "turnover_ratio": 0.0,
+        "layout_efficiency_score": 0.0,
+        "date": 0.0,
+        "forecasted_demand_next_7d": 0.0,
+        "KPI_score": 0.0,
+        "day_of_year_sin": 0.0,
+        "day_of_year_cos": 0.0,
+        "week_of_year_sin": 0.0,
+        "week_of_year_cos": 0.0,
+        "day_of_month_sin": 0.0,
+        "day_of_month_cos": 0.0,
+        "month": 0.0,
+        "weekday": 0.0,
+        "quarter": 0.0,
+        "year": 0.0,
+        "is_weekend": 0.0,
+        "is_month_start": 0.0,
+        "is_month_end": 0.0,
+        "is_holiday": 0.0,
+        "is_carnival": 0.0,
+        "dataset_source": 0.0,
+        "climate_impact": 0.0,
+        "economic_impact": 0.0,
+        "demand_adjustment_factor": 0.0
+      },
+      "severity": "low",
+      "status": "pass"
+    },
+    "type_integrity": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "value_consistency": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "outliers": {
+      "outliers_by_column": {
+        "KPI_score": {
+          "count": 6,
+          "percentage": 0.19,
+          "lower_bound": 0.3,
+          "upper_bound": 0.9
+        }
+      },
+      "total_outliers": 6,
+      "total_outlier_percentage": 0.01,
+      "severity": "low",
+      "status": "pass"
+    },
+    "duplicates": {
+      "total_duplicates": 0,
+      "duplicate_percentage": 0.0,
+      "key_duplicates": 0,
+      "severity": "low",
+      "status": "pass"
+    },
+    "date_validation": {
+      "date_ranges": {
+        "date": {
+          "min": "2024-01-01T00:00:00",
+          "max": "2024-12-30T00:00:00",
+          "range_days": 364,
+          "valid_dates": 3204,
+          "total_rows": 3204
+        }
+      },
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "business_rules": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    }
+  },
+  "quality_score": 1.0
+}

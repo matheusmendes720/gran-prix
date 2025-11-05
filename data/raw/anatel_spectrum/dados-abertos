@@ -1,0 +1,7317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+  <!-- Google Tag Manager -->
+  <script type="text">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NHZSKTD');</script>
+  <!-- End Google Tag Manager -->
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://www.gov.br/anatel",
+            "logo": "https://www.gov.br/anatel/logo.png"
+        }</script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://www.gov.br/anatel",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.gov.br/anatel/search?SearchableText={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+        }</script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    
+        <base href="https://www.gov.br/anatel/pt-br/dados/dados-abertos" /><!--[if lt IE 7]></base><![endif]-->
+    
+
+    
+        <meta property="og:title" content="Dados Abertos" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.gov.br/anatel/pt-br/dados/dados-abertos" />
+<meta property="og:image" content="https://www.gov.br/anatel/logo.png" />
+
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Agência Nacional de Telecomunicações" />
+
+
+  
+
+  
+  
+  <script type="text">
+    (function() {
+        var po = document.createElement('script');
+        po.async = true;
+        po.src = document.location.protocol + '//connect.facebook.net/pt_BR/all.js#xfbml=1';
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(po);
+    }());
+    </script>
+
+
+
+  
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@" />
+  
+
+
+
+
+
+<meta property="creator.productor" content="https://www.gov.br/mcom" />
+
+
+
+  
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/anatel/portal_css/Sunburst%20Theme/reset-cachekey-2be7e8639b7f6401dbf6bc3189551625.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/anatel/portal_css/Sunburst%20Theme/base-cachekey-6aa6b5e6ece744e01287cda367ad826d.css" />
+    <style type="text/css" media="screen">@import url(https://www.gov.br/anatel/portal_css/Sunburst%20Theme/resourceplone.app.jquerytools.dateinput-cachekey-c41c9488397d83ad0dd6ade9dc73ff24.css);</style>
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/anatel/portal_css/Sunburst%20Theme/resourceplone.formwidget.datetimestyles-cachekey-785f3d5ef8f2658647733688dcc6f79b.css" />
+    <style type="text/css" media="screen">@import url(https://www.gov.br/anatel/portal_css/Sunburst%20Theme/jquery.autocomplete-cachekey-fa8992498b21bdb61ecaedf1ddff7c92.css);</style>
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/anatel/portal_css/Sunburst%20Theme/embedder-cachekey-fb21327227ef76f3a79d454f4acb4a81.css" media="screen" />
+    <style type="text/css" media="screen">@import url(https://www.gov.br/anatel/portal_css/Sunburst%20Theme/resourcecollective.pollscsscollective.polls-cachekey-d788c50cffbdc2fad6462d0d4010f32c.css);</style>
+        <!--[if lt IE 8]>    
+    
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/anatel/portal_css/Sunburst%20Theme/IEFixes-cachekey-055427f12ab5a2e2cbefc2778e48947e.css" media="screen" />
+        <![endif]-->
+    
+    <style type="text/css" media="all">@import url(https://www.gov.br/anatel/portal_css/Sunburst%20Theme/resourcepas.plugins.loginunicologinunico-cachekey-b8feb4738aeeefa83b76ba389138f715.css);</style>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/anatel/portal_css/Sunburst%20Theme/resourcelgpd.plugindsgov.min-cachekey-c822730e2d2fc86afe21097d1c066493.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/anatel/portal_css/Sunburst%20Theme/resourcegovbr.policycanais-cachekey-d6b662bbf7237258ad98363d91b31fff.css" />
+
+  
+  
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourcegovbr.policybrowser-update-cachekey-0f89816c7755160135b1b54783b61060.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourceplone.app.jquery-cachekey-7165284d99803ca13efccf2fafd926b9.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourcegovbr.policyfolder_contents-cachekey-9c7e355de7cab49f9b505b93861635c7.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourcegovbr.policycookiebar_1_3_55-cachekey-3c97a74cd83e90f826982c165d300998.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourcegovbr.policyapplication_cookiebar_1_3_55-cachekey-44dc02e37e42d4f467f30182d4476bf6.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/collective.js.jqueryui.custom.min-cachekey-c37f6977dbd5658874b43679f5e5fc35.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourceplone.formwidget.recurrencejquery.tmpl-beta1-cachekey-a7e75e39211e38df8c8cac5c16ed8389.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourcecollective.js.bootstrapjsbootstrap.min-cachekey-f09134e805a851ca4bd254268761f034.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourcecollective.coverjsmain-cachekey-43bf70a717a16dd07a156297f384f038.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourcebrasil.gov.tilesvendorjquery.jplayer.min-cachekey-493734623caff50c2824029bb9b1042d.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourcedropdown-menu-cachekey-d308731b14f3219258863583ff6a95fc.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourcelgpd.pluginchangeCookieImage-cachekey-0b791a1d5c37ad0177dd863a2e715dcc.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/resourcelgpd.pluginblock_cookies-cachekey-2fd9e3c2b8f3a2bea100a906b877a521.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/anatel/portal_javascripts/Sunburst%20Theme/++resource++govbr.recomendacao/govbr.recom.c339e72c8ffbb2f6c087.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://www.gov.br/anatel/++resource++brasil.gov.agenda/brasilgovagenda-720c34e.css" />
+
+
+  <script defer="defer" src="https://www.gov.br/anatel/++resource++brasil.gov.agenda/brasilgovagenda-720c34e.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://www.gov.br/anatel/++resource++brasil.gov.portal/brasilgovportal-ee510e4.css" />
+
+
+  <script defer="defer" src="https://www.gov.br/anatel/++resource++brasil.gov.portal/brasilgovportal-ee510e4.js"></script>
+
+
+
+<title>Dados Abertos — Agência Nacional de Telecomunicações</title>
+<link rel="http://purl.org/dc/terms/subject http://schema.org/about http://xmlns.com/foaf/0.1/primaryTopic" href="http://vocab.e.gov.br/2011/03/vcge#esquema" />
+        
+    <link rel="author" href="https://www.gov.br/anatel/pt-br" title="Informações do Autor" />
+
+    <link rel="canonical" href="https://www.gov.br/anatel/pt-br/dados/dados-abertos" />
+
+    
+    
+
+
+<script type="text/javascript">
+        jQuery(function($){
+            if (typeof($.datepicker) != "undefined"){
+              $.datepicker.setDefaults(
+                jQuery.extend($.datepicker.regional['pt-BR'],
+                {dateFormat: 'dd/mm/yy'}));
+            }
+        });
+        </script>
+
+
+
+
+    <link rel="search" href="https://www.gov.br/anatel/pt-br/@@search" title="Buscar neste site" />
+
+
+
+        
+        
+        
+        
+        
+
+        
+        <meta name="generator" content="Plone - http://plone.org" />
+    
+
+    
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/anatel/++theme++padrao_govbr/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/anatel/++theme++padrao_govbr/favicons/favicon-32x32.png" />
+    <link rel="shortcut icon" type="image/png" href="/anatel/++theme++padrao_govbr/favicons/favicon-48x48.png" />
+    <link rel="mask-icon" href="/anatel/++theme++padrao_govbr/favicons/safari-pinned-tab.svg" color="#00a300" />
+    <meta name="msapplication-config" content="favicons/browserconfig.xml" />
+    <meta name="theme-color" content="#00a300" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body.userrole-authenticated .btn.btn-success.fileinput-button span:after {
+            content: "Adicionar Arquivos" !important;
+        }
+    </style>
+    
+    <script type="module" id="barra-govbr-pro" src="https://barra.sistema.gov.br/v1/barra-govbr-wc.iife.js"></script>
+    <script type="module" src="/govbrportal/js/session.js" defer="defer"></script>
+<link href="/anatel/++theme++padrao_govbr/govbrtheme-ab495f4.css" rel="stylesheet" /></head>
+
+<body id="" class="default-header-template portal-institucional template-document_view portaltype-document site-pt-br section-dados subsection-dados-abertos userrole-anonymous" data-base-url="https://www.gov.br/anatel/pt-br/dados/dados-abertos" data-portal-url="https://www.gov.br/anatel" dir="ltr">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe height="0" width="0" style="display:none;visibility:hidden" data-src="https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <nav class="govbr-skip-menu" aria-label="Acesso rápido">
+    <a href="#wrapper" accesskey="1">
+      <span class="sr-only">Ir para o</span>
+      Conteúdo
+      <span class="access-key">1</span>
+    </a>
+    <a href="/" accesskey="2">
+      <span class="sr-only">Ir para a</span>
+      Página Inicial
+      <span class="access-key">2</span>
+    </a>
+    <a href="#main-navigation" accesskey="3">
+      <span class="sr-only">Ir para o menu de</span>
+      Navegação
+      <span class="access-key">3</span>
+    </a>
+    <a href="#govbr-busca-input" accesskey="4">
+      <span class="sr-only">Ir para a</span>
+      Busca
+      <span class="access-key">4</span>
+    </a>
+    <a href="#portal-footer" accesskey="5">
+      <span class="sr-only">Ir para o</span>
+      Mapa do site
+      <span class="access-key">5</span>
+    </a>
+  </nav>
+
+  <noscript aria-label="Aviso de Javascript desabilitado">
+    <dl class="portalMessage attention erro-javascript">
+      <dt>Atenção!</dt>
+      <dd>Seu navegador não pode executar javascript. Alguns recursos podem não funcionar corretamente.</dd>
+    </dl>
+  </noscript>
+<!-- modal session message --><!-- User --><!-- Header --><!--
+    Para habilitar o novo menu &#233; necess&#225;rio descoment&#225;-lo em:
+    govbr/institucional/viewlets/institucional_menu_govbr.pt
+    --><!-- <header id="site-header" class="has-navigation-swipe"> --><header id="site-header" class="has-navigation-dropdown" style="z-index: 999;">
+        <div class="header-wrapper secondary">
+            <barra-govbr class="width100 shadow-none show-contrast-toggle" style="width: 100%;" id="barra-govbr" titulo="Ministério das Comunicações" signinhref="/govbrportal/inicializacao-autenticacao-openid.html" signouthref="/govbrportal/logout.html" linktitulo="https://www.gov.br/mcom" linklogo="https://www.gov.br/pt-br" idiomas="" idiomaativo="" linksdosistema="[{&quot;title&quot;:&quot;Órgãos do Governo&quot;,&quot;href&quot;:&quot;https://www.gov.br/pt-br/orgaos-do-governo&quot;},{&quot;title&quot;:&quot;Acesso à Informação&quot;,&quot;href&quot;:&quot;https://www.gov.br/acessoainformacao/pt-br&quot;},{&quot;title&quot;:&quot;Legislação&quot;,&quot;href&quot;:&quot;http://www4.planalto.gov.br/legislacao&quot;},{&quot;title&quot;:&quot;Acessibilidade&quot;,&quot;href&quot;:&quot;https://www.gov.br/governodigital/pt-br/acessibilidade-digital&quot;}]" contrastactive="false">
+            </barra-govbr>
+        </div>
+
+        <div class="main">
+            <div class="header-wrapper">
+
+                <div class="site-name-wrapper">
+                    <a class="ico-navegacao toggle-main-navigation" href="#">
+                        <span class="sr-only">Abrir menu principal de navegação</span>
+                        <span class="fa fa-bars" aria-hidden="true"></span>
+                        <span class="fa fa-times" aria-hidden="true"></span>
+                    </a>
+
+                    <!-- <a href="/" class="site-name">Nome do site</a> -->
+                    <!-- Usar nome completo -->
+                    
+                    <div class="site-name">
+                        <a href="https://www.gov.br/anatel/pt-br">Agência Nacional de Telecomunicações</a>
+                    </div>
+                </div>
+
+                
+            <div class="termos-mais-buscados desktop">
+                <section class="source-termos-mais-buscados">
+                    <div class="source-header-termos-mais-buscados">
+                        Termos mais buscados
+                    </div>
+                    <ul class="list-termos-mais-buscados">
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/anatel/pt-br/search?origem=termos&amp;SearchableText=imposto de renda">
+                                   <span class="fa-solid fa-arrow-trend-up"></span>
+                                   imposto de renda
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/anatel/pt-br/search?origem=termos&amp;SearchableText=inss">
+                                   <span class="fa-solid fa-arrow-trend-up"></span>
+                                   inss
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/anatel/pt-br/search?origem=termos&amp;SearchableText=assinatura">
+                                   <span class="fa-solid fa-arrow-trend-up"></span>
+                                   assinatura
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/anatel/pt-br/search?origem=termos&amp;SearchableText=cnh social">
+                                   <span class="fa-solid fa-arrow-trend-up"></span>
+                                   cnh social
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/anatel/pt-br/search?origem=termos&amp;SearchableText=enem">
+                                   <span class="fa-solid fa-arrow-trend-up"></span>
+                                   enem
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </section>
+            </div>
+            <div class="termos-mais-buscados mobile">
+                <section class="source-termos-mais-buscados">
+                    <div class="source-header-termos-mais-buscados">
+                        Termos mais buscados
+                    </div>                                
+                    <ul class="list-termos-mais-buscados">
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/anatel/pt-br/search?origem=termos&amp;SearchableText=imposto de renda">
+                                    <span class="fa-solid fa-arrow-trend-up"></span>
+                                    imposto de renda
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/anatel/pt-br/search?origem=termos&amp;SearchableText=inss">
+                                    <span class="fa-solid fa-arrow-trend-up"></span>
+                                    inss
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/anatel/pt-br/search?origem=termos&amp;SearchableText=assinatura">
+                                    <span class="fa-solid fa-arrow-trend-up"></span>
+                                    assinatura
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </section>
+            </div>
+        <div class="govbr-busca-header">
+                    <div id="govbr-busca-input">
+                    </div>
+                </div>
+
+                <script>
+                    $(document).ready(function() {                
+                        $('#searchtext-label button').appendTo(".aa-InputWrapperPrefix");
+                        $('#searchtext-label').remove();
+                    });
+                </script>
+
+            </div>
+        </div>
+
+        <!-- Main Menu -->
+        <nav class="navigation-wrapper navigation-dropdown" aria-label="Menu Principal">
+            <div class="navigation-content">
+                <div id="main-navigation" class="navigation-cell">
+                    <ul class="list-navigation"><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/assuntos" class="plain">Assuntos</a>
+                <ul class="submenu">
+                    <li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/5G" class="state-published hasDropDown">
+            
+            5G
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/5G" class="state-published">
+            
+            Espaço 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/5G/tecnologia-5g" class="state-published">
+            
+            Tecnologia 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/@@search?SearchableText=AnatelNoticias5G" class="state-published">
+            
+            Notícias 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/5G/leilao-de-espectro-5g" class="state-published">
+            
+            Leilão de Espectro 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/5G/perguntas-e-respostas" class="state-published">
+            
+            Perguntas e Respostas sobre o 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/universalizacao/compromissos-do-leilao-do-5g" class="state-published">
+            
+            Compromissos do Leilão do 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/acompanhamento-e-controle/5g" class="state-published">
+            
+            Painel de Acompanhamento
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/certificacao-de-produtos/celulares-em-5g" class="state-published">
+            
+            Celulares Certificados
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/acessibilidade" class="state-published">
+            
+            Acessibilidade
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/adaptacao" class="state-published hasDropDown">
+            
+            Adaptação
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/adaptacao/adaptacao-da-oi" class="state-published">
+            
+            Adaptação da Oi
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/agenda-2030" class="state-published hasDropDown">
+            
+            Agenda 2030
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/agenda-2030/seminario-pre-cop30" class="state-published">
+            
+            Seminário Pré-COP30
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/atuacao-internacional" class="state-published hasDropDown">
+            
+            Atuação Internacional
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/atuacao-internacional/relacoes-internacionais" class="state-published">
+            
+            Relações Internacionais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/atuacao-internacional/cbcs" class="state-published">
+            
+            Comissões Brasileiras de Comunicação
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal" class="state-published hasDropDown">
+            
+            Celular Legal
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/consulte-sua-situacao" class="state-published">
+            
+            Consulte Sua Situação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/o-projeto" class="state-published">
+            
+            Entenda o Projeto
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/beneficios-do-projeto" class="state-published">
+            
+            Benefícios e Objetivos Principais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/o-que-muda-com-o-projeto" class="state-published">
+            
+            O Que Muda Com o Projeto
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/selo-anatel" class="state-published">
+            
+            Selo de Certificação Anatel
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/o-aparelho-nao-funciona" class="state-published">
+            
+            Meu Aparelho Não Funciona
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/imei" class="state-published">
+            
+            Identificação Internacional de Equipamento Móvel - IMEI
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/antes-de-comprar" class="state-published">
+            
+            Antes de Comprar
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/o-que-fazer" class="state-published">
+            
+            O Que Fazer
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/celular-roubado" class="state-published">
+            
+            Celular Roubado
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/celular-seguro" class="state-published">
+            
+            Celular Seguro
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/perguntas-frequentes" class="state-published">
+            
+            Perguntas Frequentes
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/noticias/acoes-do-setor-de-telecomunicacoes-no-combate-ao-coronavirus" class="state-published">
+            
+            Coronavírus
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/dicas-contra-fraudes" class="state-published">
+            
+            Dicas contra Fraudes
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/noticias" class="state-published">
+            
+            Notícias
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/acompanhamento-e-controle/processo-sancionador" class="state-published">
+            
+            Processo Sancionador
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/seguranca-cibernetica" class="state-published">
+            
+            Segurança Cibernética
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/seguranca-publica" class="state-published">
+            
+            Segurança Pública
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao" class="plain">Acesso à Informação</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/institucional" class="state-published">
+            
+            Institucional
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/acoes-e-programas" class="state-published hasDropDown">
+            
+            Ações e Programas
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/acoes-e-programas/planejamento-estrategico" class="state-published">
+            
+            Planejamento Estratégico
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/acoes-e-programas/avaliacao-de-desempenho-institucional" class="state-published">
+            
+            Avaliação de Desempenho Institucional
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/pt-br/orgaos/agencia-nacional-de-telecomunicacoes" class="state-published">
+            
+            Carta de Serviços
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/acoes-e-programas/levantamento-integrado-de-governanca-do-tcu" class="state-published">
+            
+            Levantamento Integrado de Governança do TCU
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/participacao-social" class="state-published">
+            
+            Participação Social
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/auditorias" class="state-published hasDropDown">
+            
+            Auditorias
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/auditorias/relatorios-de-gestao" class="state-published">
+            
+            Relatórios de Gestão
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/auditorias/auditoria-interna" class="state-published">
+            
+            Auditoria Interna
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/auditorias/relatorios-e-informes-dos-orgaos-de-controle" class="state-published">
+            
+            Relatórios e Informes dos Órgãos de Controle
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/convenios-e-transferencias" class="state-published">
+            
+            Convênios e Transferências
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/receitas-e-despesas" class="state-published">
+            
+            Receitas e Despesas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/licitacoes-e-contratos" class="state-published">
+            
+            Licitações e Contratos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/servidores" class="state-published">
+            
+            Servidores
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/informacoes-classificadas" class="state-published">
+            
+            Informações Classificadas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/servico-de-informacao-ao-cidadao-sic" class="state-published">
+            
+            Serviço de Informação ao Cidadão (SIC)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/perguntas-frequentes" class="state-published">
+            
+            Perguntas Frequentes
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="/anatel/pt-br/dados/dados-abertos" class="state-published">
+            
+            Dados Abertos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/governanca" class="state-published">
+            
+            Governança
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/tratamento-de-dados-pessoais" class="state-published hasDropDown">
+            
+            Tratamento de Dados Pessoais
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/tratamento-de-dados-pessoais/aviso-de-privacidade" class="state-published">
+            
+            Aviso de Privacidade
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/tratamento-de-dados-pessoais/compartilhamento-de-dados" class="state-published">
+            
+            Compartilhamento de Dados
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/tratamento-de-dados-pessoais/ripd" class="state-published">
+            
+            Relatórios de Impacto à Proteção de Dados Pessoais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/tratamento-de-dados-pessoais/relatorios-orgaos-de-controle" class="state-published">
+            
+            Relatórios Órgãos de Controle
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/transparencia-e-prestacao-de-contas" class="state-published">
+            
+            Transparência e Prestação de Contas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&amp;acao_origem_externa=protocolo_pesquisar&amp;id_orgao_acesso_externo=0" class="state-published">
+            
+            Pesquisa Pública do SEI
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/canais_atendimento" class="plain">Canais de Atendimento</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/aplicativo" class="state-published">
+            
+            Aplicativo
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/internet" class="state-published">
+            
+            Internet
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/presencial" class="state-published">
+            
+            Presencial
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/telefone" class="state-published">
+            
+            Telefone
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/whatsapp" class="state-published">
+            
+            WhatsApp
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/ouvidoria" class="state-published">
+            
+            Ouvidoria
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/imprensa" class="state-published">
+            
+            Imprensa
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/sistemas" class="state-published">
+            
+            Sistemas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/apoio-institucional" class="state-published">
+            
+            Apoio Institucional
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo" class="plain">Centrais de Conteúdo</a>
+                <ul class="submenu">
+                    <li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes" class="state-published hasDropDown">
+            
+            Publicações
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/acervo-documental" class="state-published">
+            
+            Acervo Documental
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/acervo-bibliografico" class="state-published">
+            
+            Acervo Bibliográfico
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/biblioteca" class="state-published">
+            
+            Biblioteca da Anatel
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/doacoes-desfazimentos-e-eliminacoes" class="state-published">
+            
+            Doações, Desfazimentos e Eliminações
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/estudos-e-pesquisas" class="state-published">
+            
+            Estudos e Pesquisas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/relatorio-anual" class="state-published">
+            
+            Relatório Anual
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.flickr.com/photos/anatel_informa/albums" class="state-published">
+            
+            Imagens
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.youtube.com/anatel" class="state-published">
+            
+            Vídeos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/processo-eletronico" class="state-published">
+            
+            Processo Eletrônico (SEI)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/jurisprudencia" class="state-published">
+            
+            Repositório de Jurisprudência
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/solicitacao-de-vistas" class="state-published">
+            
+            Solicitação de Vistas de Processo e Documento
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/composicao" class="plain">Composição</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/estrutura-organizacional" class="state-published">
+            
+            Estrutura Organizacional
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/conselho-diretor" class="state-published">
+            
+            Conselho Diretor
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/conselho-consultivo" class="state-published">
+            
+            Conselho Consultivo
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/ceadi" class="state-published">
+            
+            Ceadi
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/comissao-de-etica" class="state-published">
+            
+            Comissão de Ética
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/comites" class="state-published hasDropDown">
+            
+            Comitês
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/participe-dos-debates/cdust" class="state-published">
+            
+            Comitê de Defesa dos Usuários de Serviços de Telecomunicações
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/comites/comite-de-uso-do-espectro-e-de-orbita" class="state-published">
+            
+            Comitê de Uso do Espectro e de Órbita
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/comites/comite-de-infraestrutura-de-telecomunicacoes" class="state-published">
+            
+            Comitê de Infraestrutura de Telecomunicações
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/prestadoras-de-pequeno-porte/cppp" class="state-published">
+            
+            Comitê de Prestadoras de Pequeno Porte
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/comites/comite-interno-de-governanca" class="state-published">
+            
+            Comitê Interno de Governança
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/grupos-de-trabalho" class="state-published hasDropDown">
+            
+            Grupos de Trabalho
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/grupos-de-trabalho/gaispi" class="state-published">
+            
+            Gaispi
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/grupos-de-trabalho/gape" class="state-published">
+            
+            Gape
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/grupos-de-trabalho/gired" class="state-published">
+            
+            Gired
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/seguranca-cibernetica" class="state-published">
+            
+            GT Ciber
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/certificacao/openran" class="state-published">
+            
+            GT OpenRAN
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/grupos-de-trabalho/gt-rcom" class="state-published">
+            
+            GT RCom
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/seguranca-publica" class="state-published">
+            
+            GT Seg
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/consumidor" class="plain">Consumidor</a>
+                <ul class="submenu">
+                    <li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/quer-reclamar" class="state-published hasDropDown">
+            
+            Quer Reclamar?
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/quer-reclamar/reclamacao" class="state-published">
+            
+            Registrar Reclamação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.naomeperturbe.com.br/" class="state-published">
+            
+            Bloqueio de Telemarketing
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/quer-reclamar/anatel-procon-ou-juizados-especiais" class="state-published">
+            
+            Anatel, Procon ou Juizados Especiais?
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/quer-reclamar/reclamacao-denuncia-ou-outras-manifestacoes" class="state-published">
+            
+            Reclamação, Denúncia ou Outras Manifestações?
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/consulte-sua-situacao" class="state-published">
+            
+            Situação do Celular (IMEI)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/chamadas-abusivas" class="state-published">
+            
+            Chamadas Abusivas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/conheca-seus-direitos" class="state-published">
+            
+            Conheça Seus Direitos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/pesquisa-de-satisfacao-e-qualidade" class="state-published">
+            
+            Pesquisa de Satisfação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/mundo-digital" class="state-published">
+            
+            Mundo Digital
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/compare-as-prestadoras" class="state-published hasDropDown">
+            
+            Compare as Prestadoras
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/consumidor/reclamacoes" class="state-published">
+            
+            Reclamações na Anatel
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/qualidade/indicadores-de-qualidade" class="state-published">
+            
+            Indicadores de Qualidade
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/participe-dos-debates" class="state-published hasDropDown">
+            
+            Contribua com os Debates
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/participe-dos-debates/conselhos-de-usuarios" class="state-published">
+            
+            Conselhos de Usuários
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/participe-dos-debates/cdust" class="state-published">
+            
+            CDUST
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="/anatel/pt-br/composicao/conselho-consultivo" class="state-published">
+            
+            Conselho Consultivo
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/participe-dos-debates/consultas-e-audiencias-publicas" class="state-published">
+            
+            Consultas e Audiências Públicas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="/anatel/pt-br/canais_atendimento/ouvidoria" class="state-published">
+            
+            Ouvidoria
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/projetosproconsumidor" class="state-published">
+            
+            Projetos Pró-consumidor
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="selected dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/dados" class="plain">Dados</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/" class="state-published">
+            
+            Indicadores Setoriais
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/paineis" class="state-published hasDropDown">
+            
+            Painéis
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/meu-municipio" class="state-published">
+            
+            Meu Município
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/acessos" class="state-published">
+            
+            Acessos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/acompanhamento-e-controle" class="state-published">
+            
+            Acompanhamento e Controle
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/areas-tarifarias" class="state-published">
+            
+            Áreas Tarifárias
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/arrecadacao" class="state-published">
+            
+            Arrecadação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/certificacao-de-produtos" class="state-published">
+            
+            Certificação de Produtos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/coletas-de-dados-setoriais" class="state-published">
+            
+            Coletas de Dados Setoriais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/competicao" class="state-published">
+            
+            Competição
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/consumidor" class="state-published">
+            
+            Consumidor
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/contratos-administrativos" class="state-published">
+            
+            Contratos Administrativos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/espectro-e-orbita" class="state-published">
+            
+            Espectro e Órbita
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/fiscalizacao" class="state-published">
+            
+            Fiscalização
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/gestao-de-pessoas" class="state-published">
+            
+            Gestão de Pessoas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/infraestrutura" class="state-published">
+            
+            Infraestrutura
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/outorga-e-licenciamento" class="state-published">
+            
+            Outorga e Licenciamento
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/participacao-social" class="state-published">
+            
+            Participação Social
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/planejamento" class="state-published">
+            
+            Planejamento
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/portabilidade" class="state-published">
+            
+            Portabilidade
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/qualidade" class="state-published">
+            
+            Qualidade
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/radiodifusao" class="state-published">
+            
+            Radiodifusão
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/regulamentacao" class="state-published">
+            
+            Regulamentação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/sei-em-numeros" class="state-published">
+            
+            SEI em Números
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/utilidade-publica" class="state-published">
+            
+            Utilidade Pública
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/coleta-de-dados-setoriais" class="state-published hasDropDown">
+            
+            Coleta de Dados Setoriais
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/universalizacao/coletas-de-dados-de-acessos" class="state-published">
+            
+            Coletas de Dados de Acessos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/coleta-de-dados-setoriais/coletas-de-dados-de-acompanhamento-economico" class="state-published">
+            
+            Coletas de Dados de Acompanhamento Econômico
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/coleta-de-dados-de-infraestrutura-de-transporte" class="state-published">
+            
+            Coleta de Dados de Infraestrutura de Transporte
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/coleta-de-dados-setoriais/manual-do-sistema-coleta-de-dados-anatel" class="state-published">
+            
+            Manual do Sistema Coleta de Dados
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura" class="state-published hasDropDown">
+            
+            Infraestrutura
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/antenas-nos-municipios" class="state-published">
+            
+            Antenas nos Municípios
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/coleta-de-dados-de-infraestrutura-de-transporte" class="state-published">
+            
+            Coleta de Dados de Infraestrutura de Transporte
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/cabos-submarinos" class="state-published">
+            
+            Cabos Submarinos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.anatel.gov.br/paineis/espectro-e-orbita/mapa-de-exposicao-a-campos-eletromagneticos" class="state-published">
+            
+            Medições de Campo Eletromagnético
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/pert" class="state-published">
+            
+            PERT
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/telefonia-fixa" class="state-published">
+            
+            Telefonia Fixa
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/qualidade" class="state-published hasDropDown">
+            
+            Qualidade
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/qualidade/qualidade-dos-servicos" class="state-published">
+            
+            Qualidade dos Serviços
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="/anatel/pt-br/consumidor/compare-as-prestadoras/pesquisa-de-satisfacao-e-qualidade" class="state-published">
+            
+            Pesquisa de Satisfação e Qualidade
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="/anatel/pt-br/consumidor/compare-as-prestadoras/reclamacoes-na-anatel" class="state-published">
+            
+            Reclamações na Anatel
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/utilidade-publica" class="state-published hasDropDown">
+            
+            Utilidade Pública
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/utilidade-publica/alertas-de-desastres" class="state-published">
+            
+            Alertas de Desastres
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/utilidade-publica/cadastro-pre-pago" class="state-published">
+            
+            Cadastro Pré-Pago
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/dados-abertos" class="state-published">
+            
+            Dados Abertos
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/legislacao" class="plain">Legislação</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/resolucoes" class="state-published">
+            
+            Resoluções
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/sumulas" class="state-published">
+            
+            Súmulas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/portarias-de-delegacao" class="state-published">
+            
+            Portarias de Delegação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/portarias-normativas" class="state-published">
+            
+            Portarias Normativas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/resolucoes-internas" class="state-published">
+            
+            Resoluções Internas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/metodologias-de-calculo-de-multa" class="state-published">
+            
+            Metodologias de Cálculo de Multa
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/glossario-anatel" class="state-published">
+            
+            Glossário
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/legislacao/atos" class="state-published hasDropDown">
+            
+            Atos
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/atos-de-certificacao-de-produtos" class="state-published">
+            
+            Atos de Certificação de Produtos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/atos-de-requisitos-tecnicos-de-gestao-do-espectro" class="state-published">
+            
+            Atos de Requisitos Técnicos de Gestão do Espectro
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/atos-de-numeracao" class="state-published">
+            
+            Atos de Numeração
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/legislacao/fiscalizacao" class="state-published hasDropDown">
+            
+            Fiscalização
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/procedimentos-de-fiscalizacao" class="state-published">
+            
+            Procedimentos de Fiscalização
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/instrucoes-de-fiscalizacao" class="state-published">
+            
+            Instruções de Fiscalização
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/legislacao/demais-normas" class="state-published hasDropDown">
+            
+            Demais Normas
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/leis" class="state-published">
+            
+            Leis
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/decretos" class="state-published">
+            
+            Decretos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/normas-do-mc" class="state-published">
+            
+            Normas do Ministério das Comunicações
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/instru%C3%A7%C3%B5es-do-dentel" class="state-published">
+            
+            Instruções do Dentel
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/regulado" class="plain">Regulado</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/acompanhamento-e-controle" class="state-published">
+            
+            Acompanhamento e Controle
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria" class="state-published hasDropDown">
+            
+            Agenda Regulatória
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2025-2026" class="state-published">
+            
+            2025-2026
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2023-2024" class="state-published">
+            
+            2023-2024
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2021-2022" class="state-published">
+            
+            2021-2022
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2019-2020" class="state-published">
+            
+            2019-2020
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2017-2018" class="state-published">
+            
+            2017-2018
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2015-2016" class="state-published">
+            
+            2015-2016
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/anos-anteriores" class="state-published">
+            
+            Anos Anteriores
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/simplificacao-regulatoria" class="state-published">
+            
+            Simplificação Regulatória
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/sandbox-regulatorio" class="state-published">
+            
+            Sandbox Regulatório
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/arrecadacao" class="state-published">
+            
+            Arrecadação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/certificacao-de-produtos" class="state-published">
+            
+            Certificação de Produtos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/competicao" class="state-published">
+            
+            Competição
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/espectro" class="state-published">
+            
+            Espectro
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/fiscalizacao" class="state-published">
+            
+            Fiscalização
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/numeracao" class="state-published">
+            
+            Numeração
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/outorga" class="state-published">
+            
+            Outorga
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/prestadoras-de-pequeno-porte" class="state-published">
+            
+            Prestadoras de Pequeno Porte
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/radiodifusao" class="state-published">
+            
+            Radiodifusão
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/radiofrequencia" class="state-published">
+            
+            Radiofrequência
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/satelite" class="state-published">
+            
+            Satélite
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/universalizacao" class="state-published">
+            
+            Universalização e Ampliação do Acesso
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/perguntas-frequentes" class="state-published">
+            
+            Perguntas Frequentes
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li id="portaltab-govbr-root" class="plain dropdown-submenu menu-govbr-root">
+            <a class="plain" href="https://www.gov.br/anatel/pt-br/dados/dados-abertos">
+                <span>GOV.BR</span>
+            </a>
+            <!-- Menu nivel1 -->
+            <ul class="submenu navTree">
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/servicos" class="hasDropDown">Serviços</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="dropdown-submenu">
+                <a href="https://www.gov.br/pt-br/servicos/buscar-servicos-por">Buscar serviços por</a>
+                
+                    
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/categorias">Categorias</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_orgaos">Órgãos</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos-estaduais">Estados</a>
+                
+            </li>
+        
+    </ul>
+
+                
+            </li>
+        
+            <li class="dropdown-submenu">
+                <a href="https://www.gov.br/pt-br/servicos/servicos-por-publico-alvo">Serviços por público alvo</a>
+                
+                    
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_servicos_segmento?segmento=publico_alvo_cidadaos">Cidadãos</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_servicos_segmento?segmento=publico_alvo_empresas">Empresas</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_servicos_segmento?segmento=publico_alvo_orgaos">Órgãos e Entidades Públicas</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_servicos_segmento?segmento=publico_alvo_outros">Demais segmentos (ONGs, organizações sociais, etc)</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_servicos_segmento?segmento=publico_alvo_servidor">Servidor Público</a>
+                
+            </li>
+        
+    </ul>
+
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/temas-em-destaque" class="hasDropDown">Temas em Destaque</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/transparencia-fiscal-orcamento-nacional">Orçamento Nacional</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/redes-civis-de-unidades-de-atendimento-do-governo-federal">Redes de Atendimento do Governo Federal</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/protecao-de-dados-pessoais">Proteção de Dados Pessoais</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/servicos-para-imigrantes">Serviços para Imigrantes</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/politica-e-orcamento-educacional">Política e Orçamento Educacionais</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/educacao-profissional-e-tecnologica-1">Educação Profissional e Tecnológica</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/habilidades-online-para-jovens-e-adultos">Educação Profissional para Jovens e Adultos</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/trabalho-emprego">Trabalho e Emprego</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/acesso-a-educacao-para-pessoas-com-deficiencia">Serviços para Pessoas com Deficiência</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/politica-e-legislacao-contra-a-discriminacao-racial">Combate à Discriminação Racial</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/politica-e-orcamento-de-protecao-social">Política de Proteção Social</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/politica-para-mulheres">Política para Mulheres</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/saude-reprodutiva-da-mulher">Saúde Reprodutiva da Mulher</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/desenvolvimento-cuidados-e-educacao-pre-escolar">Cuidados na Primeira Infância</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/habitacao-popular">Habitação Popular</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/controle-da-poluicao-e-outras-medidas-de-precaucao">Controle de Poluição e Resíduos Sólidos</a>
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/noticias" class="hasDropDown">Notícias</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/servicos-para-o-cidadao">Serviços para o cidadão</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria">Saúde</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/agricultura-e-pecuaria">Agricultura e Pecuária</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/assistencia-social">Cidadania e Assistência Social</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/ciencia-e-tecnologia">Ciência e Tecnologia</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/comunicacao">Comunicação</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/cultura-artes-historia-e-esportes">Cultura e Esporte</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/financas-impostos-e-gestao-publica">Economia e Gestão Pública</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/educacao-e-pesquisa">Educação e Pesquisa</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/energia-minerais-e-combustiveis">Energia</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/forcas-armadas">Forças Armadas e Defesa Civil</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/transito-e-transportes">Infraestrutura</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/justica-e-seguranca">Justiça e Segurança</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/meio-ambiente-e-clima">Meio Ambiente</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/trabalho-e-previdencia">Trabalho e Previdência</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/viagens-e-turismo">Turismo</a>
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="https://www.gov.br/pt-br/apps/@@galeria-de-aplicativos" class="hasDropDown">Galeria de Aplicativos</a>
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="/planalto" class="hasDropDown">Acompanhe o Planalto</a>
+                        
+                    </li>
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/navegacao" class="hasDropDown">Navegação</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-digital">Acessibilidade</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/sitemap">Mapa do Site</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="/pt-br/termos-de-uso">Termo de Uso e Aviso de Privacidade</a>
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/atendimento-gov.br/duvidas-na-plataforma-de-automacao/cidadao/consultar-as-minhas-solicitacoes" class="hasDropDown">Consultar minhas solicitações</a>
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="https://www.gov.br/pt-br/orgaos-do-governo" class="hasDropDown">Órgãos do Governo</a>
+                        
+                    </li>
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/por-dentro-do-govbr" class="hasDropDown">Por dentro do Gov.br</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/por-dentro-do-govbr/perguntas-frequentes">Dúvidas Frequentes em relação ao Portal gov.br</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="http://faq-login-unico.servicos.gov.br/en/latest/">Dúvidas Frequentes da conta gov.br</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/por-dentro-do-govbr/ajuda-para-navegar-o-portal">Ajuda para Navegar o Portal</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/por-dentro-do-govbr/conheca-os-elementos-do-portal">Conheça os elementos do Portal</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/participamaisbrasil/sobre">Política de e-participação</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="/pt-br/termos-de-uso">Termos de Uso</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/governodigital/pt-br">Governo Digital</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/guia-de-edicao-de-servicos-do-gov.br/bem-vindo-editor">Guia de Edição de Serviços do Portal Gov.br</a>
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="https://www.gov.br/pt-br/canais-do-executivo-federal" class="hasDropDown">Canais do Executivo Federal</a>
+                        
+                    </li>
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/dados-do-governo-federal" class="hasDropDown">Dados do Governo Federal</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="/governodigital/pt-br/dados-abertos">Dados Abertos</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/gestao/pt-br/acesso-a-informacao/servidores/servidores-publicos/painel-estatistico-de-pessoal">Painel Estatístico de Pessoal</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="http://paineldecompras.economia.gov.br">Painel de Compras do Governo Federal</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/acessoainformacao/pt-br">Acesso à Informação</a>
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="https://www.gov.br/empresas-e-negocios/pt-br" class="hasDropDown">Empresas e Negócios</a>
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="https://www.gov.br/fazenda/pt-br/canais_atendimento/ouvidoria/simplifique/simplifique" class="hasDropDown">Simplifique!</a>
+                        
+                    </li>
+                
+            </ul>
+        </li></ul>
+                </div>
+            </div>
+
+            <div class="navigation-content-extra">
+                <div class="links-redes-wrap">
+            <div class="links-uteis">
+              <div class="titulo">Links Úteis</div>
+              <ul>
+                <!-- <li>
+                  <a href="#">Órgãos do Governo</a>
+                </li> -->
+                <li>
+                  <a href="https://www.gov.br/pt-br/apps/@@galeria-de-aplicativos">Galeria de Aplicativos</a>
+                </li>
+                <li>
+                  <a href="https://www.gov.br/pt-br/participacao-social">Participe</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-accessibility">
+              <ul>
+                <!--li>
+                  <a
+                    href="https://www.gov.br/pt-br/orgaos-do-governo"
+                    class="orgaos-de-governo"
+                    i18n:translate="orgaos_do_governo"
+                    >Órgãos do Governo</a
+                  >
+                </li-->
+                <li>
+                  <a href="https://www.gov.br/pt-br/apps/@@galeria-de-aplicativos">Galeria de Aplicativos</a>
+                </li>
+                <!--li>
+                  <a href="http://www4.planalto.gov.br/legislacao" i18n:translate="legislacao"
+                    >Legislação</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.gov.br/acessoainformacao/pt-br" i18n:translate="acesso_a_informacao"
+                    >Acesso à Informação</a
+                  >
+                </li-->
+                <li>
+                  <a href="https://www.gov.br/pt-br/participacao-social">Participe</a>
+                </li>
+              </ul>
+            </div>
+          
+                    <div class="redes-sociais">
+                        <div class="titulo">Redes sociais</div>
+                    <ul class="portal-redes">
+            
+                <li class="portalredes-youtube portalredes-item">
+                    <a href="https://www.youtube.com/Anatel">YouTube</a>
+                </li>
+            
+                <li class="portalredes-facebook portalredes-item">
+                    <a href="https://www.facebook.com/anatelgovbr">Facebook</a>
+                </li>
+            
+                <li class="portalredes-flickr portalredes-item">
+                    <a href="https://www.flickr.com/anatel_informa">Flickr</a>
+                </li>
+            
+                <li class="portalredes-instagram portalredes-item">
+                    <a href="https://www.instagram.com/anatelgovbr">Instagram</a>
+                </li>
+            
+                <li class="portalredes-twitter portalredes-item">
+                    <a href="https://www.twitter.com/AnatelGovBR">Twitter</a>
+                </li>
+            
+        </ul></div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Menu -->
+        
+    </header><div id="portal-breadcrumbs-wrapper"><nav id="breadcrumbs" aria-label="Histórico de navegação (Breadcrumbs)">
+            <div class="content">
+                <span class="sr-only">Você está aqui:</span>
+                <span class="home">
+            <a href="https://www.gov.br/anatel/pt-br">
+              <span class="fas fa-home" aria-hidden="true"></span>
+                <span class="sr-only">Página Inicial</span>
+                </a>
+                </span>
+            
+
+    
+    
+    <span dir="ltr" id="breadcrumbs-1">
+        
+            <a href="https://www.gov.br/anatel/pt-br/dados">Dados</a>
+            
+            
+         
+    </span>
+    <span dir="ltr" id="breadcrumbs-2">
+        
+            
+            
+            <span id="breadcrumbs-current">Dados Abertos</span>
+         
+    </span>
+
+</div>
+        </nav></div><!-- <div class="video"></div> --><div id="wrapper">
+        <!-- Columns -->
+
+        <div id="main">
+            
+
+            <main id="main-content">
+
+            <div id="viewlet-above-content">
+
+
+
+
+    
+        <script type="application/ld+json">{"@context": "http://schema.org", "itemListElement": [{"position": 1, "@type": "ListItem", "item": "https://www.gov.br/anatel/pt-br/dados", "name": "Dados"}, {"position": 2, "@type": "ListItem", "item": "https://www.gov.br/anatel/pt-br/dados/dados-abertos", "name": "Dados Abertos"}], "@type": "BreadcrumbList"}</script>
+    
+
+
+
+
+    
+</div>
+
+            
+                <div class="">
+
+                    
+
+                    
+
+    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+    
+
+
+                    
+                        <div id="content">
+
+                            
+
+                            
+
+                             <div id="viewlet-above-content-title"></div>
+                             
+                                 
+                                 
+            
+            <h1 class="documentFirstHeading">Dados Abertos</h1>
+        
+                             
+                             <div id="viewlet-below-content-title"></div>
+
+                             
+                                 
+                                 
+            
+            
+        
+                             
+
+                             <div id="viewlet-above-content-body">
+    
+    
+        <div class="social-links">
+            <label>Compartilhe: </label>
+            
+                
+                    <a href="http://www.facebook.com/sharer.php?u=https://www.gov.br/anatel/pt-br/dados/dados-abertos" title="Facebook" class="">
+                        <span aria-hidden="true" class="fab fa-facebook-f"></span>
+                        <span class="sr-only">Compartilhe por Facebook</span>
+                    </a>
+                
+                    <a href="https://twitter.com/share?text=Dados%20Abertos&amp;url=https://www.gov.br/anatel/resolveuid/b99b30b320804676857bb5172a68aea3" title="Twitter" class="">
+                        <span aria-hidden="true" class="fab fa-x-twitter"></span>
+                        <span class="sr-only">Compartilhe por Twitter</span>
+                    </a>
+                
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.gov.br/anatel/pt-br/dados/dados-abertos&amp;title=Dados%20Abertos" title="LinkedIn" class="">
+                        <span aria-hidden="true" class="fab fa-linkedin-in"></span>
+                        <span class="sr-only">Compartilhe por LinkedIn</span>
+                    </a>
+                
+                    <a href="https://api.whatsapp.com/send?text=https://www.gov.br/anatel/pt-br/dados/dados-abertos" title="WhatsApp" class="link-whatsapp">
+                        <span aria-hidden="true" class="fab fa-whatsapp"></span>
+                        <span class="sr-only">Compartilhe por WhatsApp</span>
+                    </a>
+                
+            
+            <a class="link-clipboard" onclick="event.preventDefault()" title="Copiar para área de transferência" href="https://www.gov.br/anatel/pt-br/dados/dados-abertos">
+                <span class="fas fa-link" aria-hidden="true"></span>
+                <span class="sr-only">link para Copiar para área de transferência</span>
+            </a>
+            <!--a class="toggle-social-links">
+                <span class="fas fa-share-alt"></span>
+                <span class="fas fa-times"></span>
+            </a-->
+        </div>
+        <script>
+            new ClipboardJS('.link-clipboard', {
+                text: function(trigger) {
+                    return trigger.getAttribute('href');
+                }
+            });
+        </script>
+    
+
+<div class="documentByLine" id="plone-document-byline">
+  
+
+  
+
+  
+      <span class="documentPublished">
+        <span>Publicado em</span>
+        <!-- TODO: Criar no arquivo de tradução uma máscara para a data aparecer no seguinte formato:
+             PT_BR: 15/10/2019 às 14:01
+             EN   : 10/15/2019 at 14:01
+        -->
+        <span class="value">19/11/2020 21h56</span>
+      </span>
+      <!-- TODO: Fazer esta comparação de uma forma melhor -->
+      <span class="documentModified">
+        <span>Atualizado em</span>
+        <span class="value">07/08/2025 16h19</span>
+      </span>
+  
+
+  
+
+  
+
+  
+
+  
+</div>
+
+</div>
+                             <div id="content-core">
+                                 
+
+  <div id="parent-fieldname-text"><p><strong><span class="TextRun SCXO41724286 BCX0" data-contrast="auto"><a class="external-link" href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?8-74Kn1tDR89f1Q7RjX8EYU46IzCFD26Q9Xx5QNDbqYNt3KC5W1lA9tPorJf9EBIV-H-c-47-xxPrv6GZ1_fHsYJZsV7ib7S2Rk5b9yDC-Keinr6mkbt5C33a52W9oHy" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Plano de Dados Abertos da Anatel (Vigência: junho de 2025 a junho de 2027) - Aprovado pelo Despacho Decisório nº 6/2025/CGE, de 2 de junho de 2025.</a></span></strong></p>
+<p>O Plano de Dados Abertos (PDA), que tem a vigência de dois anos, é o documento orientador para as ações de implementação e promoção de abertura de dados. Essa abertura visa ampliar a disseminação de dados e informações para a sociedade, bem como a melhoria da qualidade dos dados disponibilizados, de forma a dar maior suporte à tomada de decisão pelos gestores públicos e ao controle social.</p>
+<p>Dados abertos são dados acessíveis ao público, representados em meio digital, estruturados em formato aberto (não proprietário), processáveis por máquina, referenciados na internet e disponibilizados sob licença aberta que permita sua livre utilização, consumo ou cruzamento, limitando-se a creditar a autoria ou a fonte.</p>
+<p>O Plano encontra-se em sintonia com o Planejamento Estratégico da Agência que estabelece entre os seus objetivos a promoção da disseminação de dados e informações setoriais. Além disso, a elaboração do PDA vem ao encontro do disposto na Lei de Acesso à Informação e ao Decreto nº 8.777, de 11 de maio de 2016, que instituiu a Política de Dados Abertos do Poder Executivo federal.</p>
+<p>A informação é insumo estratégico e essencial à formação de uma sociedade crítica e conectada. A atividade de coleta, consolidação, análise e divulgação de dados setoriais viabiliza o acompanhamento do comportamento do mercado, inibindo a existência de abuso nas relações de consumo e a ocorrência de infrações normativas, e o exercício de escolha pela população, municiando-a de subsídio para o controle social. Nesse sentido, a Anatel já tem promovido diversas ações voltadas para a disponibilização de dados setoriais, tanto para outros órgãos públicos ou empresas como para os usuários em geral. Contudo, esse objetivo de promover a disseminação de dados e informações setoriais visa elevar os esforços a outro nível, de modo a permitir a verdadeira integração informacional entre instituições cuja atividade está intimamente relacionada ao setor e dar a devida publicidade aos resultados regulatórios da Agência, angariando insumos de retroalimentação para a melhoria dos seus processos.</p>
+<p>O Plano de Dados Abertos atual terá a vigência de 2 (dois) anos (junho/2025 a junho/2027). <span class="TextRun SCXO171170002 BCX0" data-contrast="auto">As bases de dados previstas para serem disponibilizadas como dados abertos em <a class="external-link" href="https://dados.gov.br/home" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">dados.gov.br</a> na vigência do PDA estão listadas abaixo:</span><span class="EOP SCXO171170002 BCX0"> </span></p>
+<ul>
+<li><strong>Acompanhamento e Controle – PACs de Ressarcimento</strong>: <span>Base de dados sobre a situação, a fase, o interessado e a temática dos Processos de Acompanhamento de Ressarcimento em trâmite na Anatel.</span></li>
+<li><span><strong>Competição – Indicadores Econômicos</strong>: </span>Dados de Receita, Investimento, Tráfego, EBITDA, Custos, Despesas, Dívida, Carga Tributária, Descontos, Margem EBITDA, Nível de Endividamento e Investimento sob Receita consolidado para o setor.</li>
+</ul>
+<p style="padding-left: 60px; "><i>Observação: o objetivo é que a base seja publicada no Portal Brasileiro de Dados Abertos em forma consolidada e não trará informações individualizadas por prestadora ou grupo econômico.</i></p>
+<ul>
+<li><strong>Textos públicos da Anatel<i>: </i></strong>Base de textos públicos da Agência Nacional de Telecomunicações em formato aberto relativos a:</li>
+</ul>
+<p class="Tabela_Texto_Alinhado_Esquerda" style="padding-left: 60px; ">a) Documentos gerados publicados no Boletim de Serviço Eletrônico do Sistema Eletrônico de Informações (SEI);</p>
+<p class="Tabela_Texto_Alinhado_Esquerda" style="padding-left: 60px; ">b) Documentos gerados no SEI com nível de acesso público, constante em processo público, 100% concluído há pelo menos 3 meses; e</p>
+<p class="Tabela_Texto_Alinhado_Esquerda" style="padding-left: 60px; ">c) Regulamentação vigente da Anatel.</p>
+<ul>
+<li><span>Q<strong>ualidade - Selos de Qualidade e Índice de Qualidade dos Serviços - IQS</strong>: <span>Informações em conformidade com Regulamento de Qualidade dos Serviços de Telecomunicações (RQUAL) aprovado pela Resolução da Anatel nº 717, de 23 de dezembro de 2019.</span></span></li>
+<li><span><span><strong>Outorga e Licenciamento – Estações Terrenas em Bloco – Very Small Aperture Terminal – VSAT</strong>: <span>Dados informados, através do sistema Coleta Anatel, semestralmente, pelas entidades que possuem estações terrenas VSATs licenciadas em bloco por meio do sistema Mosaico.</span></span></span></li>
+<li><span><span><span><strong>Estratégia – Cadeia de Valor da Anatel</strong>: <span>Dados dos processos de negócio da Anatel, organizados na forma de Cadeia de Valor, contendo os ambientes e hierarquia de macroprocessos, processos e subprocessos. Os processos contam ainda com suas respectivas áreas responsáveis, indicadores, alinhamento estratégico e demais informações legais aplicáveis.</span></span></span></span></li>
+</ul>
+<div class="OutlineElement Ltr SCXO20233218 BCX0">
+
+<p class="Paragraph SCXO20233218 BCX0"><em><strong>Planos Anteriores:</strong></em></p>
+</div>
+<p><strong>1) <a class="external-link" href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?8-74Kn1tDR89f1Q7RjX8EYU46IzCFD26Q9Xx5QNDbqbkvWcOg_e9UsvgZsyICm6X0VUBZS5pdB79b0OqxV0WLVcboReFoeE4DQuBJEObJIkJqE8C1g4Tzn48Mpi34PYl" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Plano de Dados Abertos da Anatel (Vigência: novembro de 2022 a novembro de 2024)</a> - Aprovado pelo Despacho Decisório nº 8/2022/CGE, de 7 de novembro de 2022,  alterado pelo <span class="TextRun SCXO41724286 BCX0" data-contrast="auto"><a class="external-link" href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?8-74Kn1tDR89f1Q7RjX8EYU46IzCFD26Q9Xx5QNDbqbeF_NeEhv0gI9STqB3ntLiYJbZIaYg2rsP7qsItEhGa1Qb1ja12LaiWlAaOyX_DJBipVEudQShrsrA65dRecwW" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Despacho Decisório nº 9/2024/SUE</a> de <span class="TextRun  BCX0 SCXO41724286" data-contrast="auto"><span class="NormalTextRun  BCX0 SCXO41724286">30/08/2024.</span></span></span></strong></p>
+<p>As bases de dados disponibilizadas como dados abertos no Portal Brasileiro de Dados Abertos (<a class="external-link" href="https://dados.gov.br/" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">dados.gov.br</a>) na vigência do PDA vigente no período de novembro/2022 a novembro/2024 estão listadas abaixo:</p>
+<div class="OutlineElement Ltr  BCX0 SCXO20233218">
+<ul>
+<li><span class="TextRun SCXO20233218 BCX0" data-contrast="auto"><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/indicadores-estratgicos-plano-estratgico-da-anatel" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Resultados do Planejamento</a>;</span></li>
+<li><span class="TextRun SCXO20233218 BCX0" data-contrast="auto"><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/indicadores-de-qualidade-dos-servicos--rqual" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Indicadores de Qualidade dos Serviços – RQUAL</a>;</span></li>
+<li><span class="TextRun SCXO20233218 BCX0" data-contrast="auto"><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/anatel-comparador" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Anatel Comparador</a>;</span></li>
+<li><span class="TextRun SCXO20233218 BCX0" data-contrast="auto"><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/infraestrutura-backhaul-em-municpios" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title=""><span class="NormalTextRun SCXO20233218 BCX0">Infraestrutura: </span><span class="SpellingError SCXO20233218 BCX0">Backhaul</span></a><span class="NormalTextRun SCXO20233218 BCX0"><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/infraestrutura-backhaul-em-municpios" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title=""> em municípios</a>;</span></span></li>
+<li><span class="TextRun SCXO20233218 BCX0" data-contrast="auto"><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/espectro-e-orbita--pdff" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Espectro e Órbita – PDFF</a>;</span></li>
+<li><span class="TextRun SCXO20233218 BCX0" data-contrast="auto"><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/acompanhamento-e-controle---onus-contratual" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Acompanhamento e Controle - Ônus Contratual</a>;</span></li>
+<li><span class="TextRun SCXO20233218 BCX0" data-contrast="auto"><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/outorga-e-licenciamento---prestadoras-de-servios-de-telecomunicaes" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Outorga e Licenciamento - Prestadoras de Serviços de Telecomunicações</a>;</span><span class="EOP SCXO20233218 BCX0"><br /></span></li>
+<li><span class="TextRun SCXO20233218 BCX0" data-contrast="auto"><span class="NormalTextRun SCXO20233218 BCX0">Acompanhamento e Controle - </span><span class="SpellingError SCXO20233218 BCX0">PACs</span><span class="NormalTextRun SCXO20233218 BCX0"> de Ressarcimento - Excluído do PDA 2022-2024 conforme </span></span><a class="Hyperlink SCXO20233218 BCX0" href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?8-74Kn1tDR89f1Q7RjX8EYU46IzCFD26Q9Xx5QNDbqbeF_NeEhv0gI9STqB3ntLiYJbZIaYg2rsP7qsItEhGa1Qb1ja12LaiWlAaOyX_DJBipVEudQShrsrA65dRecwW" rel="noreferrer noopener" target="_blank"><span class="TextRun SCXO20233218 BCX0" data-contrast="auto">Despacho Decisório nº 9/2024/SUE</span></a><span class="TextRun SCXO20233218 BCX0" data-contrast="auto">, que altera PDA 2022-2024 </span><span class="TextRun SCXO20233218 BCX0" data-contrast="auto"><span class="NormalTextRun SCXO20233218 BCX0">e </span><span class="NormalTextRun SCXO20233218 BCX0">inclui</span><span class="NormalTextRun SCXO20233218 BCX0"> essa base de dados na proposta do PDA 2024-2026; </span></span><span class="EOP SCXO20233218 BCX0"> </span></li>
+<li><span class="TextRun SCXO20233218 BCX0" data-contrast="auto"><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/radiodifusao---plano-basico" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Radiodifusão - Plano Básico</a>;</span><span class="EOP SCXO20233218 BCX0"><br /></span></li>
+<li><span class="TextRun SCXO20233218 BCX0" data-contrast="auto"><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/participacao-social-na-regulacao" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Participação Social na Regulação</a>.</span></li>
+</ul>
+</div>
+<p><strong>2) Plano de Dados Abertos da Anatel (2020-2022) - Aprovado pela <a class="external-link" href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?eEP-wqk1skrd8hSlk5Z3rN4EVg9uLJqrLYJw_9INcO5JyXRyXEY_WDHbCaCa8uyzpQzrpcjvtg8SVlsPYXAIWk8m5MdL0visbXCbCUzpoQvQyCqTOazio7tpgmZQUPPk" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Portaria 1.221/2020</a>.</strong></p>
+<p><span>As bases de dados disponibilizadas como dados abertos no Portal Brasileiro de Dados Abertos (<a class="external-link" href="https://dados.gov.br/" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">dados.gov.br</a>)</span><span> na vigência do PDA 2020-2022 estão listadas abaixo:</span></p>
+<ul>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/medicoes-de-campos-eletromagneticos---estacoes-de-radiodifusao" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Medições de campos eletromagnéticos - Estações de radiodifusão</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/medicoes-de-campos-eletromagneticos---estacoes-de-telefonia-movel" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Medições de campos eletromagnéticos - Estações de telefonia móvel</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/outorga-e-licenciamento---estaes-licenciadas" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Outorga e Licenciamento - Estações Licenciadas</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/empresas-credenciadas-de-rede-virtual-do-servico-movel-pessoal-telefonia-movel" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Competição - Empresas Credenciadas de Rede Virtual</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/multas-constituidas" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Arrecadação - Multas Constituídas</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/localidades-com-tratamento-local-do-stfc-telefonia-fixa" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Localidades com Tratamento Local da Telefonia Fixa</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/contratos-e-demais-instrumentos-vigentes" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Contratos e Demais Instrumentos Vigentes</a>; e </li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/areas-locais-do-stfc-telefonia-fixa" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Áreas Locais da Telefonia Fixa</a>. </li>
+</ul>
+<p><br /><strong>3) Plano de Dados Abertos da Anatel (2018-2020) - Aprovado pela <a href="https://sei.anatel.gov.br/sei/publicacoes/controlador_publicacoes.php?acao=publicacao_visualizar&amp;id_documento=3961901&amp;id_orgao_publicacao=0">Portaria 1838/2018</a> e alterado pela <a href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?eEP-wqk1skrd8hSlk5Z3rN4EVg9uLJqrLYJw_9INcO6Uwiyz44K4Z1SZC7zdUdTLACaI5GO0QsukxkarT9jJbUDiSm6jTtFZ0L3yp8nUB9998tlvZAVNr1-9Om4EfeWB">Portaria 1935/2019</a>.</strong></p>
+<p style="text-align: justify; ">As bases de dados disponibilizadas como dados abertos no Portal Brasileiro de Dados Abertos (<a class="external-link" href="https://dados.gov.br/" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">dados.gov.br</a>) na vigência do PDA 2018-2020 estão listadas abaixo:</p>
+<ul>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/parcela-da-populacao-coberta-com-rede-de-transporte-backhaul-optica" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Indicador: Ampliar a parcela da população coberta com rede de transporte (backhaul) óptica (PPA 2016-2019)</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/velocidade-media-da-banda-larga-fixa-em-mbps" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Indicador: Aumentar a velocidade média da banda larga fixa (PPA 2016-2019)</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/proporcao-de-acessos-de-banda-larga-movel-3g-e-4g" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Indicador: Aumentar a proporção de acessos da banda larga móvel (3G/4G) para 90% dos acessos móveis pessoais (PPA 2016-2019)</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/percentual-de-municipios-com-banda-larga-movel" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Indicador: Disponibilizar o serviço de banda larga móvel em todos os municípios do país (PPA 2016-2019)</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/acessos-por-velocidade-contratada-banda-larga-fixa" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Acessos por velocidade contratada (banda larga fixa)</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/proporcao-da-populacao-coberta-por-rede-movel" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Proporção da população coberta por rede móvel, por tipo de tecnologia</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/acessos-scm-por-100-habitantes-por-velocidade-de-conexao" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Acessos em Serviço na banda larga fixa, por 100 habitantes, por velocidade de conexão</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/pesquisas-de-satisfacao-e-qualidade-percebida" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Pesquisa de Satisfação e Qualidade Percebida</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/relacao-de-municipios-que-possuem-prestadoras-de-telefonia-movel-servico-movel-pessoal-smp" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Relação de Municípios com Prestadoras e Tecnologias - SMP</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/escolas-rurais-conectadas" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Escolas Rurais Conectadas</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/municipios-com-areas-rurais-atendidas" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Municípios com Áreas Rurais Atendidas</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/codigos-de-selecao-de-prestadora-csp" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Códigos de Seleção de Prestadora (CSP)</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/servicos-de-utilidade-publica-e-de-apoio-a-telefonia-fixa" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Serviços de Utilidade Pública e de Apoio a Telefonia Fixa</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/pesquisas-de-satisfacao-e-qualidade-percebida" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Pesquisa de Satisfação e Qualidade Percebida</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/laboratorios-de-ensaio-acreditados" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Laboratórios de Ensaio Acreditados</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/organismo-de-certificacao-designados-ocd" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Organismo de Certificação Designados (OCD)</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/aplicacao-do-fundo-de-fiscalizacao-das-telecomunicacoes-fistel" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Aplicação do Fundo de Fiscalização das Telecomunicações - Fistel</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/acessos---banda-larga-fixa-densidade-por-100-habitantes" target="_self" title="Densidade dos acessos em serviço na banda larga fixa (Serviço de Comunicação Multimídia - SCM), por 100 habitantes;" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Densidade dos acessos em serviço na banda larga fixa (Serviço de Comunicação Multimídia - SCM), por 100 habitantes;</a></li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/densidade_telefonia_fixa" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Densidade dos acessos em serviço na telefonia fixa (Serviço Telefônico Fixo Comutado - STFC), por 100 habitantes</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/densidade_telefonia_movel" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Densidade dos acessos em operação na telefonia móvel (Serviço Móvel Pessoal - SMP), por 100 habitantes</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/densidade_tv_por_assinatura" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Densidade dos assinantes dos serviços de TV por Assinatura, por 100 habitantes</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/medicoes-de-campos-eletromagneticos1" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Medições de Campo Eletromagnético</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/outorga-e-licenciamento---atos-de-radiofrequncia" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Outorga e Licenciamento - Atos de Radiofrequência</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/contratos-de-interconexao" target="_self" title="Contratos de Interconexão" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Competição - Contratos de Interconexão</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/contratos-de-exploracao-de-servico-movel-pessoal-por-meio-de-rede-virtual" target="_self" title="Contratos de exploração de serviço móvel pessoal por meio de rede virtual" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Competição - Contratos de exploração de serviço móvel pessoal por meio de rede virtual</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/contratos-de-exploracao-industrial-radiofrequencias" target="_self" title="Contratos de exploração industrial que envolvam cessão de radiofrequências" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Competição - Contratos de exploração industrial que envolvam cessão de radiofrequências</a>; e</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/competicao---contratos-de-compartilhamento-de-infraestrutura" target="_self" title="Contratos de compartilhamento de infraestrutura entre os setores de energia elétrica, telecomunicações e petróleo" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Competição - Contratos de Compartilhamento de Infraestrutura</a>. </li>
+</ul>
+<p><strong><br />4) Plano de Dados Abertos da Anatel (2016-2018) - Aprovado pela <a href="https://sei.anatel.gov.br/sei/publicacoes/controlador_publicacoes.php?acao=publicacao_visualizar&amp;id_documento=759948&amp;id_orgao_publicacao=0" title="Portaria 801/2016">Portaria 801/2016</a>.</strong></p>
+<p><span>As bases de dados disponibilizadas como dados abertos no Portal Brasileiro de Dados Abertos (<a class="external-link" href="https://dados.gov.br/" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">dados.gov.br</a>)</span><span> na vigência do PDA 2016-2018 estão listadas abaixo:</span></p>
+<ul>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/acesso-autorizadas-stfc" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Quantitativo de Acessos das empresas autorizadas do Serviço Telefônico Fixo Comutado – STFC (telefonia fixa);</a></li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/acesso-autorizadas-stfc" rel="alternate" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Quantitativo de Acessos das empresas concessionárias do Serviço Telefônico Fixo Comutado – STFC (telefonia fixa);</a></li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/acessos-autorizadas-smp" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Quantitativo de Acessos em operação das prestadoras do Serviço Móvel Pessoal - SMP (telefonia e banda larga móvel);</a></li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/acessos---banda-larga-fixa" rel="alternate" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Quantitativo em Acessos em serviço das prestadoras do Serviço de Comunicação Multimídia - SCM (banda larga fixa);</a></li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/acessos-autorizadas-tva" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Quantitativo de Acessos dos serviços de TV por Assinatura;</a></li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/qualidade-banda-larga-fixa" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Indicadores de Qualidade da Banda Larga Fixa (SCM);</a></li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/qualidade-telefonia-movel" rel="alternate" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Indicadores de Qualidade do Serviço de Telefonia Móvel (SMP);</a></li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/qualidade-telefonia-fixa" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Indicadores de Qualidade do Serviço de Telefonia Fixa (STFC);</a></li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/qualidade-tv-assinatura" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Indicadores de Qualidade dos Serviços de TV por Assinatura;</a></li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/codigos-nacionais-cn" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Códigos Nacionais;</a></li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/acessos-numeros-historicos" rel="alternate" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Números históricos de acessos/assinantes (telefonia móvel, telefonia fixa, banda larga fixa, TV por Assinatura)</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/arrecadacao-fistel" rel="alternate" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Arrecadação do Fundo de Fiscalização das Telecomunicações – Fistel;</a></li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/arrecadacao-fust" rel="alternate" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Arrecadação das contribuições para o Fundo de Universalização dos Serviços de Telecomunicações – Fust;</a></li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/arrecadacao-cfrp" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Arrecadação das Contribuições para o Fomento da Radiodifusão Público – CFRP;</a></li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/pble" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Programa Banda Larga nas Escolas - PBLE;</a></li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/pesquisas-de-satisfacao-e-qualidade-percebida" rel="alternate" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Pesquisas de satisfação e qualidade percebida</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/produtos-de-telecomunicacoes-homologados-pela-anatel" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Certificação e Homologação de Produtos de Telecomunicações</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/relacao-de-satelites-geoestacionarios-autorizados-a-operar-no-brasil" rel="alternate" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Satélites autorizados a operar no Brasil</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/estrutura-de-grupos-economicos" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Grupos econômicos</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/solicitacoesregistradasnaanatel" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Reclamações registradas na Anatel</a>;</li>
+<li><a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/indice-de-servicos-de-telecomunicacoes--ist" rel="alternate" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Índice de Serviços de Telecomunicações – IST</a>;</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/gestao-de-metas-de-universalizacao" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Sistema de Gestão de Metas de Universalização</a>; e</li>
+<li><a class="external-link" href="http://dados.gov.br/dados/conjuntos-dados/indice-desempenho-atendimento" rel="alternate" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Índice de Desempenho no Atendimento – IDA</a>. </li>
+</ul>
+
+<p><strong>Relatórios e Inventário de Bases de Dados</strong></p>
+<p><strong></strong>a) <a href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?eEP-wqk1skrd8hSlk5Z3rN4EVg9uLJqrLYJw_9INcO5880UaI5ln5sxO1ryzruW_zNpDkg4ks14OOn2Z6-SHghY1PbEEPolx3Ro3yyZnM1y_5djtfkgMpmxRj7uvkoy_">Relatório - Plano de Dados Abertos 2016/2018 da Anatel</a>;</p>
+<p>b) <a href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?eEP-wqk1skrd8hSlk5Z3rN4EVg9uLJqrLYJw_9INcO7ssVg0wDGZFcKziwSnpv5Pqw11oD9p_gEpA7OUmPB8nivVIAAFjm_esHXra9e_30Aky35YxWMTVthhesvgVKDS">Relatório Anual 2019 - Plano de Dados Abertos 2018/2020 da Anatel</a>;</p>
+<p>c) <a class="external-link" href="https://dados.gov.br/dados/conjuntos-dados/inventario-de-bases-de-dados-anatel" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Inventário de Bases de Dados</a>;</p>
+<p>d) <a class="external-link" href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?eEP-wqk1skrd8hSlk5Z3rN4EVg9uLJqrLYJw_9INcO7oOjapGc0QxkCWJDZNrQKKyP-cEcpRpXg9h9LLCc-jFZS-JkTIa7flP_BveZStOy_twPfMSbyHg0JpI4R9xZFN" target="_self" title="Relatório Anual 2020 - Plano de Dados Abertos 2018/2020 da Anatel" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Relatório Anual 2020 - Plano de Dados Abertos 2018/2020 da Anatel</a>;</p>
+<p>e) <a class="external-link" href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?eEP-wqk1skrd8hSlk5Z3rN4EVg9uLJqrLYJw_9INcO6EiFh5_Sg5dItL13YZRxFd_gEfenUYztiIQuG0oCcQ4g3gkoaRCPgKULMCYZJKSJcIEJc7xz0KjfUlxGfINz6T" target="_blank" title="Relatorio Anual 2021 - Plano de Dados Abertos 2020-2022 da Anatel" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Relatório Anual 2021 - Plano de Dados Abertos 2020-2022 da Anatel</a>;</p>
+<p>f) <a class="external-link" href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?8-74Kn1tDR89f1Q7RjX8EYU46IzCFD26Q9Xx5QNDbqY9AutTu-Vv1e5C562x6wzR9qXjQa1oJEF0uDHBodnJf8toNJ9IWRdzvRgDAAIH6EyUt-07sRhoScLHV7egY4n3" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Relatório Anual 2022 - Plano de Dados Abertos 2020-2022 da Anatel</a>; e</p>
+<p>g) <a class="external-link" href="https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/b18cd6e405bb47fd8e9b80302a8f50c4" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Leia o Relatório Anual 2022 do Plano de Dados Abertos 2020 a 2022 da Anatel em formato <em>Open Document Format</em> (arquivo .odt) e com conteúdo acessível para mais informações.</a></p>
+<p>h) <a class="external-link" href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?8-74Kn1tDR89f1Q7RjX8EYU46IzCFD26Q9Xx5QNDbqbXZTfSC0ALlxwLKN4jPC48uINaz7WN-wFEP-1GMHFPXB73WM12JC5fdaBkBmNRIp1S9uWzgI2b7dyBRm5Vs-98" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Relatório Anual 2023 - Plano de Dados Abertos 2022-2024 da Anatel</a>;</p>
+<p>i)  <a class="external-link" href="https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/0e42c049e459b455675d5c070a8103f7" target="_self" title="Relatório Anual 2023 do Plano de Dados Abertos  2022-2024 - Versão Acessível" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Relatório Anual 2023 do Plano de Dados Abertos 2022-2024 - Versão Acessível</a>;</p>
+<p>j) <a class="external-link" href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?8-74Kn1tDR89f1Q7RjX8EYU46IzCFD26Q9Xx5QNDbqaWD9Wg2QMzrFu4-R9q_G_vGh69ZHSeKINHYYrAy8hXQpur234KYttMs0hSmOYu3eo0f0xWMZUlzQLiS3YVGW1c" target="_self" title="" data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Relatório Anual 2024 - Plano de Dados Abertos 2022-2024 da Anatel</a>;</p>
+<p>k) <a class="external-link" href="https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/255bbf90cbc9f0105644a72c84cd1e66" target="_self" title="Relatório Anual 2024 do Plano de Dados Abertos 2022-2024 - Versão Acessível." data-tippreview-enabled="true" data-tippreview-image="" data-tippreview-title="">Relatório Anual 2024 do Plano de Dados Abertos 2022-2024 - Versão Acessível.</a> </p>
+<p>l) <span class="TextRun SCXO41724286 BCX0" data-contrast="auto"><a class="external-link" href="https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/2aae4d9e934daf59b307c7d0896736b1" target="_self" title="" data-tippreview-enabled="false" data-tippreview-image="" data-tippreview-title="">Plano de Dados Abertos da Anatel (Vigência: junho de 2025 a junho de 2027) - Versão Acessível</a></span></p></div>
+
+
+                             </div>
+                             <div id="viewlet-below-content-body">
+
+
+
+
+
+
+    <div class="visualClear"><!-- --></div>
+
+    <div class="documentActions">
+        
+
+        
+
+    </div>
+
+</div>
+
+                            
+                        </div>
+                    
+
+                    
+                </div>
+            
+
+            <div id="viewlet-below-content">
+
+
+
+
+
+
+    
+    
+        <div class="social-links">
+            <label>Compartilhe: </label>
+            
+                
+                    <a href="http://www.facebook.com/sharer.php?u=https://www.gov.br/anatel/pt-br/dados/dados-abertos" title="Facebook" class="">
+                        <span aria-hidden="true" class="fab fa-facebook-f"></span>
+                        <span class="sr-only">Compartilhe por Facebook</span>
+                    </a>
+                
+                    <a href="https://twitter.com/share?text=Dados%20Abertos&amp;url=https://www.gov.br/anatel/resolveuid/b99b30b320804676857bb5172a68aea3" title="Twitter" class="">
+                        <span aria-hidden="true" class="fab fa-x-twitter"></span>
+                        <span class="sr-only">Compartilhe por Twitter</span>
+                    </a>
+                
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.gov.br/anatel/pt-br/dados/dados-abertos&amp;title=Dados%20Abertos" title="LinkedIn" class="">
+                        <span aria-hidden="true" class="fab fa-linkedin-in"></span>
+                        <span class="sr-only">Compartilhe por LinkedIn</span>
+                    </a>
+                
+                    <a href="https://api.whatsapp.com/send?text=https://www.gov.br/anatel/pt-br/dados/dados-abertos" title="WhatsApp" class="link-whatsapp">
+                        <span aria-hidden="true" class="fab fa-whatsapp"></span>
+                        <span class="sr-only">Compartilhe por WhatsApp</span>
+                    </a>
+                
+            
+            <a class="link-clipboard" onclick="event.preventDefault()" title="Copiar para área de transferência" href="https://www.gov.br/anatel/pt-br/dados/dados-abertos">
+                <span class="fas fa-link" aria-hidden="true"></span>
+                <span class="sr-only">link para Copiar para área de transferência</span>
+            </a>
+            <!--a class="toggle-social-links">
+                <span class="fas fa-share-alt"></span>
+                <span class="fas fa-times"></span>
+            </a-->
+        </div>
+        <script>
+            new ClipboardJS('.link-clipboard', {
+                text: function(trigger) {
+                    return trigger.getAttribute('href');
+                }
+            });
+        </script>
+    
+
+
+  
+
+
+<div class="govbr-recom-config" data-recom-history-title="Serviços que você acessou">
+
+
+            
+    
+
+</div>
+
+
+
+
+</div>
+        </main>
+
+            
+        </div>
+
+        <div class="conteudo-relacionado"></div>
+
+        <div class="govbr-history-render"></div>
+
+        <footer id="portal-footer" class="portal-footer">
+            <div class="footer-wrapper">
+                <div class="govbr-logo"></div>
+                <!--<div class="colunas-rodape">
+              <div class="coluna-menu">-->
+                <ul class="list-navigation"><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/assuntos" class="plain">Assuntos</a>
+                <ul class="submenu">
+                    <li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/5G" class="state-published hasDropDown">
+            
+            5G
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/5G" class="state-published">
+            
+            Espaço 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/5G/tecnologia-5g" class="state-published">
+            
+            Tecnologia 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/@@search?SearchableText=AnatelNoticias5G" class="state-published">
+            
+            Notícias 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/5G/leilao-de-espectro-5g" class="state-published">
+            
+            Leilão de Espectro 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/5G/perguntas-e-respostas" class="state-published">
+            
+            Perguntas e Respostas sobre o 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/universalizacao/compromissos-do-leilao-do-5g" class="state-published">
+            
+            Compromissos do Leilão do 5G
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/acompanhamento-e-controle/5g" class="state-published">
+            
+            Painel de Acompanhamento
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/certificacao-de-produtos/celulares-em-5g" class="state-published">
+            
+            Celulares Certificados
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/acessibilidade" class="state-published">
+            
+            Acessibilidade
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/adaptacao" class="state-published hasDropDown">
+            
+            Adaptação
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/adaptacao/adaptacao-da-oi" class="state-published">
+            
+            Adaptação da Oi
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/agenda-2030" class="state-published hasDropDown">
+            
+            Agenda 2030
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/agenda-2030/seminario-pre-cop30" class="state-published">
+            
+            Seminário Pré-COP30
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/atuacao-internacional" class="state-published hasDropDown">
+            
+            Atuação Internacional
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/atuacao-internacional/relacoes-internacionais" class="state-published">
+            
+            Relações Internacionais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/atuacao-internacional/cbcs" class="state-published">
+            
+            Comissões Brasileiras de Comunicação
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal" class="state-published hasDropDown">
+            
+            Celular Legal
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/consulte-sua-situacao" class="state-published">
+            
+            Consulte Sua Situação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/o-projeto" class="state-published">
+            
+            Entenda o Projeto
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/beneficios-do-projeto" class="state-published">
+            
+            Benefícios e Objetivos Principais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/o-que-muda-com-o-projeto" class="state-published">
+            
+            O Que Muda Com o Projeto
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/selo-anatel" class="state-published">
+            
+            Selo de Certificação Anatel
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/o-aparelho-nao-funciona" class="state-published">
+            
+            Meu Aparelho Não Funciona
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/imei" class="state-published">
+            
+            Identificação Internacional de Equipamento Móvel - IMEI
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/antes-de-comprar" class="state-published">
+            
+            Antes de Comprar
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/o-que-fazer" class="state-published">
+            
+            O Que Fazer
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/celular-roubado" class="state-published">
+            
+            Celular Roubado
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/celular-seguro" class="state-published">
+            
+            Celular Seguro
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/perguntas-frequentes" class="state-published">
+            
+            Perguntas Frequentes
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/noticias/acoes-do-setor-de-telecomunicacoes-no-combate-ao-coronavirus" class="state-published">
+            
+            Coronavírus
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/dicas-contra-fraudes" class="state-published">
+            
+            Dicas contra Fraudes
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/noticias" class="state-published">
+            
+            Notícias
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/acompanhamento-e-controle/processo-sancionador" class="state-published">
+            
+            Processo Sancionador
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/seguranca-cibernetica" class="state-published">
+            
+            Segurança Cibernética
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/seguranca-publica" class="state-published">
+            
+            Segurança Pública
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao" class="plain">Acesso à Informação</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/institucional" class="state-published">
+            
+            Institucional
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/acoes-e-programas" class="state-published hasDropDown">
+            
+            Ações e Programas
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/acoes-e-programas/planejamento-estrategico" class="state-published">
+            
+            Planejamento Estratégico
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/acoes-e-programas/avaliacao-de-desempenho-institucional" class="state-published">
+            
+            Avaliação de Desempenho Institucional
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/pt-br/orgaos/agencia-nacional-de-telecomunicacoes" class="state-published">
+            
+            Carta de Serviços
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/acoes-e-programas/levantamento-integrado-de-governanca-do-tcu" class="state-published">
+            
+            Levantamento Integrado de Governança do TCU
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/participacao-social" class="state-published">
+            
+            Participação Social
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/auditorias" class="state-published hasDropDown">
+            
+            Auditorias
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/auditorias/relatorios-de-gestao" class="state-published">
+            
+            Relatórios de Gestão
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/auditorias/auditoria-interna" class="state-published">
+            
+            Auditoria Interna
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/auditorias/relatorios-e-informes-dos-orgaos-de-controle" class="state-published">
+            
+            Relatórios e Informes dos Órgãos de Controle
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/convenios-e-transferencias" class="state-published">
+            
+            Convênios e Transferências
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/receitas-e-despesas" class="state-published">
+            
+            Receitas e Despesas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/licitacoes-e-contratos" class="state-published">
+            
+            Licitações e Contratos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/servidores" class="state-published">
+            
+            Servidores
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/informacoes-classificadas" class="state-published">
+            
+            Informações Classificadas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/servico-de-informacao-ao-cidadao-sic" class="state-published">
+            
+            Serviço de Informação ao Cidadão (SIC)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/perguntas-frequentes" class="state-published">
+            
+            Perguntas Frequentes
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="/anatel/pt-br/dados/dados-abertos" class="state-published">
+            
+            Dados Abertos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/governanca" class="state-published">
+            
+            Governança
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/tratamento-de-dados-pessoais" class="state-published hasDropDown">
+            
+            Tratamento de Dados Pessoais
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/tratamento-de-dados-pessoais/aviso-de-privacidade" class="state-published">
+            
+            Aviso de Privacidade
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/tratamento-de-dados-pessoais/compartilhamento-de-dados" class="state-published">
+            
+            Compartilhamento de Dados
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/tratamento-de-dados-pessoais/ripd" class="state-published">
+            
+            Relatórios de Impacto à Proteção de Dados Pessoais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/tratamento-de-dados-pessoais/relatorios-orgaos-de-controle" class="state-published">
+            
+            Relatórios Órgãos de Controle
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/acesso-a-informacao/transparencia-e-prestacao-de-contas" class="state-published">
+            
+            Transparência e Prestação de Contas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://sei.anatel.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&amp;acao_origem_externa=protocolo_pesquisar&amp;id_orgao_acesso_externo=0" class="state-published">
+            
+            Pesquisa Pública do SEI
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/canais_atendimento" class="plain">Canais de Atendimento</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/aplicativo" class="state-published">
+            
+            Aplicativo
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/internet" class="state-published">
+            
+            Internet
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/presencial" class="state-published">
+            
+            Presencial
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/telefone" class="state-published">
+            
+            Telefone
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/whatsapp" class="state-published">
+            
+            WhatsApp
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/ouvidoria" class="state-published">
+            
+            Ouvidoria
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/imprensa" class="state-published">
+            
+            Imprensa
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/sistemas" class="state-published">
+            
+            Sistemas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/canais_atendimento/apoio-institucional" class="state-published">
+            
+            Apoio Institucional
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo" class="plain">Centrais de Conteúdo</a>
+                <ul class="submenu">
+                    <li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes" class="state-published hasDropDown">
+            
+            Publicações
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/acervo-documental" class="state-published">
+            
+            Acervo Documental
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/acervo-bibliografico" class="state-published">
+            
+            Acervo Bibliográfico
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/biblioteca" class="state-published">
+            
+            Biblioteca da Anatel
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/doacoes-desfazimentos-e-eliminacoes" class="state-published">
+            
+            Doações, Desfazimentos e Eliminações
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/estudos-e-pesquisas" class="state-published">
+            
+            Estudos e Pesquisas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/publicacoes/relatorio-anual" class="state-published">
+            
+            Relatório Anual
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.flickr.com/photos/anatel_informa/albums" class="state-published">
+            
+            Imagens
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.youtube.com/anatel" class="state-published">
+            
+            Vídeos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/processo-eletronico" class="state-published">
+            
+            Processo Eletrônico (SEI)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/jurisprudencia" class="state-published">
+            
+            Repositório de Jurisprudência
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/centrais-de-conteudo/solicitacao-de-vistas" class="state-published">
+            
+            Solicitação de Vistas de Processo e Documento
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/composicao" class="plain">Composição</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/estrutura-organizacional" class="state-published">
+            
+            Estrutura Organizacional
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/conselho-diretor" class="state-published">
+            
+            Conselho Diretor
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/conselho-consultivo" class="state-published">
+            
+            Conselho Consultivo
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/ceadi" class="state-published">
+            
+            Ceadi
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/comissao-de-etica" class="state-published">
+            
+            Comissão de Ética
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/comites" class="state-published hasDropDown">
+            
+            Comitês
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/participe-dos-debates/cdust" class="state-published">
+            
+            Comitê de Defesa dos Usuários de Serviços de Telecomunicações
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/comites/comite-de-uso-do-espectro-e-de-orbita" class="state-published">
+            
+            Comitê de Uso do Espectro e de Órbita
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/comites/comite-de-infraestrutura-de-telecomunicacoes" class="state-published">
+            
+            Comitê de Infraestrutura de Telecomunicações
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/prestadoras-de-pequeno-porte/cppp" class="state-published">
+            
+            Comitê de Prestadoras de Pequeno Porte
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/comites/comite-interno-de-governanca" class="state-published">
+            
+            Comitê Interno de Governança
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/grupos-de-trabalho" class="state-published hasDropDown">
+            
+            Grupos de Trabalho
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/grupos-de-trabalho/gaispi" class="state-published">
+            
+            Gaispi
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/grupos-de-trabalho/gape" class="state-published">
+            
+            Gape
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/grupos-de-trabalho/gired" class="state-published">
+            
+            Gired
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/seguranca-cibernetica" class="state-published">
+            
+            GT Ciber
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/certificacao/openran" class="state-published">
+            
+            GT OpenRAN
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/composicao/grupos-de-trabalho/gt-rcom" class="state-published">
+            
+            GT RCom
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/seguranca-publica" class="state-published">
+            
+            GT Seg
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/consumidor" class="plain">Consumidor</a>
+                <ul class="submenu">
+                    <li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/quer-reclamar" class="state-published hasDropDown">
+            
+            Quer Reclamar?
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/quer-reclamar/reclamacao" class="state-published">
+            
+            Registrar Reclamação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.naomeperturbe.com.br/" class="state-published">
+            
+            Bloqueio de Telemarketing
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/quer-reclamar/anatel-procon-ou-juizados-especiais" class="state-published">
+            
+            Anatel, Procon ou Juizados Especiais?
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/quer-reclamar/reclamacao-denuncia-ou-outras-manifestacoes" class="state-published">
+            
+            Reclamação, Denúncia ou Outras Manifestações?
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/assuntos/celular-legal/consulte-sua-situacao" class="state-published">
+            
+            Situação do Celular (IMEI)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/chamadas-abusivas" class="state-published">
+            
+            Chamadas Abusivas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/conheca-seus-direitos" class="state-published">
+            
+            Conheça Seus Direitos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/pesquisa-de-satisfacao-e-qualidade" class="state-published">
+            
+            Pesquisa de Satisfação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/mundo-digital" class="state-published">
+            
+            Mundo Digital
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/compare-as-prestadoras" class="state-published hasDropDown">
+            
+            Compare as Prestadoras
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/consumidor/reclamacoes" class="state-published">
+            
+            Reclamações na Anatel
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/qualidade/indicadores-de-qualidade" class="state-published">
+            
+            Indicadores de Qualidade
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/participe-dos-debates" class="state-published hasDropDown">
+            
+            Contribua com os Debates
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/participe-dos-debates/conselhos-de-usuarios" class="state-published">
+            
+            Conselhos de Usuários
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/participe-dos-debates/cdust" class="state-published">
+            
+            CDUST
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="/anatel/pt-br/composicao/conselho-consultivo" class="state-published">
+            
+            Conselho Consultivo
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/participe-dos-debates/consultas-e-audiencias-publicas" class="state-published">
+            
+            Consultas e Audiências Públicas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="/anatel/pt-br/canais_atendimento/ouvidoria" class="state-published">
+            
+            Ouvidoria
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/consumidor/projetosproconsumidor" class="state-published">
+            
+            Projetos Pró-consumidor
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="selected dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/dados" class="plain">Dados</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/" class="state-published">
+            
+            Indicadores Setoriais
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/paineis" class="state-published hasDropDown">
+            
+            Painéis
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/meu-municipio" class="state-published">
+            
+            Meu Município
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/acessos" class="state-published">
+            
+            Acessos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/acompanhamento-e-controle" class="state-published">
+            
+            Acompanhamento e Controle
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/areas-tarifarias" class="state-published">
+            
+            Áreas Tarifárias
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/arrecadacao" class="state-published">
+            
+            Arrecadação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/certificacao-de-produtos" class="state-published">
+            
+            Certificação de Produtos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/coletas-de-dados-setoriais" class="state-published">
+            
+            Coletas de Dados Setoriais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/competicao" class="state-published">
+            
+            Competição
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/consumidor" class="state-published">
+            
+            Consumidor
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/contratos-administrativos" class="state-published">
+            
+            Contratos Administrativos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/espectro-e-orbita" class="state-published">
+            
+            Espectro e Órbita
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/fiscalizacao" class="state-published">
+            
+            Fiscalização
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/gestao-de-pessoas" class="state-published">
+            
+            Gestão de Pessoas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/infraestrutura" class="state-published">
+            
+            Infraestrutura
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/outorga-e-licenciamento" class="state-published">
+            
+            Outorga e Licenciamento
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/participacao-social" class="state-published">
+            
+            Participação Social
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/planejamento" class="state-published">
+            
+            Planejamento
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/portabilidade" class="state-published">
+            
+            Portabilidade
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/qualidade" class="state-published">
+            
+            Qualidade
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/radiodifusao" class="state-published">
+            
+            Radiodifusão
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/regulamentacao" class="state-published">
+            
+            Regulamentação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/sei-em-numeros" class="state-published">
+            
+            SEI em Números
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/paineis/utilidade-publica" class="state-published">
+            
+            Utilidade Pública
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/coleta-de-dados-setoriais" class="state-published hasDropDown">
+            
+            Coleta de Dados Setoriais
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/universalizacao/coletas-de-dados-de-acessos" class="state-published">
+            
+            Coletas de Dados de Acessos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/coleta-de-dados-setoriais/coletas-de-dados-de-acompanhamento-economico" class="state-published">
+            
+            Coletas de Dados de Acompanhamento Econômico
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/coleta-de-dados-de-infraestrutura-de-transporte" class="state-published">
+            
+            Coleta de Dados de Infraestrutura de Transporte
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/coleta-de-dados-setoriais/manual-do-sistema-coleta-de-dados-anatel" class="state-published">
+            
+            Manual do Sistema Coleta de Dados
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura" class="state-published hasDropDown">
+            
+            Infraestrutura
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/antenas-nos-municipios" class="state-published">
+            
+            Antenas nos Municípios
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/coleta-de-dados-de-infraestrutura-de-transporte" class="state-published">
+            
+            Coleta de Dados de Infraestrutura de Transporte
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/cabos-submarinos" class="state-published">
+            
+            Cabos Submarinos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.anatel.gov.br/paineis/espectro-e-orbita/mapa-de-exposicao-a-campos-eletromagneticos" class="state-published">
+            
+            Medições de Campo Eletromagnético
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/pert" class="state-published">
+            
+            PERT
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/infraestrutura/telefonia-fixa" class="state-published">
+            
+            Telefonia Fixa
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/qualidade" class="state-published hasDropDown">
+            
+            Qualidade
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/qualidade/qualidade-dos-servicos" class="state-published">
+            
+            Qualidade dos Serviços
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="/anatel/pt-br/consumidor/compare-as-prestadoras/pesquisa-de-satisfacao-e-qualidade" class="state-published">
+            
+            Pesquisa de Satisfação e Qualidade
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="/anatel/pt-br/consumidor/compare-as-prestadoras/reclamacoes-na-anatel" class="state-published">
+            
+            Reclamações na Anatel
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/utilidade-publica" class="state-published hasDropDown">
+            
+            Utilidade Pública
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/utilidade-publica/alertas-de-desastres" class="state-published">
+            
+            Alertas de Desastres
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/utilidade-publica/cadastro-pre-pago" class="state-published">
+            
+            Cadastro Pré-Pago
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/dados/dados-abertos" class="state-published">
+            
+            Dados Abertos
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/legislacao" class="plain">Legislação</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/resolucoes" class="state-published">
+            
+            Resoluções
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/sumulas" class="state-published">
+            
+            Súmulas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/portarias-de-delegacao" class="state-published">
+            
+            Portarias de Delegação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/portarias-normativas" class="state-published">
+            
+            Portarias Normativas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/resolucoes-internas" class="state-published">
+            
+            Resoluções Internas
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/metodologias-de-calculo-de-multa" class="state-published">
+            
+            Metodologias de Cálculo de Multa
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/glossario-anatel" class="state-published">
+            
+            Glossário
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/legislacao/atos" class="state-published hasDropDown">
+            
+            Atos
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/atos-de-certificacao-de-produtos" class="state-published">
+            
+            Atos de Certificação de Produtos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/atos-de-requisitos-tecnicos-de-gestao-do-espectro" class="state-published">
+            
+            Atos de Requisitos Técnicos de Gestão do Espectro
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/atos-de-numeracao" class="state-published">
+            
+            Atos de Numeração
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/legislacao/fiscalizacao" class="state-published hasDropDown">
+            
+            Fiscalização
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/procedimentos-de-fiscalizacao" class="state-published">
+            
+            Procedimentos de Fiscalização
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/instrucoes-de-fiscalizacao" class="state-published">
+            
+            Instruções de Fiscalização
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/legislacao/demais-normas" class="state-published hasDropDown">
+            
+            Demais Normas
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/leis" class="state-published">
+            
+            Leis
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/decretos" class="state-published">
+            
+            Decretos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/normas-do-mc" class="state-published">
+            
+            Normas do Ministério das Comunicações
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://informacoes.anatel.gov.br/legislacao/instru%C3%A7%C3%B5es-do-dentel" class="state-published">
+            
+            Instruções do Dentel
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/anatel/pt-br/regulado" class="plain">Regulado</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/acompanhamento-e-controle" class="state-published">
+            
+            Acompanhamento e Controle
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria" class="state-published hasDropDown">
+            
+            Agenda Regulatória
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2025-2026" class="state-published">
+            
+            2025-2026
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2023-2024" class="state-published">
+            
+            2023-2024
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2021-2022" class="state-published">
+            
+            2021-2022
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2019-2020" class="state-published">
+            
+            2019-2020
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2017-2018" class="state-published">
+            
+            2017-2018
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/2015-2016" class="state-published">
+            
+            2015-2016
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/anos-anteriores" class="state-published">
+            
+            Anos Anteriores
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/simplificacao-regulatoria" class="state-published">
+            
+            Simplificação Regulatória
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/agenda-regulatoria/sandbox-regulatorio" class="state-published">
+            
+            Sandbox Regulatório
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/arrecadacao" class="state-published">
+            
+            Arrecadação
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/certificacao-de-produtos" class="state-published">
+            
+            Certificação de Produtos
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/competicao" class="state-published">
+            
+            Competição
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/espectro" class="state-published">
+            
+            Espectro
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/fiscalizacao" class="state-published">
+            
+            Fiscalização
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/numeracao" class="state-published">
+            
+            Numeração
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/outorga" class="state-published">
+            
+            Outorga
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/prestadoras-de-pequeno-porte" class="state-published">
+            
+            Prestadoras de Pequeno Porte
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/radiodifusao" class="state-published">
+            
+            Radiodifusão
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/radiofrequencia" class="state-published">
+            
+            Radiofrequência
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/satelite" class="state-published">
+            
+            Satélite
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/universalizacao" class="state-published">
+            
+            Universalização e Ampliação do Acesso
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/anatel/pt-br/regulado/perguntas-frequentes" class="state-published">
+            
+            Perguntas Frequentes
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li></ul>
+                <!--</div>
+            </div>-->
+
+                
+        <div class="lgpd-reset-cookies">
+        <a href="#" class="reset-cookies" onclick="_redefinirCookies(); return false;">Redefinir Cookies</a>
+    </div>
+    <div class="redes-e-logos">
+                    <div class="redes-sociais">
+                        <div class="titulo">Redes sociais</div>
+                    <ul class="portal-redes">
+            
+                <li class="portalredes-youtube portalredes-item">
+                    <a href="https://www.youtube.com/Anatel">YouTube</a>
+                </li>
+            
+                <li class="portalredes-facebook portalredes-item">
+                    <a href="https://www.facebook.com/anatelgovbr">Facebook</a>
+                </li>
+            
+                <li class="portalredes-flickr portalredes-item">
+                    <a href="https://www.flickr.com/anatel_informa">Flickr</a>
+                </li>
+            
+                <li class="portalredes-instagram portalredes-item">
+                    <a href="https://www.instagram.com/anatelgovbr">Instagram</a>
+                </li>
+            
+                <li class="portalredes-twitter portalredes-item">
+                    <a href="https://www.twitter.com/AnatelGovBR">Twitter</a>
+                </li>
+            
+        </ul></div>
+                    <div id="footer-govbr">
+                        <div id="wrapper-footer-brasil">
+                            <a class="logo-acesso-footer" href="https://www.gov.br/acessoainformacao/pt-br" title="Acesse o portal sobre o acesso à informação">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 117 49" height="49" width="117" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><defs><style type="text/css"><![CDATA[.a {font: normal bold 11px Open Sans, sans-serif;}]]></style></defs><circle cx="22" cy="23" r="22" fill="#222"></circle><path style="stroke:#fff;stroke-width:9;stroke-linecap:round;" d="m 22,23 v 13"></path><path style="stroke:#222;stroke-width:4;stroke-linejoin:round;" d="m 4,43 3,-6 4,3 z"></path><circle r="4.5" cy="11" cx="22" fill="#fff"></circle><g fill="#222"><text x="47" y="22"><tspan class="a" y="18">Acesso à</tspan><tspan class="a" x="47" y="31">Informação</tspan></text></g></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="texto-copyright">
+    Todo o conteúdo deste site está publicado sob a licença <a rel="license" href="https://creativecommons.org/licenses/by-nd/3.0/deed.pt_BR">Creative Commons Atribuição-SemDerivações 3.0 Não Adaptada</a>.
+  </div>
+        </footer>
+
+        <nav class="back-to-top" aria-label="Voltar ao topo da página">
+            <a href="#wrapper">
+                <span class="fa fa-chevron-up"></span>
+                <span class="sr-only">Voltar ao topo da página</span>
+            </a>
+        </nav>
+    <div id="govbr-busca-input-data" style="display: none" data-autocomplete-api="https://portalunico.estaleiro.serpro.gov.br/api/" data-autocomplete-index="//www.gov.br/anatel" data-autocomplete-orgao="agencia-nacional-de-telecomunicacoes" data-autocomplete-search="https://www.gov.br/anatel/pt-br" data-autocomplete-portal="https://www.gov.br" data-historico-title="Histórico de buscas" data-servicos-title="Serviços e Apps" data-sugestoes-title="Você quis dizer?" data-input-placeholder="O que você procura?"></div></div><div id="main-navigation-overlay"></div><div class="redefinir-cookies">
+
+    
+
+</div><div class="dsgov">
+    <div class="br-cookiebar default d-none" tabindex="-1">
+      <div class="br-modal">
+        <div class="br-card">
+          <div class="container">
+            <div class="wrapper">
+              <div class="br-modal-header entry-content">
+                <div class="br-modal-title"></div>
+                <div class="last-update"></div>
+                <div class="entry-text"></div>
+              </div>
+              <div class="br-modal-body">
+                <div class="info-text"></div>
+                <div class="br-list main-content">
+                </div>
+              </div>
+            </div>
+            <div class="br-modal-footer actions">
+              <button class="br-button small btn-manage" type="button" aria-label="Definir Cookies"></button>
+              <button class="br-button secondary small reject-all" type="button" aria-label="Rejeitar cookies">Rejeitar</button>
+              <button class="br-button secondary small btn-accept" type="button" aria-label="Aceitar"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><script id="lgpd-cookie-handling" type="text/javascript" src="https://www.gov.br/anatel/++resource++govbr.policy/lgpd_cookie_handling_1_3_88.js"></script><div id="govbr-login-overlay-wrapper"></div><div id="govbr-busca-por-voz-overlay-wrapper">
+        <div class="busca-por-voz">
+            <span class="transcpt-text">Fale Agora</span>
+            <a href="#" id="btn-refazer-busca" class="refazer-busca">
+                Refazer a busca
+            </a>
+            
+            <a href="#" id="btn-ouvindo" class="btn-microfone ouvindo">
+                <span class="fas fa-microphone"></span>
+            </a>
+
+            <a href="#" id="btn-nao-entendi" class="btn-microfone nao-entendi">
+                <span class="fas fa-microphone"></span>
+            </a>
+
+            <a href="#" id="btn-fechar">
+                <span class="fas fa-times"></span>
+            </a>
+        </div>
+    </div><div vw="" class="enabled">
+        <div vw-access-button="" class="active"></div>
+        <div vw-plugin-wrapper="">
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div><!-- relato 4118176 --><script>
+        window.onbeforeunload = null;
+    </script><script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script><script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app', 'https://vlibras.gov.br/config/default_logo.json');
+    </script><script>        
+        window.addEventListener('troca-contraste', function() {            
+            if ($("body").hasClass("contraste")) {
+                setCookie("contraste", "");
+                $("body").removeClass("contraste");
+                $("barra-govbr").attr('contrastActive', 'false');
+            } else {
+                setCookie("contraste", "on");
+                $("body").addClass("contraste");
+                $("barra-govbr").attr('contrastActive', 'true');
+            }
+            return false;
+        });
+        window.addEventListener('abrir-cookie-config', function() {
+            _redefinirCookies(); return false;
+        });
+        window.addEventListener('ACCESSTOKEN_ERROR', function() {
+            window.location.href = "/govbrportal/logout.html";
+        });
+    </script><script type="text/javascript" src="/anatel/++theme++padrao_govbr/govbrtheme-ab495f4.js"></script><div id="plone-analytics"></div></body>
+</html>

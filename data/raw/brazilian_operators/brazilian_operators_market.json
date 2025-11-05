@@ -1,0 +1,71 @@
+{
+  "dataset_name": "Brazilian Telecom Operator Market Share",
+  "source": "Public Reports, Wikipedia, Reuters",
+  "created_at": "2025-10-31T22:50:18.472591",
+  "mobile_subscribers_2023_q1": {
+    "vivo": {
+      "company": "Telef\u00f4nica Brasil",
+      "subscribers_millions": 98.0,
+      "market_share": 0.32,
+      "revenue_2024_brl_billions": 55.85,
+      "revenue_growth": 0.0719
+    },
+    "claro": {
+      "company": "Am\u00e9rica M\u00f3vil",
+      "subscribers_millions": 82.8,
+      "market_share": 0.27,
+      "revenue_2024_brl_billions": null,
+      "revenue_growth": null
+    },
+    "tim": {
+      "company": "Telecom Italia",
+      "subscribers_millions": 61.7,
+      "market_share": 0.2,
+      "revenue_2024_brl_billions": null,
+      "revenue_growth": 0.05
+    },
+    "oi": {
+      "company": "Oi (mobile sold 2020-2022)",
+      "subscribers_millions": 0,
+      "market_share": 0.0,
+      "note": "Mobile division sold, customers distributed to Vivo/Claro/TIM"
+    },
+    "others": {
+      "subscribers_millions": 63.5,
+      "market_share": 0.21
+    }
+  },
+  "total_subscribers_2023": 307.0,
+  "market_consolidation": {
+    "oi_sale_2020_2022": {
+      "buyers": [
+        "TIM",
+        "Claro",
+        "Vivo"
+      ],
+      "distribution": {
+        "tim": 0.4,
+        "claro": 0.32,
+        "vivo": 0.28
+      },
+      "oi_customers_millions": 36.5
+    }
+  },
+  "5g_coverage_2023_july": {
+    "cities": 753,
+    "population_percentage": 0.46,
+    "total_population_coverage": 98000000
+  },
+  "recent_announcements": [
+    {
+      "date": "2024-10",
+      "company": "Nubank",
+      "announcement": "Launching NuCel mobile service",
+      "plans_brl": [
+        45,
+        75
+      ],
+      "infrastructure": "Claro"
+    }
+  ]
+}

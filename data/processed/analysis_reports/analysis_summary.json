@@ -1,0 +1,25 @@
+{
+  "analysis_date": "2025-11-02T20:25:43.228081",
+  "total_datasets": 16,
+  "analyzed_count": 16,
+  "total_rows": 339962,
+  "total_columns": 1286,
+  "datasets": [
+    "kaggle_daily_demand",
+    "kaggle_logistics_warehouse",
+    "kaggle_retail_inventory",
+    "kaggle_supply_chain",
+    "zenodo_milan_telecom",
+    "github_5g3e",
+    "kaggle_equipment_failure",
+    "github_network_fault",
+    "kaggle_telecom_network",
+    "kaggle_smart_logistics",
+    "kaggle_cloud_supply_chain",
+    "test_dataset",
+    "brazilian_iot_structured",
+    "brazilian_fiber_structured",
+    "brazilian_operators_structured",
+    "brazilian_demand_factors"
+  ]
+}

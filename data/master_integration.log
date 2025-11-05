@@ -1,0 +1,76 @@
+2025-11-01 07:36:16,367 - __main__ - INFO - ================================================================================
+2025-11-01 07:36:16,367 - __main__ - INFO - MASTER DATASET INTEGRATION PIPELINE
+2025-11-01 07:36:16,367 - __main__ - INFO - ================================================================================
+2025-11-01 07:36:16,367 - __main__ - INFO - ================================================================================
+2025-11-01 07:36:16,367 - __main__ - INFO - LOADING ALL DATASETS
+2025-11-01 07:36:16,367 - __main__ - INFO - ================================================================================
+2025-11-01 07:36:16,367 - __main__ - INFO - 
+Loading: brazilian_telecom
+2025-11-01 07:36:16,422 - __main__ - INFO -   [OK] Loaded 2,880 records, 30 columns
+2025-11-01 07:36:16,422 - __main__ - INFO -   Sample columns: ['date', 'year', 'month', 'day', 'day_of_year', 'gdp_growth_rate', 'inflation_rate', 'exchange_rate_brl_usd', 'temperature_avg_c', 'precipitation_mm']...
+2025-11-01 07:36:16,422 - __main__ - INFO - 
+Loading: nova_corrente_enriched
+2025-11-01 07:36:16,458 - __main__ - INFO -   [OK] Loaded 2,880 records, 74 columns
+2025-11-01 07:36:16,459 - __main__ - INFO -   Sample columns: ['date', 'year', 'month', 'day', 'day_of_year', 'gdp_growth_rate', 'inflation_rate', 'exchange_rate_brl_usd', 'temperature_avg_c', 'precipitation_mm']...
+2025-11-01 07:36:16,459 - __main__ - INFO - 
+Loading: comprehensive
+2025-11-01 07:36:16,485 - __main__ - INFO -   [OK] Loaded 1,676 records, 36 columns
+2025-11-01 07:36:16,486 - __main__ - INFO -   Sample columns: ['date', 'year', 'quarter', 'country', 'region', 'mobile_internet_users_millions', 'market_share', 'arpu_usd', '5g_penetration_pct', 'total_regional_users_millions']...
+2025-11-01 07:36:16,486 - __main__ - INFO - 
+Total datasets loaded: 3
+2025-11-01 07:36:16,486 - __main__ - INFO - 
+================================================================================
+2025-11-01 07:36:16,486 - __main__ - INFO - MERGING ALL DATASETS
+2025-11-01 07:36:16,486 - __main__ - INFO - ================================================================================
+2025-11-01 07:36:16,487 - __main__ - INFO - Starting with Nova Corrente enriched: 2,880 records
+2025-11-01 07:36:16,487 - __main__ - INFO - 
+Merging comprehensive dataset...
+2025-11-01 07:36:16,528 - __main__ - INFO -   [OK] Merged: 19,340 records, 109 columns
+2025-11-01 07:36:16,529 - __main__ - INFO - 
+Cleaning duplicate columns...
+2025-11-01 07:36:16,536 - __main__ - INFO -   [OK] Removed 8 duplicate columns
+2025-11-01 07:36:16,537 - __main__ - INFO - 
+[OK] Final integrated dataset: 19,340 records, 101 columns
+2025-11-01 07:36:16,539 - __main__ - INFO - 
+================================================================================
+2025-11-01 07:36:16,539 - __main__ - INFO - ENRICHING WITH METADATA
+2025-11-01 07:36:16,539 - __main__ - INFO - ================================================================================
+2025-11-01 07:36:16,556 - __main__ - INFO - Adding date features...
+2025-11-01 07:36:16,561 - __main__ - INFO -   [OK] Added 9 date features
+2025-11-01 07:36:16,562 - __main__ - INFO - Adding derived features...
+2025-11-01 07:36:16,569 - __main__ - INFO -   [OK] Added risk scoring with 2 factors
+2025-11-01 07:36:16,570 - __main__ - INFO -   [OK] Added market efficiency score
+2025-11-01 07:36:16,571 - __main__ - INFO -   [OK] Added investment priority score
+2025-11-01 07:36:16,571 - __main__ - INFO - 
+[OK] Enriched dataset: 19,340 records, 110 columns
+2025-11-01 07:36:16,571 - __main__ - INFO - 
+================================================================================
+2025-11-01 07:36:16,571 - __main__ - INFO - SAVING INTEGRATED DATASET
+2025-11-01 07:36:16,571 - __main__ - INFO - ================================================================================
+2025-11-01 07:36:17,207 - __main__ - INFO - [OK] Saved master dataset: D:\codex\datamaster\senai\gran_prix\data\processed\unified_master_ml_ready.csv
+2025-11-01 07:36:17,207 - __main__ - INFO -    Records: 19,340
+2025-11-01 07:36:17,207 - __main__ - INFO -    Columns: 110
+2025-11-01 07:36:17,224 - __main__ - INFO - [OK] Summary saved: D:\codex\datamaster\senai\gran_prix\data\processed\master_integration_summary.json
+2025-11-01 07:36:17,239 - __main__ - INFO - 
+Feature categories:
+2025-11-01 07:36:17,239 - __main__ - INFO -   temporal: 25 features
+2025-11-01 07:36:17,239 - __main__ - INFO -   economic: 6 features
+2025-11-01 07:36:17,239 - __main__ - INFO -   regulatory: 10 features
+2025-11-01 07:36:17,239 - __main__ - INFO -   technology: 15 features
+2025-11-01 07:36:17,240 - __main__ - INFO -   infrastructure: 14 features
+2025-11-01 07:36:17,240 - __main__ - INFO -   market: 7 features
+2025-11-01 07:36:17,240 - __main__ - INFO -   climate: 10 features
+2025-11-01 07:36:17,240 - __main__ - INFO -   geographic: 6 features
+2025-11-01 07:36:17,240 - __main__ - INFO -   derived: 16 features
+2025-11-01 07:36:17,240 - __main__ - INFO - 
+================================================================================
+2025-11-01 07:36:17,240 - __main__ - INFO - INTEGRATION COMPLETE!
+2025-11-01 07:36:17,240 - __main__ - INFO - ================================================================================
+2025-11-01 07:36:17,240 - __main__ - INFO - [OK] Master dataset: D:\codex\datamaster\senai\gran_prix\data\processed\unified_master_ml_ready.csv
+2025-11-01 07:36:17,240 - __main__ - INFO -    Records: 19,340
+2025-11-01 07:36:17,240 - __main__ - INFO -    Columns: 110
+2025-11-01 07:36:17,240 - __main__ - INFO - 
+Next steps:
+2025-11-01 07:36:17,240 - __main__ - INFO - 1. Review master dataset
+2025-11-01 07:36:17,240 - __main__ - INFO - 2. Prepare train/test splits
+2025-11-01 07:36:17,240 - __main__ - INFO - 3. Train ML/DL models!

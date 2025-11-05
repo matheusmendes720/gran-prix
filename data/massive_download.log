@@ -1,0 +1,56 @@
+2025-11-01 06:03:34,237 - __main__ - INFO - ================================================================================
+2025-11-01 06:03:34,237 - __main__ - INFO - MASSIVE BRAZILIAN TELECOM DATASETS DOWNLOAD PIPELINE
+2025-11-01 06:03:34,237 - __main__ - INFO - ================================================================================
+2025-11-01 06:03:34,237 - __main__ - INFO - 
+================================================================================
+2025-11-01 06:03:34,237 - __main__ - INFO - PHASE 1: DOWNLOADING DATASETS
+2025-11-01 06:03:34,238 - __main__ - INFO - ================================================================================
+2025-11-01 06:03:34,238 - __main__ - INFO - Downloading Anatel dataset: mobile_accesses
+2025-11-01 06:03:35,189 - __main__ - WARNING - Saved HTML for manual processing: D:\codex\datamaster\senai\gran_prix\data\raw\anatel_mobile_accesses\mobile_accesses.html
+2025-11-01 06:03:35,189 - __main__ - INFO - Downloading Anatel dataset: broadband_accesses
+2025-11-01 06:03:36,144 - __main__ - WARNING - Saved HTML for manual processing: D:\codex\datamaster\senai\gran_prix\data\raw\anatel_broadband\broadband_accesses.html
+2025-11-01 06:03:36,144 - __main__ - INFO - Downloading Anatel dataset: spectrum_data
+2025-11-01 06:03:36,632 - __main__ - INFO - Downloading: https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/b18cd6e405bb47...
+2025-11-01 06:03:37,791 - __main__ - INFO - Anatel downloads: 3/3 successful
+2025-11-01 06:03:37,792 - __main__ - INFO - Downloading Zenodo dataset: brazilian_broadband_customers
+2025-11-01 06:03:38,891 - __main__ - INFO - Downloading: https://zenodo.org/api/records/10482897/files/BROADBAND_USER_INFO.csv/content...
+2025-11-01 06:03:40,151 - __main__ - INFO - Downloading Zenodo dataset: bgsmt_mobility
+2025-11-01 06:03:41,254 - __main__ - WARNING - No files found in Zenodo record 8178782
+2025-11-01 06:03:41,255 - __main__ - INFO - Zenodo downloads: 1/2 successful
+2025-11-01 06:03:41,255 - __main__ - INFO - Downloading Olist Brazilian E-Commerce dataset...
+2025-11-01 06:03:41,459 - __main__ - INFO - Downloading Kaggle dataset: olistbr/brazilian-ecommerce
+2025-11-01 06:03:45,536 - __main__ - INFO - 
+================================================================================
+2025-11-01 06:03:45,536 - __main__ - INFO - PHASE 2: CREATING STRUCTURED DATASETS
+2025-11-01 06:03:45,536 - __main__ - INFO - ================================================================================
+2025-11-01 06:03:45,536 - __main__ - INFO - Creating structured IoT market data...
+2025-11-01 06:03:45,543 - __main__ - INFO -    Records: 300
+2025-11-01 06:03:45,543 - __main__ - INFO - Creating structured fiber expansion data...
+2025-11-01 06:03:45,547 - __main__ - INFO -    Records: 100
+2025-11-01 06:03:45,547 - __main__ - INFO - Creating structured operator market data...
+2025-11-01 06:03:45,550 - __main__ - INFO -    Records: 288
+2025-11-01 06:03:45,550 - __main__ - INFO - Creating structured demand factors data...
+2025-11-01 06:03:45,574 - __main__ - INFO -    Records: 2,192
+2025-11-01 06:03:45,574 - __main__ - INFO - 
+================================================================================
+2025-11-01 06:03:45,574 - __main__ - INFO - PHASE 3: CREATING UNIFIED ML DATASET
+2025-11-01 06:03:45,574 - __main__ - INFO - ================================================================================
+2025-11-01 06:03:45,574 - __main__ - INFO - ================================================================================
+2025-11-01 06:03:45,574 - __main__ - INFO - CREATING UNIFIED ML-READY DATASET
+2025-11-01 06:03:45,575 - __main__ - INFO - ================================================================================
+2025-11-01 06:03:45,575 - __main__ - INFO - Loading: brazilian_demand_factors_structured.csv
+2025-11-01 06:03:45,595 - __main__ - INFO - Loading: brazilian_fiber_expansion_structured.csv
+2025-11-01 06:03:45,609 - __main__ - INFO - Loading: brazilian_iot_market_structured.csv
+2025-11-01 06:03:45,621 - __main__ - INFO - Loading: brazilian_operators_market_structured.csv
+2025-11-01 06:03:45,658 - __main__ - INFO -    File: D:\codex\datamaster\senai\gran_prix\data\processed\unified_brazilian_telecom_ml_ready.csv
+2025-11-01 06:03:45,658 - __main__ - INFO -    Records: 2,880
+2025-11-01 06:03:45,658 - __main__ - INFO -    Columns: 30
+2025-11-01 06:03:45,658 - __main__ - INFO - 
+================================================================================
+2025-11-01 06:03:45,658 - __main__ - INFO - PIPELINE COMPLETE!
+2025-11-01 06:03:45,658 - __main__ - INFO - ================================================================================
+2025-11-01 06:03:45,659 - __main__ - INFO - 
+Next steps:
+2025-11-01 06:03:45,659 - __main__ - INFO - 1. Review unified dataset: D:\codex\datamaster\senai\gran_prix\data\processed\unified_brazilian_telecom_ml_ready.csv
+2025-11-01 06:03:45,659 - __main__ - INFO - 2. Run preprocessing: python src/pipeline/preprocess_datasets.py
+2025-11-01 06:03:45,659 - __main__ - INFO - 3. Train models with enhanced data!
