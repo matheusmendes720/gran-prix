@@ -1,7 +1,7 @@
 
 
 import React, { useState, useEffect } from 'react';
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import { StateData } from '../types';
 import Card from './Card';
 import { LightBulbIcon } from './icons';
@@ -61,7 +61,7 @@ const GeminiAnalysis: React.FC<GeminiAnalysisProps> = ({ stateData, onClose }) =
                 if (!process.env.API_KEY) {
                   throw new Error("API_KEY environment variable not set");
                 }
-                const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+                const ai = new GoogleGenerativeAI(process.env.API_KEY || '');
 
                 const prompt = `
                     Como um analista de operações de telecomunicações sênior, forneça um resumo executivo conciso para o estado de ${stateData.name}.
@@ -80,10 +80,9 @@ const GeminiAnalysis: React.FC<GeminiAnalysisProps> = ({ stateData, onClose }) =
                     ${JSON.stringify(stateData, null, 2)}
                 `;
 
-                const response = await ai.models.generateContent({
-                    model: 'gemini-2.5-flash',
-                    contents: prompt,
-                });
+                const model = ai.getGenerativeModel({ model: 'gemini-2.5-flash' });
+                const result = await model.generateContent(prompt);
+                const response = result.response;
 
                 setAnalysis(response.text || '');
 

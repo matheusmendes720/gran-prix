@@ -1,0 +1,48 @@
+# Git Configuration for Nova Corrente Project
+
+[core]
+    autocrlf = true
+    editor = code --wait  # Assumes VS Code is installed
+
+[push]
+    default = current
+
+[merge]
+    tool = vscode
+
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+
+[diff]
+    tool = vscode
+
+[diff "ipynb"]
+    textconv = jupyter nbconvert --stdout --to=notebook --no-prompt
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[branch]
+    autosetupmerge = always
+
+[pull]
+    rebase = true
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    cm = commit -m
+    amend = commit --amend --no-edit
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    tree = log --oneline --graph --all
+    # Git Flow aliases
+    develop = checkout develop
+    feature = checkout -b feature/
+    bugfix = checkout -b bugfix/
+    release = checkout -b release/
+    main = checkout main
