@@ -1,8 +1,69 @@
-# Ignore only these specific directories
+# Data files
+data/raw/
+data/processed/
+!data/processed/tests_api_isolation/
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.json
+*.pdf
+
+# Environment variables and secrets
+.env
+.env.*
+*.env
+backend/.env
+frontend/.env.local
+frontend/.env*.local
+
+# Kaggle credentials
+config/kaggle_config.json
+**/kaggle_config.json
+
+# Python
 __pycache__/
-.clinerules/
-.cursor/
-.playwright-mcp/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+data/*.log
+data/processed/*.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Scrapy
+.scrapy/
+*.jsonl
+
+# Allow structured API isolation artifacts
+!tests_api_isolation/**
+tests_api_isolation/**/__pycache__/
+tests_api_isolation/**/.pytest_cache/
+
+# Windows packages
+*.nupkg
+
+# Jupyter
+.ipynb_checkpoints/
 .clinerules/byterover-rules.md
 .kilocode/rules/byterover-rules.md
 .roo/rules/byterover-rules.md

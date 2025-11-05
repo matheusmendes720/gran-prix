@@ -1,0 +1,35 @@
+{
+  "proxies": [
+    {
+      "name": "bacen_api",
+      "listen": "127.0.0.1:18080",
+      "upstream": "api.bcb.gov.br:443",
+      "enabled": true,
+      "latency": {
+        "enabled": false,
+        "latency": 0
+      },
+      "toxics": [
+        {
+          "type": "latency",
+          "name": "latency_500ms",
+          "stream": "downstream",
+          "attributes": {
+            "latency": 500,
+            "jitter": 100
+          },
+          "enabled": false
+        },
+        {
+          "type": "limit_data",
+          "name": "packet_loss_5pct",
+          "stream": "downstream",
+          "attributes": {
+            "bytes": 950
+          },
+          "enabled": false
+        }
+      ]
+    }
+  ]
+}

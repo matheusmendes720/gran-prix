@@ -1,0 +1,12 @@
+pytest
+pytest-asyncio
+pytest-xdist
+pytest-html
+requests
+httpx
+locust
+mitmproxy
+python-dotenv
+pydantic
+black
+flake8
