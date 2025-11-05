@@ -1,6 +1,7 @@
 # Data files
 data/raw/
 data/processed/
+!data/processed/tests_api_isolation/
 *.csv
 *.xlsx
 *.xls
@@ -52,6 +53,9 @@ Thumbs.db
 # Scrapy
 .scrapy/
 *.jsonl
+
+# Allow structured API isolation artifacts
+!tests_api_isolation/**
 
 # Jupyter
 .ipynb_checkpoints/
