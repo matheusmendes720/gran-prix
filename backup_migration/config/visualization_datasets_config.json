@@ -1,0 +1,133 @@
+{
+  "visualization_datasets": {
+    "anatel_mobile_accesses": {
+      "name": "Anatel Mobile Phone Accesses",
+      "source": "anatel",
+      "url": "https://data-basis.org/dataset/d3c86a88-d9a4-4fc0-bdec-08ab61e8f63c",
+      "description": "Mobile phone accesses by technology (5G, 4G, 3G) and region. Essential for time-series visualizations.",
+      "visualization_type": "time_series, map",
+      "columns_mapping": {
+        "date": "Date",
+        "quantity": "Subscribers",
+        "category": "Technology",
+        "site_id": "State"
+      },
+      "preprocessing_notes": "Aggregate by state for maps. Group by technology for time-series. Handle regional granularity.",
+      "download_method": "direct",
+      "relevance": "⭐⭐⭐⭐⭐"
+    },
+    "anatel_broadband_penetration": {
+      "name": "Anatel Fixed Broadband Penetration",
+      "source": "anatel",
+      "url": "https://data-basis.org/dataset",
+      "description": "Fixed broadband connections by speed tier and municipality. Perfect for penetration maps.",
+      "visualization_type": "map, choropleth",
+      "columns_mapping": {
+        "date": "Date",
+        "quantity": "Connections",
+        "category": "Speed_Tier",
+        "site_id": "Municipality"
+      },
+      "preprocessing_notes": "Aggregate by municipality/state. Calculate penetration rates (connections/population).",
+      "download_method": "scrape",
+      "relevance": "⭐⭐⭐⭐⭐"
+    },
+    "internet_aberta_forecast": {
+      "name": "Data Traffic Demand Forecast for Brazil",
+      "source": "internet_aberta",
+      "url": "https://internetaberta.com.br/wp-content/uploads/2024/05/Paper-1-EN-Data-Traffic-Demand-Forecast-for-Brazil.pdf",
+      "description": "Long-term projections (2024-2033) on data traffic, 5G adoption, and broadband growth. Ideal for forecast visualizations.",
+      "visualization_type": "forecast, line_chart",
+      "columns_mapping": {
+        "date": "Year",
+        "quantity": "Data_Traffic_TB",
+        "category": "Technology_Type"
+      },
+      "preprocessing_notes": "Extract tables from PDF. Convert to time-series format. Handle forecast uncertainties.",
+      "download_method": "direct",
+      "file_format": "pdf",
+      "relevance": "⭐⭐⭐⭐⭐"
+    },
+    "zenodo_broadband_customers": {
+      "name": "Real Dataset from Broadband Customers Brazil",
+      "source": "zenodo",
+      "url": "https://zenodo.org/records/10482897",
+      "description": "Real Brazilian operator data with customer metrics (latency, jitter, packet loss). Great for performance dashboards.",
+      "visualization_type": "dashboard, time_series",
+      "columns_mapping": {
+        "date": null,
+        "item_id": "Customer_ID",
+        "quantity": "Packet_Loss",
+        "category": "Channel2_quality"
+      },
+      "preprocessing_notes": "Add temporal indexing. Create performance metrics. Aggregate by region.",
+      "download_method": "zenodo",
+      "relevance": "⭐⭐⭐⭐⭐"
+    },
+    "teleco_mobile_statistics": {
+      "name": "Teleco Mobile Statistics Brazil",
+      "source": "teleco",
+      "url": "https://www.teleco.com.br/en/en_ncel.asp",
+      "description": "Mobile statistics and trends from Teleco. Historical data and current metrics.",
+      "visualization_type": "time_series, statistics",
+      "columns_mapping": {
+        "date": "Date",
+        "quantity": "Subscribers",
+        "category": "Operator"
+      },
+      "preprocessing_notes": "Web scraping required. Extract tables. Normalize formats.",
+      "download_method": "scrape",
+      "relevance": "⭐⭐⭐⭐"
+    },
+    "net_data_directory_brazil": {
+      "name": "Net Data Directory Brazil Telecom",
+      "source": "net_data_directory",
+      "url": "https://netdatadirectory.org/node/2336",
+      "description": "Network data directory with Brazilian telecom infrastructure metrics.",
+      "visualization_type": "network_map, infrastructure",
+      "download_method": "scrape",
+      "relevance": "⭐⭐⭐⭐"
+    }
+  },
+  "geospatial_datasets": {
+    "brazil_states_geojson": {
+      "name": "Brazil States GeoJSON",
+      "url": "https://raw.githubusercontent.com/codeforamerica/click_that_hood/master/public/data/brazil-states.json",
+      "type": "geojson",
+      "description": "GeoJSON file for Brazilian states. Essential for D3.js maps.",
+      "usage": "d3.js, plotly dash maps"
+    },
+    "brazil_states_topojson": {
+      "name": "Brazil States TopoJSON",
+      "url": "https://github.com/topojson/world-atlas",
+      "type": "topojson",
+      "description": "TopoJSON for efficient map rendering. Smaller file size than GeoJSON.",
+      "usage": "d3.js maps"
+    },
+    "brazil_municipalities": {
+      "name": "Brazil Municipalities GeoJSON",
+      "url": "https://raw.githubusercontent.com/tbrugz/geodata-br/master/geojson/geojson-uf/",
+      "type": "geojson",
+      "description": "Municipality-level GeoJSON for detailed maps.",
+      "usage": "detailed choropleth maps"
+    }
+  },
+  "visualization_tools": {
+    "d3.js": {
+      "description": "Custom interactive maps and visualizations",
+      "best_for": ["custom maps", "interactive charts", "geographic visualizations"],
+      "datasets_needed": ["geojson", "topojson", "anatel data"]
+    },
+    "plotly_dash": {
+      "description": "Python-based dashboards with built-in interactivity",
+      "best_for": ["time-series dashboards", "multi-component dashboards", "rapid prototyping"],
+      "datasets_needed": ["csv", "anatel data", "forecast data"]
+    },
+    "combined": {
+      "description": "D3.js maps embedded in Plotly Dash dashboards",
+      "best_for": ["comprehensive visualizations", "production dashboards"],
+      "datasets_needed": ["all"]
+    }
+  }
+}
+

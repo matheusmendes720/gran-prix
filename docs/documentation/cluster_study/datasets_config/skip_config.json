@@ -1,0 +1,67 @@
+{
+  "tier": "skip",
+  "description": "Skip datasets - Not relevant for business case",
+  "datasets": {
+    "github_brazil_weather": {
+      "name": "Brazil Weather Data API",
+      "source": "github",
+      "url": "https://github.com/gregomelo/brazil_weather_data",
+      "description": "Brazil weather data API wrapper for INMET. Provides easy access to climate data for multiple regions.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "download_method": "github",
+      "preprocessing_notes": "GitHub repo with Brazil weather API wrapper. May include example datasets or API integration code.",
+      "notes": "Alternative INMET API wrapper for climate data",
+      "_evaluation": {
+        "dataset_id": "github_brazil_weather",
+        "score": 15,
+        "tier": "skip",
+        "recommendation": "SKIP - Not relevant for business case",
+        "categories": [
+          "brazilian_market"
+        ],
+        "reasons": [
+          "Brazilian market data"
+        ],
+        "breakdown": {
+          "demand_relevance": 0,
+          "telecom_fit": 0,
+          "brazil_market": 15,
+          "data_quality": 0,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "github_awesome_billing": {
+      "name": "Awesome Billing - Telecom Billing Resources",
+      "source": "github",
+      "url": "https://github.com/kdeldycke/awesome-billing",
+      "description": "Curated list of billing resources including telecom billing systems. Useful for understanding market dynamics.",
+      "relevance": "⭐⭐⭐",
+      "download_method": "github",
+      "preprocessing_notes": "GitHub repo with curated billing resources. May contain datasets or links to billing data.",
+      "notes": "Telecom billing resources and market insights",
+      "_evaluation": {
+        "dataset_id": "github_awesome_billing",
+        "score": 0,
+        "tier": "skip",
+        "recommendation": "SKIP - Not relevant for business case",
+        "categories": [
+          "telecom_industry"
+        ],
+        "reasons": [
+          "Telecom industry data",
+          "PENALTY: Low relevance keywords detected"
+        ],
+        "breakdown": {
+          "demand_relevance": 0,
+          "telecom_fit": 15,
+          "brazil_market": 0,
+          "data_quality": 0,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    }
+  }
+}
