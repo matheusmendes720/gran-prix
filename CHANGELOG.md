@@ -2,18 +2,138 @@
 ## Histórico Completo de Mudanças com Referências Git
 
 **Projeto:** Nova Corrente - Demand Forecasting & Analytics System  
-**Versão Atual:** 2.1.0  
+**Versão Atual:** 2.2.0  
 **Última Atualização:** 04 de Novembro de 2025
 
 ---
 
 ## 🎯 ÍNDICE
 
-1. [Versão 2.1.0 - Contributor Merge & Workspace Reorganization (04/11/2025)](#versão-210---contributor-merge--workspace-reorganization)
-2. [Versão 2.0.0 - ML Ops Constraint Enforcement (04/11/2025)](#versão-200---ml-ops-constraint-enforcement)
-3. [Versão 1.0.0 - Initial Commit (03/11/2025)](#versão-100---initial-commit)
-4. [Referências Git](#referências-git)
-5. [Estatísticas de Mudanças](#estatísticas-de-mudanças)
+1. [Versão 2.2.0 - Git Workflow & AI Insights Integration (04/11/2025)](#versão-220---git-workflow--ai-insights-integration)
+2. [Versão 2.1.0 - Contributor Merge & Workspace Reorganization (04/11/2025)](#versão-210---contributor-merge--workspace-reorganization)
+3. [Versão 2.0.0 - ML Ops Constraint Enforcement (04/11/2025)](#versão-200---ml-ops-constraint-enforcement)
+4. [Versão 1.0.0 - Initial Commit (03/11/2025)](#versão-100---initial-commit)
+5. [Referências Git](#referências-git)
+6. [Estatísticas de Mudanças](#estatísticas-de-mudanças)
+
+---
+
+## 📦 VERSÃO 2.2.0 - Git Workflow & AI Insights Integration
+**Data:** 04 de Novembro de 2025  
+**Commits:** [`ed68036`](https://github.com/YOUR_USERNAME/gran_prix/commit/ed68036), [`5c6b7a8`](https://github.com/YOUR_USERNAME/gran_prix/commit/5c6b7a8), [`061d918`](https://github.com/YOUR_USERNAME/gran_prix/commit/061d918)  
+**Autor:** matheusmendes720 <datamaster720@gmail.com> + unknown <lucasena020@gmail.com>  
+**Tipo:** 🔄 Merge + ✨ Feature + 🎨 UI Enhancement
+
+### 🎯 Resumo Executivo
+
+Esta versão inclui:
+1. **Merge da branch de contribuidor** - Git Workflow & Gemini AI Insights integration
+2. **Integração completa de Git Workflow** - Ferramentas e documentação para colaboração
+3. **Componente de Notificações com IA** - NotificationBell com insights do Gemini AI
+4. **Documentação Frontend** - Roadmap completo do frontend
+
+---
+
+### ✨ 1. Merge da Branch de Contribuidor
+
+#### 📋 Informações do Merge
+- **Branch:** `feature/git-workflow-and-ai-insights`
+- **Contribuidor:** unknown <lucasena020@gmail.com>
+- **Merge Commit:** `ed68036` - "Merge branch 'feature/git-workflow-and-ai-insights' into merge-git-workflow-ai-insights"
+- **Commits Originais:**
+  - `5c6b7a8` - "feat(workflow): add git tooling and gemini-driven insights"
+  - `061d918` - "feat: add intelligent notification bell"
+
+#### 📚 Documentação e Ferramentas Adicionadas
+
+**20 arquivos adicionados/modificados (15,456 linhas):**
+
+1. **`.gitconfig`** (48 linhas)
+   - Configuração Git para o projeto
+   - Aliases e configurações personalizadas
+
+2. **`QWEN.md`** (252 linhas)
+   - Documentação sobre QWEN (Quick Workflow Enhancement Notes)
+   - Guia de uso e referência
+
+3. **`docs/GIT_WORKFLOW.md`** (1,720 linhas)
+   - Guia completo de Git Workflow para colaboração
+   - Instruções detalhadas para forks, branches, pull requests
+   - Processo de code review e merge
+   - Melhores práticas e troubleshooting
+
+4. **`docs/proj/roadmaps/frontend.md`** (439 linhas)
+   - Roadmap completo do frontend
+   - Estratégias de desenvolvimento
+   - Componentes e tecnologias
+
+5. **`frontend/package.json`** + **`frontend/package-lock.json`** (11,165 linhas)
+   - Dependências do frontend atualizadas
+   - Inclusão de pacotes para Gemini AI integration
+
+6. **`frontend/src/components/NotificationBell.tsx`** (579 linhas)
+   - Componente de notificações com integração Gemini AI
+   - Sistema de alertas inteligentes
+   - Interface de usuário moderna
+
+7. **`frontend/src/components/NotificationBell.module.css`** (563 linhas)
+   - Estilos CSS módulos para NotificationBell
+   - Animações e transições
+
+8. **`frontend/src/lib/notificationsService.ts`** (149 linhas)
+   - Serviço de notificações
+   - Integração com Gemini AI para insights
+   - Gerenciamento de estado de notificações
+
+9. **`frontend/tsconfig.json`** (34 linhas)
+   - Configuração TypeScript para o frontend
+   - Compilação e type checking
+
+10. **Scripts de Git Workflow:**
+    - `scripts/git-workflow.bat` (108 linhas) - Windows
+    - `scripts/git-workflow.sh` (132 linhas) - Unix/Linux
+    - `scripts/setup-git-workflow.bat` (90 linhas) - Setup Windows
+    - `scripts/setup-git-workflow.sh` (93 linhas) - Setup Unix/Linux
+
+#### 🎨 Componentes Frontend Adicionados
+
+**NotificationBell Component:**
+- ✅ Sistema de notificações inteligente
+- ✅ Integração com Gemini AI para insights contextuais
+- ✅ Interface de usuário moderna e responsiva
+- ✅ Animações e transições suaves
+- ✅ Suporte a diferentes tipos de alertas
+
+**Atualizações em Componentes Existentes:**
+- ✅ `frontend/src/components/Header.tsx` - Integração com NotificationBell
+- ✅ `frontend/src/components/GeminiAnalysis.tsx` - Resolução de conflitos
+- ✅ `frontend/src/components/InsightModal.tsx` - Resolução de conflitos
+- ✅ `frontend/src/types.ts` - Novos tipos para notificações
+
+#### 🔧 Configurações Atualizadas
+
+**`.pre-commit-config.yaml`:**
+- ✅ Mesclagem de validações ML (master) com ferramentas de formatação (contribuidor)
+- ✅ Validação ML + Black, isort, flake8, bandit, prettier
+- ✅ Hooks de validação ML mantidos como prioridade
+
+**`.gitignore`:**
+- ✅ Atualizado com padrões adicionais
+
+#### 🔄 Resolução de Conflitos
+
+**Conflitos resolvidos em:**
+1. `.pre-commit-config.yaml` - Mesclagem de configurações (ML validation + formatting tools)
+2. `frontend/src/components/GeminiAnalysis.tsx` - Mantida versão master com `NEXT_PUBLIC_GEMINI_API_KEY`
+3. `frontend/src/components/InsightModal.tsx` - Mantida versão master com `NEXT_PUBLIC_GEMINI_API_KEY`
+
+#### 📊 Estatísticas do Merge
+
+- **Arquivos modificados:** 20
+- **Linhas adicionadas:** +15,456
+- **Linhas removidas:** -10
+- **Novos arquivos:** 16
+- **Arquivos modificados:** 4
 
 ---
 
