@@ -1,0 +1,32 @@
+{
+  "discovery": {
+    "total": 30
+  },
+  "registration": {
+    "registered": 30
+  },
+  "download": {
+    "total": 15,
+    "success": 0,
+    "failed": 15,
+    "skipped": 0,
+    "results": {
+      "zenodo_17458936": false,
+      "zenodo_17465571": false,
+      "zenodo_17451020": false,
+      "zenodo_17484014": false,
+      "zenodo_17490196": false,
+      "zenodo_17490214": false,
+      "zenodo_17490869": false,
+      "zenodo_17469426": false,
+      "zenodo_17473186": false,
+      "zenodo_17476992": false,
+      "zenodo_17473141": false,
+      "zenodo_17492238": false,
+      "zenodo_16791972": false,
+      "zenodo_17032495": false,
+      "zenodo_17082920": false
+    }
+  },
+  "validation": {}
+}

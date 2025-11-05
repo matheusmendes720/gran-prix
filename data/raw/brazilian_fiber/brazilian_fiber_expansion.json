@@ -1,0 +1,41 @@
+{
+  "dataset_name": "Brazilian Fiber Optic Expansion",
+  "source": "Market Research & Company Reports",
+  "created_at": "2025-10-31T22:50:18.471713",
+  "household_penetration": {
+    "2020": 0.25,
+    "2021": 0.32,
+    "2022": 0.4,
+    "2023": 0.45,
+    "2024": 0.49,
+    "2025_forecast": 0.55
+  },
+  "major_transactions": [
+    {
+      "date": "2024-09",
+      "transaction": "V.tal acquires Oi fiber operations",
+      "value_brl_billions": 5.6,
+      "impact": "Major market consolidation, expanded coverage"
+    },
+    {
+      "date": "2024-08",
+      "transaction": "TIM-Nokia 5G partnership (15 states)",
+      "value_brl_billions": null,
+      "impact": "Infrastructure expansion for 5G backhaul"
+    }
+  ],
+  "regional_penetration": {
+    "southeast": 0.65,
+    "south": 0.58,
+    "northeast": 0.35,
+    "north": 0.25,
+    "central_west": 0.45
+  },
+  "growth_factors": [
+    "Government ConectaBR program",
+    "Private sector investments",
+    "Rural connectivity initiatives",
+    "5G deployment requirements",
+    "Competitive market dynamics"
+  ]
+}

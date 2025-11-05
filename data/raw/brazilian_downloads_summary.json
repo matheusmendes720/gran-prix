@@ -1,0 +1,34 @@
+{
+  "download_session": {
+    "timestamp": "2025-10-31T22:50:18.473307",
+    "total_datasets": 5,
+    "successful": 4,
+    "failed": 1
+  },
+  "datasets": {
+    "bgsmt_mobility": {
+      "status": "failed",
+      "file_path": null
+    },
+    "anatel_municipal": {
+      "status": "success",
+      "file_path": "D:\\codex\\datamaster\\senai\\gran_prix\\data\\raw\\anatel_municipal\\anatel_municipal_sample.csv",
+      "file_size_mb": 0.0
+    },
+    "iot_summary": {
+      "status": "success",
+      "file_path": "D:\\codex\\datamaster\\senai\\gran_prix\\data\\raw\\brazilian_iot\\brazilian_iot_summary.json",
+      "file_size_mb": 0.0
+    },
+    "fiber_expansion": {
+      "status": "success",
+      "file_path": "D:\\codex\\datamaster\\senai\\gran_prix\\data\\raw\\brazilian_fiber\\brazilian_fiber_expansion.json",
+      "file_size_mb": 0.0
+    },
+    "operator_market": {
+      "status": "success",
+      "file_path": "D:\\codex\\datamaster\\senai\\gran_prix\\data\\raw\\brazilian_operators\\brazilian_operators_market.json",
+      "file_size_mb": 0.0
+    }
+  }
+}

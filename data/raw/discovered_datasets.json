@@ -1,0 +1,218 @@
+{
+  "zenodo": [
+    {
+      "id": 17499141,
+      "title": "SPRA 2026 — Supplementary S1: RAG Evaluation Results for Scope-Gated Retrieval (Elevator Maintenance, Schindler 3300/5500)",
+      "doi": "10.5281/zenodo.17499141",
+      "url": "",
+      "download_url": "https://zenodo.org/api/records/17499141",
+      "creators": [
+        "Diaz Flores, Fabrizio Sebastian",
+        "Linares Huamani, Edson Joel"
+      ],
+      "description": "<p><strong>Summary.</strong> This repository contains <strong>Supplementary S1</strong> for our SPRA 2026 submission: an anonymized <strong>evaluation dataset</strong> with results collected from <strong>10 queries</strong> executed against a <strong>scope-gated RAG</strong> system for elevator maintenance manuals. The artifact includes the consolidated results (<code>S1_RAG_Eval_Results.xlsx</code>), a data dictionary, and a README describing provenance, ethics, and usage.<br><strong>Provenance.</strong> The underlying corpus consists of <strong>proprietary technical documentation</strong> owned by an industrial partner (HTL Elevadores S.A.C.). Documents were processed via OCR, cleaned, deduplicated, and chunked into component/procedure-level segments with metadata. <strong>No proprietary text</strong> is included here; only <strong>derived evaluation outputs</strong>.<br><strong>Contents.</strong> (i) <code>S1_RAG_Eval_Results.xlsx</code> (sheet <code>results</code>)<br><strong>Intended use.</strong> Reproducibility of aggregate metrics (answer-with-evidence@k, refusal correctness, scope-hit distribution, token/cost stats).<br><strong>Ethics &amp; Availability.</strong> The source corpus is under NDA and not publicly available; this supplement shares <strong>non-sensitive derivatives</strong> only.<br><strong>Related work.</strong> Scope-gated retrieval policies for domain-constrained RAG; industrial maintenance and safety documentation.</p>",
+      "keywords": [
+        "Retrieval-Augmented Generation (RAG)",
+        "Scope-gated retrieval",
+        "Pattern Recognition",
+        "Industrial maintenance",
+        "Elevator safety",
+        "Schindler 3300",
+        "Schindler 5500",
+        "Evaluation queries",
+        "OCR",
+        "Token cost analysis"
+      ],
+      "publication_date": "2025-11-01"
+    },
+    {
+      "id": 17498173,
+      "title": "Dataset for \"Broadband Carrier-Envelope Phase-Controlled Stimulated Ultraviolet Emission from Carbon Dioxide Ions\"",
+      "doi": "10.5281/zenodo.17498173",
+      "url": "",
+      "download_url": "https://zenodo.org/api/records/17498173",
+      "creators": [
+        "Han, Meng"
+      ],
+      "description": "",
+      "keywords": [],
+      "publication_date": "2025-11-01"
+    },
+    {
+      "id": 17212222,
+      "title": "Single-nucleus transcriptomic analysis of the dorsal striatum from 6-month-old G2019S LRRK2 mutant mice",
+      "doi": "10.5281/zenodo.17212222",
+      "url": "",
+      "download_url": "https://zenodo.org/api/records/17212222",
+      "creators": [
+        "Khan, Shahzad",
+        "Lin, Yu-En",
+        "Pfeffer, Suzanne"
+      ],
+      "description": "<p>This Zenodo deposit contains a publicly available description of the Dataset:</p>\n<p><strong>Title:</strong> \"Single-nucleus transcriptomic analysis of the dorsal striatum from 6-month-old G2019S LRRK2 mutant mice\".</p>\n<p><strong>Description:</strong> We performed single-nucleus transcriptomic analysis of the dorsal striatum from 5 wild-type and 5 G2019S LRRK2 mutant mice. This dataset contains the raw fastqs files (grouped together by indexes) from mouse dorsal striatum, sorted by 10 samples (S1 to S10), with files separated by read 1 (R1), read 2 (R2), index reads (I1 and I2), and which lane they were in on the S4 flow cell (L1 to L4). These files are created by bcl2fastq of Cell Ranger; the sequences in those files were used for the alignments.</p>\n\n\n<blockquote>\n<p>This dataset is made available to researchers via the ASAP CRN Cloud: <a href=\"https://cloud.parkinsonsroadmap.org\">cloud.parkinsonsroadmap.org</a>. Instructions for how to request access can be found in the <a href=\"https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf\">User Manual</a>.</p>\n<p>This research was funded by the Aligning Science Across Parkinson's Collaborative Research Network (ASAP CRN), through the Michael J. Fox Foundation for Parkinson's Research (MJFF).</p>\n<p>This Zenodo deposit was created by the ASAP CRN Cloud staff on behalf of the dataset authors. It provides a citable reference for a CRN Cloud Dataset</p>\n</blockquote>",
+      "keywords": [],
+      "publication_date": "2025-09-18"
+    },
+    {
+      "id": 17241156,
+      "title": "PD5D_MTG_snRNAseq",
+      "doi": "10.5281/zenodo.17241156",
+      "url": "",
+      "download_url": "https://zenodo.org/api/records/17241156",
+      "creators": [
+        "Parker, Jacob",
+        "Scherzer, Clemens",
+        "Dong, Xianjun",
+        "Serrano, Geidy",
+        "Beach, Thomas",
+        "Cline, Madison",
+        "Liao, Zhixiang",
+        "Tuncali, Idil",
+        "Lin, Zechuan"
+      ],
+      "description": "<p>This Zenodo deposit contains a publicly available description of the Dataset:</p>\n<p><strong>Title:</strong> \"PD5D_MTG_snRNAseq\".</p>\n<p><strong>Description:</strong> This dataset contains single-nucleus RNA sequencing (snRNAseq) raw data in FASTQ format for 94 human middle temporal gyrus (MTG) samples from Parkinson's patients and healthy controls. It's part of the PD5D atlas, where the same subjects were also profiled with other omics assays incl. genotyping, single-cell ATACseq, and spatial transcriptomics.</p>\n<blockquote>\n<p>This dataset is made available to researchers via the ASAP CRN Cloud: <a href=\"https://cloud.parkinsonsroadmap.org\">cloud.parkinsonsroadmap.org</a>. Instructions for how to request access can be found in the <a href=\"https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf\">User Manual</a>.</p>\n<p>This research was funded by the Aligning Science Across Parkinson's Collaborative Research Network (ASAP CRN), through the Michael J. Fox Foundation for Parkinson's Research (MJFF).</p>\n<p>This Zenodo deposit was created by the ASAP CRN Cloud staff on behalf of the dataset authors. It provides a citable reference for a CRN Cloud Dataset</p>\n<p>Dataset Metadata was updated for the v1.1 update</p>\n</blockquote>",
+      "keywords": [],
+      "publication_date": "2025-10-30"
+    },
+    {
+      "id": 17355410,
+      "title": "Golgi-IP, a tool for multimodal analysis of Golgi molecular content",
+      "doi": "10.5281/zenodo.17355410",
+      "url": "",
+      "download_url": "https://zenodo.org/api/records/17355410",
+      "creators": [
+        "Nirujogi, Raja",
+        "Phung, Toan"
+      ],
+      "description": "<p>This Zenodo deposit contains a publicly available description of the Dataset:</p>\n<p><strong>Title:</strong> \"Golgi-IP, a tool for multimodal analysis of Golgi molecular content\".</p>\n<p><strong>Description:</strong> Quantitative DIA-based proteomic analysis of Golgi-IP in HEK293 cells. The data set contains six replicates of GolgiTAG-IP, Control-IP, GolgiTAG whole cell extract and Control cells whole cell extract. The mass spectrometry data is acquired using variable data independent acquisition (vDIA) on an Orbitrap Exploris 480 mass spectrometer. Database searches performed against Human Uniprot database using Spectronaut search algorithm.</p>\n\n\n<blockquote>\n<p>This dataset is made available to researchers via the ASAP CRN Cloud: <a href=\"https://cloud.parkinsonsroadmap.org\">cloud.parkinsonsroadmap.org</a>. Instructions for how to request access can be found in the <a href=\"https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf\">User Manual</a>.</p>\n<p>This research was funded by the Aligning Science Across Parkinson's Collaborative Research Network (ASAP CRN), through the Michael J. Fox Foundation for Parkinson's Research (MJFF).</p>\n<p>This Zenodo deposit was created by the ASAP CRN Cloud staff on behalf of the dataset authors. It provides a citable reference for a CRN Cloud Dataset</p>\n</blockquote>",
+      "keywords": [],
+      "publication_date": "2025-10-14"
+    },
+    {
+      "id": 17241221,
+      "title": "PD5D_MTG_snRNAseq_hybsel",
+      "doi": "10.5281/zenodo.17241221",
+      "url": "",
+      "download_url": "https://zenodo.org/api/records/17241221",
+      "creators": [
+        "Simmons, Sean",
+        "Scherzer, Clemens",
+        "Dong, Xianjun",
+        "Levin, Joshua",
+        "Serrano, Geidy",
+        "Beach, Thomas",
+        "Cline, Madison",
+        "Liao, Zhixiang",
+        "Tuncali, Idil",
+        "Sharma, Monika",
+        "Parker, Jacob",
+        "Lin, Zechuan",
+        "Yuan, Jie",
+        "Haywood, Nathan",
+        "Lin, Maoxuan",
+        "Kim, Kwanho",
+        "Teng, Xufei",
+        "El Kodsi, Daniel"
+      ],
+      "description": "<p>This Zenodo deposit contains a publicly available description of the Dataset:</p>\n<p><strong>Title:</strong> \"PD5D_MTG_snRNAseq_hybsel\".</p>\n<p><strong>Description:</strong> This dataset contains the raw data in FASTQ format for single-nucleus RNA sequencing (snRNAseq) enriched with Agilent SureSelect for reads from a list of targeted transcripts for human middle temporal gyrus (MTG) samples from Parkinson's patients and healthy controls. This data comes from the same 10X libraries as PD5D_MTG_snRNAseq, except with the additional enrichment step before sequencing. It's part of the PD5D cohort, where the same subjects were also profiled with other omics assays incl. genotyping, single-cell ATACseq, and spatial transcriptomics.</p>\n<blockquote>\n<p>This dataset is made available to researchers via the ASAP CRN Cloud: <a href=\"https://cloud.parkinsonsroadmap.org\">cloud.parkinsonsroadmap.org</a>. Instructions for how to request access can be found in the <a href=\"https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf\">User Manual</a>.</p>\n<p>This research was funded by the Aligning Science Across Parkinson's Collaborative Research Network (ASAP CRN), through the Michael J. Fox Foundation for Parkinson's Research (MJFF).</p>\n<p>This Zenodo deposit was created by the ASAP CRN Cloud staff on behalf of the dataset authors. It provides a citable reference for a CRN Cloud Dataset</p>\n<p>Dataset Metadata was updated for the v1.1 update</p>\n</blockquote>",
+      "keywords": [],
+      "publication_date": "2025-10-30"
+    },
+    {
+      "id": 17242099,
+      "title": "PD5D_MTG_Visium10x_ST",
+      "doi": "10.5281/zenodo.17242099",
+      "url": "",
+      "download_url": "https://zenodo.org/api/records/17242099",
+      "creators": [
+        "Scherzer, Clemens",
+        "Dong, Xianjun",
+        "Levin, Joshua",
+        "Serrano, Geidy",
+        "Beach, Thomas",
+        "Liao, Zhixiang",
+        "Tuncali, Idil",
+        "Parker, Jacob",
+        "Yuan, Jie",
+        "Haywood, Nathan",
+        "Simmons, Sean",
+        "Adiconis, Xian",
+        "Weykopf, Beatrice"
+      ],
+      "description": "<p>This Zenodo deposit contains a publicly available description of the Dataset:</p>\n<p><strong>Title:</strong> \"PD5D_MTG_Visium10x_ST\".</p>\n<p><strong>Description:</strong> Visium 10x spatial transcriptomic raw data in FASTQ format of the middle  temporal gyrus of 96 human subjects. Individuals with incidental Lewy body  disease, clinical PD, and healthy control were included. In addition to subject level metadata, Visium spatial metadata such as H&amp;E images and spot  coordinates are included.   These data are one component of the PD5D cohort, which intends to build a  multi-dimensional and multi-omic atlas of PD pathology. For the same subjects, other omics assays have been collected including genotyping,  snRNA-seq, and scATAC-seq across two brain tissues: middle temporal gyrus  and substantia nigra.</p>\n\n\n<blockquote>\n<p>This dataset is made available to researchers via the ASAP CRN Cloud: <a href=\"https://cloud.parkinsonsroadmap.org\">cloud.parkinsonsroadmap.org</a>. Instructions for how to request access can be found in the <a href=\"https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf\">User Manual</a>.</p>\n<p>This research was funded by the Aligning Science Across Parkinson's Collaborative Research Network (ASAP CRN), through the Michael J. Fox Foundation for Parkinson's Research (MJFF).</p>\n<p>This Zenodo deposit was created by the ASAP CRN Cloud staff on behalf of the dataset authors. It provides a citable reference for a CRN Cloud Dataset</p>\n</blockquote>",
+      "keywords": [],
+      "publication_date": "2025-10-30"
+    },
+    {
+      "id": 17242299,
+      "title": "PD5D_MTG_MEGA_Chip_Genotype",
+      "doi": "10.5281/zenodo.17242299",
+      "url": "",
+      "download_url": "https://zenodo.org/api/records/17242299",
+      "creators": [
+        "Scherzer, Clemens",
+        "Serrano, Geidy",
+        "Beach, Thomas",
+        "Liao, Zhixiang",
+        "Lin, Zechuan"
+      ],
+      "description": "<p>This Zenodo deposit contains a publicly available description of the Dataset:</p>\n<p><strong>Title:</strong> \"PD5D_MTG_MEGA_Chip_Genotype\".</p>\n<p><strong>Description:</strong> This dataset represents the PLINK bed format genotype data of PD5D  subjects (PD5D_MTG_snRNAseq). All subjects were genotyped on the  Infinium Multi-Ethnic Global-8 v1 chip. Raw genotypes were processed  with PLINK (v1.90) and basic quality control, including removal of low quality genotypes and low-quality variants, was performed. Please note  that the position information in the file was based on human GRC37/hg19  reference genome.</p>\n\n\n<blockquote>\n<p>This dataset is made available to researchers via the ASAP CRN Cloud: <a href=\"https://cloud.parkinsonsroadmap.org\">cloud.parkinsonsroadmap.org</a>. Instructions for how to request access can be found in the <a href=\"https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf\">User Manual</a>.</p>\n<p>This research was funded by the Aligning Science Across Parkinson's Collaborative Research Network (ASAP CRN), through the Michael J. Fox Foundation for Parkinson's Research (MJFF).</p>\n<p>This Zenodo deposit was created by the ASAP CRN Cloud staff on behalf of the dataset authors. It provides a citable reference for a CRN Cloud Dataset</p>\n</blockquote>",
+      "keywords": [],
+      "publication_date": "2025-10-30"
+    },
+    {
+      "id": 17402344,
+      "title": "snRNAseq of olfactory epithelium with AAV serotypes for transduction of olfactory sensory neurons in Mus musculus",
+      "doi": "10.5281/zenodo.17402344",
+      "url": "",
+      "download_url": "https://zenodo.org/api/records/17402344",
+      "creators": [
+        "Belfort, Benjamin",
+        "Jia, Johnathan",
+        "Garza, Alexandra",
+        "Insalaco, Anthony",
+        "McGinnis, John",
+        "Pekarek, Brandon",
+        "Ortiz-Guzman, Joshua",
+        "Tepe, Burak",
+        "Chen, Hu",
+        "Liu, Zhandong",
+        "Arenkiel, Benjamin"
+      ],
+      "description": "<p>This Zenodo deposit contains a publicly available description of the Dataset:</p>\n<p><strong>Title:</strong> \"snRNAseq of olfactory epithelium with AAV serotypes for transduction of olfactory sensory neurons in Mus musculus\".</p>\n<p><strong>Description:</strong> Single-nucleus RNA sequencing data of 4 mice, each inoculated with 4 AAV serotypes. The mice were all male and 8-10 weeks of age at when olfactory epithelium tissue was harvested. Samples were paired-end sequences using v3.1 – Dual Index using Illumina Novaseq 6000 sequencer.</p>\n\n\n<blockquote>\n<p>This dataset is made available to researchers via the ASAP CRN Cloud: <a href=\"https://cloud.parkinsonsroadmap.org\">cloud.parkinsonsroadmap.org</a>. Instructions for how to request access can be found in the <a href=\"https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf\">User Manual</a>.</p>\n<p>This research was funded by the Aligning Science Across Parkinson's Collaborative Research Network (ASAP CRN), through the Michael J. Fox Foundation for Parkinson's Research (MJFF).</p>\n<p>This Zenodo deposit was created by the ASAP CRN Cloud staff on behalf of the dataset authors. It provides a citable reference for a CRN Cloud Dataset</p>\n</blockquote>",
+      "keywords": [],
+      "publication_date": "2025-10-03"
+    },
+    {
+      "id": 17496865,
+      "title": "Bulk RNAseq of microglia in vitro cultures",
+      "doi": "10.5281/zenodo.17496865",
+      "url": "",
+      "download_url": "https://zenodo.org/api/records/17496865",
+      "creators": [
+        "Jakobsson, Johan",
+        "Barker, Roger",
+        "Gale Hammell, Molly",
+        "Kirkeby, Agnete",
+        "Garza, Raquel",
+        "Sharma, Yogita",
+        "Tam, Oliver",
+        "Wunderlich, Cole",
+        "Forcier, Talitha",
+        "Jones, Jo",
+        "Curle, Annabel",
+        "Quaegebeur, Annelies",
+        "Adami, Anita",
+        "Wijesinghe, Sasvi",
+        "Jönsson, Marie",
+        "Kouli, Antonina",
+        "Atacho, Diahann"
+      ],
+      "description": "<p>This Zenodo deposit contains a publicly available description of the Dataset:</p>\n<p><strong>Title:</strong> \"Bulk RNAseq of microglia in vitro cultures\".</p>\n<p><strong>Description:</strong> This dataset includes bulk RNAseq (2 x 150bps reads; Illumina TruSeq Stranded mRNA library prep kit with poly-A selection) of differentiated human pluripotent stem cells (hPSCs) into microglia. Briefly, hES (H9) and hiPSCs (KOLF2.1) underwent mesodermal induction via embryoid body formation, followed by hemogenic endothelium induction and myeloid differentiation to generate primitive monocyte-like precursors. These precursors were then matured into microglia by supplementing with key neuron-derived factors that promote microglial identity, thereby recapitulating human microglia in monoculture. A detailed protocol can be found at doi: dx.doi.org/10.17504/protocols.io.14egnr8ezl5d/v1.</p>\n\n\n<blockquote>\n<p>This dataset is made available to researchers via the ASAP CRN Cloud: <a href=\"https://cloud.parkinsonsroadmap.org\">cloud.parkinsonsroadmap.org</a>. Instructions for how to request access can be found in the <a href=\"https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf\">User Manual</a>.</p>\n<p>This research was funded by the Aligning Science Across Parkinson's Collaborative Research Network (ASAP CRN), through the Michael J. Fox Foundation for Parkinson's Research (MJFF).</p>\n<p>This Zenodo deposit was created by the ASAP CRN Cloud staff on behalf of the dataset authors. It provides a citable reference for a CRN Cloud Dataset</p>\n</blockquote>",
+      "keywords": [],
+      "publication_date": "2025-08-31"
+    }
+  ],
+  "github": [],
+  "anatel": []
+}

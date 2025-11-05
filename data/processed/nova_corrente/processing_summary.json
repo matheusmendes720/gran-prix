@@ -1,0 +1,67 @@
+{
+  "processing_date": "2025-11-02T22:11:57.976649",
+  "total_records": 4188,
+  "date_range": {
+    "min": "2024-10-09 00:00:00",
+    "max": "2025-10-24 00:00:00",
+    "span_days": 380
+  },
+  "unique_items": 872,
+  "unique_families": 20,
+  "unique_sites": 191,
+  "unique_suppliers": 468,
+  "lead_time_stats": {
+    "mean": 12.46843853820598,
+    "median": 6.0,
+    "std": 17.49141150746221
+  },
+  "top_5_families": [
+    "MATERIAL ELETRICO",
+    "FERRO E AÇO",
+    "MATERIAL CIVIL",
+    "FERRAMENTAS E EQUIPAMENTOS",
+    "EPI"
+  ],
+  "top_families_stats": {
+    "MATERIAL ELETRICO": {
+      "quantidade_total": 60718.0,
+      "quantidade_media": 73.96,
+      "frequencia": 821,
+      "materiais_unicos": 156,
+      "depositos_unicos": 88,
+      "importance_score": 0.8901845623522012
+    },
+    "FERRO E AÇO": {
+      "quantidade_total": 91322.24,
+      "quantidade_media": 189.07,
+      "frequencia": 483,
+      "materiais_unicos": 139,
+      "depositos_unicos": 97,
+      "importance_score": 0.8135279053062244
+    },
+    "MATERIAL CIVIL": {
+      "quantidade_total": 17870.9,
+      "quantidade_media": 42.55,
+      "frequencia": 420,
+      "materiais_unicos": 102,
+      "depositos_unicos": 78,
+      "importance_score": 0.47451727079058265
+    },
+    "FERRAMENTAS E EQUIPAMENTOS": {
+      "quantidade_total": 13349.0,
+      "quantidade_media": 40.33,
+      "frequencia": 331,
+      "materiais_unicos": 93,
+      "depositos_unicos": 65,
+      "importance_score": 0.39136023297644734
+    },
+    "EPI": {
+      "quantidade_total": 2525.58,
+      "quantidade_media": 5.22,
+      "frequencia": 484,
+      "materiais_unicos": 51,
+      "depositos_unicos": 74,
+      "importance_score": 0.38577997144508563
+    }
+  }
+}

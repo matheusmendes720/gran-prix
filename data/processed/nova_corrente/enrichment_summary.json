@@ -1,0 +1,202 @@
+{
+  "processing_date": "2025-11-02T22:12:49.370659",
+  "total_records": 4188,
+  "total_features": 71,
+  "external_features_added": 28,
+  "date_range": {
+    "min": "2024-10-09 00:00:00",
+    "max": "2025-10-24 00:00:00",
+    "span_days": 380
+  },
+  "features_list": [
+    "date",
+    "item_id",
+    "material",
+    "familia",
+    "category",
+    "quantidade",
+    "unidade_medida",
+    "deposito",
+    "site_id",
+    "fornecedor",
+    "solicitacao",
+    "lead_time_days",
+    "data_requisitada",
+    "data_solicitado",
+    "data_compra",
+    "year",
+    "month",
+    "day",
+    "temperature_avg_c",
+    "precipitation_mm",
+    "humidity_percent",
+    "is_intense_rain",
+    "is_high_humidity",
+    "corrosion_risk",
+    "inflation_rate",
+    "exchange_rate_brl_usd",
+    "gdp_growth_rate",
+    "5g_coverage_pct",
+    "5g_investment_brl_billions",
+    "is_5g_milestone",
+    "is_holiday",
+    "is_weekend",
+    "is_drought",
+    "is_flood_risk",
+    "sla_penalty_brl",
+    "availability_target",
+    "downtime_hours_monthly",
+    "sla_violation_risk",
+    "base_lead_time_days",
+    "total_lead_time_days",
+    "customs_delay_days",
+    "strike_risk",
+    "is_critical_lead_time",
+    "weekday",
+    "quarter",
+    "day_of_year",
+    "month_sin",
+    "month_cos",
+    "day_of_year_sin",
+    "day_of_year_cos",
+    "extreme_heat",
+    "cold_weather",
+    "heavy_rain",
+    "no_rain",
+    "high_inflation",
+    "currency_devaluation",
+    "5g_active",
+    "5g_expansion_rate",
+    "lead_time_category",
+    "is_critical_lead_time_nc",
+    "family_frequency",
+    "site_frequency",
+    "supplier_frequency",
+    "family_demand_ma_7",
+    "family_demand_std_7",
+    "family_demand_ma_30",
+    "family_demand_std_30",
+    "site_demand_ma_7",
+    "site_demand_ma_30",
+    "supplier_lead_time_mean",
+    "supplier_lead_time_std"
+  ],
+  "missing_data_stats": {
+    "deposito": {
+      "missing_count": 815,
+      "missing_pct": 19.4603629417383
+    },
+    "lead_time_days": {
+      "missing_count": 275,
+      "missing_pct": 6.566380133715377
+    },
+    "data_requisitada": {
+      "missing_count": 3606,
+      "missing_pct": 86.10315186246417
+    },
+    "temperature_avg_c": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "precipitation_mm": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "humidity_percent": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "is_intense_rain": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "is_high_humidity": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "corrosion_risk": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "inflation_rate": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "exchange_rate_brl_usd": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "gdp_growth_rate": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "5g_coverage_pct": {
+      "missing_count": 4188,
+      "missing_pct": 100.0
+    },
+    "5g_investment_brl_billions": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "is_5g_milestone": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "is_holiday": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "is_drought": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "is_flood_risk": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "sla_penalty_brl": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "availability_target": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "downtime_hours_monthly": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "sla_violation_risk": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "base_lead_time_days": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "total_lead_time_days": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "customs_delay_days": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "strike_risk": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "is_critical_lead_time": {
+      "missing_count": 4035,
+      "missing_pct": 96.34670487106017
+    },
+    "lead_time_category": {
+      "missing_count": 381,
+      "missing_pct": 9.097421203438396
+    },
+    "supplier_lead_time_mean": {
+      "missing_count": 18,
+      "missing_pct": 0.42979942693409745
+    }
+  }
+}

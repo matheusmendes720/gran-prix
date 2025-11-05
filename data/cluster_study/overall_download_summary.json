@@ -1,0 +1,66 @@
+{
+  "download_date": "2025-11-02T22:37:38.981842",
+  "tiers_processed": [
+    "hell_yes",
+    "high_priority"
+  ],
+  "tier_summaries": {
+    "hell_yes": {
+      "tier": "hell_yes",
+      "download_date": "2025-11-02T22:37:16.722850",
+      "total_datasets": 4,
+      "downloaded": 0,
+      "failed": 3,
+      "skipped": 1,
+      "downloaded_datasets": [],
+      "failed_datasets": [
+        "zenodo_wind_turbine_failures",
+        "mit_telecom_parts",
+        "mit_telecom_spare_parts"
+      ],
+      "skipped_datasets": [
+        "zenodo_broadband_brazil"
+      ]
+    },
+    "high_priority": {
+      "tier": "high_priority",
+      "download_date": "2025-11-02T22:37:38.979625",
+      "total_datasets": 23,
+      "downloaded": 0,
+      "failed": 7,
+      "skipped": 16,
+      "downloaded_datasets": [],
+      "failed_datasets": [
+        "ieee_wind_turbine_failures",
+        "zenodo_bgsmt_mobility",
+        "gsma_mobile_connectivity_brazil",
+        "gsma_mobile_economy_brazil",
+        "zenodo_ai_decarbonization",
+        "internet_aberta_roi_brazil",
+        "bacen_exchange_rate_usd"
+      ],
+      "skipped_datasets": [
+        "github_network_fault",
+        "kaggle_smart_logistics",
+        "kaggle_cloud_supply_chain",
+        "test_dataset",
+        "springer_digital_divide",
+        "brazilian_fiber_structured",
+        "brazilian_operators_structured",
+        "anatel_spectrum",
+        "kaggle_supply_chain",
+        "kaggle_telecom_network",
+        "anatel_mobile_brazil",
+        "internet_aberta_forecast",
+        "brazilian_demand_factors",
+        "anatel_broadband",
+        "github_5g3e",
+        "kaggle_equipment_failure"
+      ]
+    }
+  },
+  "total_datasets": 27,
+  "total_downloaded": 0,
+  "total_skipped": 17,
+  "total_failed": 10
+}

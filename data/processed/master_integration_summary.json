@@ -1,0 +1,26 @@
+{
+  "integration_date": "2025-11-01T07:36:17.207966",
+  "total_records": 19340,
+  "total_columns": 110,
+  "datasets_integrated": [
+    "brazilian_telecom",
+    "nova_corrente_enriched",
+    "comprehensive"
+  ],
+  "date_range": {
+    "start": "2014-03-31 00:00:00",
+    "end": "2024-12-31 00:00:00"
+  },
+  "column_categories": {
+    "temporal": 25,
+    "economic": 6,
+    "regulatory": 10,
+    "technology": 15,
+    "infrastructure": 14,
+    "market": 7,
+    "climate": 10,
+    "geographic": 6,
+    "derived": 16
+  },
+  "missing_data_pct": 38.76393720033844
+}

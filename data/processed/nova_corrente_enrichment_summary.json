@@ -1,0 +1,15 @@
+{
+  "enrichment_date": "2025-11-01T06:46:32.779033",
+  "original_records": 2880,
+  "original_columns": 74,
+  "enriched_columns": 74,
+  "new_features_added": 44,
+  "factors_included": [
+    "SLA_penalties",
+    "Salvador_climate",
+    "5G_expansion",
+    "import_lead_times",
+    "tower_locations",
+    "contract_factors"
+  ]
+}

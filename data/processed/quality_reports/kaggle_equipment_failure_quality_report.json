@@ -1,0 +1,156 @@
+{
+  "dataset_id": "kaggle_equipment_failure",
+  "validation_date": "2025-11-02T20:25:36.741683",
+  "total_rows": 10000,
+  "total_columns": 34,
+  "checks": {
+    "completeness": {
+      "total_cells": 340000,
+      "missing_cells": 0,
+      "missing_percentage": 0.0,
+      "missing_by_column": {
+        "UDI": 0,
+        "item_id": 0,
+        "category": 0,
+        "Air temperature [K]": 0,
+        "Process temperature [K]": 0,
+        "Rotational speed [rpm]": 0,
+        "Torque [Nm]": 0,
+        "Tool wear [min]": 0,
+        "quantity": 0,
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 0,
+        "date": 0,
+        "day_of_year_sin": 0,
+        "day_of_year_cos": 0,
+        "week_of_year_sin": 0,
+        "week_of_year_cos": 0,
+        "day_of_month_sin": 0,
+        "day_of_month_cos": 0,
+        "month": 0,
+        "weekday": 0,
+        "quarter": 0,
+        "year": 0,
+        "is_weekend": 0,
+        "is_month_start": 0,
+        "is_month_end": 0,
+        "is_holiday": 0,
+        "is_carnival": 0,
+        "dataset_source": 0,
+        "climate_impact": 0,
+        "economic_impact": 0,
+        "demand_adjustment_factor": 0
+      },
+      "missing_percentage_by_column": {
+        "UDI": 0.0,
+        "item_id": 0.0,
+        "category": 0.0,
+        "Air temperature [K]": 0.0,
+        "Process temperature [K]": 0.0,
+        "Rotational speed [rpm]": 0.0,
+        "Torque [Nm]": 0.0,
+        "Tool wear [min]": 0.0,
+        "quantity": 0.0,
+        "TWF": 0.0,
+        "HDF": 0.0,
+        "PWF": 0.0,
+        "OSF": 0.0,
+        "RNF": 0.0,
+        "date": 0.0,
+        "day_of_year_sin": 0.0,
+        "day_of_year_cos": 0.0,
+        "week_of_year_sin": 0.0,
+        "week_of_year_cos": 0.0,
+        "day_of_month_sin": 0.0,
+        "day_of_month_cos": 0.0,
+        "month": 0.0,
+        "weekday": 0.0,
+        "quarter": 0.0,
+        "year": 0.0,
+        "is_weekend": 0.0,
+        "is_month_start": 0.0,
+        "is_month_end": 0.0,
+        "is_holiday": 0.0,
+        "is_carnival": 0.0,
+        "dataset_source": 0.0,
+        "climate_impact": 0.0,
+        "economic_impact": 0.0,
+        "demand_adjustment_factor": 0.0
+      },
+      "severity": "low",
+      "status": "pass"
+    },
+    "type_integrity": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    },
+    "value_consistency": {
+      "issues": [
+        {
+          "column": "quantity",
+          "issue": "96.6% zero values (high percentage)",
+          "severity": "low"
+        }
+      ],
+      "issue_count": 1,
+      "status": "warning"
+    },
+    "outliers": {
+      "outliers_by_column": {
+        "Rotational speed [rpm]": {
+          "count": 418,
+          "percentage": 4.18,
+          "lower_bound": 1139.5,
+          "upper_bound": 1895.5
+        },
+        "Torque [Nm]": {
+          "count": 69,
+          "percentage": 0.69,
+          "lower_bound": 12.8,
+          "upper_bound": 67.2
+        }
+      },
+      "total_outliers": 487,
+      "total_outlier_percentage": 0.16,
+      "severity": "low",
+      "status": "pass"
+    },
+    "duplicates": {
+      "total_duplicates": 0,
+      "duplicate_percentage": 0.0,
+      "key_duplicates": 0,
+      "severity": "low",
+      "status": "pass"
+    },
+    "date_validation": {
+      "date_ranges": {
+        "date": {
+          "min": "2020-01-01T00:00:00",
+          "max": "2047-05-18T00:00:00",
+          "range_days": 9999,
+          "valid_dates": 10000,
+          "total_rows": 10000
+        }
+      },
+      "issues": [
+        {
+          "column": "date",
+          "issue": "7867 future dates found",
+          "severity": "medium"
+        }
+      ],
+      "issue_count": 1,
+      "status": "warning"
+    },
+    "business_rules": {
+      "issues": [],
+      "issue_count": 0,
+      "status": "pass"
+    }
+  },
+  "quality_score": 0.94
+}
