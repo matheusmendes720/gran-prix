@@ -1,0 +1,760 @@
+{
+  "datasets": {
+    "kaggle_daily_demand": {
+      "name": "Daily Demand Forecasting Orders",
+      "source": "kaggle",
+      "dataset": "akshatpattiwar/daily-demand-forecasting-orderscsv",
+      "description": "60 days of daily demand with 13 features, perfect for MVP",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": null,
+        "item_id": "Day of the week (Monday to Friday)",
+        "quantity": "Target (Total orders)",
+        "category": "Week of the month (first week, second, third, fourth or fifth week"
+      },
+      "preprocessing_notes": "No date column - needs synthetic date generation from index. Daily granularity, clean structure, ready for ARIMA/Prophet"
+    },
+    "kaggle_logistics_warehouse": {
+      "name": "Logistics Warehouse Dataset",
+      "source": "kaggle",
+      "dataset": "ziya07/logistics-warehouse-dataset",
+      "description": "3,204 records of logistics operations with lead times",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "last_restock_date",
+        "item_id": "item_id",
+        "quantity": "daily_demand",
+        "lead_time": "lead_time_days",
+        "cost": "unit_price"
+      },
+      "preprocessing_notes": "Focus on lead time validation and PP calculation"
+    },
+    "kaggle_retail_inventory": {
+      "name": "Retail Store Inventory Forecasting",
+      "source": "kaggle",
+      "dataset": "anirudhchauhan/retail-store-inventory-forecasting-dataset",
+      "description": "73,000+ daily inventory/demand records with categories",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": "Item_ID",
+        "quantity": "Demand",
+        "category": "Category",
+        "cost": "Cost"
+      },
+      "preprocessing_notes": "Large scale dataset, test complex models (LSTM)"
+    },
+    "kaggle_supply_chain": {
+      "name": "High-Dimensional Supply Chain Inventory",
+      "source": "kaggle",
+      "dataset": "ziya07/high-dimensional-supply-chain-inventory-dataset",
+      "description": "Hundreds of thousands of supply chain records",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": "SKU",
+        "quantity": "Quantity",
+        "site_id": "Warehouse",
+        "lead_time": "Lead_Time"
+      },
+      "preprocessing_notes": "Includes external factors, multi-location operations"
+    },
+    "zenodo_milan_telecom": {
+      "name": "Milan Telecom & Weather Dataset",
+      "source": "zenodo",
+      "url": "https://zenodo.org/records/14012612",
+      "filename": "output-step-bsId_1-2023_9_28_12_50_10.csv",
+      "description": "Telecom traffic time-series with weather data (precipitation, temperature). Contains 5G network slice resource demand prediction data.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "step",
+        "item_id": null,
+        "quantity": "totalSched",
+        "site_id": "bsId"
+      },
+      "preprocessing_notes": "Includes 5G base station traffic load data (SMS, Internet, Calls). Step column can be used as time index. Includes external factors like capacity, reject rates, etc. Perfect for SARIMAX.",
+      "download_method": "zenodo"
+    },
+    "github_5g3e": {
+      "name": "5G3E Virtualized Infrastructure Dataset",
+      "source": "github",
+      "url": "https://github.com/cedric-cnam/5G3E-dataset",
+      "description": "14 days of time-series from virtualized 5G infrastructure with radio, server, OS, and network function data. Thousands of features grouped by resource/node type.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "timestamp",
+        "item_id": "node_id",
+        "quantity": null,
+        "site_id": "resource_type"
+      },
+      "preprocessing_notes": "Excellent for predictive maintenance in telecom logistics. Forecasts demand for replacement parts amid long-tail failures (rare node outages). Integrates well with SARIMAX/Prophet/LSTM ensembles for uncertainty hedging. Size may require sampling or batch processing.",
+      "download_method": "github",
+      "notes": "Large multivariate time-series - may need to process in batches"
+    },
+    "kaggle_equipment_failure": {
+      "name": "Equipment Failure Prediction Dataset",
+      "source": "kaggle",
+      "dataset": "geetanjalisikarwar/equipment-failure-prediction-dataset",
+      "description": "10,000 points with 14 features on machine failures (hardware/software types). Models long-tail failures in telecom equipment, informing demand for spare parts.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": null,
+        "item_id": "Product ID",
+        "quantity": "Machine failure",
+        "category": "Type"
+      },
+      "preprocessing_notes": "Models long-tail equipment failures driving logistics demands for spare parts. Classification features for failure types. Useful for rare event prediction."
+    },
+    "github_network_fault": {
+      "name": "Network Fault Prediction Dataset",
+      "source": "github",
+      "url": "https://github.com/subhashbylaiah/Network-Fault-Prediction",
+      "description": "Fault severity in telecom network disruptions with classification features. Predicts long-tail network events driving logistics demands for repair/parts.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Timestamp",
+        "item_id": "Fault_ID",
+        "quantity": null,
+        "category": "Severity_Level"
+      },
+      "preprocessing_notes": "Predicts long-tail network faults for demand forecasting. Fault severity classification helps prioritize response logistics. Telstra network data.",
+      "download_method": "github"
+    },
+    "kaggle_telecom_network": {
+      "name": "Telecom Network Dataset",
+      "source": "kaggle",
+      "dataset": "praveenaparimi/telecom-network-dataset",
+      "description": "Tower-level operations data with tower ID, connected users, download speeds, and performance indicators. Supports logistics for capacity planning and demand forecasting.",
+      "relevance": "⭐⭐⭐",
+      "columns_mapping": {
+        "date": "timestamp",
+        "item_id": "tower_id",
+        "quantity": "users_connected",
+        "site_id": "tower_id"
+      },
+      "preprocessing_notes": "Capacity utilization data for logistics planning. Long-tail aspects emerge in low-traffic tower maintenance patterns."
+    },
+    "kaggle_smart_logistics": {
+      "name": "Smart Logistics Supply Chain Dataset",
+      "source": "kaggle",
+      "dataset": "ziya07/smart-logistics-supply-chain-dataset",
+      "description": "Real-time 2024 data on delivery performance, routing efficiency, warehouse operations, and resource allocation. Features: Timestamps, shipment details, KPIs like transit times.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Timestamp",
+        "item_id": "Shipment_ID",
+        "quantity": "Quantity",
+        "site_id": "Warehouse_ID",
+        "lead_time": "Transit_Time"
+      },
+      "preprocessing_notes": "High for telecom logistics, enabling demand forecasting for equipment transport amid volatile networks; long-tail via rare route disruptions."
+    },
+    "kaggle_cloud_supply_chain": {
+      "name": "Cloud-Based Supply Chain Demand Dataset",
+      "source": "kaggle",
+      "dataset": "programmer3/cloud-based-supply-chain-demand-dataset",
+      "description": "Real-time data from cloud-based environment for demand forecasting and inventory management. Features: 3,204 records of historical sales, inventory levels, supplier details, lead times, and costs.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "timestamp",
+        "item_id": "product_id",
+        "quantity": "units_sold",
+        "cost": "unit_price",
+        "lead_time": "lead_time_days"
+      },
+      "preprocessing_notes": "Directly supports telecom logistics by modeling demand for hardware shipments; adaptable for long-tail items via variability analysis."
+    },
+    "github_opencellid": {
+      "name": "OpenCellid Tower Coverage Dataset",
+      "source": "github",
+      "url": "https://github.com/plotly/dash-world-cell-towers",
+      "description": "Over 40 million records of cell tower features, locations (lat/long), radio types, signal range, and coverage. Spatial logistics for tower maintenance supply chains.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": null,
+        "item_id": "cell_tower_id",
+        "quantity": null,
+        "site_id": "cell_tower_id"
+      },
+      "preprocessing_notes": "Massive dataset requiring Dask for processing. Sample 1-5M records initially for feasibility. Critical for geographic demand forecasting and tower-specific logistics. Helps map coverage gaps to part needs, including long-tail rural sites. Use geographic coordinates for spatial modeling.",
+      "download_method": "github",
+      "notes": "May need to sample due to 40M+ records. Geographic data perfect for Nova Corrente's 18,000 towers."
+    },
+    "mit_telecom_parts": {
+      "name": "MIT Telecom Spare Parts Dataset",
+      "source": "mit",
+      "url": "https://dspace.mit.edu/bitstream/handle/1721.1/142919/SCM12_Mamakos_project.pdf",
+      "description": "3 years of data from 2,058 telecom sites (similar to Nova Corrente's 18,000 towers)",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": "Part_ID",
+        "quantity": "Demand",
+        "site_id": "Site_ID",
+        "category": "Category"
+      },
+      "preprocessing_notes": "Weekly aggregated data, may need to interpolate to daily. Highest relevance for validation.",
+      "download_method": "scrape",
+      "file_format": "pdf",
+      "notes": "May require manual extraction or PDF parsing"
+    },
+    "test_dataset": {
+      "name": "Test Sample Dataset",
+      "source": "test",
+      "description": "Sample dataset for testing pipeline (730 days, 2 years)",
+      "relevance": "⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": "Product",
+        "quantity": "Order_Demand",
+        "site_id": "Site",
+        "category": "Category",
+        "cost": "Cost",
+        "lead_time": "Lead_Time",
+        "item_name": null
+      },
+      "preprocessing_notes": "Test dataset with 2 years of daily data"
+    },
+    "anatel_mobile_brazil": {
+      "name": "Mobile Phone Accesses in Brazil",
+      "source": "anatel",
+      "url": "https://data-basis.org/dataset/d3c86a88-d9a4-4c0-bdec-08ab61e8f63c",
+      "description": "Comprehensive open data on mobile and broadband accesses, available in CSV format. Includes subscriber trends and technology breakdowns (GSM, 5G). Anatel official data.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": null,
+        "quantity": "Subscribers",
+        "category": "Technology",
+        "site_id": "Region"
+      },
+      "preprocessing_notes": "Anatel official data on mobile subscribers. Track subscriber growth and technology adoption (5G, 4G, etc.). Regional granularity. May lag in updates - cross-verify with commercial sources.",
+      "download_method": "direct",
+      "notes": "Brazilian telecom regulatory data. Essential for demand forecasting in 5G logistics."
+    },
+    "zenodo_broadband_brazil": {
+      "name": "Real Dataset from Broadband Customers of a Brazilian Telecom Operator",
+      "source": "zenodo",
+      "url": "https://zenodo.org/records/10482897",
+      "filename": "BROADBAND_USER_INFO.csv",
+      "description": "Extracted from a major Brazilian operator, includes modem parameters (latency, jitter, packet loss) and user metrics for thousands of broadband users. Time-series snapshots.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": null,
+        "item_id": "Customer_ID",
+        "quantity": "Packet_Loss",
+        "site_id": null,
+        "category": "Channel2_quality"
+      },
+      "preprocessing_notes": "Real Brazilian operator data with customer metrics (latency, jitter, packet loss, channel quality). Predictive modeling for demand in network maintenance. Long-tail insights into rare downtime events. No date column - may need temporal indexing. Operator-specific bias may exist.",
+      "download_method": "zenodo",
+      "notes": "Excellent for predictive maintenance in telecom logistics. Integrates well with SARIMAX/Prophet/LSTM ensembles. Note: No explicit date column - may require temporal indexing or synthetic timestamps."
+    },
+    "internet_aberta_forecast": {
+      "name": "Data Traffic Demand Forecast for Brazil",
+      "source": "internet_aberta",
+      "url": "https://internetaberta.com.br/wp-content/uploads/2024/05/Paper-1-EN-Data-Traffic-Demand-Forecast-for-Brazil.pdf",
+      "description": "Top-down projections on broadband users, 4G/5G prevalence, GDP correlations, and data consumption (297 to 400 exabytes by 2033).",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Year",
+        "item_id": null,
+        "quantity": "Data_Traffic_TB",
+        "category": "Technology_Type"
+      },
+      "preprocessing_notes": "Long-term logistics planning in telecom. Addresses intermittent high-demand periods (major events). Forecast uncertainties inherent. May require PDF parsing.",
+      "download_method": "direct",
+      "file_format": "pdf",
+      "notes": "Essential for long-term logistics planning. Forecast uncertainties require hedging strategies."
+    },
+    "springer_digital_divide": {
+      "name": "Bridging the Digital Divide: Internet Connectivity Evolution",
+      "source": "springer",
+      "url": "https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-024-00508-8",
+      "description": "Nearly 100 million entries from Ookla on speed tests and connectivity in Brazilian cities, focusing on urban-rural gaps.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "test_timestamp",
+        "item_id": "test_id",
+        "quantity": "download_speed_mbps",
+        "site_id": "city_id",
+        "category": "urban_rural"
+      },
+      "preprocessing_notes": "Massive dataset (~100M records) requiring Dask for processing. Sample 1-5M records initially for feasibility. Potential sampling biases. Spatial demand forecasting for broadband logistics.",
+      "download_method": "direct",
+      "notes": "May need sampling due to 100M+ records. Geographic data perfect for Nova Corrente's 18,000 towers."
+    },
+    "olist_ecommerce": {
+      "name": "Brazilian E-Commerce Olist Dataset",
+      "source": "kaggle",
+      "dataset": "olistbr/brazilian-ecommerce",
+      "description": "Brazilian e-commerce orders from 2016-2018 with customer, product, and logistics data. Proxies telecom-related consumer behaviors.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "order_purchase_timestamp",
+        "item_id": "product_id",
+        "quantity": "order_item_quantity",
+        "site_id": "seller_id",
+        "category": "product_category_name",
+        "cost": "price"
+      },
+      "preprocessing_notes": "E-commerce data with order details from 2016-2018. Useful for consumer behavior patterns in telecom logistics. Proxy for demand forecasting."
+    },
+    "zenodo_bgsmt_mobility": {
+      "name": "Brazilian GSM Telecom (BGSMT) Mobility Dataset",
+      "source": "zenodo",
+      "url": "https://zenodo.org/records/8178782",
+      "description": "526,894 mobility records from 4,545 users, September 2017 - September 2018, 15-minute intervals. Mobility patterns across multiple Brazilian states.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "timestamp",
+        "item_id": "user_id",
+        "quantity": null,
+        "site_id": "location_id",
+        "category": "mobility_type"
+      },
+      "preprocessing_notes": "High-value mobility dataset for demand forecasting based on user movement, tower load prediction, and infrastructure planning.",
+      "download_method": "zenodo"
+    },
+    "brazilian_iot_structured": {
+      "name": "Brazilian IoT Market Structured Data",
+      "source": "structured",
+      "description": "Structured IoT connection data from 2020-2024, monthly granularity, sector breakdown (agriculture, logistics, smart cities, utilities, retail).",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "sector",
+        "quantity": "iot_connections_millions",
+        "category": "sector",
+        "site_id": "region"
+      },
+      "preprocessing_notes": "Generated structured data based on industry research. 28M to 46.2M connections growth. Perfect for IoT demand forecasting."
+    },
+    "brazilian_fiber_structured": {
+      "name": "Brazilian Fiber Optic Expansion Structured Data",
+      "source": "structured",
+      "description": "Quarterly fiber household penetration data from 2020-2024 by region (Southeast, South, Northeast, North, Central West).",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "region",
+        "quantity": "estimated_households_millions",
+        "category": "region",
+        "site_id": "region"
+      },
+      "preprocessing_notes": "Generated structured data from market reports. Household penetration 25% (2020) to 49% (2024). Regional breakdown essential for infrastructure planning."
+    },
+    "brazilian_operators_structured": {
+      "name": "Brazilian Telecom Operators Market Data",
+      "source": "structured",
+      "description": "Monthly operator market data from 2019-2024: Vivo, Claro, TIM, Others. Subscribers, market share, 5G coverage.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "operator",
+        "quantity": "subscribers_millions",
+        "category": "operator",
+        "site_id": "operator"
+      },
+      "preprocessing_notes": "Generated structured data from public reports. Market share dynamics: Vivo (32%), Claro (27%), TIM (20%). Essential for competitive analysis."
+    },
+    "brazilian_demand_factors": {
+      "name": "Brazilian Demand Factors (Economic, Climatic, Regulatory)",
+      "source": "structured",
+      "description": "Daily demand factors from 2019-2024: GDP growth, inflation, exchange rates, temperature, precipitation, flood risks, 5G milestones, holidays.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": null,
+        "quantity": "demand_multiplier",
+        "category": null,
+        "site_id": null
+      },
+      "preprocessing_notes": "Generated structured data simulating economic, climatic, and regulatory factors. Essential external factors for demand forecasting models."
+    },
+    "anatel_broadband": {
+      "name": "Anatel Broadband Accesses",
+      "source": "anatel",
+      "url": "https://data-basis.org/search?organization=anatel",
+      "description": "Municipality-level broadband connection data from Anatel. Coverage, speeds, and technology breakdown.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": null,
+        "quantity": "accesses",
+        "category": "technology",
+        "site_id": "municipality"
+      },
+      "preprocessing_notes": "Anatel official broadband data. Municipality-level granularity for spatial demand forecasting.",
+      "download_method": "direct"
+    },
+    "anatel_spectrum": {
+      "name": "Anatel Spectrum Usage Data",
+      "source": "anatel",
+      "url": "https://www.gov.br/anatel/pt-br/dados/dados-abertos",
+      "description": "Spectrum allocation and usage data from Anatel. Frequency bands, operators, geographic coverage.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "frequency_band",
+        "quantity": "allocation_mhz",
+        "category": "operator",
+        "site_id": "region"
+      },
+      "preprocessing_notes": "Anatel spectrum data. Useful for understanding infrastructure deployment patterns and demand drivers.",
+      "download_method": "direct"
+    },
+    "inmet_climate_bahia": {
+      "name": "INMET Climate Data - Bahia",
+      "source": "inmet",
+      "description": "Weather data (temperature, precipitation, humidity) for Bahia region from INMET",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "DATA (YYYY-MM-DD HH)",
+        "temperature": "TEMPERATURA DO AR - BULBO SECO, HORARIA (°C)",
+        "precipitation": "PRECIPITAÇÃO TOTAL, HORÁRIO (mm)",
+        "humidity": "UMIDADE RELATIVA DO AR, HORARIA (%)"
+      },
+      "download_method": "scrape",
+      "region": "bahia_salvador",
+      "preprocessing_notes": "Essential climate data for external factors in ML models. Temperature, precipitation, and humidity impact demand for telecom equipment.",
+      "notes": "Daily/hourly weather data for demand forecasting external factors"
+    },
+    "inmet_climate_sao_paulo": {
+      "name": "INMET Climate Data - São Paulo",
+      "source": "inmet",
+      "description": "Weather data for São Paulo region from INMET",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "DATA (YYYY-MM-DD HH)",
+        "temperature": "TEMPERATURA DO AR - BULBO SECO, HORARIA (°C)",
+        "precipitation": "PRECIPITAÇÃO TOTAL, HORÁRIO (mm)",
+        "humidity": "UMIDADE RELATIVA DO AR, HORARIA (%)"
+      },
+      "download_method": "scrape",
+      "region": "sp_sao_paulo",
+      "preprocessing_notes": "Climate data for São Paulo region. Essential for geographic demand forecasting.",
+      "notes": "Regional climate variations affect equipment demand patterns"
+    },
+    "bacen_exchange_rate_usd": {
+      "name": "BACEN Exchange Rate (USD/BRL)",
+      "source": "bacen",
+      "description": "Daily USD/BRL exchange rate from Brazilian Central Bank",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "data",
+        "exchange_rate": "valor"
+      },
+      "download_method": "scrape",
+      "series_code": "1",
+      "preprocessing_notes": "Critical economic factor. Exchange rate affects import costs and demand for imported telecom equipment. Volatility indicates currency crisis risk.",
+      "notes": "Exchange rate trends influence inventory decisions (anticipate purchases during devaluation)"
+    },
+    "bacen_selic_rate": {
+      "name": "BACEN SELIC Interest Rate",
+      "source": "bacen",
+      "description": "SELIC interest rate (base rate) from Brazilian Central Bank",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "data",
+        "selic_rate": "valor"
+      },
+      "download_method": "scrape",
+      "series_code": "11",
+      "preprocessing_notes": "SELIC rate affects cost of capital and inventory holding costs. Higher rates reduce optimal inventory levels.",
+      "notes": "Economic indicator for inventory optimization"
+    },
+    "bacen_ipca_12m": {
+      "name": "BACEN IPCA 12 Months (Inflation)",
+      "source": "bacen",
+      "description": "IPCA inflation index accumulated over 12 months from BACEN",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "data",
+        "inflation_rate": "valor"
+      },
+      "download_method": "scrape",
+      "series_code": "433",
+      "preprocessing_notes": "Inflation rate affects purchasing decisions. High inflation (>1%/month) increases demand anticipation.",
+      "notes": "Inflation expectations drive inventory strategy"
+    },
+    "ibge_pib_quarterly": {
+      "name": "IBGE PIB Quarterly (GDP)",
+      "source": "ibge",
+      "description": "Quarterly GDP data from IBGE SIDRA",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "D3N",
+        "gdp": "V"
+      },
+      "download_method": "scrape",
+      "table_id": "5932",
+      "preprocessing_notes": "GDP growth correlates with telecom infrastructure investment. Useful for long-term demand forecasting.",
+      "notes": "Economic growth indicator for infrastructure planning"
+    },
+    "ibge_ipca_monthly": {
+      "name": "IBGE IPCA Monthly (Inflation)",
+      "source": "ibge",
+      "description": "Monthly IPCA inflation index from IBGE SIDRA",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "D3N",
+        "ipca_monthly": "V"
+      },
+      "download_method": "scrape",
+      "table_id": "1737",
+      "preprocessing_notes": "Monthly inflation data for economic external factors. More granular than BACEN IPCA 12M.",
+      "notes": "Monthly inflation for short-term demand forecasting"
+    },
+    "gsma_mobile_connectivity_brazil": {
+      "name": "GSMA Mobile Connectivity Index - Brazil",
+      "source": "gsma",
+      "description": "Mobile connectivity metrics for Brazil from GSMA. Includes 5G coverage, IoT connections, mobile economy indicators.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "metric_type",
+        "quantity": "value",
+        "category": "connectivity_level"
+      },
+      "download_method": "scrape",
+      "report_type": "mobile_connectivity_index",
+      "region": "brazil",
+      "preprocessing_notes": "GSMA official mobile connectivity data for Brazil. Essential for understanding 5G and IoT growth trends.",
+      "notes": "Mobile connectivity indicators for infrastructure planning"
+    },
+    "gsma_mobile_economy_brazil": {
+      "name": "GSMA Mobile Economy Brazil 2024",
+      "source": "gsma",
+      "url": "https://www.gsma.com/mobileeconomy/wp-content/uploads/2024/02/Mobile-Economy-Brazil-2024.pdf",
+      "description": "Comprehensive mobile economy report for Brazil. Includes subscriber trends, 5G deployment, economic impact.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "year",
+        "item_id": "metric",
+        "quantity": "value",
+        "category": "sector"
+      },
+      "download_method": "scrape",
+      "report_type": "mobile_economy",
+      "region": "brazil",
+      "preprocessing_notes": "GSMA Mobile Economy report. May require PDF parsing. Contains annual forecasts and market analysis.",
+      "notes": "Long-term market trends and forecasts for telecom logistics planning"
+    },
+    "mit_telecom_spare_parts": {
+      "name": "MIT SCM Project: Telecom Spare Parts Dataset",
+      "source": "mit",
+      "url": "https://dspace.mit.edu/bitstream/handle/1721.1/142928/SCM15_Costa_Naithani_project.pdf",
+      "description": "MIT Supply Chain Management research on telecom spare parts demand. 3 years of data from 2,058 telecom sites.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": "Part_ID",
+        "quantity": "Demand",
+        "site_id": "Site_ID",
+        "category": "Category"
+      },
+      "download_method": "scrape",
+      "preprocessing_notes": "MIT research paper on telecom spare parts. 3 years of data from 2,058 sites (similar to Nova Corrente's 18,000 towers). Weekly aggregated data, may need to interpolate to daily.",
+      "notes": "Critical reference dataset for telecom spare parts demand forecasting"
+    },
+    "zenodo_wind_turbine_failures": {
+      "name": "Correlation Between Wind Turbine Failures and Environmental Factors",
+      "source": "zenodo",
+      "url": "https://zenodo.org/records/7613923",
+      "description": "Wind turbine failure dataset with environmental correlations. Proxy for telecom tower maintenance. Includes repair times and costs.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "turbine_id",
+        "quantity": "failure_count",
+        "category": "failure_type",
+        "cost": "repair_cost",
+        "lead_time": "repair_time_hours"
+      },
+      "download_method": "zenodo",
+      "record_id": "7613923",
+      "preprocessing_notes": "Wind turbine failure data adapted for telecom tower maintenance forecasting. Environmental factors correlate with tower failures.",
+      "notes": "Proxy dataset for tower structural maintenance"
+    },
+    "zenodo_ai_decarbonization": {
+      "name": "AI-driven Decarbonization of Buildings: Predictive Maintenance",
+      "source": "zenodo",
+      "url": "https://zenodo.org/records/15004071",
+      "description": "Predictive maintenance dataset for energy systems. Adaptable to telecom towers with MAPE metrics.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "timestamp",
+        "item_id": "system_id",
+        "quantity": "maintenance_demand",
+        "category": "system_type"
+      },
+      "download_method": "zenodo",
+      "record_id": "15004071",
+      "preprocessing_notes": "Predictive maintenance for energy systems, adaptable to telecom towers.",
+      "notes": "MAPE metrics included for model validation"
+    },
+    "ieee_wind_turbine_failures": {
+      "name": "Correlation Between Wind Turbine Failures and Environmental Factors",
+      "source": "ieee",
+      "url": "https://ieeexplore.ieee.org/document/10926829",
+      "description": "IEEE paper on wind turbine failures correlated with environmental factors. Average repair costs and times. Useful for long-tail prediction in telecom towers.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "turbine_id",
+        "quantity": "failure_count",
+        "category": "failure_type"
+      },
+      "download_method": "scrape",
+      "document_number": "10926829",
+      "preprocessing_notes": "IEEE paper with failure correlation data. May require PDF parsing to extract structured data.",
+      "notes": "Proxy for telecom tower structural maintenance"
+    },
+    "ieee_power_line_inspection": {
+      "name": "A Novel Method for Multi-Modal Predictive Inspection of Power Lines",
+      "source": "ieee",
+      "url": "https://ieeexplore.ieee.org/document/10745486",
+      "description": "DL-based approach for infrastructure inspection. Relevant to telecom towers in Brazil.",
+      "relevance": "⭐⭐⭐⭐",
+      "download_method": "scrape",
+      "document_number": "10745486",
+      "preprocessing_notes": "IEEE paper on predictive inspection using deep learning. Adaptable to telecom infrastructure.",
+      "notes": "Deep learning methodology for infrastructure maintenance"
+    },
+    "ieee_power_grid_reliability": {
+      "name": "Recent Advancements in Planning and Reliability Aspects of Large Power Grids",
+      "source": "ieee",
+      "url": "https://ieeexplore.ieee.org/document/10818630",
+      "description": "Predictive maintenance for transmission systems, adaptable to telecom towers. Includes AI for maintenance with ROI from cost savings.",
+      "relevance": "⭐⭐⭐⭐",
+      "download_method": "scrape",
+      "document_number": "10818630",
+      "preprocessing_notes": "IEEE paper on power grid reliability and predictive maintenance. AI models for infrastructure maintenance.",
+      "notes": "AI-driven predictive maintenance for infrastructure"
+    },
+    "ieee_fire_risk_prediction": {
+      "name": "Statistical and Machine Learning Models for Predicting Fire and Other Risks",
+      "source": "ieee",
+      "url": "https://ieeexplore.ieee.org/document/10504282",
+      "description": "ML models for anomaly detection in infrastructure. Adaptable to towers for risk prediction.",
+      "relevance": "⭐⭐⭐⭐",
+      "download_method": "scrape",
+      "document_number": "10504282",
+      "preprocessing_notes": "IEEE paper on ML models for fire and risk prediction in infrastructure.",
+      "notes": "Risk prediction models for infrastructure"
+    },
+    "github_brazil_weather": {
+      "name": "Brazil Weather Data API",
+      "source": "github",
+      "url": "https://github.com/gregomelo/brazil_weather_data",
+      "description": "Brazil weather data API wrapper for INMET. Provides easy access to climate data for multiple regions.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "download_method": "github",
+      "preprocessing_notes": "GitHub repo with Brazil weather API wrapper. May include example datasets or API integration code.",
+      "notes": "Alternative INMET API wrapper for climate data"
+    },
+    "github_awesome_billing": {
+      "name": "Awesome Billing - Telecom Billing Resources",
+      "source": "github",
+      "url": "https://github.com/kdeldycke/awesome-billing",
+      "description": "Curated list of billing resources including telecom billing systems. Useful for understanding market dynamics.",
+      "relevance": "⭐⭐⭐",
+      "download_method": "github",
+      "preprocessing_notes": "GitHub repo with curated billing resources. May contain datasets or links to billing data.",
+      "notes": "Telecom billing resources and market insights"
+    },
+    "anatel_resolution_617": {
+      "name": "Anatel Resolution nº 617 - Service Granting Procedures",
+      "source": "anatel",
+      "url": "https://www.gov.br/anatel/pt-br/assuntos/legislacao/resolucoes/2024/resolucao-n-617",
+      "description": "Anatel resolution detailing service granting procedures. Provides contextual data for regulatory-impact forecasting in B2B models.",
+      "relevance": "⭐⭐⭐⭐",
+      "download_method": "scrape",
+      "preprocessing_notes": "Anatel resolution document. May require PDF parsing. Contains regulatory procedures affecting telecom operations.",
+      "notes": "Regulatory context for demand forecasting"
+    },
+    "anatel_resolution_614": {
+      "name": "Anatel Resolution nº 614 - Multimedia Communication Conditions",
+      "source": "anatel",
+      "url": "https://www.gov.br/anatel/pt-br/assuntos/legislacao/resolucoes/2024/resolucao-n-614",
+      "description": "Anatel resolution on multimedia communication conditions. Provides regulatory context for demand forecasting.",
+      "relevance": "⭐⭐⭐⭐",
+      "download_method": "scrape",
+      "preprocessing_notes": "Regulatory document affecting telecom operations. May require PDF parsing.",
+      "notes": "Regulatory context data"
+    },
+    "kaggle_brazil_weather": {
+      "name": "Brazil Weather Information by INMET",
+      "source": "kaggle",
+      "dataset": "pavfedotov/brazil-weather-information-by-inmet",
+      "description": "Aggregated daily weather metrics from INMET. Precipitation, temperature, humidity for correlation with tower maintenance demands.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "temperature": "temperature",
+        "precipitation": "precipitation",
+        "humidity": "humidity"
+      },
+      "preprocessing_notes": "Daily weather metrics from INMET. Essential for correlating weather with tower maintenance demands. High humidity (78%+) accelerates corrosion.",
+      "notes": "Climate data for external factors in demand forecasting"
+    },
+    "internet_aberta_roi_brazil": {
+      "name": "Evaluating The Return On Investment Of National Telecommunications Service Providers In Brazil",
+      "source": "internet_aberta",
+      "url": "https://internetaberta.com.br/wp-content/uploads/2024/05/Paper-2-EN-Evaluating-The-Return-On-Investment-Of-National-Telecommunications-Service-Providers-In-Brazil.pdf",
+      "description": "ROI analysis of Brazilian telecom service providers. Provides benchmarks for ROI >100% in B2B contexts.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "year",
+        "item_id": "provider",
+        "quantity": "roi_percentage",
+        "category": "service_type"
+      },
+      "download_method": "scrape",
+      "preprocessing_notes": "ROI analysis paper. May require PDF parsing. Contains benchmarks for telecom operator ROI.",
+      "notes": "ROI benchmarks for Nova Corrente operations"
+    }
+  },
+  "unified_schema": {
+    "required_columns": [
+      "date",
+      "item_id",
+      "item_name",
+      "quantity",
+      "site_id",
+      "category",
+      "cost",
+      "lead_time"
+    ],
+    "optional_columns": [
+      "temperature",
+      "precipitation",
+      "humidity",
+      "exchange_rate",
+      "inflation",
+      "is_holiday",
+      "is_weekend",
+      "month",
+      "weekday"
+    ],
+    "data_types": {
+    "date": "datetime64[ns]",
+    "item_id": "string",
+    "item_name": "string",
+    "quantity": "float64",
+    "site_id": "string",
+    "category": "string",
+    "cost": "float64",
+    "lead_time": "int64"
+  }
+  },
+  "preprocessing": {
+    "min_historical_months": 24,
+    "target_columns": ["date", "item_id", "quantity"],
+    "date_format": "%Y-%m-%d",
+    "aggregation_level": "daily",
+    "fill_missing": "forward_fill",
+    "outlier_removal": "iqr_method"
+  }
+}

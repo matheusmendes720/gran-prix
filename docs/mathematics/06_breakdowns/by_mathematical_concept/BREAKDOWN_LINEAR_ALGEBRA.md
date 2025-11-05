@@ -120,3 +120,4 @@ onde $c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj}$.
 
 
 
+

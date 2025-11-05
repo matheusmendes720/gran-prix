@@ -1,0 +1,317 @@
+2025-11-02 22:37:04,892 - __main__ - INFO - ================================================================================
+2025-11-02 22:37:04,892 - __main__ - INFO - CLUSTER STUDY DATASET DOWNLOAD - COMPREHENSIVE
+2025-11-02 22:37:04,892 - __main__ - INFO - ================================================================================
+2025-11-02 22:37:04,893 - __main__ - INFO - Start time: 2025-11-02 22:37:04
+2025-11-02 22:37:04,893 - backend.pipelines.data_processing.download_datasets - WARNING - Kaggle config not found at D:\codex\datamaster\senai\gran_prix\backend\config\kaggle_config.json. Kaggle datasets will be skipped. See config/kaggle_config.json.template for instructions.
+2025-11-02 22:37:04,895 - __main__ - INFO - 
+================================================================================
+2025-11-02 22:37:04,895 - __main__ - INFO - Downloading Hell Yes Datasets
+2025-11-02 22:37:04,895 - __main__ - INFO - ================================================================================
+2025-11-02 22:37:04,895 - __main__ - INFO - 
+Processing: zenodo_wind_turbine_failures
+2025-11-02 22:37:04,895 - __main__ - INFO -   Name: Correlation Between Wind Turbine Failures and Environmental Factors
+2025-11-02 22:37:04,895 - __main__ - INFO -   Source: zenodo
+2025-11-02 22:37:04,896 - backend.pipelines.data_processing.download_datasets - INFO - Starting download of 1 datasets...
+2025-11-02 22:37:04,896 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:04,896 - backend.pipelines.data_processing.download_datasets - INFO - Processing: Correlation Between Wind Turbine Failures and Environmental Factors
+2025-11-02 22:37:04,896 - backend.pipelines.data_processing.download_datasets - INFO - Source: zenodo
+2025-11-02 22:37:04,896 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:04,984 - backend.pipelines.data_processing.download_datasets - INFO - Downloading Zenodo dataset from: https://zenodo.org/records/7613923
+2025-11-02 22:37:07,584 - backend.pipelines.data_processing.download_datasets - INFO - Using fallback URL pattern: https://zenodo.org/records/7613923/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:07,584 - backend.pipelines.data_processing.download_datasets - INFO - Downloading from URL: https://zenodo.org/records/7613923/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 (attempt 1/3)
+2025-11-02 22:37:08,611 - backend.pipelines.data_processing.download_datasets - WARNING - Attempt 1 failed: 404 Client Error: NOT FOUND for url: https://zenodo.org/records/7613923/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:09,612 - backend.pipelines.data_processing.download_datasets - INFO - Downloading from URL: https://zenodo.org/records/7613923/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 (attempt 2/3)
+2025-11-02 22:37:10,668 - backend.pipelines.data_processing.download_datasets - WARNING - Attempt 2 failed: 404 Client Error: NOT FOUND for url: https://zenodo.org/records/7613923/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:12,669 - backend.pipelines.data_processing.download_datasets - INFO - Downloading from URL: https://zenodo.org/records/7613923/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 (attempt 3/3)
+2025-11-02 22:37:13,688 - backend.pipelines.data_processing.download_datasets - WARNING - Attempt 3 failed: 404 Client Error: NOT FOUND for url: https://zenodo.org/records/7613923/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:13,688 - backend.pipelines.data_processing.download_datasets - ERROR - Failed to download from https://zenodo.org/records/7613923/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 after 3 attempts
+2025-11-02 22:37:14,690 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:14,690 - backend.pipelines.data_processing.download_datasets - INFO - DOWNLOAD SUMMARY
+2025-11-02 22:37:14,690 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:14,690 - backend.pipelines.data_processing.download_datasets - INFO - Successful: 0/1
+2025-11-02 22:37:14,690 - backend.pipelines.data_processing.download_datasets - INFO -   FAILED: zenodo_wind_turbine_failures
+2025-11-02 22:37:14,713 - __main__ - INFO - 
+Processing: mit_telecom_parts
+2025-11-02 22:37:14,713 - __main__ - INFO -   Name: MIT Telecom Spare Parts Dataset
+2025-11-02 22:37:14,714 - __main__ - INFO -   Source: mit
+2025-11-02 22:37:14,714 - backend.pipelines.data_processing.download_datasets - INFO - Starting download of 1 datasets...
+2025-11-02 22:37:14,714 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:14,714 - backend.pipelines.data_processing.download_datasets - INFO - Processing: MIT Telecom Spare Parts Dataset
+2025-11-02 22:37:14,714 - backend.pipelines.data_processing.download_datasets - INFO - Source: mit
+2025-11-02 22:37:14,714 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:14,717 - backend.pipelines.data_processing.download_datasets - WARNING - Scrapy not available, using fallback methods
+2025-11-02 22:37:14,717 - backend.pipelines.data_processing.download_datasets - WARNING - Scraping not yet implemented for mit_telecom_parts
+2025-11-02 22:37:15,718 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:15,718 - backend.pipelines.data_processing.download_datasets - INFO - DOWNLOAD SUMMARY
+2025-11-02 22:37:15,718 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:15,718 - backend.pipelines.data_processing.download_datasets - INFO - Successful: 0/1
+2025-11-02 22:37:15,718 - backend.pipelines.data_processing.download_datasets - INFO -   FAILED: mit_telecom_parts
+2025-11-02 22:37:15,719 - __main__ - INFO - 
+Processing: zenodo_broadband_brazil
+2025-11-02 22:37:15,719 - __main__ - INFO -   Name: Real Dataset from Broadband Customers of a Brazilian Telecom Operator
+2025-11-02 22:37:15,719 - __main__ - INFO -   Source: zenodo
+2025-11-02 22:37:15,719 - __main__ - INFO -   [SKIP] Already downloaded: zenodo_broadband_brazil
+2025-11-02 22:37:15,719 - __main__ - INFO - 
+Processing: mit_telecom_spare_parts
+2025-11-02 22:37:15,719 - __main__ - INFO -   Name: MIT SCM Project: Telecom Spare Parts Dataset
+2025-11-02 22:37:15,719 - __main__ - INFO -   Source: mit
+2025-11-02 22:37:15,719 - backend.pipelines.data_processing.download_datasets - INFO - Starting download of 1 datasets...
+2025-11-02 22:37:15,719 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:15,719 - backend.pipelines.data_processing.download_datasets - INFO - Processing: MIT SCM Project: Telecom Spare Parts Dataset
+2025-11-02 22:37:15,719 - backend.pipelines.data_processing.download_datasets - INFO - Source: mit
+2025-11-02 22:37:15,719 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:15,721 - backend.pipelines.data_processing.download_datasets - WARNING - Scrapy not available, using fallback methods
+2025-11-02 22:37:15,721 - backend.pipelines.data_processing.download_datasets - WARNING - Scraping not yet implemented for mit_telecom_spare_parts
+2025-11-02 22:37:16,721 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:16,721 - backend.pipelines.data_processing.download_datasets - INFO - DOWNLOAD SUMMARY
+2025-11-02 22:37:16,721 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:16,722 - backend.pipelines.data_processing.download_datasets - INFO - Successful: 0/1
+2025-11-02 22:37:16,722 - backend.pipelines.data_processing.download_datasets - INFO -   FAILED: mit_telecom_spare_parts
+2025-11-02 22:37:16,724 - __main__ - INFO - 
+Hell Yes Download Summary:
+2025-11-02 22:37:16,724 - __main__ - INFO -   Total: 4
+2025-11-02 22:37:16,724 - __main__ - INFO -   Downloaded: 0
+2025-11-02 22:37:16,724 - __main__ - INFO -   Skipped: 1
+2025-11-02 22:37:16,724 - __main__ - INFO -   Failed: 3
+2025-11-02 22:37:16,739 - __main__ - INFO - 
+================================================================================
+2025-11-02 22:37:16,739 - __main__ - INFO - Downloading High Priority Datasets
+2025-11-02 22:37:16,739 - __main__ - INFO - ================================================================================
+2025-11-02 22:37:16,739 - __main__ - INFO - 
+Processing: github_network_fault
+2025-11-02 22:37:16,739 - __main__ - INFO -   Name: Network Fault Prediction Dataset
+2025-11-02 22:37:16,739 - __main__ - INFO -   Source: github
+2025-11-02 22:37:16,740 - __main__ - INFO -   [SKIP] Already downloaded: github_network_fault
+2025-11-02 22:37:16,740 - __main__ - INFO - 
+Processing: kaggle_smart_logistics
+2025-11-02 22:37:16,740 - __main__ - INFO -   Name: Smart Logistics Supply Chain Dataset
+2025-11-02 22:37:16,740 - __main__ - INFO -   Source: kaggle
+2025-11-02 22:37:16,740 - __main__ - INFO -   [SKIP] Already downloaded: kaggle_smart_logistics
+2025-11-02 22:37:16,740 - __main__ - INFO - 
+Processing: ieee_wind_turbine_failures
+2025-11-02 22:37:16,740 - __main__ - INFO -   Name: Correlation Between Wind Turbine Failures and Environmental Factors
+2025-11-02 22:37:16,740 - __main__ - INFO -   Source: ieee
+2025-11-02 22:37:16,740 - backend.pipelines.data_processing.download_datasets - INFO - Starting download of 1 datasets...
+2025-11-02 22:37:16,740 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:16,740 - backend.pipelines.data_processing.download_datasets - INFO - Processing: Correlation Between Wind Turbine Failures and Environmental Factors
+2025-11-02 22:37:16,741 - backend.pipelines.data_processing.download_datasets - INFO - Source: ieee
+2025-11-02 22:37:16,741 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:16,741 - backend.pipelines.data_processing.download_datasets - WARNING - Unknown source type: ieee for ieee_wind_turbine_failures
+2025-11-02 22:37:17,741 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:17,741 - backend.pipelines.data_processing.download_datasets - INFO - DOWNLOAD SUMMARY
+2025-11-02 22:37:17,741 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:17,741 - backend.pipelines.data_processing.download_datasets - INFO - Successful: 0/1
+2025-11-02 22:37:17,741 - backend.pipelines.data_processing.download_datasets - INFO -   FAILED: ieee_wind_turbine_failures
+2025-11-02 22:37:17,742 - __main__ - INFO - 
+Processing: kaggle_cloud_supply_chain
+2025-11-02 22:37:17,742 - __main__ - INFO -   Name: Cloud-Based Supply Chain Demand Dataset
+2025-11-02 22:37:17,742 - __main__ - INFO -   Source: kaggle
+2025-11-02 22:37:17,742 - __main__ - INFO -   [SKIP] Already downloaded: kaggle_cloud_supply_chain
+2025-11-02 22:37:17,742 - __main__ - INFO - 
+Processing: test_dataset
+2025-11-02 22:37:17,742 - __main__ - INFO -   Name: Test Sample Dataset
+2025-11-02 22:37:17,742 - __main__ - INFO -   Source: test
+2025-11-02 22:37:17,743 - __main__ - INFO -   [SKIP] Already downloaded: test_dataset
+2025-11-02 22:37:17,743 - __main__ - INFO - 
+Processing: springer_digital_divide
+2025-11-02 22:37:17,743 - __main__ - INFO -   Name: Bridging the Digital Divide: Internet Connectivity Evolution
+2025-11-02 22:37:17,743 - __main__ - INFO -   Source: springer
+2025-11-02 22:37:17,743 - __main__ - INFO -   [SKIP] Already downloaded: springer_digital_divide
+2025-11-02 22:37:17,743 - __main__ - INFO - 
+Processing: zenodo_bgsmt_mobility
+2025-11-02 22:37:17,743 - __main__ - INFO -   Name: Brazilian GSM Telecom (BGSMT) Mobility Dataset
+2025-11-02 22:37:17,743 - __main__ - INFO -   Source: zenodo
+2025-11-02 22:37:17,743 - backend.pipelines.data_processing.download_datasets - INFO - Starting download of 1 datasets...
+2025-11-02 22:37:17,743 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:17,743 - backend.pipelines.data_processing.download_datasets - INFO - Processing: Brazilian GSM Telecom (BGSMT) Mobility Dataset
+2025-11-02 22:37:17,743 - backend.pipelines.data_processing.download_datasets - INFO - Source: zenodo
+2025-11-02 22:37:17,743 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:17,743 - backend.pipelines.data_processing.download_datasets - INFO - Downloading Zenodo dataset from: https://zenodo.org/records/8178782
+2025-11-02 22:37:19,241 - backend.pipelines.data_processing.download_datasets - INFO - Using fallback URL pattern: https://zenodo.org/records/8178782/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:19,242 - backend.pipelines.data_processing.download_datasets - INFO - Downloading from URL: https://zenodo.org/records/8178782/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 (attempt 1/3)
+2025-11-02 22:37:20,304 - backend.pipelines.data_processing.download_datasets - WARNING - Attempt 1 failed: 404 Client Error: NOT FOUND for url: https://zenodo.org/records/8178782/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:21,305 - backend.pipelines.data_processing.download_datasets - INFO - Downloading from URL: https://zenodo.org/records/8178782/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 (attempt 2/3)
+2025-11-02 22:37:22,390 - backend.pipelines.data_processing.download_datasets - WARNING - Attempt 2 failed: 404 Client Error: NOT FOUND for url: https://zenodo.org/records/8178782/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:24,391 - backend.pipelines.data_processing.download_datasets - INFO - Downloading from URL: https://zenodo.org/records/8178782/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 (attempt 3/3)
+2025-11-02 22:37:25,385 - backend.pipelines.data_processing.download_datasets - WARNING - Attempt 3 failed: 404 Client Error: NOT FOUND for url: https://zenodo.org/records/8178782/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:25,385 - backend.pipelines.data_processing.download_datasets - ERROR - Failed to download from https://zenodo.org/records/8178782/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 after 3 attempts
+2025-11-02 22:37:26,387 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:26,387 - backend.pipelines.data_processing.download_datasets - INFO - DOWNLOAD SUMMARY
+2025-11-02 22:37:26,387 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:26,387 - backend.pipelines.data_processing.download_datasets - INFO - Successful: 0/1
+2025-11-02 22:37:26,387 - backend.pipelines.data_processing.download_datasets - INFO -   FAILED: zenodo_bgsmt_mobility
+2025-11-02 22:37:26,388 - __main__ - INFO - 
+Processing: brazilian_fiber_structured
+2025-11-02 22:37:26,388 - __main__ - INFO -   Name: Brazilian Fiber Optic Expansion Structured Data
+2025-11-02 22:37:26,388 - __main__ - INFO -   Source: structured
+2025-11-02 22:37:26,389 - __main__ - INFO -   [SKIP] Already downloaded: brazilian_fiber_structured
+2025-11-02 22:37:26,389 - __main__ - INFO - 
+Processing: brazilian_operators_structured
+2025-11-02 22:37:26,389 - __main__ - INFO -   Name: Brazilian Telecom Operators Market Data
+2025-11-02 22:37:26,389 - __main__ - INFO -   Source: structured
+2025-11-02 22:37:26,389 - __main__ - INFO -   [SKIP] Already downloaded: brazilian_operators_structured
+2025-11-02 22:37:26,389 - __main__ - INFO - 
+Processing: anatel_spectrum
+2025-11-02 22:37:26,389 - __main__ - INFO -   Name: Anatel Spectrum Usage Data
+2025-11-02 22:37:26,389 - __main__ - INFO -   Source: anatel
+2025-11-02 22:37:26,389 - __main__ - INFO -   [SKIP] Already downloaded: anatel_spectrum
+2025-11-02 22:37:26,389 - __main__ - INFO - 
+Processing: gsma_mobile_connectivity_brazil
+2025-11-02 22:37:26,389 - __main__ - INFO -   Name: GSMA Mobile Connectivity Index - Brazil
+2025-11-02 22:37:26,389 - __main__ - INFO -   Source: gsma
+2025-11-02 22:37:26,389 - backend.pipelines.data_processing.download_datasets - INFO - Starting download of 1 datasets...
+2025-11-02 22:37:26,389 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:26,389 - backend.pipelines.data_processing.download_datasets - INFO - Processing: GSMA Mobile Connectivity Index - Brazil
+2025-11-02 22:37:26,390 - backend.pipelines.data_processing.download_datasets - INFO - Source: gsma
+2025-11-02 22:37:26,390 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:26,390 - backend.pipelines.data_processing.download_datasets - WARNING - Unknown source type: gsma for gsma_mobile_connectivity_brazil
+2025-11-02 22:37:27,390 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:27,391 - backend.pipelines.data_processing.download_datasets - INFO - DOWNLOAD SUMMARY
+2025-11-02 22:37:27,391 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:27,391 - backend.pipelines.data_processing.download_datasets - INFO - Successful: 0/1
+2025-11-02 22:37:27,391 - backend.pipelines.data_processing.download_datasets - INFO -   FAILED: gsma_mobile_connectivity_brazil
+2025-11-02 22:37:27,391 - __main__ - INFO - 
+Processing: gsma_mobile_economy_brazil
+2025-11-02 22:37:27,391 - __main__ - INFO -   Name: GSMA Mobile Economy Brazil 2024
+2025-11-02 22:37:27,392 - __main__ - INFO -   Source: gsma
+2025-11-02 22:37:27,392 - backend.pipelines.data_processing.download_datasets - INFO - Starting download of 1 datasets...
+2025-11-02 22:37:27,392 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:27,392 - backend.pipelines.data_processing.download_datasets - INFO - Processing: GSMA Mobile Economy Brazil 2024
+2025-11-02 22:37:27,392 - backend.pipelines.data_processing.download_datasets - INFO - Source: gsma
+2025-11-02 22:37:27,392 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:27,392 - backend.pipelines.data_processing.download_datasets - WARNING - Unknown source type: gsma for gsma_mobile_economy_brazil
+2025-11-02 22:37:28,392 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:28,393 - backend.pipelines.data_processing.download_datasets - INFO - DOWNLOAD SUMMARY
+2025-11-02 22:37:28,393 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:28,393 - backend.pipelines.data_processing.download_datasets - INFO - Successful: 0/1
+2025-11-02 22:37:28,393 - backend.pipelines.data_processing.download_datasets - INFO -   FAILED: gsma_mobile_economy_brazil
+2025-11-02 22:37:28,394 - __main__ - INFO - 
+Processing: zenodo_ai_decarbonization
+2025-11-02 22:37:28,394 - __main__ - INFO -   Name: AI-driven Decarbonization of Buildings: Predictive Maintenance
+2025-11-02 22:37:28,394 - __main__ - INFO -   Source: zenodo
+2025-11-02 22:37:28,394 - backend.pipelines.data_processing.download_datasets - INFO - Starting download of 1 datasets...
+2025-11-02 22:37:28,394 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:28,394 - backend.pipelines.data_processing.download_datasets - INFO - Processing: AI-driven Decarbonization of Buildings: Predictive Maintenance
+2025-11-02 22:37:28,394 - backend.pipelines.data_processing.download_datasets - INFO - Source: zenodo
+2025-11-02 22:37:28,394 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:28,394 - backend.pipelines.data_processing.download_datasets - INFO - Downloading Zenodo dataset from: https://zenodo.org/records/15004071
+2025-11-02 22:37:29,887 - backend.pipelines.data_processing.download_datasets - INFO - Using fallback URL pattern: https://zenodo.org/records/15004071/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:29,888 - backend.pipelines.data_processing.download_datasets - INFO - Downloading from URL: https://zenodo.org/records/15004071/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 (attempt 1/3)
+2025-11-02 22:37:30,911 - backend.pipelines.data_processing.download_datasets - WARNING - Attempt 1 failed: 404 Client Error: NOT FOUND for url: https://zenodo.org/records/15004071/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:31,912 - backend.pipelines.data_processing.download_datasets - INFO - Downloading from URL: https://zenodo.org/records/15004071/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 (attempt 2/3)
+2025-11-02 22:37:32,912 - backend.pipelines.data_processing.download_datasets - WARNING - Attempt 2 failed: 404 Client Error: NOT FOUND for url: https://zenodo.org/records/15004071/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:34,912 - backend.pipelines.data_processing.download_datasets - INFO - Downloading from URL: https://zenodo.org/records/15004071/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 (attempt 3/3)
+2025-11-02 22:37:35,965 - backend.pipelines.data_processing.download_datasets - WARNING - Attempt 3 failed: 404 Client Error: NOT FOUND for url: https://zenodo.org/records/15004071/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1
+2025-11-02 22:37:35,965 - backend.pipelines.data_processing.download_datasets - ERROR - Failed to download from https://zenodo.org/records/15004071/files/output-step-bsId_1-2023_9_28_12_50_10.csv?download=1 after 3 attempts
+2025-11-02 22:37:36,968 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:36,968 - backend.pipelines.data_processing.download_datasets - INFO - DOWNLOAD SUMMARY
+2025-11-02 22:37:36,968 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:36,968 - backend.pipelines.data_processing.download_datasets - INFO - Successful: 0/1
+2025-11-02 22:37:36,968 - backend.pipelines.data_processing.download_datasets - INFO -   FAILED: zenodo_ai_decarbonization
+2025-11-02 22:37:36,969 - __main__ - INFO - 
+Processing: internet_aberta_roi_brazil
+2025-11-02 22:37:36,969 - __main__ - INFO -   Name: Evaluating The Return On Investment Of National Telecommunications Service Providers In Brazil
+2025-11-02 22:37:36,969 - __main__ - INFO -   Source: internet_aberta
+2025-11-02 22:37:36,969 - backend.pipelines.data_processing.download_datasets - INFO - Starting download of 1 datasets...
+2025-11-02 22:37:36,969 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:36,969 - backend.pipelines.data_processing.download_datasets - INFO - Processing: Evaluating The Return On Investment Of National Telecommunications Service Providers In Brazil
+2025-11-02 22:37:36,969 - backend.pipelines.data_processing.download_datasets - INFO - Source: internet_aberta
+2025-11-02 22:37:36,969 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:36,971 - backend.pipelines.data_processing.download_datasets - WARNING - Scrapy not available, using fallback methods
+2025-11-02 22:37:36,972 - backend.pipelines.data_processing.download_datasets - WARNING - Scraping not yet implemented for internet_aberta_roi_brazil
+2025-11-02 22:37:37,972 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:37,972 - backend.pipelines.data_processing.download_datasets - INFO - DOWNLOAD SUMMARY
+2025-11-02 22:37:37,972 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:37,972 - backend.pipelines.data_processing.download_datasets - INFO - Successful: 0/1
+2025-11-02 22:37:37,972 - backend.pipelines.data_processing.download_datasets - INFO -   FAILED: internet_aberta_roi_brazil
+2025-11-02 22:37:37,973 - __main__ - INFO - 
+Processing: kaggle_supply_chain
+2025-11-02 22:37:37,973 - __main__ - INFO -   Name: High-Dimensional Supply Chain Inventory
+2025-11-02 22:37:37,973 - __main__ - INFO -   Source: kaggle
+2025-11-02 22:37:37,974 - __main__ - INFO -   [SKIP] Already downloaded: kaggle_supply_chain
+2025-11-02 22:37:37,974 - __main__ - INFO - 
+Processing: kaggle_telecom_network
+2025-11-02 22:37:37,974 - __main__ - INFO -   Name: Telecom Network Dataset
+2025-11-02 22:37:37,974 - __main__ - INFO -   Source: kaggle
+2025-11-02 22:37:37,974 - __main__ - INFO -   [SKIP] Already downloaded: kaggle_telecom_network
+2025-11-02 22:37:37,974 - __main__ - INFO - 
+Processing: anatel_mobile_brazil
+2025-11-02 22:37:37,974 - __main__ - INFO -   Name: Mobile Phone Accesses in Brazil
+2025-11-02 22:37:37,974 - __main__ - INFO -   Source: anatel
+2025-11-02 22:37:37,974 - __main__ - INFO -   [SKIP] Already downloaded: anatel_mobile_brazil
+2025-11-02 22:37:37,974 - __main__ - INFO - 
+Processing: internet_aberta_forecast
+2025-11-02 22:37:37,974 - __main__ - INFO -   Name: Data Traffic Demand Forecast for Brazil
+2025-11-02 22:37:37,974 - __main__ - INFO -   Source: internet_aberta
+2025-11-02 22:37:37,974 - __main__ - INFO -   [SKIP] Already downloaded: internet_aberta_forecast
+2025-11-02 22:37:37,974 - __main__ - INFO - 
+Processing: brazilian_demand_factors
+2025-11-02 22:37:37,974 - __main__ - INFO -   Name: Brazilian Demand Factors (Economic, Climatic, Regulatory)
+2025-11-02 22:37:37,975 - __main__ - INFO -   Source: structured
+2025-11-02 22:37:37,975 - __main__ - INFO -   [SKIP] Already downloaded: brazilian_demand_factors
+2025-11-02 22:37:37,975 - __main__ - INFO - 
+Processing: anatel_broadband
+2025-11-02 22:37:37,975 - __main__ - INFO -   Name: Anatel Broadband Accesses
+2025-11-02 22:37:37,975 - __main__ - INFO -   Source: anatel
+2025-11-02 22:37:37,975 - __main__ - INFO -   [SKIP] Already downloaded: anatel_broadband
+2025-11-02 22:37:37,976 - __main__ - INFO - 
+Processing: github_5g3e
+2025-11-02 22:37:37,976 - __main__ - INFO -   Name: 5G3E Virtualized Infrastructure Dataset
+2025-11-02 22:37:37,976 - __main__ - INFO -   Source: github
+2025-11-02 22:37:37,976 - __main__ - INFO -   [SKIP] Already downloaded: github_5g3e
+2025-11-02 22:37:37,976 - __main__ - INFO - 
+Processing: kaggle_equipment_failure
+2025-11-02 22:37:37,976 - __main__ - INFO -   Name: Equipment Failure Prediction Dataset
+2025-11-02 22:37:37,976 - __main__ - INFO -   Source: kaggle
+2025-11-02 22:37:37,976 - __main__ - INFO -   [SKIP] Already downloaded: kaggle_equipment_failure
+2025-11-02 22:37:37,976 - __main__ - INFO - 
+Processing: bacen_exchange_rate_usd
+2025-11-02 22:37:37,976 - __main__ - INFO -   Name: BACEN Exchange Rate (USD/BRL)
+2025-11-02 22:37:37,976 - __main__ - INFO -   Source: bacen
+2025-11-02 22:37:37,977 - backend.pipelines.data_processing.download_datasets - INFO - Starting download of 1 datasets...
+2025-11-02 22:37:37,977 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:37,977 - backend.pipelines.data_processing.download_datasets - INFO - Processing: BACEN Exchange Rate (USD/BRL)
+2025-11-02 22:37:37,977 - backend.pipelines.data_processing.download_datasets - INFO - Source: bacen
+2025-11-02 22:37:37,977 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:37,977 - backend.pipelines.data_processing.download_datasets - WARNING - Unknown source type: bacen for bacen_exchange_rate_usd
+2025-11-02 22:37:38,977 - backend.pipelines.data_processing.download_datasets - INFO - 
+======================================================================
+2025-11-02 22:37:38,978 - backend.pipelines.data_processing.download_datasets - INFO - DOWNLOAD SUMMARY
+2025-11-02 22:37:38,978 - backend.pipelines.data_processing.download_datasets - INFO - ======================================================================
+2025-11-02 22:37:38,978 - backend.pipelines.data_processing.download_datasets - INFO - Successful: 0/1
+2025-11-02 22:37:38,978 - backend.pipelines.data_processing.download_datasets - INFO -   FAILED: bacen_exchange_rate_usd
+2025-11-02 22:37:38,981 - __main__ - INFO - 
+High Priority Download Summary:
+2025-11-02 22:37:38,981 - __main__ - INFO -   Total: 23
+2025-11-02 22:37:38,981 - __main__ - INFO -   Downloaded: 0
+2025-11-02 22:37:38,981 - __main__ - INFO -   Skipped: 16
+2025-11-02 22:37:38,981 - __main__ - INFO -   Failed: 7
+2025-11-02 22:37:38,983 - __main__ - INFO - 
+================================================================================
+2025-11-02 22:37:38,983 - __main__ - INFO - DOWNLOAD COMPLETE
+2025-11-02 22:37:38,983 - __main__ - INFO - ================================================================================
+2025-11-02 22:37:38,984 - __main__ - INFO - Total datasets: 27
+2025-11-02 22:37:38,984 - __main__ - INFO - Downloaded: 0
+2025-11-02 22:37:38,984 - __main__ - INFO - Skipped: 17
+2025-11-02 22:37:38,984 - __main__ - INFO - Failed: 10
+2025-11-02 22:37:38,984 - __main__ - INFO - 
+End time: 2025-11-02 22:37:38

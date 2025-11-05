@@ -1,0 +1,540 @@
+{
+  "report_date": "2025-11-02T22:51:49.219769",
+  "report_type": "comprehensive_business_analytics",
+  "executive_summary": {
+    "total_demand_analyzed": 185785.72,
+    "avg_daily_demand": 988.221914893617,
+    "demand_volatility": "HIGH",
+    "trend_direction": "DECREASING",
+    "top_3_families_by_value": [
+      [
+        "FERRO E AÇO",
+        36.566881567668005
+      ],
+      [
+        "MATERIAL ELETRICO",
+        34.07909235846015
+      ],
+      [
+        "MATERIAL CIVIL",
+        17.494830714607176
+      ]
+    ]
+  },
+  "predictive_analytics": {
+    "overall": {
+      "avg_daily_demand": 988.221914893617,
+      "std_daily_demand": 3187.181004785551,
+      "coefficient_variation": 322.51672997240235,
+      "demand_volatility": "HIGH",
+      "total_period_days": 188,
+      "total_demand": 185785.72
+    },
+    "trends": {
+      "recent_trend": -22.8,
+      "monthly_growth_pct": -56.582935916542475,
+      "trend_direction": "DECREASING",
+      "forecast_confidence": "LOW"
+    },
+    "seasonality": {
+      "monthly_pattern": {
+        "1": 355.94777777777773,
+        "2": 1212.5216666666665,
+        "3": 832.8033333333333,
+        "4": 393.25333333333333,
+        "5": 1808.4283333333333,
+        "6": 3847.6233333333334,
+        "7": 679.5909090909091,
+        "8": 690.8805263157894,
+        "9": 506.2444444444444,
+        "10": 453.77777777777777,
+        "11": 510.02666666666664,
+        "12": 98.21111111111111
+      },
+      "weekday_pattern": {
+        "0": 1289.0697297297297,
+        "1": 777.7253658536586,
+        "2": 1278.868947368421,
+        "3": 493.032,
+        "4": 1183.909375
+      },
+      "quarterly_pattern": {
+        "1": 800.4242592592592,
+        "2": 1908.718039215686,
+        "3": 630.3411864406779,
+        "4": 334.5025
+      },
+      "peak_month": 6,
+      "peak_weekday": 0,
+      "peak_quarter": 2
+    }
+  },
+  "family_performance": {
+    "FERRO E AÇO": {
+      "total_volume": 91322.23999999999,
+      "avg_order_size": 189.07296066252587,
+      "order_frequency": 483,
+      "unique_items": 138,
+      "unique_sites": 98,
+      "avg_lead_time_days": 14.023305084745763,
+      "lead_time_std": 18.060451899417806,
+      "lead_time_reliability": "LOW",
+      "demand_volatility_pct": 268.047621931505,
+      "business_value_score": 36.566881567668005,
+      "strategic_priority": "HIGH"
+    },
+    "MATERIAL ELETRICO": {
+      "total_volume": 60718.0,
+      "avg_order_size": 73.95615103532278,
+      "order_frequency": 821,
+      "unique_items": 156,
+      "unique_sites": 89,
+      "avg_lead_time_days": 13.550920245398773,
+      "lead_time_std": 14.71663706151189,
+      "lead_time_reliability": "LOW",
+      "demand_volatility_pct": 311.65646487386374,
+      "business_value_score": 34.07909235846015,
+      "strategic_priority": "HIGH"
+    },
+    "MATERIAL CIVIL": {
+      "total_volume": 17870.9,
+      "avg_order_size": 42.54976190476191,
+      "order_frequency": 420,
+      "unique_items": 102,
+      "unique_sites": 79,
+      "avg_lead_time_days": 14.715328467153284,
+      "lead_time_std": 23.34072612778647,
+      "lead_time_reliability": "LOW",
+      "demand_volatility_pct": 198.23771551017492,
+      "business_value_score": 17.494830714607176,
+      "strategic_priority": "MEDIUM"
+    },
+    "FERRAMENTAS E EQUIPAMENTOS": {
+      "total_volume": 13349.0,
+      "avg_order_size": 40.329305135951664,
+      "order_frequency": 331,
+      "unique_items": 93,
+      "unique_sites": 66,
+      "avg_lead_time_days": 8.774691358024691,
+      "lead_time_std": 14.948472122256982,
+      "lead_time_reliability": "LOW",
+      "demand_volatility_pct": 352.0166336672607,
+      "business_value_score": 14.328875637820754,
+      "strategic_priority": "MEDIUM"
+    },
+    "EPI": {
+      "total_volume": 2525.58,
+      "avg_order_size": 5.218140495867768,
+      "order_frequency": 484,
+      "unique_items": 51,
+      "unique_sites": 75,
+      "avg_lead_time_days": 6.4149377593361,
+      "lead_time_std": 9.303276918947942,
+      "lead_time_reliability": "MEDIUM",
+      "demand_volatility_pct": 148.86589582567078,
+      "business_value_score": 12.80982282703397,
+      "strategic_priority": "MEDIUM"
+    }
+  },
+  "business_diagnosis": {
+    "stockout_risk_FERRO E AÇO": {
+      "family": "FERRO E AÇO",
+      "avg_demand": 189.07296066252587,
+      "demand_std": 1942.75470329033,
+      "avg_lead_time": 14.023305084745763,
+      "safety_stock_recommended": 12004.030894134878,
+      "reorder_point_recommended": 14655.458704781613,
+      "current_lead_time_risk": "HIGH",
+      "stockout_risk_pct": 100.0,
+      "criticality": "HIGH"
+    },
+    "stockout_risk_MATERIAL ELETRICO": {
+      "family": "MATERIAL ELETRICO",
+      "avg_demand": 73.95615103532278,
+      "demand_std": 2126.197442046209,
+      "avg_lead_time": 13.550920245398773,
+      "safety_stock_recommended": 12914.331499155738,
+      "reorder_point_recommended": 13916.505403492063,
+      "current_lead_time_risk": "MEDIUM",
+      "stockout_risk_pct": 100.0,
+      "criticality": "HIGH"
+    },
+    "stockout_risk_MATERIAL CIVIL": {
+      "family": "MATERIAL CIVIL",
+      "avg_demand": 42.54976190476191,
+      "demand_std": 334.2156971802628,
+      "avg_lead_time": 14.715328467153284,
+      "safety_stock_recommended": 2115.4159188228423,
+      "reorder_point_recommended": 2741.5496414505797,
+      "current_lead_time_risk": "HIGH",
+      "stockout_risk_pct": 100.0,
+      "criticality": "HIGH"
+    },
+    "stockout_risk_FERRAMENTAS E EQUIPAMENTOS": {
+      "family": "FERRAMENTAS E EQUIPAMENTOS",
+      "avg_demand": 40.329305135951664,
+      "demand_std": 489.4864627941941,
+      "avg_lead_time": 8.774691358024691,
+      "safety_stock_recommended": 2392.4372429945397,
+      "reorder_point_recommended": 2746.3144482461157,
+      "current_lead_time_risk": "MEDIUM",
+      "stockout_risk_pct": 100.0,
+      "criticality": "HIGH"
+    },
+    "stockout_risk_EPI": {
+      "family": "EPI",
+      "avg_demand": 5.218140495867768,
+      "demand_std": 43.21525622751697,
+      "avg_lead_time": 6.4149377593361,
+      "safety_stock_recommended": 180.59979792294072,
+      "reorder_point_recommended": 214.07384442340367,
+      "current_lead_time_risk": "LOW",
+      "stockout_risk_pct": 100.0,
+      "criticality": "HIGH"
+    },
+    "lead_time_variability_FERRO E AÇO": {
+      "family": "FERRO E AÇO",
+      "avg_lead_time": 14.023305084745763,
+      "std_lead_time": 18.060451899417806,
+      "coefficient_variation": 128.78883965138547,
+      "variability_level": "HIGH",
+      "impact_on_planning": "HIGH"
+    },
+    "lead_time_variability_MATERIAL ELETRICO": {
+      "family": "MATERIAL ELETRICO",
+      "avg_lead_time": 13.550920245398773,
+      "std_lead_time": 14.71663706151189,
+      "coefficient_variation": 108.60249189724908,
+      "variability_level": "HIGH",
+      "impact_on_planning": "HIGH"
+    },
+    "lead_time_variability_MATERIAL CIVIL": {
+      "family": "MATERIAL CIVIL",
+      "avg_lead_time": 14.715328467153284,
+      "std_lead_time": 23.34072612778647,
+      "coefficient_variation": 158.61505354696163,
+      "variability_level": "HIGH",
+      "impact_on_planning": "HIGH"
+    },
+    "lead_time_variability_FERRAMENTAS E EQUIPAMENTOS": {
+      "family": "FERRAMENTAS E EQUIPAMENTOS",
+      "avg_lead_time": 8.774691358024691,
+      "std_lead_time": 14.948472122256982,
+      "coefficient_variation": 170.35895067222165,
+      "variability_level": "HIGH",
+      "impact_on_planning": "HIGH"
+    },
+    "lead_time_variability_EPI": {
+      "family": "EPI",
+      "avg_lead_time": 6.4149377593361,
+      "std_lead_time": 9.303276918947942,
+      "coefficient_variation": 145.02520940921434,
+      "variability_level": "HIGH",
+      "impact_on_planning": "HIGH"
+    },
+    "forecast_accuracy_FERRO E AÇO": {
+      "family": "FERRO E AÇO",
+      "demand_coefficient_variation": 268.047621931505,
+      "forecast_difficulty": "HIGH",
+      "forecast_confidence": "LOW",
+      "recommended_approach": "ML_MODELS"
+    },
+    "forecast_accuracy_MATERIAL ELETRICO": {
+      "family": "MATERIAL ELETRICO",
+      "demand_coefficient_variation": 311.65646487386374,
+      "forecast_difficulty": "HIGH",
+      "forecast_confidence": "LOW",
+      "recommended_approach": "ML_MODELS"
+    },
+    "forecast_accuracy_MATERIAL CIVIL": {
+      "family": "MATERIAL CIVIL",
+      "demand_coefficient_variation": 198.23771551017492,
+      "forecast_difficulty": "HIGH",
+      "forecast_confidence": "LOW",
+      "recommended_approach": "ML_MODELS"
+    },
+    "forecast_accuracy_FERRAMENTAS E EQUIPAMENTOS": {
+      "family": "FERRAMENTAS E EQUIPAMENTOS",
+      "demand_coefficient_variation": 352.0166336672607,
+      "forecast_difficulty": "HIGH",
+      "forecast_confidence": "LOW",
+      "recommended_approach": "ML_MODELS"
+    },
+    "forecast_accuracy_EPI": {
+      "family": "EPI",
+      "demand_coefficient_variation": 148.86589582567078,
+      "forecast_difficulty": "HIGH",
+      "forecast_confidence": "LOW",
+      "recommended_approach": "ML_MODELS"
+    },
+    "supplier_performance": {
+      "total_suppliers": 227,
+      "top_10_suppliers": {
+        "AG3 TELECOM": {
+          "avg_lead_time": 38.48,
+          "lead_time_std": 13.815143206575232,
+          "reliability": "LOW",
+          "total_orders": 101,
+          "total_volume": 71954.0
+        },
+        "H&L COMERCIO E ENGENHARIA LTDA": {
+          "avg_lead_time": 9.430379746835444,
+          "lead_time_std": 11.720772207324687,
+          "reliability": "LOW",
+          "total_orders": 79,
+          "total_volume": 15223.31
+        },
+        "FYBERTEL TELECOMUNICACOES E INFORMATICA": {
+          "avg_lead_time": 36.104166666666664,
+          "lead_time_std": 14.915705821108299,
+          "reliability": "LOW",
+          "total_orders": 48,
+          "total_volume": 12952.0
+        },
+        "IMAKE INDUSTRIA, COMERCIO E SERVICOS DE PRODUTOS P": {
+          "avg_lead_time": 30.0,
+          "lead_time_std": 0.0,
+          "reliability": "HIGH",
+          "total_orders": 5,
+          "total_volume": 12350.0
+        },
+        "ALF INDUSTRIA E COMERCIO DE FIXADORES LTDA": {
+          "avg_lead_time": 6.25,
+          "lead_time_std": 4.413306326018253,
+          "reliability": "HIGH",
+          "total_orders": 12,
+          "total_volume": 7050.0
+        },
+        "SIVA CABOS DE ACO": {
+          "avg_lead_time": 21.571428571428573,
+          "lead_time_std": 18.63560340546327,
+          "reliability": "LOW",
+          "total_orders": 7,
+          "total_volume": 5275.0
+        },
+        "ARICABOS INDUSTRIA COMERCIO DE IMPORTAÇÃO E EXPORT": {
+          "avg_lead_time": 7.230769230769231,
+          "lead_time_std": 8.135865515869083,
+          "reliability": "MEDIUM",
+          "total_orders": 13,
+          "total_volume": 3285.0
+        },
+        "NOGUEIRA SOLUCOES EM ACO PARA CONSTRUCAO CIVIL LTD": {
+          "avg_lead_time": 12.333333333333334,
+          "lead_time_std": 9.237604307034013,
+          "reliability": "MEDIUM",
+          "total_orders": 3,
+          "total_volume": 3025.42
+        },
+        "STAM CENTRO DE DISTRIBUICAO": {
+          "avg_lead_time": 8.25,
+          "lead_time_std": 3.9910614413425693,
+          "reliability": "HIGH",
+          "total_orders": 13,
+          "total_volume": 3000.0
+        },
+        "NOVA COMERCIO DE MATERIAIS ELETRICOS LTDA": {
+          "avg_lead_time": 5.814634146341463,
+          "lead_time_std": 2.7323014230635994,
+          "reliability": "HIGH",
+          "total_orders": 205,
+          "total_volume": 2441.0
+        }
+      },
+      "performance_issues": [
+        {
+          "supplier": "AG3 TELECOM",
+          "issue": "HIGH_LEAD_TIME_VARIABILITY",
+          "recommendation": "Revisar SLA ou considerar fornecedor alternativo"
+        },
+        {
+          "supplier": "H&L COMERCIO E ENGENHARIA LTDA",
+          "issue": "HIGH_LEAD_TIME_VARIABILITY",
+          "recommendation": "Revisar SLA ou considerar fornecedor alternativo"
+        },
+        {
+          "supplier": "FYBERTEL TELECOMUNICACOES E INFORMATICA",
+          "issue": "HIGH_LEAD_TIME_VARIABILITY",
+          "recommendation": "Revisar SLA ou considerar fornecedor alternativo"
+        },
+        {
+          "supplier": "SIVA CABOS DE ACO",
+          "issue": "HIGH_LEAD_TIME_VARIABILITY",
+          "recommendation": "Revisar SLA ou considerar fornecedor alternativo"
+        }
+      ]
+    }
+  },
+  "prescriptive_recommendations": {
+    "immediate_actions": [
+      {
+        "family": "FERRO E AÇO",
+        "action": "Implementar reorder point de 14655 unidades",
+        "safety_stock": 12004.030894134878,
+        "expected_impact": "Reduzir stockout risk em 40-60%",
+        "priority": "HIGH",
+        "estimated_cost": "Low (inventory holding cost increase)",
+        "estimated_benefit": "Redução de stockouts críticos"
+      },
+      {
+        "family": "MATERIAL ELETRICO",
+        "action": "Implementar reorder point de 13917 unidades",
+        "safety_stock": 12914.331499155738,
+        "expected_impact": "Reduzir stockout risk em 40-60%",
+        "priority": "HIGH",
+        "estimated_cost": "Low (inventory holding cost increase)",
+        "estimated_benefit": "Redução de stockouts críticos"
+      },
+      {
+        "family": "MATERIAL CIVIL",
+        "action": "Implementar reorder point de 2742 unidades",
+        "safety_stock": 2115.4159188228423,
+        "expected_impact": "Reduzir stockout risk em 40-60%",
+        "priority": "HIGH",
+        "estimated_cost": "Low (inventory holding cost increase)",
+        "estimated_benefit": "Redução de stockouts críticos"
+      },
+      {
+        "family": "FERRAMENTAS E EQUIPAMENTOS",
+        "action": "Implementar reorder point de 2746 unidades",
+        "safety_stock": 2392.4372429945397,
+        "expected_impact": "Reduzir stockout risk em 40-60%",
+        "priority": "HIGH",
+        "estimated_cost": "Low (inventory holding cost increase)",
+        "estimated_benefit": "Redução de stockouts críticos"
+      },
+      {
+        "family": "EPI",
+        "action": "Implementar reorder point de 214 unidades",
+        "safety_stock": 180.59979792294072,
+        "expected_impact": "Reduzir stockout risk em 40-60%",
+        "priority": "HIGH",
+        "estimated_cost": "Low (inventory holding cost increase)",
+        "estimated_benefit": "Redução de stockouts críticos"
+      }
+    ],
+    "short_term_improvements": [
+      {
+        "family": "FERRO E AÇO",
+        "action": "Negociar SLAs mais rígidos com fornecedores ou diversificar base de fornecedores",
+        "expected_impact": "Reduzir variabilidade de lead time de 128.8% para <30%",
+        "priority": "MEDIUM",
+        "estimated_timeline": "1-3 meses",
+        "estimated_benefit": "Melhorar planejamento e reduzir safety stock em 20-30%"
+      },
+      {
+        "family": "MATERIAL ELETRICO",
+        "action": "Negociar SLAs mais rígidos com fornecedores ou diversificar base de fornecedores",
+        "expected_impact": "Reduzir variabilidade de lead time de 108.6% para <30%",
+        "priority": "MEDIUM",
+        "estimated_timeline": "1-3 meses",
+        "estimated_benefit": "Melhorar planejamento e reduzir safety stock em 20-30%"
+      },
+      {
+        "family": "MATERIAL CIVIL",
+        "action": "Negociar SLAs mais rígidos com fornecedores ou diversificar base de fornecedores",
+        "expected_impact": "Reduzir variabilidade de lead time de 158.6% para <30%",
+        "priority": "MEDIUM",
+        "estimated_timeline": "1-3 meses",
+        "estimated_benefit": "Melhorar planejamento e reduzir safety stock em 20-30%"
+      },
+      {
+        "family": "FERRAMENTAS E EQUIPAMENTOS",
+        "action": "Negociar SLAs mais rígidos com fornecedores ou diversificar base de fornecedores",
+        "expected_impact": "Reduzir variabilidade de lead time de 170.4% para <30%",
+        "priority": "MEDIUM",
+        "estimated_timeline": "1-3 meses",
+        "estimated_benefit": "Melhorar planejamento e reduzir safety stock em 20-30%"
+      },
+      {
+        "family": "EPI",
+        "action": "Negociar SLAs mais rígidos com fornecedores ou diversificar base de fornecedores",
+        "expected_impact": "Reduzir variabilidade de lead time de 145.0% para <30%",
+        "priority": "MEDIUM",
+        "estimated_timeline": "1-3 meses",
+        "estimated_benefit": "Melhorar planejamento e reduzir safety stock em 20-30%"
+      }
+    ],
+    "long_term_strategic": [
+      {
+        "families": [
+          "FERRO E AÇO",
+          "MATERIAL ELETRICO",
+          "MATERIAL CIVIL",
+          "FERRAMENTAS E EQUIPAMENTOS",
+          "EPI"
+        ],
+        "action": "Implementar modelos ML avançados (XGBoost, LSTM) para previsão de demanda",
+        "expected_impact": "Melhorar MAPE de 87-123% para <15% em famílias de alta volatilidade",
+        "priority": "HIGH",
+        "estimated_timeline": "3-6 meses",
+        "estimated_roi": "R$ 2-4 milhões anuais em redução de estoque e stockouts",
+        "estimated_cost": "R$ 200-400k em desenvolvimento e infraestrutura"
+      }
+    ],
+    "roi_opportunities": [
+      {
+        "opportunity": "Implementação completa de Analytics Engineering + ML Models",
+        "inventory_cost_savings": 348348.22500000003,
+        "stockout_cost_savings": 55735716.0,
+        "total_annual_savings": 56084064.225,
+        "investment_required": 500000,
+        "payback_period_months": 0.10698226105599251,
+        "roi_3_years": 33550.438535
+      }
+    ],
+    "risk_mitigation": [
+      {
+        "risk": "Stockout em famílias críticas",
+        "mitigation": "Implementar safety stock dinâmico baseado em ML",
+        "priority": "HIGH",
+        "timeline": "1-2 meses"
+      },
+      {
+        "risk": "Variabilidade de lead time",
+        "mitigation": "Diversificar base de fornecedores e negociar SLAs",
+        "priority": "MEDIUM",
+        "timeline": "3-6 meses"
+      },
+      {
+        "risk": "Forecast impreciso em famílias de alta volatilidade",
+        "mitigation": "Implementar modelos ML avançados por família",
+        "priority": "HIGH",
+        "timeline": "3-6 meses"
+      },
+      {
+        "risk": "Custos de estoque elevados",
+        "mitigation": "Otimizar reorder points usando analytics preditiva",
+        "priority": "MEDIUM",
+        "timeline": "2-4 meses"
+      }
+    ]
+  },
+  "key_insights": {
+    "demand_patterns": {
+      "peak_month": 6,
+      "peak_quarter": 2,
+      "volatility_level": "HIGH"
+    },
+    "critical_families": [
+      "FERRO E AÇO",
+      "MATERIAL ELETRICO"
+    ],
+    "high_risk_areas": [
+      "FERRO E AÇO",
+      "MATERIAL ELETRICO",
+      "MATERIAL CIVIL",
+      "FERRAMENTAS E EQUIPAMENTOS",
+      "EPI"
+    ],
+    "roi_opportunity": {
+      "opportunity": "Implementação completa de Analytics Engineering + ML Models",
+      "inventory_cost_savings": 348348.22500000003,
+      "stockout_cost_savings": 55735716.0,
+      "total_annual_savings": 56084064.225,
+      "investment_required": 500000,
+      "payback_period_months": 0.10698226105599251,
+      "roi_3_years": 33550.438535
+    }
+  }
+}

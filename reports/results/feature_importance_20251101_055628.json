@@ -1,0 +1,186 @@
+{
+  "timestamp": "2025-11-01T05:56:28.596773",
+  "model_score": 0.06665706211207634,
+  "total_features": 28,
+  "brazilian_analysis": {
+    "brazilian_contribution_pct": 88.18115946389531,
+    "total_brazilian_features": 7,
+    "top_brazilian_features": [
+      {
+        "feature": "fiber_growth_rate",
+        "importance": 0.36177361614064,
+        "perm_importance_mean": 0.04717044021851391,
+        "perm_importance_std": 0.0012066487523126074
+      },
+      {
+        "feature": "fiber_household_penetration",
+        "importance": 0.3302121707862436,
+        "perm_importance_mean": 0.03995685238613202,
+        "perm_importance_std": 0.0010819182259465929
+      },
+      {
+        "feature": "5g_expansion_rate",
+        "importance": 0.0011607780784665498,
+        "perm_importance_mean": 7.168078680541701e-05,
+        "perm_importance_std": 7.2295782014506234e-06
+      },
+      {
+        "feature": "iot_growth_acceleration",
+        "importance": 7.036602223598708e-05,
+        "perm_importance_mean": -4.1451724241969856e-07,
+        "perm_importance_std": 0.0
+      },
+      {
+        "feature": "5g_coverage",
+        "importance": 3.900377171206292e-05,
+        "perm_importance_mean": -7.917769099696769e-07,
+        "perm_importance_std": 2.4119468440484e-07
+      },
+      {
+        "feature": "iot_connections_millions",
+        "importance": 5.909107199974706e-05,
+        "perm_importance_mean": -6.421676920420616e-06,
+        "perm_importance_std": 1.1908063948157431e-06
+      },
+      {
+        "feature": "iot_connections_yearly_growth",
+        "importance": 9.643752103925703e-05,
+        "perm_importance_mean": -1.225485932441206e-05,
+        "perm_importance_std": 7.24630962783834e-07
+      }
+    ],
+    "brazilian_importance_total": 0.08717909056105412,
+    "non_brazilian_features": 21
+  },
+  "top_features": [
+    {
+      "feature": "fiber_growth_rate",
+      "importance": 0.36177361614064,
+      "perm_importance_mean": 0.04717044021851391,
+      "perm_importance_std": 0.0012066487523126074
+    },
+    {
+      "feature": "fiber_household_penetration",
+      "importance": 0.3302121707862436,
+      "perm_importance_mean": 0.03995685238613202,
+      "perm_importance_std": 0.0010819182259465929
+    },
+    {
+      "feature": "cost",
+      "importance": 0.09392343209438195,
+      "perm_importance_mean": 0.013352521400721717,
+      "perm_importance_std": 0.00019848147030979637
+    },
+    {
+      "feature": "temperature",
+      "importance": 0.0031091179312882373,
+      "perm_importance_mean": 0.00021751213450380558,
+      "perm_importance_std": 0.00012210781182198885
+    },
+    {
+      "feature": "precipitation",
+      "importance": 0.003636683364880417,
+      "perm_importance_mean": 0.00018141619539726594,
+      "perm_importance_std": 0.00016733811582171342
+    },
+    {
+      "feature": "5g_expansion_rate",
+      "importance": 0.0011607780784665498,
+      "perm_importance_mean": 7.168078680541701e-05,
+      "perm_importance_std": 7.2295782014506234e-06
+    },
+    {
+      "feature": "high_humidity",
+      "importance": 0.00016659870474521396,
+      "perm_importance_mean": 2.3225954965777617e-05,
+      "perm_importance_std": 5.02992837277033e-05
+    },
+    {
+      "feature": "climate_impact",
+      "importance": 9.706354234170784e-05,
+      "perm_importance_mean": 1.5334985453918648e-05,
+      "perm_importance_std": 4.108719132326513e-05
+    },
+    {
+      "feature": "currency_devaluation",
+      "importance": 5.385638786244518e-05,
+      "perm_importance_mean": 2.783093635105871e-06,
+      "perm_importance_std": 6.151030389323585e-06
+    },
+    {
+      "feature": "is_holiday",
+      "importance": 7.969447171539713e-05,
+      "perm_importance_mean": 4.025052450229438e-07,
+      "perm_importance_std": 0.0
+    },
+    {
+      "feature": "month",
+      "importance": 2.477354191523478e-06,
+      "perm_importance_mean": 0.0,
+      "perm_importance_std": 0.0
+    },
+    {
+      "feature": "year",
+      "importance": 1.5368651161042386e-05,
+      "perm_importance_mean": 0.0,
+      "perm_importance_std": 0.0
+    },
+    {
+      "feature": "heavy_rain",
+      "importance": 4.028842227849601e-07,
+      "perm_importance_mean": 0.0,
+      "perm_importance_std": 0.0
+    },
+    {
+      "feature": "inflation_rate",
+      "importance": 0.00021585623552286624,
+      "perm_importance_mean": 0.0,
+      "perm_importance_std": 0.0
+    },
+    {
+      "feature": "is_carnival",
+      "importance": 3.061151508736303e-05,
+      "perm_importance_mean": -1.3712504798313319e-08,
+      "perm_importance_std": 0.0
+    },
+    {
+      "feature": "iot_growth_acceleration",
+      "importance": 7.036602223598708e-05,
+      "perm_importance_mean": -4.1451724241969856e-07,
+      "perm_importance_std": 0.0
+    },
+    {
+      "feature": "is_vacation_period",
+      "importance": 7.245497070366237e-05,
+      "perm_importance_mean": -4.821299603552376e-07,
+      "perm_importance_std": 4.498552802711941e-07
+    },
+    {
+      "feature": "5g_coverage",
+      "importance": 3.900377171206292e-05,
+      "perm_importance_mean": -7.917769099696769e-07,
+      "perm_importance_std": 2.4119468440484e-07
+    },
+    {
+      "feature": "iot_connections_millions",
+      "importance": 5.909107199974706e-05,
+      "perm_importance_mean": -6.421676920420616e-06,
+      "perm_importance_std": 1.1908063948157431e-06
+    },
+    {
+      "feature": "economic_impact",
+      "importance": 5.145944146185763e-05,
+      "perm_importance_mean": -1.2225055864867329e-05,
+      "perm_importance_std": 6.908241594740858e-06
+    }
+  ],
+  "feature_categories": {
+    "Climate": 5,
+    "Economic": 3,
+    "IoT": 3,
+    "Fiber": 2,
+    "Operators": 2,
+    "Temporal": 6,
+    "Other": 7
+  }
+}

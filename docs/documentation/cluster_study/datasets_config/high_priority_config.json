@@ -1,0 +1,1035 @@
+{
+  "tier": "high_priority",
+  "description": "High priority datasets - Strong relevance",
+  "datasets": {
+    "github_network_fault": {
+      "name": "Network Fault Prediction Dataset",
+      "source": "github",
+      "url": "https://github.com/subhashbylaiah/Network-Fault-Prediction",
+      "description": "Fault severity in telecom network disruptions with classification features. Predicts long-tail network events driving logistics demands for repair/parts.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Timestamp",
+        "item_id": "Fault_ID",
+        "quantity": null,
+        "category": "Severity_Level"
+      },
+      "preprocessing_notes": "Predicts long-tail network faults for demand forecasting. Fault severity classification helps prioritize response logistics. Telstra network data.",
+      "download_method": "github",
+      "_evaluation": {
+        "dataset_id": "github_network_fault",
+        "score": 75,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Maintenance/failure data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 25,
+          "brazil_market": 15,
+          "data_quality": 10,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "kaggle_smart_logistics": {
+      "name": "Smart Logistics Supply Chain Dataset",
+      "source": "kaggle",
+      "dataset": "ziya07/smart-logistics-supply-chain-dataset",
+      "description": "Real-time 2024 data on delivery performance, routing efficiency, warehouse operations, and resource allocation. Features: Timestamps, shipment details, KPIs like transit times.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Timestamp",
+        "item_id": "Shipment_ID",
+        "quantity": "Quantity",
+        "site_id": "Warehouse_ID",
+        "lead_time": "Transit_Time"
+      },
+      "preprocessing_notes": "High for telecom logistics, enabling demand forecasting for equipment transport amid volatile networks; long-tail via rare route disruptions.",
+      "_evaluation": {
+        "dataset_id": "kaggle_smart_logistics",
+        "score": 75,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality",
+          "logistics_ready"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Includes lead time data",
+          "Telecom industry data",
+          "Maintenance/failure data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available",
+          "Lead time data included"
+        ],
+        "breakdown": {
+          "demand_relevance": 30,
+          "telecom_fit": 25,
+          "brazil_market": 0,
+          "data_quality": 15,
+          "logistics_info": 5,
+          "research_value": 0
+        }
+      }
+    },
+    "ieee_wind_turbine_failures": {
+      "name": "Correlation Between Wind Turbine Failures and Environmental Factors",
+      "source": "ieee",
+      "url": "https://ieeexplore.ieee.org/document/10926829",
+      "description": "IEEE paper on wind turbine failures correlated with environmental factors. Average repair costs and times. Useful for long-tail prediction in telecom towers.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "turbine_id",
+        "quantity": "failure_count",
+        "category": "failure_type"
+      },
+      "download_method": "scrape",
+      "document_number": "10926829",
+      "preprocessing_notes": "IEEE paper with failure correlation data. May require PDF parsing to extract structured data.",
+      "notes": "Proxy for telecom tower structural maintenance",
+      "_evaluation": {
+        "dataset_id": "ieee_wind_turbine_failures",
+        "score": 75,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality",
+          "logistics_ready",
+          "research_reference"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Maintenance/failure data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available",
+          "Cost/price information available",
+          "Academic/research dataset"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 25,
+          "brazil_market": 0,
+          "data_quality": 15,
+          "logistics_info": 5,
+          "research_value": 5
+        }
+      }
+    },
+    "kaggle_cloud_supply_chain": {
+      "name": "Cloud-Based Supply Chain Demand Dataset",
+      "source": "kaggle",
+      "dataset": "programmer3/cloud-based-supply-chain-demand-dataset",
+      "description": "Real-time data from cloud-based environment for demand forecasting and inventory management. Features: 3,204 records of historical sales, inventory levels, supplier details, lead times, and costs.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "timestamp",
+        "item_id": "product_id",
+        "quantity": "units_sold",
+        "cost": "unit_price",
+        "lead_time": "lead_time_days"
+      },
+      "preprocessing_notes": "Directly supports telecom logistics by modeling demand for hardware shipments; adaptable for long-tail items via variability analysis.",
+      "_evaluation": {
+        "dataset_id": "kaggle_cloud_supply_chain",
+        "score": 70,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality",
+          "logistics_ready"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Includes lead time data",
+          "Telecom industry data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available",
+          "Lead time data included",
+          "Cost/price information available"
+        ],
+        "breakdown": {
+          "demand_relevance": 30,
+          "telecom_fit": 15,
+          "brazil_market": 0,
+          "data_quality": 15,
+          "logistics_info": 10,
+          "research_value": 0
+        }
+      }
+    },
+    "test_dataset": {
+      "name": "Test Sample Dataset",
+      "source": "test",
+      "description": "Sample dataset for testing pipeline (730 days, 2 years)",
+      "relevance": "⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": "Product",
+        "quantity": "Order_Demand",
+        "site_id": "Site",
+        "category": "Category",
+        "cost": "Cost",
+        "lead_time": "Lead_Time",
+        "item_name": null
+      },
+      "preprocessing_notes": "Test dataset with 2 years of daily data",
+      "_evaluation": {
+        "dataset_id": "test_dataset",
+        "score": 70,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality",
+          "logistics_ready"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Includes lead time data",
+          "Telecom industry data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available",
+          "Lead time data included",
+          "Cost/price information available"
+        ],
+        "breakdown": {
+          "demand_relevance": 30,
+          "telecom_fit": 15,
+          "brazil_market": 0,
+          "data_quality": 15,
+          "logistics_info": 10,
+          "research_value": 0
+        }
+      }
+    },
+    "springer_digital_divide": {
+      "name": "Bridging the Digital Divide: Internet Connectivity Evolution",
+      "source": "springer",
+      "url": "https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-024-00508-8",
+      "description": "Nearly 100 million entries from Ookla on speed tests and connectivity in Brazilian cities, focusing on urban-rural gaps.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "test_timestamp",
+        "item_id": "test_id",
+        "quantity": "download_speed_mbps",
+        "site_id": "city_id",
+        "category": "urban_rural"
+      },
+      "preprocessing_notes": "Massive dataset (~100M records) requiring Dask for processing. Sample 1-5M records initially for feasibility. Potential sampling biases. Spatial demand forecasting for broadband logistics.",
+      "download_method": "direct",
+      "notes": "May need sampling due to 100M+ records. Geographic data perfect for Nova Corrente's 18,000 towers.",
+      "_evaluation": {
+        "dataset_id": "springer_digital_divide",
+        "score": 70,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 15,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "zenodo_bgsmt_mobility": {
+      "name": "Brazilian GSM Telecom (BGSMT) Mobility Dataset",
+      "source": "zenodo",
+      "url": "https://zenodo.org/records/8178782",
+      "description": "526,894 mobility records from 4,545 users, September 2017 - September 2018, 15-minute intervals. Mobility patterns across multiple Brazilian states.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "timestamp",
+        "item_id": "user_id",
+        "quantity": null,
+        "site_id": "location_id",
+        "category": "mobility_type"
+      },
+      "preprocessing_notes": "High-value mobility dataset for demand forecasting based on user movement, tower load prediction, and infrastructure planning.",
+      "download_method": "zenodo",
+      "_evaluation": {
+        "dataset_id": "zenodo_bgsmt_mobility",
+        "score": 70,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality",
+          "research_reference"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Item/product identification available",
+          "Academic/research dataset"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 10,
+          "logistics_info": 0,
+          "research_value": 5
+        }
+      }
+    },
+    "brazilian_fiber_structured": {
+      "name": "Brazilian Fiber Optic Expansion Structured Data",
+      "source": "structured",
+      "description": "Quarterly fiber household penetration data from 2020-2024 by region (Southeast, South, Northeast, North, Central West).",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "region",
+        "quantity": "estimated_households_millions",
+        "category": "region",
+        "site_id": "region"
+      },
+      "preprocessing_notes": "Generated structured data from market reports. Household penetration 25% (2020) to 49% (2024). Regional breakdown essential for infrastructure planning.",
+      "_evaluation": {
+        "dataset_id": "brazilian_fiber_structured",
+        "score": 70,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 15,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "brazilian_operators_structured": {
+      "name": "Brazilian Telecom Operators Market Data",
+      "source": "structured",
+      "description": "Monthly operator market data from 2019-2024: Vivo, Claro, TIM, Others. Subscribers, market share, 5G coverage.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "operator",
+        "quantity": "subscribers_millions",
+        "category": "operator",
+        "site_id": "operator"
+      },
+      "preprocessing_notes": "Generated structured data from public reports. Market share dynamics: Vivo (32%), Claro (27%), TIM (20%). Essential for competitive analysis.",
+      "_evaluation": {
+        "dataset_id": "brazilian_operators_structured",
+        "score": 70,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 15,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "anatel_spectrum": {
+      "name": "Anatel Spectrum Usage Data",
+      "source": "anatel",
+      "url": "https://www.gov.br/anatel/pt-br/dados/dados-abertos",
+      "description": "Spectrum allocation and usage data from Anatel. Frequency bands, operators, geographic coverage.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "frequency_band",
+        "quantity": "allocation_mhz",
+        "category": "operator",
+        "site_id": "region"
+      },
+      "preprocessing_notes": "Anatel spectrum data. Useful for understanding infrastructure deployment patterns and demand drivers.",
+      "download_method": "direct",
+      "_evaluation": {
+        "dataset_id": "anatel_spectrum",
+        "score": 70,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 15,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "gsma_mobile_connectivity_brazil": {
+      "name": "GSMA Mobile Connectivity Index - Brazil",
+      "source": "gsma",
+      "description": "Mobile connectivity metrics for Brazil from GSMA. Includes 5G coverage, IoT connections, mobile economy indicators.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "metric_type",
+        "quantity": "value",
+        "category": "connectivity_level"
+      },
+      "download_method": "scrape",
+      "report_type": "mobile_connectivity_index",
+      "region": "brazil",
+      "preprocessing_notes": "GSMA official mobile connectivity data for Brazil. Essential for understanding 5G and IoT growth trends.",
+      "notes": "Mobile connectivity indicators for infrastructure planning",
+      "_evaluation": {
+        "dataset_id": "gsma_mobile_connectivity_brazil",
+        "score": 70,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 15,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "gsma_mobile_economy_brazil": {
+      "name": "GSMA Mobile Economy Brazil 2024",
+      "source": "gsma",
+      "url": "https://www.gsma.com/mobileeconomy/wp-content/uploads/2024/02/Mobile-Economy-Brazil-2024.pdf",
+      "description": "Comprehensive mobile economy report for Brazil. Includes subscriber trends, 5G deployment, economic impact.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "year",
+        "item_id": "metric",
+        "quantity": "value",
+        "category": "sector"
+      },
+      "download_method": "scrape",
+      "report_type": "mobile_economy",
+      "region": "brazil",
+      "preprocessing_notes": "GSMA Mobile Economy report. May require PDF parsing. Contains annual forecasts and market analysis.",
+      "notes": "Long-term market trends and forecasts for telecom logistics planning",
+      "_evaluation": {
+        "dataset_id": "gsma_mobile_economy_brazil",
+        "score": 70,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 15,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "zenodo_ai_decarbonization": {
+      "name": "AI-driven Decarbonization of Buildings: Predictive Maintenance",
+      "source": "zenodo",
+      "url": "https://zenodo.org/records/15004071",
+      "description": "Predictive maintenance dataset for energy systems. Adaptable to telecom towers with MAPE metrics.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "timestamp",
+        "item_id": "system_id",
+        "quantity": "maintenance_demand",
+        "category": "system_type"
+      },
+      "download_method": "zenodo",
+      "record_id": "15004071",
+      "preprocessing_notes": "Predictive maintenance for energy systems, adaptable to telecom towers.",
+      "notes": "MAPE metrics included for model validation",
+      "_evaluation": {
+        "dataset_id": "zenodo_ai_decarbonization",
+        "score": 70,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality",
+          "research_reference"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Maintenance/failure data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available",
+          "Academic/research dataset"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 25,
+          "brazil_market": 0,
+          "data_quality": 15,
+          "logistics_info": 0,
+          "research_value": 5
+        }
+      }
+    },
+    "internet_aberta_roi_brazil": {
+      "name": "Evaluating The Return On Investment Of National Telecommunications Service Providers In Brazil",
+      "source": "internet_aberta",
+      "url": "https://internetaberta.com.br/wp-content/uploads/2024/05/Paper-2-EN-Evaluating-The-Return-On-Investment-Of-National-Telecommunications-Service-Providers-In-Brazil.pdf",
+      "description": "ROI analysis of Brazilian telecom service providers. Provides benchmarks for ROI >100% in B2B contexts.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "year",
+        "item_id": "provider",
+        "quantity": "roi_percentage",
+        "category": "service_type"
+      },
+      "download_method": "scrape",
+      "preprocessing_notes": "ROI analysis paper. May require PDF parsing. Contains benchmarks for telecom operator ROI.",
+      "notes": "ROI benchmarks for Nova Corrente operations",
+      "_evaluation": {
+        "dataset_id": "internet_aberta_roi_brazil",
+        "score": 70,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 15,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "kaggle_supply_chain": {
+      "name": "High-Dimensional Supply Chain Inventory",
+      "source": "kaggle",
+      "dataset": "ziya07/high-dimensional-supply-chain-inventory-dataset",
+      "description": "Hundreds of thousands of supply chain records",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": "SKU",
+        "quantity": "Quantity",
+        "site_id": "Warehouse",
+        "lead_time": "Lead_Time"
+      },
+      "preprocessing_notes": "Includes external factors, multi-location operations",
+      "_evaluation": {
+        "dataset_id": "kaggle_supply_chain",
+        "score": 65,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality",
+          "logistics_ready"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Includes lead time data",
+          "Telecom industry data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available",
+          "Lead time data included"
+        ],
+        "breakdown": {
+          "demand_relevance": 30,
+          "telecom_fit": 15,
+          "brazil_market": 0,
+          "data_quality": 15,
+          "logistics_info": 5,
+          "research_value": 0
+        }
+      }
+    },
+    "kaggle_telecom_network": {
+      "name": "Telecom Network Dataset",
+      "source": "kaggle",
+      "dataset": "praveenaparimi/telecom-network-dataset",
+      "description": "Tower-level operations data with tower ID, connected users, download speeds, and performance indicators. Supports logistics for capacity planning and demand forecasting.",
+      "relevance": "⭐⭐⭐",
+      "columns_mapping": {
+        "date": "timestamp",
+        "item_id": "tower_id",
+        "quantity": "users_connected",
+        "site_id": "tower_id"
+      },
+      "preprocessing_notes": "Capacity utilization data for logistics planning. Long-tail aspects emerge in low-traffic tower maintenance patterns.",
+      "_evaluation": {
+        "dataset_id": "kaggle_telecom_network",
+        "score": 65,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Maintenance/failure data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 25,
+          "brazil_market": 0,
+          "data_quality": 15,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "anatel_mobile_brazil": {
+      "name": "Mobile Phone Accesses in Brazil",
+      "source": "anatel",
+      "url": "https://data-basis.org/dataset/d3c86a88-d9a4-4c0-bdec-08ab61e8f63c",
+      "description": "Comprehensive open data on mobile and broadband accesses, available in CSV format. Includes subscriber trends and technology breakdowns (GSM, 5G). Anatel official data.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": null,
+        "quantity": "Subscribers",
+        "category": "Technology",
+        "site_id": "Region"
+      },
+      "preprocessing_notes": "Anatel official data on mobile subscribers. Track subscriber growth and technology adoption (5G, 4G, etc.). Regional granularity. May lag in updates - cross-verify with commercial sources.",
+      "download_method": "direct",
+      "notes": "Brazilian telecom regulatory data. Essential for demand forecasting in 5G logistics.",
+      "_evaluation": {
+        "dataset_id": "anatel_mobile_brazil",
+        "score": 65,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Quantity/demand column present"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 10,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "internet_aberta_forecast": {
+      "name": "Data Traffic Demand Forecast for Brazil",
+      "source": "internet_aberta",
+      "url": "https://internetaberta.com.br/wp-content/uploads/2024/05/Paper-1-EN-Data-Traffic-Demand-Forecast-for-Brazil.pdf",
+      "description": "Top-down projections on broadband users, 4G/5G prevalence, GDP correlations, and data consumption (297 to 400 exabytes by 2033).",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Year",
+        "item_id": null,
+        "quantity": "Data_Traffic_TB",
+        "category": "Technology_Type"
+      },
+      "preprocessing_notes": "Long-term logistics planning in telecom. Addresses intermittent high-demand periods (major events). Forecast uncertainties inherent. May require PDF parsing.",
+      "download_method": "direct",
+      "file_format": "pdf",
+      "notes": "Essential for long-term logistics planning. Forecast uncertainties require hedging strategies.",
+      "_evaluation": {
+        "dataset_id": "internet_aberta_forecast",
+        "score": 65,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Quantity/demand column present"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 10,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "brazilian_demand_factors": {
+      "name": "Brazilian Demand Factors (Economic, Climatic, Regulatory)",
+      "source": "structured",
+      "description": "Daily demand factors from 2019-2024: GDP growth, inflation, exchange rates, temperature, precipitation, flood risks, 5G milestones, holidays.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": null,
+        "quantity": "demand_multiplier",
+        "category": null,
+        "site_id": null
+      },
+      "preprocessing_notes": "Generated structured data simulating economic, climatic, and regulatory factors. Essential external factors for demand forecasting models.",
+      "_evaluation": {
+        "dataset_id": "brazilian_demand_factors",
+        "score": 65,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Quantity/demand column present"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 10,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "anatel_broadband": {
+      "name": "Anatel Broadband Accesses",
+      "source": "anatel",
+      "url": "https://data-basis.org/search?organization=anatel",
+      "description": "Municipality-level broadband connection data from Anatel. Coverage, speeds, and technology breakdown.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": null,
+        "quantity": "accesses",
+        "category": "technology",
+        "site_id": "municipality"
+      },
+      "preprocessing_notes": "Anatel official broadband data. Municipality-level granularity for spatial demand forecasting.",
+      "download_method": "direct",
+      "_evaluation": {
+        "dataset_id": "anatel_broadband",
+        "score": 65,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Quantity/demand column present"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 15,
+          "data_quality": 10,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "github_5g3e": {
+      "name": "5G3E Virtualized Infrastructure Dataset",
+      "source": "github",
+      "url": "https://github.com/cedric-cnam/5G3E-dataset",
+      "description": "14 days of time-series from virtualized 5G infrastructure with radio, server, OS, and network function data. Thousands of features grouped by resource/node type.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "timestamp",
+        "item_id": "node_id",
+        "quantity": null,
+        "site_id": "resource_type"
+      },
+      "preprocessing_notes": "Excellent for predictive maintenance in telecom logistics. Forecasts demand for replacement parts amid long-tail failures (rare node outages). Integrates well with SARIMAX/Prophet/LSTM ensembles for uncertainty hedging. Size may require sampling or batch processing.",
+      "download_method": "github",
+      "notes": "Large multivariate time-series - may need to process in batches",
+      "_evaluation": {
+        "dataset_id": "github_5g3e",
+        "score": 60,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Maintenance/failure data",
+          "Time-series data available",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 25,
+          "brazil_market": 0,
+          "data_quality": 10,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "kaggle_equipment_failure": {
+      "name": "Equipment Failure Prediction Dataset",
+      "source": "kaggle",
+      "dataset": "geetanjalisikarwar/equipment-failure-prediction-dataset",
+      "description": "10,000 points with 14 features on machine failures (hardware/software types). Models long-tail failures in telecom equipment, informing demand for spare parts.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": null,
+        "item_id": "Product ID",
+        "quantity": "Machine failure",
+        "category": "Type"
+      },
+      "preprocessing_notes": "Models long-tail equipment failures driving logistics demands for spare parts. Classification features for failure types. Useful for rare event prediction.",
+      "_evaluation": {
+        "dataset_id": "kaggle_equipment_failure",
+        "score": 60,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Maintenance/failure data",
+          "Quantity/demand column present",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 25,
+          "brazil_market": 0,
+          "data_quality": 10,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "bacen_exchange_rate_usd": {
+      "name": "BACEN Exchange Rate (USD/BRL)",
+      "source": "bacen",
+      "description": "Daily USD/BRL exchange rate from Brazilian Central Bank",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "data",
+        "exchange_rate": "valor"
+      },
+      "download_method": "scrape",
+      "series_code": "1",
+      "preprocessing_notes": "Critical economic factor. Exchange rate affects import costs and demand for imported telecom equipment. Volatility indicates currency crisis risk.",
+      "notes": "Exchange rate trends influence inventory decisions (anticipate purchases during devaluation)",
+      "_evaluation": {
+        "dataset_id": "bacen_exchange_rate_usd",
+        "score": 60,
+        "tier": "high_priority",
+        "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+        "categories": [
+          "telecom_industry",
+          "brazilian_market",
+          "logistics_ready"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Telecom industry data",
+          "Maintenance/failure data",
+          "Brazilian market data",
+          "Time-series data available",
+          "Cost/price information available"
+        ],
+        "breakdown": {
+          "demand_relevance": 10,
+          "telecom_fit": 25,
+          "brazil_market": 15,
+          "data_quality": 5,
+          "logistics_info": 5,
+          "research_value": 0
+        }
+      }
+    }
+  }
+}

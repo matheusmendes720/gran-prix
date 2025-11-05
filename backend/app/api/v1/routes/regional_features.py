@@ -184,3 +184,4 @@ async def get_regional_ipea(
 
 
 
+

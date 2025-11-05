@@ -1,0 +1,1316 @@
+{
+  "kaggle_daily_demand": {
+    "dataset_id": "kaggle_daily_demand",
+    "score": 35,
+    "tier": "low_priority",
+    "recommendation": "LOW - Limited relevance, consider as external factor only",
+    "categories": [
+      "demand_forecasting",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Quantity/demand column present",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 0,
+      "brazil_market": 0,
+      "data_quality": 10,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "kaggle_logistics_warehouse": {
+    "dataset_id": "kaggle_logistics_warehouse",
+    "score": 55,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "demand_forecasting",
+      "high_quality",
+      "logistics_ready"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Includes lead time data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Lead time data included",
+      "Cost/price information available"
+    ],
+    "breakdown": {
+      "demand_relevance": 30,
+      "telecom_fit": 0,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 10,
+      "research_value": 0
+    }
+  },
+  "kaggle_retail_inventory": {
+    "dataset_id": "kaggle_retail_inventory",
+    "score": 25,
+    "tier": "low_priority",
+    "recommendation": "LOW - Limited relevance, consider as external factor only",
+    "categories": [
+      "demand_forecasting",
+      "high_quality",
+      "logistics_ready"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Cost/price information available",
+      "PENALTY: Low relevance keywords detected"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 0,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 5,
+      "research_value": 0
+    }
+  },
+  "kaggle_supply_chain": {
+    "dataset_id": "kaggle_supply_chain",
+    "score": 65,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality",
+      "logistics_ready"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Includes lead time data",
+      "Telecom industry data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Lead time data included"
+    ],
+    "breakdown": {
+      "demand_relevance": 30,
+      "telecom_fit": 15,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 5,
+      "research_value": 0
+    }
+  },
+  "zenodo_milan_telecom": {
+    "dataset_id": "zenodo_milan_telecom",
+    "score": 55,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality",
+      "research_reference"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Academic/research dataset"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 0,
+      "data_quality": 10,
+      "logistics_info": 0,
+      "research_value": 5
+    }
+  },
+  "github_5g3e": {
+    "dataset_id": "github_5g3e",
+    "score": 60,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Time-series data available",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 25,
+      "brazil_market": 0,
+      "data_quality": 10,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "kaggle_equipment_failure": {
+    "dataset_id": "kaggle_equipment_failure",
+    "score": 60,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Quantity/demand column present",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 25,
+      "brazil_market": 0,
+      "data_quality": 10,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "github_network_fault": {
+    "dataset_id": "github_network_fault",
+    "score": 75,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 25,
+      "brazil_market": 15,
+      "data_quality": 10,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "kaggle_telecom_network": {
+    "dataset_id": "kaggle_telecom_network",
+    "score": 65,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 25,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "kaggle_smart_logistics": {
+    "dataset_id": "kaggle_smart_logistics",
+    "score": 75,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality",
+      "logistics_ready"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Includes lead time data",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Lead time data included"
+    ],
+    "breakdown": {
+      "demand_relevance": 30,
+      "telecom_fit": 25,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 5,
+      "research_value": 0
+    }
+  },
+  "kaggle_cloud_supply_chain": {
+    "dataset_id": "kaggle_cloud_supply_chain",
+    "score": 70,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality",
+      "logistics_ready"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Includes lead time data",
+      "Telecom industry data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Lead time data included",
+      "Cost/price information available"
+    ],
+    "breakdown": {
+      "demand_relevance": 30,
+      "telecom_fit": 15,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 10,
+      "research_value": 0
+    }
+  },
+  "github_opencellid": {
+    "dataset_id": "github_opencellid",
+    "score": 55,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 25,
+      "brazil_market": 0,
+      "data_quality": 5,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "mit_telecom_parts": {
+    "dataset_id": "mit_telecom_parts",
+    "score": 80,
+    "tier": "hell_yes",
+    "recommendation": "CRITICAL - Perfect fit for business case",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality",
+      "research_reference",
+      "perfect_match"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Academic/research dataset",
+      "BONUS: MIT telecom spare parts research (perfect match)"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 5
+    }
+  },
+  "test_dataset": {
+    "dataset_id": "test_dataset",
+    "score": 70,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality",
+      "logistics_ready"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Includes lead time data",
+      "Telecom industry data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Lead time data included",
+      "Cost/price information available"
+    ],
+    "breakdown": {
+      "demand_relevance": 30,
+      "telecom_fit": 15,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 10,
+      "research_value": 0
+    }
+  },
+  "anatel_mobile_brazil": {
+    "dataset_id": "anatel_mobile_brazil",
+    "score": 65,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 10,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "zenodo_broadband_brazil": {
+    "dataset_id": "zenodo_broadband_brazil",
+    "score": 80,
+    "tier": "hell_yes",
+    "recommendation": "CRITICAL - Perfect fit for business case",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality",
+      "research_reference"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Brazilian market data",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Academic/research dataset"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 25,
+      "brazil_market": 15,
+      "data_quality": 10,
+      "logistics_info": 0,
+      "research_value": 5
+    }
+  },
+  "internet_aberta_forecast": {
+    "dataset_id": "internet_aberta_forecast",
+    "score": 65,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 10,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "springer_digital_divide": {
+    "dataset_id": "springer_digital_divide",
+    "score": 70,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "olist_ecommerce": {
+    "dataset_id": "olist_ecommerce",
+    "score": 55,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality",
+      "logistics_ready"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Cost/price information available",
+      "PENALTY: Low relevance keywords detected"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 15,
+      "logistics_info": 5,
+      "research_value": 0
+    }
+  },
+  "zenodo_bgsmt_mobility": {
+    "dataset_id": "zenodo_bgsmt_mobility",
+    "score": 70,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality",
+      "research_reference"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Item/product identification available",
+      "Academic/research dataset"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 10,
+      "logistics_info": 0,
+      "research_value": 5
+    }
+  },
+  "brazilian_iot_structured": {
+    "dataset_id": "brazilian_iot_structured",
+    "score": 50,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "PENALTY: Low relevance keywords detected"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "brazilian_fiber_structured": {
+    "dataset_id": "brazilian_fiber_structured",
+    "score": 70,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "brazilian_operators_structured": {
+    "dataset_id": "brazilian_operators_structured",
+    "score": 70,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "brazilian_demand_factors": {
+    "dataset_id": "brazilian_demand_factors",
+    "score": 65,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 10,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "anatel_broadband": {
+    "dataset_id": "anatel_broadband",
+    "score": 65,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 10,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "anatel_spectrum": {
+    "dataset_id": "anatel_spectrum",
+    "score": 70,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "inmet_climate_bahia": {
+    "dataset_id": "inmet_climate_bahia",
+    "score": 55,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "telecom_industry",
+      "brazilian_market"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Brazilian market data",
+      "Time-series data available"
+    ],
+    "breakdown": {
+      "demand_relevance": 10,
+      "telecom_fit": 25,
+      "brazil_market": 15,
+      "data_quality": 5,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "inmet_climate_sao_paulo": {
+    "dataset_id": "inmet_climate_sao_paulo",
+    "score": 40,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "brazilian_market"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Maintenance/failure data",
+      "Brazilian market data",
+      "Time-series data available"
+    ],
+    "breakdown": {
+      "demand_relevance": 10,
+      "telecom_fit": 10,
+      "brazil_market": 15,
+      "data_quality": 5,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "bacen_exchange_rate_usd": {
+    "dataset_id": "bacen_exchange_rate_usd",
+    "score": 60,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "telecom_industry",
+      "brazilian_market",
+      "logistics_ready"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Cost/price information available"
+    ],
+    "breakdown": {
+      "demand_relevance": 10,
+      "telecom_fit": 25,
+      "brazil_market": 15,
+      "data_quality": 5,
+      "logistics_info": 5,
+      "research_value": 0
+    }
+  },
+  "bacen_selic_rate": {
+    "dataset_id": "bacen_selic_rate",
+    "score": 25,
+    "tier": "low_priority",
+    "recommendation": "LOW - Limited relevance, consider as external factor only",
+    "categories": [
+      "brazilian_market",
+      "logistics_ready"
+    ],
+    "reasons": [
+      "Brazilian market data",
+      "Time-series data available",
+      "Cost/price information available"
+    ],
+    "breakdown": {
+      "demand_relevance": 0,
+      "telecom_fit": 0,
+      "brazil_market": 15,
+      "data_quality": 5,
+      "logistics_info": 5,
+      "research_value": 0
+    }
+  },
+  "bacen_ipca_12m": {
+    "dataset_id": "bacen_ipca_12m",
+    "score": 25,
+    "tier": "low_priority",
+    "recommendation": "LOW - Limited relevance, consider as external factor only",
+    "categories": [
+      "brazilian_market"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Brazilian government source",
+      "Time-series data available"
+    ],
+    "breakdown": {
+      "demand_relevance": 10,
+      "telecom_fit": 0,
+      "brazil_market": 10,
+      "data_quality": 5,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "ibge_pib_quarterly": {
+    "dataset_id": "ibge_pib_quarterly",
+    "score": 40,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "telecom_industry",
+      "brazilian_market"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Telecom industry data",
+      "Brazilian government source",
+      "Time-series data available"
+    ],
+    "breakdown": {
+      "demand_relevance": 10,
+      "telecom_fit": 15,
+      "brazil_market": 10,
+      "data_quality": 5,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "ibge_ipca_monthly": {
+    "dataset_id": "ibge_ipca_monthly",
+    "score": 25,
+    "tier": "low_priority",
+    "recommendation": "LOW - Limited relevance, consider as external factor only",
+    "categories": [
+      "brazilian_market"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Brazilian government source",
+      "Time-series data available"
+    ],
+    "breakdown": {
+      "demand_relevance": 10,
+      "telecom_fit": 0,
+      "brazil_market": 10,
+      "data_quality": 5,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "gsma_mobile_connectivity_brazil": {
+    "dataset_id": "gsma_mobile_connectivity_brazil",
+    "score": 70,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "gsma_mobile_economy_brazil": {
+    "dataset_id": "gsma_mobile_economy_brazil",
+    "score": 70,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "mit_telecom_spare_parts": {
+    "dataset_id": "mit_telecom_spare_parts",
+    "score": 80,
+    "tier": "hell_yes",
+    "recommendation": "CRITICAL - Perfect fit for business case",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality",
+      "research_reference",
+      "perfect_match"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Academic/research dataset",
+      "BONUS: MIT telecom spare parts research (perfect match)"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 5
+    }
+  },
+  "zenodo_wind_turbine_failures": {
+    "dataset_id": "zenodo_wind_turbine_failures",
+    "score": 85,
+    "tier": "hell_yes",
+    "recommendation": "CRITICAL - Perfect fit for business case",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality",
+      "logistics_ready",
+      "research_reference"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Includes lead time data",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Lead time data included",
+      "Cost/price information available",
+      "Academic/research dataset"
+    ],
+    "breakdown": {
+      "demand_relevance": 30,
+      "telecom_fit": 25,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 10,
+      "research_value": 5
+    }
+  },
+  "zenodo_ai_decarbonization": {
+    "dataset_id": "zenodo_ai_decarbonization",
+    "score": 70,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality",
+      "research_reference"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Academic/research dataset"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 25,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 5
+    }
+  },
+  "ieee_wind_turbine_failures": {
+    "dataset_id": "ieee_wind_turbine_failures",
+    "score": 75,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "high_quality",
+      "logistics_ready",
+      "research_reference"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available",
+      "Cost/price information available",
+      "Academic/research dataset"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 25,
+      "brazil_market": 0,
+      "data_quality": 15,
+      "logistics_info": 5,
+      "research_value": 5
+    }
+  },
+  "ieee_power_line_inspection": {
+    "dataset_id": "ieee_power_line_inspection",
+    "score": 45,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "telecom_industry",
+      "brazilian_market",
+      "research_reference"
+    ],
+    "reasons": [
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Brazilian market data",
+      "Academic/research dataset"
+    ],
+    "breakdown": {
+      "demand_relevance": 0,
+      "telecom_fit": 25,
+      "brazil_market": 15,
+      "data_quality": 0,
+      "logistics_info": 0,
+      "research_value": 5
+    }
+  },
+  "ieee_power_grid_reliability": {
+    "dataset_id": "ieee_power_grid_reliability",
+    "score": 35,
+    "tier": "low_priority",
+    "recommendation": "LOW - Limited relevance, consider as external factor only",
+    "categories": [
+      "telecom_industry",
+      "logistics_ready",
+      "research_reference"
+    ],
+    "reasons": [
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Cost/price information available",
+      "Academic/research dataset"
+    ],
+    "breakdown": {
+      "demand_relevance": 0,
+      "telecom_fit": 25,
+      "brazil_market": 0,
+      "data_quality": 0,
+      "logistics_info": 5,
+      "research_value": 5
+    }
+  },
+  "ieee_fire_risk_prediction": {
+    "dataset_id": "ieee_fire_risk_prediction",
+    "score": 20,
+    "tier": "low_priority",
+    "recommendation": "LOW - Limited relevance, consider as external factor only",
+    "categories": [
+      "telecom_industry",
+      "research_reference"
+    ],
+    "reasons": [
+      "Telecom industry data",
+      "Academic/research dataset"
+    ],
+    "breakdown": {
+      "demand_relevance": 0,
+      "telecom_fit": 15,
+      "brazil_market": 0,
+      "data_quality": 0,
+      "logistics_info": 0,
+      "research_value": 5
+    }
+  },
+  "github_brazil_weather": {
+    "dataset_id": "github_brazil_weather",
+    "score": 15,
+    "tier": "skip",
+    "recommendation": "SKIP - Not relevant for business case",
+    "categories": [
+      "brazilian_market"
+    ],
+    "reasons": [
+      "Brazilian market data"
+    ],
+    "breakdown": {
+      "demand_relevance": 0,
+      "telecom_fit": 0,
+      "brazil_market": 15,
+      "data_quality": 0,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "github_awesome_billing": {
+    "dataset_id": "github_awesome_billing",
+    "score": 0,
+    "tier": "skip",
+    "recommendation": "SKIP - Not relevant for business case",
+    "categories": [
+      "telecom_industry"
+    ],
+    "reasons": [
+      "Telecom industry data",
+      "PENALTY: Low relevance keywords detected"
+    ],
+    "breakdown": {
+      "demand_relevance": 0,
+      "telecom_fit": 15,
+      "brazil_market": 0,
+      "data_quality": 0,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "anatel_resolution_617": {
+    "dataset_id": "anatel_resolution_617",
+    "score": 40,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "telecom_industry",
+      "brazilian_market"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Telecom industry data",
+      "Brazilian market data"
+    ],
+    "breakdown": {
+      "demand_relevance": 10,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 0,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "anatel_resolution_614": {
+    "dataset_id": "anatel_resolution_614",
+    "score": 40,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "telecom_industry",
+      "brazilian_market"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Telecom industry data",
+      "Brazilian market data"
+    ],
+    "breakdown": {
+      "demand_relevance": 10,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 0,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "kaggle_brazil_weather": {
+    "dataset_id": "kaggle_brazil_weather",
+    "score": 55,
+    "tier": "medium_priority",
+    "recommendation": "MEDIUM - Useful but may need adaptation",
+    "categories": [
+      "telecom_industry",
+      "brazilian_market"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Telecom industry data",
+      "Maintenance/failure data",
+      "Brazilian market data",
+      "Time-series data available"
+    ],
+    "breakdown": {
+      "demand_relevance": 10,
+      "telecom_fit": 25,
+      "brazil_market": 15,
+      "data_quality": 5,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  },
+  "internet_aberta_roi_brazil": {
+    "dataset_id": "internet_aberta_roi_brazil",
+    "score": 70,
+    "tier": "high_priority",
+    "recommendation": "HIGH - Strong relevance, recommended for pipeline",
+    "categories": [
+      "demand_forecasting",
+      "telecom_industry",
+      "brazilian_market",
+      "high_quality"
+    ],
+    "reasons": [
+      "Contains demand/forecast data",
+      "Direct spare parts/inventory focus",
+      "Telecom industry data",
+      "Brazilian market data",
+      "Time-series data available",
+      "Quantity/demand column present",
+      "Item/product identification available"
+    ],
+    "breakdown": {
+      "demand_relevance": 25,
+      "telecom_fit": 15,
+      "brazil_market": 15,
+      "data_quality": 15,
+      "logistics_info": 0,
+      "research_value": 0
+    }
+  }
+}

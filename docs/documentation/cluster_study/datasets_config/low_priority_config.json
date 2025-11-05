@@ -1,0 +1,265 @@
+{
+  "tier": "low_priority",
+  "description": "Low priority datasets - Limited relevance",
+  "datasets": {
+    "kaggle_daily_demand": {
+      "name": "Daily Demand Forecasting Orders",
+      "source": "kaggle",
+      "dataset": "akshatpattiwar/daily-demand-forecasting-orderscsv",
+      "description": "60 days of daily demand with 13 features, perfect for MVP",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": null,
+        "item_id": "Day of the week (Monday to Friday)",
+        "quantity": "Target (Total orders)",
+        "category": "Week of the month (first week, second, third, fourth or fifth week"
+      },
+      "preprocessing_notes": "No date column - needs synthetic date generation from index. Daily granularity, clean structure, ready for ARIMA/Prophet",
+      "_evaluation": {
+        "dataset_id": "kaggle_daily_demand",
+        "score": 35,
+        "tier": "low_priority",
+        "recommendation": "LOW - Limited relevance, consider as external factor only",
+        "categories": [
+          "demand_forecasting",
+          "high_quality"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Quantity/demand column present",
+          "Item/product identification available"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 0,
+          "brazil_market": 0,
+          "data_quality": 10,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "ieee_power_grid_reliability": {
+      "name": "Recent Advancements in Planning and Reliability Aspects of Large Power Grids",
+      "source": "ieee",
+      "url": "https://ieeexplore.ieee.org/document/10818630",
+      "description": "Predictive maintenance for transmission systems, adaptable to telecom towers. Includes AI for maintenance with ROI from cost savings.",
+      "relevance": "⭐⭐⭐⭐",
+      "download_method": "scrape",
+      "document_number": "10818630",
+      "preprocessing_notes": "IEEE paper on power grid reliability and predictive maintenance. AI models for infrastructure maintenance.",
+      "notes": "AI-driven predictive maintenance for infrastructure",
+      "_evaluation": {
+        "dataset_id": "ieee_power_grid_reliability",
+        "score": 35,
+        "tier": "low_priority",
+        "recommendation": "LOW - Limited relevance, consider as external factor only",
+        "categories": [
+          "telecom_industry",
+          "logistics_ready",
+          "research_reference"
+        ],
+        "reasons": [
+          "Telecom industry data",
+          "Maintenance/failure data",
+          "Cost/price information available",
+          "Academic/research dataset"
+        ],
+        "breakdown": {
+          "demand_relevance": 0,
+          "telecom_fit": 25,
+          "brazil_market": 0,
+          "data_quality": 0,
+          "logistics_info": 5,
+          "research_value": 5
+        }
+      }
+    },
+    "kaggle_retail_inventory": {
+      "name": "Retail Store Inventory Forecasting",
+      "source": "kaggle",
+      "dataset": "anirudhchauhan/retail-store-inventory-forecasting-dataset",
+      "description": "73,000+ daily inventory/demand records with categories",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": "Item_ID",
+        "quantity": "Demand",
+        "category": "Category",
+        "cost": "Cost"
+      },
+      "preprocessing_notes": "Large scale dataset, test complex models (LSTM)",
+      "_evaluation": {
+        "dataset_id": "kaggle_retail_inventory",
+        "score": 25,
+        "tier": "low_priority",
+        "recommendation": "LOW - Limited relevance, consider as external factor only",
+        "categories": [
+          "demand_forecasting",
+          "high_quality",
+          "logistics_ready"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available",
+          "Cost/price information available",
+          "PENALTY: Low relevance keywords detected"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 0,
+          "brazil_market": 0,
+          "data_quality": 15,
+          "logistics_info": 5,
+          "research_value": 0
+        }
+      }
+    },
+    "bacen_selic_rate": {
+      "name": "BACEN SELIC Interest Rate",
+      "source": "bacen",
+      "description": "SELIC interest rate (base rate) from Brazilian Central Bank",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "data",
+        "selic_rate": "valor"
+      },
+      "download_method": "scrape",
+      "series_code": "11",
+      "preprocessing_notes": "SELIC rate affects cost of capital and inventory holding costs. Higher rates reduce optimal inventory levels.",
+      "notes": "Economic indicator for inventory optimization",
+      "_evaluation": {
+        "dataset_id": "bacen_selic_rate",
+        "score": 25,
+        "tier": "low_priority",
+        "recommendation": "LOW - Limited relevance, consider as external factor only",
+        "categories": [
+          "brazilian_market",
+          "logistics_ready"
+        ],
+        "reasons": [
+          "Brazilian market data",
+          "Time-series data available",
+          "Cost/price information available"
+        ],
+        "breakdown": {
+          "demand_relevance": 0,
+          "telecom_fit": 0,
+          "brazil_market": 15,
+          "data_quality": 5,
+          "logistics_info": 5,
+          "research_value": 0
+        }
+      }
+    },
+    "bacen_ipca_12m": {
+      "name": "BACEN IPCA 12 Months (Inflation)",
+      "source": "bacen",
+      "description": "IPCA inflation index accumulated over 12 months from BACEN",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "data",
+        "inflation_rate": "valor"
+      },
+      "download_method": "scrape",
+      "series_code": "433",
+      "preprocessing_notes": "Inflation rate affects purchasing decisions. High inflation (>1%/month) increases demand anticipation.",
+      "notes": "Inflation expectations drive inventory strategy",
+      "_evaluation": {
+        "dataset_id": "bacen_ipca_12m",
+        "score": 25,
+        "tier": "low_priority",
+        "recommendation": "LOW - Limited relevance, consider as external factor only",
+        "categories": [
+          "brazilian_market"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Brazilian government source",
+          "Time-series data available"
+        ],
+        "breakdown": {
+          "demand_relevance": 10,
+          "telecom_fit": 0,
+          "brazil_market": 10,
+          "data_quality": 5,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "ibge_ipca_monthly": {
+      "name": "IBGE IPCA Monthly (Inflation)",
+      "source": "ibge",
+      "description": "Monthly IPCA inflation index from IBGE SIDRA",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "D3N",
+        "ipca_monthly": "V"
+      },
+      "download_method": "scrape",
+      "table_id": "1737",
+      "preprocessing_notes": "Monthly inflation data for economic external factors. More granular than BACEN IPCA 12M.",
+      "notes": "Monthly inflation for short-term demand forecasting",
+      "_evaluation": {
+        "dataset_id": "ibge_ipca_monthly",
+        "score": 25,
+        "tier": "low_priority",
+        "recommendation": "LOW - Limited relevance, consider as external factor only",
+        "categories": [
+          "brazilian_market"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Brazilian government source",
+          "Time-series data available"
+        ],
+        "breakdown": {
+          "demand_relevance": 10,
+          "telecom_fit": 0,
+          "brazil_market": 10,
+          "data_quality": 5,
+          "logistics_info": 0,
+          "research_value": 0
+        }
+      }
+    },
+    "ieee_fire_risk_prediction": {
+      "name": "Statistical and Machine Learning Models for Predicting Fire and Other Risks",
+      "source": "ieee",
+      "url": "https://ieeexplore.ieee.org/document/10504282",
+      "description": "ML models for anomaly detection in infrastructure. Adaptable to towers for risk prediction.",
+      "relevance": "⭐⭐⭐⭐",
+      "download_method": "scrape",
+      "document_number": "10504282",
+      "preprocessing_notes": "IEEE paper on ML models for fire and risk prediction in infrastructure.",
+      "notes": "Risk prediction models for infrastructure",
+      "_evaluation": {
+        "dataset_id": "ieee_fire_risk_prediction",
+        "score": 20,
+        "tier": "low_priority",
+        "recommendation": "LOW - Limited relevance, consider as external factor only",
+        "categories": [
+          "telecom_industry",
+          "research_reference"
+        ],
+        "reasons": [
+          "Telecom industry data",
+          "Academic/research dataset"
+        ],
+        "breakdown": {
+          "demand_relevance": 0,
+          "telecom_fit": 15,
+          "brazil_market": 0,
+          "data_quality": 0,
+          "logistics_info": 0,
+          "research_value": 5
+        }
+      }
+    }
+  }
+}

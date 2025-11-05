@@ -1,0 +1,205 @@
+{
+  "tier": "hell_yes",
+  "description": "Critical datasets - Perfect fit for business case",
+  "datasets": {
+    "zenodo_wind_turbine_failures": {
+      "name": "Correlation Between Wind Turbine Failures and Environmental Factors",
+      "source": "zenodo",
+      "url": "https://zenodo.org/records/7613923",
+      "description": "Wind turbine failure dataset with environmental correlations. Proxy for telecom tower maintenance. Includes repair times and costs.",
+      "relevance": "⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "date",
+        "item_id": "turbine_id",
+        "quantity": "failure_count",
+        "category": "failure_type",
+        "cost": "repair_cost",
+        "lead_time": "repair_time_hours"
+      },
+      "download_method": "zenodo",
+      "record_id": "7613923",
+      "preprocessing_notes": "Wind turbine failure data adapted for telecom tower maintenance forecasting. Environmental factors correlate with tower failures.",
+      "notes": "Proxy dataset for tower structural maintenance",
+      "_evaluation": {
+        "dataset_id": "zenodo_wind_turbine_failures",
+        "score": 85,
+        "tier": "hell_yes",
+        "recommendation": "CRITICAL - Perfect fit for business case",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality",
+          "logistics_ready",
+          "research_reference"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Includes lead time data",
+          "Telecom industry data",
+          "Maintenance/failure data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available",
+          "Lead time data included",
+          "Cost/price information available",
+          "Academic/research dataset"
+        ],
+        "breakdown": {
+          "demand_relevance": 30,
+          "telecom_fit": 25,
+          "brazil_market": 0,
+          "data_quality": 15,
+          "logistics_info": 10,
+          "research_value": 5
+        }
+      }
+    },
+    "mit_telecom_parts": {
+      "name": "MIT Telecom Spare Parts Dataset",
+      "source": "mit",
+      "url": "https://dspace.mit.edu/bitstream/handle/1721.1/142919/SCM12_Mamakos_project.pdf",
+      "description": "3 years of data from 2,058 telecom sites (similar to Nova Corrente's 18,000 towers)",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": "Part_ID",
+        "quantity": "Demand",
+        "site_id": "Site_ID",
+        "category": "Category"
+      },
+      "preprocessing_notes": "Weekly aggregated data, may need to interpolate to daily. Highest relevance for validation.",
+      "download_method": "scrape",
+      "file_format": "pdf",
+      "notes": "May require manual extraction or PDF parsing",
+      "_evaluation": {
+        "dataset_id": "mit_telecom_parts",
+        "score": 80,
+        "tier": "hell_yes",
+        "recommendation": "CRITICAL - Perfect fit for business case",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality",
+          "research_reference",
+          "perfect_match"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available",
+          "Academic/research dataset",
+          "BONUS: MIT telecom spare parts research (perfect match)"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 0,
+          "data_quality": 15,
+          "logistics_info": 0,
+          "research_value": 5
+        }
+      }
+    },
+    "zenodo_broadband_brazil": {
+      "name": "Real Dataset from Broadband Customers of a Brazilian Telecom Operator",
+      "source": "zenodo",
+      "url": "https://zenodo.org/records/10482897",
+      "filename": "BROADBAND_USER_INFO.csv",
+      "description": "Extracted from a major Brazilian operator, includes modem parameters (latency, jitter, packet loss) and user metrics for thousands of broadband users. Time-series snapshots.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": null,
+        "item_id": "Customer_ID",
+        "quantity": "Packet_Loss",
+        "site_id": null,
+        "category": "Channel2_quality"
+      },
+      "preprocessing_notes": "Real Brazilian operator data with customer metrics (latency, jitter, packet loss, channel quality). Predictive modeling for demand in network maintenance. Long-tail insights into rare downtime events. No date column - may need temporal indexing. Operator-specific bias may exist.",
+      "download_method": "zenodo",
+      "notes": "Excellent for predictive maintenance in telecom logistics. Integrates well with SARIMAX/Prophet/LSTM ensembles. Note: No explicit date column - may require temporal indexing or synthetic timestamps.",
+      "_evaluation": {
+        "dataset_id": "zenodo_broadband_brazil",
+        "score": 80,
+        "tier": "hell_yes",
+        "recommendation": "CRITICAL - Perfect fit for business case",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "brazilian_market",
+          "high_quality",
+          "research_reference"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Maintenance/failure data",
+          "Brazilian market data",
+          "Quantity/demand column present",
+          "Item/product identification available",
+          "Academic/research dataset"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 25,
+          "brazil_market": 15,
+          "data_quality": 10,
+          "logistics_info": 0,
+          "research_value": 5
+        }
+      }
+    },
+    "mit_telecom_spare_parts": {
+      "name": "MIT SCM Project: Telecom Spare Parts Dataset",
+      "source": "mit",
+      "url": "https://dspace.mit.edu/bitstream/handle/1721.1/142928/SCM15_Costa_Naithani_project.pdf",
+      "description": "MIT Supply Chain Management research on telecom spare parts demand. 3 years of data from 2,058 telecom sites.",
+      "relevance": "⭐⭐⭐⭐⭐",
+      "columns_mapping": {
+        "date": "Date",
+        "item_id": "Part_ID",
+        "quantity": "Demand",
+        "site_id": "Site_ID",
+        "category": "Category"
+      },
+      "download_method": "scrape",
+      "preprocessing_notes": "MIT research paper on telecom spare parts. 3 years of data from 2,058 sites (similar to Nova Corrente's 18,000 towers). Weekly aggregated data, may need to interpolate to daily.",
+      "notes": "Critical reference dataset for telecom spare parts demand forecasting",
+      "_evaluation": {
+        "dataset_id": "mit_telecom_spare_parts",
+        "score": 80,
+        "tier": "hell_yes",
+        "recommendation": "CRITICAL - Perfect fit for business case",
+        "categories": [
+          "demand_forecasting",
+          "telecom_industry",
+          "high_quality",
+          "research_reference",
+          "perfect_match"
+        ],
+        "reasons": [
+          "Contains demand/forecast data",
+          "Direct spare parts/inventory focus",
+          "Telecom industry data",
+          "Time-series data available",
+          "Quantity/demand column present",
+          "Item/product identification available",
+          "Academic/research dataset",
+          "BONUS: MIT telecom spare parts research (perfect match)"
+        ],
+        "breakdown": {
+          "demand_relevance": 25,
+          "telecom_fit": 15,
+          "brazil_market": 0,
+          "data_quality": 15,
+          "logistics_info": 0,
+          "research_value": 5
+        }
+      }
+    }
+  }
+}
