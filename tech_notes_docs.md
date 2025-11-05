@@ -1,4 +1,4 @@
-# 📚 TECH NOTES & DOCS - Navigation Index
+rryrhryyrt                   # 📚 TECH NOTES & DOCS - Navigation Index
 ## Nova Corrente - Complete Technical Documentation Navigation
 
 **Versão:** 2.4.0  
@@ -29,11 +29,13 @@ Este documento serve como **hub central de navegação** para toda a documentaç
 - [🔧 Quick Start Backend](docs/development/QUICK_START_BACKEND.md) - Setup rápido backend
 
 ### 📊 **DIAGNÓSTICOS & ANÁLISES**
+- [📚 Índice Anamnese e Simplificação](docs/diagnostics/anamnese/00_INDEX_ANAMNESE_PT_BR.md) - ⭐ **NOVO** Índice centralizado de todos os documentos de anamnese
 - [🔍 Diagnóstico Completo](docs/diagnostics/COMPREHENSIVE_DATA_ENGINEERING_DIAGNOSTIC_PT_BR.md) - Análise completa do estado atual
 - [📋 Lista de Tarefas Críticas](docs/diagnostics/CRITICAL_TASKS_PRIORITY_LIST_PT_BR.md) - Priorização de tarefas
 - [📊 Resumo de Implementação](docs/IMPLEMENTATION_SUMMARY.md) - Status de implementação
 
 ### 🏛️ **ARQUITETURA & DESIGN**
+- [📊 Diagrama Arquitetura Simplificada](docs/diagnostics/DIAGRAMA_ARQUITETURA_SIMPLIFICADA_PT_BR.md) - ⭐ **NOVO** Visualização da arquitetura simplificada
 - [📊 Schema Estrela Unificado](docs/proj/diagrams/unified_star_schema_detailed.md) - Design completo de banco de dados
 - [🔄 Pipeline ETL Completo](docs/proj/diagrams/etl_pipeline_complete.md) - Arquitetura Medallion 4 camadas
 - [📈 Estratégia de Dados Visual](docs/proj/diagrams/data_strategy_visual_breakdown.md) - Breakdown visual completo
@@ -74,6 +76,7 @@ Este documento serve como **hub central de navegação** para toda a documentaç
 
 | Documento | Descrição | Localização |
 |-----------|-----------|-------------|
+| **Índice Anamnese e Simplificação** | ⭐ **NOVO** Índice centralizado de todos os documentos de anamnese | `docs/diagnostics/anamnese/00_INDEX_ANAMNESE_PT_BR.md` |
 | **Diagnóstico Completo** | Análise completa do estado atual vs. alvo | `docs/diagnostics/COMPREHENSIVE_DATA_ENGINEERING_DIAGNOSTIC_PT_BR.md` |
 | **Lista de Tarefas Críticas** | Priorização de tarefas por semanas | `docs/diagnostics/CRITICAL_TASKS_PRIORITY_LIST_PT_BR.md` |
 | **Scope Update 4-Day Sprint** | Atualização de escopo do sprint | `docs/diagnostics/SCOPE_UPDATE_4DAY_SPRINT_SUMMARY_PT_BR.md` |
@@ -155,8 +158,9 @@ Este documento serve como **hub central de navegação** para toda a documentaç
 ### 👨‍💼 **Para Executivos (30 min)**
 1. [README Principal](README.md)
 2. [CHANGELOG - Versão 2.4.0](CHANGELOG.md#versão-240)
-3. [Estratégia Visual de Dados](docs/proj/diagrams/data_strategy_visual_breakdown.md)
-4. [Roadmap de Implementação](docs/proj/diagrams/implementation_roadmap.md)
+3. [Anamnese e Diagnóstico Completo](docs/diagnostics/ANAMNESE_DIAGNOSTICO_COMPLETO_PT_BR.md) - ⭐ **NOVO** Visão geral do planejamento vs. realidade
+4. [Estratégia Visual de Dados](docs/proj/diagrams/data_strategy_visual_breakdown.md)
+5. [Roadmap de Implementação](docs/proj/diagrams/implementation_roadmap.md)
 
 ### 👨‍💻 **Para Engenheiros de Dados (4 horas)**
 1. [Diagnóstico Completo](docs/diagnostics/COMPREHENSIVE_DATA_ENGINEERING_DIAGNOSTIC_PT_BR.md)

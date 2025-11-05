@@ -12,14 +12,15 @@ logger = logging.getLogger('nova_corrente.integration_manager')
 class IntegrationManager:
     """
     Central manager for all backend integrations:
-    - Inner Data Services (database, features, analytics, predictions)
-    - Outer API Clients (BACEN, INMET, ANATEL, OpenWeatherMap, etc.)
+    - Inner Data Services (database, features, analytics) - Read-only
+    - NO ML Services in deployment
+    - NO External API Clients in deployment (using precomputed data)
     """
     
     def __init__(self):
         """Initialize integration manager"""
         self.services: Dict[str, Any] = {}
-        self.external_clients: Dict[str, Any] = {}
+        # ❌ REMOVED: external_clients (not used in deployment)
         self.initialized = False
         
     async def initialize_all(self) -> Dict[str, Any]:
@@ -32,7 +33,7 @@ class IntegrationManager:
         results = {
             'timestamp': datetime.now().isoformat(),
             'services': {},
-            'external_clients': {},
+            # ❌ REMOVED: external_clients (not used in deployment)
             'status': 'initializing'
         }
         
@@ -56,15 +57,8 @@ class IntegrationManager:
                 logger.error(f"❌ Database service error: {e}")
                 results['services']['database'] = {'status': 'error', 'error': str(e)}
             
-            # External Data Service
-            try:
-                from backend.services.external_data_service import external_data_service
-                self.services['external_data'] = external_data_service
-                results['services']['external_data'] = {'status': 'healthy'}
-                logger.info("✅ External data service initialized")
-            except Exception as e:
-                logger.error(f"❌ External data service error: {e}")
-                results['services']['external_data'] = {'status': 'error', 'error': str(e)}
+            # ❌ REMOVED: External Data Service (not used in deployment - using precomputed data)
+            # External APIs are disabled in production - data is precomputed locally
             
             # Integration Service
             try:
@@ -106,84 +100,18 @@ class IntegrationManager:
                 logger.error(f"❌ Analytics service error: {e}")
                 results['services']['analytics'] = {'status': 'error', 'error': str(e)}
             
-            # Prediction Service
-            try:
-                from backend.services.prediction_service import prediction_service
-                self.services['prediction'] = prediction_service
-                results['services']['prediction'] = {'status': 'healthy'}
-                logger.info("✅ Prediction service initialized")
-            except Exception as e:
-                logger.error(f"❌ Prediction service error: {e}")
-                results['services']['prediction'] = {'status': 'error', 'error': str(e)}
+            # ❌ REMOVED: Prediction Service (ML not used in deployment - using precomputed results)
+            # ML processing runs locally and generates precomputed results
             
-            # Initialize Outer API Clients
-            logger.info("Initializing external API clients...")
-            
-            # INMET (Climate)
-            try:
-                from backend.config.external_apis_config import INMET_CONFIG
-                self.external_clients['inmet'] = {
-                    'config': INMET_CONFIG,
-                    'configured': bool(INMET_CONFIG.get('api_key') or INMET_CONFIG.get('base_url')),
-                    'status': 'configured' if (INMET_CONFIG.get('api_key') or INMET_CONFIG.get('base_url')) else 'not_configured'
-                }
-                results['external_clients']['inmet'] = self.external_clients['inmet'].copy()
-                logger.info("✅ INMET (Climate) API client initialized")
-            except Exception as e:
-                logger.error(f"❌ INMET API client error: {e}")
-                results['external_clients']['inmet'] = {'status': 'error', 'error': str(e)}
-            
-            # BACEN (Economic)
-            try:
-                from backend.config.external_apis_config import BACEN_CONFIG
-                self.external_clients['bacen'] = {
-                    'config': BACEN_CONFIG,
-                    'configured': bool(BACEN_CONFIG.get('api_key') or BACEN_CONFIG.get('base_url')),
-                    'status': 'configured' if (BACEN_CONFIG.get('api_key') or BACEN_CONFIG.get('base_url')) else 'not_configured'
-                }
-                results['external_clients']['bacen'] = self.external_clients['bacen'].copy()
-                logger.info("✅ BACEN (Economic) API client initialized")
-            except Exception as e:
-                logger.error(f"❌ BACEN API client error: {e}")
-                results['external_clients']['bacen'] = {'status': 'error', 'error': str(e)}
-            
-            # ANATEL (5G)
-            try:
-                from backend.config.external_apis_config import ANATEL_CONFIG
-                self.external_clients['anatel'] = {
-                    'config': ANATEL_CONFIG,
-                    'configured': bool(ANATEL_CONFIG.get('api_key') or ANATEL_CONFIG.get('base_url')),
-                    'status': 'configured' if (ANATEL_CONFIG.get('api_key') or ANATEL_CONFIG.get('base_url')) else 'not_configured'
-                }
-                results['external_clients']['anatel'] = self.external_clients['anatel'].copy()
-                logger.info("✅ ANATEL (5G) API client initialized")
-            except Exception as e:
-                logger.error(f"❌ ANATEL API client error: {e}")
-                results['external_clients']['anatel'] = {'status': 'error', 'error': str(e)}
-            
-            # OpenWeatherMap
-            try:
-                from backend.config.external_apis_config import OPENWEATHER_CONFIG
-                self.external_clients['openweather'] = {
-                    'config': OPENWEATHER_CONFIG,
-                    'configured': bool(OPENWEATHER_CONFIG.get('api_key')),
-                    'status': 'configured' if OPENWEATHER_CONFIG.get('api_key') else 'not_configured'
-                }
-                results['external_clients']['openweather'] = self.external_clients['openweather'].copy()
-                logger.info("✅ OpenWeatherMap API client initialized")
-            except Exception as e:
-                logger.error(f"❌ OpenWeatherMap API client error: {e}")
-                results['external_clients']['openweather'] = {'status': 'error', 'error': str(e)}
-            
-            # Expanded API Integration (25+ sources)
-            try:
-                from backend.services.expanded_api_integration import ExpandedAPIIntegration
-                self.external_clients['expanded_api'] = ExpandedAPIIntegration()
-                results['external_clients']['expanded_api'] = {'status': 'healthy'}
-                logger.info("✅ Expanded API integration initialized (25+ sources)")
-            except Exception as e:
-                logger.error(f"❌ Expanded API integration error: {e}")
-                results['external_clients']['expanded_api'] = {'status': 'error', 'error': str(e)}
+            # ❌ REMOVED: External API Clients (not used in deployment - using precomputed data)
+            # External APIs are disabled in production:
+            # - INMET (Climate) - disabled
+            # - BACEN (Economic) - disabled
+            # - ANATEL (5G) - disabled
+            # - OpenWeatherMap - disabled
+            # - Expanded API Integration - disabled
+            # Data is precomputed locally and read-only in deployment
+            logger.info("⚠️ External API clients disabled in deployment - using precomputed data")
             
             # Determine overall status
             service_errors = sum(1 for svc in results['services'].values() if svc.get('status') == 'error')
@@ -209,58 +137,10 @@ class IntegrationManager:
         """Get a service by name"""
         return self.services.get(service_name)
     
-    def get_external_client(self, client_name: str) -> Optional[Any]:
-        """Get an external API client by name"""
-        return self.external_clients.get(client_name)
+    # ❌ REMOVED: get_external_client() - External API clients not used in deployment
     
-    async def refresh_all_external_data(
-        self,
-        start_date: Optional[date] = None,
-        end_date: Optional[date] = None
-    ) -> Dict[str, Any]:
-        """
-        Refresh all external data sources
-        
-        Args:
-            start_date: Start date (default: 7 days ago)
-            end_date: End date (default: today)
-        
-        Returns:
-            Dictionary with refresh results
-        """
-        from datetime import timedelta
-        
-        if start_date is None:
-            start_date = date.today() - timedelta(days=7)
-        if end_date is None:
-            end_date = date.today()
-        
-        results = {
-            'start_date': start_date.isoformat(),
-            'end_date': end_date.isoformat(),
-            'refreshed': {},
-            'errors': [],
-            'status': 'success'
-        }
-        
-        integration_service = self.get_service('integration')
-        if integration_service:
-            try:
-                refresh_results = integration_service.refresh_all_external_data(
-                    start_date, end_date
-                )
-                results['refreshed'] = refresh_results
-                logger.info(f"Refreshed {len(refresh_results)} external data sources")
-            except Exception as e:
-                logger.error(f"Error refreshing external data: {e}")
-                results['errors'].append(str(e))
-                results['status'] = 'error'
-        else:
-            logger.warning("Integration service not available")
-            results['status'] = 'error'
-            results['errors'].append("Integration service not initialized")
-        
-        return results
+    # ❌ REMOVED: refresh_all_external_data() - External APIs disabled in deployment
+    # Data refresh is done locally in ML processing environment, not in deployment
 
 
 # Global integration manager instance
