@@ -16,9 +16,10 @@ except ImportError:
     schedule = None
 
 from backend.services.integration_service import integration_service
-from backend.pipelines.climate_etl import climate_etl
-from backend.pipelines.economic_etl import economic_etl
-from backend.pipelines.anatel_5g_etl import anatel_5g_etl
+# ❌ DISABLED: External API ETL pipelines (not used in deployment - using precomputed data)
+# from backend.pipelines.climate_etl import climate_etl
+# from backend.pipelines.economic_etl import economic_etl
+# from backend.pipelines.anatel_5g_etl import anatel_5g_etl
 from backend.pipelines.brazilian_calendar_etl import brazilian_calendar_etl
 from backend.pipelines.feature_calculation_etl import feature_calculation_etl
 from backend.config.logging_config import get_logger
@@ -79,32 +80,29 @@ class OrchestratorService:
                 results['pipelines']['calendar'] = {'status': 'error', 'error': str(e)}
                 results['errors'].append(f"Calendar: {str(e)}")
             
-            # 2. Climate data
-            try:
-                rows = climate_etl.run(start_date, end_date)
-                results['pipelines']['climate'] = {'rows': rows, 'status': 'success'}
-            except Exception as e:
-                logger.error(f"Error in climate ETL: {e}")
-                results['pipelines']['climate'] = {'status': 'error', 'error': str(e)}
-                results['errors'].append(f"Climate: {str(e)}")
+            # ❌ DISABLED: Climate data ETL (External APIs disabled in deployment)
+            # Climate data is precomputed locally and read-only in deployment
+            logger.info("⚠️ Climate ETL disabled in deployment - using precomputed data")
+            results['pipelines']['climate'] = {
+                'status': 'disabled',
+                'message': 'External APIs disabled in deployment - using precomputed data'
+            }
             
-            # 3. Economic data
-            try:
-                rows = economic_etl.run(start_date, end_date)
-                results['pipelines']['economic'] = {'rows': rows, 'status': 'success'}
-            except Exception as e:
-                logger.error(f"Error in economic ETL: {e}")
-                results['pipelines']['economic'] = {'status': 'error', 'error': str(e)}
-                results['errors'].append(f"Economic: {str(e)}")
+            # ❌ DISABLED: Economic data ETL (External APIs disabled in deployment)
+            # Economic data is precomputed locally and read-only in deployment
+            logger.info("⚠️ Economic ETL disabled in deployment - using precomputed data")
+            results['pipelines']['economic'] = {
+                'status': 'disabled',
+                'message': 'External APIs disabled in deployment - using precomputed data'
+            }
             
-            # 4. 5G data
-            try:
-                rows = anatel_5g_etl.run(start_date, end_date)
-                results['pipelines']['5g'] = {'rows': rows, 'status': 'success'}
-            except Exception as e:
-                logger.error(f"Error in 5G ETL: {e}")
-                results['pipelines']['5g'] = {'status': 'error', 'error': str(e)}
-                results['errors'].append(f"5G: {str(e)}")
+            # ❌ DISABLED: 5G data ETL (External APIs disabled in deployment)
+            # 5G data is precomputed locally and read-only in deployment
+            logger.info("⚠️ 5G ETL disabled in deployment - using precomputed data")
+            results['pipelines']['5g'] = {
+                'status': 'disabled',
+                'message': 'External APIs disabled in deployment - using precomputed data'
+            }
             
             # 5. Calculate features for all materials
             try:

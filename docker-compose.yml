@@ -57,6 +57,9 @@ services:
       - MINIO_ENDPOINT=http://minio:9000
       - REDIS_URL=redis://redis:6379
       - ML_RESULTS_PATH=/app/data/ml_results  # Read-only path to precomputed ML results
+      # Deployment constraints - NO ML, NO External APIs
+      - ENABLE_EXTERNAL_APIS=false
+      - ENABLE_ML_PROCESSING=false
       # NO ML-related environment variables (no MODELS_DIR, no MODEL_CACHE_ENABLED)
     volumes:
       - ./data:/app/data
