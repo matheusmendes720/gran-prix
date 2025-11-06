@@ -1,292 +1,301 @@
-# Quick Start Guide - PostgreSQL Migration
+# Nova Corrente - Quick Start Guide ⚡
 
-## 🚀 Get Started in 5 Minutes
-
-### Prerequisites
-
-- Docker Desktop installed
-- Python 3.11+
-- Node.js 18+
-- Git
+## Get Running in 5 Minutes!
 
 ---
 
-## Step 1: PostgreSQL Setup (2 minutes)
+## Prerequisites
 
-```bash
-# Start PostgreSQL via Docker
-docker run --name postgres-nova-corrente \
-  -e POSTGRES_USER=nova_corrente \
-  -e POSTGRES_PASSWORD=devpassword123 \
-  -e POSTGRES_DB=nova_corrente \
-  -p 5432:5432 \
-  -v pgdata:/var/lib/postgresql/data \
-  -d postgres:14-alpine
+✅ **Python 3.10+** installed  
+✅ **Node.js 18+** & npm installed  
+✅ **PostgreSQL 14+** installed and running  
+✅ **Git** (to clone if needed)
 
-# Verify it's running
-docker ps | grep postgres-nova-corrente
+---
+
+## 🚀 Quick Start Steps
+
+### Step 1: Setup PostgreSQL Database (2 minutes)
+
+```sql
+-- Open pgAdmin or psql and run:
+CREATE USER nova_corrente WITH PASSWORD 'password';
+CREATE DATABASE nova_corrente OWNER nova_corrente;
+GRANT ALL PRIVILEGES ON DATABASE nova_corrente TO nova_corrente;
 ```
 
----
+### Step 2: Configure Environment (30 seconds)
 
-## Step 2: Backend Setup (2 minutes)
+Edit `backend/.env` file:
+```env
+DATABASE_URL=postgresql://nova_corrente:password@localhost:5432/nova_corrente
+```
+*Replace `password` with your actual PostgreSQL password*
 
+### Step 3A: Automated Setup (Windows) - **RECOMMENDED**
+
+```cmd
+SETUP_AND_RUN.bat
+```
+
+This will:
+1. Install all Python dependencies
+2. Run database migrations
+3. Generate demo data
+4. Start the Flask API server
+
+**That's it!** API will be running at http://localhost:5000
+
+### Step 3B: Manual Setup (All Platforms)
+
+#### Install Backend Dependencies
 ```bash
 cd backend
-
-# Update .env with PostgreSQL credentials
-# (already configured with defaults)
-
-# Install dependencies
 pip install -r requirements_deployment.txt
-
-# Initialize Alembic (if not already done)
-alembic init alembic
-
-# Apply migrations (when migration files are created)
-# alembic upgrade head
-
-# Start Flask API
-python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 5000
 ```
 
-**Test API**:
+#### Run Database Migrations
 ```bash
-curl http://localhost:5000/health
-# Expected: {"status": "healthy", "database": "connected", ...}
+cd backend
+alembic upgrade head
 ```
 
----
+Expected output:
+```
+INFO [alembic.runtime.migration] Running upgrade  -> 001, Initial PostgreSQL schema
+```
 
-## Step 3: Frontend Setup (1 minute)
+#### Generate Demo Data
+```bash
+cd backend
+python scripts/generate_demo_data.py
+```
+
+Expected output:
+```
+✅ Inserted 1096 calendar records
+✅ Inserted 500 items
+✅ Inserted ~27,000 demand records
+...
+✅ Demo data generation complete!
+```
+
+#### Start Backend API
+```bash
+cd backend
+python run_flask_api.py
+```
+
+API will start at: http://localhost:5000
+
+### Step 4: Start Frontend (2 minutes)
+
+Open a **new terminal**:
 
 ```bash
 cd frontend
-
-# Install dependencies (if not already done)
 npm install
-
-# Start Next.js dev server
 npm run dev
 ```
 
-**Open browser**: http://localhost:3000
+Frontend will start at: http://localhost:3000
 
 ---
 
-## Step 4: Load Demo Data (Optional)
+## ✅ Verify Everything Works
 
-```bash
-# Generate synthetic demo data
-python scripts/generate_demo_data.py
+### 1. Check Backend Health
+Open browser: http://localhost:5000/health
 
-# Verify data loaded
-docker exec -it postgres-nova-corrente psql -U nova_corrente -d nova_corrente \
-  -c "SELECT COUNT(*) FROM core.dim_calendar;"
+Expected response:
+```json
+{
+  "status": "healthy",
+  "database": "connected",
+  "timestamp": "2025-11-05T...",
+  "version": "3.0.0"
+}
 ```
+
+### 2. Check API Endpoints
+- Items: http://localhost:5000/api/v1/items?limit=5
+- KPIs: http://localhost:5000/api/v1/analytics/kpis
+
+### 3. Check Frontend Dashboard
+Open browser: http://localhost:3000
+
+You should see:
+- ✅ KPI cards with real data
+- ✅ Materials table with 500 items
+- ✅ Filters working (Family, ABC Class)
+- ✅ Click an item to see demand chart
 
 ---
 
-## Architecture Summary
+## 🐳 Docker Quick Start (Alternative)
 
+If you prefer Docker:
+
+```bash
+docker-compose up --build
 ```
-┌─────────────────────────────────────────────┐
-│         NEXT.JS (http://localhost:3000)      │
-│  Dashboard | Materials | Forecasts | Alerts │
-└─────────────────────┬───────────────────────┘
-                      │ REST API
-┌─────────────────────▼───────────────────────┐
-│         FLASK (http://localhost:5000)        │
-│  /health | /api/v1/items | /api/v1/kpis    │
-└─────────────────────┬───────────────────────┘
-                      │ SQL Queries
-┌─────────────────────▼───────────────────────┐
-│   POSTGRESQL (localhost:5432)               │
-│  core.dim_item | analytics.forecasts        │
-└─────────────────────────────────────────────┘
-```
+
+This starts:
+- PostgreSQL (port 5432)
+- Redis (port 6379)
+- Backend API (port 5000)
+- Frontend (port 3000)
+
+**Note**: First startup takes 3-5 minutes for database initialization.
 
 ---
 
-## Key Files & Locations
+## 🎯 What You Get
 
-### Documentation
-- **Complete Spec**: `docs/proj/diagrams/Project.md` (2,500+ lines)
-- **Migration Summary**: `POSTGRES_MIGRATION_SUMMARY.md`
-- **This Guide**: `QUICK_START.md`
-- **Checklist**: `IMPLEMENTATION_CHECKLIST.md`
+### Dashboard Features
+1. **KPI Cards**: Real-time metrics with trends
+   - Total Demand
+   - Stockout Rate
+   - Forecast MAPE
+   - Delayed Orders %
+   - ABC A-Share
+   - Total Records
 
-### Backend
-- **Config**: `backend/app/config.py`, `backend/config/database_config.py`
-- **Environment**: `backend/.env`
-- **API**: `backend/api/enhanced_api.py`
-- **Migrations**: `backend/alembic/versions/` (to be created)
+2. **Materials Catalog**: 500 items with filtering
+   - Filter by Family (ELECTRICAL, TELECOM, etc.)
+   - Filter by ABC Class (A, B, C)
+   - Pagination (20 items/page)
+   - Click for details
 
-### Frontend
-- **Config**: `frontend/.env.local`
-- **API Client**: `frontend/src/lib/api.ts`
-- **Pages**: `frontend/src/app/` (dashboard, materials, etc.)
+3. **Demand Chart**: Time series visualization
+   - Last 90 days of demand data
+   - Actual vs. Forecast comparison
+   - Confidence intervals
+   - Summary statistics
 
----
+4. **Alerts & Recommendations**
+   - Real-time system alerts
+   - Critical recommendations
+   - Color-coded priorities
 
-## Common Commands
-
-### Database
-
-```bash
-# Connect to PostgreSQL
-docker exec -it postgres-nova-corrente psql -U nova_corrente -d nova_corrente
-
-# List schemas
-\dn
-
-# List tables in core schema
-\dt core.*
-
-# Describe table
-\d+ core.dim_item
-
-# Run query
-SELECT COUNT(*) FROM core.fact_demand_daily;
-
-# Exit psql
-\q
-```
-
-### Backend
-
-```bash
-# Install dependencies
-pip install -r requirements_deployment.txt
-
-# Run Flask API (development)
-python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 5000
-
-# Run Flask API (production)
-gunicorn -b 0.0.0.0:5000 -w 4 backend.api.enhanced_api:app
-
-# Apply migrations
-alembic upgrade head
-
-# Create new migration
-alembic revision -m "description"
-```
-
-### Frontend
-
-```bash
-# Install dependencies
-npm install
-
-# Run dev server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm run start
-
-# Run tests
-npm test
-
-# Type check
-npm run type-check
-```
-
-### Docker
-
-```bash
-# Start all services (production)
-docker-compose -f docker-compose.prod.yml up -d
-
-# View logs
-docker-compose logs -f backend
-docker-compose logs -f frontend
-
-# Stop services
-docker-compose down
-
-# Rebuild images
-docker-compose build --no-cache
-```
+### Database Content
+- **1,096** calendar dates (3 years)
+- **500** items/materials
+- **~27,000** demand records
+- **~27,000** inventory records
+- **30** daily KPIs
+- **50** recommendations
+- **30** alerts
+- **1** admin user (username: `admin`, password: `admin123`)
 
 ---
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
-### PostgreSQL Connection Error
+### "Can't connect to PostgreSQL"
+1. Check PostgreSQL is running:
+   ```bash
+   pg_isready -U nova_corrente
+   ```
+2. Verify password in `backend/.env`
+3. Check database exists:
+   ```bash
+   psql -U nova_corrente -l
+   ```
 
-**Error**: `FATAL: password authentication failed`
-
-**Fix**:
+### "Alembic command not found"
 ```bash
-# Update backend/.env with correct password
-DATABASE_URL=postgresql://nova_corrente:devpassword123@localhost:5432/nova_corrente
+pip install alembic
 ```
 
-### Flask API Not Starting
-
-**Error**: `ModuleNotFoundError: No module named 'pydantic_settings'`
-
-**Fix**:
+### "Module not found" errors
 ```bash
-pip install pydantic-settings
-```
-
-### Frontend API 404
-
-**Error**: `Failed to fetch http://localhost:5000/api/v1/items`
-
-**Fix**:
-1. Ensure Flask is running: `curl http://localhost:5000/health`
-2. Check `frontend/.env.local` has correct API URL
-3. Restart Next.js dev server
-
-### Database Schema Missing
-
-**Error**: `relation "core.dim_item" does not exist`
-
-**Fix**:
-```bash
-# Apply migrations
 cd backend
-alembic upgrade head
+pip install -r requirements_deployment.txt
+```
+
+### "Frontend can't connect to API"
+1. Verify backend is running: http://localhost:5000/health
+2. Check `frontend/.env.local`:
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:5000
+   ```
+3. Clear browser cache and reload
+
+### "No data in dashboard"
+1. Re-run demo data generator:
+   ```bash
+   python backend/scripts/generate_demo_data.py
+   ```
+2. Check API directly: http://localhost:5000/api/v1/items
+3. Check browser console for errors (F12)
+
+---
+
+## 📱 Access URLs
+
+| Service | URL | Notes |
+|---------|-----|-------|
+| **Frontend Dashboard** | http://localhost:3000 | Main UI |
+| **Backend API** | http://localhost:5000 | REST API |
+| **Health Check** | http://localhost:5000/health | System status |
+| **Items API** | http://localhost:5000/api/v1/items | Materials catalog |
+| **KPIs API** | http://localhost:5000/api/v1/analytics/kpis | Daily metrics |
+| **PostgreSQL** | localhost:5432 | Database: `nova_corrente` |
+
+---
+
+## 🎓 Learn More
+
+- **Complete Setup Guide**: `SETUP_GUIDE.md`
+- **Implementation Details**: `REFACTORING_COMPLETE.md`
+- **Project Specification**: `docs/proj/diagrams/Project.md`
+
+---
+
+## 🚦 System Status
+
+After successful setup, you should see:
+
+**Terminal 1 (Backend)**:
+```
+🚀 Nova Corrente Flask API Server
+====================================
+📡 Host: 127.0.0.1
+🔌 Port: 5000
+📚 Health: http://127.0.0.1:5000/health
+====================================
+ * Running on http://127.0.0.1:5000
+```
+
+**Terminal 2 (Frontend)**:
+```
+▲ Next.js 14.2.0
+- Local:        http://localhost:3000
+- Ready in 2.1s
 ```
 
 ---
 
-## Next Steps
+## 💡 Tips
 
-1. ✅ Read **`docs/proj/diagrams/Project.md`** for complete specification
-2. ✅ Follow **`IMPLEMENTATION_CHECKLIST.md`** for step-by-step tasks
-3. ✅ Create Alembic migration with DDL from Project.md Section 3
-4. ✅ Implement Flask API endpoints from Project.md Section 4
-5. ✅ Build Next.js dashboard pages from Project.md Section 5
-6. ✅ Set up ML pipeline from Project.md Section 6
-7. ✅ Deploy via Docker Compose from Project.md Section 9
+1. **Auto-refresh**: Frontend auto-refreshes data every 30s-5min depending on component
+2. **Filters**: Try different families and ABC classes in materials table
+3. **Charts**: Click any item in the table to see its demand time series
+4. **API Explorer**: Visit http://localhost:5000/api/v1/items to see raw JSON
 
 ---
 
-## Resources
+## ✅ Success!
 
-- **PostgreSQL Docs**: https://www.postgresql.org/docs/14/
-- **Flask Docs**: https://flask.palletsprojects.com/
-- **Next.js Docs**: https://nextjs.org/docs
-- **Alembic Tutorial**: https://alembic.sqlalchemy.org/en/latest/tutorial.html
-- **Recharts Examples**: https://recharts.org/en-US/examples
+If you see the dashboard with:
+- ✅ KPI cards showing numbers
+- ✅ Materials table with 500 items
+- ✅ Alerts and recommendations panels
 
----
-
-## Support
-
-- **GitHub Issues**: https://github.com/novacorrente/gran-prix/issues
-- **Documentation**: `docs/proj/diagrams/Project.md`
-- **Email**: tech@novacorrente.com (replace with actual)
+**Congratulations!** 🎉 Nova Corrente is running successfully!
 
 ---
 
-**Status**: ✅ Ready to Start  
-**Estimated Time**: 5 weeks (full implementation)  
-**Quick Demo Setup**: 5 minutes (this guide)  
-**Last Updated**: 2025-11-05
+*Quick Start Guide - Nova Corrente Analytics Platform*  
+*Last Updated: November 5, 2025*
