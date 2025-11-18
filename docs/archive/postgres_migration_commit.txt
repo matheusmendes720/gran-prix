@@ -1,0 +1,188 @@
+b14ef77ac1d0b3b77df2b7daad9c5a84b903e5f4|2025-11-05|feat: PostgreSQL migration and full-stack enhancements - Migrated database from MySQL to PostgreSQL with connection pooling - Added Redis caching layer for enhanced API performance - Implemented Alembic for database migrations - Added authentication and audit services - Enhanced frontend with new pages (forecasts, materials, recommendations) - Updated Docker configuration for production deployment - Added comprehensive deployment documentation
+
+ .env.example                                       |    20 +
+ CHANGELOG.md                                       |   563 +-
+ DEPLOYMENT.md                                      |   191 +
+ IMPLEMENTATION_CHECKLIST.md                        |   226 +
+ POSTGRES_MIGRATION_SUMMARY.md                      |   313 +
+ QUICK_START.md                                     |   292 +
+ backend/.env                                       |    26 +-
+ backend/Dockerfile                                 |    23 +
+ backend/alembic.ini                                |    88 +
+ backend/alembic/env.py                             |    78 +
+ backend/alembic/versions/001_initial_schema.py     |   455 +
+ backend/api/enhanced_api.py                        |   951 +-
+ backend/api/enhanced_api_redis.py                  |   693 +
+ backend/app/config.py                              |   129 +-
+ backend/config/database_config.py                  |    35 +-
+ backend/db/schema.sql                              |   354 +
+ backend/etl/calculate_kpis.sql                     |    47 +
+ backend/etl/load_ml_outputs.py                     |   217 +
+ backend/etl/run_kpi_calculations.py                |    27 +
+ backend/ml_pipeline/main.py                        |   190 +
+ backend/node_modules/.package-lock.json            |   104 +
+ .../node_modules/commander/package-support.json    |    16 +
+ backend/node_modules/commander/package.json        |    69 +
+ backend/node_modules/js-tokens/package.json        |    30 +
+ backend/node_modules/katex/dist/README.md          |   125 +
+ .../node_modules/katex/dist/contrib/auto-render.js |   338 +
+ .../katex/dist/contrib/auto-render.min.js          |     1 +
+ .../katex/dist/contrib/auto-render.mjs             |   244 +
+ .../node_modules/katex/dist/contrib/copy-tex.js    |   127 +
+ .../katex/dist/contrib/copy-tex.min.js             |     1 +
+ .../node_modules/katex/dist/contrib/copy-tex.mjs   |   105 +
+ .../katex/dist/contrib/mathtex-script-type.js      |   109 +
+ .../katex/dist/contrib/mathtex-script-type.min.js  |     1 +
+ .../katex/dist/contrib/mathtex-script-type.mjs     |    24 +
+ backend/node_modules/katex/dist/contrib/mhchem.js  |  3213 ++++
+ .../node_modules/katex/dist/contrib/mhchem.min.js  |     1 +
+ backend/node_modules/katex/dist/contrib/mhchem.mjs |  3109 +++
+ .../katex/dist/contrib/render-a11y-string.js       |   887 +
+ .../katex/dist/contrib/render-a11y-string.min.js   |     1 +
+ .../katex/dist/contrib/render-a11y-string.mjs      |   800 +
+ .../katex/dist/fonts/KaTeX_AMS-Regular.ttf         |   Bin 0 -> 63632 bytes
+ .../katex/dist/fonts/KaTeX_AMS-Regular.woff        |   Bin 0 -> 33516 bytes
+ .../katex/dist/fonts/KaTeX_AMS-Regular.woff2       |   Bin 0 -> 28076 bytes
+ .../katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf    |   Bin 0 -> 12368 bytes
+ .../katex/dist/fonts/KaTeX_Caligraphic-Bold.woff   |   Bin 0 -> 7716 bytes
+ .../katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2  |   Bin 0 -> 6912 bytes
+ .../katex/dist/fonts/KaTeX_Caligraphic-Regular.ttf |   Bin 0 -> 12344 bytes
+ .../dist/fonts/KaTeX_Caligraphic-Regular.woff      |   Bin 0 -> 7656 bytes
+ .../dist/fonts/KaTeX_Caligraphic-Regular.woff2     |   Bin 0 -> 6908 bytes
+ .../katex/dist/fonts/KaTeX_Fraktur-Bold.ttf        |   Bin 0 -> 19584 bytes
+ .../katex/dist/fonts/KaTeX_Fraktur-Bold.woff       |   Bin 0 -> 13296 bytes
+ .../katex/dist/fonts/KaTeX_Fraktur-Bold.woff2      |   Bin 0 -> 11348 bytes
+ .../katex/dist/fonts/KaTeX_Fraktur-Regular.ttf     |   Bin 0 -> 19572 bytes
+ .../katex/dist/fonts/KaTeX_Fraktur-Regular.woff    |   Bin 0 -> 13208 bytes
+ .../katex/dist/fonts/KaTeX_Fraktur-Regular.woff2   |   Bin 0 -> 11316 bytes
+ .../katex/dist/fonts/KaTeX_Main-Bold.ttf           |   Bin 0 -> 51336 bytes
+ .../katex/dist/fonts/KaTeX_Main-Bold.woff          |   Bin 0 -> 29912 bytes
+ .../katex/dist/fonts/KaTeX_Main-Bold.woff2         |   Bin 0 -> 25324 bytes
+ .../katex/dist/fonts/KaTeX_Main-BoldItalic.ttf     |   Bin 0 -> 32968 bytes
+ .../katex/dist/fonts/KaTeX_Main-BoldItalic.woff    |   Bin 0 -> 19412 bytes
+ .../katex/dist/fonts/KaTeX_Main-BoldItalic.woff2   |   Bin 0 -> 16780 bytes
+ .../katex/dist/fonts/KaTeX_Main-Italic.ttf         |   Bin 0 -> 33580 bytes
+ .../katex/dist/fonts/KaTeX_Main-Italic.woff        |   Bin 0 -> 19676 bytes
+ .../katex/dist/fonts/KaTeX_Main-Italic.woff2       |   Bin 0 -> 16988 bytes
+ .../katex/dist/fonts/KaTeX_Main-Regular.ttf        |   Bin 0 -> 53580 bytes
+ .../katex/dist/fonts/KaTeX_Main-Regular.woff       |   Bin 0 -> 30772 bytes
+ .../katex/dist/fonts/KaTeX_Main-Regular.woff2      |   Bin 0 -> 26272 bytes
+ .../katex/dist/fonts/KaTeX_Math-BoldItalic.ttf     |   Bin 0 -> 31196 bytes
+ .../katex/dist/fonts/KaTeX_Math-BoldItalic.woff    |   Bin 0 -> 18668 bytes
+ .../katex/dist/fonts/KaTeX_Math-BoldItalic.woff2   |   Bin 0 -> 16400 bytes
+ .../katex/dist/fonts/KaTeX_Math-Italic.ttf         |   Bin 0 -> 31308 bytes
+ .../katex/dist/fonts/KaTeX_Math-Italic.woff        |   Bin 0 -> 18748 bytes
+ .../katex/dist/fonts/KaTeX_Math-Italic.woff2       |   Bin 0 -> 16440 bytes
+ .../katex/dist/fonts/KaTeX_SansSerif-Bold.ttf      |   Bin 0 -> 24504 bytes
+ .../katex/dist/fonts/KaTeX_SansSerif-Bold.woff     |   Bin 0 -> 14408 bytes
+ .../katex/dist/fonts/KaTeX_SansSerif-Bold.woff2    |   Bin 0 -> 12216 bytes
+ .../katex/dist/fonts/KaTeX_SansSerif-Italic.ttf    |   Bin 0 -> 22364 bytes
+ .../katex/dist/fonts/KaTeX_SansSerif-Italic.woff   |   Bin 0 -> 14112 bytes
+ .../katex/dist/fonts/KaTeX_SansSerif-Italic.woff2  |   Bin 0 -> 12028 bytes
+ .../katex/dist/fonts/KaTeX_SansSerif-Regular.ttf   |   Bin 0 -> 19436 bytes
+ .../katex/dist/fonts/KaTeX_SansSerif-Regular.woff  |   Bin 0 -> 12316 bytes
+ .../katex/dist/fonts/KaTeX_SansSerif-Regular.woff2 |   Bin 0 -> 10344 bytes
+ .../katex/dist/fonts/KaTeX_Script-Regular.ttf      |   Bin 0 -> 16648 bytes
+ .../katex/dist/fonts/KaTeX_Script-Regular.woff     |   Bin 0 -> 10588 bytes
+ .../katex/dist/fonts/KaTeX_Script-Regular.woff2    |   Bin 0 -> 9644 bytes
+ .../katex/dist/fonts/KaTeX_Size1-Regular.ttf       |   Bin 0 -> 12228 bytes
+ .../katex/dist/fonts/KaTeX_Size1-Regular.woff      |   Bin 0 -> 6496 bytes
+ .../katex/dist/fonts/KaTeX_Size1-Regular.woff2     |   Bin 0 -> 5468 bytes
+ .../katex/dist/fonts/KaTeX_Size2-Regular.ttf       |   Bin 0 -> 11508 bytes
+ .../katex/dist/fonts/KaTeX_Size2-Regular.woff      |   Bin 0 -> 6188 bytes
+ .../katex/dist/fonts/KaTeX_Size2-Regular.woff2     |   Bin 0 -> 5208 bytes
+ .../katex/dist/fonts/KaTeX_Size3-Regular.ttf       |   Bin 0 -> 7588 bytes
+ .../katex/dist/fonts/KaTeX_Size3-Regular.woff      |   Bin 0 -> 4420 bytes
+ .../katex/dist/fonts/KaTeX_Size3-Regular.woff2     |   Bin 0 -> 3624 bytes
+ .../katex/dist/fonts/KaTeX_Size4-Regular.ttf       |   Bin 0 -> 10364 bytes
+ .../katex/dist/fonts/KaTeX_Size4-Regular.woff      |   Bin 0 -> 5980 bytes
+ .../katex/dist/fonts/KaTeX_Size4-Regular.woff2     |   Bin 0 -> 4928 bytes
+ .../katex/dist/fonts/KaTeX_Typewriter-Regular.ttf  |   Bin 0 -> 27556 bytes
+ .../katex/dist/fonts/KaTeX_Typewriter-Regular.woff |   Bin 0 -> 16028 bytes
+ .../dist/fonts/KaTeX_Typewriter-Regular.woff2      |   Bin 0 -> 13568 bytes
+ backend/node_modules/katex/dist/katex-swap.css     |  1230 ++
+ backend/node_modules/katex/dist/katex-swap.min.css |     1 +
+ backend/node_modules/katex/dist/katex.css          |  1230 ++
+ backend/node_modules/katex/dist/katex.js           | 19076 +++++++++++++++++++
+ backend/node_modules/katex/dist/katex.min.css      |     1 +
+ backend/node_modules/katex/dist/katex.min.js       |     1 +
+ backend/node_modules/katex/dist/katex.mjs          | 18541 ++++++++++++++++++
+ backend/node_modules/katex/package.json            |   196 +
+ backend/node_modules/loose-envify/package.json     |    36 +
+ backend/node_modules/object-assign/package.json    |    42 +
+ backend/node_modules/prop-types/package.json       |    60 +
+ backend/node_modules/react-is/build-info.json      |     8 +
+ backend/node_modules/react-is/package.json         |    27 +
+ .../react-katex/coverage/coverage-final.json       |     3 +
+ .../fonts/OpenSans-Bold-webfont.eot                |   Bin 0 -> 19544 bytes
+ .../fonts/OpenSans-Bold-webfont.svg                |  1830 ++
+ .../fonts/OpenSans-Bold-webfont.woff               |   Bin 0 -> 22432 bytes
+ .../fonts/OpenSans-BoldItalic-webfont.eot          |   Bin 0 -> 20133 bytes
+ .../fonts/OpenSans-BoldItalic-webfont.svg          |  1830 ++
+ .../fonts/OpenSans-BoldItalic-webfont.woff         |   Bin 0 -> 23048 bytes
+ .../fonts/OpenSans-Italic-webfont.eot              |   Bin 0 -> 20265 bytes
+ .../fonts/OpenSans-Italic-webfont.svg              |  1830 ++
+ .../fonts/OpenSans-Italic-webfont.woff             |   Bin 0 -> 23188 bytes
+ .../fonts/OpenSans-Light-webfont.eot               |   Bin 0 -> 19514 bytes
+ .../fonts/OpenSans-Light-webfont.svg               |  1831 ++
+ .../fonts/OpenSans-Light-webfont.woff              |   Bin 0 -> 22248 bytes
+ .../fonts/OpenSans-LightItalic-webfont.eot         |   Bin 0 -> 20535 bytes
+ .../fonts/OpenSans-LightItalic-webfont.svg         |  1835 ++
+ .../fonts/OpenSans-LightItalic-webfont.woff        |   Bin 0 -> 23400 bytes
+ .../fonts/OpenSans-Regular-webfont.eot             |   Bin 0 -> 19836 bytes
+ .../fonts/OpenSans-Regular-webfont.svg             |  1831 ++
+ .../fonts/OpenSans-Regular-webfont.woff            |   Bin 0 -> 22660 bytes
+ .../react-katex/dist/react-katex.d.ts/global.html  |   555 +
+ .../react-katex/dist/react-katex.d.ts/index.html   |    65 +
+ .../dist/react-katex.d.ts/index.jsx.html           |   142 +
+ .../dist/react-katex.d.ts/scripts/linenumber.js    |    25 +
+ .../scripts/prettify/Apache-License-2.0.txt        |   202 +
+ .../react-katex.d.ts/scripts/prettify/lang-css.js  |     2 +
+ .../react-katex.d.ts/scripts/prettify/prettify.js  |    28 +
+ .../dist/react-katex.d.ts/styles/jsdoc-default.css |   358 +
+ .../react-katex.d.ts/styles/prettify-jsdoc.css     |   111 +
+ .../react-katex.d.ts/styles/prettify-tomorrow.css  |   132 +
+ .../node_modules/react-katex/dist/react-katex.js   |   174 +
+ .../react-katex/dist/react-katex.js.map            |     1 +
+ backend/node_modules/react-katex/package.json      |    58 +
+ backend/node_modules/react/package.json            |    51 +
+ backend/package-lock.json                          |   110 +
+ backend/package.json                               |     6 +
+ backend/requirements.txt                           |    91 +-
+ backend/requirements_deployment.txt                |    99 +-
+ backend/scripts/generate_demo_data.py              |   277 +
+ backend/services/audit_service.py                  |   160 +
+ backend/services/auth_service.py                   |   124 +
+ backend/services/database_service.py               |   315 +-
+ backend/utils/password_utils.py                    |    34 +
+ docker-compose.prod.yml                            |   180 +-
+ docker-compose.yml                                 |   115 +-
+ docs/proj/diagrams/Project.md                      |  2349 +++
+ ...aria-de-dados-anamnese-e-plano-6daf2502.plan.md |   102 +
+ frontend/Dockerfile                                |    36 +
+ frontend/next.config.js                            |    25 +-
+ frontend/package.json                              |    58 +-
+ frontend/src/app/forecasts/page.tsx                |   160 +
+ frontend/src/app/globals.css                       |    25 +
+ frontend/src/app/layout-old.tsx                    |    26 +
+ frontend/src/app/layout.tsx                        |    81 +-
+ frontend/src/app/materials/[itemId]/page.tsx       |   132 +
+ frontend/src/app/materials/layout.tsx              |    13 +
+ frontend/src/app/materials/page.tsx                |   180 +
+ frontend/src/app/navigation.tsx                    |    46 +
+ frontend/src/app/page.tsx                          |   141 +-
+ frontend/src/app/recommendations/page.tsx          |   199 +
+ frontend/src/app/root-layout.tsx                   |    26 +
+ frontend/src/components/AlertList.tsx              |    61 +
+ frontend/src/components/KpiCard.tsx                |    64 +-
+ frontend/src/components/charts/DemandChart.tsx     |    61 +
+ .../src/components/charts/DemandTrendChart.tsx     |    82 +
+ frontend/src/components/charts/ForecastChart.tsx   |    77 +
+ frontend/src/components/charts/InventoryChart.tsx  |    82 +
+ frontend/src/components/ui/alert.tsx               |    62 +
+ frontend/src/components/ui/card.tsx                |    80 +
+ frontend/src/components/ui/tabs.tsx                |    54 +
+ frontend/src/lib/api.ts                            |   684 +-
+ frontend/src/lib/utils.ts                          |     7 +
+ frontend/tsconfig.json                             |    34 +-
+ 185 files changed, 72008 insertions(+), 2016 deletions(-)

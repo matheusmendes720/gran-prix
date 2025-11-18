@@ -1,0 +1,37 @@
+{
+  "download_date": "2025-11-11T02:21:15.122637",
+  "commodities": {
+    "copper": {
+      "records": 1258,
+      "date_range": {
+        "start": "2020-11-12T02:00:00",
+        "end": "2025-11-11T02:10:55"
+      },
+      "latest_price": 5.08050012588501
+    },
+    "aluminum": {
+      "records": 1255,
+      "date_range": {
+        "start": "2020-11-12T02:00:00",
+        "end": "2025-11-10T12:50:55"
+      },
+      "latest_price": 2867.0
+    },
+    "semiconductors": {
+      "records": 1254,
+      "date_range": {
+        "start": "2020-11-12T11:30:00",
+        "end": "2025-11-10T11:30:00"
+      },
+      "latest_price": 302.0
+    },
+    "natural_gas": {
+      "records": 366,
+      "date_range": {
+        "start": "2024-11-11T02:21:15.120460",
+        "end": "2025-11-11T02:21:15.120460"
+      },
+      "latest_price": 3.1500000000000004
+    }
+  }
+}

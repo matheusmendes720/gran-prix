@@ -1,0 +1,116 @@
+{
+  "best_model": "RandomForest",
+  "model_performance": {
+    "mae": 27.376580335218588,
+    "rmse": 99.03011719838622,
+    "r2": 0.6240983552549567,
+    "mape": 342.4511737451515
+  },
+  "predictions": {
+    "frequency": {
+      "actual_demand": 8.4,
+      "predicted_demand": 8.214926235415003,
+      "demand_volatility": 0.0,
+      "forecast_error": 0.18507376458499714,
+      "risk_score": 0.020084128712145047
+    },
+    "demand_ma_7": {
+      "actual_demand": 1.0,
+      "predicted_demand": 1.0189485271597205,
+      "demand_volatility": 0.09608644779959069,
+      "forecast_error": 0.0194934090494843,
+      "risk_score": 0.009655228346464012
+    },
+    "demand_ma_30": {
+      "actual_demand": 1.0,
+      "predicted_demand": 1.005161507485148,
+      "demand_volatility": 0.023280037597069373,
+      "forecast_error": 0.005161507485148131,
+      "risk_score": 0.002574110597017014
+    }
+  },
+  "recommendations": {
+    "frequency": {
+      "safety_stock": 0.0,
+      "reorder_point": 82.14926235415004,
+      "inventory_savings": 9857.911482497999,
+      "priority": "LOW",
+      "recommended_action": "STANDARD: Maintain current inventory policy for frequency, continue regular monitoring"
+    },
+    "demand_ma_7": {
+      "safety_stock": 0.5013558450806083,
+      "reorder_point": 10.690841116677813,
+      "inventory_savings": 1222.7382325916642,
+      "priority": "LOW",
+      "recommended_action": "STANDARD: Maintain current inventory policy for demand_ma_7, continue regular monitoring"
+    },
+    "demand_ma_30": {
+      "safety_stock": 0.12146960565480253,
+      "reorder_point": 10.173084680506284,
+      "inventory_savings": 1206.1938089821779,
+      "priority": "LOW",
+      "recommended_action": "STANDARD: Maintain current inventory policy for demand_ma_30, continue regular monitoring"
+    }
+  },
+  "business_scenarios": {
+    "frequency": {
+      "conservative": {
+        "demand_multiplier": 0.8,
+        "safety_stock_multiplier": 1.5,
+        "expected_cost": 47317.97511599042
+      },
+      "baseline": {
+        "demand_multiplier": 1.0,
+        "safety_stock_multiplier": 1.0,
+        "expected_cost": 39431.64592999202
+      },
+      "aggressive": {
+        "demand_multiplier": 1.2,
+        "safety_stock_multiplier": 0.7,
+        "expected_cost": 35488.481336992816
+      }
+    },
+    "demand_ma_7": {
+      "conservative": {
+        "demand_multiplier": 0.8,
+        "safety_stock_multiplier": 1.5,
+        "expected_cost": 5869.14351643999
+      },
+      "baseline": {
+        "demand_multiplier": 1.0,
+        "safety_stock_multiplier": 1.0,
+        "expected_cost": 4890.952930366659
+      },
+      "aggressive": {
+        "demand_multiplier": 1.2,
+        "safety_stock_multiplier": 0.7,
+        "expected_cost": 4401.857637329993
+      }
+    },
+    "demand_ma_30": {
+      "conservative": {
+        "demand_multiplier": 0.8,
+        "safety_stock_multiplier": 1.5,
+        "expected_cost": 5789.7302831144525
+      },
+      "baseline": {
+        "demand_multiplier": 1.0,
+        "safety_stock_multiplier": 1.0,
+        "expected_cost": 4824.775235928711
+      },
+      "aggressive": {
+        "demand_multiplier": 1.2,
+        "safety_stock_multiplier": 0.7,
+        "expected_cost": 4342.29771233584
+      }
+    }
+  },
+  "summary": {
+    "total_families_analyzed": 3,
+    "high_risk_families": 0,
+    "high_risk_family_names": [],
+    "total_inventory_savings": 12286.84352407184,
+    "implementation_cost": 50000,
+    "expected_roi": 1.948842445777242
+  }
+}

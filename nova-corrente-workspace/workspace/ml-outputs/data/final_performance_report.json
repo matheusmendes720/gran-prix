@@ -1,0 +1,222 @@
+{
+  "report_date": "2025-11-02T22:40:13.359090",
+  "report_type": "comprehensive_performance_analysis",
+  "executive_summary": {
+    "baseline_mape": 100.0,
+    "optimized_mape": 87.26552197486419,
+    "improvement_pct": 12.734478025135815,
+    "families_trained": 5,
+    "families_under_15_mape": 0,
+    "families_under_30_mape": 0,
+    "families_under_50_mape": 0
+  },
+  "detailed_comparison": {
+    "comparison_date": "2025-11-02T22:40:13.358812",
+    "baseline": {
+      "training_date": "2025-11-02T22:22:30.498658",
+      "families_trained": 5,
+      "families": {
+        "FERRO E AÇO": {
+          "best_model": null,
+          "best_mape": 100.0,
+          "models_trained": [
+            "baselines",
+            "linear_trend",
+            "arima",
+            "xgboost",
+            "best_model",
+            "best_mape"
+          ]
+        },
+        "MATERIAL ELETRICO": {
+          "best_model": null,
+          "best_mape": 100.0,
+          "models_trained": [
+            "baselines",
+            "linear_trend",
+            "arima",
+            "xgboost",
+            "best_model",
+            "best_mape"
+          ]
+        },
+        "MATERIAL CIVIL": {
+          "best_model": null,
+          "best_mape": 100.0,
+          "models_trained": [
+            "baselines",
+            "linear_trend",
+            "arima",
+            "xgboost",
+            "best_model",
+            "best_mape"
+          ]
+        },
+        "FERRAMENTAS E EQUIPAMENTOS": {
+          "best_model": null,
+          "best_mape": 100.0,
+          "models_trained": [
+            "baselines",
+            "linear_trend",
+            "arima",
+            "xgboost",
+            "best_model",
+            "best_mape"
+          ]
+        },
+        "EPI": {
+          "best_model": null,
+          "best_mape": 100.0,
+          "models_trained": [
+            "baselines",
+            "linear_trend",
+            "arima",
+            "xgboost",
+            "best_model",
+            "best_mape"
+          ]
+        }
+      },
+      "overall_best_mape": 100.0,
+      "families_under_15_mape": 0
+    },
+    "optimized": {
+      "training_date": "2025-11-02T22:37:36.146751",
+      "families_trained": 5,
+      "families": {
+        "FERRO E AÇO": {
+          "best_model": "naive_last",
+          "best_mape": 107.31753058066195,
+          "models_trained": [
+            "naive_last",
+            "moving_average_7",
+            "median",
+            "ensemble"
+          ]
+        },
+        "MATERIAL ELETRICO": {
+          "best_model": "median",
+          "best_mape": 123.92373162121957,
+          "models_trained": [
+            "naive_last",
+            "moving_average_7",
+            "median",
+            "ensemble"
+          ]
+        },
+        "MATERIAL CIVIL": {
+          "best_model": "moving_average_7",
+          "best_mape": 115.92320894142445,
+          "models_trained": [
+            "naive_last",
+            "moving_average_7",
+            "median",
+            "ensemble"
+          ]
+        },
+        "FERRAMENTAS E EQUIPAMENTOS": {
+          "best_model": "median",
+          "best_mape": 89.30172367256156,
+          "models_trained": [
+            "naive_last",
+            "moving_average_7",
+            "median",
+            "ensemble"
+          ]
+        },
+        "EPI": {
+          "best_model": "median",
+          "best_mape": 87.26552197486419,
+          "models_trained": [
+            "naive_last",
+            "moving_average_7",
+            "median",
+            "ensemble"
+          ]
+        }
+      },
+      "overall_best_mape": 87.26552197486419,
+      "families_under_15_mape": 0,
+      "families_under_30_mape": 0,
+      "families_under_50_mape": 0
+    },
+    "improvements": {
+      "overall_mape": {
+        "baseline": 100.0,
+        "optimized": 87.26552197486419,
+        "improvement_pct": 12.734478025135815,
+        "improvement": 12.734478025135815
+      },
+      "by_family": {
+        "FERRO E AÇO": {
+          "baseline_mape": 100.0,
+          "optimized_mape": 107.31753058066195,
+          "baseline_model": null,
+          "optimized_model": "naive_last",
+          "improvement_pct": -7.317530580661952,
+          "improvement": -7.317530580661952
+        },
+        "MATERIAL ELETRICO": {
+          "baseline_mape": 100.0,
+          "optimized_mape": 123.92373162121957,
+          "baseline_model": null,
+          "optimized_model": "median",
+          "improvement_pct": -23.923731621219574,
+          "improvement": -23.923731621219574
+        },
+        "MATERIAL CIVIL": {
+          "baseline_mape": 100.0,
+          "optimized_mape": 115.92320894142445,
+          "baseline_model": null,
+          "optimized_model": "moving_average_7",
+          "improvement_pct": -15.923208941424448,
+          "improvement": -15.923208941424448
+        },
+        "FERRAMENTAS E EQUIPAMENTOS": {
+          "baseline_mape": 100.0,
+          "optimized_mape": 89.30172367256156,
+          "baseline_model": null,
+          "optimized_model": "median",
+          "improvement_pct": 10.698276327438435,
+          "improvement": 10.698276327438435
+        },
+        "EPI": {
+          "baseline_mape": 100.0,
+          "optimized_mape": 87.26552197486419,
+          "baseline_model": null,
+          "optimized_model": "median",
+          "improvement_pct": 12.734478025135815,
+          "improvement": 12.734478025135815
+        }
+      },
+      "summary": {
+        "avg_improvement_pct": -4.746343358146345,
+        "median_improvement_pct": -7.317530580661952,
+        "max_improvement_pct": 12.734478025135815,
+        "min_improvement_pct": -23.923731621219574,
+        "families_improved": 2
+      }
+    }
+  },
+  "recommendations": {
+    "immediate_actions": [
+      "Fine-tune hyperparameters por família",
+      "Validar em test set",
+      "Implementar ensemble models mais sofisticados",
+      "Considerar transfer learning com dados longos"
+    ],
+    "future_improvements": [
+      "Criar features de lag mais sofisticadas",
+      "Features de interação (família × site × clima)",
+      "Implementar LSTM para padrões complexos",
+      "Deploy em produção com API endpoints"
+    ]
+  },
+  "next_steps": [
+    "1. Validar em test set com MAPE < 15% target",
+    "2. Fine-tune hyperparameters por família",
+    "3. Criar ensemble model mais sofisticado",
+    "4. Implementar pipeline de produção",
+    "5. Deploy com API endpoints e dashboard"
+  ]
+}

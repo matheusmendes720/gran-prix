@@ -3,16 +3,25 @@ ARIMA/SARIMA Model Implementation for Demand Forecasting
 Phase 2: Model Implementation
 Based on: MachineLearningMastery, MachineLearningPlus
 """
+import logging
 import pandas as pd
 import numpy as np
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.statespace.sarimax import SARIMAX
-from pmdarima import auto_arima
 from sklearn.metrics import mean_squared_error, mean_absolute_error, mean_absolute_percentage_error
 from math import sqrt
 from typing import Tuple, Optional, Dict
 import warnings
+
+try:  # pragma: no cover - optional dependency
+    from pmdarima import auto_arima  # type: ignore
+    _HAS_PM = True
+except ModuleNotFoundError:  # pragma: no cover - gracefully degrade when not available
+    auto_arima = None
+    _HAS_PM = False
+
 warnings.filterwarnings('ignore')
+logger = logging.getLogger(__name__)
 
 
 class ARIMAForecaster:
@@ -82,7 +91,11 @@ class ARIMAForecaster:
         """
         if seasonal is None:
             seasonal = self.seasonal
-        
+
+        if not _HAS_PM:
+            logger.warning("pmdarima not available; using default ARIMA order (1,1,1)")
+            return (1, 1, 1), (1, 1, 1, self.m) if seasonal else None
+
         try:
             model_auto = auto_arima(
                 series,
@@ -99,14 +112,14 @@ class ARIMAForecaster:
                 suppress_warnings=True,
                 stepwise=True
             )
-            
+
             order = model_auto.order
             seasonal_order = model_auto.seasonal_order if seasonal else None
-            
+
             return order, seasonal_order
-            
+
         except Exception as e:
-            print(f"Auto-ARIMA failed: {e}. Using default order (1,1,1)")
+            logger.warning("Auto-ARIMA failed: %s. Using default order (1,1,1)", e)
             return (1, 1, 1), (1, 1, 1, self.m) if seasonal else None
     
     def fit(self, series: pd.Series, exog: Optional[pd.DataFrame] = None,
@@ -195,21 +208,22 @@ class ARIMAForecaster:
         
         # Create dataframe
         if conf_int:
+            forecast_obj = self.fitted_model.get_forecast(steps=steps, exog=exog)
+            conf_df = forecast_obj.conf_int(alpha=alpha)
+            if isinstance(conf_df, pd.DataFrame):
+                lower_col = next((c for c in conf_df.columns if "lower" in c.lower()), conf_df.columns[0])
+                upper_col = next((c for c in conf_df.columns if "upper" in c.lower()), conf_df.columns[-1])
+                lower = conf_df[lower_col]
+                upper = conf_df[upper_col]
+            else:
+                lower = upper = pd.Series([np.nan] * len(forecast_result))
             forecast = pd.DataFrame({
                 'forecast': forecast_result,
-                'lower': self.fitted_model.get_forecast(
-                    steps=steps,
-                    exog=exog
-                ).conf_int(alpha=alpha)['lower'],
-                'upper': self.fitted_model.get_forecast(
-                    steps=steps,
-                    exog=exog
-                ).conf_int(alpha=alpha)['upper']
+                'lower': lower.values,
+                'upper': upper.values,
             })
         else:
-            forecast = pd.DataFrame({
-                'forecast': forecast_result
-            })
+            forecast = pd.DataFrame({'forecast': forecast_result})
         
         return forecast
     

@@ -1,0 +1,18 @@
+{
+  "series": [
+    {
+      "name": "ptax",
+      "value": 4.95,
+      "observed_at": "2025-11-03",
+      "unit": "brl/usd"
+    },
+    {
+      "name": "selic",
+      "value": 5.0,
+      "observed_at": "2025-11-03",
+      "unit": "percent"
+    }
+  ],
+  "source": "stub",
+  "week_end": "2025-11-03"
+}

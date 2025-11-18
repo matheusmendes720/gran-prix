@@ -154,3 +154,4 @@ async def get_ipea_data(
 
 
 
+

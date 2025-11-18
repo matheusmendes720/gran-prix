@@ -1,0 +1,60 @@
+* 0dd4624 (HEAD -> rollback/legacy-ui-restore, master) Complete PostgreSQL refactoring: migration, API, frontend components and setup automation
+* 1692a07 chore: update .gitignore to exclude binary files and update CHANGELOG
+* d2884c5 docs: add comprehensive implementation report
+* 6b165e7 chore: add large zip file to gitignore
+* b14ef77 feat: PostgreSQL migration and full-stack enhancements - Migrated database from MySQL to PostgreSQL with connection pooling - Added Redis caching layer for enhanced API performance - Implemented Alembic for database migrations - Added authentication and audit services - Enhanced frontend with new pages (forecasts, materials, recommendations) - Updated Docker configuration for production deployment - Added comprehensive deployment documentation
+* 0b2b47e (origin/master, origin/HEAD) Update backend APIs, integration manager, orchestrator, tests, and add diagnostic documentation
+* 9fd5f4d docs: Update CHANGELOG v2.4.0 with all collaborator contributions and create comprehensive tech_notes_docs.md navigation index
+* 1d93ba1 docs: Refatora├º├úo completa dos diagn├│sticos de engenharia de dados
+* 4622c62 docs: Add MMD diagram files and conversion scripts
+*   ca94699 Merge branch 'master' of https://github.com/matheusmendes720/gran-prix - Resolved CHANGELOG.md conflict
+|\  
+| * 368cad6 docs: Add comprehensive changelog for version 2.3.0 - Data Engineering Refactoring
+| * 06d1619 docs: Complete data engineering refactoring with comprehensive visual documentation
+| * 5b456f3 docs: Add comprehensive visual breakdown of data modeling strategy
+* | daf5ebc docs: Update CHANGELOG with Data Modeling Strategy merge (v2.3.0)
+* | ea331df Merge branch 'master' of https://github.com/matheusmendes720/gran-prix
+|\| 
+| * 1d5a63b feat: Add comprehensive data modeling strategy and star schema implementation
+* | a180d6e docs: atualizar README de in├¡cio r├ípido com link para guia de atualiza├º├úo
+* | 16cb63f docs: adicionar guia para atualizar reposit├│rio existente para Git LFS
+* | 5562b3e docs: adicionar README de in├¡cio r├ípido PT-BR
+|/  
+* 609e883 docs: adicionar guia completo PT-BR para clonar reposit├│rio com Git LFS
+* a7ad987 chore: setup Git LFS for CSV files
+* e9d86c7 chore: remove .cursor and .playwright-mcp from tracking (now ignored)
+* 82250d6 chore: update .gitignore to ignore only __pycache__, .clinerules, .cursor, .playwright-mcp
+* d3c18db feat: add all data directory files - force add ignored files from data/ directory
+*   a6c339e Merge: complete merge with Annotation_Sugestion.md
+|\  
+| * d0f7036 docs: merge Annotation_Sugestion.md from feature/data branch
+* | 08d313c docs: Update CHANGELOG with Git Workflow & AI Insights merge (v2.2.0)
+* |   402b04e (merge-git-workflow-ai-insights) Merge branch 'feature/git-workflow-and-ai-insights' into merge-git-workflow-ai-insights
+|\ \  
+| |/  
+|/|   
+| * e0a54c7 (tag: ai-insights-workflow-v1) feat(workflow): add git tooling and gemini-driven insights
+| * c7edbdc feat: add intelligent notification bell
+* | 711ccc8 docs: Add push to remote completion documentation
+* | 05f26cf docs: Add push success summary documentation
+* | 12d91f9 docs: Add final push completion documentation
+* | 6c5e5cc docs: Update CHANGELOG with contributor merge and workspace reorganization
+* | 69f49b3 docs: Add contributor merge documentation
+* |   7957d96 Merge remote-tracking branch 'origin/master'
+|\ \  
+| * \   e3616b9 Merge pull request #1 from matheusmendes720/feature/timeout-suite-docs
+| |\ \  
+| | |/  
+| |/|   
+| | * 089b26e docs: expand timeout isolation playbooks and observability tooling
+| |/  
+* | 9c0df83 (merge-contributor-feature) docs: Add final reorganization summary
+* | 73a4527 docs: Add next steps documentation after reorganization
+* | feded71 chore: Reorganize root workspace - move files to thematic subfolders
+* | 4e62dda (tag: v2.0.0, tag: v1.0.0-ml-constraint-enforcement, tag: sprint-4day-ready, tag: docs-complete) feat: Complete ML Ops Constraint Enforcement System
+|/  
+* 1798c80 (tag: v1.0.0) Initial commit: Nova Corrente - Demand Forecasting & Analytics System
+* f408659 (origin/feature/data) docs: Add annotation_sugestion roadmap notes
+* 5c6b7a8 (origin/feature/git-workflow-and-ai-insights) feat(workflow): add git tooling and gemini-driven insights
+* 061d918 feat: add intelligent notification bell
+* d02ddb8 (origin/feature/timeout-suite-docs) docs: expand timeout isolation playbooks and observability tooling

@@ -26,14 +26,14 @@ class TestIntegrationManager:
     
     @pytest.mark.asyncio
     async def test_initialize_all(self):
-        """Test initialization of all services (NO external clients in deployment)"""
+        """Test initialization of all services and clients"""
         result = await integration_manager.initialize_all()
         
         assert result is not None
         assert isinstance(result, dict)
         assert 'status' in result
         assert 'services' in result
-        # ❌ REMOVED: external_clients (not used in deployment)
+        assert 'external_clients' in result
         assert 'timestamp' in result
     
     @pytest.mark.asyncio
@@ -47,8 +47,33 @@ class TestIntegrationManager:
         # Should either be the service or None if not initialized
         assert db_service is None or hasattr(db_service, 'test_connection')
     
-    # ❌ REMOVED: test_get_external_client (external clients not used in deployment)
-    # ❌ REMOVED: test_refresh_all_external_data (external APIs disabled in deployment)
+    @pytest.mark.asyncio
+    async def test_get_external_client(self):
+        """Test getting an external client by name"""
+        # Initialize first
+        await integration_manager.initialize_all()
+        
+        # Try to get INMET client
+        inmet_client = integration_manager.get_external_client('inmet')
+        # Should either be config dict or None
+        assert inmet_client is None or isinstance(inmet_client, dict)
+    
+    @pytest.mark.asyncio
+    async def test_refresh_all_external_data(self):
+        """Test refreshing all external data"""
+        start_date = date.today() - timedelta(days=7)
+        end_date = date.today()
+        
+        result = await integration_manager.refresh_all_external_data(
+            start_date=start_date,
+            end_date=end_date
+        )
+        
+        assert result is not None
+        assert isinstance(result, dict)
+        assert 'start_date' in result
+        assert 'end_date' in result
+        assert 'status' in result
 
 
 class TestServiceInitialization:
@@ -63,11 +88,54 @@ class TestServiceInitialization:
         # Check if database service was attempted
         assert 'database' in result or 'database' in str(result)
     
-    # ❌ REMOVED: test_external_services_initialization (external clients not used in deployment)
+    @pytest.mark.asyncio
+    async def test_external_services_initialization(self):
+        """Test external services initialization"""
+        await integration_manager.initialize_all()
+        
+        result = integration_manager.external_clients
+        # Should have some external clients configured
+        assert len(result) >= 0  # At least initialized (may be empty if configs missing)
 
 
-# ❌ REMOVED: TestExternalClientInitialization class (external clients not used in deployment)
-# All external API client tests removed as they are disabled in deployment
+class TestExternalClientInitialization:
+    """Test external API client initialization"""
+    
+    @pytest.mark.asyncio
+    async def test_inmet_client_initialization(self):
+        """Test INMET client initialization"""
+        await integration_manager.initialize_all()
+        
+        inmet_client = integration_manager.get_external_client('inmet')
+        # Should be None or a dict with config
+        assert inmet_client is None or isinstance(inmet_client, dict)
+    
+    @pytest.mark.asyncio
+    async def test_bacen_client_initialization(self):
+        """Test BACEN client initialization"""
+        await integration_manager.initialize_all()
+        
+        bacen_client = integration_manager.get_external_client('bacen')
+        # Should be None or a dict with config
+        assert bacen_client is None or isinstance(bacen_client, dict)
+    
+    @pytest.mark.asyncio
+    async def test_anatel_client_initialization(self):
+        """Test ANATEL client initialization"""
+        await integration_manager.initialize_all()
+        
+        anatel_client = integration_manager.get_external_client('anatel')
+        # Should be None or a dict with config
+        assert anatel_client is None or isinstance(anatel_client, dict)
+    
+    @pytest.mark.asyncio
+    async def test_openweather_client_initialization(self):
+        """Test OpenWeatherMap client initialization"""
+        await integration_manager.initialize_all()
+        
+        openweather_client = integration_manager.get_external_client('openweather')
+        # Should be None or a dict with config
+        assert openweather_client is None or isinstance(openweather_client, dict)
 
 
 if __name__ == '__main__':

@@ -1,44 +1,99 @@
-from pydantic import BaseSettings
+"""
+Configuration management using Pydantic Settings
+"""
+from pydantic_settings import BaseSettings
+from pydantic import field_validator
+from typing import List, Union
 import os
+from pathlib import Path
+
 
 class Settings(BaseSettings):
-    # Application settings
-    APP_NAME: str = "Nova Corrente API"
-    APP_VERSION: str = "3.0.0-postgres"
-    DEBUG: bool = False
+    """Application settings"""
     
-    # Database settings
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "postgresql://nova_corrente:strong_password@localhost:5432/nova_corrente")
-    DB_HOST: str = os.getenv('DB_HOST', 'localhost')
-    DB_PORT: int = int(os.getenv('DB_PORT', 5432))
-    DB_USER: str = os.getenv('DB_USER', 'nova_corrente')
-    DB_PASSWORD: str = os.getenv('DB_PASSWORD', 'strong_password')
-    DB_NAME: str = os.getenv('DB_NAME', 'nova_corrente')
+    # API Configuration
+    API_HOST: str = os.getenv("API_HOST", "127.0.0.1")
+    API_PORT: int = int(os.getenv("API_PORT", "5000"))
+    API_RELOAD: bool = os.getenv("API_RELOAD", "false").lower() == "true"
     
-    # API settings
-    API_V1_STR: str = "/api/v1"
-    CORS_ORIGINS: str = os.getenv('CORS_ORIGINS', 'http://localhost:3000,http://localhost:3001')
+    # Database
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./data/nova_corrente.db")
     
-    # Security settings
-    SECRET_KEY: str = os.getenv('SECRET_KEY', 'change-this-in-production')
-    ALGORITHM: str = "HS256"
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 8  # 8 hours
+    # Data Refresh & ML Results (Read-Only)
+    # NOTE: ML processing runs in separate environment, deployment only reads precomputed results
+    ML_RESULTS_PATH: str = os.getenv("ML_RESULTS_PATH", "./data/ml_results")
+    DATA_REFRESH_ENABPOINT_ENABLED: bool = os.getenv("DATA_REFRESH_ENABPOINT_ENABLED", "true").lower() == "true"
     
-    # External API settings (disabled in production)
-    EXTERNAL_APIS_ENABLED: bool = os.getenv('EXTERNAL_APIS_ENABLED', 'false').lower() == 'true'
-    ENABLE_ML_PROCESSING: bool = os.getenv('ENABLE_ML_PROCESSING', 'false').lower() == 'true'
+    # Data
+    DATA_DIR: str = os.getenv("DATA_DIR", "./data")
+    RAW_DATA_DIR: str = os.getenv("RAW_DATA_DIR", "./data/raw")
+    PROCESSED_DATA_DIR: str = os.getenv("PROCESSED_DATA_DIR", "./data/processed")
     
-    # Feature flags
-    ENABLE_DEMAND_FORECASTING: bool = True
-    ENABLE_INVENTORY_OPTIMIZATION: bool = True
-    ENABLE_RECOMMENDATION_ENGINE: bool = True
+    # Logging
+    LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
+    LOG_DIR: str = os.getenv("LOG_DIR", "./logs")
     
-    # Caching settings
-    CACHE_DEFAULT_TIMEOUT: int = 300  # 5 minutes
+    # Security
+    SECRET_KEY: str = os.getenv("SECRET_KEY", "change-this-in-production")
+    ALGORITHM: str = os.getenv("ALGORITHM", "HS256")
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30"))
+    
+    # CORS - use string default and parse with validator
+    CORS_ORIGINS: Union[str, List[str]] = "http://localhost:3000,http://localhost:3001"
+    
+    @field_validator('CORS_ORIGINS', mode='before')
+    @classmethod
+    def parse_cors_origins(cls, v: Union[str, List[str]]) -> List[str]:
+        """Parse CORS_ORIGINS from string or list"""
+        if isinstance(v, list):
+            return v
+        if isinstance(v, str):
+            # Split by comma and strip whitespace
+            return [origin.strip() for origin in v.split(",") if origin.strip()]
+        # Default fallback
+        return ["http://localhost:3000", "http://localhost:3001"]
+    
+    # Frontend
+    FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:3000")
+    
+    # AI/GenAI Configuration
+    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
     
     class Config:
-        case_sensitive = True
         env_file = ".env"
+        env_file_encoding = "utf-8"
+        case_sensitive = True
+        # Don't fail if .env doesn't exist or has parsing errors
+        extra = "ignore"
 
-# Create settings instance
-settings = Settings()
+
+# Try to load settings, but use defaults if .env has issues
+try:
+    settings = Settings()
+except Exception as e:
+    # If .env parsing fails, use environment variables with defaults
+    print(f"Warning: Could not load settings from .env: {e}")
+    print("Using default environment variables...")
+    
+    class FallbackSettings:
+        """Fallback settings using only environment variables"""
+        API_HOST: str = os.getenv("API_HOST", "127.0.0.1")
+        API_PORT: int = int(os.getenv("API_PORT", "5000"))
+        API_RELOAD: bool = os.getenv("API_RELOAD", "false").lower() == "true"
+        DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./data/nova_corrente.db")
+        ML_RESULTS_PATH: str = os.getenv("ML_RESULTS_PATH", "./data/ml_results")
+        DATA_REFRESH_ENABPOINT_ENABLED: bool = os.getenv("DATA_REFRESH_ENABPOINT_ENABLED", "true").lower() == "true"
+        DATA_DIR: str = os.getenv("DATA_DIR", "./data")
+        RAW_DATA_DIR: str = os.getenv("RAW_DATA_DIR", "./data/raw")
+        PROCESSED_DATA_DIR: str = os.getenv("PROCESSED_DATA_DIR", "./data/processed")
+        LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
+        LOG_DIR: str = os.getenv("LOG_DIR", "./logs")
+        SECRET_KEY: str = os.getenv("SECRET_KEY", "change-this-in-production")
+        ALGORITHM: str = os.getenv("ALGORITHM", "HS256")
+        ACCESS_TOKEN_EXPIRE_MINUTES: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30"))
+        CORS_ORIGINS: List[str] = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:3001").split(",") if os.getenv("CORS_ORIGINS") else ["http://localhost:3000", "http://localhost:3001"]
+        FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:3000")
+        GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+    
+    settings = FallbackSettings()
+

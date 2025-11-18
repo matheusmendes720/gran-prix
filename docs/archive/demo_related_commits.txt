@@ -1,0 +1,2 @@
+1d93ba167b791f95a61774b0f29835f2849092c7|2025-11-05|docs: Refatora├º├úo completa dos diagn├│sticos de engenharia de dados
+4e62dda6b2f4416dfb49da8f8bdd78c0b5dd1dd6|2025-11-04|feat: Complete ML Ops Constraint Enforcement System

@@ -1,0 +1,60 @@
+{
+  "training_date": "2025-11-02T22:37:36.146751",
+  "families_trained": 5,
+  "families": {
+    "FERRO E AÇO": {
+      "best_model": "naive_last",
+      "best_mape": 107.31753058066195,
+      "models_trained": [
+        "naive_last",
+        "moving_average_7",
+        "median",
+        "ensemble"
+      ]
+    },
+    "MATERIAL ELETRICO": {
+      "best_model": "median",
+      "best_mape": 123.92373162121957,
+      "models_trained": [
+        "naive_last",
+        "moving_average_7",
+        "median",
+        "ensemble"
+      ]
+    },
+    "MATERIAL CIVIL": {
+      "best_model": "moving_average_7",
+      "best_mape": 115.92320894142445,
+      "models_trained": [
+        "naive_last",
+        "moving_average_7",
+        "median",
+        "ensemble"
+      ]
+    },
+    "FERRAMENTAS E EQUIPAMENTOS": {
+      "best_model": "median",
+      "best_mape": 89.30172367256156,
+      "models_trained": [
+        "naive_last",
+        "moving_average_7",
+        "median",
+        "ensemble"
+      ]
+    },
+    "EPI": {
+      "best_model": "median",
+      "best_mape": 87.26552197486419,
+      "models_trained": [
+        "naive_last",
+        "moving_average_7",
+        "median",
+        "ensemble"
+      ]
+    }
+  },
+  "overall_best_mape": 87.26552197486419,
+  "families_under_15_mape": 0,
+  "families_under_30_mape": 0,
+  "families_under_50_mape": 0
+}

@@ -1,0 +1,33 @@
+{
+  "feature_columns": [
+    "coverage_sites",
+    "date",
+    "day_of_week",
+    "deployment_phase",
+    "humidity_pct",
+    "item_id",
+    "lag_1",
+    "lag_28",
+    "lag_7",
+    "lead_time_days",
+    "month",
+    "precipitation_mm",
+    "ptax_value",
+    "region",
+    "rolling_mean_7",
+    "rolling_std_7",
+    "selic_value",
+    "site_id",
+    "temp_max_c",
+    "temp_min_c",
+    "week_of_year",
+    "wind_speed_kmh",
+    "year"
+  ],
+  "metadata": {
+    "snapshot": "D:\\codex\\datamaster\\senai\\gran_prix\\data\\warehouse\\gold\\20251111T121723",
+    "rows": "5764742",
+    "feature_columns": "coverage_sites,date,day_of_week,deployment_phase,humidity_pct,item_id,lag_1,lag_28,lag_7,lead_time_days,month,precipitation_mm,ptax_value,region,rolling_mean_7,rolling_std_7,selic_value,site_id,temp_max_c,temp_min_c,week_of_year,wind_speed_kmh,year",
+    "backend": "pandas"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "issued_at": "2025-11-11T17:13:36.550452",
+  "items": [
+    {
+      "regulation_id": "R-202511",
+      "title": "Placeholder regulation",
+      "effective_date": "2025-11-01",
+      "summary": "No regulatory changes - stub data",
+      "jurisdiction": "ANATEL"
+    }
+  ],
+  "source": "stub"
+}

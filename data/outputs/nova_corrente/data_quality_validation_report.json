@@ -1,0 +1,1135 @@
+{
+  "validation_date": "2025-11-02T22:21:08.457371",
+  "train": {
+    "info": {
+      "dataset_name": "TRAIN",
+      "total_records": 1624,
+      "total_features": 73,
+      "date_range": {
+        "min": "2024-10-09 00:00:00",
+        "max": "2025-06-26 00:00:00"
+      }
+    },
+    "missing_values": [
+      {
+        "column": "5g_coverage_pct",
+        "missing_count": 1624,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "corrosion_risk",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "temperature_avg_c",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "humidity_percent",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "precipitation_mm",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "inflation_rate",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "is_high_humidity",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "is_intense_rain",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "is_flood_risk",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "total_lead_time_days",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "sla_penalty_brl",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "availability_target",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "downtime_hours_monthly",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "customs_delay_days",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "base_lead_time_days",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "is_critical_lead_time",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "strike_risk",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "5g_investment_brl_billions",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "is_drought",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "is_holiday",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "is_5g_milestone",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "exchange_rate_brl_usd",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "gdp_growth_rate",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "sla_violation_risk",
+        "missing_count": 1519,
+        "missing_pct": 93.53
+      },
+      {
+        "column": "data_requisitada",
+        "missing_count": 1115,
+        "missing_pct": 68.66
+      },
+      {
+        "column": "lead_time_category",
+        "missing_count": 121,
+        "missing_pct": 7.45
+      },
+      {
+        "column": "lead_time_days",
+        "missing_count": 20,
+        "missing_pct": 1.23
+      },
+      {
+        "column": "deposito",
+        "missing_count": 1,
+        "missing_pct": 0.06
+      },
+      {
+        "column": "supplier_lead_time_mean",
+        "missing_count": 1,
+        "missing_pct": 0.06
+      }
+    ],
+    "outliers": {
+      "quantidade": {
+        "count": 290,
+        "percentage": 17.857142857142858,
+        "lower_bound": -27.5,
+        "upper_bound": 48.5
+      },
+      "site_id": {
+        "count": 177,
+        "percentage": 10.899014778325125,
+        "lower_bound": -39.0,
+        "upper_bound": 153.0
+      },
+      "solicitacao": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": 94135.625,
+        "upper_bound": 96304.625
+      },
+      "lead_time_days": {
+        "count": 202,
+        "percentage": 12.438423645320198,
+        "lower_bound": -16.0,
+        "upper_bound": 32.0
+      },
+      "year": {
+        "count": 105,
+        "percentage": 6.4655172413793105,
+        "lower_bound": 2025.0,
+        "upper_bound": 2025.0
+      },
+      "month": {
+        "count": 105,
+        "percentage": 6.4655172413793105,
+        "lower_bound": 0.0,
+        "upper_bound": 8.0
+      },
+      "day": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": -3.5,
+        "upper_bound": 40.5
+      },
+      "temperature_avg_c": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": 13.25,
+        "upper_bound": 39.25
+      },
+      "precipitation_mm": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": -303.0,
+        "upper_bound": 633.0
+      },
+      "humidity_percent": {
+        "count": 5,
+        "percentage": 0.3078817733990148,
+        "lower_bound": 77.5,
+        "upper_bound": 89.5
+      }
+    },
+    "distributions": {
+      "quantidade": {
+        "mean": 88.1684667487685,
+        "median": 4.0,
+        "std": 487.0041739439896,
+        "min": 0.58,
+        "max": 11650.0,
+        "skewness": 16.178695981719954,
+        "kurtosis": 325.6788221400587
+      },
+      "site_id": {
+        "mean": 71.1231527093596,
+        "median": 73.0,
+        "std": 45.7846318487912,
+        "min": -1.0,
+        "max": 188.0,
+        "skewness": 0.9066301293051129,
+        "kurtosis": -0.05061749431099427
+      },
+      "solicitacao": {
+        "mean": 95190.59113300493,
+        "median": 95154.0,
+        "std": 341.41237626492233,
+        "min": 94383.0,
+        "max": 95826.0,
+        "skewness": 0.1006095298487878,
+        "kurtosis": -0.7471452425322429
+      },
+      "lead_time_days": {
+        "mean": 12.807980049875312,
+        "median": 6.0,
+        "std": 18.986432721368967,
+        "min": 0.0,
+        "max": 154.0,
+        "skewness": 3.0405183832344256,
+        "kurtosis": 13.277299544111983
+      },
+      "year": {
+        "mean": 2024.9353448275863,
+        "median": 2025.0,
+        "std": 0.2459921589508117,
+        "min": 2024.0,
+        "max": 2025.0,
+        "skewness": -3.5438660279207204,
+        "kurtosis": 10.572004626264135
+      },
+      "month": {
+        "mean": 3.935344827586207,
+        "median": 3.0,
+        "std": 2.418634171390837,
+        "min": 1.0,
+        "max": 12.0,
+        "skewness": 1.5198333328823468,
+        "kurtosis": 2.8387438672729086
+      },
+      "day": {
+        "mean": 16.97105911330049,
+        "median": 17.0,
+        "std": 7.162132560109445,
+        "min": 1.0,
+        "max": 31.0,
+        "skewness": -0.2747940638961984,
+        "kurtosis": -0.8244782243613029
+      },
+      "temperature_avg_c": {
+        "mean": 26.69047619047619,
+        "median": 26.5,
+        "std": 3.583067116782766,
+        "min": 18.0,
+        "max": 34.0,
+        "skewness": 0.0360238921676577,
+        "kurtosis": -1.10522923201148
+      },
+      "precipitation_mm": {
+        "mean": 141.75238095238095,
+        "median": 120.0,
+        "std": 152.63321929940295,
+        "min": -150.0,
+        "max": 390.0,
+        "skewness": -0.12392744557943396,
+        "kurtosis": -1.2222697028065266
+      },
+      "humidity_percent": {
+        "mean": 83.5904761904762,
+        "median": 85.0,
+        "std": 3.065613372228362,
+        "min": 74.0,
+        "max": 90.0,
+        "skewness": -0.4957063613833789,
+        "kurtosis": 0.6189669316305872
+      }
+    },
+    "family_stats": {
+      "EPI": {
+        "records": 430,
+        "qty_mean": 4.9,
+        "qty_std": 10.5,
+        "qty_min": 0.58,
+        "qty_max": 100.0,
+        "lt_mean": 5.19,
+        "lt_std": 6.75,
+        "lt_min": 0.0,
+        "lt_max": 44.0,
+        "items_unique": 47,
+        "sites_unique": 66
+      },
+      "FERRAMENTAS E EQUIPAMENTOS": {
+        "records": 290,
+        "qty_mean": 38.37,
+        "qty_std": 118.92,
+        "qty_min": 1.0,
+        "qty_max": 816.0,
+        "lt_mean": 8.57,
+        "lt_std": 14.89,
+        "lt_min": 0.0,
+        "lt_max": 154.0,
+        "items_unique": 76,
+        "sites_unique": 61
+      },
+      "FERRO E AÇO": {
+        "records": 303,
+        "qty_mean": 249.16,
+        "qty_std": 855.5,
+        "qty_min": 1.0,
+        "qty_max": 10000.0,
+        "lt_mean": 15.9,
+        "lt_std": 21.07,
+        "lt_min": 0.0,
+        "lt_max": 154.0,
+        "items_unique": 107,
+        "sites_unique": 77
+      },
+      "MATERIAL CIVIL": {
+        "records": 224,
+        "qty_mean": 26.35,
+        "qty_std": 79.67,
+        "qty_min": 1.0,
+        "qty_max": 702.0,
+        "lt_mean": 19.22,
+        "lt_std": 29.08,
+        "lt_min": 0.0,
+        "lt_max": 154.0,
+        "items_unique": 64,
+        "sites_unique": 55
+      },
+      "MATERIAL ELETRICO": {
+        "records": 377,
+        "qty_mean": 128.79,
+        "qty_std": 621.69,
+        "qty_min": 1.0,
+        "qty_max": 11650.0,
+        "lt_mean": 18.51,
+        "lt_std": 18.3,
+        "lt_min": 0.0,
+        "lt_max": 111.0,
+        "items_unique": 123,
+        "sites_unique": 68
+      }
+    }
+  },
+  "validation": {
+    "info": {
+      "dataset_name": "VALIDATION",
+      "total_records": 407,
+      "total_features": 73,
+      "date_range": {
+        "min": "2025-06-26 00:00:00",
+        "max": "2025-08-11 00:00:00"
+      }
+    },
+    "missing_values": [
+      {
+        "column": "is_flood_risk",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "temperature_avg_c",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "precipitation_mm",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "humidity_percent",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_intense_rain",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "corrosion_risk",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_high_humidity",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "inflation_rate",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "data_requisitada",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "sla_violation_risk",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "sla_penalty_brl",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "availability_target",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "downtime_hours_monthly",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "total_lead_time_days",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "base_lead_time_days",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "customs_delay_days",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "strike_risk",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_critical_lead_time",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_drought",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_holiday",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_5g_milestone",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "5g_investment_brl_billions",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "5g_coverage_pct",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "gdp_growth_rate",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "exchange_rate_brl_usd",
+        "missing_count": 407,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "deposito",
+        "missing_count": 47,
+        "missing_pct": 11.55
+      },
+      {
+        "column": "lead_time_category",
+        "missing_count": 27,
+        "missing_pct": 6.63
+      },
+      {
+        "column": "lead_time_days",
+        "missing_count": 8,
+        "missing_pct": 1.97
+      }
+    ],
+    "outliers": {
+      "quantidade": {
+        "count": 56,
+        "percentage": 13.75921375921376,
+        "lower_bound": -26.0,
+        "upper_bound": 46.0
+      },
+      "site_id": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": -120.5,
+        "upper_bound": 315.5
+      },
+      "solicitacao": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": 95371.75,
+        "upper_bound": 96737.75
+      },
+      "lead_time_days": {
+        "count": 33,
+        "percentage": 8.108108108108109,
+        "lower_bound": -11.5,
+        "upper_bound": 32.5
+      },
+      "data_requisitada": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": NaN,
+        "upper_bound": NaN
+      },
+      "year": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": 2025.0,
+        "upper_bound": 2025.0
+      },
+      "month": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": 5.5,
+        "upper_bound": 9.5
+      },
+      "day": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": -23.25,
+        "upper_bound": 54.75
+      },
+      "temperature_avg_c": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": NaN,
+        "upper_bound": NaN
+      },
+      "precipitation_mm": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": NaN,
+        "upper_bound": NaN
+      }
+    },
+    "distributions": {
+      "quantidade": {
+        "mean": 53.76904176904177,
+        "median": 5.0,
+        "std": 341.29872347422963,
+        "min": 1.0,
+        "max": 6090.0,
+        "skewness": 14.668909054154044,
+        "kurtosis": 246.97482969914344
+      },
+      "site_id": {
+        "mean": 93.68796068796068,
+        "median": 73.0,
+        "std": 60.239983346729225,
+        "min": -1.0,
+        "max": 186.0,
+        "skewness": -0.1706943893443407,
+        "kurtosis": -1.3875891697231282
+      },
+      "solicitacao": {
+        "mean": 96039.9312039312,
+        "median": 95993.0,
+        "std": 161.32861297308023,
+        "min": 95824.0,
+        "max": 96322.0,
+        "skewness": 0.2609280515380007,
+        "kurtosis": -1.4847472767363517
+      },
+      "lead_time_days": {
+        "mean": 14.017543859649123,
+        "median": 9.0,
+        "std": 14.740202196251857,
+        "min": 0.0,
+        "max": 71.0,
+        "skewness": 2.105061285136391,
+        "kurtosis": 4.382844881924976
+      },
+      "data_requisitada": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null,
+        "skewness": null,
+        "kurtosis": null
+      },
+      "year": {
+        "mean": 2025.0,
+        "median": 2025.0,
+        "std": 0.0,
+        "min": 2025.0,
+        "max": 2025.0,
+        "skewness": 0.0,
+        "kurtosis": 0.0
+      },
+      "month": {
+        "mean": 7.115479115479116,
+        "median": 7.0,
+        "std": 0.6687472325295744,
+        "min": 6.0,
+        "max": 8.0,
+        "skewness": -0.13680654617730031,
+        "kurtosis": -0.7721975352903434
+      },
+      "day": {
+        "mean": 14.34889434889435,
+        "median": 10.0,
+        "std": 10.13291677993587,
+        "min": 1.0,
+        "max": 31.0,
+        "skewness": 0.526996327532834,
+        "kurtosis": -1.3135019104705565
+      },
+      "temperature_avg_c": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null,
+        "skewness": null,
+        "kurtosis": null
+      },
+      "precipitation_mm": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null,
+        "skewness": null,
+        "kurtosis": null
+      }
+    },
+    "family_stats": {
+      "EPI": {
+        "records": 35,
+        "qty_mean": 7.11,
+        "qty_std": 6.09,
+        "qty_min": 1.0,
+        "qty_max": 30.0,
+        "lt_mean": 20.4,
+        "lt_std": 20.3,
+        "lt_min": 0.0,
+        "lt_max": 56.0,
+        "items_unique": 25,
+        "sites_unique": 11
+      },
+      "FERRAMENTAS E EQUIPAMENTOS": {
+        "records": 20,
+        "qty_mean": 2.75,
+        "qty_std": 2.45,
+        "qty_min": 1.0,
+        "qty_max": 8.0,
+        "lt_mean": 15.4,
+        "lt_std": 19.78,
+        "lt_min": 0.0,
+        "lt_max": 60.0,
+        "items_unique": 17,
+        "sites_unique": 8
+      },
+      "FERRO E AÇO": {
+        "records": 88,
+        "qty_mean": 82.97,
+        "qty_std": 298.79,
+        "qty_min": 1.0,
+        "qty_max": 2295.0,
+        "lt_mean": 13.89,
+        "lt_std": 13.4,
+        "lt_min": 0.0,
+        "lt_max": 62.0,
+        "items_unique": 60,
+        "sites_unique": 26
+      },
+      "MATERIAL CIVIL": {
+        "records": 114,
+        "qty_mean": 52.16,
+        "qty_std": 145.91,
+        "qty_min": 1.0,
+        "qty_max": 1100.0,
+        "lt_mean": 13.09,
+        "lt_std": 14.43,
+        "lt_min": 0.0,
+        "lt_max": 62.0,
+        "items_unique": 44,
+        "sites_unique": 31
+      },
+      "MATERIAL ELETRICO": {
+        "records": 150,
+        "qty_mean": 55.55,
+        "qty_std": 497.74,
+        "qty_min": 1.0,
+        "qty_max": 6090.0,
+        "lt_mean": 13.08,
+        "lt_std": 13.13,
+        "lt_min": 0.0,
+        "lt_max": 71.0,
+        "items_unique": 84,
+        "sites_unique": 32
+      }
+    }
+  },
+  "test": {
+    "info": {
+      "dataset_name": "TEST",
+      "total_records": 508,
+      "total_features": 73,
+      "date_range": {
+        "min": "2025-08-11 00:00:00",
+        "max": "2025-10-21 00:00:00"
+      }
+    },
+    "missing_values": [
+      {
+        "column": "is_flood_risk",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "temperature_avg_c",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "precipitation_mm",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "humidity_percent",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_intense_rain",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "corrosion_risk",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_high_humidity",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "inflation_rate",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "data_requisitada",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "sla_violation_risk",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "sla_penalty_brl",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "availability_target",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "downtime_hours_monthly",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "total_lead_time_days",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "base_lead_time_days",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "customs_delay_days",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "strike_risk",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_critical_lead_time",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_drought",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_holiday",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "is_5g_milestone",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "5g_investment_brl_billions",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "5g_coverage_pct",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "gdp_growth_rate",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "exchange_rate_brl_usd",
+        "missing_count": 508,
+        "missing_pct": 100.0
+      },
+      {
+        "column": "deposito",
+        "missing_count": 432,
+        "missing_pct": 85.04
+      },
+      {
+        "column": "lead_time_category",
+        "missing_count": 38,
+        "missing_pct": 7.48
+      },
+      {
+        "column": "lead_time_days",
+        "missing_count": 7,
+        "missing_pct": 1.38
+      }
+    ],
+    "outliers": {
+      "quantidade": {
+        "count": 82,
+        "percentage": 16.141732283464567,
+        "lower_bound": -13.0,
+        "upper_bound": 27.0
+      },
+      "site_id": {
+        "count": 76,
+        "percentage": 14.960629921259844,
+        "lower_bound": -1.0,
+        "upper_bound": -1.0
+      },
+      "solicitacao": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": 95877.25,
+        "upper_bound": 97291.25
+      },
+      "lead_time_days": {
+        "count": 30,
+        "percentage": 5.905511811023622,
+        "lower_bound": -2.0,
+        "upper_bound": 14.0
+      },
+      "data_requisitada": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": NaN,
+        "upper_bound": NaN
+      },
+      "year": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": 2025.0,
+        "upper_bound": 2025.0
+      },
+      "month": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": 6.5,
+        "upper_bound": 10.5
+      },
+      "day": {
+        "count": 24,
+        "percentage": 4.724409448818897,
+        "lower_bound": 4.0,
+        "upper_bound": 28.0
+      },
+      "temperature_avg_c": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": NaN,
+        "upper_bound": NaN
+      },
+      "precipitation_mm": {
+        "count": 0,
+        "percentage": 0.0,
+        "lower_bound": NaN,
+        "upper_bound": NaN
+      }
+    },
+    "distributions": {
+      "quantidade": {
+        "mean": 40.779783464566925,
+        "median": 6.0,
+        "std": 153.4073072358851,
+        "min": 1.0,
+        "max": 1900.0,
+        "skewness": 7.02635175736498,
+        "kurtosis": 60.98110636294249
+      },
+      "site_id": {
+        "mean": 17.263779527559056,
+        "median": -1.0,
+        "std": 47.148317188367244,
+        "min": -1.0,
+        "max": 174.0,
+        "skewness": 2.4681493167065316,
+        "kurtosis": 4.634689636383024
+      },
+      "solicitacao": {
+        "mean": 96592.60433070867,
+        "median": 96626.0,
+        "std": 189.30814277273967,
+        "min": 96320.0,
+        "max": 97192.0,
+        "skewness": 0.12600562142179042,
+        "kurtosis": -1.0637794492133563
+      },
+      "lead_time_days": {
+        "mean": 7.0039920159680635,
+        "median": 6.0,
+        "std": 5.082910980130984,
+        "min": 0.0,
+        "max": 38.0,
+        "skewness": 1.5264066884972896,
+        "kurtosis": 4.490270023242896
+      },
+      "data_requisitada": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null,
+        "skewness": null,
+        "kurtosis": null
+      },
+      "year": {
+        "mean": 2025.0,
+        "median": 2025.0,
+        "std": 0.0,
+        "min": 2025.0,
+        "max": 2025.0,
+        "skewness": 0.0,
+        "kurtosis": 0.0
+      },
+      "month": {
+        "mean": 8.614173228346457,
+        "median": 9.0,
+        "std": 0.5864646069617062,
+        "min": 8.0,
+        "max": 10.0,
+        "skewness": 0.3437534507787883,
+        "kurtosis": -0.7058167639959283
+      },
+      "day": {
+        "mean": 16.098425196850393,
+        "median": 18.0,
+        "std": 5.675838743665786,
+        "min": 1.0,
+        "max": 30.0,
+        "skewness": -0.4377269398615038,
+        "kurtosis": 0.6247860702479056
+      },
+      "temperature_avg_c": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null,
+        "skewness": null,
+        "kurtosis": null
+      },
+      "precipitation_mm": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null,
+        "skewness": null,
+        "kurtosis": null
+      }
+    },
+    "family_stats": {
+      "EPI": {
+        "records": 19,
+        "qty_mean": 8.84,
+        "qty_std": 6.19,
+        "qty_min": 1.0,
+        "qty_max": 26.0,
+        "lt_mean": 8.5,
+        "lt_std": 5.71,
+        "lt_min": 0.0,
+        "lt_max": 18.0,
+        "items_unique": 13,
+        "sites_unique": 4
+      },
+      "FERRAMENTAS E EQUIPAMENTOS": {
+        "records": 21,
+        "qty_mean": 103.24,
+        "qty_std": 413.94,
+        "qty_min": 1.0,
+        "qty_max": 1900.0,
+        "lt_mean": 5.19,
+        "lt_std": 7.17,
+        "lt_min": 0.0,
+        "lt_max": 31.0,
+        "items_unique": 18,
+        "sites_unique": 5
+      },
+      "FERRO E AÇO": {
+        "records": 92,
+        "qty_mean": 92.67,
+        "qty_std": 213.44,
+        "qty_min": 1.0,
+        "qty_max": 1099.6,
+        "lt_mean": 7.92,
+        "lt_std": 5.72,
+        "lt_min": 0.0,
+        "lt_max": 26.0,
+        "items_unique": 36,
+        "sites_unique": 13
+      },
+      "MATERIAL CIVIL": {
+        "records": 82,
+        "qty_mean": 73.46,
+        "qty_std": 206.59,
+        "qty_min": 1.0,
+        "qty_max": 1250.0,
+        "lt_mean": 4.59,
+        "lt_std": 5.46,
+        "lt_min": 0.0,
+        "lt_max": 25.0,
+        "items_unique": 45,
+        "sites_unique": 16
+      },
+      "MATERIAL ELETRICO": {
+        "records": 294,
+        "qty_mean": 13.03,
+        "qty_std": 28.54,
+        "qty_min": 1.0,
+        "qty_max": 350.0,
+        "lt_mean": 7.42,
+        "lt_std": 4.3,
+        "lt_min": 0.0,
+        "lt_max": 38.0,
+        "items_unique": 69,
+        "sites_unique": 11
+      }
+    }
+  },
+  "summary": {
+    "total_datasets": 3,
+    "total_records": 2539,
+    "data_quality_score": 70.0
+  }
+}

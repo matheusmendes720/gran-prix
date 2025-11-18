@@ -1,0 +1,30 @@
+{
+  "region": "bahia",
+  "updated_at": "2025-11-07T07:00:06.409798",
+  "days": [
+    {
+      "date": "2025-11-07",
+      "temp_min_c": 20.0,
+      "temp_max_c": 30.0,
+      "precipitation_mm": 0.0,
+      "wind_speed_kmh": 12.0,
+      "humidity_pct": 70.0
+    },
+    {
+      "date": "2025-11-08",
+      "temp_min_c": 21.0,
+      "temp_max_c": 31.0,
+      "precipitation_mm": 1.0,
+      "wind_speed_kmh": 12.0,
+      "humidity_pct": 70.0
+    },
+    {
+      "date": "2025-11-09",
+      "temp_min_c": 22.0,
+      "temp_max_c": 32.0,
+      "precipitation_mm": 2.0,
+      "wind_speed_kmh": 12.0,
+      "humidity_pct": 70.0
+    }
+  ]
+}

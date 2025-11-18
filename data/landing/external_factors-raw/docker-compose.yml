@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  freight-fetcher:
+    build: .
+    container_name: freight-data-fetcher
+    environment:
+      - TRADING_ECONOMICS_API_KEY=guest:guest
+      - FREIGHT_DATA_DIR=/app/data/manual
+      - FREIGHT_LOG_LEVEL=INFO
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    # Run every day at 2 AM (cron-like scheduling)
+    restart: unless-stopped
+    command: |
+      python -c "
+      from freight_data_scheduler import FreightDataScheduler
+      import time
+      scheduler = FreightDataScheduler()
+      scheduler.setup_daily_schedule()
+      scheduler.run_continuous()
+      "
+
+  # Optional: Selenium standalone for SCFI scraping
+  selenium:
+    image: selenium/standalone-chrome:latest
+    container_name: freight-selenium
+    ports:
+      - "4444:4444"
+      - "7900:7900"
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      - SE_NODE_MAX_SESSIONS=2
+      - SE_NODE_SESSION_TIMEOUT=300
+    profiles:
+      - scfi-scraping

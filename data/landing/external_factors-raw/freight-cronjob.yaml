@@ -1,0 +1,57 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: freight-data-fetcher
+  namespace: default
+spec:
+  schedule: "0 2 * * *"  # Daily at 2 AM UTC
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: fetcher
+            image: freight-data-automation:latest
+            imagePullPolicy: IfNotPresent
+            env:
+            - name: TRADING_ECONOMICS_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: freight-secrets
+                  key: trading-economics-key
+            - name: FREIGHT_DATA_DIR
+              value: /data
+            volumeMounts:
+            - name: data
+              mountPath: /data
+            resources:
+              requests:
+                memory: "256Mi"
+                cpu: "250m"
+              limits:
+                memory: "512Mi"
+                cpu: "500m"
+          volumes:
+          - name: data
+            persistentVolumeClaim:
+              claimName: freight-data-pvc
+          restartPolicy: OnFailure
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: freight-secrets
+type: Opaque
+stringData:
+  trading-economics-key: "guest:guest"  # Change to actual key
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: freight-data-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi

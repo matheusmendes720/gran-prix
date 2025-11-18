@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-11-11T09:46:46.665627",
+  "status": "FAILED",
+  "message": "NOVA CORRENTE DEMAND FORECASTING PIPELINE FAILED!",
+  "details": {
+    "components": [],
+    "achievements": [],
+    "readiness": "Needs Attention"
+  }
+}

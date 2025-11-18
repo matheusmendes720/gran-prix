@@ -1,0 +1,54 @@
+{
+  "table": "fact_demand_raw",
+  "rows": 5760523,
+  "stats": {
+    "site_id": {
+      "min": -1.0,
+      "max": 189.0,
+      "mean": 72.52021856348807,
+      "std": 54.73939711555798
+    },
+    "qty_consumed": {
+      "min": 0.005,
+      "max": 157725.948,
+      "mean": 103.26056663969572,
+      "std": 1151.5467940515473
+    },
+    "lead_time_days": {
+      "min": 0.0,
+      "max": 154.0,
+      "mean": 14.669637878732557,
+      "std": 10.126516864302118
+    },
+    "regional_demand_multiplier": {
+      "min": 1.1,
+      "max": 1.1,
+      "mean": 1.0999999999999983,
+      "std": 0.0
+    },
+    "context_demand_multiplier": {
+      "min": 0.95,
+      "max": 1.55,
+      "mean": 1.1007352941176471,
+      "std": 0.1507277863100859
+    },
+    "backfill_confidence": {
+      "min": 0.6,
+      "max": 0.6,
+      "mean": 0.6,
+      "std": 1.1102231210497872e-16
+    },
+    "new_component_demand_multiplier": {
+      "min": 1.0,
+      "max": 2.27,
+      "mean": 2.2226612903225784,
+      "std": 0.20582640582028217
+    },
+    "old_component_demand_multiplier": {
+      "min": 0.55,
+      "max": 1.0,
+      "mean": 0.5668453510436424,
+      "std": 0.07302011477447318
+    }
+  }
+}

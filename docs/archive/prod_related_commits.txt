@@ -1,0 +1,6 @@
+0dd46248b3cc7f576955e2040a054b17e379d119|2025-11-05|Complete PostgreSQL refactoring: migration, API, frontend components and setup automation
+b14ef77ac1d0b3b77df2b7daad9c5a84b903e5f4|2025-11-05|feat: PostgreSQL migration and full-stack enhancements - Migrated database from MySQL to PostgreSQL with connection pooling - Added Redis caching layer for enhanced API performance - Implemented Alembic for database migrations - Added authentication and audit services - Enhanced frontend with new pages (forecasts, materials, recommendations) - Updated Docker configuration for production deployment - Added comprehensive deployment documentation
+1d93ba167b791f95a61774b0f29835f2849092c7|2025-11-05|docs: Refatora├º├úo completa dos diagn├│sticos de engenharia de dados
+1d5a63bb319a6fdc7a6810753e1163dd0ed73371|2025-11-05|feat: Add comprehensive data modeling strategy and star schema implementation
+1798c80232b416b537348d0408a87510ecb89d9a|2025-11-03|Initial commit: Nova Corrente - Demand Forecasting & Analytics System
+457b704db4662f4f11e9564a8f3e2e33e24d977d|2025-11-03|Initial commit: Nova Corrente - Demand Forecasting & Analytics System

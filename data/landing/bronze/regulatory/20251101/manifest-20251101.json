@@ -1,0 +1,25 @@
+{
+  "domain": "regulatory",
+  "run_date": "2025-11-01",
+  "created_at": "2025-11-11T17:13:37.616392",
+  "entries": [
+    {
+      "domain": "regulatory",
+      "layer": "bronze",
+      "path": "data\\landing\\bronze\\regulatory\\20251101\\bulletin.json",
+      "record_count": 1,
+      "metadata": {
+        "period": "2025-11"
+      }
+    },
+    {
+      "domain": "regulatory",
+      "layer": "silver",
+      "path": "data\\landing\\silver\\regulatory\\20251101\\regulatory-2025-11.parquet",
+      "record_count": 1,
+      "metadata": {
+        "period": "2025-11"
+      }
+    }
+  ]
+}

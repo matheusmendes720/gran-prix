@@ -1,0 +1,47 @@
+1798c80232b416b537348d0408a87510ecb89d9a|2025-11-03|Initial commit: Nova Corrente - Demand Forecasting & Analytics System|matheusmendes720
+c7edbdcc17bd16f4f448f3929fa40cdb8b9e4d87|2025-11-03|feat: add intelligent notification bell|unknown
+061d91829a1e3064764aabd480e0223b796840ba|2025-11-03|feat: add intelligent notification bell|unknown
+4e62dda6b2f4416dfb49da8f8bdd78c0b5dd1dd6|2025-11-04|feat: Complete ML Ops Constraint Enforcement System|matheusmendes720
+089b26ebae5670b89471d43f9ae6d0f57c46d4e6|2025-11-04|docs: expand timeout isolation playbooks and observability tooling|samscerq74-cloud
+d02ddb81844927e96587f0740e7d4fb516ecb18a|2025-11-04|docs: expand timeout isolation playbooks and observability tooling|samscerq74-cloud
+e3616b9b9e8987eadd42212e3ff5247d97b4f2c4|2025-11-04|Merge pull request #1 from matheusmendes720/feature/timeout-suite-docs|SAMARA CERQUEIRA
+feded71cee5482e1c2e2474af501d99c2b65356f|2025-11-04|chore: Reorganize root workspace - move files to thematic subfolders|matheusmendes720
+73a4527b45bd3f073d675b26e2af658af5715dea|2025-11-04|docs: Add next steps documentation after reorganization|matheusmendes720
+9c0df837807be1d9c96444efdaf5a8ada733d557|2025-11-04|docs: Add final reorganization summary|matheusmendes720
+7957d969ccf6a87ea0f5fcbb6036cbc55de7bcea|2025-11-04|Merge remote-tracking branch 'origin/master'|matheusmendes720
+69f49b33c11e28897cc26fe723fe0dc08492a06b|2025-11-04|docs: Add contributor merge documentation|matheusmendes720
+6c5e5ccee3fc8a2b0e28caa1dd16761b35e9c59b|2025-11-04|docs: Update CHANGELOG with contributor merge and workspace reorganization|matheusmendes720
+12d91f9a28cd677f30f5cf89905c4bed9eef845e|2025-11-04|docs: Add final push completion documentation|matheusmendes720
+05f26cf9cae5b4eb25885ead62bfa430425c44e8|2025-11-04|docs: Add push success summary documentation|matheusmendes720
+711ccc8ca5c82444aa71d0cec8343a56da496a5e|2025-11-04|docs: Add push to remote completion documentation|matheusmendes720
+e0a54c79f9d497d47238279ec2e5e853849758c4|2025-11-04|feat(workflow): add git tooling and gemini-driven insights|unknown
+5c6b7a8d454ea1ea44576965075d29fc8201cf7c|2025-11-04|feat(workflow): add git tooling and gemini-driven insights|unknown
+402b04eed3073f08284198a35156a5594ead1a5d|2025-11-04|Merge branch 'feature/git-workflow-and-ai-insights' into merge-git-workflow-ai-insights|matheusmendes720
+08d313c47f9d4f6f149094487ec5759704ad2d20|2025-11-04|docs: Update CHANGELOG with Git Workflow & AI Insights merge (v2.2.0)|matheusmendes720
+f4086595102ef08194501233d37e024189884cd8|2025-11-04|docs: Add annotation_sugestion roadmap notes|Haniel
+d0f70368f4f86588584e1b9c4a901e68f824b0ea|2025-11-04|docs: merge Annotation_Sugestion.md from feature/data branch|Haniel
+a6c339ed3a6ee526c38eed8b4ffc3ef73abe8497|2025-11-04|Merge: complete merge with Annotation_Sugestion.md|matheusmendes720
+d3c18db376b8e6a20fe7aca9f29fb4d7dd26d1a0|2025-11-04|feat: add all data directory files - force add ignored files from data/ directory|matheusmendes720
+82250d607d83e568e0275bfc470c722ad6be920f|2025-11-04|chore: update .gitignore to ignore only __pycache__, .clinerules, .cursor, .playwright-mcp|matheusmendes720
+e9d86c7a23adbf061f96871b7c5ccbd944599840|2025-11-04|chore: remove .cursor and .playwright-mcp from tracking (now ignored)|matheusmendes720
+a7ad987e0114fa1f8426ddad7ca766c196a51869|2025-11-04|chore: setup Git LFS for CSV files|matheusmendes720
+609e88370e31e395fab671e45eda1ad139a6ec60|2025-11-04|docs: adicionar guia completo PT-BR para clonar reposit├│rio com Git LFS|matheusmendes720
+5562b3e71eaebee571c65eefa8a9123181df61c9|2025-11-04|docs: adicionar README de in├¡cio r├ípido PT-BR|matheusmendes720
+16cb63fe049255c138652a9e313378debbecdd39|2025-11-04|docs: adicionar guia para atualizar reposit├│rio existente para Git LFS|matheusmendes720
+a180d6e3ffc1d740bc05121b91c6499e68525339|2025-11-04|docs: atualizar README de in├¡cio r├ípido com link para guia de atualiza├º├úo|matheusmendes720
+1d5a63bb319a6fdc7a6810753e1163dd0ed73371|2025-11-05|feat: Add comprehensive data modeling strategy and star schema implementation|Haniel
+ea331df424e60d455075cd5baed2e27da0d8797d|2025-11-05|Merge branch 'master' of https://github.com/matheusmendes720/gran-prix|matheusmendes720
+daf5ebc24119a65a03d5579f7812e6ba311d024d|2025-11-05|docs: Update CHANGELOG with Data Modeling Strategy merge (v2.3.0)|matheusmendes720
+5b456f3c65f58f90acee61fc6b053752cd3a22d3|2025-11-05|docs: Add comprehensive visual breakdown of data modeling strategy|Haniel
+06d16195c323b4f1b8dbbee8795a924d3e78bda8|2025-11-05|docs: Complete data engineering refactoring with comprehensive visual documentation|Haniel
+368cad6a2958dda0732fc392005b901e54269736|2025-11-05|docs: Add comprehensive changelog for version 2.3.0 - Data Engineering Refactoring|Haniel
+ca94699f641c75bb6bfc7ba7bf394e7f9a5ab118|2025-11-05|Merge branch 'master' of https://github.com/matheusmendes720/gran-prix - Resolved CHANGELOG.md conflict|matheusmendes720
+4622c627aa3ad08c9582144620ecb66972ca3e77|2025-11-05|docs: Add MMD diagram files and conversion scripts|matheusmendes720
+1d93ba167b791f95a61774b0f29835f2849092c7|2025-11-05|docs: Refatora├º├úo completa dos diagn├│sticos de engenharia de dados|Jonatas1421
+9fd5f4dc844c805804c47380f8abe8e4b58476a2|2025-11-05|docs: Update CHANGELOG v2.4.0 with all collaborator contributions and create comprehensive tech_notes_docs.md navigation index|matheusmendes720
+0b2b47eff029a1546324e152e69cd40ca7e387a1|2025-11-05|Update backend APIs, integration manager, orchestrator, tests, and add diagnostic documentation|matheusmendes720
+b14ef77ac1d0b3b77df2b7daad9c5a84b903e5f4|2025-11-05|feat: PostgreSQL migration and full-stack enhancements - Migrated database from MySQL to PostgreSQL with connection pooling - Added Redis caching layer for enhanced API performance - Implemented Alembic for database migrations - Added authentication and audit services - Enhanced frontend with new pages (forecasts, materials, recommendations) - Updated Docker configuration for production deployment - Added comprehensive deployment documentation|Haniel
+6b165e7e22587b0b7e1fe11aae6f8620f39c2abf|2025-11-05|chore: add large zip file to gitignore|Haniel
+d2884c5a1200d8e2fe06cb359d5091a70d6e202b|2025-11-05|docs: add comprehensive implementation report|Haniel
+1692a072c863863a48bf75bd99c320c0615c85ae|2025-11-05|chore: update .gitignore to exclude binary files and update CHANGELOG|Haniel
+0dd46248b3cc7f576955e2040a054b17e379d119|2025-11-05|Complete PostgreSQL refactoring: migration, API, frontend components and setup automation|Haniel

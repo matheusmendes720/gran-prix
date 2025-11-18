@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "row_count": 5756948,
+  "date_range": [
+    "2019-01-01",
+    "2024-10-08"
+  ],
+  "items": 872,
+  "sites": 191,
+  "metadata": {
+    "generated_at": "2025-11-11T12:14:45.361503"
+  }
+}

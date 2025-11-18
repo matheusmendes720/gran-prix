@@ -4,6 +4,7 @@
  */
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const BFF_BASE_URL = process.env.NEXT_PUBLIC_BFF_URL || 'http://localhost:5050';
 
 export interface ApiResponse<T> {
   status: 'success' | 'error';
@@ -105,6 +106,141 @@ export interface Alert {
   resolved_at?: string;
 }
 
+export interface DashboardSummary {
+  series_total: number;
+  series_with_forecast: number;
+  critical_series: number;
+  generated_at: string;
+}
+
+export interface BffAlertItem {
+  series_key: string;
+  stock_status: string;
+  reorder_point: number;
+  safety_stock: number;
+  avg_daily_demand: number;
+  lead_time: number;
+  current_stock: number;
+  days_to_rupture?: number | null;
+  item_id?: string | null;
+  site_id?: number | null;
+  familia?: string | null;
+  category?: string | null;
+  region?: string | null;
+  deposito?: string | null;
+}
+
+export interface AlertsResponse {
+  items: BffAlertItem[];
+  total: number;
+  generated_at: string;
+}
+
+export interface RecommendationItem {
+  series_key: string;
+  item_id?: string | null;
+  site_id?: number | null;
+  familia?: string | null;
+  stock_status?: string | null;
+  reorder_point?: number | null;
+  safety_stock?: number | null;
+  suggested_order?: number | null;
+  current_stock?: number | null;
+  lead_time?: number | null;
+  avg_daily_demand?: number | null;
+}
+
+export interface RecommendationResponse {
+  items: RecommendationItem[];
+  total: number;
+  generated_at: string;
+}
+
+export interface ForecastPoint {
+  ds: string;
+  forecast_qty?: number | null;
+  lower?: number | null;
+  upper?: number | null;
+  actual_qty?: number | null;
+  arima_forecast?: number | null;
+  xgboost_forecast?: number | null;
+}
+
+export interface ForecastSeries {
+  series_key: string;
+  item_id?: string | null;
+  site_id?: number | null;
+  familia?: string | null;
+  category?: string | null;
+  region?: string | null;
+  deposito?: string | null;
+  points: ForecastPoint[];
+}
+
+export interface ForecastResponse {
+  series: ForecastSeries[];
+  total_series: number;
+  generated_at: string;
+}
+
+export interface ClimateFeaturePoint {
+  date: string;
+  temperature_c?: number | null;
+  humidity_percent?: number | null;
+  precipitation_mm?: number | null;
+  wind_speed_kmh?: number | null;
+  corrosion_risk: number;
+  field_work_disruption: number;
+  is_extreme_heat: boolean;
+  is_heavy_rain: boolean;
+  is_no_rain: boolean;
+}
+
+export type ClimateInsightSeverity = 'critical' | 'warning' | 'info' | 'success';
+
+export interface ClimateInsight {
+  title: string;
+  metric: string;
+  description: string;
+  severity: ClimateInsightSeverity;
+}
+
+export interface ClimateFeatureSummary {
+  avg_temperature?: number | null;
+  avg_humidity?: number | null;
+  total_precipitation?: number | null;
+  max_corrosion_risk?: number | null;
+  max_field_work_disruption?: number | null;
+  highest_risk_date?: string | null;
+}
+
+export interface ClimateFeatureResponse {
+  category: string;
+  start_date: string;
+  end_date: string;
+  points: ClimateFeaturePoint[];
+  insights: ClimateInsight[];
+  summary: ClimateFeatureSummary;
+  generated_at: string;
+}
+
+export interface GeoRegion {
+  region: string;
+  latitude: number;
+  longitude: number;
+  avg_temperature: number;
+  avg_humidity: number;
+  avg_precipitation: number;
+  corrosion_risk_pct: number;
+  demand_multiplier: number;
+}
+
+export interface GeoSummaryResponse {
+  regions: GeoRegion[];
+  total_regions: number;
+  generated_at: string;
+}
+
 class NovaCorrenteAPI {
   private baseURL: string;
 
@@ -128,13 +264,46 @@ class NovaCorrenteAPI {
       });
 
       if (!response.ok) {
-        const error = await response.json().catch(() => ({ error: 'Unknown error' }));
-        throw new Error(error.error || `HTTP ${response.status}`);
+        const errorBody = await response.json().catch(() => ({ error: 'Unknown error' }));
+        const err = new Error(errorBody.error || `HTTP ${response.status}`) as Error & { status?: number };
+        err.status = response.status;
+        throw err;
       }
 
       return await response.json();
     } catch (error) {
       console.error(`API Error (${endpoint}):`, error);
+      throw error;
+    }
+  }
+
+  private async requestBff<T>(
+    endpoint: string,
+    options?: RequestInit
+  ): Promise<T> {
+    const url = `${BFF_BASE_URL}${endpoint}`;
+
+    try {
+      const response = await fetch(url, {
+        ...options,
+        headers: {
+          'Content-Type': 'application/json',
+          ...options?.headers,
+        },
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        const err = new Error(
+          errorText || `BFF request failed (${response.status} ${response.statusText})`
+        ) as Error & { status?: number };
+        err.status = response.status;
+        throw err;
+      }
+
+      return (await response.json()) as T;
+    } catch (error) {
+      console.error(`BFF Error (${endpoint}):`, error);
       throw error;
     }
   }
@@ -265,6 +434,62 @@ class NovaCorrenteAPI {
     if (params.feature_date) queryParams.append('feature_date', params.feature_date);
 
     return this.request<any[]>(`/api/v1/features?${queryParams}`);
+  }
+
+  // BFF endpoints
+  async getDashboardSummary() {
+    return this.requestBff<DashboardSummary>(`/bff/dashboard/summary`);
+  }
+
+  async getBffAlerts(params?: { status?: string[]; limit?: number }) {
+    const queryParams = new URLSearchParams();
+    if (params?.status) {
+      params.status.forEach((value) => queryParams.append('status', value));
+    }
+    if (params?.limit) queryParams.append('limit', params.limit.toString());
+    const queryString = queryParams.toString();
+    const endpoint = queryString ? `/bff/alerts?${queryString}` : `/bff/alerts`;
+    return this.requestBff<AlertsResponse>(endpoint);
+  }
+
+  async getBffRecommendations(params?: { familia?: string; stock_status?: string; limit?: number }) {
+    const queryParams = new URLSearchParams();
+    if (params?.familia) queryParams.append('familia', params.familia);
+    if (params?.stock_status) queryParams.append('stock_status', params.stock_status);
+    if (params?.limit) queryParams.append('limit', params.limit.toString());
+    const qs = queryParams.toString();
+    const endpoint = qs ? `/bff/recommendations?${qs}` : `/bff/recommendations`;
+    return this.requestBff<RecommendationResponse>(endpoint);
+  }
+
+  async getGeoSummary() {
+    return this.requestBff<GeoSummaryResponse>(`/bff/geo/summary`);
+  }
+
+  async getBffForecasts(params: {
+    familia?: string;
+    item_id?: string;
+    site_id?: number;
+    limit?: number;
+  }) {
+    const queryParams = new URLSearchParams();
+    if (params.familia) queryParams.append('familia', params.familia);
+    if (params.item_id) queryParams.append('item_id', params.item_id);
+    if (params.site_id !== undefined) queryParams.append('site_id', params.site_id.toString());
+    if (params.limit !== undefined) queryParams.append('limit', params.limit.toString());
+    const qs = queryParams.toString();
+    const endpoint = qs ? `/bff/forecasts?${qs}` : `/bff/forecasts`;
+    return this.requestBff<ForecastResponse>(endpoint);
+  }
+
+  async getClimateFeatures(params?: { start_date?: string; end_date?: string; limit?: number }) {
+    const queryParams = new URLSearchParams();
+    if (params?.start_date) queryParams.append('start_date', params.start_date);
+    if (params?.end_date) queryParams.append('end_date', params.end_date);
+    if (params?.limit) queryParams.append('limit', params.limit.toString());
+    const qs = queryParams.toString();
+    const endpoint = qs ? `/bff/features/climate?${qs}` : `/bff/features/climate`;
+    return this.requestBff<ClimateFeatureResponse>(endpoint);
   }
 }
 

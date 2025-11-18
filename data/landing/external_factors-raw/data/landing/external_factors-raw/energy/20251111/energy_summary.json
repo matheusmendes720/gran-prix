@@ -1,0 +1,63 @@
+{
+  "download_date": "2025-11-11T02:22:06.918032",
+  "energy_data": {
+    "electricity_tariffs": {
+      "records": 180,
+      "date_range": {
+        "start": "2022-11-30T02:22:06.869794",
+        "end": "2025-10-31T02:22:06.869794"
+      },
+      "regions": [
+        "Norte",
+        "Nordeste",
+        "Sudeste",
+        "Sul",
+        "Centro-Oeste"
+      ],
+      "average_tariff": 0.6233561111111111
+    },
+    "energy_pld": {
+      "records": 2924,
+      "date_range": {
+        "start": "2023-11-12T02:22:06.877844",
+        "end": "2025-11-11T02:22:06.877844"
+      },
+      "submarkets": [
+        "Norte",
+        "Nordeste",
+        "Sudeste/Centro-Oeste",
+        "Sul"
+      ],
+      "average_pld": 107.72193912448701
+    },
+    "natural_gas": {
+      "records": 1096,
+      "date_range": {
+        "start": "2022-11-12T02:22:06.895958",
+        "end": "2025-11-11T02:22:06.895958"
+      }
+    },
+    "crude_oil": {
+      "records": 1096,
+      "date_range": {
+        "start": "2022-11-12T02:22:06.905906",
+        "end": "2025-11-11T02:22:06.905906"
+      }
+    },
+    "renewable_energy": {
+      "records": 120,
+      "date_range": {
+        "start": "2023-11-30T02:22:06.915475",
+        "end": "2025-10-31T02:22:06.915475"
+      },
+      "sources": [
+        "hydroelectric",
+        "wind",
+        "solar",
+        "biomass",
+        "nuclear"
+      ],
+      "total_production_gw": 3268.01
+    }
+  }
+}

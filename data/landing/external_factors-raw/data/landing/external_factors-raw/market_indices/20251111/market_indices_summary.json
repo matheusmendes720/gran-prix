@@ -1,0 +1,62 @@
+{
+  "download_date": "2025-11-11T02:21:43.353921",
+  "market_indices": {
+    "sp500": {
+      "records": 1254,
+      "date_range": {
+        "start": "2020-11-12T11:30:00",
+        "end": "2025-11-10T11:30:00"
+      },
+      "latest_value": 6832.43017578125,
+      "symbols": [
+        "^GSPC"
+      ]
+    },
+    "nasdaq": {
+      "records": 1254,
+      "date_range": {
+        "start": "2020-11-12T11:30:00",
+        "end": "2025-11-10T11:30:00"
+      },
+      "latest_value": 23527.169921875,
+      "symbols": [
+        "^IXIC"
+      ]
+    },
+    "dow_jones": {
+      "records": 1254,
+      "date_range": {
+        "start": "2020-11-12T11:30:00",
+        "end": "2025-11-10T11:30:00"
+      },
+      "latest_value": 47368.62890625,
+      "symbols": [
+        "^DJI"
+      ]
+    },
+    "vix": {
+      "records": 731,
+      "date_range": {
+        "start": "2023-11-12T02:21:36.318892",
+        "end": "2025-11-11T02:21:36.318892"
+      },
+      "latest_value": 29.25614297485488,
+      "symbols": [
+        "^VIX"
+      ]
+    },
+    "telecom_etfs": {
+      "records": 3762,
+      "date_range": {
+        "start": "2020-11-12T11:30:00",
+        "end": "2025-11-10T11:30:00"
+      },
+      "latest_value": 146.4600067138672,
+      "symbols": [
+        "VOX",
+        "IYZ",
+        "XTL"
+      ]
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "executive_dashboard": {
+    "title": "Nova Corrente Executive Dashboard",
+    "widgets": [
+      {
+        "name": "Overall Performance",
+        "type": "kpi_cards",
+        "metrics": [
+          "total_demand",
+          "forecast_accuracy",
+          "inventory_savings",
+          "roi"
+        ],
+        "data_source": "prescriptive_analytics"
+      },
+      {
+        "name": "Demand Forecast Trend",
+        "type": "line_chart",
+        "x_axis": "date",
+        "y_axis": "demand",
+        "series": [
+          "actual",
+          "forecast"
+        ],
+        "data_source": "forecasts"
+      },
+      {
+        "name": "Family Risk Assessment",
+        "type": "heatmap",
+        "x_axis": "family",
+        "y_axis": "risk_level",
+        "data_source": "risk_assessment"
+      }
+    ]
+  },
+  "operations_dashboard": {
+    "title": "Operations Management Dashboard",
+    "widgets": [
+      {
+        "name": "Inventory Levels",
+        "type": "bar_chart",
+        "x_axis": "family",
+        "y_axis": "current_inventory",
+        "reference_line": "reorder_point",
+        "data_source": "inventory_status"
+      },
+      {
+        "name": "Supplier Performance",
+        "type": "scatter_plot",
+        "x_axis": "lead_time",
+        "y_axis": "quality_score",
+        "size": "volume",
+        "data_source": "supplier_metrics"
+      },
+      {
+        "name": "SLA Compliance",
+        "type": "gauge_chart",
+        "value": "current_sla",
+        "target": "target_sla",
+        "data_source": "sla_metrics"
+      }
+    ]
+  },
+  "financial_dashboard": {
+    "title": "Financial Impact Dashboard",
+    "widgets": [
+      {
+        "name": "Cost Savings Analysis",
+        "type": "waterfall_chart",
+        "categories": [
+          "inventory_optimization",
+          "stockout_prevention",
+          "efficiency_gains"
+        ],
+        "data_source": "financial_impact"
+      },
+      {
+        "name": "ROI Projection",
+        "type": "funnel_chart",
+        "stages": [
+          "implementation",
+          "optimization",
+          "full_realization"
+        ],
+        "data_source": "roi_analysis"
+      }
+    ]
+  }
+}

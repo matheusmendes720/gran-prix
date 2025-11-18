@@ -1,0 +1,61 @@
+{
+  "domain": "climate",
+  "run_date": "2025-11-11",
+  "created_at": "2025-11-11T17:13:33.444008",
+  "entries": [
+    {
+      "domain": "climate",
+      "layer": "bronze",
+      "path": "data\\landing\\bronze\\climate\\20251111-bahia\\forecast.json",
+      "record_count": 3,
+      "metadata": {
+        "region": "bahia"
+      }
+    },
+    {
+      "domain": "climate",
+      "layer": "silver",
+      "path": "data\\landing\\silver\\climate\\20251111\\climate-bahia.parquet",
+      "record_count": 3,
+      "metadata": {
+        "region": "bahia"
+      }
+    },
+    {
+      "domain": "climate",
+      "layer": "bronze",
+      "path": "data\\landing\\bronze\\climate\\20251111-ceara\\forecast.json",
+      "record_count": 3,
+      "metadata": {
+        "region": "ceara"
+      }
+    },
+    {
+      "domain": "climate",
+      "layer": "silver",
+      "path": "data\\landing\\silver\\climate\\20251111\\climate-ceara.parquet",
+      "record_count": 3,
+      "metadata": {
+        "region": "ceara"
+      }
+    },
+    {
+      "domain": "climate",
+      "layer": "bronze",
+      "path": "data\\landing\\bronze\\climate\\20251111-pernambuco\\forecast.json",
+      "record_count": 3,
+      "metadata": {
+        "region": "pernambuco"
+      }
+    },
+    {
+      "domain": "climate",
+      "layer": "silver",
+      "path": "data\\landing\\silver\\climate\\20251111\\climate-pernambuco.parquet",
+      "record_count": 3,
+      "metadata": {
+        "region": "pernambuco"
+      }
+    }
+  ]
+}

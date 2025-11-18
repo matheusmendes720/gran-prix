@@ -1,0 +1,44 @@
+{
+  "gold_layer_build_timestamp": "2025-11-11T11:42:26.943002",
+  "overall_success": true,
+  "features_built": [
+    "economic",
+    "climatic",
+    "global",
+    "logistics",
+    "commodities",
+    "market",
+    "energy",
+    "cross_features",
+    "master"
+  ],
+  "features_count": 9,
+  "gold_root": "data\\gold\\ml_features",
+  "silver_root": "data\\silver\\external_factors",
+  "categories": {
+    "economic": true,
+    "climatic": true,
+    "global": true,
+    "logistics": true,
+    "commodities": true,
+    "market": true,
+    "energy": true,
+    "cross_features": true,
+    "master": true
+  },
+  "total_parquet_files": 11,
+  "ml_readiness": {
+    "time_series_features": true,
+    "lagged_features": true,
+    "rolling_features": true,
+    "correlation_features": true,
+    "composite_features": true,
+    "master_dataset": true
+  },
+  "next_steps": [
+    "ML models can now use gold layer features",
+    "Start model training with feature engineered data",
+    "Set up model monitoring and retraining pipeline",
+    "Integrate with Nova Corrente demand forecasting"
+  ]
+}

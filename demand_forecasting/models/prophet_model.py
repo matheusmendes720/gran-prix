@@ -3,19 +3,24 @@ Prophet Model Implementation for Demand Forecasting
 Phase 2: Model Implementation
 Based on: Medium Article - Time Series Forecasting
 """
-import pandas as pd
+import logging
+from math import sqrt
+from typing import Dict, Optional
+
+import holidays
 import numpy as np
+import pandas as pd
 from prophet import Prophet
 from sklearn.metrics import mean_squared_error, mean_absolute_error
-from math import sqrt
-from typing import Dict, Optional, List
-import holidays
+
+logger = logging.getLogger(__name__)
 
 
 class ProphetForecaster:
     """
     Prophet forecaster with external regressors support.
     """
+    _available: bool = True
     
     def __init__(self, daily_seasonality: bool = True, 
                  yearly_seasonality: bool = True,
@@ -125,14 +130,18 @@ class ProphetForecaster:
                 self.model.add_regressor(regressor)
         
         # Fit model
+        if not ProphetForecaster._available:
+            raise ValueError("Prophet backend unavailable; skipping fit.")
+
         try:
             self.model.fit(prophet_df)
-            
             return {
                 'regressors': self.regressors,
                 'params': self.model.params
             }
-        except Exception as e:
+        except Exception as e:  # pragma: no cover - defensive against backend failures
+            logger.warning("Prophet fit failed: %s; disabling Prophet for remainder of run.", e)
+            ProphetForecaster._available = False
             raise ValueError(f"Model fitting failed: {e}")
     
     def forecast(self, periods: int = 30, 

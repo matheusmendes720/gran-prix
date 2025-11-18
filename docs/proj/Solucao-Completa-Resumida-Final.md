@@ -17,6 +17,56 @@
 
 ---
 
+## VISÃO ESTRATÉGICA PARA CEO (1 MINUTO ADICIONAL)
+
+**Decisão agora garante:**
+- Continuidade do SLA 99%+ sem capital travado: redução potencial de R$ 56M/ano em custos de ruptura e excesso (ref. `BUSINESS_ANALYTICS_DEEP_ANALYSIS_PT_BR.md`).
+- Payback operacional em menos de uma quinzena com acionamento faseado (dados consolidados nas sprints 5.1–5.5).
+- Storytelling executivo pronto para cliente final: dashboards, API e playbook de narrativa conectados ao pitch (`storytelling_loader`, `storytelling_demo.ipynb` e `docs/pitch/*`).
+
+**O que o concorrente não consegue entregar em conjunto:**
+
+| Capacidade                                   | Nova Corrente AI Ops Suite                                                                                          | Concorrência Tradicional (ERP/MRP, consultoria pontual)                                       | Impacto direto para o CEO |
+|----------------------------------------------|----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|---------------------------|
+| Integração multi-camada (Bronze → Gold → Storytelling) | Orquestração automatizada do landing à camada de visualização, com validação e backfill históricos de 5M+ registros | Processos quebrados; dependência de planilhas e squads separados                              | Tempo de implementação cai de meses para semanas |
+| Modelagem multifatorial                      | ARIMA/XGBoost + Prophet opcional + fatores externos (clima, câmbio, logística) atualizados (`EXTERNAL_FACTORS_ML_MODELING_PT_BR.md`) | Forecast univariado ou mensal; ignora choques externos                                         | Precisão <15% MAPE mesmo em alta volatilidade    |
+| Inteligência prescritiva                     | Reorder Point dinâmico, Safety Stock com risco, alertas automáticos e storytelling operacional                        | Regras fixas no ERP; alertas reativos                                                         | Redução de ruptura ≥60% e compliance SLA         |
+| Narrativa de vendas pronta                   | Kit completo de pitch, blueprint rollout, walkthrough demo e API stub para BFF                                      | Entrega técnica sem narrativa de valor                                                        | Acelera assinatura com executivos                |
+| Governança e audit trail                     | Documentação completa de pipeline, índices de qualidade e inventário de dados                                        | Falta de rastreabilidade                                                                      | Segurança para auditorias e escalabilidade       |
+
+**Perguntas-chave do CEO respondidas no kick-off:**
+- _“Quanto economizamos e em quanto tempo?”_ → R$ 56M/ano, payback em 0.1 mês.
+- _“Como garantimos que os alertas são confiáveis?”_ → KPIs de previsão diária, validação temporal e monitoramento de drift (PSI/KS) embutidos.
+- _“Como explicamos para o conselho?”_ → Jornada de storytelling com argumentário preparado nos playbooks de pitch e briefs.
+
+---
+
+## FRONTEND STORYTELLING & PITCH INTEGRATION
+
+**Objetivo:** transformar os outputs preditivos/prescritivos em experiência visual pronta para a diretoria e para o cliente final, alinhando engenharia de dados, UX e narrativa comercial.
+
+**Pilares de entrega (ligados ao `docs/pitch/*`):**
+- **Camada de dados pronta para UI:** `storytelling_timeseries.parquet`, `storytelling_prescriptions.parquet` e `storytelling_summary.json` abastecem widgets KPI, alertas e gráfico forecast/histórico.
+- **API para BFF/frontend:** `workspace/api-integration/storytelling_api_stub.py` já expõe `/storytelling/kpis`, `/alerts`, `/timeseries/{family}`; encaixe direto nos hooks descritos em `storytelling_frontend_plan.md`.
+- **Blueprint de narrativa:** `docs/pitch/demo_dashboard_quick_strategy.md` e `storytelling_pitch_walkthrough.md` mapeiam script minuto a minuto; conecte gráficos exportados pelo `storytelling_demo.ipynb`.
+- **Argumentário executivo:** sinergia com `docs/pitch/estrategia-competitiva-ceo.md`, `impacto-financeiro-prevía.md` e `prevía-executive-summary-1page.md` garante mensagem única durante o pitch.
+
+**Backlog imediato (Sprint 5.6 – “Frontend Ignite”):**
+1. Implementar hooks React/Next (`useStorytellingKpis`, `useStorytellingAlerts`, `useFamilyTimeseries`) conforme plano do frontend.
+2. Montar dashboards core:
+   - `KPI Topline`: taxa de series com forecast, ruptura evitada, ROI estimado.
+   - `Alert Center`: tabela crítica com filtros `stock_status`, dias até ruptura, CTA “Gerar ordem de compra”.
+   - `Story View`: gráfico diário (histórico x ARIMA x XGBoost) + anotação de eventos climáticos/econômicos.
+3. Ensaiar demo navegando em sequência: KPI → alerta → série → recomendação, seguindo roteiro `kick-off-pitch-deck.md`.
+4. Capturar screenshots/gifs atualizados e anexar ao `pitch_deck.md` (slides “Visão Operacional” e “Resultados Financeiros”).
+
+**Critérios de aceite:**
+- Painel responde em <2s com dataset completo.
+- Alertas e recomendações exibem os mesmos valores do Gold snapshot (paridade validada via notebook).
+- Checklist pitch atualizado com links diretos para dashboards e para documentação técnica.
+
+---
+
 ## PARTE 1: MODELO DE NEGÓCIO - CONTEXTO
 
 ### B2B (Business-to-Business) 100%

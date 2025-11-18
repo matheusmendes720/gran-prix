@@ -1,0 +1,11 @@
+2025-11-11 08:31:02,357 - INFO - Building silver layer from external factors
+2025-11-11 08:31:02,357 - INFO - ==================================================
+2025-11-11 08:31:02,358 - INFO -   Economic: Built
+2025-11-11 08:31:02,359 - INFO -   Climate: Built
+2025-11-11 08:31:02,359 - INFO -   Global: Built
+2025-11-11 08:31:02,359 - INFO -   Logistics: Built
+2025-11-11 08:31:02,359 - INFO -   Commodities: Built
+2025-11-11 08:31:02,360 - INFO -   Market: Built
+2025-11-11 08:31:02,360 - INFO -   Energy: Built
+2025-11-11 08:31:02,360 - INFO - Silver layer build completed. Tables: 7/8
+2025-11-11 08:31:02,360 - INFO - Silver layer build completed successfully!

@@ -1,0 +1,97 @@
+{
+  "kick_off_contexto_mercado": {
+    "SETOR_TELECOM_BRASIL": {
+      "receita_bruta_2024": "R$ 318 bilhões",
+      "investimentos_2024": "R$ 34,6 bilhões",
+      "crescimento_2024": "4,9% (acumulado)",
+      "tendencia_crescimento": "2,4% (acumulado 12 meses até julho 2025)",
+      "foco_principal": "Expansão 5G e banda larga fixa",
+      "investimentos_futuro_2025_2027": "R$ 100 bilhões"
+    },
+    "MERCADO_5G": {
+      "cidades_5g_cobertura": "812 municípios",
+      "crescimento_cidades": "131% em relação período anterior",
+      "antenas_5g_instaladas": "37.639 antenas",
+      "crescimento_antenas": "dobro do período anterior (de 18.408 para 37.639)",
+      "acessos_5g": "40 milhões (duplicou em 1 ano)",
+      "populacao_coberta_5g": "~70% população brasileira"
+    },
+    "MERCADO_BANDAS_INFRAESTRUTURA": {
+      "banda_larga_fixa_acessos": "52 milhões",
+      "crescimento_banda_larga": "10,1%",
+      "crescimento_fibra_optica": "13,5%",
+      "velocidade_media": "440 Mbps",
+      "torre_empresas_independentes": "81.567 torres",
+      "lider_market_share": "American Tower - 22.800 torres (27,9%)"
+    },
+    "OPERADORES_PRINCIPAIS": {
+      "operadoras": [
+        "Claro",
+        "Vivo",
+        "TIM",
+        "Oi"
+      ],
+      "tower_companies": [
+        "American Tower",
+        "SBA Communications",
+        "IHS Towers"
+      ],
+      "servicos_operacao_manutencao": [
+        "Nova Corrente",
+        "Softmig",
+        "TIVIT"
+      ]
+    }
+  },
+  "problema_central": {
+    "PROBLEMA_CENTRAL": {
+      "titulo": "FALTA DE PREVISIBILIDADE DE DEMANDA",
+      "descricao": "Gestão manual de estoque com reação a rupturas, não prevenção"
+    },
+    "SITUACAO_ATUAL_NOVA_CORRENTE": {
+      "torres_sob_manutencao": "18.000 torres",
+      "posicoes_ativas_salvador": "100 posições",
+      "projecao_2026": "150 posições",
+      "gestao_inventario": "Manual e baseada em intuição"
+    },
+    "DESAFIOS_ESPECIFICOS": [
+      "Rupturas de Estoque - Peça crítica em falta leva a: manutença atrasada, falha SLA, multa",
+      "Estoque Exagerado - Capital travado em peças que não movimentam",
+      "Lead Times Variáveis - Fornecedores diferentes têm tempos distintos (7-60+ dias)",
+      "Sazonalidade - Padrões de consumo variam ao longo do ano",
+      "Fatores Externos - Clima, economia, eventos tecnológicos afetam demanda",
+      "Crescimento - Expansão rápida de 50 posições até 2026 exige planejamento preciso"
+    ]
+  },
+  "casos_multas": [
+    {
+      "empresa": "Vivo",
+      "multa_valor": "R$ 3,9 milhões",
+      "motivo": "Descumprimento qualidade telefonia fixa",
+      "ano": 2013
+    },
+    {
+      "empresa": "Oi - Móvel",
+      "multa_valor": "R$ 34,2 milhões",
+      "motivo": "Descumprimento metas qualidade",
+      "ano": 2013
+    },
+    {
+      "empresa": "Oi - Fixa",
+      "multa_valor": "R$ 4,6 milhões",
+      "motivo": "Descumprimento metas PGMU",
+      "ano": 2013
+    }
+  ],
+  "sla_metricas": {
+    "target_disponibilidade": "99%",
+    "penalidade_percentual": "2-10% do valor contrato",
+    "tempo_resposta_emergencia": "4-8 horas",
+    "downtime_maximo_mes": "1 hora"
+  },
+  "estudo_kpmg_fevereiro_2025": {
+    "empresas_queda_10pct": "21%",
+    "empresas_queda_20pct": "5,4%",
+    "impacto_valor_mercado": "76%"
+  }
+}

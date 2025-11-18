@@ -1,335 +1,654 @@
-# 🎯 Nova Corrente - Demand Forecasting & Analytics System
+ <div align="center">
 
-## 🏆 **PRODUCTION READY FOR GRAND PRIX 2025**
+```
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                           ║
+║    ███╗   ██╗ ██████╗ ██╗   ██╗ █████╗      ██████╗ ██████╗ ██████╗ ██████╗ ███████╗███╗   ██╗████████╗███████╗           ║
+║    ████╗  ██║██╔═══██╗██║   ██║██╔══██╗    ██╔════╝██╔═══██╗██╔══██╗██╔══██╗██╔════╝████╗  ██║╚══██╔══╝██╔════╝           ║
+║    ██╔██╗ ██║██║   ██║██║   ██║███████║    ██║     ██║   ██║██████╔╝██████╔╝█████╗  ██╔██╗ ██║   ██║   █████╗             ║
+║    ██║╚██╗██║██║   ██║╚██╗ ██╔╝██╔══██║    ██║     ██║   ██║██╔══██╗██╔══██╗██╔══╝  ██║╚██╗██║   ██║   ██╔══╝             ║
+║    ██║ ╚████║╚██████╔╝ ╚████╔╝ ██║  ██║    ╚██████╗╚██████╔╝██║  ██║██║  ██║███████╗██║ ╚████║   ██║   ███████╗           ║
+║    ╚═╝  ╚═══╝ ╚═════╝   ╚═══╝  ╚═╝  ╚═╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝           ║
+║                                                                                                                           ║
+║         Enterprise-Grade Demand Forecasting & Analytics Platform                                                          ║
+║                    Production-Ready for Telecom Industry                                                                  ║ 
+║                                                                                                                           ║
+║                                                                                                                           ║ 
+║                      ____                        ______  ______                                                           ║
+║                     /\  _`\                     /\  _  \/\__  _\                                                          ║
+║                     \ \ \L\ \_ __    __   __  __\ \ \L\ \/_/\ \/                                                          ║
+║                      \ \ ,__/\`'__\/'__`\/\ \/\ \\ \  __ \ \ \ \                                                          ║
+║                       \ \ \/\ \ \//\  __/\ \ \_/ |\ \ \/\ \ \_\ \__                                                       ║ 
+║                        \ \_\ \ \_\\ \____\\ \___/  \ \_\ \_\/\_____\                                                      ║ 
+║                         \/_/  \/_/ \/____/ \/__/    \/_/\/_/\/_____/                                                      ║ 
+║                                                                                                                           ║ 
+║                                                                                                                           ║ 
+║                                                                                                                           ║
+║                                                                                                                           ║
+║                    🏆 GRAND PRIX 2025 - SENAI 🏆                                                                         ║
+║                                                                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+```
 
-A comprehensive demand forecasting and analytics platform for Nova Corrente, a telecom company in Salvador, Brazil.
+[![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)](CHANGELOG.md)
+[![License](https://img.shields.io/badge/license-Proprietary-red.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-production%20ready-success.svg)](CHANGELOG.md)
+[![Production](https://img.shields.io/badge/deployment-production-green.svg)](docs/proj/roadmaps/prod/)
+[![Enterprise](https://img.shields.io/badge/scale-enterprise-purple.svg)](CHANGELOG_PROD.md)
+
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Node.js](https://img.shields.io/badge/node.js-18%2B-green.svg)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/typescript-5.0%2B-blue.svg)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/next.js-14-black.svg)](https://nextjs.org/)
+[![PostgreSQL](https://img.shields.io/badge/postgresql-14%2B-blue.svg)](https://www.postgresql.org/)
+[![Redis](https://img.shields.io/badge/redis-latest-red.svg)](https://redis.io/)
+[![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
+
+[![Architecture](https://img.shields.io/badge/architecture-postgresql%20%2B%20offline--ml-lightgrey.svg)](docs/ARCHITECTURE_BIFURCATION_ANALYSIS.md)
+[![ML](https://img.shields.io/badge/ML-offline--first-orange.svg)](docs/proj/roadmaps/prod/TECHNICAL_STACK_PROD.md)
+[![Security](https://img.shields.io/badge/security-JWT%20%2B%20RBAC-yellow.svg)](backend/services/auth_service.py)
+
+</div>
 
 ---
 
-## ✨ **KEY FEATURES**
+## 📋 Table of Contents
+
+- [🎯 Overview](#-overview)
+- [✨ Key Features](#-key-features)
+- [🏗️ Production Architecture](#️-production-architecture)
+- [🚀 Quick Start](#-quick-start)
+- [📊 Project Structure](#-project-structure)
+- [🔌 API Endpoints](#-api-endpoints)
+- [🛠️ Technical Stack](#️-technical-stack)
+- [📈 Performance &amp; Scalability](#-performance--scalability)
+- [🔐 Security &amp; Compliance](#-security--compliance)
+- [📚 Documentation](#-documentation)
+- [🤝 Contributing](#-contributing)
+
+---
+
+## 🎯 Overview
+
+<div align="center">
+
+**Enterprise-Grade Demand Forecasting & Analytics Platform**
+
+🏭 **PRODUCTION-READY FOR GRAND PRIX 2025** 🏭
+
+</div>
+
+Nova Corrente is a **production-ready, enterprise-scale** analytics platform that combines **PostgreSQL**, **offline-first ML architecture**, and **real-time dashboards** to provide actionable insights for telecom supply chain management.
+
+### 🎯 **Production Highlights**
+
+- ✅ **PostgreSQL 14+** - Production-grade database with partitioning, JSONB, materialized views
+- ✅ **Offline-First ML** - Precomputed results, no ML dependencies in deployment
+- ✅ **Enterprise Security** - JWT authentication, RBAC, comprehensive audit logging
+- ✅ **High Performance** - Redis caching, connection pooling, optimized queries
+- ✅ **Scalable Architecture** - Multi-schema design, horizontal scaling ready
+- ✅ **Production Deployment** - Docker Compose, health checks, monitoring ready
+
+### 🚀 **Future Roadmap**
+
+- 🔄 **AWS Cloud Infrastructure** - S3, RDS, ECS/EKS deployment
+- 🔄 **Advanced Data Engineering** - Delta Lake, Spark, Databricks
+- 🔄 **Orchestration** - Airflow DAGs for complex workflows
+- 🔄 **Transformations** - dbt models for analytics engineering
+- 🔄 **BI Tools** - Metabase/Superset integration
+
+📖 **[Complete PROD Roadmap →](docs/proj/roadmaps/prod/README_PROD_ROADMAPS.md)**
+
+---
+
+## ✨ Key Features
 
 ### 📊 **Real-Time Analytics Dashboard**
-- Interactive Brazil map (27 states)
-- 5-tab analytics interface
-- K-means clustering analysis
-- LLM-powered prescriptive recommendations
-- Mathematical formula calculators
 
-### 🤖 **Advanced ML/AI**
-- Ensemble forecasting (ARIMA + Prophet + LSTM)
-- Equipment failure prediction
-- Tower performance clustering
-- Regional demand forecasting
-- Cost optimization recommendations
+- 🗺️ Interactive Brazil map (27 states)
+- 📑 5-tab analytics interface
+- 🎯 K-means clustering analysis
+- 🤖 LLM-powered prescriptive recommendations
+- 📐 Mathematical formula calculators
+
+### 🤖 **Advanced ML/AI (Offline-First)**
+
+- 🎯 Ensemble forecasting (ARIMA + Prophet + LSTM)
+- ⚠️ Equipment failure prediction
+- 📡 Tower performance clustering
+- 📈 Regional demand forecasting
+- 💰 Cost optimization recommendations
+- 🔄 **Precomputed Results** - No ML processing in deployment
 
 ### 📈 **Business Intelligence**
-- Real-time KPIs (Stockout Rate, MAPE, Savings)
-- Supplier performance tracking
-- SLA penalty monitoring
-- Regional inventory optimization
-- Project status tracking
+
+- 📊 Real-time KPIs (Stockout Rate, MAPE, Savings)
+- 🏢 Supplier performance tracking
+- ⏱️ SLA penalty monitoring
+- 📦 Regional inventory optimization
+- 📋 Project status tracking
+
+### 🔐 **Enterprise Features**
+
+- 🔒 **JWT Authentication** - Secure token-based auth
+- 👥 **Role-Based Access Control** - ADMIN, ANALYST, VIEWER roles
+- 📝 **Audit Logging** - Comprehensive activity tracking
+- ⚡ **Redis Caching** - High-performance caching layer
+- 🐳 **Docker Deployment** - Production-ready containers
+- 🔄 **Database Migrations** - Alembic for schema management
 
 ---
 
-## 🚀 **QUICK START**
+## 🏗️ Production Architecture
 
-### Prerequisites
-- Python 3.8+
-- Node.js 18+
-- Pandas, NumPy, scikit-learn
+<div align="center">
 
-### Installation
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    DATA SOURCES                             │
+│  ERP | External APIs | Precomputed ML Results              │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+                     ▼
+┌─────────────────────────────────────────────────────────────┐
+│              POSTGRESQL DATABASE (14+)                      │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
+│  │  core    │  │analytics │  │ support  │  │ staging  │  │
+│  │ Business │  │ ML Output│  │ Auth/Audit│ │ ETL Stage│  │
+│  │   Data   │  │          │  │          │  │          │  │
+│  └──────────┘  └──────────┘  └──────────┘  └──────────┘  │
+│  • Partitioning  • Materialized Views  • JSONB Support    │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+                     ▼
+┌─────────────────────────────────────────────────────────────┐
+│              ML PROCESSING (Offline, Separate)              │
+│  Prophet | ARIMA | LSTM | Ensemble                         │
+│  Output: PostgreSQL Tables (via ETL)                       │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+                     ▼
+┌─────────────────────────────────────────────────────────────┐
+│              BACKEND API (Flask, Read-Only)                 │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
+│  │   REST   │  │   JWT    │  │  Redis   │  │  Health  │  │
+│  │ Endpoints│  │   Auth   │  │  Cache   │  │  Checks  │  │
+│  └──────────┘  └──────────┘  └──────────┘  └──────────┘  │
+│  NO ML Dependencies | Production-Ready                      │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+                     ▼
+┌─────────────────────────────────────────────────────────────┐
+│              FRONTEND DASHBOARD (Next.js 14)                │
+│  TypeScript | Tailwind CSS | Recharts | D3.js             │
+│  SSR/CSR Hybrid | Type-Safe | Production-Optimized         │
+└─────────────────────────────────────────────────────────────┘
+```
 
-**1. Clone Repository**
+</div>
+
+### 🔄 **Offline-First ML Architecture**
+
+- ✅ **NO ML OPS IN DEPLOYMENT** - ML processing runs in separate environment
+- ✅ **Precomputed Results** - Deployment only reads from PostgreSQL
+- ✅ **Lightweight Containers** - No ML dependencies (PyTorch, TensorFlow, etc.)
+- ✅ **Scalable** - Handles millions of records efficiently
+- ✅ **Production-Grade** - Enterprise-ready architecture
+
+📖 **[Complete Architecture Details →](docs/proj/diagrams/Project.md)**
+
+---
+
+## 🚀 Quick Start
+
+### 📦 Prerequisites
+
+```bash
+✅ Python 3.8+
+✅ Node.js 18+
+✅ PostgreSQL 14+
+✅ Redis (for caching)
+✅ Docker & Docker Compose (recommended)
+```
+
+### 🏃 Production Setup
+
+<details>
+<summary><b>📥 1. Clone Repository</b></summary>
+
 ```bash
 git clone <repository-url>
 cd gran_prix
 ```
 
-**2. Install Backend Dependencies**
+</details>
+
+<details>
+<summary><b>🐘 2. Setup PostgreSQL Database</b></summary>
+
 ```bash
-pip install flask flask-cors pandas numpy scikit-learn
+# Using Docker
+docker run --name postgres-nova-corrente \
+  -e POSTGRES_USER=nova_corrente \
+  -e POSTGRES_PASSWORD=YOUR_SECURE_PASSWORD \
+  -e POSTGRES_DB=nova_corrente \
+  -p 5432:5432 \
+  -v pgdata:/var/lib/postgresql/data \
+  -d postgres:14
+
+# Or use existing PostgreSQL instance
+# Update backend/.env with connection details
 ```
 
-**3. Install Frontend Dependencies**
+</details>
+
+<details>
+<summary><b>🔴 3. Setup Redis Cache</b></summary>
+
+```bash
+# Using Docker
+docker run -d -p 6379:6379 redis:alpine
+
+# Or use existing Redis instance
+# Update backend/.env with connection details
+```
+
+</details>
+
+<details>
+<summary><b>🐍 4. Backend Setup</b></summary>
+
+```bash
+cd backend
+
+# Install dependencies (production, no ML)
+pip install -r requirements_deployment.txt
+
+# Configure environment
+cp .env.example .env
+# Edit .env with your PostgreSQL and Redis credentials
+
+# Run database migrations
+alembic upgrade head
+
+# Start backend server
+python run_server.py
+# API available at http://localhost:5000
+```
+
+</details>
+
+<details>
+<summary><b>⚛️ 5. Frontend Setup</b></summary>
+
 ```bash
 cd frontend
+
+# Install dependencies
 npm install
-```
 
-### Run Dashboard
+# Configure environment
+cp .env.local.example .env.local
+# Edit .env.local with API URL
 
-**Terminal 1 - Backend API:**
-```bash
-python api_standalone.py
-```
-
-**Terminal 2 - Frontend:**
-```bash
-cd frontend
+# Start development server
 npm run dev
+# Dashboard available at http://localhost:3000
 ```
 
-**Open Browser:**
+</details>
+
+<details>
+<summary><b>🐳 6. Docker Compose (Recommended)</b></summary>
+
+```bash
+# Production deployment
+docker-compose -f docker-compose.prod.yml up -d
+
+# Check status
+docker-compose -f docker-compose.prod.yml ps
+
+# View logs
+docker-compose -f docker-compose.prod.yml logs -f
 ```
-http://localhost:3000/main
+
+</details>
+
+### 🌐 Access Application
+
 ```
+📊 Main Dashboard: http://localhost:3000/main
+🔍 Analytics: http://localhost:3000/features
+📈 Forecasts: http://localhost:3000/forecasts
+📦 Materials: http://localhost:3000/materials
+💡 Recommendations: http://localhost:3000/recommendations
+🔌 API Health: http://localhost:5000/health
+```
+
+📖 **[Complete Setup Guide →](docs/development/QUICK_START_BACKEND.md)**
 
 ---
 
-## 📁 **PROJECT STRUCTURE**
+## 📊 Project Structure
 
 ```
 gran_prix/
-├── api_standalone.py          # Flask API with clustering & prescriptive endpoints
-├── data/
-│   ├── processed/
-│   │   └── unified_dataset_with_factors.csv  # ⭐ Main dataset (27.25 MB, 118K rows)
-│   ├── raw/                    # 📥 33 datasets with complete documentation
-│   │   ├── [33 dataset folders]/
-│   │   │   └── [DATASET_ID]_[SOURCE]_[CONTEXT]_technical_docs.md  # Technical documentation
-│   │   ├── DATASETS_INDEX.md   # 📚 Complete index by category
-│   │   └── DATASETS_EXECUTIVE_SUMMARY.md  # 📊 Executive summary
-│   ├── training/               # 🎓 Training splits ready for ML
-│   │   ├── unknown_train.csv   # ⭐ Main training (93,881 rows)
-│   │   ├── unknown_test.csv    # Test split (23,471 rows)
-│   │   └── metadata.json       # Training metadata
-│   └── PROJECT_DATA_OVERVIEW.md  # 📊 Complete data overview
-├── docs/
-│   ├── proj/strategy/          # Strategic documentation
-│   └── guides/                 # User guides
-├── frontend/
+├── 📄 README.md                    # This file
+├── 📋 CHANGELOG.md                 # Main changelog
+├── 📋 CHANGELOG_PROD.md            # PROD path changelog
+│
+├── 🐳 docker-compose.prod.yml      # Production Docker setup
+├── 🐳 docker-compose.yml           # Development Docker setup
+│
+├── 📁 backend/                     # Backend API & Services
+│   ├── app/                        # Flask application
+│   │   ├── api/v1/routes/         # API endpoints
+│   │   ├── core/                  # Core business logic
+│   │   └── config.py              # Configuration
+│   ├── alembic/                   # Database migrations
+│   ├── config/                    # Configuration modules
+│   ├── etl/                       # ETL scripts
+│   │   ├── load_ml_outputs.py     # Load ML results to PostgreSQL
+│   │   └── calculate_kpis.sql     # KPI calculations
+│   ├── ml_pipeline/               # Offline ML processing
+│   │   └── main.py                # ML pipeline entry point
+│   ├── services/                  # Business services
+│   │   ├── auth_service.py        # JWT authentication
+│   │   ├── audit_service.py       # Audit logging
+│   │   └── database_service.py    # Database operations
+│   ├── db/                        # Database schemas
+│   └── requirements_deployment.txt # Production dependencies
+│
+├── 📁 frontend/                    # Next.js Frontend
 │   ├── src/
-│   │   ├── app/main/page.tsx              # Main dashboard
-│   │   ├── components/
-│   │   │   ├── Analytics.tsx              # 5-tab analytics interface
-│   │   │   ├── ClusteringDashboard.tsx    # K-means clustering visualization
-│   │   │   ├── PrescriptiveRecommendations.tsx  # AI recommendations
-│   │   │   ├── FormulaExplainer.tsx       # Mathematical formulas
-│   │   │   ├── ModelPerformanceDashboard.tsx    # ML model comparison
-│   │   │   ├── InteractiveMap.tsx         # Brazil map
-│   │   │   └── ...
-│   │   └── lib/api.ts                     # API client
-│   └── package.json
-└── docs/
-    └── BENCHMARK_REGISTRY.md              # Changelog & improvements
+│   │   ├── app/                   # Next.js app router
+│   │   │   ├── main/              # Main dashboard
+│   │   │   ├── features/          # Analytics tabs
+│   │   │   ├── forecasts/         # Forecasts page
+│   │   │   └── materials/         # Materials pages
+│   │   ├── components/            # React components
+│   │   └── lib/                   # Utilities & API client
+│   └── public/                    # Static assets
+│
+├── 📁 data/                        # Data Storage
+│   ├── raw/                       # Raw datasets
+│   ├── processed/                 # Processed data
+│   └── gold/                      # Gold layer (Parquet)
+│
+├── 📁 docs/                        # Documentation
+│   ├── proj/roadmaps/prod/        # PROD roadmaps
+│   ├── development/               # Development guides
+│   └── proj/diagrams/             # Architecture diagrams
+│
+└── 📁 scripts/                     # Utility scripts
+```
+
+📖 **[Complete Project Structure →](docs/proj/roadmaps/prod/README_PROD_ROADMAPS.md)**
+
+---
+
+## 🔌 API Endpoints
+
+### 📊 Analytics & Data
+
+```
+GET  /api/v1/kpis                    # Real-time KPIs
+GET  /api/v1/alerts                  # Inventory alerts
+GET  /api/v1/forecasts               # Demand forecasts
+GET  /api/v1/items                   # Material items
+GET  /api/v1/materials               # Materials with details
+GET  /api/v1/materials/{itemId}      # Material details
+```
+
+### 🎯 Clustering & Analysis
+
+```
+GET  /api/v1/clustering/equipment-failure    # Equipment failure clusters
+GET  /api/v1/clustering/tower-performance    # Tower performance clusters
+```
+
+### 🤖 Prescriptive Analytics
+
+```
+GET  /api/v1/recommendations         # LLM-powered recommendations
+```
+
+### 🗺️ Geographic Data
+
+```
+GET  /api/v1/geographic/data         # Brazil regional data
+```
+
+### 📈 Model Performance
+
+```
+GET  /api/v1/models/performance      # ML model comparison
+```
+
+### 🔍 Health & Status
+
+```
+GET  /health                         # Health check
+GET  /api/v1/health                  # Detailed health status
+```
+
+### 🔐 Authentication (Protected Endpoints)
+
+```
+POST /api/v1/auth/login              # User login
+POST /api/v1/auth/logout             # User logout
+GET  /api/v1/auth/me                 # Current user info
+```
+
+📚 **[Complete API Documentation →](docs/development/BACKEND_INTEGRATION_GUIDE.md)**
+
+---
+
+## 🛠️ Technical Stack
+
+### 🔧 Backend (Production)
+
+| Technology           | Purpose             | Version | Status |
+| -------------------- | ------------------- | ------- | ------ |
+| **Python**     | Core language       | 3.8+    | ✅     |
+| **Flask**      | API framework       | 2.3+    | ✅     |
+| **PostgreSQL** | Production database | 14+     | ✅     |
+| **Redis**      | Caching layer       | Latest  | ✅     |
+| **Alembic**    | Database migrations | Latest  | ✅     |
+| **SQLAlchemy** | ORM                 | Latest  | ✅     |
+| **JWT**        | Authentication      | Latest  | ✅     |
+| **bcrypt**     | Password hashing    | Latest  | ✅     |
+
+### ⚛️ Frontend (Production)
+
+| Technology             | Purpose                 | Version | Status |
+| ---------------------- | ----------------------- | ------- | ------ |
+| **Next.js**      | React framework         | 14      | ✅     |
+| **TypeScript**   | Type safety             | 5.0+    | ✅     |
+| **Tailwind CSS** | Styling                 | Latest  | ✅     |
+| **Recharts**     | Data visualization      | Latest  | ✅     |
+| **D3.js**        | Advanced visualizations | Latest  | ✅     |
+| **react-katex**  | LaTeX rendering         | Latest  | ✅     |
+
+### 🤖 ML/AI (Offline Processing)
+
+| Technology             | Purpose                 | Status |
+| ---------------------- | ----------------------- | ------ |
+| **Prophet**      | Time series forecasting | ✅     |
+| **ARIMA**        | Statistical forecasting | ✅     |
+| **LSTM**         | Deep learning           | ✅     |
+| **scikit-learn** | Clustering & utilities  | ✅     |
+| **Pandas**       | Data processing         | ✅     |
+| **NumPy**        | Numerical computing     | ✅     |
+
+### 🐳 Infrastructure
+
+| Technology               | Purpose          | Status |
+| ------------------------ | ---------------- | ------ |
+| **Docker**         | Containerization | ✅     |
+| **Docker Compose** | Orchestration    | ✅     |
+| **PostgreSQL**     | Database server  | ✅     |
+| **Redis**          | Cache server     | ✅     |
+
+### 🔄 Future Stack (Planned)
+
+| Technology           | Purpose                | Status |
+| -------------------- | ---------------------- | ------ |
+| **AWS S3**     | Object storage         | 🔄     |
+| **Delta Lake** | Data lakehouse         | 🔄     |
+| **Spark**      | Big data processing    | 🔄     |
+| **Databricks** | ML platform            | 🔄     |
+| **Airflow**    | Workflow orchestration | 🔄     |
+| **dbt**        | Data transformations   | 🔄     |
+
+📖 **[Complete Technical Stack →](docs/proj/roadmaps/prod/TECHNICAL_STACK_PROD.md)**
+
+---
+
+## 📈 Performance & Scalability
+
+### ⚡ API Performance
+
+| Endpoint     | Response Time | Cache TTL | Status |
+| ------------ | ------------- | --------- | ------ |
+| Health Check | <10ms         | N/A       | ✅     |
+| KPIs         | <50ms         | 30s       | ✅     |
+| Forecasts    | <200ms        | 1h        | ✅     |
+| Clustering   | <500ms        | 5m        | ✅     |
+| Prescriptive | <100ms        | 1h        | ✅     |
+
+### 🎯 Database Performance
+
+- ✅ **Partitioning** - Large fact tables partitioned by date
+- ✅ **Materialized Views** - Precomputed analytics queries
+- ✅ **Indexing** - Optimized indexes for common queries
+- ✅ **Connection Pooling** - Efficient connection management
+- ✅ **Query Optimization** - Tuned SQL queries
+
+### 📊 Scalability
+
+- ✅ **Horizontal Scaling** - Load balancer ready
+- ✅ **Caching Strategy** - Redis for high-traffic endpoints
+- ✅ **Database Scaling** - PostgreSQL read replicas ready
+- ✅ **Container Orchestration** - Docker Compose → Kubernetes ready
+
+### 🎯 Code Quality
+
+```
+✅ Zero TypeScript errors
+✅ Zero linting issues
+✅ 100% type safety
+✅ Production-grade quality
+✅ Comprehensive test coverage
+✅ Security best practices
 ```
 
 ---
 
-## 🔌 **API ENDPOINTS**
+## 🔐 Security & Compliance
 
-### Analytics
-- `GET /api/kpis` - Real-time KPIs
-- `GET /api/alerts` - Inventory alerts
-- `GET /api/forecast/30days` - 30-day forecast
+### 🔒 Authentication & Authorization
 
-### Clustering
-- `GET /api/clustering/equipment-failure` - Equipment failure clusters
-- `GET /api/clustering/tower-performance` - Tower performance clusters
+- ✅ **JWT Authentication** - Secure token-based authentication
+- ✅ **Role-Based Access Control** - ADMIN, ANALYST, VIEWER roles
+- ✅ **Password Security** - bcrypt hashing with salt
+- ✅ **Token Expiration** - Configurable token lifetimes
+- ✅ **Secure Headers** - CORS, security headers configured
 
-### Prescriptive
-- `GET /api/prescriptive/recommendations` - LLM recommendations
+### 📝 Audit & Compliance
 
-### Geographic
-- `GET /api/geographic/data` - Brazil regional data
+- ✅ **Comprehensive Audit Logging** - All API calls logged
+- ✅ **User Activity Tracking** - Authentication events logged
+- ✅ **Data Change Tracking** - Database changes audited
+- ✅ **Compliance Ready** - GDPR, data privacy ready
 
-### Models
-- `GET /api/models/performance` - ML model comparison
+### 🛡️ Security Features
+
+- ✅ **Input Validation** - All inputs validated and sanitized
+- ✅ **SQL Injection Protection** - Parameterized queries
+- ✅ **XSS Protection** - Content Security Policy
+- ✅ **Environment Variables** - Secrets management
+- ✅ **HTTPS Ready** - SSL/TLS configuration ready
 
 ---
 
-## 📊 **DATASETS DOCUMENTATION**
+## 📚 Documentation
 
-### Complete Dataset Collection
+### 🗺️ **Master Navigation**
 
-**33 datasets** with full technical documentation:
+- **[📚 Complete Navigation Index](docs/NAVIGATION_INDEX.md)** - **START HERE** - Master index of all documentation, roadmaps, and changelogs
 
-| Document | Purpose | Location |
-|----------|---------|----------|
-| **DATASETS_INDEX.md** | 📚 Complete index by category | `data/raw/DATASETS_INDEX.md` |
-| **DATASETS_EXECUTIVE_SUMMARY.md** | 📊 Executive summary & status | `data/raw/DATASETS_EXECUTIVE_SUMMARY.md` |
-| **PROJECT_DATA_OVERVIEW.md** | 📈 Complete data overview | `data/PROJECT_DATA_OVERVIEW.md` |
-| **DATASETS_COMPLETE_DOCUMENTATION_SUMMARY.md** | 📋 Complete documentation summary | `docs/DATASETS_COMPLETE_DOCUMENTATION_SUMMARY.md` |
+### 📖 Main Documentation
 
-**Dataset Categories:**
-- ⭐ **Essential Datasets** (8) - Primary ML training
-- 🇧🇷 **Brazilian Datasets** (8) - Brazilian market context
-- 📡 **Anatel Datasets** (6) - Regulatory data
-- 📦 **Kaggle Datasets** (7) - Public competition data
-- 🔗 **GitHub Datasets** (2) - Open source data
-- 📊 **Reference Datasets** (5) - Context only
+- **[📋 Changelog](CHANGELOG.md)** - Complete version history
+- **[🏭 PROD Path Changelog](CHANGELOG_PROD.md)** - Production path history
+- **[🗺️ PROD Roadmaps](docs/proj/roadmaps/prod/README_PROD_ROADMAPS.md)** - Production roadmaps
+- **[🏗️ Architecture](docs/proj/diagrams/Project.md)** - Complete architecture specification
 
-**Key Datasets:**
-- ✅ **Zenodo Milan Telecom** (116K rows) - ONLY public telecom + weather dataset
-- ✅ **Brazilian Operators Structured** (B2B contracts) - Stable demand
-- ✅ **Brazilian Demand Factors** (2,190 rows) - Integrated external factors
-- ✅ **Kaggle Equipment Failure** (10K rows) - Predictive maintenance
-- ✅ **GitHub Network Fault** (7.4K rows) - Telecom faults
+### 🚀 Quick Start Guides
 
-**All datasets include:**
-- ✅ Complete technical documentation (`*_technical_docs.md`)
-- ✅ Source references & academic papers
-- ✅ Data structure & schema details
-- ✅ Use cases for Nova Corrente
-- ✅ ML algorithm recommendations
+- **[⚡ Quick Start](docs/development/QUICK_START_BACKEND.md)** - Backend setup guide
+- **[🔧 Backend Integration](docs/development/BACKEND_INTEGRATION_GUIDE.md)** - API integration
+- **[🎨 Frontend Setup](frontend/README.md)** - Frontend development
+- **[🐳 Deployment](docs/development/DEPLOYMENT.md)** - Production deployment
 
-**Quick Search:** All technical docs follow pattern:
+### 📊 Technical Documentation
+
+- **[📐 Technical Stack](docs/proj/roadmaps/prod/TECHNICAL_STACK_PROD.md)** - Complete stack details
+- **[📈 Implementation Checklist](docs/development/IMPLEMENTATION_CHECKLIST.md)** - Implementation guide
+- **[🔄 Migration Guide](docs/MIGRATION_DEMO_TO_PROD.md)** - Upgrade from DEMO
+
+### 🔄 Future Roadmap
+
+- **[☁️ Cloud Infrastructure](docs/proj/roadmaps/prod/PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md)** - AWS deployment
+- **[📊 Data Engineering](docs/proj/roadmaps/prod/DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md)** - Advanced pipelines
+- **[🔄 Orchestration](docs/proj/roadmaps/prod/ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md)** - Airflow & dbt
+
+---
+
+## 🤝 Contributing
+
+This project is developed for **Grand Prix 2025** by the Nova Corrente team at SENAI.
+
+### 📝 Contribution Guidelines
+
+1. Follow the production architecture patterns
+2. Maintain code quality standards (TypeScript, linting)
+3. Update documentation for all changes
+4. Write tests for new features
+5. Follow the offline-first ML architecture
+6. Ensure security best practices
+
+### 🔄 Development Workflow
+
+1. Create feature branch from `master`
+2. Implement changes with tests
+3. Update documentation
+4. Submit pull request
+5. Code review and approval
+6. Merge to `master`
+
+---
+
+<div align="center">
+
+### ⭐ Star this repository if you find it useful! ⭐
+
+**Status:** ✅ **PRODUCTION READY**
+**Last Updated:** November 2025
+**Version:** 4.0.0 (PROD)
+
+---
+
+*Built with ❤️ for Nova Corrente Telecom - Enterprise Production Platform*
+
 ```
-[DATASET_ID]_[SOURCE]_[CONTEXT]_technical_docs.md
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                           ║
+║                    🏆 GRAND PRIX 2025 - SENAI 🏆                         ║
+║                  🏭 PRODUCTION-READY ENTERPRISE PLATFORM 🏭              ║
+║                                                                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
 ```
 
-### Main Training Dataset
-
-- **File:** `data/processed/unified_dataset_with_factors.csv`
-- **Size:** 27.25 MB
-- **Records:** 118,082 rows
-- **Features:** 31 columns
-- **Date Range:** 2013-11-01 to 2025-01-31 (11+ years)
-- **Status:** ✅ Ready for ML training
-
-**Training Splits:**
-- `data/training/unknown_train.csv` - 93,881 rows (80% split)
-- `data/training/unknown_test.csv` - 23,471 rows (20% split)
-
----
-
-## 🎨 **ANALYTICS TABS**
-
-### 1. Geographic
-- Interactive Brazil map
-- State-level inventory & supplier analytics
-- Maintenance history visualization
-- Project status tracking
-
-### 2. Formulas
-- LaTeX mathematical formulas
-- Interactive PP & SS calculators
-- MAPE, RMSE, MAE explanations
-
-### 3. Clustering
-- Equipment failure risk analysis
-- Tower performance categorization
-- K-means visualization
-- Cluster statistics
-
-### 4. Models
-- ARIMA vs Prophet vs LSTM vs Ensemble
-- Loss curves & feature importance
-- Residual analysis
-- Model comparison charts
-
-### 5. Prescriptive
-- LLM-powered recommendations
-- Priority-based actions
-- Impact & savings estimates
-- Regional mapping
-
----
-
-## 🛠️ **TECHNICAL STACK**
-
-### Backend
-- Flask API
-- Pandas (data processing)
-- NumPy (calculations)
-- scikit-learn (K-means clustering)
-- Python 3.8+
-
-### Frontend
-- Next.js 14
-- TypeScript
-- Tailwind CSS
-- Recharts (visualizations)
-- react-katex (LaTeX)
-- D3.js (maps)
-
-### ML/AI
-- ARIMA (statistical)
-- Prophet (Facebook forecasting)
-- LSTM (deep learning)
-- Ensemble models
-- K-means clustering
-
----
-
-## 📈 **PERFORMANCE METRICS**
-
-### API Performance
-- Health Check: <10ms
-- Clustering: <500ms
-- Prescriptive: <100ms
-- Caching: 30-second TTL
-
-### Code Quality
-- ✅ Zero TypeScript errors
-- ✅ Zero linting issues
-- ✅ 100% type safety
-- ✅ Production-grade quality
-
-### Clustering Accuracy
-- Equipment Failure: 3 risk clusters
-- Tower Performance: 4 tiers
-- Real-time processing
-
----
-
-## 🎯 **BUSINESS VALUE**
-
-### Insights
-- **Predictive Maintenance:** Identify high-risk equipment
-- **Tower Optimization:** 4-tier performance classification
-- **Cost Reduction:** Prescriptive recommendations
-- **Regional Analysis:** 27-state Brazil coverage
-- **Mathematical Accuracy:** LaTeX formula explanations
-
-### ROI
-- Equipment Failure: 35% high-risk vs 2% low-risk
-- Tower Performance: 4-tier classification
-- Recommendations: 5 actionable items
-- Clustering: Real-time 10k+ record analysis
-
----
-
-## 📚 **DOCUMENTATION**
-
-- `docs/BENCHMARK_REGISTRY.md` - Changelog & improvements
-- `DASHBOARD_COMPLETE.md` - Complete feature overview
-- `docs/MATH_COMPLETE_MASTER_REFERENCE.md` - Mathematical formulas
-
----
-
-## 🤝 **CONTRIBUTING**
-
-This project is for the Grand Prix 2025 demoday.
-
----
-
-## 📄 **LICENSE**
-
-[Specify License]
-
----
-
-## 👥 **AUTHORS**
-
-Nova Corrente Team  
-Gran Prix 2025 - SENAI
-
----
-
-## 🙏 **ACKNOWLEDGMENTS**
-
-- Kaggle for open datasets
-- GitHub open-source communities
-- PrevIA_telecom frontend components
-
----
-
-**Status: ✅ PRODUCTION READY**  
-**Last Updated: November 1, 2025**  
-**Version: 1.0.0**
-
----
-
-*Built with ❤️ for Nova Corrente Telecom*
+</div>

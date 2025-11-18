@@ -1,0 +1,308 @@
+{
+  "BLUE_YONDER_JDA": {
+    "nome": "Blue Yonder (Ex-JDA)",
+    "categoria": "Enterprise Supply Chain Planning",
+    "fundação": "1985",
+    "sede": "USA",
+    "modelo": "SaaS/On-Premise",
+    "principais_clientes": [
+      "Walmart",
+      "Amazon",
+      "Target",
+      "Grandes Varejistas"
+    ],
+    "forecasting_features": {
+      "metodos_previsao": [
+        "Statistical Forecasting",
+        "Machine Learning",
+        "Demand Sensing"
+      ],
+      "sazonalidade": "Sim",
+      "fatores_externos": "Parcial (promoções, calendário)",
+      "integracao_clima": "Não",
+      "integracao_dados_reais_time": "Sim",
+      "ensemble_models": "Sim"
+    },
+    "features_geral": {
+      "demand_planning": 9,
+      "inventory_optimization": 8,
+      "supply_planning": 9,
+      "visibility_real_time": 7,
+      "automation": 8,
+      "ease_of_use": 6,
+      "customization": 7,
+      "integration_capability": 8,
+      "support": 7,
+      "total_score": 79
+    },
+    "pontos_fortes": [
+      "Líder Gartner Magic Quadrant para SCP",
+      "Suporta múltiplas geografias e verticais",
+      "Escalável para milhares de SKUs",
+      "Ensemble methods inclusos",
+      "Integração nativa com dados de promoção"
+    ],
+    "pontos_fracos": [
+      "Implementação lenta (6-12 meses)",
+      "Curva de aprendizado muito alta",
+      "Barreiras à entrada altas (certificação necessária)",
+      "Documentação de uso cases desorganizada",
+      "Sem integração nativa de fatores climáticos",
+      "Interface complexa",
+      "Custo muito elevado",
+      "Requer expertise técnica significativa"
+    ],
+    "preco": {
+      "modelo": "Enterprise - Negotiated",
+      "custo_implementacao": "R$ 500K-2M",
+      "tempo_implementacao": "6-12 meses",
+      "upfront": "Moderado-Alto",
+      "ongoing": "Alto"
+    },
+    "accuracy": "MAPE 8-12%",
+    "time_to_value": "9-12 meses"
+  },
+  "SAP_IBP": {
+    "nome": "SAP Integrated Business Planning",
+    "categoria": "Enterprise Planning Suite",
+    "fundação": "1992",
+    "sede": "Germany",
+    "modelo": "Cloud/On-Premise",
+    "principais_clientes": [
+      "Fortune 500",
+      "Empresas SAP existentes"
+    ],
+    "forecasting_features": {
+      "metodos_previsao": [
+        "Statistical",
+        "ML básico",
+        "Integração S/4HANA"
+      ],
+      "sazonalidade": "Sim",
+      "fatores_externos": "Não",
+      "integracao_clima": "Não",
+      "integracao_dados_reais_time": "Sim",
+      "ensemble_models": "Não"
+    },
+    "features_geral": {
+      "demand_planning": 8,
+      "inventory_optimization": 7,
+      "supply_planning": 8,
+      "visibility_real_time": 8,
+      "automation": 6,
+      "ease_of_use": 5,
+      "customization": 6,
+      "integration_capability": 9,
+      "support": 7,
+      "total_score": 70
+    },
+    "pontos_fortes": [
+      "Integração perfeita com ecossistema SAP",
+      "Visibilidade end-to-end",
+      "Suporte nativo em português",
+      "Confiável para grandes enterprises"
+    ],
+    "pontos_fracos": [
+      "Exige conhecimento técnico profundo",
+      "Requer SAP S/4HANA como base",
+      "Scenario analysis complexa",
+      "Integração subassinado em desenvolvimento",
+      "Sem capacidade avançada de ML",
+      "Interface desatualizada",
+      "Implementação custosa",
+      "Sem fatores externos nativos"
+    ],
+    "preco": {
+      "modelo": "Enterprise - Based on landscape",
+      "custo_implementacao": "R$ 1M-3M",
+      "tempo_implementacao": "8-14 meses",
+      "upfront": "Alto",
+      "ongoing": "Alto"
+    },
+    "accuracy": "MAPE 10-15%",
+    "time_to_value": "12+ meses"
+  },
+  "KINAXIS": {
+    "nome": "Kinaxis Rapid Response",
+    "categoria": "Agile Supply Chain Planning",
+    "fundação": "2003",
+    "sede": "Canada",
+    "modelo": "Cloud-native SaaS",
+    "principais_clientes": [
+      "Electronics",
+      "High-Tech",
+      "Automotive"
+    ],
+    "forecasting_features": {
+      "metodos_previsao": [
+        "Statistical básico",
+        "What-if simulations"
+      ],
+      "sazonalidade": "Sim",
+      "fatores_externos": "Limitado",
+      "integracao_clima": "Não",
+      "integracao_dados_reais_time": "Sim",
+      "ensemble_models": "Não"
+    },
+    "features_geral": {
+      "demand_planning": 6,
+      "inventory_optimization": 6,
+      "supply_planning": 7,
+      "visibility_real_time": 8,
+      "automation": 7,
+      "ease_of_use": 7,
+      "customization": 6,
+      "integration_capability": 6,
+      "support": 6,
+      "total_score": 65
+    },
+    "pontos_fortes": [
+      "What-if planning excelente",
+      "Implementação rápida (3-9 meses)",
+      "Interface intuitiva",
+      "Bom para volatilidade (high-tech, eletrônicos)",
+      "Suporte colaborativo"
+    ],
+    "pontos_fracos": [
+      "Forecast estatístico fraco",
+      "Não captura trends e seasonality bem",
+      "Sem ML avançado",
+      "Scenario analysis deficiente",
+      "Sem integração de fatores externos",
+      "Não escalável para milhares de SKUs",
+      "Integração limitada com backends",
+      "Caro para o que oferece"
+    ],
+    "preco": {
+      "modelo": "SaaS - Per user/month",
+      "custo_implementacao": "R$ 300K-800K",
+      "tempo_implementacao": "3-9 meses",
+      "upfront": "Moderado",
+      "ongoing": "Moderado-Alto"
+    },
+    "accuracy": "MAPE 15-20%",
+    "time_to_value": "6-9 meses"
+  },
+  "PROTEUS_WMS": {
+    "nome": "Proteus WMS",
+    "categoria": "Warehouse Management System",
+    "fundação": "2015",
+    "sede": "USA",
+    "modelo": "Cloud SaaS",
+    "principais_clientes": [
+      "Distribuidores",
+      "3PLs",
+      "Varejistas"
+    ],
+    "forecasting_features": {
+      "metodos_previsao": [
+        "Moving Average básico"
+      ],
+      "sazonalidade": "Limitado",
+      "fatores_externos": "Não",
+      "integracao_clima": "Não",
+      "integracao_dados_reais_time": "Sim",
+      "ensemble_models": "Não"
+    },
+    "features_geral": {
+      "demand_planning": 4,
+      "inventory_optimization": 5,
+      "supply_planning": 3,
+      "visibility_real_time": 8,
+      "automation": 7,
+      "ease_of_use": 8,
+      "customization": 6,
+      "integration_capability": 5,
+      "support": 7,
+      "total_score": 53
+    },
+    "pontos_fortes": [
+      "Excelente para operações warehouse",
+      "Fácil de usar",
+      "Implementação rápida",
+      "Bom rastreamento em tempo real",
+      "Flexibilidade de integração"
+    ],
+    "pontos_fracos": [
+      "Forecasting muito básico",
+      "Não previne rupturas",
+      "Sem ML ou AI",
+      "Sem análise de cenários",
+      "Não otimiza estoque",
+      "Sem fatores externos",
+      "Inadequado para supply chain planning",
+      "Foco apenas em warehouse"
+    ],
+    "preco": {
+      "modelo": "SaaS - Por licença",
+      "custo_implementacao": "R$ 100K-400K",
+      "tempo_implementacao": "2-6 meses",
+      "upfront": "Baixo-Moderado",
+      "ongoing": "Baixo"
+    },
+    "accuracy": "MAPE 25-40%",
+    "time_to_value": "2-4 meses"
+  },
+  "NETSUITE": {
+    "nome": "Oracle NetSuite",
+    "categoria": "Cloud ERP com Demand Planning",
+    "fundação": "1998",
+    "sede": "USA",
+    "modelo": "Cloud SaaS",
+    "principais_clientes": [
+      "Mid-market",
+      "E-commerce",
+      "Distribuição"
+    ],
+    "forecasting_features": {
+      "metodos_previsao": [
+        "Linear Regression",
+        "Moving Average",
+        "Seasonal Average"
+      ],
+      "sazonalidade": "Sim",
+      "fatores_externos": "Não",
+      "integracao_clima": "Não",
+      "integracao_dados_reais_time": "Sim",
+      "ensemble_models": "Não"
+    },
+    "features_geral": {
+      "demand_planning": 6,
+      "inventory_optimization": 6,
+      "supply_planning": 5,
+      "visibility_real_time": 7,
+      "automation": 6,
+      "ease_of_use": 7,
+      "customization": 6,
+      "integration_capability": 7,
+      "support": 7,
+      "total_score": 61
+    },
+    "pontos_fortes": [
+      "Integração nativa com ERP",
+      "Fácil de usar",
+      "Suporte a multi-localização",
+      "Stockout prediction",
+      "ATP (Available-to-Promise) nativo"
+    ],
+    "pontos_fracos": [
+      "Métodos de previsão muito básicos",
+      "Sem ML ou AI avançado",
+      "Não escalável para milhares de SKUs",
+      "Sem fatores externos",
+      "Sem ensemble methods",
+      "Performance degradada com volume",
+      "Integrações limitadas fora Oracle",
+      "Accuracy moderate"
+    ],
+    "preco": {
+      "modelo": "SaaS - Por usuário/módulo",
+      "custo_implementacao": "R$ 200K-700K",
+      "tempo_implementacao": "3-8 meses",
+      "upfront": "Moderado",
+      "ongoing": "Moderado"
+    },
+    "accuracy": "MAPE 12-18%",
+    "time_to_value": "4-6 meses"
+  }
+}

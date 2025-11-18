@@ -1,0 +1,35 @@
+{
+  "external_sources": {
+    "description": "Raw external data from APIs and downloads",
+    "location": "data\\landing\\external_factors-raw",
+    "formats": [
+      "JSON",
+      "CSV"
+    ],
+    "update_frequency": "daily"
+  },
+  "silver_layer": {
+    "description": "Cleaned, normalized external data",
+    "location": "data\\silver\\external_factors",
+    "formats": [
+      "Parquet"
+    ],
+    "update_frequency": "daily",
+    "data_quality": "validated (<5% null rate)"
+  },
+  "gold_layer": {
+    "description": "ML-ready features with time-series and lag variables",
+    "location": "data\\gold\\ml_features",
+    "formats": [
+      "Parquet"
+    ],
+    "update_frequency": "daily",
+    "feature_types": [
+      "rates",
+      "prices",
+      "temperatures",
+      "lags",
+      "rolling_windows"
+    ]
+  }
+}

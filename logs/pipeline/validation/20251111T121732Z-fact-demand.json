@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "row_count": 5760523,
+  "date_range": [
+    "2019-01-01",
+    "2025-10-24"
+  ],
+  "metadata": {
+    "execution_ts": "2025-11-11T12:17:23.512736"
+  }
+}

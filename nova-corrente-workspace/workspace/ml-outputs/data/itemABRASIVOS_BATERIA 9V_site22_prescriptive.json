@@ -1,0 +1,9 @@
+{
+  "reorder_point": 6.946800000000005,
+  "safety_stock": 1.819846390107788e-15,
+  "avg_daily_demand": 1.1578000000000006,
+  "lead_time": 6,
+  "current_stock": 0.0,
+  "days_to_rupture": -1.5718141217030464e-15,
+  "stock_status": "critical"
+}

@@ -1,0 +1,11 @@
+{
+  "pipeline_version": "1.0",
+  "created_date": "2025-11-11T13:31:00.950512",
+  "landing_root": "data\\landing\\external_factors-raw",
+  "silver_root": "data\\silver\\external_factors",
+  "gold_root": "data\\gold\\ml_features",
+  "tables": {
+    "silver": 23,
+    "gold": 11
+  }
+}

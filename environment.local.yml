@@ -1,0 +1,28 @@
+name: nova-corrente-gpu
+channels:
+  - rapidsai
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - cudatoolkit
+  - cudf
+  - cupy
+  - pytorch
+  - pytorch-cuda
+  - torchmetrics
+  - prefect
+  - great-expectations
+  - polars
+  - pandas
+  - pyarrow
+  - fastparquet
+  - statsmodels
+  - httpx
+  - prophet
+  - scikit-learn
+  - pip
+  - pip:
+      - temporal-fusion-transformer-pytorch
+      - pynvml

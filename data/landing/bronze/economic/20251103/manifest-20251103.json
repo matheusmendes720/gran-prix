@@ -1,0 +1,25 @@
+{
+  "domain": "economic",
+  "run_date": "2025-11-03",
+  "created_at": "2025-11-07T07:00:14.231049",
+  "entries": [
+    {
+      "domain": "economic",
+      "layer": "bronze",
+      "path": "data\\landing\\bronze\\economic\\20251103\\snapshot.json",
+      "record_count": 2,
+      "metadata": {
+        "week_end": "2025-11-03"
+      }
+    },
+    {
+      "domain": "economic",
+      "layer": "silver",
+      "path": "data\\landing\\silver\\economic\\20251103\\economic-2025-11-03.parquet",
+      "record_count": 2,
+      "metadata": {
+        "week_end": "2025-11-03"
+      }
+    }
+  ]
+}

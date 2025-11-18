@@ -1,25 +1,99 @@
 # 📚 ROADMAPS & STRATEGIC DOCUMENTATION INDEX
 ## Nova Corrente Demand Forecasting - Complete Guide
 
-**Last Updated:** Novembro 2025  
-**Version:** 3.0 (Updated for 4-Day Sprint Scope)  
-**Status:** ✅ **DOCUMENTATION UPDATED - 4-DAY SPRINT SCOPE**
+**Last Updated:** November 2025  
+**Version:** 4.0 (DEMO vs PROD Path Split)  
+**Status:** ✅ **DOCUMENTATION REORGANIZED - DEMO & PROD PATHS SEPARATED**
 
 ---
 
-## 🚨 ATUALIZAÇÃO DE ESCOPO - 4-DAY SPRINT
+## 🎯 CHOOSE YOUR PATH
 
-**Escopo Atual:** 4-Day Sprint (Reduzido)  
-**Timeline:** 4 dias (D0-D4) em vez de 16 semanas  
-**Stack:** Parquet + MinIO + DuckDB + Pandas + FastAPI + React  
-**ML Strategy:** NO ML OPS IN DEPLOYMENT (ML processing separado)
+The Nova Corrente project has evolved into two distinct paths. Choose the path that matches your needs:
 
-**Referências:**
-- [4-Day Sprint Overview](../../diagnostics/clusters/00_OVERVIEW_INDEX_4DAY_SPRINT_PT_BR.md)
-- [Global Constraints](../../diagnostics/clusters/GLOBAL_CONSTRAINTS_NO_ML_OPS_PT_BR.md)
-- [Scope Update Summary](../../diagnostics/SCOPE_UPDATE_4DAY_SPRINT_SUMMARY_PT_BR.md)
+### 🚀 DEMO Path - 4-Day Sprint, Roadshow-Ready
+**Timeline:** 4 days (D0-D4)  
+**Stack:** Parquet + MinIO + DuckDB + Pandas + Simple Scheduler  
+**Use Case:** Roadshow demonstrations, MVP, rapid deployment, cost-sensitive  
+**Complexity:** Low  
+**Cost:** Minimal
 
-**Nota:** Muitos documentos foram atualizados para refletir o escopo reduzido de 4 dias. O escopo original de 16 semanas foi mantido para referência futura nas seções marcadas como "Futuro - Referência Original".
+👉 **[Go to DEMO Path Roadmaps →](demo/README_DEMO_ROADMAPS.md)**
+
+---
+
+### 🏭 PROD Path - Production-Ready, Enterprise-Scale
+**Timeline:** 16 weeks (phased implementation)  
+**Stack:** PostgreSQL + (future: AWS + Airflow + dbt + Delta Lake + Spark)  
+**Use Case:** Production deployment, enterprise scale, long-term investment  
+**Complexity:** High  
+**Cost:** (Future: Cloud costs)
+
+👉 **[Go to PROD Path Roadmaps →](prod/README_PROD_ROADMAPS.md)**
+
+---
+
+## 📊 PATH COMPARISON
+
+| Aspect | DEMO Path | PROD Path |
+|--------|-----------|-----------|
+| **Timeline** | 4 days | 16 weeks |
+| **Storage** | Parquet + MinIO | PostgreSQL + (future: S3 + Delta Lake) |
+| **Compute** | DuckDB + Pandas | PostgreSQL + (future: Spark + Databricks) |
+| **Orchestration** | Simple scheduler | (future: Airflow) |
+| **Transformations** | Python scripts | (future: dbt models) |
+| **Deployment** | Local Docker Compose | Production Docker + (future: AWS) |
+| **Use Case** | Roadshow, MVP | Production, enterprise |
+| **Complexity** | Low | High |
+| **Cost** | Minimal | (Future: Cloud costs) |
+
+**See:** [Complete Stack Comparison](../../STACK_COMPARISON_DEMO_VS_PROD.md) for detailed comparison
+
+---
+
+## 🔄 MIGRATION BETWEEN PATHS
+
+- **[DEMO → PROD Migration Guide](../../MIGRATION_DEMO_TO_PROD.md)** - Step-by-step upgrade from DEMO to PROD
+- **[PROD → DEMO Simplification Guide](../../MIGRATION_PROD_TO_DEMO.md)** - Step-by-step simplification from PROD to DEMO
+
+---
+
+## 📖 SHARED DOCUMENTATION
+
+These documents apply to both DEMO and PROD paths:
+
+### Strategic Overview
+- **[EXECUTIVE_ENRICHMENT_SUMMARY.md](shared/EXECUTIVE_ENRICHMENT_SUMMARY.md)** - Executive-level justification for external data enrichment
+- **[COMPREHENSIVE_DATA_MODELING_STRATEGY.md](shared/COMPREHENSIVE_DATA_MODELING_STRATEGY.md)** - Complete technical specification for data warehouse design
+- **[COMPLETE_CHAT_HISTORY_ANALYSIS.md](shared/COMPLETE_CHAT_HISTORY_ANALYSIS.md)** - Full context from all chat sessions
+- **[Annotation_Sugestion.md](shared/Annotation_Sugestion.md)** - MIT Telecom dataset fit assessment
+
+### Quick Start Guides
+- **[QUICK_START_GUIDE.md](shared/QUICK_START_GUIDE.md)** - Get started in 60 minutes
+- **[QUICK_START_GUIDE_PT_BR.md](shared/QUICK_START_GUIDE_PT_BR.md)** - Guia rápido em português
+
+### Implementation Support
+- **[CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md](shared/CURRENT_STATE_DATA_PREPROCESSING_PT_BR.md)** - Current data processing state
+- **[NEXT_STEPS_OPTIMIZATION_PT_BR.md](shared/NEXT_STEPS_OPTIMIZATION_PT_BR.md)** - Optimization roadmap
+- **[TROUBLESHOOTING_GUIDE_PT_BR.md](shared/TROUBLESHOOTING_GUIDE_PT_BR.md)** - Troubleshooting guide
+- **[IMPLEMENTATION_TEMPLATES_PT_BR.md](shared/IMPLEMENTATION_TEMPLATES_PT_BR.md)** - Implementation templates
+
+---
+
+## 🔁 RELEASE NOTES & ARCHITECTURE OVERVIEW
+
+### 🗺️ **Master Navigation**
+- **[📚 Complete Navigation Index](../../NAVIGATION_INDEX.md)** - **START HERE** - Master index of all documentation, roadmaps, and changelogs
+
+### Changelogs
+- **[CHANGELOG.md](../../CHANGELOG.md)** - Main changelog (references both paths)
+- **[CHANGELOG_DEMO.md](../../CHANGELOG_DEMO.md)** - Complete DEMO path history
+- **[CHANGELOG_PROD.md](../../CHANGELOG_PROD.md)** - Complete PROD path history
+
+### Architecture Analysis
+- **[Architecture Bifurcation Analysis](../../ARCHITECTURE_BIFURCATION_ANALYSIS.md)** - Complete analysis of path divergence
+- **[Stack Comparison](../../STACK_COMPARISON_DEMO_VS_PROD.md)** - Detailed technology stack comparison
+- **[Bifurcation Timeline](../../ROADMAP_BIFURCATION_TIMELINE.md)** - Visual timeline of path divergence
 
 ---
 
@@ -27,19 +101,19 @@
 
 ### New to This Project? Read These 3 Files (45 minutes)
 
-1. **[QUICK_START_GUIDE.md](QUICK_START_GUIDE.md)** (15 min) 🔥 **START HERE**
+1. **[QUICK_START_GUIDE.md](shared/QUICK_START_GUIDE.md)** (15 min) 🔥 **START HERE**
    - 60-second TLDR
    - 3 things to do today
    - Week-by-week roadmap
    - Troubleshooting guide
 
-2. **[EXECUTIVE_ENRICHMENT_SUMMARY.md](EXECUTIVE_ENRICHMENT_SUMMARY.md)** (20 min)
+2. **[EXECUTIVE_ENRICHMENT_SUMMARY.md](shared/EXECUTIVE_ENRICHMENT_SUMMARY.md)** (20 min)
    - The opportunity: 96.3% missing data = 72 point MAPE gap
    - Best tables to add (3-tier priorities)
    - MAPE progression: 87% → <15%
    - Business impact metrics
 
-3. **[Annotation_Sugestion.md](Annotation_Sugestion.md)** (10 min)
+3. **[Annotation_Sugestion.md](shared/Annotation_Sugestion.md)** (10 min)
    - MIT Telecom fit assessment
    - Core columns to use
    - Required enrichments
@@ -51,7 +125,7 @@
 
 ### 1. Strategic Overview (Read First)
 
-#### [EXECUTIVE_ENRICHMENT_SUMMARY.md](EXECUTIVE_ENRICHMENT_SUMMARY.md)
+#### [EXECUTIVE_ENRICHMENT_SUMMARY.md](shared/EXECUTIVE_ENRICHMENT_SUMMARY.md)
 **Purpose:** Executive-level justification for external data enrichment  
 **Audience:** Managers, stakeholders, decision-makers  
 **Length:** 403 lines  
@@ -67,7 +141,7 @@
 
 ---
 
-#### [QUICK_START_GUIDE.md](QUICK_START_GUIDE.md)
+#### [QUICK_START_GUIDE.md](shared/QUICK_START_GUIDE.md)
 **Purpose:** Get started in 60 minutes  
 **Audience:** Developers, data engineers, anyone implementing  
 **Length:** 432 lines  
@@ -86,7 +160,7 @@
 
 ### 2. Technical Blueprint (Reference Material)
 
-#### [COMPREHENSIVE_DATA_MODELING_STRATEGY.md](COMPREHENSIVE_DATA_MODELING_STRATEGY.md)
+#### [COMPREHENSIVE_DATA_MODELING_STRATEGY.md](shared/COMPREHENSIVE_DATA_MODELING_STRATEGY.md)
 **Purpose:** Complete technical specification for data warehouse design  
 **Audience:** Data architects, database engineers, ML engineers  
 **Length:** 1,378 lines (intentionally incomplete - continues in implementation scripts)  
@@ -105,7 +179,7 @@
 
 ### 3. Context & History (Background)
 
-#### [COMPLETE_CHAT_HISTORY_ANALYSIS.md](COMPLETE_CHAT_HISTORY_ANALYSIS.md)
+#### [COMPLETE_CHAT_HISTORY_ANALYSIS.md](shared/COMPLETE_CHAT_HISTORY_ANALYSIS.md)
 **Purpose:** Full context from all chat sessions  
 **Audience:** Anyone joining mid-project, auditors, documentation readers  
 **Length:** 569 lines  
@@ -122,7 +196,7 @@
 
 ---
 
-#### [Annotation_Sugestion.md](Annotation_Sugestion.md)
+#### [Annotation_Sugestion.md](shared/Annotation_Sugestion.md)
 **Purpose:** MIT Telecom dataset fit assessment (from previous chat session)  
 **Audience:** Data scientists evaluating dataset compatibility  
 **Length:** 55 lines  
@@ -137,6 +211,12 @@
 - Recommended schema
 
 **Read if:** You need to evaluate whether MIT Telecom dataset fits Nova Corrente use case
+
+---
+
+### 🔁 Release Notes & Architecture Overview
+
+- **[CHANGELOG.md](../../CHANGELOG.md)** – Complete versioned changelog (1.0.0 → 2.0.0 → 3.0.0-postgres → 3.1.0-docs), including links to implementation plans, PostgreSQL migration, offline-ML pipeline, and deployment guides.
 
 ---
 
@@ -162,37 +242,37 @@ Implementation Scripts (Code)
 
 **Path 1: "I want to start coding now"**
 ```
-1. QUICK_START_GUIDE.md (15 min)
+1. shared/QUICK_START_GUIDE.md (15 min)
 2. Run 01_create_star_schema_dimensions.py (15 min)
-3. COMPREHENSIVE_DATA_MODELING_STRATEGY.md - Part 7 (30 min)
+3. shared/COMPREHENSIVE_DATA_MODELING_STRATEGY.md - Part 7 (30 min)
 ```
 
 **Path 2: "I need to justify this to management"**
 ```
-1. EXECUTIVE_ENRICHMENT_SUMMARY.md (20 min)
-2. QUICK_START_GUIDE.md - Success Metrics section (5 min)
+1. shared/EXECUTIVE_ENRICHMENT_SUMMARY.md (20 min)
+2. shared/QUICK_START_GUIDE.md - Success Metrics section (5 min)
 3. Present findings
 ```
 
 **Path 3: "I'm a new team member joining mid-project"**
 ```
-1. COMPLETE_CHAT_HISTORY_ANALYSIS.md (25 min)
-2. EXECUTIVE_ENRICHMENT_SUMMARY.md (20 min)
-3. QUICK_START_GUIDE.md (15 min)
-4. COMPREHENSIVE_DATA_MODELING_STRATEGY.md (60 min)
+1. shared/COMPLETE_CHAT_HISTORY_ANALYSIS.md (25 min)
+2. shared/EXECUTIVE_ENRICHMENT_SUMMARY.md (20 min)
+3. shared/QUICK_START_GUIDE.md (15 min)
+4. shared/COMPREHENSIVE_DATA_MODELING_STRATEGY.md (60 min)
 ```
 
 **Path 4: "I need SQL schema definitions"**
 ```
-1. COMPREHENSIVE_DATA_MODELING_STRATEGY.md - Part 2 (30 min)
-2. COMPREHENSIVE_DATA_MODELING_STRATEGY.md - Part 4.2 (15 min)
+1. shared/COMPREHENSIVE_DATA_MODELING_STRATEGY.md - Part 2 (30 min)
+2. shared/COMPREHENSIVE_DATA_MODELING_STRATEGY.md - Part 4.2 (15 min)
 ```
 
 **Path 5: "I want to understand dataset selection rationale"**
 ```
-1. Annotation_Sugestion.md (10 min)
-2. COMPLETE_CHAT_HISTORY_ANALYSIS.md - Dataset Selection section (10 min)
-3. COMPREHENSIVE_DATA_MODELING_STRATEGY.md - Part 1 (15 min)
+1. shared/Annotation_Sugestion.md (10 min)
+2. shared/COMPLETE_CHAT_HISTORY_ANALYSIS.md - Dataset Selection section (10 min)
+3. shared/COMPREHENSIVE_DATA_MODELING_STRATEGY.md - Part 1 (15 min)
 ```
 
 ---
@@ -331,15 +411,24 @@ Implementation Scripts (Code)
 
 ## 📂 FILE LOCATIONS
 
-### Documentation (This Directory)
+### Documentation Structure
 ```
 docs/proj/roadmaps/
-├── README_ROADMAPS.md ← This file
-├── QUICK_START_GUIDE.md ← Start here
-├── EXECUTIVE_ENRICHMENT_SUMMARY.md ← Strategy
-├── COMPREHENSIVE_DATA_MODELING_STRATEGY.md ← Technical specs
-├── COMPLETE_CHAT_HISTORY_ANALYSIS.md ← Context
-└── Annotation_Sugestion.md ← MIT Telecom fit
+├── README_ROADMAPS.md ← This file (path selector)
+├── demo/
+│   ├── README_DEMO_ROADMAPS.md ← DEMO path index
+│   ├── TECHNICAL_STACK_DEMO.md
+│   └── ... (DEMO-specific roadmaps)
+├── prod/
+│   ├── README_PROD_ROADMAPS.md ← PROD path index
+│   ├── TECHNICAL_STACK_PROD.md
+│   └── ... (PROD-specific roadmaps)
+└── shared/
+    ├── QUICK_START_GUIDE.md ← Start here
+    ├── EXECUTIVE_ENRICHMENT_SUMMARY.md ← Strategy
+    ├── COMPREHENSIVE_DATA_MODELING_STRATEGY.md ← Technical specs
+    ├── COMPLETE_CHAT_HISTORY_ANALYSIS.md ← Context
+    └── Annotation_Sugestion.md ← MIT Telecom fit
 ```
 
 ### Data Files
@@ -392,12 +481,11 @@ scripts/
 ## ✅ FINAL CHECKLIST
 
 **Documentation complete:**
-- [x] QUICK_START_GUIDE.md (432 lines)
-- [x] EXECUTIVE_ENRICHMENT_SUMMARY.md (403 lines)
-- [x] COMPREHENSIVE_DATA_MODELING_STRATEGY.md (1,378 lines)
-- [x] COMPLETE_CHAT_HISTORY_ANALYSIS.md (569 lines)
-- [x] Annotation_Sugestion.md (55 lines)
-- [x] README_ROADMAPS.md (this file)
+- [x] DEMO path roadmaps organized
+- [x] PROD path roadmaps organized
+- [x] Shared documentation organized
+- [x] Path comparison and migration guides created
+- [x] README_ROADMAPS.md (this file) updated with path selector
 
 **Scripts complete:**
 - [x] 01_create_star_schema_dimensions.py (454 lines)
@@ -426,9 +514,17 @@ scripts/
 
 ---
 
-**Last Updated:** 2025-11-05  
-**Version:** 2.0 (Complete)  
-**Documentation Suite:** 6 files, 3,291 total lines  
-**Implementation Scripts:** 1 complete, 3 planned  
+**Last Updated:** November 2025  
+**Version:** 4.0 (DEMO vs PROD Split)  
+**Documentation Suite:** Organized into DEMO, PROD, and shared folders  
+**Status:** ✅ Complete reorganization with path separation
 
-🚀 **Let's transform that 87% MAPE into <15%!** 🔥
+---
+
+## 📚 QUICK NAVIGATION
+
+- **DEMO Path:** [demo/README_DEMO_ROADMAPS.md](demo/README_DEMO_ROADMAPS.md)
+- **PROD Path:** [prod/README_PROD_ROADMAPS.md](prod/README_PROD_ROADMAPS.md)
+- **Shared Docs:** [shared/](shared/)
+- **Changelogs:** [CHANGELOG_DEMO.md](../../CHANGELOG_DEMO.md) | [CHANGELOG_PROD.md](../../CHANGELOG_PROD.md)
+- **Architecture Analysis:** [ARCHITECTURE_BIFURCATION_ANALYSIS.md](../../ARCHITECTURE_BIFURCATION_ANALYSIS.md)

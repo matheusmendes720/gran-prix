@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "topic": "Telecom Demand Predictability (Nova Corrente)",
+    "language": "pt-BR",
+    "created_at": "2025-11-10",
+    "source_style": "storytelling técnico estruturado"
+  },
+  "headline": {
+    "text_pt": "O Brasil investe R$ 34,6 bilhões/ano em telecom. A Nova Corrente mantém 18 mil torres — mas a gestão manual da demanda expõe a empresa a rupturas de estoque que já custaram até R$ 34,2 milhões em multas. Em um setor onde 99% de disponibilidade é obrigação, previsibilidade virou sinônimo de sobrevivência.",
+    "metrics": {
+      "annual_investment_brl": 34600000000,
+      "towers": 18000,
+      "sla_requirement_pct": 0.99,
+      "max_fine_example_brl": 34200000
+    }
+  },
+  "market_context": {
+    "industry_revenue_brl": 318000000000,
+    "industry_growth_pct": 0.049,
+    "5g": {
+      "municipalities_covered": 812,
+      "antennas_installed": 37639
+    },
+    "nova_corrente": {
+      "towers": 18000,
+      "ops_growth_projection_pct_by_2026": 0.5
+    },
+    "insight_pt": "A escala exponencial da infraestrutura exige automação e análise preditiva contínua; a gestão manual não suporta a dinâmica de variáveis."
+  },
+  "cost_of_unpredictability": {
+    "impact_chain_pt": [
+      "Peça ausente",
+      "Torre fora do ar",
+      "SLA violado",
+      "Multa contratual",
+      "Perda de receita recorrente"
+    ],
+    "fine_examples": [
+      { "company": "Oi Móvel", "fine_brl": 34200000, "reason_pt": "Descumprimento de metas de qualidade (SLA)" }
+    ],
+    "notes_pt": "Falhas de SLA em telecom custam milhões em multas; imprevisibilidade operacional tem impacto financeiro direto."
+  },
+  "corporate_impact": {
+    "kpmg_feb_2025": {
+      "market_value_drop_pct_affected": 0.76,
+      "stock_devaluation_over_10_pct": 0.21
+    },
+    "conclusion_pt": "Rupturas de estoque e falhas de SLA são riscos corporativos de governança e valor acionário."
+  },
+  "operational_variability": {
+    "region": "Bahia",
+    "seasonality": [
+      { "factor": "Chuva", "period": "Nov–Abr", "demand_change_pct": 0.40, "category_pt": "materiais estruturais" },
+      { "factor": "Calor", "period": "Dez–Mar", "demand_change_pct": 0.25, "category_pt": "refrigeração" },
+      { "factor": "Carnaval", "period": "Fev (variável)", "demand_change_pct_range": [-0.30, 0.50], "category_pt": "logística" },
+      { "factor": "Expansão 5G", "period": "anual", "demand_change_pct": 0.20, "category_pt": "capex/opex contínuo" }
+    ],
+    "interpretation_pt": "Dataset sazonal multivariado relevante para regressão temporal e LSTM de previsão de demanda."
+  },
+  "central_challenge": {
+    "operating_model_pt": "Reativo e intuitivo (planilhas e histórico fragmentado).",
+    "issues_pt": [
+      "Rupturas e multas SLA",
+      "Excesso de estoque (ROI negativo)",
+      "Lead times imprevisíveis (7–60 dias)",
+      "Dificuldade de escalar para 150 sites"
+    ],
+    "lead_time_days_min": 7,
+    "lead_time_days_max": 60,
+    "technical_summary_pt": "Ausência de governança de dados, previsibilidade e integração sistêmica de supply chain."
+  },
+  "opportunity_model": {
+    "objectives": {
+      "rupture_reduction_pct": 0.60,
+      "capital_optimization_pct": 0.20,
+      "time_months": 6
+    },
+    "roi_months_range": [6, 12],
+    "approach_pt": "Modelo supervisionado com regressão multivariada (inputs: clima, sazonalidade, lead time, histórico SLA, eventos externos).",
+    "cta_pt": "Comece com 5 itens críticos; em 14 dias validar; em 6 meses transformar a operação de reativa para preditiva."
+  },
+  "pipeline_application": {
+    "etl_sources": ["Anatel", "KPMG", "IBGE", "Conexis", "Dados internos Nova Corrente"],
+    "feature_engineering_pt": "Normalização de variáveis regionais, temporais e contratuais; criação de features de sazonalidade, clima e eventos.",
+    "training_pt": "Modelos regressivos e classificadores para previsibilidade de ruptura.",
+    "monitoring_pt": "Dashboards de SLA, estoque e ROI preditivo; alertas; detecção de drift."
+  },
+  "sources_traceability": [
+    { "name": "Conexis Brasil Digital", "years": "2024–2025" },
+    { "name": "IBGE – PMS Telecom" },
+    { "name": "S&P Global / Teletime" },
+    { "name": "Anatel – Histórico de multas SLA" },
+    { "name": "KPMG (Fev/2025) – Risco operacional" },
+    { "name": "Dados internos Nova Corrente" }
+  ],
+  "conclusion_pt": "Transformar dados dispersos em previsões acionáveis reduz multas e redefine eficiência; previsibilidade torna-se vantagem competitiva.",
+  "recommended_feature_schema": {
+    "entities": [
+      { "name": "material", "keys": ["material_id"], "attrs": ["category", "criticality_score"] },
+      { "name": "site", "keys": ["site_id"], "attrs": ["region", "latitude", "longitude", "tower_type"] },
+      { "name": "time", "keys": ["date"], "attrs": ["month", "week", "is_holiday", "is_carnival"] }
+    ],
+    "fact_demand_daily": {
+      "keys": ["date", "site_id", "material_id"],
+      "measures": [
+        "demand_units",
+        "stock_level_units",
+        "sla_violations_count",
+        "lead_time_days",
+        "forecast_units",
+        "forecast_error_units"
+      ],
+      "features": [
+        "rain_mm",
+        "temperature_c",
+        "wind_speed_kmh",
+        "event_carnival_flag",
+        "expansion_5g_pct",
+        "seasonality_index",
+        "sla_violation_risk_score"
+      ],
+      "labels": ["rupture_risk_flag"]
+    }
+  },
+  "evaluation_metrics": {
+    "forecasting": ["RMSE", "MAE", "MAPE"],
+    "classification": ["Precision", "Recall", "F1", "ROC_AUC"],
+    "business": ["SLA_compliance_pct", "rupture_rate_pct", "stock_turnover", "capital_tied_brl"]
+  }
+}

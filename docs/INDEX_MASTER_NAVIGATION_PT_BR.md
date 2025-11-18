@@ -22,6 +22,9 @@
 - [🚀 Deploy Cluster](#deploy-cluster)
 - [🔒 Global Constraints](#global-constraints)
 
+### 🎥 PITCH & DEMO PLAYBOOKS
+- [🧭 Visão & Estratégia de Dashboard](#-pitch--demo-playbooks)
+
 ### 🚀 DEPLOYMENT & OPERATIONS
 - [📖 Deployment Runbook](#deployment-runbook)
 - [🤖 ML Environment Setup](#ml-environment-setup)
@@ -243,6 +246,38 @@ Documento de política global que define a constraint "NO ML OPS LOGIC IN DEPLOY
 
 ---
 
+## 🎥 PITCH & DEMO PLAYBOOKS
+
+### 🧭 Visão & Estratégia de Dashboard
+- **Blueprint Demo:** [`docs/pitch/demo_dashboard_quick_strategy.md`](pitch/demo_dashboard_quick_strategy.md) — playbook de 60 minutos com narrativa, arquitetura de widgets e execução.
+- **Masterplan Frontend:** [`docs/pitch/frontend_feature_engineering_masterplan.md`](pitch/frontend_feature_engineering_masterplan.md) — roadmap Ignite/Fusion/Ascend alinhando UX, dados e mensagem.
+
+### 🧭 Rotas & Estrutura
+- **/features Navigation:** [`docs/pitch/features_route_planning.md`](pitch/features_route_planning.md) — experiência por família de features e KPIs de adoção.
+- **/main Overview:** [`docs/pitch/main_route_planning.md`](pitch/main_route_planning.md) — plano para Modelos, Clustering e Prescritivo com ligações executivas.
+
+### ⚙️ Execução do Demo
+- **Mock Data & Layout:** [`docs/pitch/demo_execution_scaffold.md`](pitch/demo_execution_scaffold.md) — passos imediatos para `demoSnapshot.ts`, layout e widgets prioritários.
+
+### 🔍 Guias de Preenchimento
+- **Temporal Breakdown:** [`docs/pitch/features_temporal_breakdown.md`](pitch/features_temporal_breakdown.md) — narrativa sazonal e componentes visuais.
+- **Modelos & Clustering:** [`docs/pitch/main_models_clustering_breakdown.md`](pitch/main_models_clustering_breakdown.md) — storytelling para abas de ensemble e agrupamentos.
+
+### 🧩 Especificações por Feature
+- **Temporal:** [`docs/pitch/specs_features_temporal.md`](pitch/specs_features_temporal.md)
+- **Climate:** [`docs/pitch/specs_features_climate.md`](pitch/specs_features_climate.md)
+- **Economic:** [`docs/pitch/specs_features_economic.md`](pitch/specs_features_economic.md)
+- **5G:** [`docs/pitch/specs_features_5g.md`](pitch/specs_features_5g.md)
+- **Lead Time:** [`docs/pitch/specs_features_lead_time.md`](pitch/specs_features_lead_time.md)
+- **SLA:** [`docs/pitch/specs_features_sla.md`](pitch/specs_features_sla.md)
+- **Hierarchical:** [`docs/pitch/specs_features_hierarchical.md`](pitch/specs_features_hierarchical.md)
+- **Categorical:** [`docs/pitch/specs_features_categorical.md`](pitch/specs_features_categorical.md)
+- **Business:** [`docs/pitch/specs_features_business.md`](pitch/specs_features_business.md)
+- **Main / Fórmulas & Macro Tabs:** [`docs/pitch/specs_main_formulas.md`](pitch/specs_main_formulas.md)
+- **Main / Visual Overview:** [`docs/pitch/specs_main_analytics_overview.md`](pitch/specs_main_analytics_overview.md)
+
+---
+
 ## 🚀 DEPLOYMENT & OPERATIONS
 
 ### 📖 Deployment Runbook
@@ -358,6 +393,13 @@ docs/deploy/DEPLOYMENT_RUNBOOK.md
 - **ML Environment:** [`ML_ENVIRONMENT_SETUP.md`](ml/ML_ENVIRONMENT_SETUP.md)
 - **Validation Guide:** [`VALIDATION_GUIDE.md`](validation/VALIDATION_GUIDE.md)
 
+#### Pitch & Demo
+- **Demo Blueprint:** [`demo_dashboard_quick_strategy.md`](pitch/demo_dashboard_quick_strategy.md)
+- **Frontend Masterplan:** [`frontend_feature_engineering_masterplan.md`](pitch/frontend_feature_engineering_masterplan.md)
+- **Route Planning:** [`features_route_planning.md`](pitch/features_route_planning.md) | [`main_route_planning.md`](pitch/main_route_planning.md)
+- **Execution Scaffold:** [`demo_execution_scaffold.md`](pitch/demo_execution_scaffold.md)
+- **Feature Specs:** [`specs_features_temporal.md`](pitch/specs_features_temporal.md) (+ demais em `docs/pitch/`)
+
 #### Scripts de Validação
 - **Master:** `scripts/validation/validate_deployment.py`
 - **Dependencies:** `scripts/validation/check_ml_dependencies.py`
@@ -402,6 +444,23 @@ docs/deploy/DEPLOYMENT_RUNBOOK.md
 ```
 docs/
 ├── INDEX_MASTER_NAVIGATION_PT_BR.md          ← VOCÊ ESTÁ AQUI
+│
+├── pitch/
+│   ├── demo_dashboard_quick_strategy.md
+│   ├── demo_execution_scaffold.md
+│   ├── features_route_planning.md
+│   ├── features_temporal_breakdown.md
+│   ├── frontend_feature_engineering_masterplan.md
+│   ├── main_models_clustering_breakdown.md
+│   ├── main_route_planning.md
+│   ├── specs_features_business.md
+│   ├── specs_features_categorical.md
+│   ├── specs_features_climate.md
+│   ├── specs_features_economic.md
+│   ├── specs_features_5g.md
+│   ├── specs_features_hierarchical.md
+│   ├── specs_features_lead_time.md
+│   └── specs_features_sla.md
 │
 ├── diagnostics/
 │   ├── COMPREHENSIVE_DATA_ENGINEERING_DIAGNOSTIC_PT_BR.md

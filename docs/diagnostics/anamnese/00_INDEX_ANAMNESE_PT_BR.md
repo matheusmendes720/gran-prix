@@ -138,9 +138,10 @@ Documentação dos scripts de validação:
 
 ## 🚀 INÍCIO RÁPIDO
 
-### Para Entender o Contexto Completo:
-1. **Ler:** [Anamnese e Diagnóstico Completo](01_anamnese/ANAMNESE_DIAGNOSTICO_COMPLETO_PT_BR.md)
-2. **Ler:** [Resumo Executivo](01_anamnese/RESUMO_EXECUTIVO_SIMPLIFICACAO_PT_BR.md)
+### Para Visão Geral Completa:
+1. **Ler:** [Resumo Final Completo](RESUMO_FINAL_COMPLETO_PT_BR.md) - **RECOMENDADO PRIMEIRO**
+2. **Ler:** [Anamnese e Diagnóstico Completo](01_anamnese/ANAMNESE_DIAGNOSTICO_COMPLETO_PT_BR.md)
+3. **Ler:** [Resumo Executivo](01_anamnese/RESUMO_EXECUTIVO_SIMPLIFICACAO_PT_BR.md)
 
 ### Para Implementar Mudanças:
 1. **Ler:** [Guia de Simplificação](04_guias/GUIA_SIMPLIFICACAO_DEPLOYMENT_PT_BR.md)
@@ -187,7 +188,7 @@ Documentação dos scripts de validação:
 **Scripts (1 documento):**
 - Documentação de scripts
 
-**Total:** 14 documentos organizados
+**Total:** 17 documentos organizados (incluindo índice, README e resumo final)
 
 ---
 

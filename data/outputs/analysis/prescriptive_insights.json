@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-11-11T13:41:14.898729",
+  "recommendations": [
+    "URGENT: Increase safety stock for EPI family by 50%",
+    "URGENT: Increase safety stock for FERRO_E_A\u00c7O family by 50%",
+    "URGENT: Increase safety stock for MATERIAL_ELETRICO family by 50%",
+    "Monitor exchange rate volatility - impact on import costs",
+    "Track 5G expansion patterns - affects infrastructure demand",
+    "Seasonal planning: Q4 typically shows 20% higher demand",
+    "Consider local sourcing for high-risk items to reduce lead times"
+  ],
+  "risk_assessments": {
+    "EPI": {
+      "risk_score": 0.7021167666263287,
+      "stockout_risk": "HIGH",
+      "recommended_safety_stock_days": 25,
+      "recommended_reorder_point_multiplier": 2.202116766626329
+    },
+    "FERRAMENTAS_E_EQUIPAMENTOS": {
+      "risk_score": 0.30229533870930386,
+      "stockout_risk": "LOW",
+      "recommended_safety_stock_days": 19,
+      "recommended_reorder_point_multiplier": 1.802295338709304
+    },
+    "FERRO_E_A\u00c7O": {
+      "risk_score": 0.7722253992690511,
+      "stockout_risk": "HIGH",
+      "recommended_safety_stock_days": 26,
+      "recommended_reorder_point_multiplier": 2.2722253992690513
+    },
+    "MATERIAL_CIVIL": {
+      "risk_score": 0.43306623146447104,
+      "stockout_risk": "MEDIUM",
+      "recommended_safety_stock_days": 21,
+      "recommended_reorder_point_multiplier": 1.933066231464471
+    },
+    "MATERIAL_ELETRICO": {
+      "risk_score": 0.7292794103542293,
+      "stockout_risk": "HIGH",
+      "recommended_safety_stock_days": 25,
+      "recommended_reorder_point_multiplier": 2.2292794103542293
+    }
+  },
+  "action_items": [
+    "Review EPI suppliers - diversification needed",
+    "Review FERRO_E_A\u00c7O suppliers - diversification needed",
+    "Review MATERIAL_ELETRICO suppliers - diversification needed",
+    "Implement weekly demand review meetings",
+    "Set up automated alerts for low stock levels",
+    "Update procurement policies based on forecast accuracy",
+    "Create contingency plans for critical items"
+  ],
+  "business_impact": {
+    "potential_stockout_reduction": "40-60%",
+    "inventory_cost_savings": "15-25%",
+    "sla_improvement": "5-10%",
+    "roi_estimate": "80-180% within 12 months"
+  }
+}

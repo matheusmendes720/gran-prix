@@ -1,0 +1,43 @@
+{
+  "download_session": {
+    "date": "2025-11-11T03:05:50.669246",
+    "duration_seconds": 0.002905,
+    "status": "partial"
+  },
+  "data_sources": {
+    "commodities": false,
+    "market_indices": false,
+    "energy": false,
+    "brazil_weather": false
+  },
+  "existing_data": {
+    "macro": false,
+    "global": false,
+    "logistics": false,
+    "commodities": true,
+    "market_indices": true,
+    "energy": true,
+    "openweather": false,
+    "inmet": false
+  },
+  "directory_structure": {
+    "base_dir": "data\\landing\\external_factors-raw",
+    "daily_folder": "20251111",
+    "full_path": "data\\landing\\external_factors-raw\\20251111"
+  },
+  "ml_readiness": {
+    "economic_indicators": true,
+    "climate_data": true,
+    "logistics_data": true,
+    "commodity_prices": false,
+    "market_indices": false,
+    "energy_prices": false,
+    "brazil_weather_coverage": false
+  },
+  "next_steps": [
+    "Set up commodity price APIs for real data",
+    "Configure market indices API credentials",
+    "Implement real energy data sources",
+    "Check weather API availability"
+  ]
+}

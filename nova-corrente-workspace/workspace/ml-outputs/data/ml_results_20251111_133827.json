@@ -1,0 +1,16 @@
+{
+  "timestamp": "20251111_133827",
+  "model_path": "models\\nova_corrente\\random_forest_20251111_133827.pkl",
+  "scaler_path": "models\\nova_corrente\\scaler_20251111_133827.pkl",
+  "metrics": {
+    "mae": 18.439845531311516,
+    "rmse": 22.988702307899946,
+    "r2": -0.09925088039928287
+  },
+  "data_shape": [
+    1000,
+    11
+  ],
+  "feature_count": 11,
+  "sample_size": 1000
+}

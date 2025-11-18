@@ -1,0 +1,52 @@
+version: 1
+generated_at: "${execution_ts}"
+tables:
+  DimItem:
+    description: "Item dimension with categorical attributes"
+    primary_key: item_id
+    columns:
+      - name: item_id
+        tests: [not_null, unique]
+      - name: item_name
+        tests: [not_null]
+      - name: category
+        tests: [not_null]
+  DimSite:
+    description: "Tower site dimension"
+    primary_key: site_id
+    columns:
+      - name: site_id
+        tests: [not_null, unique]
+      - name: region
+        tests: [not_null]
+  DimSupplier:
+    description: "Supplier lead time dimension"
+    primary_key: supplier_id
+    columns:
+      - name: supplier_id
+        tests: [not_null, unique]
+      - name: lead_time_days
+        tests:
+          - type: not_null
+          - type: greater_than
+            value: 0
+  DimWeather:
+    description: "Daily aggregated climate indicators"
+    primary_key: [region, date]
+    columns:
+      - name: precipitation_mm
+        tests:
+          - type: greater_or_equal
+            value: 0
+  DimEconomic:
+    description: "Weekly macroeconomic signals"
+    primary_key: [name, observed_at]
+  FactDemand:
+    description: "Demand fact table with forecast-ready features"
+    primary_key: [date, item_id, site_id]
+    columns:
+      - name: qty_consumed
+        tests:
+          - type: greater_or_equal
+            value: 0
+

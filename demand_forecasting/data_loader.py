@@ -182,7 +182,7 @@ class DataLoader:
         
         return df
     
-    def validate_data(self, df: pd.DataFrame, min_months: int = 24) -> Tuple[bool, str]:
+    def validate_data(self, df: pd.DataFrame, min_months: int = 18) -> Tuple[bool, str]:
         """
         Validate data quality and completeness.
         

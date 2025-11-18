@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-11-11T03:07:27.509544",
+  "sources": {
+    "Economic": {
+      "files": [
+        "macro/bacen/ptax/usd",
+        "macro/bacen/selic",
+        "macro/ibge/ipca"
+      ],
+      "found": 3
+    },
+    "Global": {
+      "files": [
+        "global/worldbank/gdp_current_usd"
+      ],
+      "found": 1
+    },
+    "Commodities": {
+      "files": [
+        "commodities/20251111/*.csv"
+      ],
+      "found": 0
+    },
+    "Market": {
+      "files": [
+        "market_indices/20251111/*.csv"
+      ],
+      "found": 0
+    },
+    "Energy": {
+      "files": [
+        "energy/20251111/*.csv"
+      ],
+      "found": 0
+    },
+    "Climate": {
+      "files": [
+        "inmet/2025/INMET_*.CSV",
+        "openweather/20251111/brazil_weather_expanded.csv"
+      ],
+      "found": 571
+    },
+    "Logistics": {
+      "files": [
+        "logistics/anp_fuel/*/anp_fuel.csv",
+        "logistics/baltic_dry/*/baltic_dry.csv"
+      ],
+      "found": 2
+    }
+  },
+  "summary": {
+    "total_files": 11,
+    "total_found": 577,
+    "coverage_percent": 5245.454545454545,
+    "ml_ready": 50.0,
+    "critical_found": 2,
+    "critical_total": 4
+  }
+}

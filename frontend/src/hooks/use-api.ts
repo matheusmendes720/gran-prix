@@ -5,7 +5,49 @@
 
 import useSWR from 'swr';
 import { api } from '@/lib/api-client';
-import type { Item, KPI, Forecast, Recommendation, Alert } from '@/lib/api-client';
+import type {
+  Item,
+  KPI,
+  Recommendation,
+  DashboardSummary,
+  AlertsResponse,
+  ForecastResponse,
+  RecommendationResponse,
+  GeoSummaryResponse,
+  ClimateFeatureResponse,
+} from '@/lib/api-client';
+
+const MAX_RETRY_COUNT = 3;
+
+const shouldRetryOnError = (error: any) => {
+  if (!error) {
+    return false;
+  }
+  if (typeof navigator !== 'undefined' && !navigator.onLine) {
+    return false;
+  }
+  if (error.status && error.status >= 400 && error.status < 500 && error.status !== 408) {
+    return false;
+  }
+  return true;
+};
+
+const swrRetry = (
+  error: any,
+  _: string,
+  __: any,
+  revalidate: (opts?: { retryCount?: number }) => void,
+  opts: { retryCount: number }
+) => {
+  if (!shouldRetryOnError(error)) {
+    return;
+  }
+  if (opts.retryCount >= MAX_RETRY_COUNT) {
+    return;
+  }
+  const delay = Math.min(30000, 1000 * 2 ** opts.retryCount);
+  setTimeout(() => revalidate({ retryCount: opts.retryCount + 1 }), delay);
+};
 
 interface UseItemsOptions {
   limit?: number;
@@ -19,34 +61,31 @@ interface UseKPIsOptions {
   end_date?: string;
 }
 
-interface UseDemandOptions {
-  item_id: number;
-  start_date?: string;
-  end_date?: string;
-}
-
 interface UseInventoryOptions {
   item_id: number;
   start_date?: string;
   end_date?: string;
 }
 
-interface UseForecastsOptions {
-  item_id: number;
-  site_id?: number;
-  horizon_days?: number;
-}
-
 interface UseRecommendationsOptions {
-  status?: 'PENDING' | 'REVIEWED' | 'APPLIED' | 'REJECTED';
-  priority?: 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL';
+  familia?: string;
+  stock_status?: string;
   limit?: number;
 }
 
 interface UseAlertsOptions {
-  status?: 'NEW' | 'ACKNOWLEDGED' | 'RESOLVED';
-  severity?: 'INFO' | 'WARNING' | 'ERROR' | 'CRITICAL';
+  status?: string[];
   limit?: number;
+}
+
+// Dashboard summary hook
+export function useDashboardSummary() {
+  return useSWR<DashboardSummary>('/bff/dashboard/summary', () => api.getDashboardSummary(), {
+    refreshInterval: 300000,
+    revalidateOnFocus: false,
+    shouldRetryOnError,
+    onErrorRetry: swrRetry,
+  });
 }
 
 // Health check hook
@@ -87,64 +126,35 @@ export function useKPIs(options?: UseKPIsOptions) {
   });
 }
 
-// Demand timeseries hook
-export function useDemandTimeseries(options: UseDemandOptions | null) {
-  const key = options ? ['/api/v1/demand/timeseries', options] : null;
-  
-  return useSWR(
-    key,
-    () => (options ? api.getDemandTimeseries(options) : null),
-    {
-      revalidateOnFocus: false,
-      dedupingInterval: 60000,
-    }
-  );
-}
-
-// Inventory timeseries hook
-export function useInventoryTimeseries(options: UseInventoryOptions | null) {
-  const key = options ? ['/api/v1/inventory/timeseries', options] : null;
-  
-  return useSWR(
-    key,
-    () => (options ? api.getInventoryTimeseries(options) : null),
-    {
-      revalidateOnFocus: false,
-      dedupingInterval: 60000,
-    }
-  );
-}
-
-// Forecasts hook
-export function useForecasts(options: UseForecastsOptions | null) {
-  const key = options ? ['/api/v1/forecasts', options] : null;
-  
-  return useSWR(
-    key,
-    () => (options ? api.getForecasts(options) : null),
-    {
-      revalidateOnFocus: false,
-      dedupingInterval: 300000, // 5 minutes
-    }
-  );
-}
 
 // Recommendations hook
 export function useRecommendations(options?: UseRecommendationsOptions) {
-  const key = options ? ['/api/v1/recommendations', options] : '/api/v1/recommendations';
-  
-  return useSWR(key, () => api.getRecommendations(options), {
-    refreshInterval: 60000, // Refresh every minute
-  });
+  const key = options ? ['/bff/recommendations', options] : '/bff/recommendations';
+
+  return useSWR<RecommendationResponse>(
+    key,
+    () => api.getBffRecommendations(options),
+    {
+      refreshInterval: 60000,
+      shouldRetryOnError,
+      onErrorRetry: swrRetry,
+    }
+  );
 }
 
 // Alerts hook
 export function useAlerts(options?: UseAlertsOptions) {
-  const key = options ? ['/api/v1/alerts', options] : '/api/v1/alerts';
-  
-  return useSWR(key, () => api.getAlerts(options), {
-    refreshInterval: 30000, // Refresh every 30 seconds for alerts
-  });
+  const key = options ? ['/bff/alerts', options] : '/bff/alerts';
+
+  return useSWR<AlertsResponse>(
+    key,
+    () => api.getBffAlerts(options),
+    {
+      refreshInterval: 30000,
+      shouldRetryOnError,
+      onErrorRetry: swrRetry,
+    }
+  );
 }
 
 // Features hook
@@ -157,6 +167,52 @@ export function useFeatures(itemId: number | null, featureDate?: string) {
     {
       revalidateOnFocus: false,
       dedupingInterval: 300000,
+      shouldRetryOnError,
+      onErrorRetry: swrRetry,
+    }
+  );
+}
+
+// Forecasts hook (BFF)
+export function useBffForecasts(params: { familia?: string; item_id?: string; site_id?: number; limit?: number } | null) {
+  const key = params ? ['/bff/forecasts', params] : null;
+
+  return useSWR<ForecastResponse>(
+    key,
+    () => (params ? api.getBffForecasts(params) : null),
+    {
+      revalidateOnFocus: false,
+      dedupingInterval: 300000,
+      shouldRetryOnError,
+      onErrorRetry: swrRetry,
+    }
+  );
+}
+
+export function useGeoSummary() {
+  return useSWR<GeoSummaryResponse>(
+    '/bff/geo/summary',
+    () => api.getGeoSummary(),
+    {
+      refreshInterval: 300000,
+      revalidateOnFocus: false,
+      shouldRetryOnError,
+      onErrorRetry: swrRetry,
+    }
+  );
+}
+
+export function useClimateFeatures(params?: { start_date?: string; end_date?: string; limit?: number }) {
+  const key = params ? ['/bff/features/climate', params] : '/bff/features/climate';
+
+  return useSWR<ClimateFeatureResponse>(
+    key,
+    () => api.getClimateFeatures(params),
+    {
+      refreshInterval: 600000,
+      revalidateOnFocus: false,
+      shouldRetryOnError,
+      onErrorRetry: swrRetry,
     }
   );
 }
@@ -165,9 +221,7 @@ export function useFeatures(itemId: number | null, featureDate?: string) {
 export type {
   UseItemsOptions,
   UseKPIsOptions,
-  UseDemandOptions,
   UseInventoryOptions,
-  UseForecastsOptions,
   UseRecommendationsOptions,
   UseAlertsOptions,
 };

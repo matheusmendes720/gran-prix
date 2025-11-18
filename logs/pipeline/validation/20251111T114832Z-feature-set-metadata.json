@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "snapshot": "D:\\codex\\datamaster\\senai\\gran_prix\\data\\warehouse\\gold\\20251111T114831",
+    "rows": "3578",
+    "feature_columns": "coverage_sites,date,day_of_week,deployment_phase,humidity_pct,item_id,lag_1,lag_28,lag_7,lead_time_days,month,precipitation_mm,ptax_value,region,rolling_mean_7,rolling_std_7,selic_value,site_id,temp_max_c,temp_min_c,week_of_year,wind_speed_kmh,year",
+    "backend": "pandas"
+  },
+  "feature_stats": {
+    "day_of_week": {
+      "min": 1.0,
+      "max": 5.0,
+      "mean": 2.898267188373393,
+      "std": 1.3223704007634112
+    },
+    "lag_1": {
+      "min": 0.42,
+      "max": 11650.0,
+      "mean": 58.08961699748392,
+      "std": 383.16802098525096
+    },
+    "lag_28": {
+      "min": 0.42,
+      "max": 11650.0,
+      "mean": 58.351442253521135,
+      "std": 384.5829203672628
+    },
+    "lag_7": {
+      "min": 0.42,
+      "max": 11650.0,
+      "mean": 58.11442733127975,
+      "std": 383.4838541596629
+    },
+    "lead_time_days": {
+      "min": 0.0,
+      "max": 154.0,
+      "mean": 11.821530630757167,
+      "std": 17.11189326946534
+    },
+    "month": {
+      "min": 1.0,
+      "max": 12.0,
+      "mean": 5.411123532699833,
+      "std": 2.7773715852209375
+    },
+    "rolling_mean_7": {
+      "min": 1.0,
+      "max": 2580.8571428571427,
+      "mean": 57.80607982722765,
+      "std": 184.07999723089034
+    },
+    "rolling_std_7": {
+      "min": 7.811680839447535e-05,
+      "max": 4399.650170075755,
+      "mean": 94.93920300425214,
+      "std": 350.0746625643453
+    },
+    "site_id": {
+      "min": -1.0,
+      "max": 189.0,
+      "mean": 64.65343767467859,
+      "std": 54.19563094895084
+    },
+    "week_of_year": {
+      "min": 1.0,
+      "max": 52.0,
+      "mean": 22.12716601453326,
+      "std": 11.909207591524886
+    },
+    "year": {
+      "min": 2024.0,
+      "max": 2025.0,
+      "mean": 2024.9575181665734,
+      "std": 0.20171390410864798
+    }
+  }
+}

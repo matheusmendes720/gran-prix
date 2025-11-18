@@ -1,0 +1,60 @@
+{
+  "cities": [
+    {
+      "name": "Salvador",
+      "state": "BA",
+      "country": "BR",
+      "slug": "salvador_ba",
+      "city_id": 3450554,
+      "lat": -12.9777,
+      "lon": -38.5016,
+      "history_days": 1460,
+      "enable_daily_forecast": true
+    },
+    {
+      "name": "Fortaleza",
+      "state": "CE",
+      "country": "BR",
+      "slug": "fortaleza_ce",
+      "city_id": 3399415,
+      "lat": -3.7319,
+      "lon": -38.5267,
+      "history_days": 1460,
+      "enable_daily_forecast": true
+    },
+    {
+      "name": "Recife",
+      "state": "PE",
+      "country": "BR",
+      "slug": "recife_pe",
+      "city_id": 3390760,
+      "lat": -8.0476,
+      "lon": -34.8770,
+      "history_days": 1460,
+      "enable_daily_forecast": true
+    },
+    {
+      "name": "Sao Paulo",
+      "state": "SP",
+      "country": "BR",
+      "slug": "sao_paulo_sp",
+      "city_id": 3448439,
+      "lat": -23.5505,
+      "lon": -46.6333,
+      "history_days": 1460,
+      "enable_daily_forecast": true
+    },
+    {
+      "name": "Rio de Janeiro",
+      "state": "RJ",
+      "country": "BR",
+      "slug": "rio_de_janeiro_rj",
+      "city_id": 3451190,
+      "lat": -22.9068,
+      "lon": -43.1729,
+      "history_days": 1460,
+      "enable_daily_forecast": false
+    }
+  ]
+}
+

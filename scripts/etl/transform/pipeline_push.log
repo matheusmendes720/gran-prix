@@ -1,0 +1,28 @@
+2025-11-11 08:28:29,559 - INFO - STARTING COMPLETE PIPELINE PUSH
+2025-11-11 08:28:29,565 - INFO - STARTING COMPLETE PIPELINE PUSH
+2025-11-11 08:28:29,565 - INFO - ============================================================
+2025-11-11 08:28:29,565 - INFO - PHASE 1: BUILDING SILVER LAYER
+2025-11-11 08:28:29,566 - INFO - Building economic indicators...
+2025-11-11 08:28:29,567 - INFO - Building climatic indicators...
+2025-11-11 08:28:29,567 - INFO - Building global indicators...
+2025-11-11 08:28:29,568 - INFO - Building logistics indicators...
+2025-11-11 08:28:29,568 - INFO - Building commodities...
+2025-11-11 08:28:29,569 - INFO - Building market indices...
+2025-11-11 08:28:29,569 - INFO - Building energy indicators...
+2025-11-11 08:28:29,570 - INFO - Silver layer build completed
+2025-11-11 08:28:29,570 - INFO - PHASE 2: VALIDATING SILVER LAYER
+2025-11-11 08:28:29,572 - INFO -   Validation: 0/0 tables
+2025-11-11 08:28:29,572 - INFO -   Records: 0
+2025-11-11 08:28:29,572 - INFO -   Quality issues: 0
+2025-11-11 08:28:29,572 - ERROR - Error in pipeline push: unsupported operand type(s) for &=: 'bool' and 'dict'
+2025-11-11 08:28:29,572 - INFO - CREATING FINAL REPORT
+2025-11-11 08:28:29,580 - INFO - Final report saved to: COMPLETE_PIPELINE_REPORT.json
+2025-11-11 08:28:29,580 - INFO - ============================================================
+2025-11-11 08:28:29,580 - INFO - COMPLETE PIPELINE PUSH SUMMARY
+2025-11-11 08:28:29,580 - INFO - ============================================================
+2025-11-11 08:28:29,580 - INFO - Overall Success: FAILED
+2025-11-11 08:28:29,580 - INFO - Silver Tables: 0
+2025-11-11 08:28:29,580 - INFO - Gold Tables: 0
+2025-11-11 08:28:29,580 - INFO - Total Records: 0
+2025-11-11 08:28:29,581 - INFO - Pipeline is ready for ML processing!
+2025-11-11 08:28:29,581 - INFO - PIPELINE PUSH COMPLETED - FAILED

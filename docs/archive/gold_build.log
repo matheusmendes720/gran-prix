@@ -1,0 +1,78 @@
+2025-11-11 11:08:56,244 - INFO - Starting gold layer build
+2025-11-11 11:08:56,247 - INFO - Building gold layer ML features
+2025-11-11 11:08:56,247 - INFO - ============================================================
+2025-11-11 11:08:56,302 - INFO - ✅ Economic features built
+2025-11-11 11:08:56,303 - INFO - ✅ Climate features built
+2025-11-11 11:08:56,303 - INFO - ✅ Global features built
+2025-11-11 11:08:56,303 - INFO - ✅ Logistics features built
+2025-11-11 11:08:56,303 - INFO - ✅ Commodities features built
+2025-11-11 11:08:56,303 - INFO - ✅ Market features built
+2025-11-11 11:08:56,304 - INFO - ✅ Energy features built
+2025-11-11 11:08:56,304 - INFO - ✅ Cross-features built
+2025-11-11 11:08:56,305 - INFO - ✅ Master features built
+2025-11-11 11:08:56,306 - INFO - Gold layer completed! Features built: 9
+2025-11-11 11:08:56,307 - INFO - Gold layer report saved: GOLD_LAYER_REPORT.json
+2025-11-11 11:08:56,307 - INFO - ✅ Gold layer build completed successfully!
+2025-11-11 11:13:53,984 - INFO - Starting gold layer build
+2025-11-11 11:13:53,985 - INFO - Building gold layer ML features
+2025-11-11 11:13:53,986 - INFO - ============================================================
+2025-11-11 11:13:54,035 - INFO - ✅ Economic features built
+2025-11-11 11:13:54,035 - INFO - ✅ Climate features built
+2025-11-11 11:13:54,035 - INFO - ✅ Global features built
+2025-11-11 11:13:54,036 - INFO - ✅ Logistics features built
+2025-11-11 11:13:54,036 - INFO - ✅ Commodities features built
+2025-11-11 11:13:54,036 - INFO - ✅ Market features built
+2025-11-11 11:13:54,036 - INFO - ✅ Energy features built
+2025-11-11 11:13:54,036 - INFO - ✅ Cross-features built
+2025-11-11 11:13:54,041 - INFO - ✅ Master features built
+2025-11-11 11:13:54,041 - INFO - Gold layer completed! Features built: 9
+2025-11-11 11:13:54,043 - INFO - Gold layer report saved: GOLD_LAYER_REPORT.json
+2025-11-11 11:13:54,043 - INFO - ✅ Gold layer build completed successfully!
+2025-11-11 11:20:02,214 - INFO - Starting gold layer build
+2025-11-11 11:20:02,215 - INFO - Building gold layer ML features
+2025-11-11 11:20:02,215 - INFO - ============================================================
+2025-11-11 11:20:02,332 - INFO - ✅ Economic features built
+2025-11-11 11:20:02,333 - INFO - ✅ Climate features built
+2025-11-11 11:20:02,333 - INFO - ✅ Global features built
+2025-11-11 11:20:02,333 - INFO - ✅ Logistics features built
+2025-11-11 11:20:02,333 - INFO - ✅ Commodities features built
+2025-11-11 11:20:02,333 - INFO - ✅ Market features built
+2025-11-11 11:20:02,333 - INFO - ✅ Energy features built
+2025-11-11 11:20:02,333 - INFO - ✅ Cross-features built
+2025-11-11 11:20:02,420 - INFO - Master features: 13995 records
+2025-11-11 11:20:02,421 - INFO - ✅ Master features built
+2025-11-11 11:20:02,421 - INFO - Gold layer completed! Features built: 9
+2025-11-11 11:20:02,425 - INFO - Gold layer report saved: GOLD_LAYER_REPORT.json
+2025-11-11 11:20:02,425 - INFO - ✅ Gold layer build completed successfully!
+2025-11-11 11:27:33,288 - INFO - Starting gold layer build
+2025-11-11 11:27:33,289 - INFO - Building gold layer ML features
+2025-11-11 11:27:33,289 - INFO - ============================================================
+2025-11-11 11:27:33,432 - INFO - ✅ Economic features built
+2025-11-11 11:27:33,435 - INFO - ✅ Climate features built
+2025-11-11 11:27:33,437 - INFO - ✅ Global features built
+2025-11-11 11:27:33,448 - INFO - ✅ Logistics features built
+2025-11-11 11:27:33,449 - INFO - ✅ Commodities features built
+2025-11-11 11:27:33,449 - INFO - ✅ Market features built
+2025-11-11 11:27:33,449 - INFO - ✅ Energy features built
+2025-11-11 11:27:33,449 - INFO - ✅ Cross-features built
+2025-11-11 11:27:33,674 - INFO - Master features: 142108 records
+2025-11-11 11:27:33,676 - INFO - ✅ Master features built
+2025-11-11 11:27:33,677 - INFO - Gold layer completed! Features built: 9
+2025-11-11 11:27:33,679 - INFO - Gold layer report saved: GOLD_LAYER_REPORT.json
+2025-11-11 11:27:33,679 - INFO - ✅ Gold layer build completed successfully!
+2025-11-11 11:42:26,357 - INFO - Starting gold layer build
+2025-11-11 11:42:26,358 - INFO - Building gold layer ML features
+2025-11-11 11:42:26,358 - INFO - ============================================================
+2025-11-11 11:42:26,509 - INFO - ✅ Economic features built
+2025-11-11 11:42:26,512 - INFO - ✅ Climate features built
+2025-11-11 11:42:26,515 - INFO - ✅ Global features built
+2025-11-11 11:42:26,526 - INFO - ✅ Logistics features built
+2025-11-11 11:42:26,526 - INFO - ✅ Commodities features built
+2025-11-11 11:42:26,526 - INFO - ✅ Market features built
+2025-11-11 11:42:26,526 - INFO - ✅ Energy features built
+2025-11-11 11:42:26,527 - INFO - ✅ Cross-features built
+2025-11-11 11:42:26,934 - INFO - Master features: 306878 records
+2025-11-11 11:42:26,942 - INFO - ✅ Master features built
+2025-11-11 11:42:26,942 - INFO - Gold layer completed! Features built: 9
+2025-11-11 11:42:26,944 - INFO - Gold layer report saved: GOLD_LAYER_REPORT.json
+2025-11-11 11:42:26,944 - INFO - ✅ Gold layer build completed successfully!

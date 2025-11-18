@@ -1,0 +1,109 @@
+{
+  "pipeline_name": "Nova Corrente ML Pipeline",
+  "version": "2.0",
+  "last_updated": "2025-11-11T14:12:23.921447",
+  "stages": [
+    {
+      "stage": "Data Ingestion",
+      "components": [
+        {
+          "name": "Nova Corrente ERP",
+          "type": "database",
+          "status": "active",
+          "data_volume": "4,188 records",
+          "frequency": "daily"
+        },
+        {
+          "name": "External Factors",
+          "type": "api",
+          "status": "active",
+          "sources": [
+            "macro_economic",
+            "weather",
+            "telecom_ops",
+            "logistics"
+          ],
+          "frequency": "daily"
+        }
+      ]
+    },
+    {
+      "stage": "Data Processing",
+      "components": [
+        {
+          "name": "Silver Layer Transformation",
+          "type": "transformation",
+          "status": "active",
+          "output": "cleaned_data"
+        },
+        {
+          "name": "Gold Layer Aggregation",
+          "type": "aggregation",
+          "status": "active",
+          "output": "feature_store"
+        }
+      ]
+    },
+    {
+      "stage": "Machine Learning",
+      "components": [
+        {
+          "name": "Feature Engineering",
+          "type": "processing",
+          "status": "active",
+          "features": 107
+        },
+        {
+          "name": "Model Training",
+          "type": "ml_training",
+          "status": "active",
+          "models": [
+            "RandomForest",
+            "GradientBoosting"
+          ],
+          "best_model": "RandomForest"
+        },
+        {
+          "name": "Forecast Generation",
+          "type": "inference",
+          "status": "active",
+          "horizon": "30 days"
+        }
+      ]
+    },
+    {
+      "stage": "Prescriptive Analytics",
+      "components": [
+        {
+          "name": "Risk Assessment",
+          "type": "analytics",
+          "status": "active",
+          "families_analyzed": 5
+        },
+        {
+          "name": "Inventory Optimization",
+          "type": "optimization",
+          "status": "active",
+          "savings": "R$ 147,442/year"
+        }
+      ]
+    }
+  ],
+  "data_flow": [
+    "Nova Corrente ERP \u2192 Silver Layer \u2192 Gold Layer \u2192 Feature Store \u2192 ML Models \u2192 Forecasts \u2192 Prescriptive Analytics \u2192 Dashboards"
+  ],
+  "monitoring": {
+    "alerts": [
+      "data_quality",
+      "model_drift",
+      "sla_violation",
+      "inventory_shortage"
+    ],
+    "dashboards": [
+      "executive",
+      "operations",
+      "financial"
+    ],
+    "automated_retraining": "monthly"
+  }
+}

@@ -1,3 +1,298 @@
+# 🤖 FATORES EXTERNOS & MODELAGEM ML  
+## Guia Avançado para Previsão de Demanda Multifatores (Nova Corrente)
+
+**Versão:** 2.0  
+**Data:** Novembro 2025  
+**Área:** Data & AI – Demand Forecasting & Supply Chain Intelligence
+
+---
+
+## 📍 Objetivo
+
+Estabelecer um fluxo completo — da coleta de dados externos à modelagem preditiva — que maximize precisão (<15% MAPE) e reduza rupturas de estoque (≥60%), considerando:
+
+- **Multi-camadas de variáveis externas:** macro, fiscal, setorial, climática, logística, operacional.  
+- **Automação vs. intervenção manual:** cada fonte com status claro de ingestion.  
+- **Integração com cash flow e margens:** priorização de estoque vs. custo de capital.  
+- **Modelos híbridos:** combinações Prophet / ARIMAX / LSTM / TFT / ensembles.
+
+---
+
+## 🧭 Índice
+
+1. [Inventário de Variáveis](#inventario)  
+2. [Coleta de Dados & Automação](#coleta)  
+3. [Modelagem Financeira: Estoque vs. Caixa](#financeiro)  
+4. [Feature Engineering Avançado](#features)  
+5. [Modelos e Estratégia ML](#modelos)  
+6. [Validação & KPIs](#validacao)  
+7. [Pipeline End-to-End](#pipeline)  
+8. [Roadmap & Rotina Operacional](#roadmap)
+
+---
+
+<a name="inventario"></a>
+## 1. 🗂️ Inventário de Variáveis Externas
+
+| Tier | Categoria | Variáveis Chave | Impacto Indicativo |
+|------|-----------|-----------------|--------------------|
+| Macro | PIB, IPCA, Selic, USD/BRL, CNY/BRL, CDS/PPP | +10-30% demanda por variações cambiais/inflacionárias | Lead time financeiro, custo importação |
+| Fiscal | ICMS, IPI, PIS/COFINS, ISS, Drawback, IBS/CBS | +10-25% custo efetivo, gatilho antecipação | Margem vs. compensação tributária |
+| Setorial | Cobertura 5G, migração fibra, inspeções ANATEL, upgrades | +30-200% demanda pontual (novos sites) | Previsibilidade vs. auditorias |
+| Comércio Exterior | AliceWeb, UN Comtrade, MERCOSUR LETEC | Ajuste de tarifas, redução custo import | Estratégia de sourcing |
+| Climático | Temperatura, chuva, umidade, ventos (INMET/Open-Meteo) | +15-50% demanda corretiva/preventiva | Backlog vs. acesso campo |
+| Logística | Freightos, Drewry, Baltic Dry, ANP combustíveis | +20-60% lead time/custo frete | Estoque segurança regional |
+| Global Benchmarks | GSCPI, PPI semicondutores, GDP mundial | Early warning de rupturas globais | Hedge supply / dual sourcing |
+| Operacional | SLAs, backlog, workforce, feriados, greves | +20-50% ajustes de estoque | Capacidade vs. compliance |
+| Financeiro Interno | Margem, capital disponível, custo capital | Decisão estoques vs. caixa | Otimização ROI estoque |
+
+> Referência cruzada: `data_download_playbook.md` (categorias + fontes) e `links-verificados-expandidos-100-cobertura.md` (status dos links).
+
+---
+
+<a name="coleta"></a>
+## 2. 🌐 Coleta de Dados & Automação
+
+| Fonte | URL/Canal | Status | Automação | Observações |
+|-------|-----------|--------|-----------|-------------|
+| IBGE SIDRA | `https://apisidra.ibge.gov.br/values/...` | ✅ API | `fetch_csv` (cron diário) | PIB, IPCA, IPCA-15, INPC |
+| BACEN PTAX & Selic | `https://olinda.bcb.gov.br/...` | ✅ API | `fetch_json` | Cambial, juros, CDS via TE |
+| INMET (BDMEP) | `https://bdmep.inmet.gov.br/` | 🔐 Token | Script `requests` (token manual) | Arquivar CSV por estação |
+| ANATEL Painéis | `https://informacoes.anatel.gov.br/paineis` | ⚠️ Export | Selenium headless | Filtros iniciais manuais |
+| ANATEL FTP | `ftp://ftp.anatel.gov.br/...` | ✅ FTP | `wget -r` agendado | Estatísticas 2008-2025 |
+| AliceWeb | `https://aliceweb2.mdic.gov.br/` | 🔐 Login | `requests.Session` + cookie | Capturar payload via DevTools |
+| MERCOSUR | `https://www.mercosur.int/...` | 📄 PDF | `pdfplumber`/manual | LETEC, portarias |
+| Freightos / Drewry | `https://fbx.freightos.com/...` | 🔐 API/pago | `requests`/manual | Sales trial, monitor CSV |
+| ANP combustíveis | `https://dados.gov.br/...` | ✅ CSV | `requests` semanal | Diesel, gasolina |
+| World Bank / IMF | `https://api.worldbank.org/...` | ✅ API | Rotina mensal | GDP/PPP, WEO |
+
+**Checklist Airflow:**  
+- `dag_macro_collect` (IBGE/BACEN, diária)  
+- `dag_weather_collect` (INMET/OpenMeteo, 6h)  
+- `dag_trade_collect` (AliceWeb/Comtrade, mensal)  
+- `dag_telecom_collect` (ANATEL FTP + Selenium, semanal)  
+- Agendas manuais → `docs/operations/manual_downloads.md`
+
+---
+
+<a name="financeiro"></a>
+## 3. 💰 Estoque, Caixa & Margens
+
+1. **Custo Financeiro (CF):** `CF = estoque_atual * custo_capital`  
+   - Usar Selic + spread interno (ex.: 18% a.a.)
+2. **Margem Operacional (MO):** `MO = (preço_venda - custo_total) / preço_venda`
+3. **Índice Liquidez Estoque (ILI):** `ILI = estoque_dias / horizonte_caixa`
+4. **Heurística de decisão:**  
+   - Se `ILI > 1` e `usd_brl_volatility_30d > 0.05`: reduzir estoque (liberar caixa)  
+   - Se `GSCPI > 1.5` ou `port_congestion_score > 0.7`: elevar safety stock (1.3x)
+5. **Curva ABC com Margem Ajustada:** priorizar itens A com alta margem e risco (RF importados).
+
+---
+
+<a name="features"></a>
+## 4. 🧪 Feature Engineering Avançado
+
+### 4.1 Estrutura Geral
+- **Bronze → Silver → Feature Store** (Delta/Parquet).  
+- Convenção: `macro__usd_brl__spot`, `clima__rainfall_7d`, `logist__port_congestion_score`.
+
+### 4.2 Tabelas Base (Bronze)
+```python
+bronze_macro = {
+    "source": "BACEN_PTAX",
+    "schema": ["date", "currency", "rate", "type"],
+    "ingestion": "daily",
+    "path": "data/raw/macro/bacen_ptax/YYYY/MM/DD.json"
+}
+```
+
+### 4.3 Exemplos de Features
+
+```python
+# Econômicas
+features_econ = {
+    "usd_brl_pct_change_30d": usd_brl.pct_change(30),
+    "usd_brl_volatility_30d": usd_brl.rolling(30).std(),
+    "ipca_12m": ipca.rolling(12).sum(),
+    "selic_real": selic - inflation_expectation,
+    "currency_crisis_flag": (usd_brl_volatility_30d > 0.05).astype(int),
+}
+
+# Clima
+features_weather = {
+    "rainfall_7d_sum": rainfall.rolling(7).sum(),
+    "rainfall_30d_mean": rainfall.rolling(30).mean(),
+    "heatwave_flag": (temp_max > 32).astype(int),
+    "wind_structural_risk": np.clip((wind_speed - 80) / 20, 0, None),
+    "humidity_corrosion": (humidity > 80).astype(int),
+}
+
+# Logística
+features_logistic = {
+    "port_congestion_score": congestion_score,
+    "freight_rate_zscore": zscore(freight_rate),
+    "diesel_price_lag_4w": diesel_price.shift(4),
+    "logistics_cost_index": diesel_price * freight_rate * congestion_score,
+}
+
+# Fiscal / Tributário
+features_fiscal = {
+    "effective_tax_burden": icms_state + ipi + pis_cofins,
+    "drawback_active": drawback_flag.astype(int),
+    "ibc_transition_phase": ibc_phase,
+}
+```
+
+### 4.4 Interações e Scores Compostos
+```python
+features_interactions = {
+    "import_stress_score": usd_brl_volatility_30d * (1 + port_congestion_score),
+    "holiday_high_inflation": is_holiday * (ipca_mom > 1.0),
+    "rainbacklog_multiplier": (rainfall_7d_sum > 100) * (workforce_availability < 0.8),
+    "cash_vs_demand_pressure": (cf / caixa_disponivel) * demand_growth_expected,
+}
+```
+
+---
+
+<a name="modelos"></a>
+## 5. 🧠 Modelos & Estratégia ML
+
+### 5.1 Escolha por Cenário
+
+| Cenário | Característica | Modelo Base | Notas |
+|---------|----------------|-------------|-------|
+| Fast-moving | Alto giro, sazonal forte | Prophet + regressors | MAPE 8-12% |
+| Slow-moving | Baixo volume, linear | ARIMAX (exogs) | MAPE 15-20% |
+| Multifatores | Clima + macro + logística | Ensemble (Prophet + LSTM) | MAPE 10-15% |
+| Alta volatilidade | Choques globais | TFT / DeepAR | Requer GPU, atenção interpretabilidade |
+| Portfólio | 40+ itens | Modelagem hierárquica + weighted ensemble | Compartilhar fatores globais |
+
+### 5.2 Ensemble Adaptativo
+
+```python
+def weighted_ensemble(preds, volatility):
+    weights = {
+        "arima": 0.3 if volatility < 0.04 else 0.1,
+        "prophet": 0.4,
+        "lstm": 0.3 if volatility < 0.04 else 0.5,
+        "tft": 0.2 if volatility >= 0.04 else 0.0,
+    }
+    total = sum(weights.values())
+    return sum(weights[m] * preds[m] for m in weights) / total
+```
+
+- Pesos recalibrados via performance rolling (MLflow).
+- Ajuste cash-aware pós ensemble (ver seção 3).
+
+### 5.3 Estratégias Complementares
+- **Modelos hierárquicos:** top-down (macro → categoria → SKU) para coerência.  
+- **Transfer learning:** usar TFT pré-treinado com embeddings para itens novos.  
+- **Explainability:** SHAP para Prophet/TFT, atenção em features macro.
+
+---
+
+<a name="validacao"></a>
+## 6. ✅ Validação & KPIs
+
+| Métrica | Fórmula | Target |
+|---------|---------|--------|
+| MAPE | `mean(|y_true - y_pred| / y_true)` | < 15% |
+| RMSE | `sqrt(mean((y_true - y_pred)^2))` | Comparar baseline |
+| MAE | `mean(|y_true - y_pred|)` | Monitorar itens críticos |
+| Stockout Prevention Rate | `stockouts evitados / total histórico` | ≥ 80% |
+| Capital Savings | `(estoque baseline - atual) / baseline` | 15-20% |
+| Cash Forecast Index | `fluxo_caixa_prev / estoque_prev` | ≥ 1 itens críticos |
+
+- Validação temporal com `TimeSeriesSplit (n_splits=5)`.  
+- Drift monitoring: PSI/KS em features, alerta se >0.2.
+
+---
+
+<a name="pipeline"></a>
+## 7. 🏗️ Pipeline End-to-End
+
+```python
+def pipeline_demand_forecast():
+    # 1. Ingestão externa
+    bronze = ingest_external_sources()
+
+    # 2. Limpeza / integração
+    silver = transform_to_silver(bronze, internal_sources)
+
+    # 3. Feature store
+    features = build_feature_store(silver, internal_metrics)
+
+    # 4. Split temporal
+    X_train, X_test, y_train, y_test = temporal_split(features)
+
+    # 5. Treino multi-model
+    models = train_all_models(X_train, y_train)
+
+    # 6. Ensemble adaptativo
+    preds = {name: model.predict(X_test) for name, model in models.items()}
+    forecast = weighted_ensemble(preds, volatility=X_test["usd_brl_volatility_30d"])
+
+    # 7. Ajuste financeiro
+    forecast = adjust_for_cash_constraints(forecast, financials)
+
+    # 8. Estoque & alertas
+    reorder_points = compute_reorder_points(forecast, lead_times, service_levels)
+    alerts = generate_alerts(current_stock, reorder_points)
+
+    # 9. Dashboards / relatórios
+    publish_dashboards(forecast, metrics={"MAPE": calc_mape(y_test, forecast)})
+
+    # 10. Feedback loop
+    log_results(forecast, y_test)
+    trigger_retraining_if_drift()
+```
+
+---
+
+<a name="roadmap"></a>
+## 8. 🛣️ Roadmap & Rotina Operacional
+
+**Semana 1-2**  
+- Configurar `.env` com API keys (TradingEconomics, Freightos, NewsAPI).  
+- Rodar scripts automáticos (BACEN, IBGE, INMET fallback).  
+- Registrar tarefas manuais (AliceWeb, Drewry).
+
+**Semana 3-4**  
+- Popular Silver + Feature Store.  
+- Treinar Prophet/ARIMAX baseline (5 SKUs).  
+- Validar métricas iniciais (MAPE, stockout).
+
+**Mês 2-3**  
+- Implementar LSTM/TFT + ensemble.  
+- Deploy ajustes cash-aware.  
+- Criar dashboards de monitoramento (Grafana/Metabase).
+
+**Mês 4+**  
+- Automatizar drift detection (Evidently, WhyLabs).  
+- Revisar Drawback/tributação trimestral.  
+- Expandir para horizontes 7/30/60 dias e modelos hierárquicos.
+
+**Responsáveis**  
+- Data Engineering: ingestão, Airflow, qualidade.  
+- Data Science: modelagem, ensembles, feature store.  
+- Finanças/Procurement: margens, cash constraints, contratos.  
+- Operações: SLAs, backlog, execução tática.
+
+---
+
+## 📎 Referências
+
+- `docs/proj/scafold/extern_modeling/data_download_playbook.md`  
+- `docs/proj/scafold/extern_modeling/links-verificados-expandidos-100-cobertura.md`  
+- `docs/reports/NOVA_CORRENTE_ML_PIPELINE_TECH_SPEC.md`  
+- `docs/proj/scafold/extern_modeling/external_src.md`  
+- `docs/proj/scafold/extern_modeling/outer_factors.md`
+
+---
+
+**Status:** ✅ Atualizado com multi-fatores, automação e fluxos financeiros integrados (Nov/2025).  
+**Próxima revisão:** Fevereiro 2026 ou quando novas fontes/variáveis forem incorporadas.
 # 🤖 FATORES EXTERNOS E MODELAGEM ML
 ## Guia Completo para Previsibilidade de Demandas
 

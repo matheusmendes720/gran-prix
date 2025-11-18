@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "row_count": 3,
+  "date_range": [
+    "2025-11-07",
+    "2025-11-09"
+  ],
+  "regions": [
+    "bahia"
+  ],
+  "metadata": {
+    "region": "bahia",
+    "run_date": "2025-11-07"
+  }
+}

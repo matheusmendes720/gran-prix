@@ -1,0 +1,1145 @@
+2025-11-11 09:06:05,845 - __main__ - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 09:06:07,334 - scripts.automation.freight_blockers.automated - WARNING - XSI-C API failed: 404 Client Error: Not Found for url: https://xsi.xeneta.com/api/v1/historical?start=2025-05-15&end=2025-11-11&lane=all
+2025-11-11 09:06:08,730 - scripts.automation.freight_blockers.automated - ERROR - SCFI fetch failed: 400 Client Error: Bad Request for url: https://api.stlouisfed.org/fred/series/observations?series_id=SCFIXO&observation_start=2025-05-15&observation_end=2025-11-11&file_type=json&api_key=641761829234fff87ca7969a523a3957
+2025-11-11 09:06:09,970 - scripts.automation.freight_blockers.automated - INFO - Downloading ANTT resource https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 09:06:15,102 - scripts.automation.freight_blockers.automated - ERROR - Failed to fetch ANTT resource 2b564396-5593-4b5c-ba2c-3de3fa0a92c0: Error tokenizing data. C error: Expected 1 fields in line 140, saw 3
+
+2025-11-11 09:06:15,585 - scripts.automation.freight_blockers.automated - INFO - Downloading ANTT resource https://dados.antt.gov.br/dataset/f5a84126-be26-4052-8ca4-9d5694b8d372/resource/df1f69d9-5506-44b9-b4b5-ea028da275ca/download/rntrc-historico-dos-transportadores-de-veiculos-ativos.csv
+2025-11-11 09:06:15,832 - scripts.automation.freight_blockers.automated - ERROR - Failed to fetch ANTT resource f5a84126-be26-4052-8ca4-9d5694b8d372: 'utf-8' codec can't decode byte 0xea in position 12: invalid continuation byte
+2025-11-11 09:06:16,016 - scripts.automation.freight_blockers.automated - ERROR - Failed to fetch ANTT resource b4a055d1-97a2-46f1-9461-cb17fbc6b6b3: '<' not supported between instances of 'NoneType' and 'str'
+2025-11-11 09:06:16,016 - scripts.automation.freight_blockers.automated - WARNING - RNTRC dataset not found.
+2025-11-11 09:07:34,304 - __main__ - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 09:07:34,305 - scripts.automation.freight_blockers.automated - INFO - Fetching XSI-C history 2025-05-15 -> 2025-11-11
+2025-11-11 09:07:34,999 - scripts.automation.freight_blockers.automated - WARNING - XSI-C API failed: 404 Client Error: Not Found for url: https://xsi.xeneta.com/api/v1/historical?start=2025-05-15&end=2025-11-11&lane=all
+2025-11-11 09:07:35,677 - scripts.automation.freight_blockers.automated - INFO - Fetching SCFI 2025-05-15 -> 2025-11-11 via FRED.
+2025-11-11 09:07:36,213 - scripts.automation.freight_blockers.automated - ERROR - SCFI fetch failed: 400 Client Error: Bad Request for url: https://api.stlouisfed.org/fred/series/observations?series_id=SCFIXO&observation_start=2025-05-15&observation_end=2025-11-11&file_type=json&api_key=641761829234fff87ca7969a523a3957
+2025-11-11 09:07:37,421 - scripts.automation.freight_blockers.automated - INFO - Downloading ANTT resource https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 09:07:41,791 - scripts.automation.freight_blockers.automated - ERROR - Failed to fetch ANTT resource 2b564396-5593-4b5c-ba2c-3de3fa0a92c0: Error tokenizing data. C error: Expected 1 fields in line 140, saw 3
+
+2025-11-11 09:07:41,885 - scripts.automation.freight_blockers.automated - INFO - Downloading ANTT resource https://dados.antt.gov.br/dataset/f5a84126-be26-4052-8ca4-9d5694b8d372/resource/df1f69d9-5506-44b9-b4b5-ea028da275ca/download/rntrc-historico-dos-transportadores-de-veiculos-ativos.csv
+2025-11-11 09:07:42,197 - scripts.automation.freight_blockers.automated - ERROR - Failed to fetch ANTT resource f5a84126-be26-4052-8ca4-9d5694b8d372: 'utf-8' codec can't decode byte 0xea in position 12: invalid continuation byte
+2025-11-11 09:07:42,295 - scripts.automation.freight_blockers.automated - ERROR - Failed to fetch ANTT resource b4a055d1-97a2-46f1-9461-cb17fbc6b6b3: '<' not supported between instances of 'NoneType' and 'str'
+2025-11-11 09:07:42,295 - scripts.automation.freight_blockers.automated - WARNING - RNTRC dataset not found.
+2025-11-11 09:07:42,295 - __main__ - INFO - Freight blockers completed: {'xeneta_xsi_c': 'WARN - no data (check endpoint)', 'drewry_alternatives': 'WARN - no data (FRED key?)', 'antt_kpis': 'WARN - RNTRC not available'}
+2025-11-11 09:27:15,909 - __main__ - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 09:27:18,311 - scripts.automation.freight_blockers.automated - WARNING - World Bank connectivity request failed for BRA: 400 Client Error: Bad Request for url: https://api.worldbank.org/v2/country/BRA/indicator/IS.SHP.GCNW.XQ?format=json&per_page=2000&date=2025%3A2025
+2025-11-11 09:27:20,126 - scripts.automation.freight_blockers.automated - WARNING - World Bank connectivity fallback produced no data.
+2025-11-11 09:27:27,432 - scripts.automation.freight_blockers.automated - WARNING - World Bank container traffic fallback produced no data.
+2025-11-11 09:27:27,933 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 09:27:34,597 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 09:27:34,647 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 09:27:34,649 - __main__ - INFO - Freight blockers completed: {'xeneta_xsi_c': 'WARN - no data (check endpoint)', 'drewry_alternatives': 'WARN - no data (FRED key?)', 'antt_kpis': 'OK - 1 records'}
+2025-11-11 09:28:04,441 - __main__ - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 09:28:09,240 - scripts.automation.freight_blockers.automated - WARNING - World Bank connectivity fallback produced no data.
+2025-11-11 09:28:13,493 - scripts.automation.freight_blockers.automated - WARNING - World Bank container traffic fallback produced no data.
+2025-11-11 09:28:13,994 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 09:28:19,691 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 09:28:19,727 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 09:28:19,728 - __main__ - INFO - Freight blockers completed: {'xeneta_xsi_c': 'WARN - no data (check endpoint)', 'drewry_alternatives': 'WARN - no data (FRED key?)', 'antt_kpis': 'OK - 1 records'}
+2025-11-11 09:29:11,960 - __main__ - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 09:29:13,702 - scripts.automation.freight_blockers.automated - WARNING - World Bank connectivity fallback produced no data.
+2025-11-11 09:29:15,780 - scripts.automation.freight_blockers.automated - WARNING - World Bank container traffic fallback produced no data.
+2025-11-11 09:29:16,280 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 09:29:21,996 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 09:29:22,019 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 09:29:22,020 - __main__ - INFO - Freight blockers completed: {'xeneta_xsi_c': 'WARN - no data (check endpoint)', 'drewry_alternatives': 'WARN - no data (FRED key?)', 'antt_kpis': 'OK - 1 records'}
+2025-11-11 09:31:54,372 - __main__ - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 09:31:55,043 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 09:31:55,258 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for CHN
+2025-11-11 09:31:55,515 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for USA
+2025-11-11 09:31:55,747 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for BRA
+2025-11-11 09:31:55,979 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for SGP
+2025-11-11 09:31:56,235 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for DEU
+2025-11-11 09:31:56,235 - scripts.automation.freight_blockers.automated - WARNING - World Bank connectivity fallback produced no data.
+2025-11-11 09:31:57,320 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic returned only null values for WLD
+2025-11-11 09:31:57,520 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic returned only null values for CHN
+2025-11-11 09:31:57,746 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic returned only null values for USA
+2025-11-11 09:31:57,966 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic returned only null values for BRA
+2025-11-11 09:31:58,178 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic returned only null values for MEX
+2025-11-11 09:31:58,382 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic returned only null values for SWE
+2025-11-11 09:31:58,382 - scripts.automation.freight_blockers.automated - WARNING - World Bank container traffic fallback produced no data.
+2025-11-11 09:31:58,882 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 09:32:03,287 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 09:32:03,315 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 09:32:03,316 - __main__ - INFO - Freight blockers completed: {'xeneta_xsi_c': 'WARN - no data (check endpoint)', 'drewry_alternatives': 'WARN - no data (FRED key?)', 'antt_kpis': 'OK - 1 records'}
+2025-11-11 09:33:41,651 - __main__ - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 09:33:44,569 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 09:33:44,765 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 09:33:44,979 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 09:33:45,905 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 09:33:46,312 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 09:33:46,522 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 09:33:46,528 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 09:33:46,547 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 09:33:47,849 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 09:33:48,813 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 09:33:49,429 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 09:33:50,110 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 09:33:50,532 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 09:34:01,391 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 09:34:01,396 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 09:34:01,400 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 09:34:01,900 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 09:34:06,189 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 09:34:06,194 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 09:34:06,195 - __main__ - INFO - Freight blockers completed: {'xeneta_xsi_c': 'OK - 13 records', 'drewry_alternatives': 'OK - 14 records', 'antt_kpis': 'OK - 1 records'}
+2025-11-11 09:34:27,827 - silver_transform - INFO - Starting Silver transformation for external factors.
+2025-11-11 09:34:27,963 - silver_transform - INFO - Wrote 12160 rows to data\silver\external_factors\macro\ptax_rates.parquet
+2025-11-11 09:34:27,979 - silver_transform - INFO - Wrote 1775 rows to data\silver\external_factors\macro\selic_daily.parquet
+2025-11-11 09:34:27,994 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\ipca_monthly.parquet
+2025-11-11 09:34:28,006 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca15_monthly.parquet
+2025-11-11 09:34:28,011 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\inpc_monthly.parquet
+2025-11-11 09:34:28,019 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\unemployment_rate.parquet
+2025-11-11 09:34:28,031 - silver_transform - INFO - Wrote 42 rows to data\silver\external_factors\macro\pib_quarterly_yoy.parquet
+2025-11-11 09:34:28,038 - silver_transform - INFO - Wrote 7 rows to data\silver\external_factors\macro\pib_annual_value.parquet
+2025-11-11 09:34:28,045 - silver_transform - INFO - Wrote 12 rows to data\silver\external_factors\macro\cds_spread.parquet
+2025-11-11 09:34:28,052 - silver_transform - INFO - Wrote 1 rows to data\silver\external_factors\macro\ppp_conversion_factor.parquet
+2025-11-11 09:34:28,062 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_current_usd.parquet
+2025-11-11 09:34:28,073 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_ppp.parquet
+2025-11-11 09:34:28,078 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_growth_pct.parquet
+2025-11-11 09:34:28,516 - silver_transform - INFO - Wrote 7305 rows to data\silver\external_factors\climatic\openmeteo_daily.parquet
+2025-11-11 09:34:28,530 - silver_transform - INFO - Wrote 1079 rows to data\silver\external_factors\logistics\anp_fuel_daily.parquet
+2025-11-11 09:34:28,545 - silver_transform - INFO - Wrote 2 rows to data\silver\external_factors\logistics\freight_worldbank.parquet
+2025-11-11 09:34:28,552 - silver_transform - INFO - Wrote 77 rows to data\silver\external_factors\logistics\baltic_dry.parquet
+2025-11-11 09:34:28,553 - silver_transform - WARNING - Freightos directory data\landing\external_factors-raw\logistics\freightos missing.
+2025-11-11 09:34:28,553 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\freightos_fbx.parquet because dataframe is empty.
+2025-11-11 09:34:28,553 - silver_transform - WARNING - Drewry directory data\landing\external_factors-raw\logistics\drewry missing.
+2025-11-11 09:34:28,553 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\drewry_wci.parquet because dataframe is empty.
+2025-11-11 09:34:28,554 - silver_transform - WARNING - ANTT directory data\landing\external_factors-raw\logistics\antt missing.
+2025-11-11 09:34:28,554 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\antt_metrics.parquet because dataframe is empty.
+2025-11-11 09:34:28,554 - silver_transform - INFO - Triggering freight blockers automation for Xeneta, SCFI/CCFI, and ANTT CKAN datasets.
+2025-11-11 09:34:28,554 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] Starting execution.
+2025-11-11 09:34:29,201 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 09:34:29,436 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 09:34:30,053 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 09:34:30,296 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 09:34:30,521 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 09:34:30,747 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 09:34:30,751 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 09:34:30,754 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 09:34:31,867 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 09:34:32,064 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 09:34:32,287 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 09:34:32,498 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 09:34:32,717 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 09:34:32,923 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 09:34:32,928 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 09:34:32,930 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 09:34:33,430 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 09:34:38,981 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 09:34:38,985 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 09:34:39,521 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] All blockers completed successfully.
+2025-11-11 09:34:39,523 - silver_transform - INFO - Running logistics dataset validation checks...
+2025-11-11 09:34:39,536 - logistics_validation - INFO - Dataset anp_fuel_daily validated (1079 rows, 2021-01-01 -> 2025-06-30).
+2025-11-11 09:34:39,567 - logistics_validation - INFO - Dataset freight_worldbank validated (2 rows, 2021-01-01 -> 2022-01-01).
+2025-11-11 09:34:39,579 - logistics_validation - INFO - Dataset baltic_dry validated (77 rows, 2022-08-31 -> 2025-02-21).
+2025-11-11 09:34:39,579 - logistics_validation - WARNING - Dataset freightos_fbx missing at data\silver\external_factors\logistics\freightos_fbx.parquet
+2025-11-11 09:34:39,579 - logistics_validation - WARNING - Dataset drewry_wci missing at data\silver\external_factors\logistics\drewry_wci.parquet
+2025-11-11 09:34:39,580 - logistics_validation - WARNING - Dataset antt_metrics missing at data\silver\external_factors\logistics\antt_metrics.parquet
+2025-11-11 09:34:39,580 - logistics_validation - WARNING - Some logistics datasets failed validation.
+2025-11-11 09:34:39,580 - silver_transform - WARNING - Logistics validation reported issues. Review logs above.
+2025-11-11 09:34:39,580 - silver_transform - INFO - Silver transformation finished.
+2025-11-11 09:35:49,265 - silver_transform - INFO - Starting Silver transformation for external factors.
+2025-11-11 09:35:49,390 - silver_transform - INFO - Wrote 12160 rows to data\silver\external_factors\macro\ptax_rates.parquet
+2025-11-11 09:35:49,406 - silver_transform - INFO - Wrote 1775 rows to data\silver\external_factors\macro\selic_daily.parquet
+2025-11-11 09:35:49,416 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\ipca_monthly.parquet
+2025-11-11 09:35:49,425 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca15_monthly.parquet
+2025-11-11 09:35:49,432 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\inpc_monthly.parquet
+2025-11-11 09:35:49,439 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\unemployment_rate.parquet
+2025-11-11 09:35:49,447 - silver_transform - INFO - Wrote 42 rows to data\silver\external_factors\macro\pib_quarterly_yoy.parquet
+2025-11-11 09:35:49,452 - silver_transform - INFO - Wrote 7 rows to data\silver\external_factors\macro\pib_annual_value.parquet
+2025-11-11 09:35:49,459 - silver_transform - INFO - Wrote 12 rows to data\silver\external_factors\macro\cds_spread.parquet
+2025-11-11 09:35:49,465 - silver_transform - INFO - Wrote 1 rows to data\silver\external_factors\macro\ppp_conversion_factor.parquet
+2025-11-11 09:35:49,476 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_current_usd.parquet
+2025-11-11 09:35:49,484 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_ppp.parquet
+2025-11-11 09:35:49,493 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_growth_pct.parquet
+2025-11-11 09:35:49,839 - silver_transform - INFO - Wrote 7305 rows to data\silver\external_factors\climatic\openmeteo_daily.parquet
+2025-11-11 09:35:49,852 - silver_transform - INFO - Wrote 1079 rows to data\silver\external_factors\logistics\anp_fuel_daily.parquet
+2025-11-11 09:35:49,867 - silver_transform - INFO - Wrote 2 rows to data\silver\external_factors\logistics\freight_worldbank.parquet
+2025-11-11 09:35:49,875 - silver_transform - INFO - Wrote 77 rows to data\silver\external_factors\logistics\baltic_dry.parquet
+2025-11-11 09:35:49,875 - silver_transform - WARNING - Freightos directory data\landing\external_factors-raw\logistics\freightos missing.
+2025-11-11 09:35:49,875 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\freightos_fbx.parquet because dataframe is empty.
+2025-11-11 09:35:49,875 - silver_transform - WARNING - Drewry directory data\landing\external_factors-raw\logistics\drewry missing.
+2025-11-11 09:35:49,876 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\drewry_wci.parquet because dataframe is empty.
+2025-11-11 09:35:49,876 - silver_transform - WARNING - ANTT directory data\landing\external_factors-raw\logistics\antt missing.
+2025-11-11 09:35:49,876 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\antt_metrics.parquet because dataframe is empty.
+2025-11-11 09:35:49,876 - silver_transform - INFO - Triggering freight blockers automation for Xeneta, SCFI/CCFI, and ANTT CKAN datasets.
+2025-11-11 09:35:49,876 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] Starting execution.
+2025-11-11 09:35:50,485 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 09:35:50,692 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 09:35:50,921 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 09:35:51,121 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 09:35:51,327 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 09:35:51,572 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 09:35:51,577 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 09:35:51,580 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 09:35:52,755 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 09:35:52,996 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 09:35:53,228 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 09:35:53,473 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 09:35:53,718 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 09:35:54,295 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 09:35:54,299 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 09:35:54,301 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 09:35:54,802 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 09:35:59,466 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 09:35:59,469 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 09:35:59,490 - scripts.automation.freight_blockers.integration - INFO -   OK - xeneta_xsi_c.parquet (13 rows) -> Freightos FBX replacement
+2025-11-11 09:35:59,493 - scripts.automation.freight_blockers.integration - INFO -   OK - drewry_wci_alternatives.parquet (14 rows) -> Drewry WCI replacement
+2025-11-11 09:35:59,506 - scripts.automation.freight_blockers.integration - INFO -   OK - antt_logistics_kpis.parquet (1 rows) -> ANTT KPI replacement
+2025-11-11 09:35:59,506 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] All blockers completed successfully.
+2025-11-11 09:35:59,510 - silver_transform - INFO - Running logistics dataset validation checks...
+2025-11-11 09:36:35,634 - silver_transform - INFO - Starting Silver transformation for external factors.
+2025-11-11 09:36:35,780 - silver_transform - INFO - Wrote 12160 rows to data\silver\external_factors\macro\ptax_rates.parquet
+2025-11-11 09:36:35,804 - silver_transform - INFO - Wrote 1775 rows to data\silver\external_factors\macro\selic_daily.parquet
+2025-11-11 09:36:35,817 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\ipca_monthly.parquet
+2025-11-11 09:36:35,830 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca15_monthly.parquet
+2025-11-11 09:36:35,837 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\inpc_monthly.parquet
+2025-11-11 09:36:35,842 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\unemployment_rate.parquet
+2025-11-11 09:36:35,851 - silver_transform - INFO - Wrote 42 rows to data\silver\external_factors\macro\pib_quarterly_yoy.parquet
+2025-11-11 09:36:35,856 - silver_transform - INFO - Wrote 7 rows to data\silver\external_factors\macro\pib_annual_value.parquet
+2025-11-11 09:36:35,865 - silver_transform - INFO - Wrote 12 rows to data\silver\external_factors\macro\cds_spread.parquet
+2025-11-11 09:36:35,872 - silver_transform - INFO - Wrote 1 rows to data\silver\external_factors\macro\ppp_conversion_factor.parquet
+2025-11-11 09:36:35,879 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_current_usd.parquet
+2025-11-11 09:36:35,889 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_ppp.parquet
+2025-11-11 09:36:35,899 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_growth_pct.parquet
+2025-11-11 09:36:36,317 - silver_transform - INFO - Wrote 7305 rows to data\silver\external_factors\climatic\openmeteo_daily.parquet
+2025-11-11 09:36:36,329 - silver_transform - INFO - Wrote 1079 rows to data\silver\external_factors\logistics\anp_fuel_daily.parquet
+2025-11-11 09:36:36,344 - silver_transform - INFO - Wrote 2 rows to data\silver\external_factors\logistics\freight_worldbank.parquet
+2025-11-11 09:36:36,352 - silver_transform - INFO - Wrote 77 rows to data\silver\external_factors\logistics\baltic_dry.parquet
+2025-11-11 09:36:36,352 - silver_transform - WARNING - Freightos directory data\landing\external_factors-raw\logistics\freightos missing.
+2025-11-11 09:36:36,353 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\freightos_fbx.parquet because dataframe is empty.
+2025-11-11 09:36:36,353 - silver_transform - WARNING - Drewry directory data\landing\external_factors-raw\logistics\drewry missing.
+2025-11-11 09:36:36,353 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\drewry_wci.parquet because dataframe is empty.
+2025-11-11 09:36:36,353 - silver_transform - WARNING - ANTT directory data\landing\external_factors-raw\logistics\antt missing.
+2025-11-11 09:36:36,353 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\antt_metrics.parquet because dataframe is empty.
+2025-11-11 09:36:36,354 - silver_transform - INFO - Triggering freight blockers automation for Xeneta, SCFI/CCFI, and ANTT CKAN datasets.
+2025-11-11 09:36:36,354 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] Starting execution.
+2025-11-11 09:36:36,946 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 09:36:37,140 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 09:36:37,330 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 09:36:37,902 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 09:36:38,103 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 09:36:38,299 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 09:36:38,303 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 09:36:38,305 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 09:36:39,435 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 09:36:39,647 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 09:36:39,862 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 09:36:40,067 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 09:36:40,292 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 09:36:40,498 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 09:36:40,506 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 09:36:40,509 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 09:36:41,009 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 09:36:45,964 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 09:36:45,967 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 09:36:45,995 - scripts.automation.freight_blockers.integration - INFO -   OK - xeneta_xsi_c.parquet (13 rows) -> Freightos FBX replacement
+2025-11-11 09:36:45,999 - scripts.automation.freight_blockers.integration - INFO -   OK - drewry_wci_alternatives.parquet (14 rows) -> Drewry WCI replacement
+2025-11-11 09:36:46,011 - scripts.automation.freight_blockers.integration - INFO -   OK - antt_logistics_kpis.parquet (1 rows) -> ANTT KPI replacement
+2025-11-11 09:36:46,012 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] All blockers completed successfully.
+2025-11-11 09:36:46,013 - silver_transform - INFO - Running logistics dataset validation checks...
+2025-11-11 09:36:46,026 - logistics_validation - INFO - Dataset anp_fuel_daily.parquet validated (1079 rows, 2021-01-01 -> 2025-06-30).
+2025-11-11 09:36:46,031 - logistics_validation - INFO - Dataset freight_worldbank.parquet validated (2 rows, 2021-01-01 -> 2022-01-01).
+2025-11-11 09:36:46,034 - logistics_validation - INFO - Dataset baltic_dry.parquet validated (77 rows, 2022-08-31 -> 2025-02-21).
+2025-11-11 09:36:46,034 - logistics_validation - WARNING - Dataset ../freight/xeneta_xsi_c.parquet missing at D:\codex\datamaster\senai\gran_prix\data\silver\external_factors\freight\xeneta_xsi_c.parquet
+2025-11-11 09:36:46,034 - logistics_validation - WARNING - Dataset ../freight/drewry_wci_alternatives.parquet missing at D:\codex\datamaster\senai\gran_prix\data\silver\external_factors\freight\drewry_wci_alternatives.parquet
+2025-11-11 09:36:46,034 - logistics_validation - WARNING - Dataset ../freight/antt_logistics_kpis.parquet missing at D:\codex\datamaster\senai\gran_prix\data\silver\external_factors\freight\antt_logistics_kpis.parquet
+2025-11-11 09:36:46,034 - logistics_validation - WARNING - Some logistics datasets failed validation.
+2025-11-11 09:36:46,034 - silver_transform - WARNING - Logistics validation reported issues. Review logs above.
+2025-11-11 09:36:46,034 - silver_transform - INFO - Silver transformation finished.
+2025-11-11 10:02:09,976 - fetch_all - INFO - Running OpenWeather ingestion...
+2025-11-11 10:02:23,410 - fetch_all - INFO - Running OpenWeather ingestion...
+2025-11-11 10:02:23,411 - openweather - INFO - Fetching hourly history for lat=-12.9777 lon=-38.5016 date=2025-11-10
+2025-11-11 10:02:24,227 - openweather - WARNING - One Call history not available for lat=-12.9777 lon=-38.5016 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:02:26,769 - openweather - INFO - Fetching 5-day forecast for lat=-12.9777 lon=-38.5016
+2025-11-11 10:02:27,684 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-12.9777 lon=-38.5016
+2025-11-11 10:02:28,517 - openweather - WARNING - Daily forecast failed for salvador_ba: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-12.9777&lon=-38.5016&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:02:28,519 - openweather - INFO - Fetching hourly history for lat=-3.7319 lon=-38.5267 date=2025-11-10
+2025-11-11 10:02:29,326 - openweather - WARNING - One Call history not available for lat=-3.7319 lon=-38.5267 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:02:31,667 - openweather - INFO - Fetching 5-day forecast for lat=-3.7319 lon=-38.5267
+2025-11-11 10:02:32,629 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-3.7319 lon=-38.5267
+2025-11-11 10:02:33,380 - openweather - WARNING - Daily forecast failed for fortaleza_ce: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-3.7319&lon=-38.5267&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:02:33,381 - openweather - INFO - Fetching hourly history for lat=-8.0476 lon=-34.877 date=2025-11-10
+2025-11-11 10:02:34,171 - openweather - WARNING - One Call history not available for lat=-8.0476 lon=-34.877 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:02:36,599 - openweather - INFO - Fetching 5-day forecast for lat=-8.0476 lon=-34.877
+2025-11-11 10:02:37,574 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-8.0476 lon=-34.877
+2025-11-11 10:02:38,447 - openweather - WARNING - Daily forecast failed for recife_pe: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-8.0476&lon=-34.877&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:02:38,449 - openweather - INFO - Fetching hourly history for lat=-23.5505 lon=-46.6333 date=2025-11-10
+2025-11-11 10:02:39,268 - openweather - WARNING - One Call history not available for lat=-23.5505 lon=-46.6333 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:02:41,974 - openweather - INFO - Fetching 5-day forecast for lat=-23.5505 lon=-46.6333
+2025-11-11 10:02:42,947 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-23.5505 lon=-46.6333
+2025-11-11 10:02:43,754 - openweather - WARNING - Daily forecast failed for sao_paulo_sp: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-23.5505&lon=-46.6333&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:02:43,756 - openweather - INFO - Fetching hourly history for lat=-22.9068 lon=-43.1729 date=2025-11-10
+2025-11-11 10:02:44,516 - openweather - WARNING - One Call history not available for lat=-22.9068 lon=-43.1729 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:02:46,950 - openweather - INFO - Fetching 5-day forecast for lat=-22.9068 lon=-43.1729
+2025-11-11 10:02:47,860 - openweather - INFO - OpenWeather ingestion completed.
+2025-11-11 10:02:47,860 - fetch_all - INFO - Running BACEN downloader...
+2025-11-11 10:02:47,861 - bacen - INFO - Fetching PTAX for USD (2015-01-01 -> 2025-11-11)
+2025-11-11 10:02:49,617 - bacen - INFO - Fetching PTAX for EUR (2015-01-01 -> 2025-11-11)
+2025-11-11 10:02:51,299 - bacen - INFO - Fetching PTAX for CNY (2015-01-01 -> 2025-11-11)
+2025-11-11 10:02:51,762 - bacen - INFO - Fetching Selic series chunk (2015-01-01 -> 2019-12-31)
+2025-11-11 10:03:22,289 - bacen - WARNING - Failed to decode Selic chunk 2015-01-01 -> 2019-12-31: Expecting value: line 1 column 1 (char 0)
+2025-11-11 10:03:22,289 - bacen - INFO - Fetching Selic series chunk (2020-01-01 -> 2024-12-30)
+2025-11-11 10:03:35,117 - bacen - INFO - Fetching Selic series chunk (2024-12-31 -> 2025-11-11)
+2025-11-11 10:03:36,448 - bacen - INFO - BACEN download finished.
+2025-11-11 10:03:36,449 - fetch_all - INFO - Running IBGE downloader...
+2025-11-11 10:03:36,449 - ibge - INFO - Fetching IBGE SIDRA table 1737 with period 201501-202511
+2025-11-11 10:03:37,466 - ibge - INFO - Fetching IBGE SIDRA table 7062 with period all
+2025-11-11 10:03:37,998 - ibge - INFO - Fetching IBGE SIDRA table 1736 with period 201501-202511
+2025-11-11 10:03:38,552 - ibge - INFO - Fetching IBGE SIDRA table 5932 with period 201501-202504
+2025-11-11 10:03:39,037 - ibge - INFO - Fetching IBGE SIDRA table 5938 with period 2015-2025
+2025-11-11 10:03:39,469 - ibge - INFO - Fetching IBGE SIDRA table 6381 with period 201501-202511
+2025-11-11 10:03:40,004 - ibge - INFO - IBGE download finished.
+2025-11-11 10:03:40,004 - fetch_all - INFO - Running World Bank downloader...
+2025-11-11 10:03:40,004 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.CD for BR
+2025-11-11 10:03:40,639 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.PP.CD for BR
+2025-11-11 10:03:41,219 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.KD.ZG for BR
+2025-11-11 10:03:41,775 - worldbank - INFO - World Bank download finished.
+2025-11-11 10:03:41,775 - fetch_all - INFO - Running ANP downloader...
+2025-11-11 10:03:41,775 - anp - INFO - Fetching ANP open data page...
+2025-11-11 10:03:42,363 - anp - INFO - Found 8 ANP data files
+2025-11-11 10:03:42,364 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip
+2025-11-11 10:03:47,309 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:03:48,062 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip
+2025-11-11 10:03:53,148 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:03:53,945 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip
+2025-11-11 10:03:58,839 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:03:59,735 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip
+2025-11-11 10:04:05,473 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:04:06,355 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip
+2025-11-11 10:04:12,690 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:04:13,494 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip
+2025-11-11 10:04:17,786 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:04:18,504 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-02.csv
+2025-11-11 10:04:58,005 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv
+2025-11-11 10:05:23,068 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv missing expected columns: Regiao - Sigla
+2025-11-11 10:05:24,160 - anp - INFO - Saved ANP aggregated dataset with 1079 rows to data\landing\external_factors-raw\logistics\anp_fuel\20251111\anp_fuel.csv
+2025-11-11 10:05:24,170 - fetch_all - INFO - Running freight downloader...
+2025-11-11 10:05:24,171 - freight - INFO - Fetching container_port_traffic_teu for BR (IS.SHP.GOOD.TU)
+2025-11-11 10:05:24,674 - freight - INFO - Fetching container_port_traffic_teu for WLD (IS.SHP.GOOD.TU)
+2025-11-11 10:05:25,329 - freight - INFO - Saved 46 rows of container_port_traffic_teu to data\landing\external_factors-raw\logistics\freight\20251111\container_port_traffic_teu.csv
+2025-11-11 10:05:25,329 - freight - INFO - Fetching air_freight_mtkm for BR (IS.AIR.GOOD.MT.K1)
+2025-11-11 10:05:25,937 - freight - INFO - Fetching air_freight_mtkm for WLD (IS.AIR.GOOD.MT.K1)
+2025-11-11 10:05:26,495 - freight - INFO - Saved 44 rows of air_freight_mtkm to data\landing\external_factors-raw\logistics\freight\20251111\air_freight_mtkm.csv
+2025-11-11 10:05:26,495 - fetch_all - INFO - Running freight blockers automation...
+2025-11-11 10:05:26,495 - scripts.automation.freight_blockers.integration - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 10:05:27,047 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 10:05:27,266 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 10:05:27,487 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 10:05:27,704 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 10:05:28,267 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 10:05:28,482 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 10:05:28,486 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 10:05:28,506 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 10:05:29,557 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 10:05:29,797 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 10:05:30,015 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 10:05:30,307 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 10:05:30,530 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 10:05:30,736 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 10:05:30,742 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 10:05:30,745 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 10:05:31,245 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 10:05:35,895 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 10:05:35,898 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 10:05:35,899 - scripts.automation.freight_blockers.integration - INFO - Freight blockers completed: {'xeneta_xsi_c': 'OK - 13 records', 'drewry_alternatives': 'OK - 14 records', 'antt_kpis': 'OK - 1 records'}
+2025-11-11 10:05:35,902 - fetch_all - INFO - All downloads completed.
+2025-11-11 10:14:23,648 - fetch_all - INFO - Running OpenWeather ingestion...
+2025-11-11 10:14:23,649 - openweather - INFO - Fetching hourly history for lat=-12.9777 lon=-38.5016 date=2025-11-10
+2025-11-11 10:14:24,454 - openweather - WARNING - One Call history not available for lat=-12.9777 lon=-38.5016 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:14:24,455 - openweather - INFO - Fetching Open-Meteo archive for lat=-12.9777 lon=-38.5016 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:14:27,414 - openweather - INFO - Fetching 5-day forecast for lat=-12.9777 lon=-38.5016
+2025-11-11 10:14:28,435 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-12.9777 lon=-38.5016
+2025-11-11 10:14:29,244 - openweather - WARNING - Daily forecast failed for salvador_ba: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-12.9777&lon=-38.5016&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:14:29,247 - openweather - INFO - Fetching hourly history for lat=-3.7319 lon=-38.5267 date=2025-11-10
+2025-11-11 10:14:30,018 - openweather - WARNING - One Call history not available for lat=-3.7319 lon=-38.5267 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:14:30,019 - openweather - INFO - Fetching Open-Meteo archive for lat=-3.7319 lon=-38.5267 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:14:32,452 - openweather - INFO - Fetching 5-day forecast for lat=-3.7319 lon=-38.5267
+2025-11-11 10:14:33,428 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-3.7319 lon=-38.5267
+2025-11-11 10:14:34,211 - openweather - WARNING - Daily forecast failed for fortaleza_ce: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-3.7319&lon=-38.5267&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:14:34,213 - openweather - INFO - Fetching hourly history for lat=-8.0476 lon=-34.877 date=2025-11-10
+2025-11-11 10:14:34,996 - openweather - WARNING - One Call history not available for lat=-8.0476 lon=-34.877 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:14:34,997 - openweather - INFO - Fetching Open-Meteo archive for lat=-8.0476 lon=-34.877 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:14:37,313 - openweather - INFO - Fetching 5-day forecast for lat=-8.0476 lon=-34.877
+2025-11-11 10:14:38,271 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-8.0476 lon=-34.877
+2025-11-11 10:14:39,185 - openweather - WARNING - Daily forecast failed for recife_pe: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-8.0476&lon=-34.877&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:14:39,187 - openweather - INFO - Fetching hourly history for lat=-23.5505 lon=-46.6333 date=2025-11-10
+2025-11-11 10:14:39,918 - openweather - WARNING - One Call history not available for lat=-23.5505 lon=-46.6333 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:14:39,919 - openweather - INFO - Fetching Open-Meteo archive for lat=-23.5505 lon=-46.6333 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:14:42,302 - openweather - INFO - Fetching 5-day forecast for lat=-23.5505 lon=-46.6333
+2025-11-11 10:14:43,277 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-23.5505 lon=-46.6333
+2025-11-11 10:14:44,092 - openweather - WARNING - Daily forecast failed for sao_paulo_sp: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-23.5505&lon=-46.6333&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:14:44,094 - openweather - INFO - Fetching hourly history for lat=-22.9068 lon=-43.1729 date=2025-11-10
+2025-11-11 10:14:44,898 - openweather - WARNING - One Call history not available for lat=-22.9068 lon=-43.1729 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:14:44,899 - openweather - INFO - Fetching Open-Meteo archive for lat=-22.9068 lon=-43.1729 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:14:47,815 - openweather - INFO - Fetching 5-day forecast for lat=-22.9068 lon=-43.1729
+2025-11-11 10:14:48,815 - openweather - INFO - OpenWeather ingestion completed.
+2025-11-11 10:14:48,815 - fetch_all - INFO - Running BACEN downloader...
+2025-11-11 10:14:48,816 - bacen - INFO - Fetching PTAX for USD (2015-01-01 -> 2025-11-11)
+2025-11-11 10:14:50,713 - bacen - INFO - Fetching PTAX for EUR (2015-01-01 -> 2025-11-11)
+2025-11-11 10:14:52,436 - bacen - INFO - Fetching PTAX for CNY (2015-01-01 -> 2025-11-11)
+2025-11-11 10:14:53,307 - bacen - INFO - Fetching Selic series chunk (2015-01-01 -> 2019-12-31)
+2025-11-11 10:14:53,879 - bacen - INFO - Fetching Selic series chunk (2020-01-01 -> 2024-12-30)
+2025-11-11 10:14:54,415 - bacen - INFO - Fetching Selic series chunk (2024-12-31 -> 2025-11-11)
+2025-11-11 10:14:54,912 - bacen - INFO - BACEN download finished.
+2025-11-11 10:14:54,912 - fetch_all - INFO - Running IBGE downloader...
+2025-11-11 10:14:54,912 - ibge - INFO - Fetching IBGE SIDRA table 1737 with period 201501-202511
+2025-11-11 10:14:55,496 - ibge - INFO - Fetching IBGE SIDRA table 7062 with period all
+2025-11-11 10:14:55,962 - ibge - INFO - Fetching IBGE SIDRA table 1736 with period 201501-202511
+2025-11-11 10:14:56,606 - ibge - INFO - Fetching IBGE SIDRA table 5932 with period 201501-202504
+2025-11-11 10:14:57,037 - ibge - INFO - Fetching IBGE SIDRA table 5938 with period 2015-2025
+2025-11-11 10:14:57,509 - ibge - INFO - Fetching IBGE SIDRA table 6381 with period 201501-202511
+2025-11-11 10:14:58,024 - ibge - INFO - IBGE download finished.
+2025-11-11 10:14:58,024 - fetch_all - INFO - Running World Bank downloader...
+2025-11-11 10:14:58,024 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.CD for BR
+2025-11-11 10:14:58,642 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.PP.CD for BR
+2025-11-11 10:14:59,214 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.KD.ZG for BR
+2025-11-11 10:14:59,788 - worldbank - INFO - World Bank download finished.
+2025-11-11 10:14:59,788 - fetch_all - INFO - Running ANP downloader...
+2025-11-11 10:14:59,788 - anp - INFO - Fetching ANP open data page...
+2025-11-11 10:15:00,398 - anp - INFO - Found 8 ANP data files
+2025-11-11 10:15:00,399 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip
+2025-11-11 10:15:06,022 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:15:06,779 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip
+2025-11-11 10:15:11,336 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:15:12,083 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip
+2025-11-11 10:15:17,307 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:15:18,159 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip
+2025-11-11 10:15:24,353 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:15:25,248 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip
+2025-11-11 10:15:30,728 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:15:31,502 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip
+2025-11-11 10:15:35,141 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:15:35,840 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-02.csv
+2025-11-11 10:16:06,161 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv
+2025-11-11 10:16:31,065 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv missing expected columns: Regiao - Sigla
+2025-11-11 10:16:32,152 - anp - INFO - Saved ANP aggregated dataset with 1079 rows to data\landing\external_factors-raw\logistics\anp_fuel\20251111\anp_fuel.csv
+2025-11-11 10:16:32,164 - fetch_all - INFO - Running freight downloader...
+2025-11-11 10:16:32,164 - freight - INFO - Fetching container_port_traffic_teu for BR (IS.SHP.GOOD.TU)
+2025-11-11 10:16:32,751 - freight - INFO - Fetching container_port_traffic_teu for WLD (IS.SHP.GOOD.TU)
+2025-11-11 10:16:33,315 - freight - INFO - Saved 46 rows of container_port_traffic_teu to data\landing\external_factors-raw\logistics\freight\20251111\container_port_traffic_teu.csv
+2025-11-11 10:16:33,315 - freight - INFO - Fetching air_freight_mtkm for BR (IS.AIR.GOOD.MT.K1)
+2025-11-11 10:16:33,859 - freight - INFO - Fetching air_freight_mtkm for WLD (IS.AIR.GOOD.MT.K1)
+2025-11-11 10:16:34,424 - freight - INFO - Saved 44 rows of air_freight_mtkm to data\landing\external_factors-raw\logistics\freight\20251111\air_freight_mtkm.csv
+2025-11-11 10:16:34,424 - fetch_all - INFO - Running freight blockers automation...
+2025-11-11 10:16:34,424 - scripts.automation.freight_blockers.integration - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 10:16:35,041 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 10:16:35,294 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 10:16:35,544 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 10:16:35,786 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 10:16:36,359 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 10:16:36,578 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 10:16:36,582 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 10:16:36,601 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 10:16:37,997 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 10:16:38,227 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 10:16:38,447 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 10:16:38,660 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 10:16:38,878 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 10:16:39,096 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 10:16:39,101 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 10:16:39,103 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 10:16:39,603 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 10:16:44,598 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 10:16:44,602 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 10:16:44,603 - scripts.automation.freight_blockers.integration - INFO - Freight blockers completed: {'xeneta_xsi_c': 'OK - 13 records', 'drewry_alternatives': 'OK - 14 records', 'antt_kpis': 'OK - 1 records'}
+2025-11-11 10:16:44,605 - fetch_all - INFO - All downloads completed.
+2025-11-11 10:17:02,493 - silver_transform - INFO - Starting Silver transformation for external factors.
+2025-11-11 10:17:02,677 - silver_transform - INFO - Wrote 24322 rows to data\silver\external_factors\macro\ptax_rates.parquet
+2025-11-11 10:17:02,703 - silver_transform - INFO - Wrote 1776 rows to data\silver\external_factors\macro\selic_daily.parquet
+2025-11-11 10:17:02,712 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca_monthly.parquet
+2025-11-11 10:17:02,721 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca15_monthly.parquet
+2025-11-11 10:17:02,727 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\inpc_monthly.parquet
+2025-11-11 10:17:02,733 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\unemployment_rate.parquet
+2025-11-11 10:17:02,739 - silver_transform - INFO - Wrote 42 rows to data\silver\external_factors\macro\pib_quarterly_yoy.parquet
+2025-11-11 10:17:02,744 - silver_transform - INFO - Wrote 7 rows to data\silver\external_factors\macro\pib_annual_value.parquet
+2025-11-11 10:17:02,750 - silver_transform - INFO - Wrote 12 rows to data\silver\external_factors\macro\cds_spread.parquet
+2025-11-11 10:17:02,756 - silver_transform - INFO - Wrote 1 rows to data\silver\external_factors\macro\ppp_conversion_factor.parquet
+2025-11-11 10:17:02,767 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_current_usd.parquet
+2025-11-11 10:17:02,777 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_ppp.parquet
+2025-11-11 10:17:02,786 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_growth_pct.parquet
+2025-11-11 10:17:03,433 - silver_transform - INFO - Wrote 7310 rows to data\silver\external_factors\climatic\openmeteo_daily.parquet
+2025-11-11 10:17:03,462 - silver_transform - INFO - Wrote 1079 rows to data\silver\external_factors\logistics\anp_fuel_daily.parquet
+2025-11-11 10:17:03,501 - silver_transform - INFO - Wrote 2 rows to data\silver\external_factors\logistics\freight_worldbank.parquet
+2025-11-11 10:17:03,506 - silver_transform - INFO - Wrote 77 rows to data\silver\external_factors\logistics\baltic_dry.parquet
+2025-11-11 10:17:03,506 - silver_transform - WARNING - Freightos directory data\landing\external_factors-raw\logistics\freightos missing.
+2025-11-11 10:17:03,506 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\freightos_fbx.parquet because dataframe is empty.
+2025-11-11 10:17:03,506 - silver_transform - WARNING - Drewry directory data\landing\external_factors-raw\logistics\drewry missing.
+2025-11-11 10:17:03,506 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\drewry_wci.parquet because dataframe is empty.
+2025-11-11 10:17:03,507 - silver_transform - WARNING - ANTT directory data\landing\external_factors-raw\logistics\antt missing.
+2025-11-11 10:17:03,507 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\antt_metrics.parquet because dataframe is empty.
+2025-11-11 10:17:03,507 - silver_transform - INFO - Triggering freight blockers automation for Xeneta, SCFI/CCFI, and ANTT CKAN datasets.
+2025-11-11 10:17:03,507 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] Starting execution.
+2025-11-11 10:17:04,107 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 10:17:04,332 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 10:17:04,564 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 10:17:04,795 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 10:17:05,343 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 10:17:05,584 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 10:17:05,588 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 10:17:05,590 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 10:17:06,646 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 10:17:07,196 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 10:17:07,422 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 10:17:07,651 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 10:17:07,872 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 10:17:08,092 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 10:17:08,098 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 10:17:08,100 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 10:17:08,600 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 10:17:14,402 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 10:17:14,406 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 10:17:14,426 - scripts.automation.freight_blockers.integration - INFO -   OK - xeneta_xsi_c.parquet (13 rows) -> Freightos FBX replacement
+2025-11-11 10:17:14,429 - scripts.automation.freight_blockers.integration - INFO -   OK - drewry_wci_alternatives.parquet (14 rows) -> Drewry WCI replacement
+2025-11-11 10:17:14,440 - scripts.automation.freight_blockers.integration - INFO -   OK - antt_logistics_kpis.parquet (1 rows) -> ANTT KPI replacement
+2025-11-11 10:17:14,440 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] All blockers completed successfully.
+2025-11-11 10:17:14,442 - silver_transform - INFO - Running logistics dataset validation checks...
+2025-11-11 10:17:14,455 - logistics_validation - INFO - Dataset anp_fuel_daily.parquet validated (1079 rows, 2021-01-01 -> 2025-06-30).
+2025-11-11 10:17:14,459 - logistics_validation - INFO - Dataset freight_worldbank.parquet validated (2 rows, 2021-01-01 -> 2022-01-01).
+2025-11-11 10:17:14,462 - logistics_validation - INFO - Dataset baltic_dry.parquet validated (77 rows, 2022-08-31 -> 2025-02-21).
+2025-11-11 10:17:14,465 - logistics_validation - INFO - Dataset ../freight/xeneta_xsi_c.parquet validated (13 rows, 2009-12-31 -> 2021-12-31).
+2025-11-11 10:17:14,467 - logistics_validation - INFO - Dataset ../freight/drewry_wci_alternatives.parquet validated (14 rows, 2009-12-31 -> 2022-12-31).
+2025-11-11 10:17:14,470 - logistics_validation - INFO - Dataset ../freight/antt_logistics_kpis.parquet validated (1 rows, 2025-11-11 -> 2025-11-11).
+2025-11-11 10:17:14,470 - logistics_validation - INFO - All logistics datasets validated successfully.
+2025-11-11 10:17:14,470 - silver_transform - INFO - Silver transformation finished.
+2025-11-11 10:38:36,114 - fetch_all - INFO - Running OpenWeather ingestion...
+2025-11-11 10:38:36,943 - silver_transform - INFO - Starting Silver transformation for external factors.
+2025-11-11 10:38:37,247 - silver_transform - INFO - Wrote 24322 rows to data\silver\external_factors\macro\ptax_rates.parquet
+2025-11-11 10:38:37,283 - silver_transform - INFO - Wrote 1776 rows to data\silver\external_factors\macro\selic_daily.parquet
+2025-11-11 10:38:37,294 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca_monthly.parquet
+2025-11-11 10:38:37,306 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca15_monthly.parquet
+2025-11-11 10:38:37,313 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\inpc_monthly.parquet
+2025-11-11 10:38:37,319 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\unemployment_rate.parquet
+2025-11-11 10:38:37,338 - silver_transform - INFO - Wrote 42 rows to data\silver\external_factors\macro\pib_quarterly_yoy.parquet
+2025-11-11 10:38:37,344 - silver_transform - INFO - Wrote 7 rows to data\silver\external_factors\macro\pib_annual_value.parquet
+2025-11-11 10:38:37,351 - silver_transform - INFO - Wrote 12 rows to data\silver\external_factors\macro\cds_spread.parquet
+2025-11-11 10:38:37,357 - silver_transform - INFO - Wrote 1 rows to data\silver\external_factors\macro\ppp_conversion_factor.parquet
+2025-11-11 10:38:37,370 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_current_usd.parquet
+2025-11-11 10:38:37,379 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_ppp.parquet
+2025-11-11 10:38:37,390 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_growth_pct.parquet
+2025-11-11 10:38:38,084 - silver_transform - INFO - Wrote 7310 rows to data\silver\external_factors\climatic\openmeteo_daily.parquet
+2025-11-11 10:38:38,108 - silver_transform - INFO - Wrote 1079 rows to data\silver\external_factors\logistics\anp_fuel_daily.parquet
+2025-11-11 10:38:38,135 - silver_transform - INFO - Wrote 2 rows to data\silver\external_factors\logistics\freight_worldbank.parquet
+2025-11-11 10:38:38,142 - silver_transform - INFO - Wrote 77 rows to data\silver\external_factors\logistics\baltic_dry.parquet
+2025-11-11 10:38:38,142 - silver_transform - WARNING - Freightos directory data\landing\external_factors-raw\logistics\freightos missing.
+2025-11-11 10:38:38,143 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\freightos_fbx.parquet because dataframe is empty.
+2025-11-11 10:38:38,144 - silver_transform - WARNING - Drewry directory data\landing\external_factors-raw\logistics\drewry missing.
+2025-11-11 10:38:38,144 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\drewry_wci.parquet because dataframe is empty.
+2025-11-11 10:38:38,145 - silver_transform - WARNING - ANTT directory data\landing\external_factors-raw\logistics\antt missing.
+2025-11-11 10:38:38,145 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\antt_metrics.parquet because dataframe is empty.
+2025-11-11 10:38:38,145 - silver_transform - INFO - Triggering freight blockers automation for Xeneta, SCFI/CCFI, and ANTT CKAN datasets.
+2025-11-11 10:38:38,146 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] Starting execution.
+2025-11-11 10:38:38,855 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 10:38:39,079 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 10:38:39,299 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 10:38:39,896 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 10:38:40,129 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 10:38:40,344 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 10:38:40,352 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 10:38:40,354 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 10:38:41,656 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 10:38:41,893 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 10:38:42,126 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 10:38:42,359 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 10:38:42,586 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 10:38:42,817 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 10:38:42,825 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 10:38:42,827 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 10:38:43,327 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 10:38:47,884 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 10:38:47,888 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 10:38:47,993 - scripts.automation.freight_blockers.integration - INFO -   OK - xeneta_xsi_c.parquet (13 rows) -> Freightos FBX replacement
+2025-11-11 10:38:47,997 - scripts.automation.freight_blockers.integration - INFO -   OK - drewry_wci_alternatives.parquet (14 rows) -> Drewry WCI replacement
+2025-11-11 10:38:48,010 - scripts.automation.freight_blockers.integration - INFO -   OK - antt_logistics_kpis.parquet (1 rows) -> ANTT KPI replacement
+2025-11-11 10:38:48,010 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] All blockers completed successfully.
+2025-11-11 10:38:48,013 - silver_transform - INFO - Running logistics dataset validation checks...
+2025-11-11 10:38:48,028 - logistics_validation - INFO - Dataset anp_fuel_daily.parquet validated (1079 rows, 2021-01-01 -> 2025-06-30).
+2025-11-11 10:38:48,032 - logistics_validation - INFO - Dataset freight_worldbank.parquet validated (2 rows, 2021-01-01 -> 2022-01-01).
+2025-11-11 10:38:48,037 - logistics_validation - INFO - Dataset baltic_dry.parquet validated (77 rows, 2022-08-31 -> 2025-02-21).
+2025-11-11 10:38:48,040 - logistics_validation - INFO - Dataset ../freight/xeneta_xsi_c.parquet validated (13 rows, 2009-12-31 -> 2021-12-31).
+2025-11-11 10:38:48,043 - logistics_validation - INFO - Dataset ../freight/drewry_wci_alternatives.parquet validated (14 rows, 2009-12-31 -> 2022-12-31).
+2025-11-11 10:38:48,047 - logistics_validation - INFO - Dataset ../freight/antt_logistics_kpis.parquet validated (1 rows, 2025-11-11 -> 2025-11-11).
+2025-11-11 10:38:48,047 - logistics_validation - INFO - All logistics datasets validated successfully.
+2025-11-11 10:38:48,047 - silver_transform - INFO - Silver transformation finished.
+2025-11-11 10:39:53,943 - fetch_all - INFO - Running OpenWeather ingestion...
+2025-11-11 10:39:53,945 - openweather - INFO - Fetching hourly history for lat=-12.9777 lon=-38.5016 date=2025-11-10
+2025-11-11 10:39:54,766 - openweather - WARNING - One Call history not available for lat=-12.9777 lon=-38.5016 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:39:54,767 - openweather - INFO - Fetching Open-Meteo archive for lat=-12.9777 lon=-38.5016 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:39:57,180 - openweather - INFO - Fetching 5-day forecast for lat=-12.9777 lon=-38.5016
+2025-11-11 10:39:58,135 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-12.9777 lon=-38.5016
+2025-11-11 10:39:58,935 - openweather - WARNING - Daily forecast failed for salvador_ba: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-12.9777&lon=-38.5016&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:39:58,937 - openweather - INFO - Fetching hourly history for lat=-3.7319 lon=-38.5267 date=2025-11-10
+2025-11-11 10:39:59,753 - openweather - WARNING - One Call history not available for lat=-3.7319 lon=-38.5267 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:39:59,754 - openweather - INFO - Fetching Open-Meteo archive for lat=-3.7319 lon=-38.5267 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:40:02,244 - openweather - INFO - Fetching 5-day forecast for lat=-3.7319 lon=-38.5267
+2025-11-11 10:40:03,227 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-3.7319 lon=-38.5267
+2025-11-11 10:40:04,007 - openweather - WARNING - Daily forecast failed for fortaleza_ce: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-3.7319&lon=-38.5267&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:40:04,009 - openweather - INFO - Fetching hourly history for lat=-8.0476 lon=-34.877 date=2025-11-10
+2025-11-11 10:40:04,764 - openweather - WARNING - One Call history not available for lat=-8.0476 lon=-34.877 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:40:04,765 - openweather - INFO - Fetching Open-Meteo archive for lat=-8.0476 lon=-34.877 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:40:07,171 - openweather - INFO - Fetching 5-day forecast for lat=-8.0476 lon=-34.877
+2025-11-11 10:40:08,089 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-8.0476 lon=-34.877
+2025-11-11 10:40:08,898 - openweather - WARNING - Daily forecast failed for recife_pe: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-8.0476&lon=-34.877&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:40:08,899 - openweather - INFO - Fetching hourly history for lat=-23.5505 lon=-46.6333 date=2025-11-10
+2025-11-11 10:40:09,651 - openweather - WARNING - One Call history not available for lat=-23.5505 lon=-46.6333 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:40:09,651 - openweather - INFO - Fetching Open-Meteo archive for lat=-23.5505 lon=-46.6333 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:40:12,474 - openweather - INFO - Fetching 5-day forecast for lat=-23.5505 lon=-46.6333
+2025-11-11 10:40:13,423 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-23.5505 lon=-46.6333
+2025-11-11 10:40:14,192 - openweather - WARNING - Daily forecast failed for sao_paulo_sp: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-23.5505&lon=-46.6333&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:40:14,194 - openweather - INFO - Fetching hourly history for lat=-22.9068 lon=-43.1729 date=2025-11-10
+2025-11-11 10:40:14,950 - openweather - WARNING - One Call history not available for lat=-22.9068 lon=-43.1729 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:40:14,951 - openweather - INFO - Fetching Open-Meteo archive for lat=-22.9068 lon=-43.1729 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:40:17,256 - openweather - INFO - Fetching 5-day forecast for lat=-22.9068 lon=-43.1729
+2025-11-11 10:40:18,236 - openweather - INFO - OpenWeather ingestion completed.
+2025-11-11 10:40:18,236 - fetch_all - INFO - Running BACEN downloader...
+2025-11-11 10:40:18,237 - bacen - INFO - Fetching PTAX for USD (2015-01-01 -> 2025-11-11)
+2025-11-11 10:40:20,011 - bacen - INFO - Fetching PTAX for EUR (2015-01-01 -> 2025-11-11)
+2025-11-11 10:40:21,729 - bacen - INFO - Fetching PTAX for CNY (2015-01-01 -> 2025-11-11)
+2025-11-11 10:40:22,201 - bacen - INFO - Fetching Selic series chunk (2015-01-01 -> 2019-12-31)
+2025-11-11 10:40:34,183 - bacen - INFO - Fetching Selic series chunk (2020-01-01 -> 2024-12-30)
+2025-11-11 10:40:45,997 - bacen - INFO - Fetching Selic series chunk (2024-12-31 -> 2025-11-11)
+2025-11-11 10:40:47,318 - bacen - INFO - BACEN download finished.
+2025-11-11 10:40:47,318 - fetch_all - INFO - Running IBGE downloader...
+2025-11-11 10:40:47,319 - ibge - INFO - Fetching IBGE SIDRA table 1737 with period 201501-202511
+2025-11-11 10:40:47,911 - ibge - INFO - Fetching IBGE SIDRA table 7062 with period all
+2025-11-11 10:40:48,523 - ibge - INFO - Fetching IBGE SIDRA table 1736 with period 201501-202511
+2025-11-11 10:40:49,151 - ibge - INFO - Fetching IBGE SIDRA table 5932 with period 201501-202504
+2025-11-11 10:40:49,791 - ibge - INFO - Fetching IBGE SIDRA table 5938 with period 2015-2025
+2025-11-11 10:40:50,243 - ibge - INFO - Fetching IBGE SIDRA table 6381 with period 201501-202511
+2025-11-11 10:40:50,894 - ibge - INFO - IBGE download finished.
+2025-11-11 10:40:50,894 - fetch_all - INFO - Running World Bank downloader...
+2025-11-11 10:40:50,895 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.CD for BR
+2025-11-11 10:40:51,827 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.PP.CD for BR
+2025-11-11 10:40:52,405 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.KD.ZG for BR
+2025-11-11 10:40:52,940 - worldbank - INFO - World Bank download finished.
+2025-11-11 10:40:52,940 - fetch_all - INFO - Running ANP downloader...
+2025-11-11 10:40:52,940 - anp - INFO - Fetching ANP open data page...
+2025-11-11 10:40:53,490 - anp - INFO - Found 8 ANP data files
+2025-11-11 10:40:53,491 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip
+2025-11-11 10:40:57,961 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:40:58,749 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip
+2025-11-11 10:41:03,617 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:41:04,410 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip
+2025-11-11 10:41:09,243 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:41:10,213 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip
+2025-11-11 10:41:15,638 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:41:16,504 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip
+2025-11-11 10:41:20,712 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:41:21,508 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip
+2025-11-11 10:41:25,746 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:41:26,490 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-02.csv
+2025-11-11 10:41:37,807 - anp - WARNING - Attempt 1/3 failed downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-02.csv: ('Connection broken: IncompleteRead(25690112 bytes read, 55627657 more expected)', IncompleteRead(25690112 bytes read, 55627657 more expected))
+2025-11-11 10:42:15,058 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv
+2025-11-11 10:42:40,393 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv missing expected columns: Regiao - Sigla
+2025-11-11 10:42:41,289 - anp - INFO - Saved ANP aggregated dataset with 1079 rows to data\landing\external_factors-raw\logistics\anp_fuel\20251111\anp_fuel.csv
+2025-11-11 10:42:41,300 - fetch_all - INFO - Running freight downloader...
+2025-11-11 10:42:41,300 - freight - INFO - Fetching container_port_traffic_teu for BR (IS.SHP.GOOD.TU)
+2025-11-11 10:42:42,225 - freight - INFO - Fetching container_port_traffic_teu for WLD (IS.SHP.GOOD.TU)
+2025-11-11 10:42:42,927 - freight - INFO - Saved 46 rows of container_port_traffic_teu to data\landing\external_factors-raw\logistics\freight\20251111\container_port_traffic_teu.csv
+2025-11-11 10:42:42,927 - freight - INFO - Fetching air_freight_mtkm for BR (IS.AIR.GOOD.MT.K1)
+2025-11-11 10:42:43,499 - freight - INFO - Fetching air_freight_mtkm for WLD (IS.AIR.GOOD.MT.K1)
+2025-11-11 10:42:44,096 - freight - INFO - Saved 44 rows of air_freight_mtkm to data\landing\external_factors-raw\logistics\freight\20251111\air_freight_mtkm.csv
+2025-11-11 10:42:44,096 - fetch_all - INFO - Running freight blockers automation...
+2025-11-11 10:42:44,096 - scripts.automation.freight_blockers.integration - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 10:42:44,717 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 10:42:45,285 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 10:42:45,518 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 10:42:45,725 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 10:42:45,966 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 10:42:46,221 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 10:42:46,226 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 10:42:46,263 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 10:42:47,335 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 10:42:47,591 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 10:42:47,836 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 10:42:48,035 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 10:42:48,246 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 10:42:48,462 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 10:42:48,468 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 10:42:48,470 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 10:42:48,970 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 10:42:54,530 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 10:42:54,534 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 10:42:54,535 - scripts.automation.freight_blockers.integration - INFO - Freight blockers completed: {'xeneta_xsi_c': 'OK - 13 records', 'drewry_alternatives': 'OK - 14 records', 'antt_kpis': 'OK - 1 records'}
+2025-11-11 10:42:54,539 - fetch_all - INFO - All downloads completed.
+2025-11-11 10:43:29,738 - silver_transform - INFO - Starting Silver transformation for external factors.
+2025-11-11 10:43:29,933 - silver_transform - INFO - Wrote 24322 rows to data\silver\external_factors\macro\ptax_rates.parquet
+2025-11-11 10:43:29,958 - silver_transform - INFO - Wrote 1776 rows to data\silver\external_factors\macro\selic_daily.parquet
+2025-11-11 10:43:29,967 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca_monthly.parquet
+2025-11-11 10:43:29,977 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca15_monthly.parquet
+2025-11-11 10:43:29,982 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\inpc_monthly.parquet
+2025-11-11 10:43:29,989 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\unemployment_rate.parquet
+2025-11-11 10:43:29,995 - silver_transform - INFO - Wrote 42 rows to data\silver\external_factors\macro\pib_quarterly_yoy.parquet
+2025-11-11 10:43:30,000 - silver_transform - INFO - Wrote 7 rows to data\silver\external_factors\macro\pib_annual_value.parquet
+2025-11-11 10:43:30,007 - silver_transform - INFO - Wrote 12 rows to data\silver\external_factors\macro\cds_spread.parquet
+2025-11-11 10:43:30,013 - silver_transform - INFO - Wrote 1 rows to data\silver\external_factors\macro\ppp_conversion_factor.parquet
+2025-11-11 10:43:30,023 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_current_usd.parquet
+2025-11-11 10:43:30,032 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_ppp.parquet
+2025-11-11 10:43:30,041 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_growth_pct.parquet
+2025-11-11 10:43:30,695 - silver_transform - INFO - Wrote 7310 rows to data\silver\external_factors\climatic\openmeteo_daily.parquet
+2025-11-11 10:43:30,725 - silver_transform - INFO - Wrote 1079 rows to data\silver\external_factors\logistics\anp_fuel_daily.parquet
+2025-11-11 10:43:30,754 - silver_transform - INFO - Wrote 2 rows to data\silver\external_factors\logistics\freight_worldbank.parquet
+2025-11-11 10:43:30,759 - silver_transform - INFO - Wrote 77 rows to data\silver\external_factors\logistics\baltic_dry.parquet
+2025-11-11 10:43:30,759 - silver_transform - WARNING - Freightos directory data\landing\external_factors-raw\logistics\freightos missing.
+2025-11-11 10:43:30,760 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\freightos_fbx.parquet because dataframe is empty.
+2025-11-11 10:43:30,760 - silver_transform - WARNING - Drewry directory data\landing\external_factors-raw\logistics\drewry missing.
+2025-11-11 10:43:30,760 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\drewry_wci.parquet because dataframe is empty.
+2025-11-11 10:43:30,760 - silver_transform - WARNING - ANTT directory data\landing\external_factors-raw\logistics\antt missing.
+2025-11-11 10:43:30,760 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\antt_metrics.parquet because dataframe is empty.
+2025-11-11 10:43:30,760 - silver_transform - INFO - Triggering freight blockers automation for Xeneta, SCFI/CCFI, and ANTT CKAN datasets.
+2025-11-11 10:43:30,761 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] Starting execution.
+2025-11-11 10:43:31,338 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 10:43:31,571 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 10:43:31,797 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 10:43:32,020 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 10:43:32,264 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 10:43:32,486 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 10:43:32,491 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 10:43:32,493 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 10:43:33,535 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 10:43:33,765 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 10:43:33,980 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 10:43:34,213 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 10:43:34,434 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 10:43:34,657 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 10:43:34,662 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 10:43:34,664 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 10:43:35,165 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 10:43:39,673 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 10:43:39,676 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 10:43:39,706 - scripts.automation.freight_blockers.integration - INFO -   OK - xeneta_xsi_c.parquet (13 rows) -> Freightos FBX replacement
+2025-11-11 10:43:39,709 - scripts.automation.freight_blockers.integration - INFO -   OK - drewry_wci_alternatives.parquet (14 rows) -> Drewry WCI replacement
+2025-11-11 10:43:39,721 - scripts.automation.freight_blockers.integration - INFO -   OK - antt_logistics_kpis.parquet (1 rows) -> ANTT KPI replacement
+2025-11-11 10:43:39,721 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] All blockers completed successfully.
+2025-11-11 10:43:39,723 - silver_transform - INFO - Running logistics dataset validation checks...
+2025-11-11 10:43:39,736 - logistics_validation - INFO - Dataset anp_fuel_daily.parquet validated (1079 rows, 2021-01-01 -> 2025-06-30).
+2025-11-11 10:43:39,740 - logistics_validation - INFO - Dataset freight_worldbank.parquet validated (2 rows, 2021-01-01 -> 2022-01-01).
+2025-11-11 10:43:39,744 - logistics_validation - INFO - Dataset baltic_dry.parquet validated (77 rows, 2022-08-31 -> 2025-02-21).
+2025-11-11 10:43:39,746 - logistics_validation - INFO - Dataset ../freight/xeneta_xsi_c.parquet validated (13 rows, 2009-12-31 -> 2021-12-31).
+2025-11-11 10:43:39,749 - logistics_validation - INFO - Dataset ../freight/drewry_wci_alternatives.parquet validated (14 rows, 2009-12-31 -> 2022-12-31).
+2025-11-11 10:43:39,751 - logistics_validation - INFO - Dataset ../freight/antt_logistics_kpis.parquet validated (1 rows, 2025-11-11 -> 2025-11-11).
+2025-11-11 10:43:39,751 - logistics_validation - INFO - All logistics datasets validated successfully.
+2025-11-11 10:43:39,751 - silver_transform - INFO - Silver transformation finished.
+2025-11-11 10:57:34,709 - fetch_all - INFO - Running OpenWeather ingestion...
+2025-11-11 10:57:34,711 - openweather - INFO - Fetching hourly history for lat=-12.9777 lon=-38.5016 date=2025-11-10
+2025-11-11 10:57:35,519 - openweather - WARNING - One Call history not available for lat=-12.9777 lon=-38.5016 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:57:35,520 - openweather - INFO - Fetching Open-Meteo archive for lat=-12.9777 lon=-38.5016 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:57:38,061 - openweather - INFO - Fetching 5-day forecast for lat=-12.9777 lon=-38.5016
+2025-11-11 10:57:39,011 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-12.9777 lon=-38.5016
+2025-11-11 10:57:39,849 - openweather - WARNING - Daily forecast failed for salvador_ba: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-12.9777&lon=-38.5016&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:57:39,851 - openweather - INFO - Fetching hourly history for lat=-3.7319 lon=-38.5267 date=2025-11-10
+2025-11-11 10:57:40,774 - openweather - WARNING - One Call history not available for lat=-3.7319 lon=-38.5267 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:57:40,775 - openweather - INFO - Fetching Open-Meteo archive for lat=-3.7319 lon=-38.5267 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:57:43,213 - openweather - INFO - Fetching 5-day forecast for lat=-3.7319 lon=-38.5267
+2025-11-11 10:57:44,163 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-3.7319 lon=-38.5267
+2025-11-11 10:57:44,946 - openweather - WARNING - Daily forecast failed for fortaleza_ce: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-3.7319&lon=-38.5267&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:57:44,948 - openweather - INFO - Fetching hourly history for lat=-8.0476 lon=-34.877 date=2025-11-10
+2025-11-11 10:57:45,773 - openweather - WARNING - One Call history not available for lat=-8.0476 lon=-34.877 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:57:45,774 - openweather - INFO - Fetching Open-Meteo archive for lat=-8.0476 lon=-34.877 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:57:48,210 - openweather - INFO - Fetching 5-day forecast for lat=-8.0476 lon=-34.877
+2025-11-11 10:57:49,153 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-8.0476 lon=-34.877
+2025-11-11 10:57:49,937 - openweather - WARNING - Daily forecast failed for recife_pe: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-8.0476&lon=-34.877&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:57:49,938 - openweather - INFO - Fetching hourly history for lat=-23.5505 lon=-46.6333 date=2025-11-10
+2025-11-11 10:57:50,714 - openweather - WARNING - One Call history not available for lat=-23.5505 lon=-46.6333 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:57:50,715 - openweather - INFO - Fetching Open-Meteo archive for lat=-23.5505 lon=-46.6333 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:57:53,103 - openweather - INFO - Fetching 5-day forecast for lat=-23.5505 lon=-46.6333
+2025-11-11 10:57:54,051 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-23.5505 lon=-46.6333
+2025-11-11 10:57:54,826 - openweather - WARNING - Daily forecast failed for sao_paulo_sp: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-23.5505&lon=-46.6333&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 10:57:54,828 - openweather - INFO - Fetching hourly history for lat=-22.9068 lon=-43.1729 date=2025-11-10
+2025-11-11 10:57:55,605 - openweather - WARNING - One Call history not available for lat=-22.9068 lon=-43.1729 (status 401). Falling back to Open-Meteo.
+2025-11-11 10:57:55,606 - openweather - INFO - Fetching Open-Meteo archive for lat=-22.9068 lon=-43.1729 (2021-11-12 -> 2025-11-11)
+2025-11-11 10:57:58,097 - openweather - INFO - Fetching 5-day forecast for lat=-22.9068 lon=-43.1729
+2025-11-11 10:57:59,048 - openweather - INFO - OpenWeather ingestion completed.
+2025-11-11 10:57:59,048 - fetch_all - INFO - Running BACEN downloader...
+2025-11-11 10:57:59,048 - bacen - INFO - Fetching PTAX for USD (2015-01-01 -> 2025-11-11)
+2025-11-11 10:58:00,635 - bacen - INFO - Fetching PTAX for EUR (2015-01-01 -> 2025-11-11)
+2025-11-11 10:58:02,138 - bacen - INFO - Fetching PTAX for CNY (2015-01-01 -> 2025-11-11)
+2025-11-11 10:58:02,583 - bacen - INFO - Fetching Selic series chunk (2015-01-01 -> 2019-12-31)
+2025-11-11 10:58:15,140 - bacen - INFO - Fetching Selic series chunk (2020-01-01 -> 2024-12-30)
+2025-11-11 10:58:27,365 - bacen - INFO - Fetching Selic series chunk (2024-12-31 -> 2025-11-11)
+2025-11-11 10:58:28,817 - bacen - INFO - BACEN download finished.
+2025-11-11 10:58:28,817 - fetch_all - INFO - Running IBGE downloader...
+2025-11-11 10:58:28,817 - ibge - INFO - Fetching IBGE SIDRA table 1737 with period 201501-202511
+2025-11-11 10:58:29,527 - ibge - INFO - Fetching IBGE SIDRA table 7062 with period all
+2025-11-11 10:58:30,169 - ibge - INFO - Fetching IBGE SIDRA table 1736 with period 201501-202511
+2025-11-11 10:58:30,776 - ibge - INFO - Fetching IBGE SIDRA table 5932 with period 201501-202504
+2025-11-11 10:58:31,331 - ibge - INFO - Fetching IBGE SIDRA table 5938 with period 2015-2025
+2025-11-11 10:58:31,803 - ibge - INFO - Fetching IBGE SIDRA table 6381 with period 201501-202511
+2025-11-11 10:58:32,471 - ibge - INFO - IBGE download finished.
+2025-11-11 10:58:32,471 - fetch_all - INFO - Running World Bank downloader...
+2025-11-11 10:58:32,471 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.CD for BR
+2025-11-11 10:58:33,070 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.PP.CD for BR
+2025-11-11 10:58:34,030 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.KD.ZG for BR
+2025-11-11 10:58:34,562 - worldbank - INFO - World Bank download finished.
+2025-11-11 10:58:34,562 - fetch_all - INFO - Running ANP downloader...
+2025-11-11 10:58:34,562 - anp - INFO - Fetching ANP open data page...
+2025-11-11 10:58:35,104 - anp - INFO - Found 8 ANP data files
+2025-11-11 10:58:35,105 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip
+2025-11-11 10:58:39,805 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:58:40,574 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip
+2025-11-11 10:58:45,736 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:58:46,491 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip
+2025-11-11 10:58:51,466 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:58:52,327 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip
+2025-11-11 10:58:56,968 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:58:57,823 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip
+2025-11-11 10:59:02,288 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:59:03,064 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip
+2025-11-11 10:59:07,719 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 10:59:08,394 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-02.csv
+2025-11-11 10:59:39,832 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv
+2025-11-11 11:00:02,738 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv missing expected columns: Regiao - Sigla
+2025-11-11 11:00:03,757 - anp - INFO - Saved ANP aggregated dataset with 1079 rows to data\landing\external_factors-raw\logistics\anp_fuel\20251111\anp_fuel.csv
+2025-11-11 11:00:03,768 - fetch_all - INFO - Running freight downloader...
+2025-11-11 11:00:03,768 - freight - INFO - Fetching container_port_traffic_teu for BR (IS.SHP.GOOD.TU)
+2025-11-11 11:00:04,353 - freight - INFO - Fetching container_port_traffic_teu for WLD (IS.SHP.GOOD.TU)
+2025-11-11 11:00:04,920 - freight - INFO - Saved 46 rows of container_port_traffic_teu to data\landing\external_factors-raw\logistics\freight\20251111\container_port_traffic_teu.csv
+2025-11-11 11:00:04,920 - freight - INFO - Fetching air_freight_mtkm for BR (IS.AIR.GOOD.MT.K1)
+2025-11-11 11:00:05,491 - freight - INFO - Fetching air_freight_mtkm for WLD (IS.AIR.GOOD.MT.K1)
+2025-11-11 11:00:06,315 - freight - INFO - Saved 44 rows of air_freight_mtkm to data\landing\external_factors-raw\logistics\freight\20251111\air_freight_mtkm.csv
+2025-11-11 11:00:06,315 - fetch_all - INFO - Running freight blockers automation...
+2025-11-11 11:00:06,315 - scripts.automation.freight_blockers.integration - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 11:00:07,238 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 11:00:07,494 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 11:00:07,713 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 11:00:07,961 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 11:00:08,209 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 11:00:08,450 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 11:00:08,454 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 11:00:08,473 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 11:00:09,496 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 11:00:09,707 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 11:00:09,934 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 11:00:10,163 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 11:00:10,377 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 11:00:10,597 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 11:00:10,605 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 11:00:10,608 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 11:00:11,109 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 11:00:16,628 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 11:00:16,631 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 11:00:16,632 - scripts.automation.freight_blockers.integration - INFO - Freight blockers completed: {'xeneta_xsi_c': 'OK - 13 records', 'drewry_alternatives': 'OK - 14 records', 'antt_kpis': 'OK - 1 records'}
+2025-11-11 11:00:16,634 - fetch_all - INFO - All downloads completed.
+2025-11-11 11:04:34,430 - silver_transform - INFO - Starting Silver transformation for external factors.
+2025-11-11 11:04:34,638 - silver_transform - INFO - Wrote 24322 rows to data\silver\external_factors\macro\ptax_rates.parquet
+2025-11-11 11:04:34,685 - silver_transform - INFO - Wrote 1776 rows to data\silver\external_factors\macro\selic_daily.parquet
+2025-11-11 11:04:34,701 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca_monthly.parquet
+2025-11-11 11:04:34,714 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca15_monthly.parquet
+2025-11-11 11:04:34,723 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\inpc_monthly.parquet
+2025-11-11 11:04:34,730 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\unemployment_rate.parquet
+2025-11-11 11:04:34,739 - silver_transform - INFO - Wrote 42 rows to data\silver\external_factors\macro\pib_quarterly_yoy.parquet
+2025-11-11 11:04:34,748 - silver_transform - INFO - Wrote 7 rows to data\silver\external_factors\macro\pib_annual_value.parquet
+2025-11-11 11:04:34,760 - silver_transform - INFO - Wrote 12 rows to data\silver\external_factors\macro\cds_spread.parquet
+2025-11-11 11:04:34,768 - silver_transform - INFO - Wrote 1 rows to data\silver\external_factors\macro\ppp_conversion_factor.parquet
+2025-11-11 11:04:34,786 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_current_usd.parquet
+2025-11-11 11:04:34,800 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_ppp.parquet
+2025-11-11 11:04:34,814 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_growth_pct.parquet
+2025-11-11 11:04:35,505 - silver_transform - INFO - Wrote 7310 rows to data\silver\external_factors\climatic\openmeteo_daily.parquet
+2025-11-11 11:04:35,536 - silver_transform - INFO - Wrote 1079 rows to data\silver\external_factors\logistics\anp_fuel_daily.parquet
+2025-11-11 11:04:35,565 - silver_transform - INFO - Wrote 2 rows to data\silver\external_factors\logistics\freight_worldbank.parquet
+2025-11-11 11:04:35,570 - silver_transform - INFO - Wrote 77 rows to data\silver\external_factors\logistics\baltic_dry.parquet
+2025-11-11 11:04:35,570 - silver_transform - WARNING - Freightos directory data\landing\external_factors-raw\logistics\freightos missing.
+2025-11-11 11:04:35,571 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\freightos_fbx.parquet because dataframe is empty.
+2025-11-11 11:04:35,571 - silver_transform - WARNING - Drewry directory data\landing\external_factors-raw\logistics\drewry missing.
+2025-11-11 11:04:35,571 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\drewry_wci.parquet because dataframe is empty.
+2025-11-11 11:04:35,571 - silver_transform - WARNING - ANTT directory data\landing\external_factors-raw\logistics\antt missing.
+2025-11-11 11:04:35,571 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\antt_metrics.parquet because dataframe is empty.
+2025-11-11 11:04:35,572 - silver_transform - INFO - Triggering freight blockers automation for Xeneta, SCFI/CCFI, and ANTT CKAN datasets.
+2025-11-11 11:04:35,572 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] Starting execution.
+2025-11-11 11:04:36,323 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 11:04:36,611 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 11:04:36,834 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 11:04:37,075 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 11:04:37,302 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 11:04:37,551 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 11:04:37,556 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 11:04:37,558 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 11:04:38,584 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 11:04:38,801 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 11:04:39,017 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 11:04:39,244 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 11:04:39,448 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 11:04:40,021 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 11:04:40,026 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 11:04:40,028 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 11:04:40,528 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 11:04:45,229 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 11:04:45,232 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 11:04:45,252 - scripts.automation.freight_blockers.integration - INFO -   OK - xeneta_xsi_c.parquet (13 rows) -> Freightos FBX replacement
+2025-11-11 11:04:45,340 - scripts.automation.freight_blockers.integration - INFO -   OK - drewry_wci_alternatives.parquet (14 rows) -> Drewry WCI replacement
+2025-11-11 11:04:45,353 - scripts.automation.freight_blockers.integration - INFO -   OK - antt_logistics_kpis.parquet (1 rows) -> ANTT KPI replacement
+2025-11-11 11:04:45,353 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] All blockers completed successfully.
+2025-11-11 11:04:45,356 - silver_transform - INFO - Running logistics dataset validation checks...
+2025-11-11 11:04:45,368 - logistics_validation - INFO - Dataset anp_fuel_daily.parquet validated (1079 rows, 2021-01-01 -> 2025-06-30).
+2025-11-11 11:04:45,372 - logistics_validation - INFO - Dataset freight_worldbank.parquet validated (2 rows, 2021-01-01 -> 2022-01-01).
+2025-11-11 11:04:45,376 - logistics_validation - INFO - Dataset baltic_dry.parquet validated (77 rows, 2022-08-31 -> 2025-02-21).
+2025-11-11 11:04:45,378 - logistics_validation - INFO - Dataset ../freight/xeneta_xsi_c.parquet validated (13 rows, 2009-12-31 -> 2021-12-31).
+2025-11-11 11:04:45,381 - logistics_validation - INFO - Dataset ../freight/drewry_wci_alternatives.parquet validated (14 rows, 2009-12-31 -> 2022-12-31).
+2025-11-11 11:04:45,383 - logistics_validation - INFO - Dataset ../freight/antt_logistics_kpis.parquet validated (1 rows, 2025-11-11 -> 2025-11-11).
+2025-11-11 11:04:45,383 - logistics_validation - INFO - All logistics datasets validated successfully.
+2025-11-11 11:04:45,384 - silver_transform - INFO - Silver transformation finished.
+2025-11-11 11:24:49,055 - fetch_all - INFO - Running BACEN downloader...
+2025-11-11 11:24:49,056 - bacen - INFO - Fetching PTAX for USD (2015-01-01 -> 2025-11-11)
+2025-11-11 11:24:50,761 - bacen - INFO - Fetching PTAX for EUR (2015-01-01 -> 2025-11-11)
+2025-11-11 11:24:52,701 - bacen - INFO - Fetching PTAX for CNY (2015-01-01 -> 2025-11-11)
+2025-11-11 11:24:53,103 - bacen - INFO - Fetching Selic series chunk (2015-01-01 -> 2019-12-31)
+2025-11-11 11:25:06,030 - bacen - INFO - Fetching Selic series chunk (2020-01-01 -> 2024-12-30)
+2025-11-11 11:25:18,012 - bacen - INFO - Fetching Selic series chunk (2024-12-31 -> 2025-11-11)
+2025-11-11 11:25:19,307 - bacen - INFO - BACEN download finished.
+2025-11-11 11:25:19,307 - fetch_all - INFO - Running IBGE downloader...
+2025-11-11 11:25:19,308 - ibge - INFO - Fetching IBGE SIDRA table 1737 with period 201501-202511
+2025-11-11 11:25:20,001 - ibge - INFO - Fetching IBGE SIDRA table 7062 with period all
+2025-11-11 11:25:20,714 - ibge - INFO - Fetching IBGE SIDRA table 1736 with period 201501-202511
+2025-11-11 11:25:21,397 - ibge - INFO - Fetching IBGE SIDRA table 5932 with period 201501-202504
+2025-11-11 11:25:21,980 - ibge - INFO - Fetching IBGE SIDRA table 5938 with period 2015-2025
+2025-11-11 11:25:22,486 - ibge - INFO - Fetching IBGE SIDRA table 6381 with period 201501-202511
+2025-11-11 11:25:23,093 - ibge - INFO - IBGE download finished.
+2025-11-11 11:25:23,093 - fetch_all - INFO - Running World Bank downloader...
+2025-11-11 11:25:23,094 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.CD for BR
+2025-11-11 11:25:24,072 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.PP.CD for BR
+2025-11-11 11:25:24,732 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.KD.ZG for BR
+2025-11-11 11:25:25,385 - worldbank - INFO - World Bank download finished.
+2025-11-11 11:25:25,385 - fetch_all - INFO - Running ANP downloader...
+2025-11-11 11:25:25,385 - anp - INFO - Fetching ANP open data page...
+2025-11-11 11:25:25,931 - anp - INFO - Found 8 ANP data files
+2025-11-11 11:25:25,932 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip
+2025-11-11 11:25:30,921 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:25:31,714 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip
+2025-11-11 11:25:35,913 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:25:36,692 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip
+2025-11-11 11:25:41,466 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:25:42,366 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip
+2025-11-11 11:25:48,328 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:25:49,207 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip
+2025-11-11 11:25:54,315 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:25:55,144 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip
+2025-11-11 11:25:58,812 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:25:59,541 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-02.csv
+2025-11-11 11:26:32,181 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv
+2025-11-11 11:26:54,413 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv missing expected columns: Regiao - Sigla
+2025-11-11 11:26:55,505 - anp - INFO - Saved ANP aggregated dataset with 1079 rows to data\landing\external_factors-raw\logistics\anp_fuel\20251111\anp_fuel.csv
+2025-11-11 11:26:55,517 - fetch_all - INFO - Running freight downloader...
+2025-11-11 11:26:55,518 - freight - INFO - Fetching container_port_traffic_teu for BR (IS.SHP.GOOD.TU)
+2025-11-11 11:26:56,094 - freight - INFO - Fetching container_port_traffic_teu for WLD (IS.SHP.GOOD.TU)
+2025-11-11 11:26:56,681 - freight - INFO - Saved 46 rows of container_port_traffic_teu to data\landing\external_factors-raw\logistics\freight\20251111\container_port_traffic_teu.csv
+2025-11-11 11:26:56,681 - freight - INFO - Fetching air_freight_mtkm for BR (IS.AIR.GOOD.MT.K1)
+2025-11-11 11:26:57,346 - freight - INFO - Fetching air_freight_mtkm for WLD (IS.AIR.GOOD.MT.K1)
+2025-11-11 11:26:57,917 - freight - INFO - Saved 44 rows of air_freight_mtkm to data\landing\external_factors-raw\logistics\freight\20251111\air_freight_mtkm.csv
+2025-11-11 11:26:57,917 - fetch_all - INFO - All downloads completed.
+2025-11-11 11:27:10,614 - silver_transform - INFO - Starting Silver transformation for external factors.
+2025-11-11 11:27:10,812 - silver_transform - INFO - Wrote 24322 rows to data\silver\external_factors\macro\ptax_rates.parquet
+2025-11-11 11:27:10,841 - silver_transform - INFO - Wrote 1776 rows to data\silver\external_factors\macro\selic_daily.parquet
+2025-11-11 11:27:10,850 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca_monthly.parquet
+2025-11-11 11:27:10,859 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca15_monthly.parquet
+2025-11-11 11:27:10,864 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\inpc_monthly.parquet
+2025-11-11 11:27:10,870 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\unemployment_rate.parquet
+2025-11-11 11:27:10,876 - silver_transform - INFO - Wrote 42 rows to data\silver\external_factors\macro\pib_quarterly_yoy.parquet
+2025-11-11 11:27:10,881 - silver_transform - INFO - Wrote 7 rows to data\silver\external_factors\macro\pib_annual_value.parquet
+2025-11-11 11:27:10,889 - silver_transform - INFO - Wrote 12 rows to data\silver\external_factors\macro\cds_spread.parquet
+2025-11-11 11:27:10,895 - silver_transform - INFO - Wrote 1 rows to data\silver\external_factors\macro\ppp_conversion_factor.parquet
+2025-11-11 11:27:10,906 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_current_usd.parquet
+2025-11-11 11:27:10,916 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_ppp.parquet
+2025-11-11 11:27:10,926 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_growth_pct.parquet
+2025-11-11 11:27:11,587 - silver_transform - INFO - Wrote 7310 rows to data\silver\external_factors\climatic\openmeteo_daily.parquet
+2025-11-11 11:27:11,619 - silver_transform - INFO - Wrote 1079 rows to data\silver\external_factors\logistics\anp_fuel_daily.parquet
+2025-11-11 11:27:11,660 - silver_transform - INFO - Wrote 2 rows to data\silver\external_factors\logistics\freight_worldbank.parquet
+2025-11-11 11:27:11,666 - silver_transform - INFO - Wrote 77 rows to data\silver\external_factors\logistics\baltic_dry.parquet
+2025-11-11 11:27:11,666 - silver_transform - WARNING - Freightos directory data\landing\external_factors-raw\logistics\freightos missing.
+2025-11-11 11:27:11,667 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\freightos_fbx.parquet because dataframe is empty.
+2025-11-11 11:27:11,667 - silver_transform - WARNING - Drewry directory data\landing\external_factors-raw\logistics\drewry missing.
+2025-11-11 11:27:11,667 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\drewry_wci.parquet because dataframe is empty.
+2025-11-11 11:27:11,668 - silver_transform - WARNING - ANTT directory data\landing\external_factors-raw\logistics\antt missing.
+2025-11-11 11:27:11,668 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\antt_metrics.parquet because dataframe is empty.
+2025-11-11 11:27:11,668 - silver_transform - INFO - Triggering freight blockers automation for Xeneta, SCFI/CCFI, and ANTT CKAN datasets.
+2025-11-11 11:27:11,668 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] Starting execution.
+2025-11-11 11:27:12,215 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 11:27:12,439 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 11:27:12,645 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 11:27:12,871 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 11:27:13,117 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 11:27:13,318 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 11:27:13,324 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 11:27:13,327 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 11:27:14,388 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 11:27:14,937 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 11:27:15,157 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 11:27:15,388 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 11:27:15,607 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 11:27:15,828 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 11:27:15,834 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 11:27:15,835 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 11:27:16,336 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 11:27:21,077 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 11:27:21,081 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 11:27:21,111 - scripts.automation.freight_blockers.integration - INFO -   OK - xeneta_xsi_c.parquet (13 rows) -> Freightos FBX replacement
+2025-11-11 11:27:21,201 - scripts.automation.freight_blockers.integration - INFO -   OK - drewry_wci_alternatives.parquet (14 rows) -> Drewry WCI replacement
+2025-11-11 11:27:21,213 - scripts.automation.freight_blockers.integration - INFO -   OK - antt_logistics_kpis.parquet (1 rows) -> ANTT KPI replacement
+2025-11-11 11:27:21,213 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] All blockers completed successfully.
+2025-11-11 11:27:21,215 - silver_transform - INFO - Running logistics dataset validation checks...
+2025-11-11 11:27:21,229 - logistics_validation - INFO - Dataset anp_fuel_daily.parquet validated (1079 rows, 2021-01-01 -> 2025-06-30).
+2025-11-11 11:27:21,232 - logistics_validation - INFO - Dataset freight_worldbank.parquet validated (2 rows, 2021-01-01 -> 2022-01-01).
+2025-11-11 11:27:21,236 - logistics_validation - INFO - Dataset baltic_dry.parquet validated (77 rows, 2022-08-31 -> 2025-02-21).
+2025-11-11 11:27:21,239 - logistics_validation - INFO - Dataset ../freight/xeneta_xsi_c.parquet validated (13 rows, 2009-12-31 -> 2021-12-31).
+2025-11-11 11:27:21,241 - logistics_validation - INFO - Dataset ../freight/drewry_wci_alternatives.parquet validated (14 rows, 2009-12-31 -> 2022-12-31).
+2025-11-11 11:27:21,244 - logistics_validation - INFO - Dataset ../freight/antt_logistics_kpis.parquet validated (1 rows, 2025-11-11 -> 2025-11-11).
+2025-11-11 11:27:21,244 - logistics_validation - INFO - All logistics datasets validated successfully.
+2025-11-11 11:27:21,245 - silver_transform - INFO - Silver transformation finished.
+2025-11-11 11:39:31,820 - fetch_all - INFO - Running OpenWeather ingestion...
+2025-11-11 11:39:31,831 - openweather - INFO - Fetching hourly history for lat=-12.9777 lon=-38.5016 date=2025-11-10
+2025-11-11 11:39:32,610 - openweather - WARNING - One Call history not available for lat=-12.9777 lon=-38.5016 (status 401). Falling back to Open-Meteo.
+2025-11-11 11:39:32,611 - openweather - INFO - Fetching Open-Meteo archive for lat=-12.9777 lon=-38.5016 (2021-11-12 -> 2025-11-11)
+2025-11-11 11:39:35,184 - openweather - INFO - Fetching 5-day forecast for lat=-12.9777 lon=-38.5016
+2025-11-11 11:39:36,141 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-12.9777 lon=-38.5016
+2025-11-11 11:39:36,955 - openweather - WARNING - Daily forecast failed for salvador_ba: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-12.9777&lon=-38.5016&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 11:39:36,957 - openweather - INFO - Fetching hourly history for lat=-3.7319 lon=-38.5267 date=2025-11-10
+2025-11-11 11:39:37,753 - openweather - WARNING - One Call history not available for lat=-3.7319 lon=-38.5267 (status 401). Falling back to Open-Meteo.
+2025-11-11 11:39:37,754 - openweather - INFO - Fetching Open-Meteo archive for lat=-3.7319 lon=-38.5267 (2021-11-12 -> 2025-11-11)
+2025-11-11 11:39:40,143 - openweather - INFO - Fetching 5-day forecast for lat=-3.7319 lon=-38.5267
+2025-11-11 11:39:41,125 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-3.7319 lon=-38.5267
+2025-11-11 11:39:41,920 - openweather - WARNING - Daily forecast failed for fortaleza_ce: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-3.7319&lon=-38.5267&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 11:39:41,922 - openweather - INFO - Fetching hourly history for lat=-8.0476 lon=-34.877 date=2025-11-10
+2025-11-11 11:39:42,718 - openweather - WARNING - One Call history not available for lat=-8.0476 lon=-34.877 (status 401). Falling back to Open-Meteo.
+2025-11-11 11:39:42,719 - openweather - INFO - Fetching Open-Meteo archive for lat=-8.0476 lon=-34.877 (2021-11-12 -> 2025-11-11)
+2025-11-11 11:39:45,131 - openweather - INFO - Fetching 5-day forecast for lat=-8.0476 lon=-34.877
+2025-11-11 11:39:46,143 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-8.0476 lon=-34.877
+2025-11-11 11:39:46,934 - openweather - WARNING - Daily forecast failed for recife_pe: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-8.0476&lon=-34.877&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 11:39:46,935 - openweather - INFO - Fetching hourly history for lat=-23.5505 lon=-46.6333 date=2025-11-10
+2025-11-11 11:39:47,717 - openweather - WARNING - One Call history not available for lat=-23.5505 lon=-46.6333 (status 401). Falling back to Open-Meteo.
+2025-11-11 11:39:47,718 - openweather - INFO - Fetching Open-Meteo archive for lat=-23.5505 lon=-46.6333 (2021-11-12 -> 2025-11-11)
+2025-11-11 11:39:50,043 - openweather - INFO - Fetching 5-day forecast for lat=-23.5505 lon=-46.6333
+2025-11-11 11:39:51,033 - openweather - INFO - Fetching daily forecast (cnt=16) for lat=-23.5505 lon=-46.6333
+2025-11-11 11:39:51,811 - openweather - WARNING - Daily forecast failed for sao_paulo_sp: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/forecast/daily?lat=-23.5505&lon=-46.6333&cnt=16&units=metric&appid=941ae7a1a0e249c20b4926388c6758d8&lang=pt_br
+2025-11-11 11:39:51,813 - openweather - INFO - Fetching hourly history for lat=-22.9068 lon=-43.1729 date=2025-11-10
+2025-11-11 11:39:52,581 - openweather - WARNING - One Call history not available for lat=-22.9068 lon=-43.1729 (status 401). Falling back to Open-Meteo.
+2025-11-11 11:39:52,582 - openweather - INFO - Fetching Open-Meteo archive for lat=-22.9068 lon=-43.1729 (2021-11-12 -> 2025-11-11)
+2025-11-11 11:39:55,014 - openweather - INFO - Fetching 5-day forecast for lat=-22.9068 lon=-43.1729
+2025-11-11 11:39:55,991 - openweather - INFO - OpenWeather ingestion completed.
+2025-11-11 11:39:55,991 - fetch_all - INFO - Running BACEN downloader...
+2025-11-11 11:39:55,992 - bacen - INFO - Fetching PTAX for USD (2015-01-01 -> 2025-11-11)
+2025-11-11 11:39:57,760 - bacen - INFO - Fetching PTAX for EUR (2015-01-01 -> 2025-11-11)
+2025-11-11 11:39:59,582 - bacen - INFO - Fetching PTAX for CNY (2015-01-01 -> 2025-11-11)
+2025-11-11 11:39:59,997 - bacen - INFO - Fetching Selic series chunk (2015-01-01 -> 2019-12-31)
+2025-11-11 11:40:00,544 - bacen - INFO - Fetching Selic series chunk (2020-01-01 -> 2024-12-30)
+2025-11-11 11:40:01,048 - bacen - INFO - Fetching Selic series chunk (2024-12-31 -> 2025-11-11)
+2025-11-11 11:40:01,507 - bacen - INFO - BACEN download finished.
+2025-11-11 11:40:01,507 - fetch_all - INFO - Running IBGE downloader...
+2025-11-11 11:40:01,508 - ibge - INFO - Fetching IBGE SIDRA table 1737 with period 201501-202511
+2025-11-11 11:40:02,072 - ibge - INFO - Fetching IBGE SIDRA table 7062 with period all
+2025-11-11 11:40:02,575 - ibge - INFO - Fetching IBGE SIDRA table 1736 with period 201501-202511
+2025-11-11 11:40:03,103 - ibge - INFO - Fetching IBGE SIDRA table 5932 with period 201501-202504
+2025-11-11 11:40:03,632 - ibge - INFO - Fetching IBGE SIDRA table 5938 with period 2015-2025
+2025-11-11 11:40:04,078 - ibge - INFO - Fetching IBGE SIDRA table 6381 with period 201501-202511
+2025-11-11 11:40:04,672 - ibge - INFO - IBGE download finished.
+2025-11-11 11:40:04,672 - fetch_all - INFO - Running World Bank downloader...
+2025-11-11 11:40:04,672 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.CD for BR
+2025-11-11 11:40:05,297 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.PP.CD for BR
+2025-11-11 11:40:06,017 - worldbank - INFO - Fetching World Bank indicator NY.GDP.MKTP.KD.ZG for BR
+2025-11-11 11:40:06,587 - worldbank - INFO - World Bank download finished.
+2025-11-11 11:40:06,587 - fetch_all - INFO - Running ANP downloader...
+2025-11-11 11:40:06,587 - anp - INFO - Fetching ANP open data page...
+2025-11-11 11:40:07,160 - anp - INFO - Found 8 ANP data files
+2025-11-11 11:40:07,161 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip
+2025-11-11 11:40:11,443 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2025-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:40:12,247 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip
+2025-11-11 11:40:16,367 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:40:17,145 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip
+2025-11-11 11:40:22,654 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2024-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:40:23,535 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip
+2025-11-11 11:40:28,793 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:40:29,686 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip
+2025-11-11 11:40:34,373 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:40:35,167 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip
+2025-11-11 11:40:39,146 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip missing expected columns: Regiao - Sigla
+2025-11-11 11:40:39,843 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-02.csv
+2025-11-11 11:41:13,279 - anp - INFO - Downloading https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv
+2025-11-11 11:41:38,272 - anp - WARNING - File https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv missing expected columns: Regiao - Sigla
+2025-11-11 11:41:39,326 - anp - INFO - Saved ANP aggregated dataset with 1079 rows to data\landing\external_factors-raw\logistics\anp_fuel\20251111\anp_fuel.csv
+2025-11-11 11:41:39,338 - fetch_all - INFO - Running freight downloader...
+2025-11-11 11:41:39,338 - freight - INFO - Fetching container_port_traffic_teu for BR (IS.SHP.GOOD.TU)
+2025-11-11 11:41:39,902 - freight - INFO - Fetching container_port_traffic_teu for WLD (IS.SHP.GOOD.TU)
+2025-11-11 11:41:40,475 - freight - INFO - Saved 46 rows of container_port_traffic_teu to data\landing\external_factors-raw\logistics\freight\20251111\container_port_traffic_teu.csv
+2025-11-11 11:41:40,475 - freight - INFO - Fetching air_freight_mtkm for BR (IS.AIR.GOOD.MT.K1)
+2025-11-11 11:41:41,040 - freight - INFO - Fetching air_freight_mtkm for WLD (IS.AIR.GOOD.MT.K1)
+2025-11-11 11:41:41,651 - freight - INFO - Saved 44 rows of air_freight_mtkm to data\landing\external_factors-raw\logistics\freight\20251111\air_freight_mtkm.csv
+2025-11-11 11:41:41,651 - fetch_all - INFO - Running freight blockers automation...
+2025-11-11 11:41:41,651 - scripts.automation.freight_blockers.integration - INFO - Running freight blocker automation (output=data/silver/freight)…
+2025-11-11 11:41:42,232 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 11:41:42,477 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 11:41:42,715 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 11:41:43,129 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 11:41:43,691 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 11:41:43,943 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 11:41:43,948 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 11:41:43,967 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 11:41:45,031 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 11:41:45,251 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 11:41:45,478 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 11:41:45,711 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 11:41:45,973 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 11:41:46,218 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 11:41:46,224 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 11:41:46,226 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 11:41:46,726 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 11:41:52,111 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 11:41:52,115 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 11:41:52,116 - scripts.automation.freight_blockers.integration - INFO - Freight blockers completed: {'xeneta_xsi_c': 'OK - 13 records', 'drewry_alternatives': 'OK - 14 records', 'antt_kpis': 'OK - 1 records'}
+2025-11-11 11:41:52,119 - fetch_all - INFO - All downloads completed.
+2025-11-11 11:42:05,545 - silver_transform - INFO - Starting Silver transformation for external factors.
+2025-11-11 11:42:05,743 - silver_transform - INFO - Wrote 24324 rows to data\silver\external_factors\macro\ptax_rates.parquet
+2025-11-11 11:42:05,768 - silver_transform - INFO - Wrote 1776 rows to data\silver\external_factors\macro\selic_daily.parquet
+2025-11-11 11:42:05,777 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca_monthly.parquet
+2025-11-11 11:42:05,786 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\ipca15_monthly.parquet
+2025-11-11 11:42:05,792 - silver_transform - INFO - Wrote 58 rows to data\silver\external_factors\macro\inpc_monthly.parquet
+2025-11-11 11:42:05,798 - silver_transform - INFO - Wrote 57 rows to data\silver\external_factors\macro\unemployment_rate.parquet
+2025-11-11 11:42:05,804 - silver_transform - INFO - Wrote 42 rows to data\silver\external_factors\macro\pib_quarterly_yoy.parquet
+2025-11-11 11:42:05,809 - silver_transform - INFO - Wrote 7 rows to data\silver\external_factors\macro\pib_annual_value.parquet
+2025-11-11 11:42:05,815 - silver_transform - INFO - Wrote 12 rows to data\silver\external_factors\macro\cds_spread.parquet
+2025-11-11 11:42:05,821 - silver_transform - INFO - Wrote 1 rows to data\silver\external_factors\macro\ppp_conversion_factor.parquet
+2025-11-11 11:42:05,832 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_current_usd.parquet
+2025-11-11 11:42:05,840 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_ppp.parquet
+2025-11-11 11:42:05,849 - silver_transform - INFO - Wrote 4 rows to data\silver\external_factors\global\gdp_growth_pct.parquet
+2025-11-11 11:42:06,488 - silver_transform - INFO - Wrote 7310 rows to data\silver\external_factors\climatic\openmeteo_daily.parquet
+2025-11-11 11:42:06,517 - silver_transform - INFO - Wrote 1079 rows to data\silver\external_factors\logistics\anp_fuel_daily.parquet
+2025-11-11 11:42:06,537 - silver_transform - INFO - Wrote 2 rows to data\silver\external_factors\logistics\freight_worldbank.parquet
+2025-11-11 11:42:06,542 - silver_transform - INFO - Wrote 77 rows to data\silver\external_factors\logistics\baltic_dry.parquet
+2025-11-11 11:42:06,543 - silver_transform - WARNING - Freightos directory data\landing\external_factors-raw\logistics\freightos missing.
+2025-11-11 11:42:06,543 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\freightos_fbx.parquet because dataframe is empty.
+2025-11-11 11:42:06,543 - silver_transform - WARNING - Drewry directory data\landing\external_factors-raw\logistics\drewry missing.
+2025-11-11 11:42:06,543 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\drewry_wci.parquet because dataframe is empty.
+2025-11-11 11:42:06,544 - silver_transform - WARNING - ANTT directory data\landing\external_factors-raw\logistics\antt missing.
+2025-11-11 11:42:06,544 - silver_transform - WARNING - Skipping parquet write for data\silver\external_factors\logistics\antt_metrics.parquet because dataframe is empty.
+2025-11-11 11:42:06,544 - silver_transform - INFO - Triggering freight blockers automation for Xeneta, SCFI/CCFI, and ANTT CKAN datasets.
+2025-11-11 11:42:06,544 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] Starting execution.
+2025-11-11 11:42:07,115 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity returned only null values for WLD
+2025-11-11 11:42:07,348 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for CHN: 13
+2025-11-11 11:42:07,579 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for USA: 13
+2025-11-11 11:42:07,826 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for BRA: 13
+2025-11-11 11:42:08,044 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for SGP: 13
+2025-11-11 11:42:08,273 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity rows for DEU: 13
+2025-11-11 11:42:08,278 - scripts.automation.freight_blockers.automated - INFO - World Bank connectivity fallback returned 13 rows.
+2025-11-11 11:42:08,280 - scripts.automation.freight_blockers.automated - INFO - Saved 13 rows to data\silver\freight\xeneta_xsi_c.parquet
+2025-11-11 11:42:09,309 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for WLD: 14
+2025-11-11 11:42:09,530 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for CHN: 14
+2025-11-11 11:42:09,743 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for USA: 14
+2025-11-11 11:42:09,963 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for BRA: 14
+2025-11-11 11:42:10,203 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for MEX: 14
+2025-11-11 11:42:10,443 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic rows for SWE: 14
+2025-11-11 11:42:10,448 - scripts.automation.freight_blockers.automated - INFO - World Bank container traffic fallback returned 14 rows.
+2025-11-11 11:42:10,450 - scripts.automation.freight_blockers.automated - INFO - Saved 14 rows to data\silver\freight\drewry_wci_alternatives.parquet
+2025-11-11 11:42:10,950 - scripts.automation.freight_blockers.automated - INFO - Fetching RNTRC registry: 2025-11
+2025-11-11 11:42:15,383 - scripts.automation.freight_blockers.automated - INFO - Fetched 92230 RNTRC rows from https://dados.antt.gov.br/dataset/2b564396-5593-4b5c-ba2c-3de3fa0a92c0/resource/4e85f293-8c5a-4122-9563-1e215033fd3d/download/rntrc-veiculos.csv
+2025-11-11 11:42:15,386 - scripts.automation.freight_blockers.automated - INFO - Saved ANTT KPIs to data\silver\freight\antt_logistics_kpis.parquet
+2025-11-11 11:42:15,407 - scripts.automation.freight_blockers.integration - INFO -   OK - xeneta_xsi_c.parquet (13 rows) -> Freightos FBX replacement
+2025-11-11 11:42:15,410 - scripts.automation.freight_blockers.integration - INFO -   OK - drewry_wci_alternatives.parquet (14 rows) -> Drewry WCI replacement
+2025-11-11 11:42:15,422 - scripts.automation.freight_blockers.integration - INFO -   OK - antt_logistics_kpis.parquet (1 rows) -> ANTT KPI replacement
+2025-11-11 11:42:15,422 - scripts.automation.freight_blockers.integration - INFO - [FreightBlockersETLStep] All blockers completed successfully.
+2025-11-11 11:42:15,424 - silver_transform - INFO - Running logistics dataset validation checks...
+2025-11-11 11:42:15,437 - logistics_validation - INFO - Dataset anp_fuel_daily.parquet validated (1079 rows, 2021-01-01 -> 2025-06-30).
+2025-11-11 11:42:15,441 - logistics_validation - INFO - Dataset freight_worldbank.parquet validated (2 rows, 2021-01-01 -> 2022-01-01).
+2025-11-11 11:42:15,445 - logistics_validation - INFO - Dataset baltic_dry.parquet validated (77 rows, 2022-08-31 -> 2025-02-21).
+2025-11-11 11:42:15,447 - logistics_validation - INFO - Dataset ../freight/xeneta_xsi_c.parquet validated (13 rows, 2009-12-31 -> 2021-12-31).
+2025-11-11 11:42:15,450 - logistics_validation - INFO - Dataset ../freight/drewry_wci_alternatives.parquet validated (14 rows, 2009-12-31 -> 2022-12-31).
+2025-11-11 11:42:15,453 - logistics_validation - INFO - Dataset ../freight/antt_logistics_kpis.parquet validated (1 rows, 2025-11-11 -> 2025-11-11).
+2025-11-11 11:42:15,453 - logistics_validation - INFO - All logistics datasets validated successfully.
+2025-11-11 11:42:15,453 - silver_transform - INFO - Silver transformation finished.
