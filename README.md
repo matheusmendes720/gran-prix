@@ -1,33 +1,40 @@
- <div align="center">
+<div align="center">
 
 ```
-╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                           ║
-║    ███╗   ██╗ ██████╗ ██╗   ██╗ █████╗      ██████╗ ██████╗ ██████╗ ██████╗ ███████╗███╗   ██╗████████╗███████╗           ║
-║    ████╗  ██║██╔═══██╗██║   ██║██╔══██╗    ██╔════╝██╔═══██╗██╔══██╗██╔══██╗██╔════╝████╗  ██║╚══██╔══╝██╔════╝           ║
-║    ██╔██╗ ██║██║   ██║██║   ██║███████║    ██║     ██║   ██║██████╔╝██████╔╝█████╗  ██╔██╗ ██║   ██║   █████╗             ║
-║    ██║╚██╗██║██║   ██║╚██╗ ██╔╝██╔══██║    ██║     ██║   ██║██╔══██╗██╔══██╗██╔══╝  ██║╚██╗██║   ██║   ██╔══╝             ║
-║    ██║ ╚████║╚██████╔╝ ╚████╔╝ ██║  ██║    ╚██████╗╚██████╔╝██║  ██║██║  ██║███████╗██║ ╚████║   ██║   ███████╗           ║
-║    ╚═╝  ╚═══╝ ╚═════╝   ╚═══╝  ╚═╝  ╚═╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝           ║
-║                                                                                                                           ║
-║         Enterprise-Grade Demand Forecasting & Analytics Platform                                                          ║
-║                    Production-Ready for Telecom Industry                                                                  ║ 
-║                                                                                                                           ║
-║                                                                                                                           ║ 
-║                      ____                        ______  ______                                                           ║
-║                     /\  _`\                     /\  _  \/\__  _\                                                          ║
-║                     \ \ \L\ \_ __    __   __  __\ \ \L\ \/_/\ \/                                                          ║
-║                      \ \ ,__/\`'__\/'__`\/\ \/\ \\ \  __ \ \ \ \                                                          ║
-║                       \ \ \/\ \ \//\  __/\ \ \_/ |\ \ \/\ \ \_\ \__                                                       ║ 
-║                        \ \_\ \ \_\\ \____\\ \___/  \ \_\ \_\/\_____\                                                      ║ 
-║                         \/_/  \/_/ \/____/ \/__/    \/_/\/_/\/_____/                                                      ║ 
-║                                                                                                                           ║ 
-║                                                                                                                           ║ 
-║                                                                                                                           ║
-║                                                                                                                           ║
-║                    🏆 GRAND PRIX 2025 - SENAI 🏆                                                                         ║
-║                                                                                                                           ║
-╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔═════════════════════════════════════════════════════════════════════════════╗
+║                                                                             ║
+║                                                                             ║
+║                ███╗   ██╗ ██████╗ ██╗   ██╗ █████╗                          ║
+║                ████╗  ██║██╔═══██╗██║   ██║██╔══██╗                         ║
+║                ██╔██╗ ██║██║   ██║██║   ██║███████║                         ║
+║                ██║╚██╗██║██║   ██║╚██╗ ██╔╝██╔══██║                         ║
+║                ██║ ╚████║╚██████╔╝ ╚████╔╝ ██║  ██║                         ║
+║                ╚═╝  ╚═══╝ ╚═════╝   ╚═══╝  ╚═╝  ╚═╝                         ║
+║                                                                             ║
+║   ██████╗ ██████╗ ██████╗ ██████╗ ███████╗███╗   ██╗████████╗███████╗       ║
+║  ██╔════╝██╔═══██╗██╔══██╗██╔══██╗██╔════╝████╗  ██║╚══██╔══╝██╔════╝       ║
+║  ██║     ██║   ██║██████╔╝██████╔╝█████╗  ██╔██╗ ██║   ██║   █████╗         ║
+║  ██║     ██║   ██║██╔══██╗██╔══██╗██╔══╝  ██║╚██╗██║   ██║   ██╔══╝         ║
+║  ╚██████╗╚██████╔╝██║  ██║██║  ██║███████╗██║ ╚████║   ██║   ███████╗       ║
+║   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝       ║
+║                                                                             ║
+║                                                                             ║
+║    Plataforma Empresarial de Previsão de Demanda e Analytics                ║
+║              Pronta para Produção - Indústria de Telecom                    ║
+║              ____                        ______  ______                     ║
+║             /\  _`\                     /\  _  \/\__  _\                    ║
+║             \ \ \L\ \_ __    __   __  __\ \ \L\ \/_/\ \/                    ║
+║              \ \ ,__/\`'__\/'__`\/\ \/\ \\ \  __ \ \ \ \                    ║
+║               \ \ \/\ \ \//\  __/\ \ \_/ |\ \ \/\ \ \_\ \__                 ║
+║                \ \_\ \ \_\\ \____\\ \___/  \ \_\ \_\/\_____\                ║
+║                 \/_/  \/_/ \/____/ \/__/    \/_/\/_/\/_____/                ║ 
+║                                                                             ║ 
+║                                                                             ║ 
+║                                                                             ║
+║                                                                             ║
+║                    🏆 GRAND PRIX 2025 - SENAI 🏆                           ║
+║                                                                             ║
+╚═════════════════════════════════════════════════════════════════════════════╝
 ```
 
 [![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)](CHANGELOG.md)
@@ -52,94 +59,94 @@
 
 ---
 
-## 📋 Table of Contents
+## 📋 Índice
 
-- [🎯 Overview](#-overview)
-- [✨ Key Features](#-key-features)
-- [🏗️ Production Architecture](#️-production-architecture)
-- [🚀 Quick Start](#-quick-start)
-- [📊 Project Structure](#-project-structure)
-- [🔌 API Endpoints](#-api-endpoints)
-- [🛠️ Technical Stack](#️-technical-stack)
-- [📈 Performance &amp; Scalability](#-performance--scalability)
-- [🔐 Security &amp; Compliance](#-security--compliance)
-- [📚 Documentation](#-documentation)
-- [🤝 Contributing](#-contributing)
+- [🎯 Visão Geral](#-visão-geral)
+- [✨ Principais Funcionalidades](#-principais-funcionalidades)
+- [🏗️ Arquitetura de Produção](#️-arquitetura-de-produção)
+- [🚀 Início Rápido](#-início-rápido)
+- [📊 Estrutura do Projeto](#-estrutura-do-projeto)
+- [🔌 Endpoints da API](#-endpoints-da-api)
+- [🛠️ Stack Técnico](#️-stack-técnico)
+- [📈 Performance e Escalabilidade](#-performance-e-escalabilidade)
+- [🔐 Segurança e Conformidade](#-segurança-e-conformidade)
+- [📚 Documentação](#-documentação)
+- [🤝 Contribuindo](#-contribuindo)
 
 ---
 
-## 🎯 Overview
+## 🎯 Visão Geral
 
 <div align="center">
 
-**Enterprise-Grade Demand Forecasting & Analytics Platform**
+**Plataforma Empresarial de Previsão de Demanda e Analytics**
 
-🏭 **PRODUCTION-READY FOR GRAND PRIX 2025** 🏭
+🏭 **PRONTO PARA PRODUÇÃO - GRAND PRIX 2025** 🏭
 
 </div>
 
-Nova Corrente is a **production-ready, enterprise-scale** analytics platform that combines **PostgreSQL**, **offline-first ML architecture**, and **real-time dashboards** to provide actionable insights for telecom supply chain management.
+Nova Corrente é uma plataforma de analytics **pronta para produção, em escala empresarial** que combina **PostgreSQL**, **arquitetura ML offline-first**, e **dashboards em tempo real** para fornecer insights acionáveis para gestão da cadeia de suprimentos de telecomunicações.
 
-### 🎯 **Production Highlights**
+### 🎯 **Destaques de Produção**
 
-- ✅ **PostgreSQL 14+** - Production-grade database with partitioning, JSONB, materialized views
-- ✅ **Offline-First ML** - Precomputed results, no ML dependencies in deployment
-- ✅ **Enterprise Security** - JWT authentication, RBAC, comprehensive audit logging
-- ✅ **High Performance** - Redis caching, connection pooling, optimized queries
-- ✅ **Scalable Architecture** - Multi-schema design, horizontal scaling ready
-- ✅ **Production Deployment** - Docker Compose, health checks, monitoring ready
+- ✅ **PostgreSQL 14+** - Banco de dados de nível empresarial com particionamento, JSONB, views materializadas
+- ✅ **ML Offline-First** - Resultados pré-computados, sem dependências de ML no deployment
+- ✅ **Segurança Empresarial** - Autenticação JWT, RBAC, auditoria abrangente
+- ✅ **Alta Performance** - Cache Redis, pool de conexões, consultas otimizadas
+- ✅ **Arquitetura Escalável** - Design multi-schema, pronto para escalonamento horizontal
+- ✅ **Deployment de Produção** - Docker Compose, health checks, monitoramento pronto
 
-### 🚀 **Future Roadmap**
+### 🚀 **Roadmap Futuro**
 
-- 🔄 **AWS Cloud Infrastructure** - S3, RDS, ECS/EKS deployment
-- 🔄 **Advanced Data Engineering** - Delta Lake, Spark, Databricks
-- 🔄 **Orchestration** - Airflow DAGs for complex workflows
-- 🔄 **Transformations** - dbt models for analytics engineering
-- 🔄 **BI Tools** - Metabase/Superset integration
+- 🔄 **Infraestrutura Cloud AWS** - Deploy S3, RDS, ECS/EKS
+- 🔄 **Engenharia de Dados Avançada** - Delta Lake, Spark, Databricks
+- 🔄 **Orquestração** - DAGs Airflow para workflows complexos
+- 🔄 **Transformações** - Modelos dbt para engenharia de analytics
+- 🔄 **Ferramentas BI** - Integração Metabase/Superset
 
-📖 **[Complete PROD Roadmap →](docs/proj/roadmaps/prod/README_PROD_ROADMAPS.md)**
+📖 **[Roadmap PROD Completo →](docs/proj/roadmaps/prod/README_PROD_ROADMAPS.md)**
 
 ---
 
-## ✨ Key Features
+## ✨ Principais Funcionalidades
 
-### 📊 **Real-Time Analytics Dashboard**
+### 📊 **Dashboard de Analytics em Tempo Real**
 
-- 🗺️ Interactive Brazil map (27 states)
-- 📑 5-tab analytics interface
-- 🎯 K-means clustering analysis
-- 🤖 LLM-powered prescriptive recommendations
-- 📐 Mathematical formula calculators
+- 🗺️ Mapa interativo do Brasil (27 estados)
+- 📑 Interface de analytics com 5 abas
+- 🎯 Análise de clustering K-means
+- 🤖 Recomendações prescritivas com LLM
+- 📐 Calculadoras de fórmulas matemáticas
 
-### 🤖 **Advanced ML/AI (Offline-First)**
+### 🤖 **ML/AI Avançado (Offline-First)**
 
-- 🎯 Ensemble forecasting (ARIMA + Prophet + LSTM)
-- ⚠️ Equipment failure prediction
-- 📡 Tower performance clustering
-- 📈 Regional demand forecasting
-- 💰 Cost optimization recommendations
-- 🔄 **Precomputed Results** - No ML processing in deployment
+- 🎯 Previsão por ensemble (ARIMA + Prophet + LSTM)
+- ⚠️ Predição de falhas de equipamentos
+- 📡 Clustering de performance de torres
+- 📈 Previsão de demanda regional
+- 💰 Recomendações de otimização de custos
+- 🔄 **Resultados Pré-computados** - Sem processamento ML no deployment
 
 ### 📈 **Business Intelligence**
 
-- 📊 Real-time KPIs (Stockout Rate, MAPE, Savings)
-- 🏢 Supplier performance tracking
-- ⏱️ SLA penalty monitoring
-- 📦 Regional inventory optimization
-- 📋 Project status tracking
+- 📊 KPIs em tempo real (Taxa de Ruptura, MAPE, Economias)
+- 🏢 Acompanhamento de performance de fornecedores
+- ⏱️ Monitoramento de penalidades SLA
+- 📦 Otimização de inventário regional
+- 📋 Acompanhamento de status de projetos
 
-### 🔐 **Enterprise Features**
+### 🔐 **Funcionalidades Empresariais**
 
-- 🔒 **JWT Authentication** - Secure token-based auth
-- 👥 **Role-Based Access Control** - ADMIN, ANALYST, VIEWER roles
-- 📝 **Audit Logging** - Comprehensive activity tracking
-- ⚡ **Redis Caching** - High-performance caching layer
-- 🐳 **Docker Deployment** - Production-ready containers
-- 🔄 **Database Migrations** - Alembic for schema management
+- 🔒 **Autenticação JWT** - Autenticação segura baseada em tokens
+- 👥 **Controle de Acesso Baseado em Funções** - Funções ADMIN, ANALYST, VIEWER
+- 📝 **Auditoria** - Rastreamento abrangente de atividades
+- ⚡ **Cache Redis** - Camada de cache de alta performance
+- 🐳 **Deployment Docker** - Containers prontos para produção
+- 🔄 **Migrações de Banco de Dados** - Alembic para gerenciamento de schema
 
 ---
 
-## 🏗️ Production Architecture
+## 🏗️ Arquitetura de Produção
 
 <div align="center">
 
@@ -187,34 +194,34 @@ Nova Corrente is a **production-ready, enterprise-scale** analytics platform tha
 
 </div>
 
-### 🔄 **Offline-First ML Architecture**
+### 🔄 **Arquitetura ML Offline-First**
 
-- ✅ **NO ML OPS IN DEPLOYMENT** - ML processing runs in separate environment
-- ✅ **Precomputed Results** - Deployment only reads from PostgreSQL
-- ✅ **Lightweight Containers** - No ML dependencies (PyTorch, TensorFlow, etc.)
-- ✅ **Scalable** - Handles millions of records efficiently
-- ✅ **Production-Grade** - Enterprise-ready architecture
+- ✅ **SEM ML OPS NO DEPLOYMENT** - Processamento ML roda em ambiente separado
+- ✅ **Resultados Pré-computados** - Deployment apenas lê do PostgreSQL
+- ✅ **Containers Leves** - Sem dependências de ML (PyTorch, TensorFlow, etc.)
+- ✅ **Escalável** - Processa milhões de registros eficientemente
+- ✅ **Nível Empresarial** - Arquitetura pronta para produção
 
-📖 **[Complete Architecture Details →](docs/proj/diagrams/Project.md)**
+📖 **[Detalhes Completos da Arquitetura →](docs/proj/diagrams/Project.md)**
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Início Rápido
 
-### 📦 Prerequisites
+### 📦 Pré-requisitos
 
 ```bash
 ✅ Python 3.8+
 ✅ Node.js 18+
 ✅ PostgreSQL 14+
-✅ Redis (for caching)
-✅ Docker & Docker Compose (recommended)
+✅ Redis (para cache)
+✅ Docker & Docker Compose (recomendado)
 ```
 
-### 🏃 Production Setup
+### 🏃 Configuração de Produção
 
 <details>
-<summary><b>📥 1. Clone Repository</b></summary>
+<summary><b>📥 1. Clonar Repositório</b></summary>
 
 ```bash
 git clone <repository-url>
@@ -224,10 +231,10 @@ cd gran_prix
 </details>
 
 <details>
-<summary><b>🐘 2. Setup PostgreSQL Database</b></summary>
+<summary><b>🐘 2. Configurar Banco de Dados PostgreSQL</b></summary>
 
 ```bash
-# Using Docker
+# Usando Docker
 docker run --name postgres-nova-corrente \
   -e POSTGRES_USER=nova_corrente \
   -e POSTGRES_PASSWORD=YOUR_SECURE_PASSWORD \
@@ -236,411 +243,411 @@ docker run --name postgres-nova-corrente \
   -v pgdata:/var/lib/postgresql/data \
   -d postgres:14
 
-# Or use existing PostgreSQL instance
-# Update backend/.env with connection details
+# Ou use uma instância PostgreSQL existente
+# Atualize backend/.env com os detalhes de conexão
 ```
 
 </details>
 
 <details>
-<summary><b>🔴 3. Setup Redis Cache</b></summary>
+<summary><b>🔴 3. Configurar Cache Redis</b></summary>
 
 ```bash
-# Using Docker
+# Usando Docker
 docker run -d -p 6379:6379 redis:alpine
 
-# Or use existing Redis instance
-# Update backend/.env with connection details
+# Ou use uma instância Redis existente
+# Atualize backend/.env com os detalhes de conexão
 ```
 
 </details>
 
 <details>
-<summary><b>🐍 4. Backend Setup</b></summary>
+<summary><b>🐍 4. Configurar Backend</b></summary>
 
 ```bash
 cd backend
 
-# Install dependencies (production, no ML)
+# Instalar dependências (produção, sem ML)
 pip install -r requirements_deployment.txt
 
-# Configure environment
+# Configurar ambiente
 cp .env.example .env
-# Edit .env with your PostgreSQL and Redis credentials
+# Edite .env com suas credenciais PostgreSQL e Redis
 
-# Run database migrations
+# Executar migrações do banco de dados
 alembic upgrade head
 
-# Start backend server
+# Iniciar servidor backend
 python run_server.py
-# API available at http://localhost:5000
+# API disponível em http://localhost:5000
 ```
 
 </details>
 
 <details>
-<summary><b>⚛️ 5. Frontend Setup</b></summary>
+<summary><b>⚛️ 5. Configurar Frontend</b></summary>
 
 ```bash
 cd frontend
 
-# Install dependencies
+# Instalar dependências
 npm install
 
-# Configure environment
+# Configurar ambiente
 cp .env.local.example .env.local
-# Edit .env.local with API URL
+# Edite .env.local com a URL da API
 
-# Start development server
+# Iniciar servidor de desenvolvimento
 npm run dev
-# Dashboard available at http://localhost:3000
+# Dashboard disponível em http://localhost:3000
 ```
 
 </details>
 
 <details>
-<summary><b>🐳 6. Docker Compose (Recommended)</b></summary>
+<summary><b>🐳 6. Docker Compose (Recomendado)</b></summary>
 
 ```bash
-# Production deployment
+# Deploy de produção
 docker-compose -f docker-compose.prod.yml up -d
 
-# Check status
+# Verificar status
 docker-compose -f docker-compose.prod.yml ps
 
-# View logs
+# Visualizar logs
 docker-compose -f docker-compose.prod.yml logs -f
 ```
 
 </details>
 
-### 🌐 Access Application
+### 🌐 Acessar Aplicação
 
 ```
-📊 Main Dashboard: http://localhost:3000/main
+📊 Dashboard Principal: http://localhost:3000/main
 🔍 Analytics: http://localhost:3000/features
-📈 Forecasts: http://localhost:3000/forecasts
-📦 Materials: http://localhost:3000/materials
-💡 Recommendations: http://localhost:3000/recommendations
-🔌 API Health: http://localhost:5000/health
+📈 Previsões: http://localhost:3000/forecasts
+📦 Materiais: http://localhost:3000/materials
+💡 Recomendações: http://localhost:3000/recommendations
+🔌 Health da API: http://localhost:5000/health
 ```
 
-📖 **[Complete Setup Guide →](docs/development/QUICK_START_BACKEND.md)**
+📖 **[Guia Completo de Configuração →](docs/development/QUICK_START_BACKEND.md)**
 
 ---
 
-## 📊 Project Structure
+## 📊 Estrutura do Projeto
 
 ```
 gran_prix/
-├── 📄 README.md                    # This file
-├── 📋 CHANGELOG.md                 # Main changelog
-├── 📋 CHANGELOG_PROD.md            # PROD path changelog
+├── 📄 README.md                    # Este arquivo
+├── 📋 CHANGELOG.md                 # Changelog principal
+├── 📋 CHANGELOG_PROD.md            # Changelog do caminho PROD
 │
-├── 🐳 docker-compose.prod.yml      # Production Docker setup
-├── 🐳 docker-compose.yml           # Development Docker setup
+├── 🐳 docker-compose.prod.yml      # Configuração Docker de produção
+├── 🐳 docker-compose.yml           # Configuração Docker de desenvolvimento
 │
-├── 📁 backend/                     # Backend API & Services
-│   ├── app/                        # Flask application
-│   │   ├── api/v1/routes/         # API endpoints
-│   │   ├── core/                  # Core business logic
-│   │   └── config.py              # Configuration
-│   ├── alembic/                   # Database migrations
-│   ├── config/                    # Configuration modules
-│   ├── etl/                       # ETL scripts
-│   │   ├── load_ml_outputs.py     # Load ML results to PostgreSQL
-│   │   └── calculate_kpis.sql     # KPI calculations
-│   ├── ml_pipeline/               # Offline ML processing
-│   │   └── main.py                # ML pipeline entry point
-│   ├── services/                  # Business services
-│   │   ├── auth_service.py        # JWT authentication
-│   │   ├── audit_service.py       # Audit logging
-│   │   └── database_service.py    # Database operations
-│   ├── db/                        # Database schemas
-│   └── requirements_deployment.txt # Production dependencies
+├── 📁 backend/                     # API Backend e Serviços
+│   ├── app/                        # Aplicação Flask
+│   │   ├── api/v1/routes/         # Endpoints da API
+│   │   ├── core/                  # Lógica de negócio principal
+│   │   └── config.py              # Configuração
+│   ├── alembic/                   # Migrações do banco de dados
+│   ├── config/                    # Módulos de configuração
+│   ├── etl/                       # Scripts ETL
+│   │   ├── load_ml_outputs.py     # Carregar resultados ML para PostgreSQL
+│   │   └── calculate_kpis.sql     # Cálculos de KPIs
+│   ├── ml_pipeline/               # Processamento ML offline
+│   │   └── main.py                # Ponto de entrada do pipeline ML
+│   ├── services/                  # Serviços de negócio
+│   │   ├── auth_service.py        # Autenticação JWT
+│   │   ├── audit_service.py       # Logging de auditoria
+│   │   └── database_service.py    # Operações de banco de dados
+│   ├── db/                        # Schemas do banco de dados
+│   └── requirements_deployment.txt # Dependências de produção
 │
-├── 📁 frontend/                    # Next.js Frontend
+├── 📁 frontend/                    # Frontend Next.js
 │   ├── src/
 │   │   ├── app/                   # Next.js app router
-│   │   │   ├── main/              # Main dashboard
-│   │   │   ├── features/          # Analytics tabs
-│   │   │   ├── forecasts/         # Forecasts page
-│   │   │   └── materials/         # Materials pages
-│   │   ├── components/            # React components
-│   │   └── lib/                   # Utilities & API client
-│   └── public/                    # Static assets
+│   │   │   ├── main/              # Dashboard principal
+│   │   │   ├── features/          # Abas de analytics
+│   │   │   ├── forecasts/         # Página de previsões
+│   │   │   └── materials/         # Páginas de materiais
+│   │   ├── components/            # Componentes React
+│   │   └── lib/                   # Utilitários e cliente API
+│   └── public/                    # Assets estáticos
 │
-├── 📁 data/                        # Data Storage
-│   ├── raw/                       # Raw datasets
-│   ├── processed/                 # Processed data
-│   └── gold/                      # Gold layer (Parquet)
+├── 📁 data/                        # Armazenamento de Dados
+│   ├── raw/                       # Datasets brutos
+│   ├── processed/                 # Dados processados
+│   └── gold/                      # Camada gold (Parquet)
 │
-├── 📁 docs/                        # Documentation
-│   ├── proj/roadmaps/prod/        # PROD roadmaps
-│   ├── development/               # Development guides
-│   └── proj/diagrams/             # Architecture diagrams
+├── 📁 docs/                        # Documentação
+│   ├── proj/roadmaps/prod/        # Roadmaps PROD
+│   ├── development/               # Guias de desenvolvimento
+│   └── proj/diagrams/             # Diagramas de arquitetura
 │
-└── 📁 scripts/                     # Utility scripts
+└── 📁 scripts/                     # Scripts utilitários
 ```
 
-📖 **[Complete Project Structure →](docs/proj/roadmaps/prod/README_PROD_ROADMAPS.md)**
+📖 **[Estrutura Completa do Projeto →](docs/proj/roadmaps/prod/README_PROD_ROADMAPS.md)**
 
 ---
 
-## 🔌 API Endpoints
+## 🔌 Endpoints da API
 
-### 📊 Analytics & Data
-
-```
-GET  /api/v1/kpis                    # Real-time KPIs
-GET  /api/v1/alerts                  # Inventory alerts
-GET  /api/v1/forecasts               # Demand forecasts
-GET  /api/v1/items                   # Material items
-GET  /api/v1/materials               # Materials with details
-GET  /api/v1/materials/{itemId}      # Material details
-```
-
-### 🎯 Clustering & Analysis
+### 📊 Analytics e Dados
 
 ```
-GET  /api/v1/clustering/equipment-failure    # Equipment failure clusters
-GET  /api/v1/clustering/tower-performance    # Tower performance clusters
+GET  /api/v1/kpis                    # KPIs em tempo real
+GET  /api/v1/alerts                  # Alertas de inventário
+GET  /api/v1/forecasts               # Previsões de demanda
+GET  /api/v1/items                   # Itens de material
+GET  /api/v1/materials               # Materiais com detalhes
+GET  /api/v1/materials/{itemId}      # Detalhes do material
 ```
 
-### 🤖 Prescriptive Analytics
+### 🎯 Clustering e Análise
 
 ```
-GET  /api/v1/recommendations         # LLM-powered recommendations
+GET  /api/v1/clustering/equipment-failure    # Clusters de falhas de equipamentos
+GET  /api/v1/clustering/tower-performance    # Clusters de performance de torres
 ```
 
-### 🗺️ Geographic Data
+### 🤖 Analytics Prescritivo
 
 ```
-GET  /api/v1/geographic/data         # Brazil regional data
+GET  /api/v1/recommendations         # Recomendações com LLM
 ```
 
-### 📈 Model Performance
+### 🗺️ Dados Geográficos
 
 ```
-GET  /api/v1/models/performance      # ML model comparison
+GET  /api/v1/geographic/data         # Dados regionais do Brasil
 ```
 
-### 🔍 Health & Status
+### 📈 Performance do Modelo
+
+```
+GET  /api/v1/models/performance      # Comparação de modelos ML
+```
+
+### 🔍 Health e Status
 
 ```
 GET  /health                         # Health check
-GET  /api/v1/health                  # Detailed health status
+GET  /api/v1/health                  # Status de health detalhado
 ```
 
-### 🔐 Authentication (Protected Endpoints)
+### 🔐 Autenticação (Endpoints Protegidos)
 
 ```
-POST /api/v1/auth/login              # User login
-POST /api/v1/auth/logout             # User logout
-GET  /api/v1/auth/me                 # Current user info
+POST /api/v1/auth/login              # Login de usuário
+POST /api/v1/auth/logout             # Logout de usuário
+GET  /api/v1/auth/me                 # Informações do usuário atual
 ```
 
-📚 **[Complete API Documentation →](docs/development/BACKEND_INTEGRATION_GUIDE.md)**
+📚 **[Documentação Completa da API →](docs/development/BACKEND_INTEGRATION_GUIDE.md)**
 
 ---
 
-## 🛠️ Technical Stack
+## 🛠️ Stack Técnico
 
-### 🔧 Backend (Production)
+### 🔧 Backend (Produção)
 
-| Technology           | Purpose             | Version | Status |
-| -------------------- | ------------------- | ------- | ------ |
-| **Python**     | Core language       | 3.8+    | ✅     |
-| **Flask**      | API framework       | 2.3+    | ✅     |
-| **PostgreSQL** | Production database | 14+     | ✅     |
-| **Redis**      | Caching layer       | Latest  | ✅     |
-| **Alembic**    | Database migrations | Latest  | ✅     |
-| **SQLAlchemy** | ORM                 | Latest  | ✅     |
-| **JWT**        | Authentication      | Latest  | ✅     |
-| **bcrypt**     | Password hashing    | Latest  | ✅     |
+| Tecnologia           | Propósito                   | Versão | Status |
+| -------------------- | ---------------------------- | ------- | ------ |
+| **Python**     | Linguagem principal          | 3.8+    | ✅     |
+| **Flask**      | Framework de API             | 2.3+    | ✅     |
+| **PostgreSQL** | Banco de dados de produção | 14+     | ✅     |
+| **Redis**      | Camada de cache              | Latest  | ✅     |
+| **Alembic**    | Migrações de banco         | Latest  | ✅     |
+| **SQLAlchemy** | ORM                          | Latest  | ✅     |
+| **JWT**        | Autenticação               | Latest  | ✅     |
+| **bcrypt**     | Hash de senhas               | Latest  | ✅     |
 
-### ⚛️ Frontend (Production)
+### ⚛️ Frontend (Produção)
 
-| Technology             | Purpose                 | Version | Status |
-| ---------------------- | ----------------------- | ------- | ------ |
-| **Next.js**      | React framework         | 14      | ✅     |
-| **TypeScript**   | Type safety             | 5.0+    | ✅     |
-| **Tailwind CSS** | Styling                 | Latest  | ✅     |
-| **Recharts**     | Data visualization      | Latest  | ✅     |
-| **D3.js**        | Advanced visualizations | Latest  | ✅     |
-| **react-katex**  | LaTeX rendering         | Latest  | ✅     |
+| Tecnologia             | Propósito                 | Versão | Status |
+| ---------------------- | -------------------------- | ------- | ------ |
+| **Next.js**      | Framework React            | 14      | ✅     |
+| **TypeScript**   | Segurança de tipos        | 5.0+    | ✅     |
+| **Tailwind CSS** | Estilização              | Latest  | ✅     |
+| **Recharts**     | Visualização de dados    | Latest  | ✅     |
+| **D3.js**        | Visualizações avançadas | Latest  | ✅     |
+| **react-katex**  | Renderização LaTeX       | Latest  | ✅     |
 
-### 🤖 ML/AI (Offline Processing)
+### 🤖 ML/AI (Processamento Offline)
 
-| Technology             | Purpose                 | Status |
-| ---------------------- | ----------------------- | ------ |
-| **Prophet**      | Time series forecasting | ✅     |
-| **ARIMA**        | Statistical forecasting | ✅     |
-| **LSTM**         | Deep learning           | ✅     |
-| **scikit-learn** | Clustering & utilities  | ✅     |
-| **Pandas**       | Data processing         | ✅     |
-| **NumPy**        | Numerical computing     | ✅     |
+| Tecnologia             | Propósito                     | Status |
+| ---------------------- | ------------------------------ | ------ |
+| **Prophet**      | Previsão de séries temporais | ✅     |
+| **ARIMA**        | Previsão estatística         | ✅     |
+| **LSTM**         | Deep learning                  | ✅     |
+| **scikit-learn** | Clustering e utilitários      | ✅     |
+| **Pandas**       | Processamento de dados         | ✅     |
+| **NumPy**        | Computação numérica         | ✅     |
 
-### 🐳 Infrastructure
+### 🐳 Infraestrutura
 
-| Technology               | Purpose          | Status |
-| ------------------------ | ---------------- | ------ |
-| **Docker**         | Containerization | ✅     |
-| **Docker Compose** | Orchestration    | ✅     |
-| **PostgreSQL**     | Database server  | ✅     |
-| **Redis**          | Cache server     | ✅     |
+| Tecnologia               | Propósito        | Status |
+| ------------------------ | ----------------- | ------ |
+| **Docker**         | Containerização | ✅     |
+| **Docker Compose** | Orquestração    | ✅     |
+| **PostgreSQL**     | Servidor de banco | ✅     |
+| **Redis**          | Servidor de cache | ✅     |
 
-### 🔄 Future Stack (Planned)
+### 🔄 Stack Futuro (Planejado)
 
-| Technology           | Purpose                | Status |
-| -------------------- | ---------------------- | ------ |
-| **AWS S3**     | Object storage         | 🔄     |
-| **Delta Lake** | Data lakehouse         | 🔄     |
-| **Spark**      | Big data processing    | 🔄     |
-| **Databricks** | ML platform            | 🔄     |
-| **Airflow**    | Workflow orchestration | 🔄     |
-| **dbt**        | Data transformations   | 🔄     |
+| Tecnologia           | Propósito                  | Status |
+| -------------------- | --------------------------- | ------ |
+| **AWS S3**     | Armazenamento de objetos    | 🔄     |
+| **Delta Lake** | Data lakehouse              | 🔄     |
+| **Spark**      | Processamento de big data   | 🔄     |
+| **Databricks** | Plataforma ML               | 🔄     |
+| **Airflow**    | Orquestração de workflows | 🔄     |
+| **dbt**        | Transformações de dados   | 🔄     |
 
-📖 **[Complete Technical Stack →](docs/proj/roadmaps/prod/TECHNICAL_STACK_PROD.md)**
+📖 **[Stack Técnico Completo →](docs/proj/roadmaps/prod/TECHNICAL_STACK_PROD.md)**
 
 ---
 
-## 📈 Performance & Scalability
+## 📈 Performance e Escalabilidade
 
-### ⚡ API Performance
+### ⚡ Performance da API
 
-| Endpoint     | Response Time | Cache TTL | Status |
-| ------------ | ------------- | --------- | ------ |
-| Health Check | <10ms         | N/A       | ✅     |
-| KPIs         | <50ms         | 30s       | ✅     |
-| Forecasts    | <200ms        | 1h        | ✅     |
-| Clustering   | <500ms        | 5m        | ✅     |
-| Prescriptive | <100ms        | 1h        | ✅     |
+| Endpoint     | Tempo de Resposta | Cache TTL | Status |
+| ------------ | ----------------- | --------- | ------ |
+| Health Check | <10ms             | N/A       | ✅     |
+| KPIs         | <50ms             | 30s       | ✅     |
+| Previsões   | <200ms            | 1h        | ✅     |
+| Clustering   | <500ms            | 5m        | ✅     |
+| Prescritivo  | <100ms            | 1h        | ✅     |
 
-### 🎯 Database Performance
+### 🎯 Performance do Banco de Dados
 
-- ✅ **Partitioning** - Large fact tables partitioned by date
-- ✅ **Materialized Views** - Precomputed analytics queries
-- ✅ **Indexing** - Optimized indexes for common queries
-- ✅ **Connection Pooling** - Efficient connection management
-- ✅ **Query Optimization** - Tuned SQL queries
+- ✅ **Particionamento** - Tabelas de fatos grandes particionadas por data
+- ✅ **Views Materializadas** - Consultas de analytics pré-computadas
+- ✅ **Indexação** - Índices otimizados para consultas comuns
+- ✅ **Pool de Conexões** - Gerenciamento eficiente de conexões
+- ✅ **Otimização de Consultas** - Consultas SQL ajustadas
 
-### 📊 Scalability
+### 📊 Escalabilidade
 
-- ✅ **Horizontal Scaling** - Load balancer ready
-- ✅ **Caching Strategy** - Redis for high-traffic endpoints
-- ✅ **Database Scaling** - PostgreSQL read replicas ready
-- ✅ **Container Orchestration** - Docker Compose → Kubernetes ready
+- ✅ **Escalonamento Horizontal** - Pronto para load balancer
+- ✅ **Estratégia de Cache** - Redis para endpoints de alto tráfego
+- ✅ **Escalonamento de Banco** - Réplicas de leitura PostgreSQL prontas
+- ✅ **Orquestração de Containers** - Docker Compose → Kubernetes pronto
 
-### 🎯 Code Quality
+### 🎯 Qualidade do Código
 
 ```
-✅ Zero TypeScript errors
-✅ Zero linting issues
-✅ 100% type safety
-✅ Production-grade quality
-✅ Comprehensive test coverage
-✅ Security best practices
+✅ Zero erros TypeScript
+✅ Zero problemas de linting
+✅ 100% segurança de tipos
+✅ Qualidade de nível de produção
+✅ Cobertura de testes abrangente
+✅ Melhores práticas de segurança
 ```
 
 ---
 
-## 🔐 Security & Compliance
+## 🔐 Segurança e Conformidade
 
-### 🔒 Authentication & Authorization
+### 🔒 Autenticação e Autorização
 
-- ✅ **JWT Authentication** - Secure token-based authentication
-- ✅ **Role-Based Access Control** - ADMIN, ANALYST, VIEWER roles
-- ✅ **Password Security** - bcrypt hashing with salt
-- ✅ **Token Expiration** - Configurable token lifetimes
-- ✅ **Secure Headers** - CORS, security headers configured
+- ✅ **Autenticação JWT** - Autenticação segura baseada em tokens
+- ✅ **Controle de Acesso Baseado em Funções** - Funções ADMIN, ANALYST, VIEWER
+- ✅ **Segurança de Senhas** - Hash bcrypt com salt
+- ✅ **Expiração de Tokens** - Tempos de vida de tokens configuráveis
+- ✅ **Headers Seguros** - CORS, headers de segurança configurados
 
-### 📝 Audit & Compliance
+### 📝 Auditoria e Conformidade
 
-- ✅ **Comprehensive Audit Logging** - All API calls logged
-- ✅ **User Activity Tracking** - Authentication events logged
-- ✅ **Data Change Tracking** - Database changes audited
-- ✅ **Compliance Ready** - GDPR, data privacy ready
+- ✅ **Auditoria Abrangente** - Todas as chamadas de API registradas
+- ✅ **Rastreamento de Atividades do Usuário** - Eventos de autenticação registrados
+- ✅ **Rastreamento de Mudanças de Dados** - Mudanças no banco auditadas
+- ✅ **Pronto para Conformidade** - GDPR, privacidade de dados pronta
 
-### 🛡️ Security Features
+### 🛡️ Funcionalidades de Segurança
 
-- ✅ **Input Validation** - All inputs validated and sanitized
-- ✅ **SQL Injection Protection** - Parameterized queries
-- ✅ **XSS Protection** - Content Security Policy
-- ✅ **Environment Variables** - Secrets management
-- ✅ **HTTPS Ready** - SSL/TLS configuration ready
-
----
-
-## 📚 Documentation
-
-### 🗺️ **Master Navigation**
-
-- **[📚 Complete Navigation Index](docs/NAVIGATION_INDEX.md)** - **START HERE** - Master index of all documentation, roadmaps, and changelogs
-
-### 📖 Main Documentation
-
-- **[📋 Changelog](CHANGELOG.md)** - Complete version history
-- **[🏭 PROD Path Changelog](CHANGELOG_PROD.md)** - Production path history
-- **[🗺️ PROD Roadmaps](docs/proj/roadmaps/prod/README_PROD_ROADMAPS.md)** - Production roadmaps
-- **[🏗️ Architecture](docs/proj/diagrams/Project.md)** - Complete architecture specification
-
-### 🚀 Quick Start Guides
-
-- **[⚡ Quick Start](docs/development/QUICK_START_BACKEND.md)** - Backend setup guide
-- **[🔧 Backend Integration](docs/development/BACKEND_INTEGRATION_GUIDE.md)** - API integration
-- **[🎨 Frontend Setup](frontend/README.md)** - Frontend development
-- **[🐳 Deployment](docs/development/DEPLOYMENT.md)** - Production deployment
-
-### 📊 Technical Documentation
-
-- **[📐 Technical Stack](docs/proj/roadmaps/prod/TECHNICAL_STACK_PROD.md)** - Complete stack details
-- **[📈 Implementation Checklist](docs/development/IMPLEMENTATION_CHECKLIST.md)** - Implementation guide
-- **[🔄 Migration Guide](docs/MIGRATION_DEMO_TO_PROD.md)** - Upgrade from DEMO
-
-### 🔄 Future Roadmap
-
-- **[☁️ Cloud Infrastructure](docs/proj/roadmaps/prod/PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md)** - AWS deployment
-- **[📊 Data Engineering](docs/proj/roadmaps/prod/DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md)** - Advanced pipelines
-- **[🔄 Orchestration](docs/proj/roadmaps/prod/ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md)** - Airflow & dbt
+- ✅ **Validação de Entrada** - Todas as entradas validadas e sanitizadas
+- ✅ **Proteção contra SQL Injection** - Consultas parametrizadas
+- ✅ **Proteção XSS** - Content Security Policy
+- ✅ **Variáveis de Ambiente** - Gerenciamento de segredos
+- ✅ **HTTPS Pronto** - Configuração SSL/TLS pronta
 
 ---
 
-## 🤝 Contributing
+## 📚 Documentação
 
-This project is developed for **Grand Prix 2025** by the Nova Corrente team at SENAI.
+### 🗺️ **Navegação Principal**
 
-### 📝 Contribution Guidelines
+- **[📚 Índice Completo de Navegação](docs/NAVIGATION_INDEX.md)** - **COMECE AQUI** - Índice principal de toda documentação, roadmaps e changelogs
 
-1. Follow the production architecture patterns
-2. Maintain code quality standards (TypeScript, linting)
-3. Update documentation for all changes
-4. Write tests for new features
-5. Follow the offline-first ML architecture
-6. Ensure security best practices
+### 📖 Documentação Principal
 
-### 🔄 Development Workflow
+- **[📋 Changelog](CHANGELOG.md)** - Histórico completo de versões
+- **[🏭 Changelog do Caminho PROD](CHANGELOG_PROD.md)** - Histórico do caminho de produção
+- **[🗺️ Roadmaps PROD](docs/proj/roadmaps/prod/README_PROD_ROADMAPS.md)** - Roadmaps de produção
+- **[🏗️ Arquitetura](docs/proj/diagrams/Project.md)** - Especificação completa da arquitetura
 
-1. Create feature branch from `master`
-2. Implement changes with tests
-3. Update documentation
-4. Submit pull request
-5. Code review and approval
-6. Merge to `master`
+### 🚀 Guias de Início Rápido
+
+- **[⚡ Início Rápido](docs/development/QUICK_START_BACKEND.md)** - Guia de configuração do backend
+- **[🔧 Integração Backend](docs/development/BACKEND_INTEGRATION_GUIDE.md)** - Integração da API
+- **[🎨 Configuração Frontend](frontend/README.md)** - Desenvolvimento frontend
+- **[🐳 Deployment](docs/development/DEPLOYMENT.md)** - Deployment de produção
+
+### 📊 Documentação Técnica
+
+- **[📐 Stack Técnico](docs/proj/roadmaps/prod/TECHNICAL_STACK_PROD.md)** - Detalhes completos do stack
+- **[📈 Checklist de Implementação](docs/development/IMPLEMENTATION_CHECKLIST.md)** - Guia de implementação
+- **[🔄 Guia de Migração](docs/MIGRATION_DEMO_TO_PROD.md)** - Upgrade do DEMO
+
+### 🔄 Roadmap Futuro
+
+- **[☁️ Infraestrutura Cloud](docs/proj/roadmaps/prod/PRODUCTION_DEPLOYMENT_GUIDE_PT_BR.md)** - Deploy AWS
+- **[📊 Engenharia de Dados](docs/proj/roadmaps/prod/DATA_PIPELINES_PRODUCTION_DESIGN_PT_BR.md)** - Pipelines avançados
+- **[🔄 Orquestração](docs/proj/roadmaps/prod/ANALYTICS_ENGINEERING_ROADMAP_COMPLETE_PT_BR.md)** - Airflow & dbt
+
+---
+
+## 🤝 Contribuindo
+
+Este projeto é desenvolvido para o **Grand Prix 2025** pela equipe Nova Corrente no SENAI.
+
+### 📝 Diretrizes de Contribuição
+
+1. Seguir os padrões de arquitetura de produção
+2. Manter padrões de qualidade de código (TypeScript, linting)
+3. Atualizar documentação para todas as mudanças
+4. Escrever testes para novas funcionalidades
+5. Seguir a arquitetura ML offline-first
+6. Garantir melhores práticas de segurança
+
+### 🔄 Fluxo de Desenvolvimento
+
+1. Criar branch de feature a partir de `master`
+2. Implementar mudanças com testes
+3. Atualizar documentação
+4. Enviar pull request
+5. Revisão de código e aprovação
+6. Merge para `master`
 
 ---
 
 <div align="center">
 
-### ⭐ Star this repository if you find it useful! ⭐
+### ⭐ Dê uma estrela neste repositório se você achar útil! ⭐
 
-**Status:** ✅ **PRODUCTION READY**
-**Last Updated:** November 2025
-**Version:** 4.0.0 (PROD)
+**Status:** ✅ **PRONTO PARA PRODUÇÃO**
+**Última Atualização:** Novembro 2025
+**Versão:** 4.0.0 (PROD)
 
 ---
 
-*Built with ❤️ for Nova Corrente Telecom - Enterprise Production Platform*
+*Construído com ❤️ para Nova Corrente Telecom - Plataforma Empresarial de Produção*
 
 ```
 ╔═══════════════════════════════════════════════════════════════════════════╗
