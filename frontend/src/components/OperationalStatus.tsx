@@ -24,17 +24,17 @@ const COLORS = {
 
 const OperationalStatus: React.FC<OperationalStatusProps> = ({ data, onSliceClick, activeFilter }) => {
     return (
-        <Card className="h-full flex flex-col">
-            <h3 className="text-base font-bold text-brand-lightest-slate mb-2">Status Operacional</h3>
-            <div className="flex-grow h-40">
+        <Card className="h-full flex flex-col overflow-hidden">
+            <h3 className="text-lg font-bold text-brand-lightest-slate mb-4">Status Operacional</h3>
+            <div className="flex-grow min-h-[400px] w-full">
                 <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                         <Pie
                             data={data}
                             cx="50%"
                             cy="50%"
-                            innerRadius={45}
-                            outerRadius={60}
+                            innerRadius={80}
+                            outerRadius={120}
                             fill="#8884d8"
                             paddingAngle={5}
                             dataKey="value"
@@ -47,7 +47,7 @@ const OperationalStatus: React.FC<OperationalStatusProps> = ({ data, onSliceClic
                                     fill={COLORS[entry.name as keyof typeof COLORS]}
                                     opacity={activeFilter === null || activeFilter === entry.level ? 1 : 0.4}
                                     stroke={activeFilter === entry.level ? COLORS[entry.name as keyof typeof COLORS] : 'none'}
-                                    strokeWidth={2}
+                                    strokeWidth={3}
                                 />
                             ))}
                         </Pie>
@@ -55,7 +55,7 @@ const OperationalStatus: React.FC<OperationalStatusProps> = ({ data, onSliceClic
                             layout="vertical"
                             align="right"
                             verticalAlign="middle"
-                            wrapperStyle={{ color: '#a8b2d1', fontSize: '14px' }}
+                            wrapperStyle={{ color: '#a8b2d1', fontSize: '18px' }}
                             formatter={(value, entry: any) => (
                                 <span className={`transition-opacity ${activeFilter === null || activeFilter === entry.payload.level ? 'opacity-100' : 'opacity-50'}`}>
                                     {value}: <span className="font-bold text-brand-lightest-slate">{entry.payload?.value}</span>

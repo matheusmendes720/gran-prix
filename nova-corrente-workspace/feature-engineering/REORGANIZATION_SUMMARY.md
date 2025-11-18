@@ -44,28 +44,44 @@ feature-engineering/
 ## 📦 Files Moved
 
 ### To `bifurcation-b-frontend-ux/features/`
-- ✅ `specs_features_5g.md`
-- ✅ `specs_features_business.md`
-- ✅ `specs_features_categorical.md`
-- ✅ `specs_features_climate.md`
-- ✅ `specs_features_economic.md`
-- ✅ `specs_features_hierarchical.md`
-- ✅ `specs_features_lead_time.md`
-- ✅ `specs_features_sla.md`
-- ✅ `specs_features_temporal.md`
-- ✅ `features_route_planning.md`
-- ✅ `features_temporal_breakdown.md`
+- ✅ `features_route_planning.md` → `bifurcation-b-frontend-ux/features/`
+
+### To `bifurcation-b-frontend-ux/features/{feature}/`
+- ✅ `specs_features_5g.md` → `bifurcation-b-frontend-ux/features/5g/`
+- ✅ `specs_features_business.md` → `bifurcation-b-frontend-ux/features/business/`
+- ✅ `specs_features_categorical.md` → `bifurcation-b-frontend-ux/features/categorical/`
+- ✅ `specs_features_climate.md` → `bifurcation-b-frontend-ux/features/climate/`
+- ✅ `specs_features_economic.md` → `bifurcation-b-frontend-ux/features/economic/`
+- ✅ `specs_features_hierarchical.md` → `bifurcation-b-frontend-ux/features/hierarchical/`
+- ✅ `specs_features_lead_time.md` → `bifurcation-b-frontend-ux/features/lead-time/`
+- ✅ `specs_features_sla.md` → `bifurcation-b-frontend-ux/features/sla/`
+- ✅ `specs_features_temporal.md` → `bifurcation-b-frontend-ux/features/temporal/`
+- ✅ `features_temporal_breakdown.md` → `bifurcation-b-frontend-ux/features/temporal/`
 
 ### To `bifurcation-b-frontend-ux/main/`
-- ✅ `specs_main_analytics_overview.md`
-- ✅ `specs_main_formulas.md`
-- ✅ `specs_main_visuals_blitz.md`
-- ✅ `main_route_planning.md`
-- ✅ `main_models_clustering_breakdown.md`
+- ✅ `main_route_planning.md` → `bifurcation-b-frontend-ux/main/`
+
+### To `bifurcation-b-frontend-ux/main/modelos/`
+- ✅ `specs_main_analytics_overview.md` → `bifurcation-b-frontend-ux/main/modelos/`
+- ✅ `specs_main_formulas.md` → `bifurcation-b-frontend-ux/main/modelos/`
+- ✅ `specs_main_visuals_blitz.md` → `bifurcation-b-frontend-ux/main/modelos/`
+
+### To `bifurcation-b-frontend-ux/main/clustering/`
+- ✅ `main_models_clustering_breakdown.md` → `bifurcation-b-frontend-ux/main/clustering/`
 
 ### To `bifurcation-b-frontend-ux/cross-cutting/`
-- ✅ `frontend_feature_engineering_masterplan.md`
-- ✅ `demo_execution_scaffold.md`
+- ✅ `frontend_feature_engineering_masterplan.md` → `bifurcation-b-frontend-ux/cross-cutting/`
+- ✅ `demo_execution_scaffold.md` → `bifurcation-b-frontend-ux/cross-cutting/`
+
+## 📁 Files Remaining in Root
+
+Only main overall files remain in the root directory:
+- ✅ `README.md` - Main workspace index
+- ✅ `STRUCTURE_INDEX.md` - Complete navigation index
+- ✅ `REORGANIZATION_SUMMARY.md` - This file
+- ✅ `demo_dashboard_quick_strategy.md` - Original demo playbook
+- ✅ `demo_dashboard_next_steps_bifurcation.md` - Master roadmap
+- ✅ `go_horse_roadshow_index.md` - Roadshow execution index
 
 ## 📄 New Files Created
 

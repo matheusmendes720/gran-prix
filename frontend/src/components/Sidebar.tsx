@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { DashboardIcon, ReportIcon, AnalyticsIcon, SettingsIcon } from './icons';
 
 interface NavItemProps {
@@ -30,12 +30,29 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ activePage, setActivePage }) => {
+  const pathname = usePathname();
+  const router = useRouter();
+  const isOnMainPage = pathname?.startsWith('/main') || pathname === '/';
+  const isOnFeaturesPage = pathname?.startsWith('/features');
+
   const navItems = [
     { label: 'Dashboard', icon: <DashboardIcon /> },
     { label: 'Relatórios', icon: <ReportIcon /> },
     { label: 'Análises', icon: <AnalyticsIcon /> },
     { label: 'Configurações', icon: <SettingsIcon /> },
   ];
+
+  const handleMainNavClick = (page: string) => {
+    if (isOnFeaturesPage) {
+      // If we're on a features page, navigate to /main first
+      router.push('/main');
+      // Store the target page in sessionStorage to restore after navigation
+      sessionStorage.setItem('targetPage', page);
+    } else {
+      // If we're already on /main, just update the active page
+      setActivePage(page);
+    }
+  };
 
   return (
     <div className="hidden lg:block w-64 bg-brand-navy/75 backdrop-blur-xl border-r border-brand-cyan/40 h-screen sticky top-0 p-4 animate-subtle-glow">
@@ -51,8 +68,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, setActivePage }) => {
             key={item.label}
             icon={item.icon}
             label={item.label}
-            active={activePage === item.label}
-            onClick={() => setActivePage(item.label)}
+            active={activePage === item.label && isOnMainPage}
+            onClick={() => handleMainNavClick(item.label)}
           />
         ))}
       </nav>

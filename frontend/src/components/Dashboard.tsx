@@ -199,7 +199,7 @@ const Dashboard: React.FC<DashboardProps> = ({ searchTerm, onSelectAlert }) => {
                 <div className="lg:col-span-2 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
                     <DemandForecastChart data={forecastData} />
                 </div>
-                <div className="lg:col-span-1 animate-fade-in-up" style={{ animationDelay: '500ms' }}>
+                <div className="lg:col-span-1 animate-fade-in-up flex flex-col min-h-0" style={{ animationDelay: '500ms' }}>
                     <OperationalStatus data={operationalStatusData} onSliceClick={handleStatusSelect} activeFilter={statusFilter}/>
                 </div>
             </div>

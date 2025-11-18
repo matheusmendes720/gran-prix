@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from '../../components/Sidebar';
 import Dashboard from '../../components/Dashboard';
 import Reports from '../../components/Reports';
@@ -21,6 +21,15 @@ export default function MainPage() {
   const [activePage, setActivePage] = useState('Dashboard');
   const [searchTerm, setSearchTerm] = useState('');
   const [analyticsTargetState, setAnalyticsTargetState] = useState<string | null>(null);
+
+  // Check for target page from sessionStorage when component mounts
+  useEffect(() => {
+    const targetPage = sessionStorage.getItem('targetPage');
+    if (targetPage && pageDetails[targetPage as keyof typeof pageDetails]) {
+      setActivePage(targetPage);
+      sessionStorage.removeItem('targetPage'); // Clear after use
+    }
+  }, []);
 
   const handlePageChange = (page: string) => {
     setAnalyticsTargetState(null);
